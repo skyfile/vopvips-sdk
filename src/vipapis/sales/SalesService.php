@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\sales;
+namespace Voop\vipapis\sales;
 interface SalesServiceIf{
 	
 	
@@ -43,7 +43,7 @@ class _SalesServiceClient extends \Osp\Base\OspStub implements \vipapis\sales\Sa
 	public function send_getEndingSalesSkus( $vendor_id, $brand_id, $st_query, $et_query, $page, $limit){
 		
 		$this->initInvocation("getEndingSalesSkus");
-		$args = new \vipapis\sales\SalesService_getEndingSalesSkus_args();
+		$args = new \Voop\vipapis\sales\SalesService_getEndingSalesSkus_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -62,7 +62,7 @@ class _SalesServiceClient extends \Osp\Base\OspStub implements \vipapis\sales\Sa
 	
 	public function recv_getEndingSalesSkus(){
 		
-		$result = new \vipapis\sales\SalesService_getEndingSalesSkus_result();
+		$result = new \Voop\vipapis\sales\SalesService_getEndingSalesSkus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -81,7 +81,7 @@ class _SalesServiceClient extends \Osp\Base\OspStub implements \vipapis\sales\Sa
 	public function send_getSalesList( $vendor_id, $st_query, $et_query, $page, $limit){
 		
 		$this->initInvocation("getSalesList");
-		$args = new \vipapis\sales\SalesService_getSalesList_args();
+		$args = new \Voop\vipapis\sales\SalesService_getSalesList_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -98,7 +98,7 @@ class _SalesServiceClient extends \Osp\Base\OspStub implements \vipapis\sales\Sa
 	
 	public function recv_getSalesList(){
 		
-		$result = new \vipapis\sales\SalesService_getSalesList_result();
+		$result = new \Voop\vipapis\sales\SalesService_getSalesList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -117,7 +117,7 @@ class _SalesServiceClient extends \Osp\Base\OspStub implements \vipapis\sales\Sa
 	public function send_getSalesSkuList( $vendor_id, $sales_no, $page, $limit){
 		
 		$this->initInvocation("getSalesSkuList");
-		$args = new \vipapis\sales\SalesService_getSalesSkuList_args();
+		$args = new \Voop\vipapis\sales\SalesService_getSalesSkuList_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -132,7 +132,7 @@ class _SalesServiceClient extends \Osp\Base\OspStub implements \vipapis\sales\Sa
 	
 	public function recv_getSalesSkuList(){
 		
-		$result = new \vipapis\sales\SalesService_getSalesSkuList_result();
+		$result = new \Voop\vipapis\sales\SalesService_getSalesSkuList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -151,7 +151,7 @@ class _SalesServiceClient extends \Osp\Base\OspStub implements \vipapis\sales\Sa
 	public function send_getUpcomingSalesSkus( $vendor_id, $brand_id, $page, $limit){
 		
 		$this->initInvocation("getUpcomingSalesSkus");
-		$args = new \vipapis\sales\SalesService_getUpcomingSalesSkus_args();
+		$args = new \Voop\vipapis\sales\SalesService_getUpcomingSalesSkus_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -166,7 +166,7 @@ class _SalesServiceClient extends \Osp\Base\OspStub implements \vipapis\sales\Sa
 	
 	public function recv_getUpcomingSalesSkus(){
 		
-		$result = new \vipapis\sales\SalesService_getUpcomingSalesSkus_result();
+		$result = new \Voop\vipapis\sales\SalesService_getUpcomingSalesSkus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -185,14 +185,14 @@ class _SalesServiceClient extends \Osp\Base\OspStub implements \vipapis\sales\Sa
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\sales\SalesService_healthCheck_args();
+		$args = new \Voop\vipapis\sales\SalesService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\sales\SalesService_healthCheck_result();
+		$result = new \Voop\vipapis\sales\SalesService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -211,7 +211,7 @@ class _SalesServiceClient extends \Osp\Base\OspStub implements \vipapis\sales\Sa
 	public function send_updateSalesSkusInventory( $batch_no, $vendor_id, $is_full, $warehouse_supplier, $inventories){
 		
 		$this->initInvocation("updateSalesSkusInventory");
-		$args = new \vipapis\sales\SalesService_updateSalesSkusInventory_args();
+		$args = new \Voop\vipapis\sales\SalesService_updateSalesSkusInventory_args();
 		
 		$args->batch_no = $batch_no;
 		
@@ -228,7 +228,7 @@ class _SalesServiceClient extends \Osp\Base\OspStub implements \vipapis\sales\Sa
 	
 	public function recv_updateSalesSkusInventory(){
 		
-		$result = new \vipapis\sales\SalesService_updateSalesSkusInventory_result();
+		$result = new \Voop\vipapis\sales\SalesService_updateSalesSkusInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1086,7 +1086,7 @@ class SalesService_updateSalesSkusInventory_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\sales\BarcodeInventory();
+					$elem0 = new \Voop\vipapis\sales\BarcodeInventory();
 					$elem0->read($input);
 					
 					$this->inventories[$_size0++] = $elem0;
@@ -1141,7 +1141,7 @@ class SalesService_updateSalesSkusInventory_args {
 		
 		if (!is_array($this->inventories)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1150,7 +1150,7 @@ class SalesService_updateSalesSkusInventory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1211,7 +1211,7 @@ class SalesService_getEndingSalesSkus_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\sales\GetEndingSalesSkusResult();
+			$this->success = new \Voop\vipapis\sales\GetEndingSalesSkusResult();
 			$this->success->read($input);
 			
 		}
@@ -1234,7 +1234,7 @@ class SalesService_getEndingSalesSkus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1293,7 +1293,7 @@ class SalesService_getSalesList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\sales\GetSalesListResult();
+			$this->success = new \Voop\vipapis\sales\GetSalesListResult();
 			$this->success->read($input);
 			
 		}
@@ -1316,7 +1316,7 @@ class SalesService_getSalesList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1375,7 +1375,7 @@ class SalesService_getSalesSkuList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\sales\GetSalesSkuListResult();
+			$this->success = new \Voop\vipapis\sales\GetSalesSkuListResult();
 			$this->success->read($input);
 			
 		}
@@ -1398,7 +1398,7 @@ class SalesService_getSalesSkuList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1457,7 +1457,7 @@ class SalesService_getUpcomingSalesSkus_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\sales\GetUpcomingSalesSkusResult();
+			$this->success = new \Voop\vipapis\sales\GetUpcomingSalesSkusResult();
 			$this->success->read($input);
 			
 		}
@@ -1480,7 +1480,7 @@ class SalesService_getUpcomingSalesSkus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1539,7 +1539,7 @@ class SalesService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1562,7 +1562,7 @@ class SalesService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1621,7 +1621,7 @@ class SalesService_updateSalesSkusInventory_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\sales\SetSkuInventoryResult();
+			$this->success = new \Voop\vipapis\sales\SetSkuInventoryResult();
 			$this->success->read($input);
 			
 		}
@@ -1644,7 +1644,7 @@ class SalesService_updateSalesSkusInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

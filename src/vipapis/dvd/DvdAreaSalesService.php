@@ -8,11 +8,11 @@
 *
 */
 
-namespace vipapis\dvd;
+namespace Voop\vipapis\dvd;
 interface DvdAreaSalesServiceIf{
 	
 	
-	public function getAreaOccupiedOrders(\vipapis\dvd\AreaOccupiedOrdersRequest $request);
+	public function getAreaOccupiedOrders(\Voop\vipapis\dvd\AreaOccupiedOrdersRequest $request);
 	
 	public function getAreaWarehouse( $vendor_id);
 	
@@ -28,16 +28,16 @@ class _DvdAreaSalesServiceClient extends \Osp\Base\OspStub implements \vipapis\d
 	}
 	
 	
-	public function getAreaOccupiedOrders(\vipapis\dvd\AreaOccupiedOrdersRequest $request){
+	public function getAreaOccupiedOrders(\Voop\vipapis\dvd\AreaOccupiedOrdersRequest $request){
 		
 		$this->send_getAreaOccupiedOrders( $request);
 		return $this->recv_getAreaOccupiedOrders();
 	}
 	
-	public function send_getAreaOccupiedOrders(\vipapis\dvd\AreaOccupiedOrdersRequest $request){
+	public function send_getAreaOccupiedOrders(\Voop\vipapis\dvd\AreaOccupiedOrdersRequest $request){
 		
 		$this->initInvocation("getAreaOccupiedOrders");
-		$args = new \vipapis\dvd\DvdAreaSalesService_getAreaOccupiedOrders_args();
+		$args = new \Voop\vipapis\dvd\DvdAreaSalesService_getAreaOccupiedOrders_args();
 		
 		$args->request = $request;
 		
@@ -46,7 +46,7 @@ class _DvdAreaSalesServiceClient extends \Osp\Base\OspStub implements \vipapis\d
 	
 	public function recv_getAreaOccupiedOrders(){
 		
-		$result = new \vipapis\dvd\DvdAreaSalesService_getAreaOccupiedOrders_result();
+		$result = new \Voop\vipapis\dvd\DvdAreaSalesService_getAreaOccupiedOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -65,7 +65,7 @@ class _DvdAreaSalesServiceClient extends \Osp\Base\OspStub implements \vipapis\d
 	public function send_getAreaWarehouse( $vendor_id){
 		
 		$this->initInvocation("getAreaWarehouse");
-		$args = new \vipapis\dvd\DvdAreaSalesService_getAreaWarehouse_args();
+		$args = new \Voop\vipapis\dvd\DvdAreaSalesService_getAreaWarehouse_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -74,7 +74,7 @@ class _DvdAreaSalesServiceClient extends \Osp\Base\OspStub implements \vipapis\d
 	
 	public function recv_getAreaWarehouse(){
 		
-		$result = new \vipapis\dvd\DvdAreaSalesService_getAreaWarehouse_result();
+		$result = new \Voop\vipapis\dvd\DvdAreaSalesService_getAreaWarehouse_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -93,14 +93,14 @@ class _DvdAreaSalesServiceClient extends \Osp\Base\OspStub implements \vipapis\d
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\dvd\DvdAreaSalesService_healthCheck_args();
+		$args = new \Voop\vipapis\dvd\DvdAreaSalesService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\dvd\DvdAreaSalesService_healthCheck_result();
+		$result = new \Voop\vipapis\dvd\DvdAreaSalesService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -155,7 +155,7 @@ class DvdAreaSalesService_getAreaOccupiedOrders_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\dvd\AreaOccupiedOrdersRequest();
+			$this->request = new \Voop\vipapis\dvd\AreaOccupiedOrdersRequest();
 			$this->request->read($input);
 			
 		}
@@ -178,7 +178,7 @@ class DvdAreaSalesService_getAreaOccupiedOrders_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -353,7 +353,7 @@ class DvdAreaSalesService_getAreaOccupiedOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\dvd\AreaOccupiedOrderResponse();
+			$this->success = new \Voop\vipapis\dvd\AreaOccupiedOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -376,7 +376,7 @@ class DvdAreaSalesService_getAreaOccupiedOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -444,7 +444,7 @@ class DvdAreaSalesService_getAreaWarehouse_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\dvd\AreaWarehouse();
+					$elem0 = new \Voop\vipapis\dvd\AreaWarehouse();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -477,7 +477,7 @@ class DvdAreaSalesService_getAreaWarehouse_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -486,7 +486,7 @@ class DvdAreaSalesService_getAreaWarehouse_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -549,7 +549,7 @@ class DvdAreaSalesService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -572,7 +572,7 @@ class DvdAreaSalesService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

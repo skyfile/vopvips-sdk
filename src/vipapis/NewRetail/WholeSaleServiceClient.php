@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\NewRetail;
+namespace Voop\vipapis\NewRetail;
 $base_path = dirname(__FILE__).'/../../';
 require_once $base_path.'/Osp/Util/PathUtil.php';
 require_once $base_path.'/Osp/ClassLoader/ClassLoader.php';
@@ -21,7 +21,7 @@ class WholeSaleServiceClient{
 	private static function regis(){
 		
 		$path = \Osp\Util\PathUtil::getRootPath ();
-		$nsLoader = new \Osp\ClassLoader\ClassLoader ();
+		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
 		$nsLoader->registerNamespace ( 'vipapis', $path );
@@ -70,7 +70,7 @@ class WholeSaleServiceClient{
 		
 		//$ctx->setProtocol ( \Osp\Protocol\OspProtocol::$Binary );
 		
-		return new \vipapis\NewRetail\WholeSaleServiceHelper();
+		return new \Voop\vipapis\NewRetail\WholeSaleServiceHelper();
 	}
 	
 }

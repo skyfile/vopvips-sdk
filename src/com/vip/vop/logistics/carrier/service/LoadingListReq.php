@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\carrier\service;
+namespace Voop\com\vip\vop\logistics\carrier\service;
 
 class LoadingListReq {
 	
@@ -210,7 +210,7 @@ class LoadingListReq {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\logistics\carrier\service\LoadingItem();
+						$elem0 = new \Voop\com\vip\vop\logistics\carrier\service\LoadingItem();
 						$elem0->read($input);
 						
 						$this->loading_items[$_size0++] = $elem0;
@@ -287,7 +287,7 @@ class LoadingListReq {
 			
 			if (!is_array($this->loading_items)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -296,7 +296,7 @@ class LoadingListReq {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

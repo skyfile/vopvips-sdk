@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying\service;
+namespace Voop\com\vip\xstore\cc\bulkbuying\service;
 interface PurchaseOrderServiceIf{
 	
 	
@@ -18,7 +18,7 @@ interface PurchaseOrderServiceIf{
 	
 	public function delete( $purchaseNo);
 	
-	public function doImport(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderImportRequest $request);
+	public function doImport(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderImportRequest $request);
 	
 	public function export( $purchaseNo, $exportType);
 	
@@ -28,17 +28,17 @@ interface PurchaseOrderServiceIf{
 	
 	public function healthCheck();
 	
-	public function queryMyApprovedPo(\com\vip\xstore\cc\bulkbuying\service\QueryMyApprovedPoReq $req);
+	public function queryMyApprovedPo(\Voop\com\vip\xstore\cc\bulkbuying\service\QueryMyApprovedPoReq $req);
 	
 	public function select( $purchaseNo);
 	
-	public function selectAll(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderSelectAllReq $selectAllReq);
+	public function selectAll(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderSelectAllReq $selectAllReq);
 	
-	public function selectPage(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel);
+	public function selectPage(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel);
 	
-	public function statPoByGroup(\com\vip\xstore\cc\bulkbuying\service\StatPoCommonReq $req);
+	public function statPoByGroup(\Voop\com\vip\xstore\cc\bulkbuying\service\StatPoCommonReq $req);
 	
-	public function update(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderUpdateRequest $request);
+	public function update(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderUpdateRequest $request);
 	
 	public function updatePoDistributableGoodsTime( $purchaseNo, $distributableGoodsTime);
 	
@@ -61,7 +61,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_cancelCrossdock( $purchaseNo){
 		
 		$this->initInvocation("cancelCrossdock");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_cancelCrossdock_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_cancelCrossdock_args();
 		
 		$args->purchaseNo = $purchaseNo;
 		
@@ -70,7 +70,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_cancelCrossdock(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_cancelCrossdock_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_cancelCrossdock_result();
 		$this->receive_base($result);
 		
 	}
@@ -85,14 +85,14 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_complementBarcodeOriginOfOuterPurchase(){
 		
 		$this->initInvocation("complementBarcodeOriginOfOuterPurchase");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_complementBarcodeOriginOfOuterPurchase_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_complementBarcodeOriginOfOuterPurchase_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_complementBarcodeOriginOfOuterPurchase(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_complementBarcodeOriginOfOuterPurchase_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_complementBarcodeOriginOfOuterPurchase_result();
 		$this->receive_base($result);
 		
 	}
@@ -107,7 +107,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_delete( $purchaseNo){
 		
 		$this->initInvocation("delete");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_delete_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_delete_args();
 		
 		$args->purchaseNo = $purchaseNo;
 		
@@ -116,7 +116,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_delete(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_delete_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_delete_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -126,16 +126,16 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	}
 	
 	
-	public function doImport(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderImportRequest $request){
+	public function doImport(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderImportRequest $request){
 		
 		$this->send_doImport( $request);
 		return $this->recv_doImport();
 	}
 	
-	public function send_doImport(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderImportRequest $request){
+	public function send_doImport(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderImportRequest $request){
 		
 		$this->initInvocation("doImport");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_doImport_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_doImport_args();
 		
 		$args->request = $request;
 		
@@ -144,7 +144,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_doImport(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_doImport_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_doImport_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -163,7 +163,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_export( $purchaseNo, $exportType){
 		
 		$this->initInvocation("export");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_export_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_export_args();
 		
 		$args->purchaseNo = $purchaseNo;
 		
@@ -174,7 +174,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_export(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_export_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_export_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -193,7 +193,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_exportAsync( $purchaseNo, $exportType){
 		
 		$this->initInvocation("exportAsync");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_exportAsync_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_exportAsync_args();
 		
 		$args->purchaseNo = $purchaseNo;
 		
@@ -204,7 +204,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_exportAsync(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_exportAsync_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_exportAsync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -223,7 +223,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_exportPoHead( $purchaseNo,\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel){
 		
 		$this->initInvocation("exportPoHead");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_exportPoHead_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_exportPoHead_args();
 		
 		$args->purchaseNo = $purchaseNo;
 		
@@ -234,7 +234,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_exportPoHead(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_exportPoHead_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_exportPoHead_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -253,14 +253,14 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_healthCheck_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_healthCheck_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -270,16 +270,16 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	}
 	
 	
-	public function queryMyApprovedPo(\com\vip\xstore\cc\bulkbuying\service\QueryMyApprovedPoReq $req){
+	public function queryMyApprovedPo(\Voop\com\vip\xstore\cc\bulkbuying\service\QueryMyApprovedPoReq $req){
 		
 		$this->send_queryMyApprovedPo( $req);
 		return $this->recv_queryMyApprovedPo();
 	}
 	
-	public function send_queryMyApprovedPo(\com\vip\xstore\cc\bulkbuying\service\QueryMyApprovedPoReq $req){
+	public function send_queryMyApprovedPo(\Voop\com\vip\xstore\cc\bulkbuying\service\QueryMyApprovedPoReq $req){
 		
 		$this->initInvocation("queryMyApprovedPo");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_queryMyApprovedPo_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_queryMyApprovedPo_args();
 		
 		$args->req = $req;
 		
@@ -288,7 +288,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_queryMyApprovedPo(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_queryMyApprovedPo_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_queryMyApprovedPo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -307,7 +307,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_select( $purchaseNo){
 		
 		$this->initInvocation("select");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_select_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_select_args();
 		
 		$args->purchaseNo = $purchaseNo;
 		
@@ -316,7 +316,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_select(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_select_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_select_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -326,16 +326,16 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	}
 	
 	
-	public function selectAll(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderSelectAllReq $selectAllReq){
+	public function selectAll(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderSelectAllReq $selectAllReq){
 		
 		$this->send_selectAll( $selectAllReq);
 		return $this->recv_selectAll();
 	}
 	
-	public function send_selectAll(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderSelectAllReq $selectAllReq){
+	public function send_selectAll(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderSelectAllReq $selectAllReq){
 		
 		$this->initInvocation("selectAll");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_selectAll_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_selectAll_args();
 		
 		$args->selectAllReq = $selectAllReq;
 		
@@ -344,7 +344,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_selectAll(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_selectAll_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_selectAll_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -354,16 +354,16 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	}
 	
 	
-	public function selectPage(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel){
+	public function selectPage(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel){
 		
 		$this->send_selectPage( $purchaseOrderQueryModel);
 		return $this->recv_selectPage();
 	}
 	
-	public function send_selectPage(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel){
+	public function send_selectPage(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel){
 		
 		$this->initInvocation("selectPage");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_selectPage_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_selectPage_args();
 		
 		$args->purchaseOrderQueryModel = $purchaseOrderQueryModel;
 		
@@ -372,7 +372,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_selectPage(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_selectPage_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_selectPage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -382,16 +382,16 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	}
 	
 	
-	public function statPoByGroup(\com\vip\xstore\cc\bulkbuying\service\StatPoCommonReq $req){
+	public function statPoByGroup(\Voop\com\vip\xstore\cc\bulkbuying\service\StatPoCommonReq $req){
 		
 		$this->send_statPoByGroup( $req);
 		return $this->recv_statPoByGroup();
 	}
 	
-	public function send_statPoByGroup(\com\vip\xstore\cc\bulkbuying\service\StatPoCommonReq $req){
+	public function send_statPoByGroup(\Voop\com\vip\xstore\cc\bulkbuying\service\StatPoCommonReq $req){
 		
 		$this->initInvocation("statPoByGroup");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_statPoByGroup_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_statPoByGroup_args();
 		
 		$args->req = $req;
 		
@@ -400,7 +400,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_statPoByGroup(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_statPoByGroup_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_statPoByGroup_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -410,16 +410,16 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	}
 	
 	
-	public function update(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderUpdateRequest $request){
+	public function update(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderUpdateRequest $request){
 		
 		$this->send_update( $request);
 		return $this->recv_update();
 	}
 	
-	public function send_update(\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderUpdateRequest $request){
+	public function send_update(\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderUpdateRequest $request){
 		
 		$this->initInvocation("update");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_update_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_update_args();
 		
 		$args->request = $request;
 		
@@ -428,7 +428,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_update(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_update_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_update_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -447,7 +447,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_updatePoDistributableGoodsTime( $purchaseNo, $distributableGoodsTime){
 		
 		$this->initInvocation("updatePoDistributableGoodsTime");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_updatePoDistributableGoodsTime_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_updatePoDistributableGoodsTime_args();
 		
 		$args->purchaseNo = $purchaseNo;
 		
@@ -458,7 +458,7 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_updatePoDistributableGoodsTime(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_updatePoDistributableGoodsTime_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_updatePoDistributableGoodsTime_result();
 		$this->receive_base($result);
 		
 	}
@@ -665,7 +665,7 @@ class PurchaseOrderService_delete_args {
 			
 			if (!is_array($this->purchaseNo)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -731,7 +731,7 @@ class PurchaseOrderService_doImport_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderImportRequest();
+			$this->request = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderImportRequest();
 			$this->request->read($input);
 			
 		}
@@ -752,7 +752,7 @@ class PurchaseOrderService_doImport_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1016,7 +1016,7 @@ class PurchaseOrderService_exportPoHead_args {
 		if(true) {
 			
 			
-			$this->purchaseOrderQueryModel = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel();
+			$this->purchaseOrderQueryModel = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel();
 			$this->purchaseOrderQueryModel->read($input);
 			
 		}
@@ -1048,7 +1048,7 @@ class PurchaseOrderService_exportPoHead_args {
 			
 			if (!is_object($this->purchaseOrderQueryModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->purchaseOrderQueryModel->write($output);
@@ -1153,7 +1153,7 @@ class PurchaseOrderService_queryMyApprovedPo_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\cc\bulkbuying\service\QueryMyApprovedPoReq();
+			$this->req = new \Voop\com\vip\xstore\cc\bulkbuying\service\QueryMyApprovedPoReq();
 			$this->req->read($input);
 			
 		}
@@ -1176,7 +1176,7 @@ class PurchaseOrderService_queryMyApprovedPo_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1309,7 +1309,7 @@ class PurchaseOrderService_selectAll_args {
 		if(true) {
 			
 			
-			$this->selectAllReq = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderSelectAllReq();
+			$this->selectAllReq = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderSelectAllReq();
 			$this->selectAllReq->read($input);
 			
 		}
@@ -1332,7 +1332,7 @@ class PurchaseOrderService_selectAll_args {
 			
 			if (!is_object($this->selectAllReq)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->selectAllReq->write($output);
@@ -1391,7 +1391,7 @@ class PurchaseOrderService_selectPage_args {
 		if(true) {
 			
 			
-			$this->purchaseOrderQueryModel = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel();
+			$this->purchaseOrderQueryModel = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel();
 			$this->purchaseOrderQueryModel->read($input);
 			
 		}
@@ -1414,7 +1414,7 @@ class PurchaseOrderService_selectPage_args {
 			
 			if (!is_object($this->purchaseOrderQueryModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->purchaseOrderQueryModel->write($output);
@@ -1473,7 +1473,7 @@ class PurchaseOrderService_statPoByGroup_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\cc\bulkbuying\service\StatPoCommonReq();
+			$this->req = new \Voop\com\vip\xstore\cc\bulkbuying\service\StatPoCommonReq();
 			$this->req->read($input);
 			
 		}
@@ -1494,7 +1494,7 @@ class PurchaseOrderService_statPoByGroup_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1551,7 +1551,7 @@ class PurchaseOrderService_update_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderUpdateRequest();
+			$this->request = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderUpdateRequest();
 			$this->request->read($input);
 			
 		}
@@ -1572,7 +1572,7 @@ class PurchaseOrderService_update_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1891,7 +1891,7 @@ class PurchaseOrderService_doImport_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderImportResponse();
+			$this->success = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderImportResponse();
 			$this->success->read($input);
 			
 		}
@@ -1914,7 +1914,7 @@ class PurchaseOrderService_doImport_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1973,7 +1973,7 @@ class PurchaseOrderService_export_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderResult();
+			$this->success = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderResult();
 			$this->success->read($input);
 			
 		}
@@ -1996,7 +1996,7 @@ class PurchaseOrderService_export_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2125,7 +2125,7 @@ class PurchaseOrderService_exportPoHead_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderResult();
+			$this->success = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderResult();
 			$this->success->read($input);
 			
 		}
@@ -2148,7 +2148,7 @@ class PurchaseOrderService_exportPoHead_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2207,7 +2207,7 @@ class PurchaseOrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -2230,7 +2230,7 @@ class PurchaseOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2289,7 +2289,7 @@ class PurchaseOrderService_queryMyApprovedPo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderModelResult();
+			$this->success = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderModelResult();
 			$this->success->read($input);
 			
 		}
@@ -2312,7 +2312,7 @@ class PurchaseOrderService_queryMyApprovedPo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2380,7 +2380,7 @@ class PurchaseOrderService_select_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderModel();
+					$elem0 = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderModel();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2413,7 +2413,7 @@ class PurchaseOrderService_select_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2422,7 +2422,7 @@ class PurchaseOrderService_select_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2494,7 +2494,7 @@ class PurchaseOrderService_selectAll_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderModel();
+					$elem1 = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderModel();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -2527,7 +2527,7 @@ class PurchaseOrderService_selectAll_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2536,7 +2536,7 @@ class PurchaseOrderService_selectAll_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2599,7 +2599,7 @@ class PurchaseOrderService_selectPage_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderModelResult();
+			$this->success = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderModelResult();
 			$this->success->read($input);
 			
 		}
@@ -2622,7 +2622,7 @@ class PurchaseOrderService_selectPage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2681,7 +2681,7 @@ class PurchaseOrderService_statPoByGroup_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\bulkbuying\service\StatPoByGroupResp();
+			$this->success = new \Voop\com\vip\xstore\cc\bulkbuying\service\StatPoByGroupResp();
 			$this->success->read($input);
 			
 		}
@@ -2704,7 +2704,7 @@ class PurchaseOrderService_statPoByGroup_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

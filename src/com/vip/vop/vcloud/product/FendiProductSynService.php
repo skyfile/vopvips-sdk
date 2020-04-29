@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\product;
+namespace Voop\com\vip\vop\vcloud\product;
 interface FendiProductSynServiceIf{
 	
 	
@@ -41,14 +41,14 @@ class _FendiProductSynServiceClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_handleImages(){
 		
 		$this->initInvocation("handleImages");
-		$args = new \com\vip\vop\vcloud\product\FendiProductSynService_handleImages_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\FendiProductSynService_handleImages_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_handleImages(){
 		
-		$result = new \com\vip\vop\vcloud\product\FendiProductSynService_handleImages_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\FendiProductSynService_handleImages_result();
 		$this->receive_base($result);
 		
 	}
@@ -63,14 +63,14 @@ class _FendiProductSynServiceClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\vcloud\product\FendiProductSynService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\FendiProductSynService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\vcloud\product\FendiProductSynService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\FendiProductSynService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -89,14 +89,14 @@ class _FendiProductSynServiceClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_parseAndSave(){
 		
 		$this->initInvocation("parseAndSave");
-		$args = new \com\vip\vop\vcloud\product\FendiProductSynService_parseAndSave_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\FendiProductSynService_parseAndSave_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_parseAndSave(){
 		
-		$result = new \com\vip\vop\vcloud\product\FendiProductSynService_parseAndSave_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\FendiProductSynService_parseAndSave_result();
 		$this->receive_base($result);
 		
 	}
@@ -111,14 +111,14 @@ class _FendiProductSynServiceClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_parseAndSaveCategory(){
 		
 		$this->initInvocation("parseAndSaveCategory");
-		$args = new \com\vip\vop\vcloud\product\FendiProductSynService_parseAndSaveCategory_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\FendiProductSynService_parseAndSaveCategory_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_parseAndSaveCategory(){
 		
-		$result = new \com\vip\vop\vcloud\product\FendiProductSynService_parseAndSaveCategory_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\FendiProductSynService_parseAndSaveCategory_result();
 		$this->receive_base($result);
 		
 	}
@@ -133,14 +133,14 @@ class _FendiProductSynServiceClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_pushCategoryToVdg(){
 		
 		$this->initInvocation("pushCategoryToVdg");
-		$args = new \com\vip\vop\vcloud\product\FendiProductSynService_pushCategoryToVdg_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\FendiProductSynService_pushCategoryToVdg_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_pushCategoryToVdg(){
 		
-		$result = new \com\vip\vop\vcloud\product\FendiProductSynService_pushCategoryToVdg_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\FendiProductSynService_pushCategoryToVdg_result();
 		$this->receive_base($result);
 		
 	}
@@ -470,7 +470,7 @@ class FendiProductSynService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -493,7 +493,7 @@ class FendiProductSynService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

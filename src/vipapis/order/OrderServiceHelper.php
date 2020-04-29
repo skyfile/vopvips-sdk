@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\order;
+namespace Voop\vipapis\order;
 require_once dirname(__FILE__).'/OrderService.php';
 class OrderServiceHelper extends _OrderServiceClient{
 	

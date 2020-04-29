@@ -8,13 +8,13 @@
 *
 */
 
-namespace vipapis\inventory;
+namespace Voop\vipapis\inventory;
 interface VrwInvIncomeOspServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function syncVrwIncrInv(\com\vipshop\cis\sdk\api\datain\si\request\SyncVrwIncrInvRequest $request);
+	public function syncVrwIncrInv(\Voop\com\vipshop\cis\sdk\api\datain\si\request\SyncVrwIncrInvRequest $request);
 	
 }
 
@@ -35,14 +35,14 @@ class _VrwInvIncomeOspServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\inventory\VrwInvIncomeOspService_healthCheck_args();
+		$args = new \Voop\vipapis\inventory\VrwInvIncomeOspService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\inventory\VrwInvIncomeOspService_healthCheck_result();
+		$result = new \Voop\vipapis\inventory\VrwInvIncomeOspService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -52,16 +52,16 @@ class _VrwInvIncomeOspServiceClient extends \Osp\Base\OspStub implements \vipapi
 	}
 	
 	
-	public function syncVrwIncrInv(\com\vipshop\cis\sdk\api\datain\si\request\SyncVrwIncrInvRequest $request){
+	public function syncVrwIncrInv(\Voop\com\vipshop\cis\sdk\api\datain\si\request\SyncVrwIncrInvRequest $request){
 		
 		$this->send_syncVrwIncrInv( $request);
 		return $this->recv_syncVrwIncrInv();
 	}
 	
-	public function send_syncVrwIncrInv(\com\vipshop\cis\sdk\api\datain\si\request\SyncVrwIncrInvRequest $request){
+	public function send_syncVrwIncrInv(\Voop\com\vipshop\cis\sdk\api\datain\si\request\SyncVrwIncrInvRequest $request){
 		
 		$this->initInvocation("syncVrwIncrInv");
-		$args = new \vipapis\inventory\VrwInvIncomeOspService_syncVrwIncrInv_args();
+		$args = new \Voop\vipapis\inventory\VrwInvIncomeOspService_syncVrwIncrInv_args();
 		
 		$args->request = $request;
 		
@@ -70,7 +70,7 @@ class _VrwInvIncomeOspServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_syncVrwIncrInv(){
 		
-		$result = new \vipapis\inventory\VrwInvIncomeOspService_syncVrwIncrInv_result();
+		$result = new \Voop\vipapis\inventory\VrwInvIncomeOspService_syncVrwIncrInv_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -171,7 +171,7 @@ class VrwInvIncomeOspService_syncVrwIncrInv_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vipshop\cis\sdk\api\datain\si\request\SyncVrwIncrInvRequest();
+			$this->request = new \Voop\com\vipshop\cis\sdk\api\datain\si\request\SyncVrwIncrInvRequest();
 			$this->request->read($input);
 			
 		}
@@ -192,7 +192,7 @@ class VrwInvIncomeOspService_syncVrwIncrInv_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -249,7 +249,7 @@ class VrwInvIncomeOspService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -272,7 +272,7 @@ class VrwInvIncomeOspService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -331,7 +331,7 @@ class VrwInvIncomeOspService_syncVrwIncrInv_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vipshop\cis\sdk\api\datain\si\response\SyncVrwIncrInvResponse();
+			$this->success = new \Voop\com\vipshop\cis\sdk\api\datain\si\response\SyncVrwIncrInvResponse();
 			$this->success->read($input);
 			
 		}
@@ -354,7 +354,7 @@ class VrwInvIncomeOspService_syncVrwIncrInv_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

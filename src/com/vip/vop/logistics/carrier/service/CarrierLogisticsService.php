@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\carrier\service;
+namespace Voop\com\vip\vop\logistics\carrier\service;
 interface CarrierLogisticsServiceIf{
 	
 	
@@ -28,7 +28,7 @@ interface CarrierLogisticsServiceIf{
 	
 	public function reportTrace( $carrier_code, $traces);
 	
-	public function uploadCarrierBill(\com\vip\vop\logistics\carrier\service\UploadCarrierBillRequest $req);
+	public function uploadCarrierBill(\Voop\com\vip\vop\logistics\carrier\service\UploadCarrierBillRequest $req);
 	
 	public function uploadShippingInterceptResult( $carrier_code, $intercept_results);
 	
@@ -51,7 +51,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	public function send_collectShipping( $carrier_code, $collections){
 		
 		$this->initInvocation("collectShipping");
-		$args = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_collectShipping_args();
+		$args = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_collectShipping_args();
 		
 		$args->carrier_code = $carrier_code;
 		
@@ -62,7 +62,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_collectShipping(){
 		
-		$result = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_collectShipping_result();
+		$result = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_collectShipping_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -81,7 +81,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	public function send_forwardShipping( $carrier_code, $forward_shippings){
 		
 		$this->initInvocation("forwardShipping");
-		$args = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_forwardShipping_args();
+		$args = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_forwardShipping_args();
 		
 		$args->carrier_code = $carrier_code;
 		
@@ -92,7 +92,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_forwardShipping(){
 		
-		$result = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_forwardShipping_result();
+		$result = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_forwardShipping_result();
 		$this->receive_base($result);
 		
 	}
@@ -107,14 +107,14 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -133,7 +133,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	public function send_listRefundAddress( $carrier_code, $logistics_nos){
 		
 		$this->initInvocation("listRefundAddress");
-		$args = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_listRefundAddress_args();
+		$args = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_listRefundAddress_args();
 		
 		$args->carrier_code = $carrier_code;
 		
@@ -144,7 +144,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_listRefundAddress(){
 		
-		$result = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_listRefundAddress_result();
+		$result = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_listRefundAddress_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -163,7 +163,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	public function send_reportLoadingListDetail( $carrier_code,\com\vip\vop\logistics\carrier\service\LoadingListReq $loadingListReq){
 		
 		$this->initInvocation("reportLoadingListDetail");
-		$args = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportLoadingListDetail_args();
+		$args = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportLoadingListDetail_args();
 		
 		$args->carrier_code = $carrier_code;
 		
@@ -174,7 +174,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_reportLoadingListDetail(){
 		
-		$result = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportLoadingListDetail_result();
+		$result = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportLoadingListDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -193,7 +193,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	public function send_reportPacketInfo( $carrier_code, $packetInfos){
 		
 		$this->initInvocation("reportPacketInfo");
-		$args = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportPacketInfo_args();
+		$args = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportPacketInfo_args();
 		
 		$args->carrier_code = $carrier_code;
 		
@@ -204,7 +204,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_reportPacketInfo(){
 		
-		$result = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportPacketInfo_result();
+		$result = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportPacketInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -223,7 +223,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	public function send_reportProblemShipping( $carrier_code, $problem_shippings){
 		
 		$this->initInvocation("reportProblemShipping");
-		$args = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportProblemShipping_args();
+		$args = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportProblemShipping_args();
 		
 		$args->carrier_code = $carrier_code;
 		
@@ -234,7 +234,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_reportProblemShipping(){
 		
-		$result = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportProblemShipping_result();
+		$result = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportProblemShipping_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -253,7 +253,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	public function send_reportTrace( $carrier_code, $traces){
 		
 		$this->initInvocation("reportTrace");
-		$args = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportTrace_args();
+		$args = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportTrace_args();
 		
 		$args->carrier_code = $carrier_code;
 		
@@ -264,7 +264,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_reportTrace(){
 		
-		$result = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportTrace_result();
+		$result = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_reportTrace_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -274,16 +274,16 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	}
 	
 	
-	public function uploadCarrierBill(\com\vip\vop\logistics\carrier\service\UploadCarrierBillRequest $req){
+	public function uploadCarrierBill(\Voop\com\vip\vop\logistics\carrier\service\UploadCarrierBillRequest $req){
 		
 		$this->send_uploadCarrierBill( $req);
 		return $this->recv_uploadCarrierBill();
 	}
 	
-	public function send_uploadCarrierBill(\com\vip\vop\logistics\carrier\service\UploadCarrierBillRequest $req){
+	public function send_uploadCarrierBill(\Voop\com\vip\vop\logistics\carrier\service\UploadCarrierBillRequest $req){
 		
 		$this->initInvocation("uploadCarrierBill");
-		$args = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_uploadCarrierBill_args();
+		$args = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_uploadCarrierBill_args();
 		
 		$args->req = $req;
 		
@@ -292,7 +292,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_uploadCarrierBill(){
 		
-		$result = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_uploadCarrierBill_result();
+		$result = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_uploadCarrierBill_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -311,7 +311,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	public function send_uploadShippingInterceptResult( $carrier_code, $intercept_results){
 		
 		$this->initInvocation("uploadShippingInterceptResult");
-		$args = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_uploadShippingInterceptResult_args();
+		$args = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_uploadShippingInterceptResult_args();
 		
 		$args->carrier_code = $carrier_code;
 		
@@ -322,7 +322,7 @@ class _CarrierLogisticsServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_uploadShippingInterceptResult(){
 		
-		$result = new \com\vip\vop\logistics\carrier\service\CarrierLogisticsService_uploadShippingInterceptResult_result();
+		$result = new \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsService_uploadShippingInterceptResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -405,7 +405,7 @@ class CarrierLogisticsService_collectShipping_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\logistics\carrier\service\ShippingCollection();
+					$elem0 = new \Voop\com\vip\vop\logistics\carrier\service\ShippingCollection();
 					$elem0->read($input);
 					
 					$this->collections[$_size0++] = $elem0;
@@ -441,7 +441,7 @@ class CarrierLogisticsService_collectShipping_args {
 		
 		if (!is_array($this->collections)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -450,7 +450,7 @@ class CarrierLogisticsService_collectShipping_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -539,7 +539,7 @@ class CarrierLogisticsService_forwardShipping_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\logistics\carrier\service\ForwardShipping();
+					$elem1 = new \Voop\com\vip\vop\logistics\carrier\service\ForwardShipping();
 					$elem1->read($input);
 					
 					$this->forward_shippings[$_size1++] = $elem1;
@@ -575,7 +575,7 @@ class CarrierLogisticsService_forwardShipping_args {
 		
 		if (!is_array($this->forward_shippings)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -584,7 +584,7 @@ class CarrierLogisticsService_forwardShipping_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -753,7 +753,7 @@ class CarrierLogisticsService_listRefundAddress_args {
 		
 		if (!is_array($this->logistics_nos)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -836,7 +836,7 @@ class CarrierLogisticsService_reportLoadingListDetail_args {
 		if(true) {
 			
 			
-			$this->loadingListReq = new \com\vip\vop\logistics\carrier\service\LoadingListReq();
+			$this->loadingListReq = new \Voop\com\vip\vop\logistics\carrier\service\LoadingListReq();
 			$this->loadingListReq->read($input);
 			
 		}
@@ -862,7 +862,7 @@ class CarrierLogisticsService_reportLoadingListDetail_args {
 		
 		if (!is_object($this->loadingListReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->loadingListReq->write($output);
@@ -947,7 +947,7 @@ class CarrierLogisticsService_reportPacketInfo_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\logistics\carrier\service\PacketInfo();
+					$elem0 = new \Voop\com\vip\vop\logistics\carrier\service\PacketInfo();
 					$elem0->read($input);
 					
 					$this->packetInfos[$_size0++] = $elem0;
@@ -983,7 +983,7 @@ class CarrierLogisticsService_reportPacketInfo_args {
 		
 		if (!is_array($this->packetInfos)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -992,7 +992,7 @@ class CarrierLogisticsService_reportPacketInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1081,7 +1081,7 @@ class CarrierLogisticsService_reportProblemShipping_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\logistics\carrier\service\ProblemShipping();
+					$elem1 = new \Voop\com\vip\vop\logistics\carrier\service\ProblemShipping();
 					$elem1->read($input);
 					
 					$this->problem_shippings[$_size1++] = $elem1;
@@ -1117,7 +1117,7 @@ class CarrierLogisticsService_reportProblemShipping_args {
 		
 		if (!is_array($this->problem_shippings)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1126,7 +1126,7 @@ class CarrierLogisticsService_reportProblemShipping_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1215,7 +1215,7 @@ class CarrierLogisticsService_reportTrace_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\logistics\ShipmentTraceList();
+					$elem1 = new \Voop\com\vip\vop\logistics\ShipmentTraceList();
 					$elem1->read($input);
 					
 					$this->traces[$_size1++] = $elem1;
@@ -1253,7 +1253,7 @@ class CarrierLogisticsService_reportTrace_args {
 			
 			if (!is_array($this->traces)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1262,7 +1262,7 @@ class CarrierLogisticsService_reportTrace_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1325,7 +1325,7 @@ class CarrierLogisticsService_uploadCarrierBill_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\vop\logistics\carrier\service\UploadCarrierBillRequest();
+			$this->req = new \Voop\com\vip\vop\logistics\carrier\service\UploadCarrierBillRequest();
 			$this->req->read($input);
 			
 		}
@@ -1346,7 +1346,7 @@ class CarrierLogisticsService_uploadCarrierBill_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1431,7 +1431,7 @@ class CarrierLogisticsService_uploadShippingInterceptResult_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\logistics\carrier\service\ShippingInterceptResult();
+					$elem0 = new \Voop\com\vip\vop\logistics\carrier\service\ShippingInterceptResult();
 					$elem0->read($input);
 					
 					$this->intercept_results[$_size0++] = $elem0;
@@ -1467,7 +1467,7 @@ class CarrierLogisticsService_uploadShippingInterceptResult_args {
 		
 		if (!is_array($this->intercept_results)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1476,7 +1476,7 @@ class CarrierLogisticsService_uploadShippingInterceptResult_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1546,7 +1546,7 @@ class CarrierLogisticsService_collectShipping_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\logistics\carrier\service\ShippingCollectionResult();
+					$elem1 = new \Voop\com\vip\vop\logistics\carrier\service\ShippingCollectionResult();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1579,7 +1579,7 @@ class CarrierLogisticsService_collectShipping_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1588,7 +1588,7 @@ class CarrierLogisticsService_collectShipping_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1700,7 +1700,7 @@ class CarrierLogisticsService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1723,7 +1723,7 @@ class CarrierLogisticsService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1791,7 +1791,7 @@ class CarrierLogisticsService_listRefundAddress_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\logistics\ShippingAddress();
+					$elem0 = new \Voop\com\vip\vop\logistics\ShippingAddress();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1824,7 +1824,7 @@ class CarrierLogisticsService_listRefundAddress_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1833,7 +1833,7 @@ class CarrierLogisticsService_listRefundAddress_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1896,7 +1896,7 @@ class CarrierLogisticsService_reportLoadingListDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\logistics\carrier\service\LoadingListResp();
+			$this->success = new \Voop\com\vip\vop\logistics\carrier\service\LoadingListResp();
 			$this->success->read($input);
 			
 		}
@@ -1919,7 +1919,7 @@ class CarrierLogisticsService_reportLoadingListDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1978,7 +1978,7 @@ class CarrierLogisticsService_reportPacketInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\logistics\carrier\service\ReportPacketInfoResp();
+			$this->success = new \Voop\com\vip\vop\logistics\carrier\service\ReportPacketInfoResp();
 			$this->success->read($input);
 			
 		}
@@ -2001,7 +2001,7 @@ class CarrierLogisticsService_reportPacketInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2069,7 +2069,7 @@ class CarrierLogisticsService_reportProblemShipping_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\logistics\carrier\service\ReportProblemShippingResult();
+					$elem0 = new \Voop\com\vip\vop\logistics\carrier\service\ReportProblemShippingResult();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2102,7 +2102,7 @@ class CarrierLogisticsService_reportProblemShipping_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2111,7 +2111,7 @@ class CarrierLogisticsService_reportProblemShipping_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2183,7 +2183,7 @@ class CarrierLogisticsService_reportTrace_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\logistics\ReportTraceResult();
+					$elem1 = new \Voop\com\vip\vop\logistics\ReportTraceResult();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -2216,7 +2216,7 @@ class CarrierLogisticsService_reportTrace_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2225,7 +2225,7 @@ class CarrierLogisticsService_reportTrace_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2288,7 +2288,7 @@ class CarrierLogisticsService_uploadCarrierBill_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\logistics\carrier\service\UploadCarrierBillResponse();
+			$this->success = new \Voop\com\vip\vop\logistics\carrier\service\UploadCarrierBillResponse();
 			$this->success->read($input);
 			
 		}
@@ -2311,7 +2311,7 @@ class CarrierLogisticsService_uploadCarrierBill_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2370,7 +2370,7 @@ class CarrierLogisticsService_uploadShippingInterceptResult_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\logistics\carrier\service\ShippingInterceptResp();
+			$this->success = new \Voop\com\vip\vop\logistics\carrier\service\ShippingInterceptResp();
 			$this->success->read($input);
 			
 		}
@@ -2393,7 +2393,7 @@ class CarrierLogisticsService_uploadShippingInterceptResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

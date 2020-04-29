@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 
 class ProductDetail {
 	
@@ -290,7 +290,7 @@ class ProductDetail {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\marketplace\product\SkuDetail();
+						$elem0 = new \Voop\vipapis\marketplace\product\SkuDetail();
 						$elem0->read($input);
 						
 						$this->skus[$_size0++] = $elem0;
@@ -403,7 +403,7 @@ class ProductDetail {
 						
 						$elem3 = null;
 						
-						$elem3 = new \vipapis\marketplace\product\Image();
+						$elem3 = new \Voop\vipapis\marketplace\product\Image();
 						$elem3->read($input);
 						
 						$this->images[$_size3++] = $elem3;
@@ -552,7 +552,7 @@ class ProductDetail {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -589,7 +589,7 @@ class ProductDetail {
 			
 			if (!is_array($this->skus)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -598,7 +598,7 @@ class ProductDetail {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -635,7 +635,7 @@ class ProductDetail {
 			
 			if (!is_array($this->prod_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -659,7 +659,7 @@ class ProductDetail {
 			
 			if (!is_array($this->custom_prod_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -683,7 +683,7 @@ class ProductDetail {
 			
 			if (!is_array($this->images)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -692,7 +692,7 @@ class ProductDetail {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

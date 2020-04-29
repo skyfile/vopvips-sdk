@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\stock;
+namespace Voop\vipapis\stock;
 
 class GetFrozenStockDetailsResponse {
 	
@@ -80,7 +80,7 @@ class GetFrozenStockDetailsResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\stock\FrozenInventory();
+						$elem0 = new \Voop\vipapis\stock\FrozenInventory();
 						$elem0->read($input);
 						
 						$this->forzen_inventory_list[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class GetFrozenStockDetailsResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -132,7 +132,7 @@ class GetFrozenStockDetailsResponse {
 			
 			if (!is_array($this->forzen_inventory_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -141,7 +141,7 @@ class GetFrozenStockDetailsResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

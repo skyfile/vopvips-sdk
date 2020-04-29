@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\svip\osp\service;
+namespace Voop\com\vip\svip\osp\service;
 
 class DoubleSvipStatus {
 	
@@ -101,7 +101,7 @@ class DoubleSvipStatus {
 				
 				$needSkip = false;
 				
-				$this->token = new \com\vip\svip\osp\service\DoubleSvipToken();
+				$this->token = new \Voop\com\vip\svip\osp\service\DoubleSvipToken();
 				$this->token->read($input);
 				
 			}
@@ -151,7 +151,7 @@ class DoubleSvipStatus {
 			
 			if (!is_object($this->token)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->token->write($output);

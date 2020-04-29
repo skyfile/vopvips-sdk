@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\product;
+namespace Voop\com\vip\vop\vcloud\product;
 require_once dirname(__FILE__).'/ProductAdminService.php';
 class ProductAdminServiceHelper extends _ProductAdminServiceClient{
 	

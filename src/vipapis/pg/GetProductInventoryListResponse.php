@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\pg;
+namespace Voop\vipapis\pg;
 
 class GetProductInventoryListResponse {
 	
@@ -80,7 +80,7 @@ class GetProductInventoryListResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\pg\Inventory();
+						$elem0 = new \Voop\vipapis\pg\Inventory();
 						$elem0->read($input);
 						
 						$this->goodsStock[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class GetProductInventoryListResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -130,7 +130,7 @@ class GetProductInventoryListResponse {
 		
 		if (!is_array($this->goodsStock)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -139,7 +139,7 @@ class GetProductInventoryListResponse {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

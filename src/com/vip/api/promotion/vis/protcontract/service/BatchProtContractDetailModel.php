@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\protcontract\service;
+namespace Voop\com\vip\api\promotion\vis\protcontract\service;
 
 class BatchProtContractDetailModel {
 	
@@ -61,7 +61,7 @@ class BatchProtContractDetailModel {
 				
 				$needSkip = false;
 				
-				$this->mainInfo = new \com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoModel();
+				$this->mainInfo = new \Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoModel();
 				$this->mainInfo->read($input);
 				
 			}
@@ -93,7 +93,7 @@ class BatchProtContractDetailModel {
 			
 			if (!is_object($this->mainInfo)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->mainInfo->write($output);

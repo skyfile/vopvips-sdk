@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\order;
+namespace Voop\vipapis\order;
 
 class ExtInfo {
 	
@@ -108,7 +108,7 @@ class ExtInfo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

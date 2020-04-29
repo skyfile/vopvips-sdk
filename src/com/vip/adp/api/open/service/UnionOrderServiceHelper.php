@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 require_once dirname(__FILE__).'/UnionOrderService.php';
 class UnionOrderServiceHelper extends _UnionOrderServiceClient{
 	

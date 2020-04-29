@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\order;
+namespace Voop\vipapis\order;
 
 class OxoOrder {
 	
@@ -270,7 +270,7 @@ class OxoOrder {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\order\OxoOrderDetail();
+						$elem0 = new \Voop\vipapis\order\OxoOrderDetail();
 						$elem0->read($input);
 						
 						$this->barcodes[$_size0++] = $elem0;
@@ -311,7 +311,7 @@ class OxoOrder {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\order\OxoOrderSource();
+						$elem1 = new \Voop\vipapis\order\OxoOrderSource();
 						$elem1->read($input);
 						
 						$this->order_source[$_size1++] = $elem1;
@@ -470,7 +470,7 @@ class OxoOrder {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -511,7 +511,7 @@ class OxoOrder {
 			
 			if (!is_array($this->barcodes)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -520,7 +520,7 @@ class OxoOrder {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -548,7 +548,7 @@ class OxoOrder {
 			
 			if (!is_array($this->order_source)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -557,7 +557,7 @@ class OxoOrder {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

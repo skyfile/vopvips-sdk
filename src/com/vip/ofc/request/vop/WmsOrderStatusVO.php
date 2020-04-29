@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\ofc\request\vop;
+namespace Voop\com\vip\ofc\request\vop;
 
 class WmsOrderStatusVO {
 	

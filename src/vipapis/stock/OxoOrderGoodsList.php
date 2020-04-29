@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\stock;
+namespace Voop\vipapis\stock;
 
 class OxoOrderGoodsList {
 	
@@ -168,7 +168,7 @@ class OxoOrderGoodsList {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\arplatform\merchModel\service;
+namespace Voop\com\vip\arplatform\merchModel\service;
 
 class Jd3dModelData {
 	
@@ -221,7 +221,7 @@ class Jd3dModelData {
 				
 				$needSkip = false;
 				
-				$this->jd3dModelInfo = new \com\vip\arplatform\merchModel\service\Jd3dModelInfo();
+				$this->jd3dModelInfo = new \Voop\com\vip\arplatform\merchModel\service\Jd3dModelInfo();
 				$this->jd3dModelInfo->read($input);
 				
 			}
@@ -315,7 +315,7 @@ class Jd3dModelData {
 		
 		if (!is_object($this->jd3dModelInfo)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->jd3dModelInfo->write($output);

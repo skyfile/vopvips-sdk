@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\wo;
+namespace Voop\com\vip\vop\logistics\wo;
 
 class WorkOrderRecheckResult {
 	
@@ -81,7 +81,7 @@ class WorkOrderRecheckResult {
 				
 				$needSkip = false;
 				
-				$this->reckeck_reply_content = new \com\vip\vop\logistics\wo\RecheckRelyContent();
+				$this->reckeck_reply_content = new \Voop\com\vip\vop\logistics\wo\RecheckRelyContent();
 				$this->reckeck_reply_content->read($input);
 				
 			}
@@ -116,7 +116,7 @@ class WorkOrderRecheckResult {
 		
 		if (!is_object($this->reckeck_reply_content)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reckeck_reply_content->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\sales;
+namespace Voop\vipapis\sales;
 
 class UpcomingSalesSku {
 	
@@ -128,7 +128,7 @@ class UpcomingSalesSku {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

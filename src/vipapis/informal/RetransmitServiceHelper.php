@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\informal;
+namespace Voop\vipapis\informal;
 require_once dirname(__FILE__).'/RetransmitService.php';
 class RetransmitServiceHelper extends _RetransmitServiceClient{
 	

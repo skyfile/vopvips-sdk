@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 
 class OffShelfResponse {
 	
@@ -133,7 +133,7 @@ class OffShelfResponse {
 						
 						$val1 = null;
 						
-						$val1 = new \vipapis\marketplace\product\ShelfResult();
+						$val1 = new \Voop\vipapis\marketplace\product\ShelfResult();
 						$val1->read($input);
 						
 						$this->shelf_results[$key1] = $val1;
@@ -152,7 +152,7 @@ class OffShelfResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -184,7 +184,7 @@ class OffShelfResponse {
 			
 			if (!is_array($this->op_results)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -208,7 +208,7 @@ class OffShelfResponse {
 			
 			if (!is_array($this->shelf_results)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -219,7 +219,7 @@ class OffShelfResponse {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

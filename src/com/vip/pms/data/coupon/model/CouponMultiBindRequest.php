@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\coupon\model;
+namespace Voop\com\vip\pms\data\coupon\model;
 
 class CouponMultiBindRequest {
 	
@@ -133,7 +133,7 @@ class CouponMultiBindRequest {
 		
 		if (!is_array($this->userIds)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

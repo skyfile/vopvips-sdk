@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class PmsActSiteModel {
 	
@@ -160,7 +160,7 @@ class PmsActSiteModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\pms\data\service\PmsActScopeModel();
+						$elem0 = new \Voop\com\vip\pms\data\service\PmsActScopeModel();
 						$elem0->read($input);
 						
 						$this->actScopeList[$_size0++] = $elem0;
@@ -191,7 +191,7 @@ class PmsActSiteModel {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\pms\data\service\PmsActPsScopeModel();
+						$elem1 = new \Voop\com\vip\pms\data\service\PmsActPsScopeModel();
 						$elem1->read($input);
 						
 						$this->actPsScopeList[$_size1++] = $elem1;
@@ -222,7 +222,7 @@ class PmsActSiteModel {
 						
 						$elem2 = null;
 						
-						$elem2 = new \com\vip\pms\data\service\PmsActFavModel();
+						$elem2 = new \Voop\com\vip\pms\data\service\PmsActFavModel();
 						$elem2->read($input);
 						
 						$this->actFavList[$_size2++] = $elem2;
@@ -253,7 +253,7 @@ class PmsActSiteModel {
 						
 						$elem3 = null;
 						
-						$elem3 = new \com\vip\pms\data\service\PmsActNoModel();
+						$elem3 = new \Voop\com\vip\pms\data\service\PmsActNoModel();
 						$elem3->read($input);
 						
 						$this->actNoList[$_size3++] = $elem3;
@@ -294,7 +294,7 @@ class PmsActSiteModel {
 						
 						$elem4 = null;
 						
-						$elem4 = new \com\vip\pms\data\service\PmsActGoodsModel();
+						$elem4 = new \Voop\com\vip\pms\data\service\PmsActGoodsModel();
 						$elem4->read($input);
 						
 						$this->actGoodsList[$_size4++] = $elem4;
@@ -350,7 +350,7 @@ class PmsActSiteModel {
 			
 			if (!is_array($this->actScopeList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -359,7 +359,7 @@ class PmsActSiteModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -376,7 +376,7 @@ class PmsActSiteModel {
 		
 		if (!is_array($this->actPsScopeList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -385,7 +385,7 @@ class PmsActSiteModel {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -400,7 +400,7 @@ class PmsActSiteModel {
 		
 		if (!is_array($this->actFavList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -409,7 +409,7 @@ class PmsActSiteModel {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -424,7 +424,7 @@ class PmsActSiteModel {
 		
 		if (!is_array($this->actNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -433,7 +433,7 @@ class PmsActSiteModel {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -459,7 +459,7 @@ class PmsActSiteModel {
 			
 			if (!is_array($this->actGoodsList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -468,7 +468,7 @@ class PmsActSiteModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

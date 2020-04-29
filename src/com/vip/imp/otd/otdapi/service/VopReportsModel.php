@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\imp\otd\otdapi\service;
+namespace Voop\com\vip\imp\otd\otdapi\service;
 
 class VopReportsModel {
 	
@@ -80,7 +80,7 @@ class VopReportsModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\imp\otd\otdapi\service\VopReportModel();
+						$elem0 = new \Voop\com\vip\imp\otd\otdapi\service\VopReportModel();
 						$elem0->read($input);
 						
 						$this->vopReports[$_size0++] = $elem0;
@@ -102,7 +102,7 @@ class VopReportsModel {
 				
 				$needSkip = false;
 				
-				$this->page = new \com\vip\imp\otd\otdapi\service\VopPageModel();
+				$this->page = new \Voop\com\vip\imp\otd\otdapi\service\VopPageModel();
 				$this->page->read($input);
 				
 			}
@@ -134,7 +134,7 @@ class VopReportsModel {
 			
 			if (!is_array($this->vopReports)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -143,7 +143,7 @@ class VopReportsModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -162,7 +162,7 @@ class VopReportsModel {
 			
 			if (!is_object($this->page)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->page->write($output);

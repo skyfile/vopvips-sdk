@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\cup\inventory;
+namespace Voop\vipapis\cup\inventory;
 require_once dirname(__FILE__).'/InventoryService.php';
 class InventoryServiceHelper extends _InventoryServiceClient{
 	

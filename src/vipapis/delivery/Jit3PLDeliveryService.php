@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 interface Jit3PLDeliveryServiceIf{
 	
 	
@@ -16,7 +16,7 @@ interface Jit3PLDeliveryServiceIf{
 	
 	public function createDelivery( $operator_id, $po_no, $delivery_no, $warehouse, $delivery_time, $arrival_time, $carrier_name, $delivery_method, $store_sn, $carrier_code);
 	
-	public function createMultiPoDelivery(\vipapis\delivery\Create3PLMultiPoDeliveryRequest $request);
+	public function createMultiPoDelivery(\Voop\vipapis\delivery\Create3PLMultiPoDeliveryRequest $request);
 	
 	public function createPick( $po_no, $operator_id, $warehouse, $store_sn, $pick_flag);
 	
@@ -24,13 +24,13 @@ interface Jit3PLDeliveryServiceIf{
 	
 	public function editDelivery( $operator_id, $storage_no, $delivery_no, $warehouse, $delivery_time, $arrival_time, $carrier_name, $tel, $driver, $driver_tel, $delivery_method, $store_sn, $carrier_code);
 	
-	public function editMultiPoDelivery(\vipapis\delivery\Edit3PLMultiPoDeliveryRequest $request);
+	public function editMultiPoDelivery(\Voop\vipapis\delivery\Edit3PLMultiPoDeliveryRequest $request);
 	
 	public function getDeliveryGoods( $operator_id, $storage_no, $page, $limit);
 	
 	public function getDeliveryList( $operator_id, $po_no, $delivery_no, $warehouse, $out_flag, $st_out_time, $et_out_time, $st_estimate_arrive_time, $et_estimate_arrive_time, $st_arrive_time, $et_arrive_time, $page, $limit, $store_sn, $storage_no);
 	
-	public function getMultiPoPickDetail(\vipapis\delivery\Get3PLMultiPoPickDetailRequest $request);
+	public function getMultiPoPickDetail(\Voop\vipapis\delivery\Get3PLMultiPoPickDetailRequest $request);
 	
 	public function getPickDetail( $po_no, $operator_id, $pick_no, $page, $limit);
 	
@@ -63,7 +63,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_confirmDelivery( $operator_id, $storage_no, $store_sn){
 		
 		$this->initInvocation("confirmDelivery");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_confirmDelivery_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_confirmDelivery_args();
 		
 		$args->operator_id = $operator_id;
 		
@@ -76,7 +76,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_confirmDelivery(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_confirmDelivery_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_confirmDelivery_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -95,7 +95,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_createDelivery( $operator_id, $po_no, $delivery_no, $warehouse, $delivery_time, $arrival_time, $carrier_name, $delivery_method, $store_sn, $carrier_code){
 		
 		$this->initInvocation("createDelivery");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_createDelivery_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_createDelivery_args();
 		
 		$args->operator_id = $operator_id;
 		
@@ -122,7 +122,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_createDelivery(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_createDelivery_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_createDelivery_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -132,16 +132,16 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function createMultiPoDelivery(\vipapis\delivery\Create3PLMultiPoDeliveryRequest $request){
+	public function createMultiPoDelivery(\Voop\vipapis\delivery\Create3PLMultiPoDeliveryRequest $request){
 		
 		$this->send_createMultiPoDelivery( $request);
 		return $this->recv_createMultiPoDelivery();
 	}
 	
-	public function send_createMultiPoDelivery(\vipapis\delivery\Create3PLMultiPoDeliveryRequest $request){
+	public function send_createMultiPoDelivery(\Voop\vipapis\delivery\Create3PLMultiPoDeliveryRequest $request){
 		
 		$this->initInvocation("createMultiPoDelivery");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_createMultiPoDelivery_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_createMultiPoDelivery_args();
 		
 		$args->request = $request;
 		
@@ -150,7 +150,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_createMultiPoDelivery(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_createMultiPoDelivery_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_createMultiPoDelivery_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -169,7 +169,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_createPick( $po_no, $operator_id, $warehouse, $store_sn, $pick_flag){
 		
 		$this->initInvocation("createPick");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_createPick_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_createPick_args();
 		
 		$args->po_no = $po_no;
 		
@@ -186,7 +186,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_createPick(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_createPick_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_createPick_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -205,7 +205,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_deleteDeliveryDetail( $operator_id, $storage_no, $po_no){
 		
 		$this->initInvocation("deleteDeliveryDetail");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_deleteDeliveryDetail_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_deleteDeliveryDetail_args();
 		
 		$args->operator_id = $operator_id;
 		
@@ -218,7 +218,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_deleteDeliveryDetail(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_deleteDeliveryDetail_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_deleteDeliveryDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -237,7 +237,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_editDelivery( $operator_id, $storage_no, $delivery_no, $warehouse, $delivery_time, $arrival_time, $carrier_name, $tel, $driver, $driver_tel, $delivery_method, $store_sn, $carrier_code){
 		
 		$this->initInvocation("editDelivery");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_editDelivery_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_editDelivery_args();
 		
 		$args->operator_id = $operator_id;
 		
@@ -270,7 +270,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_editDelivery(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_editDelivery_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_editDelivery_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -280,16 +280,16 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function editMultiPoDelivery(\vipapis\delivery\Edit3PLMultiPoDeliveryRequest $request){
+	public function editMultiPoDelivery(\Voop\vipapis\delivery\Edit3PLMultiPoDeliveryRequest $request){
 		
 		$this->send_editMultiPoDelivery( $request);
 		return $this->recv_editMultiPoDelivery();
 	}
 	
-	public function send_editMultiPoDelivery(\vipapis\delivery\Edit3PLMultiPoDeliveryRequest $request){
+	public function send_editMultiPoDelivery(\Voop\vipapis\delivery\Edit3PLMultiPoDeliveryRequest $request){
 		
 		$this->initInvocation("editMultiPoDelivery");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_editMultiPoDelivery_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_editMultiPoDelivery_args();
 		
 		$args->request = $request;
 		
@@ -298,7 +298,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_editMultiPoDelivery(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_editMultiPoDelivery_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_editMultiPoDelivery_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -317,7 +317,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_getDeliveryGoods( $operator_id, $storage_no, $page, $limit){
 		
 		$this->initInvocation("getDeliveryGoods");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_getDeliveryGoods_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getDeliveryGoods_args();
 		
 		$args->operator_id = $operator_id;
 		
@@ -332,7 +332,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getDeliveryGoods(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_getDeliveryGoods_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getDeliveryGoods_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -351,7 +351,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_getDeliveryList( $operator_id, $po_no, $delivery_no, $warehouse, $out_flag, $st_out_time, $et_out_time, $st_estimate_arrive_time, $et_estimate_arrive_time, $st_arrive_time, $et_arrive_time, $page, $limit, $store_sn, $storage_no){
 		
 		$this->initInvocation("getDeliveryList");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_getDeliveryList_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getDeliveryList_args();
 		
 		$args->operator_id = $operator_id;
 		
@@ -388,7 +388,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getDeliveryList(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_getDeliveryList_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getDeliveryList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -398,16 +398,16 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function getMultiPoPickDetail(\vipapis\delivery\Get3PLMultiPoPickDetailRequest $request){
+	public function getMultiPoPickDetail(\Voop\vipapis\delivery\Get3PLMultiPoPickDetailRequest $request){
 		
 		$this->send_getMultiPoPickDetail( $request);
 		return $this->recv_getMultiPoPickDetail();
 	}
 	
-	public function send_getMultiPoPickDetail(\vipapis\delivery\Get3PLMultiPoPickDetailRequest $request){
+	public function send_getMultiPoPickDetail(\Voop\vipapis\delivery\Get3PLMultiPoPickDetailRequest $request){
 		
 		$this->initInvocation("getMultiPoPickDetail");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_getMultiPoPickDetail_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getMultiPoPickDetail_args();
 		
 		$args->request = $request;
 		
@@ -416,7 +416,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getMultiPoPickDetail(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_getMultiPoPickDetail_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getMultiPoPickDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -435,7 +435,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_getPickDetail( $po_no, $operator_id, $pick_no, $page, $limit){
 		
 		$this->initInvocation("getPickDetail");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_getPickDetail_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getPickDetail_args();
 		
 		$args->po_no = $po_no;
 		
@@ -452,7 +452,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getPickDetail(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_getPickDetail_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getPickDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -471,7 +471,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_getPickList( $operator_id, $po_no, $pick_no, $warehouse, $co_mode, $order_cate, $st_create_time, $et_create_time, $st_sell_time_from, $et_sell_time_from, $is_export, $page, $limit, $store_sn){
 		
 		$this->initInvocation("getPickList");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_getPickList_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getPickList_args();
 		
 		$args->operator_id = $operator_id;
 		
@@ -506,7 +506,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getPickList(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_getPickList_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getPickList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -525,7 +525,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_getPoList( $po_no, $co_mode, $operator_id, $st_sell_st_time, $et_sell_st_time, $st_po_start_time, $et_po_start_time, $page, $limit){
 		
 		$this->initInvocation("getPoList");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_getPoList_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getPoList_args();
 		
 		$args->po_no = $po_no;
 		
@@ -550,7 +550,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getPoList(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_getPoList_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_getPoList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -569,14 +569,14 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_healthCheck_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_healthCheck_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -595,7 +595,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_importDeliveryDetail( $operator_id, $po_no, $storage_no, $store_sn, $delivery_list){
 		
 		$this->initInvocation("importDeliveryDetail");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_importDeliveryDetail_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_importDeliveryDetail_args();
 		
 		$args->operator_id = $operator_id;
 		
@@ -612,7 +612,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_importDeliveryDetail(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_importDeliveryDetail_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_importDeliveryDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -631,7 +631,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_importMultiPoDeliveryDetail( $operator_id, $po_no, $storage_no, $store_sn, $delivery_list){
 		
 		$this->initInvocation("importMultiPoDeliveryDetail");
-		$args = new \vipapis\delivery\Jit3PLDeliveryService_importMultiPoDeliveryDetail_args();
+		$args = new \Voop\vipapis\delivery\Jit3PLDeliveryService_importMultiPoDeliveryDetail_args();
 		
 		$args->operator_id = $operator_id;
 		
@@ -648,7 +648,7 @@ class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_importMultiPoDeliveryDetail(){
 		
-		$result = new \vipapis\delivery\Jit3PLDeliveryService_importMultiPoDeliveryDetail_result();
+		$result = new \Voop\vipapis\delivery\Jit3PLDeliveryService_importMultiPoDeliveryDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1041,7 +1041,7 @@ class Jit3PLDeliveryService_createDelivery_args {
 		
 		$xfer += $output->writeFieldBegin('warehouse');
 		
-		$em = new \vipapis\common\Warehouse; 
+		$em = new \Voop\vipapis\common\Warehouse; 
 		$output->writeString($em::$__names[$this->warehouse]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -1138,7 +1138,7 @@ class Jit3PLDeliveryService_createMultiPoDelivery_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\delivery\Create3PLMultiPoDeliveryRequest();
+			$this->request = new \Voop\vipapis\delivery\Create3PLMultiPoDeliveryRequest();
 			$this->request->read($input);
 			
 		}
@@ -1159,7 +1159,7 @@ class Jit3PLDeliveryService_createMultiPoDelivery_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1793,7 +1793,7 @@ class Jit3PLDeliveryService_editDelivery_args {
 		
 		$xfer += $output->writeFieldBegin('warehouse');
 		
-		$em = new \vipapis\common\Warehouse; 
+		$em = new \Voop\vipapis\common\Warehouse; 
 		$output->writeString($em::$__names[$this->warehouse]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -1925,7 +1925,7 @@ class Jit3PLDeliveryService_editMultiPoDelivery_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\delivery\Edit3PLMultiPoDeliveryRequest();
+			$this->request = new \Voop\vipapis\delivery\Edit3PLMultiPoDeliveryRequest();
 			$this->request->read($input);
 			
 		}
@@ -1946,7 +1946,7 @@ class Jit3PLDeliveryService_editMultiPoDelivery_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -2474,7 +2474,7 @@ class Jit3PLDeliveryService_getDeliveryList_args {
 			
 			$xfer += $output->writeFieldBegin('warehouse');
 			
-			$em = new \vipapis\common\Warehouse; 
+			$em = new \Voop\vipapis\common\Warehouse; 
 			$output->writeString($em::$__names[$this->warehouse]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -2630,7 +2630,7 @@ class Jit3PLDeliveryService_getMultiPoPickDetail_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\delivery\Get3PLMultiPoPickDetailRequest();
+			$this->request = new \Voop\vipapis\delivery\Get3PLMultiPoPickDetailRequest();
 			$this->request->read($input);
 			
 		}
@@ -2651,7 +2651,7 @@ class Jit3PLDeliveryService_getMultiPoPickDetail_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -3184,7 +3184,7 @@ class Jit3PLDeliveryService_getPickList_args {
 			
 			$xfer += $output->writeFieldBegin('warehouse');
 			
-			$em = new \vipapis\common\Warehouse; 
+			$em = new \Voop\vipapis\common\Warehouse; 
 			$output->writeString($em::$__names[$this->warehouse]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -3756,7 +3756,7 @@ class Jit3PLDeliveryService_importDeliveryDetail_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\delivery\Delivery();
+					$elem0 = new \Voop\vipapis\delivery\Delivery();
 					$elem0->read($input);
 					
 					$this->delivery_list[$_size0++] = $elem0;
@@ -3811,7 +3811,7 @@ class Jit3PLDeliveryService_importDeliveryDetail_args {
 		
 		if (!is_array($this->delivery_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3820,7 +3820,7 @@ class Jit3PLDeliveryService_importDeliveryDetail_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3966,7 +3966,7 @@ class Jit3PLDeliveryService_importMultiPoDeliveryDetail_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\delivery\Delivery();
+					$elem1 = new \Voop\vipapis\delivery\Delivery();
 					$elem1->read($input);
 					
 					$this->delivery_list[$_size1++] = $elem1;
@@ -4021,7 +4021,7 @@ class Jit3PLDeliveryService_importMultiPoDeliveryDetail_args {
 		
 		if (!is_array($this->delivery_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4030,7 +4030,7 @@ class Jit3PLDeliveryService_importMultiPoDeliveryDetail_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4165,7 +4165,7 @@ class Jit3PLDeliveryService_createDelivery_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\CreateDeliveryResponse();
+			$this->success = new \Voop\vipapis\delivery\CreateDeliveryResponse();
 			$this->success->read($input);
 			
 		}
@@ -4188,7 +4188,7 @@ class Jit3PLDeliveryService_createDelivery_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4330,7 +4330,7 @@ class Jit3PLDeliveryService_createPick_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\delivery\SimplePick();
+					$elem0 = new \Voop\vipapis\delivery\SimplePick();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -4363,7 +4363,7 @@ class Jit3PLDeliveryService_createPick_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4372,7 +4372,7 @@ class Jit3PLDeliveryService_createPick_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4444,7 +4444,7 @@ class Jit3PLDeliveryService_deleteDeliveryDetail_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\delivery\DeleteDeliveryDetail();
+					$elem1 = new \Voop\vipapis\delivery\DeleteDeliveryDetail();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -4477,7 +4477,7 @@ class Jit3PLDeliveryService_deleteDeliveryDetail_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4486,7 +4486,7 @@ class Jit3PLDeliveryService_deleteDeliveryDetail_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4693,7 +4693,7 @@ class Jit3PLDeliveryService_getDeliveryGoods_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\GetDeliveryGoodsResponse();
+			$this->success = new \Voop\vipapis\delivery\GetDeliveryGoodsResponse();
 			$this->success->read($input);
 			
 		}
@@ -4716,7 +4716,7 @@ class Jit3PLDeliveryService_getDeliveryGoods_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4775,7 +4775,7 @@ class Jit3PLDeliveryService_getDeliveryList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\GetDeliveryListResponse();
+			$this->success = new \Voop\vipapis\delivery\GetDeliveryListResponse();
 			$this->success->read($input);
 			
 		}
@@ -4798,7 +4798,7 @@ class Jit3PLDeliveryService_getDeliveryList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4857,7 +4857,7 @@ class Jit3PLDeliveryService_getMultiPoPickDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\GetMultiPoPickDetailResponse();
+			$this->success = new \Voop\vipapis\delivery\GetMultiPoPickDetailResponse();
 			$this->success->read($input);
 			
 		}
@@ -4880,7 +4880,7 @@ class Jit3PLDeliveryService_getMultiPoPickDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4939,7 +4939,7 @@ class Jit3PLDeliveryService_getPickDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\PickDetail();
+			$this->success = new \Voop\vipapis\delivery\PickDetail();
 			$this->success->read($input);
 			
 		}
@@ -4962,7 +4962,7 @@ class Jit3PLDeliveryService_getPickDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5021,7 +5021,7 @@ class Jit3PLDeliveryService_getPickList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\GetPickListResponse();
+			$this->success = new \Voop\vipapis\delivery\GetPickListResponse();
 			$this->success->read($input);
 			
 		}
@@ -5044,7 +5044,7 @@ class Jit3PLDeliveryService_getPickList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5103,7 +5103,7 @@ class Jit3PLDeliveryService_getPoList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\Get3PLPoListResponse();
+			$this->success = new \Voop\vipapis\delivery\Get3PLPoListResponse();
 			$this->success->read($input);
 			
 		}
@@ -5126,7 +5126,7 @@ class Jit3PLDeliveryService_getPoList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5185,7 +5185,7 @@ class Jit3PLDeliveryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -5208,7 +5208,7 @@ class Jit3PLDeliveryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\inventory;
+namespace Voop\vipapis\inventory;
 
 class GetMpSkuStockResponse {
 	
@@ -70,7 +70,7 @@ class GetMpSkuStockResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\inventory\MpSkuStock();
+						$elem0 = new \Voop\vipapis\inventory\MpSkuStock();
 						$elem0->read($input);
 						
 						$this->sku_stock_result[$_size0++] = $elem0;
@@ -89,7 +89,7 @@ class GetMpSkuStockResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -112,7 +112,7 @@ class GetMpSkuStockResponse {
 			
 			if (!is_array($this->sku_stock_result)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -121,7 +121,7 @@ class GetMpSkuStockResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

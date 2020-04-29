@@ -8,23 +8,23 @@
 *
 */
 
-namespace vipapis\price;
+namespace Voop\vipapis\price;
 interface JitPriceServiceIf{
 	
 	
-	public function confirmPriceApplication(\vipapis\price\ConfirmPriceApplicationRequest $request);
+	public function confirmPriceApplication(\Voop\vipapis\price\ConfirmPriceApplicationRequest $request);
 	
 	public function createPriceApplicationId( $vendor_id);
 	
-	public function getPriceApplication(\vipapis\price\GetPriceApplicationRequest $request);
+	public function getPriceApplication(\Voop\vipapis\price\GetPriceApplicationRequest $request);
 	
-	public function getPriceApplicationStatus(\vipapis\price\GetPriceApplicationStatusRequest $request);
+	public function getPriceApplicationStatus(\Voop\vipapis\price\GetPriceApplicationStatusRequest $request);
 	
 	public function healthCheck();
 	
-	public function submitPriceApplication(\vipapis\price\SubmitPriceApplicationRequest $request);
+	public function submitPriceApplication(\Voop\vipapis\price\SubmitPriceApplicationRequest $request);
 	
-	public function updatePriceApplication(\vipapis\price\UpdatePriceApplicationRequest $request);
+	public function updatePriceApplication(\Voop\vipapis\price\UpdatePriceApplicationRequest $request);
 	
 }
 
@@ -36,16 +36,16 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	}
 	
 	
-	public function confirmPriceApplication(\vipapis\price\ConfirmPriceApplicationRequest $request){
+	public function confirmPriceApplication(\Voop\vipapis\price\ConfirmPriceApplicationRequest $request){
 		
 		$this->send_confirmPriceApplication( $request);
 		return $this->recv_confirmPriceApplication();
 	}
 	
-	public function send_confirmPriceApplication(\vipapis\price\ConfirmPriceApplicationRequest $request){
+	public function send_confirmPriceApplication(\Voop\vipapis\price\ConfirmPriceApplicationRequest $request){
 		
 		$this->initInvocation("confirmPriceApplication");
-		$args = new \vipapis\price\JitPriceService_confirmPriceApplication_args();
+		$args = new \Voop\vipapis\price\JitPriceService_confirmPriceApplication_args();
 		
 		$args->request = $request;
 		
@@ -54,7 +54,7 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	
 	public function recv_confirmPriceApplication(){
 		
-		$result = new \vipapis\price\JitPriceService_confirmPriceApplication_result();
+		$result = new \Voop\vipapis\price\JitPriceService_confirmPriceApplication_result();
 		$this->receive_base($result);
 		
 	}
@@ -69,7 +69,7 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	public function send_createPriceApplicationId( $vendor_id){
 		
 		$this->initInvocation("createPriceApplicationId");
-		$args = new \vipapis\price\JitPriceService_createPriceApplicationId_args();
+		$args = new \Voop\vipapis\price\JitPriceService_createPriceApplicationId_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -78,7 +78,7 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	
 	public function recv_createPriceApplicationId(){
 		
-		$result = new \vipapis\price\JitPriceService_createPriceApplicationId_result();
+		$result = new \Voop\vipapis\price\JitPriceService_createPriceApplicationId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -88,16 +88,16 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	}
 	
 	
-	public function getPriceApplication(\vipapis\price\GetPriceApplicationRequest $request){
+	public function getPriceApplication(\Voop\vipapis\price\GetPriceApplicationRequest $request){
 		
 		$this->send_getPriceApplication( $request);
 		return $this->recv_getPriceApplication();
 	}
 	
-	public function send_getPriceApplication(\vipapis\price\GetPriceApplicationRequest $request){
+	public function send_getPriceApplication(\Voop\vipapis\price\GetPriceApplicationRequest $request){
 		
 		$this->initInvocation("getPriceApplication");
-		$args = new \vipapis\price\JitPriceService_getPriceApplication_args();
+		$args = new \Voop\vipapis\price\JitPriceService_getPriceApplication_args();
 		
 		$args->request = $request;
 		
@@ -106,7 +106,7 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	
 	public function recv_getPriceApplication(){
 		
-		$result = new \vipapis\price\JitPriceService_getPriceApplication_result();
+		$result = new \Voop\vipapis\price\JitPriceService_getPriceApplication_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -116,16 +116,16 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	}
 	
 	
-	public function getPriceApplicationStatus(\vipapis\price\GetPriceApplicationStatusRequest $request){
+	public function getPriceApplicationStatus(\Voop\vipapis\price\GetPriceApplicationStatusRequest $request){
 		
 		$this->send_getPriceApplicationStatus( $request);
 		return $this->recv_getPriceApplicationStatus();
 	}
 	
-	public function send_getPriceApplicationStatus(\vipapis\price\GetPriceApplicationStatusRequest $request){
+	public function send_getPriceApplicationStatus(\Voop\vipapis\price\GetPriceApplicationStatusRequest $request){
 		
 		$this->initInvocation("getPriceApplicationStatus");
-		$args = new \vipapis\price\JitPriceService_getPriceApplicationStatus_args();
+		$args = new \Voop\vipapis\price\JitPriceService_getPriceApplicationStatus_args();
 		
 		$args->request = $request;
 		
@@ -134,7 +134,7 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	
 	public function recv_getPriceApplicationStatus(){
 		
-		$result = new \vipapis\price\JitPriceService_getPriceApplicationStatus_result();
+		$result = new \Voop\vipapis\price\JitPriceService_getPriceApplicationStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -153,14 +153,14 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\price\JitPriceService_healthCheck_args();
+		$args = new \Voop\vipapis\price\JitPriceService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\price\JitPriceService_healthCheck_result();
+		$result = new \Voop\vipapis\price\JitPriceService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -170,16 +170,16 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	}
 	
 	
-	public function submitPriceApplication(\vipapis\price\SubmitPriceApplicationRequest $request){
+	public function submitPriceApplication(\Voop\vipapis\price\SubmitPriceApplicationRequest $request){
 		
 		$this->send_submitPriceApplication( $request);
 		return $this->recv_submitPriceApplication();
 	}
 	
-	public function send_submitPriceApplication(\vipapis\price\SubmitPriceApplicationRequest $request){
+	public function send_submitPriceApplication(\Voop\vipapis\price\SubmitPriceApplicationRequest $request){
 		
 		$this->initInvocation("submitPriceApplication");
-		$args = new \vipapis\price\JitPriceService_submitPriceApplication_args();
+		$args = new \Voop\vipapis\price\JitPriceService_submitPriceApplication_args();
 		
 		$args->request = $request;
 		
@@ -188,22 +188,22 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	
 	public function recv_submitPriceApplication(){
 		
-		$result = new \vipapis\price\JitPriceService_submitPriceApplication_result();
+		$result = new \Voop\vipapis\price\JitPriceService_submitPriceApplication_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function updatePriceApplication(\vipapis\price\UpdatePriceApplicationRequest $request){
+	public function updatePriceApplication(\Voop\vipapis\price\UpdatePriceApplicationRequest $request){
 		
 		$this->send_updatePriceApplication( $request);
 		return $this->recv_updatePriceApplication();
 	}
 	
-	public function send_updatePriceApplication(\vipapis\price\UpdatePriceApplicationRequest $request){
+	public function send_updatePriceApplication(\Voop\vipapis\price\UpdatePriceApplicationRequest $request){
 		
 		$this->initInvocation("updatePriceApplication");
-		$args = new \vipapis\price\JitPriceService_updatePriceApplication_args();
+		$args = new \Voop\vipapis\price\JitPriceService_updatePriceApplication_args();
 		
 		$args->request = $request;
 		
@@ -212,7 +212,7 @@ class _JitPriceServiceClient extends \Osp\Base\OspStub implements \vipapis\price
 	
 	public function recv_updatePriceApplication(){
 		
-		$result = new \vipapis\price\JitPriceService_updatePriceApplication_result();
+		$result = new \Voop\vipapis\price\JitPriceService_updatePriceApplication_result();
 		$this->receive_base($result);
 		
 	}
@@ -263,7 +263,7 @@ class JitPriceService_confirmPriceApplication_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\price\ConfirmPriceApplicationRequest();
+			$this->request = new \Voop\vipapis\price\ConfirmPriceApplicationRequest();
 			$this->request->read($input);
 			
 		}
@@ -284,7 +284,7 @@ class JitPriceService_confirmPriceApplication_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -411,7 +411,7 @@ class JitPriceService_getPriceApplication_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\price\GetPriceApplicationRequest();
+			$this->request = new \Voop\vipapis\price\GetPriceApplicationRequest();
 			$this->request->read($input);
 			
 		}
@@ -432,7 +432,7 @@ class JitPriceService_getPriceApplication_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -489,7 +489,7 @@ class JitPriceService_getPriceApplicationStatus_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\price\GetPriceApplicationStatusRequest();
+			$this->request = new \Voop\vipapis\price\GetPriceApplicationStatusRequest();
 			$this->request->read($input);
 			
 		}
@@ -510,7 +510,7 @@ class JitPriceService_getPriceApplicationStatus_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -613,7 +613,7 @@ class JitPriceService_submitPriceApplication_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\price\SubmitPriceApplicationRequest();
+			$this->request = new \Voop\vipapis\price\SubmitPriceApplicationRequest();
 			$this->request->read($input);
 			
 		}
@@ -634,7 +634,7 @@ class JitPriceService_submitPriceApplication_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -691,7 +691,7 @@ class JitPriceService_updatePriceApplication_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\price\UpdatePriceApplicationRequest();
+			$this->request = new \Voop\vipapis\price\UpdatePriceApplicationRequest();
 			$this->request->read($input);
 			
 		}
@@ -712,7 +712,7 @@ class JitPriceService_updatePriceApplication_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -892,7 +892,7 @@ class JitPriceService_getPriceApplication_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\price\GetPriceApplicationResponse();
+			$this->success = new \Voop\vipapis\price\GetPriceApplicationResponse();
 			$this->success->read($input);
 			
 		}
@@ -915,7 +915,7 @@ class JitPriceService_getPriceApplication_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -983,7 +983,7 @@ class JitPriceService_getPriceApplicationStatus_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\price\PriceApplicationStatus();
+					$elem0 = new \Voop\vipapis\price\PriceApplicationStatus();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1016,7 +1016,7 @@ class JitPriceService_getPriceApplicationStatus_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1025,7 +1025,7 @@ class JitPriceService_getPriceApplicationStatus_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1088,7 +1088,7 @@ class JitPriceService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1111,7 +1111,7 @@ class JitPriceService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

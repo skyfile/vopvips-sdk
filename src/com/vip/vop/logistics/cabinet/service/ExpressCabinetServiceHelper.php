@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\cabinet\service;
+namespace Voop\com\vip\vop\logistics\cabinet\service;
 require_once dirname(__FILE__).'/ExpressCabinetService.php';
 class ExpressCabinetServiceHelper extends _ExpressCabinetServiceClient{
 	

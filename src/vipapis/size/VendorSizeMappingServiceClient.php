@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\size;
+namespace Voop\vipapis\size;
 $base_path = dirname(__FILE__).'/../../';
 require_once $base_path.'/Osp/Util/PathUtil.php';
 require_once $base_path.'/Osp/ClassLoader/ClassLoader.php';
@@ -21,7 +21,7 @@ class VendorSizeMappingServiceClient{
 	private static function regis(){
 		
 		$path = \Osp\Util\PathUtil::getRootPath ();
-		$nsLoader = new \Osp\ClassLoader\ClassLoader ();
+		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
 		$nsLoader->registerNamespace ( 'vipapis', $path );
@@ -70,7 +70,7 @@ class VendorSizeMappingServiceClient{
 		
 		//$ctx->setProtocol ( \Osp\Protocol\OspProtocol::$Binary );
 		
-		return new \vipapis\size\VendorSizeMappingServiceHelper();
+		return new \Voop\vipapis\size\VendorSizeMappingServiceHelper();
 	}
 	
 }

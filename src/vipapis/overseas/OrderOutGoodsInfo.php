@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\overseas;
+namespace Voop\vipapis\overseas;
 
 class OrderOutGoodsInfo {
 	
@@ -390,7 +390,7 @@ class OrderOutGoodsInfo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\overseas\OrderOutDetail();
+						$elem0 = new \Voop\vipapis\overseas\OrderOutDetail();
 						$elem0->read($input);
 						
 						$this->order_detail_list[$_size0++] = $elem0;
@@ -409,7 +409,7 @@ class OrderOutGoodsInfo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -526,7 +526,7 @@ class OrderOutGoodsInfo {
 		
 		if (!is_array($this->order_detail_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -535,7 +535,7 @@ class OrderOutGoodsInfo {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

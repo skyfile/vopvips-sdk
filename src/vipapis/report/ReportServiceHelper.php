@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\report;
+namespace Voop\vipapis\report;
 require_once dirname(__FILE__).'/ReportService.php';
 class ReportServiceHelper extends _ReportServiceClient{
 	

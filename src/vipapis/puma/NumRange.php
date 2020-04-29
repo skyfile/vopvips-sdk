@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\puma;
+namespace Voop\vipapis\puma;
 
 class NumRange {
 	
@@ -88,7 +88,7 @@ class NumRange {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

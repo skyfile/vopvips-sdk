@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\top\deliveryorder\bizservice;
+namespace Voop\com\vip\top\deliveryorder\bizservice;
 
 class OdsOrderMessage {
 	
@@ -1570,7 +1570,7 @@ class OdsOrderMessage {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\top\deliveryorder\bizservice\OdsOrderMessageDetail();
+						$elem0 = new \Voop\com\vip\top\deliveryorder\bizservice\OdsOrderMessageDetail();
 						$elem0->read($input);
 						
 						$this->detail[$_size0++] = $elem0;
@@ -2430,7 +2430,7 @@ class OdsOrderMessage {
 			
 			if (!is_array($this->detail)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2439,7 +2439,7 @@ class OdsOrderMessage {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

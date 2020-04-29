@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\shanshan\outlet;
+namespace Voop\vipapis\shanshan\outlet;
 
 class OutletProduct {
 	
@@ -328,7 +328,7 @@ class OutletProduct {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

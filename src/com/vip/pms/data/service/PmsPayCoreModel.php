@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class PmsPayCoreModel {
 	
@@ -330,7 +330,7 @@ class PmsPayCoreModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem0 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem0->read($input);
 						
 						$this->customerSrcList[$_size0++] = $elem0;
@@ -361,7 +361,7 @@ class PmsPayCoreModel {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem1 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem1->read($input);
 						
 						$this->customerTagList[$_size1++] = $elem1;
@@ -392,7 +392,7 @@ class PmsPayCoreModel {
 						
 						$elem2 = null;
 						
-						$elem2 = new \com\vip\pms\data\service\PmsPayHouseModel();
+						$elem2 = new \Voop\com\vip\pms\data\service\PmsPayHouseModel();
 						$elem2->read($input);
 						
 						$this->payHouseList[$_size2++] = $elem2;
@@ -423,7 +423,7 @@ class PmsPayCoreModel {
 						
 						$elem3 = null;
 						
-						$elem3 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem3 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem3->read($input);
 						
 						$this->payDetailList[$_size3++] = $elem3;
@@ -494,7 +494,7 @@ class PmsPayCoreModel {
 						
 						$elem4 = null;
 						
-						$elem4 = new \com\vip\pms\data\service\PmsActAudienceConfigModel();
+						$elem4 = new \Voop\com\vip\pms\data\service\PmsActAudienceConfigModel();
 						$elem4->read($input);
 						
 						$this->audienceConfigList[$_size4++] = $elem4;
@@ -581,7 +581,7 @@ class PmsPayCoreModel {
 			
 			if (!is_array($this->customerSrcList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -590,7 +590,7 @@ class PmsPayCoreModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -609,7 +609,7 @@ class PmsPayCoreModel {
 			
 			if (!is_array($this->customerTagList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -618,7 +618,7 @@ class PmsPayCoreModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -635,7 +635,7 @@ class PmsPayCoreModel {
 		
 		if (!is_array($this->payHouseList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -644,7 +644,7 @@ class PmsPayCoreModel {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -659,7 +659,7 @@ class PmsPayCoreModel {
 		
 		if (!is_array($this->payDetailList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -668,7 +668,7 @@ class PmsPayCoreModel {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -717,7 +717,7 @@ class PmsPayCoreModel {
 			
 			if (!is_array($this->audienceConfigList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -726,7 +726,7 @@ class PmsPayCoreModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

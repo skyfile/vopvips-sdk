@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\venus\visPo\service;
+namespace Voop\com\vip\venus\visPo\service;
 
 class WmsPoHeader {
 	
@@ -1460,7 +1460,7 @@ class WmsPoHeader {
 			
 			$xfer += $output->writeFieldBegin('owner');
 			
-			$em = new \com\vip\venus\po\service\Owner; 
+			$em = new \Voop\com\vip\venus\po\service\Owner; 
 			$output->writeString($em::$__names[$this->owner]);  
 			
 			$xfer += $output->writeFieldEnd();

@@ -8,13 +8,13 @@
 *
 */
 
-namespace com\vip\vop\vcloud\inventory\api;
+namespace Voop\com\vip\vop\vcloud\inventory\api;
 interface InventoryServiceIf{
 	
 	
 	public function batchForceHoldChannelInventory( $reqList);
 	
-	public function batchForceHoldOneWarehouseInventory(\com\vip\vop\vcloud\inventory\api\WarehouseInventoryForceHold $holdReq);
+	public function batchForceHoldOneWarehouseInventory(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryForceHold $holdReq);
 	
 	public function batchFullUpdateChannelSkuInventory( $reqList);
 	
@@ -22,7 +22,7 @@ interface InventoryServiceIf{
 	
 	public function batchHoldChannelInventory( $reqList);
 	
-	public function batchHoldOneWarehouseInventory(\com\vip\vop\vcloud\inventory\api\WarehouseInventoryHold $holdReq);
+	public function batchHoldOneWarehouseInventory(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryHold $holdReq);
 	
 	public function batchIncrUpdateChannelSkuInventory( $reqList);
 	
@@ -44,15 +44,15 @@ interface InventoryServiceIf{
 	
 	public function healthCheck();
 	
-	public function holdChannelInventory(\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq);
+	public function holdChannelInventory(\Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq);
 	
-	public function holdForceChannelInventory(\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq);
+	public function holdForceChannelInventory(\Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq);
 	
 	public function incrUpdateChannelSkuInventory( $transId, $channelId, $skuId, $quantity);
 	
 	public function incrUpdateWarehouseSkuInventory( $transId, $warehouseId, $skuId, $quantity, $source);
 	
-	public function listByWarehouseInventoryLogQueryCriteria(\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\com\vip\vop\vcloud\common\api\Pagination $pagination);
+	public function listByWarehouseInventoryLogQueryCriteria(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\com\vip\vop\vcloud\common\api\Pagination $pagination);
 	
 	public function listChannelSkuInventory( $skuList);
 	
@@ -62,13 +62,13 @@ interface InventoryServiceIf{
 	
 	public function listWarehouseSkuInventoryByWarehouseId( $warehouseId,\com\vip\vop\vcloud\common\api\Pagination $pagination);
 	
-	public function releaseChannelHold(\com\vip\vop\vcloud\inventory\api\ChannelInventoryRelease $releaseReq);
+	public function releaseChannelHold(\Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryRelease $releaseReq);
 	
 	public function setWarehouseSkuDisabled( $warehouseId, $skuId, $disabled);
 	
 	public function setWarehouseSkuSafeQuantity( $warehouseId, $skuId, $safeQuantity);
 	
-	public function updateInventory(\com\vip\vop\vcloud\inventory\api\InventoryUpdateRequest $request);
+	public function updateInventory(\Voop\com\vip\vop\vcloud\inventory\api\InventoryUpdateRequest $request);
 	
 }
 
@@ -89,7 +89,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_batchForceHoldChannelInventory( $reqList){
 		
 		$this->initInvocation("batchForceHoldChannelInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchForceHoldChannelInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchForceHoldChannelInventory_args();
 		
 		$args->reqList = $reqList;
 		
@@ -98,7 +98,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_batchForceHoldChannelInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchForceHoldChannelInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchForceHoldChannelInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -108,16 +108,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function batchForceHoldOneWarehouseInventory(\com\vip\vop\vcloud\inventory\api\WarehouseInventoryForceHold $holdReq){
+	public function batchForceHoldOneWarehouseInventory(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryForceHold $holdReq){
 		
 		$this->send_batchForceHoldOneWarehouseInventory( $holdReq);
 		return $this->recv_batchForceHoldOneWarehouseInventory();
 	}
 	
-	public function send_batchForceHoldOneWarehouseInventory(\com\vip\vop\vcloud\inventory\api\WarehouseInventoryForceHold $holdReq){
+	public function send_batchForceHoldOneWarehouseInventory(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryForceHold $holdReq){
 		
 		$this->initInvocation("batchForceHoldOneWarehouseInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchForceHoldOneWarehouseInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchForceHoldOneWarehouseInventory_args();
 		
 		$args->holdReq = $holdReq;
 		
@@ -126,7 +126,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_batchForceHoldOneWarehouseInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchForceHoldOneWarehouseInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchForceHoldOneWarehouseInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -145,7 +145,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_batchFullUpdateChannelSkuInventory( $reqList){
 		
 		$this->initInvocation("batchFullUpdateChannelSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchFullUpdateChannelSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchFullUpdateChannelSkuInventory_args();
 		
 		$args->reqList = $reqList;
 		
@@ -154,7 +154,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_batchFullUpdateChannelSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchFullUpdateChannelSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchFullUpdateChannelSkuInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -173,7 +173,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_batchFullUpdateWarehouseSkuInventory( $reqList, $source){
 		
 		$this->initInvocation("batchFullUpdateWarehouseSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchFullUpdateWarehouseSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchFullUpdateWarehouseSkuInventory_args();
 		
 		$args->reqList = $reqList;
 		
@@ -184,7 +184,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_batchFullUpdateWarehouseSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchFullUpdateWarehouseSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchFullUpdateWarehouseSkuInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -203,7 +203,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_batchHoldChannelInventory( $reqList){
 		
 		$this->initInvocation("batchHoldChannelInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchHoldChannelInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchHoldChannelInventory_args();
 		
 		$args->reqList = $reqList;
 		
@@ -212,7 +212,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_batchHoldChannelInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchHoldChannelInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchHoldChannelInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -222,16 +222,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function batchHoldOneWarehouseInventory(\com\vip\vop\vcloud\inventory\api\WarehouseInventoryHold $holdReq){
+	public function batchHoldOneWarehouseInventory(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryHold $holdReq){
 		
 		$this->send_batchHoldOneWarehouseInventory( $holdReq);
 		return $this->recv_batchHoldOneWarehouseInventory();
 	}
 	
-	public function send_batchHoldOneWarehouseInventory(\com\vip\vop\vcloud\inventory\api\WarehouseInventoryHold $holdReq){
+	public function send_batchHoldOneWarehouseInventory(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryHold $holdReq){
 		
 		$this->initInvocation("batchHoldOneWarehouseInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchHoldOneWarehouseInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchHoldOneWarehouseInventory_args();
 		
 		$args->holdReq = $holdReq;
 		
@@ -240,7 +240,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_batchHoldOneWarehouseInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchHoldOneWarehouseInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchHoldOneWarehouseInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -259,7 +259,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_batchIncrUpdateChannelSkuInventory( $reqList){
 		
 		$this->initInvocation("batchIncrUpdateChannelSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchIncrUpdateChannelSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchIncrUpdateChannelSkuInventory_args();
 		
 		$args->reqList = $reqList;
 		
@@ -268,7 +268,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_batchIncrUpdateChannelSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchIncrUpdateChannelSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchIncrUpdateChannelSkuInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -287,7 +287,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_batchIncrUpdateWarehouseSkuInventory( $reqList, $source){
 		
 		$this->initInvocation("batchIncrUpdateWarehouseSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchIncrUpdateWarehouseSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchIncrUpdateWarehouseSkuInventory_args();
 		
 		$args->reqList = $reqList;
 		
@@ -298,7 +298,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_batchIncrUpdateWarehouseSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchIncrUpdateWarehouseSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchIncrUpdateWarehouseSkuInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -317,7 +317,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_batchReleaseChannelHold( $reqList){
 		
 		$this->initInvocation("batchReleaseChannelHold");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchReleaseChannelHold_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchReleaseChannelHold_args();
 		
 		$args->reqList = $reqList;
 		
@@ -326,7 +326,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_batchReleaseChannelHold(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_batchReleaseChannelHold_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_batchReleaseChannelHold_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -345,7 +345,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_fullUpdateChannelSkuInventory( $transId, $channelId, $skuId, $quantity){
 		
 		$this->initInvocation("fullUpdateChannelSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_fullUpdateChannelSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_fullUpdateChannelSkuInventory_args();
 		
 		$args->transId = $transId;
 		
@@ -360,7 +360,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_fullUpdateChannelSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_fullUpdateChannelSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_fullUpdateChannelSkuInventory_result();
 		$this->receive_base($result);
 		
 	}
@@ -375,7 +375,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_fullUpdateWarehouseSkuInventory( $transId, $warehouseId, $skuId, $quantity, $source){
 		
 		$this->initInvocation("fullUpdateWarehouseSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_fullUpdateWarehouseSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_fullUpdateWarehouseSkuInventory_args();
 		
 		$args->transId = $transId;
 		
@@ -392,7 +392,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_fullUpdateWarehouseSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_fullUpdateWarehouseSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_fullUpdateWarehouseSkuInventory_result();
 		$this->receive_base($result);
 		
 	}
@@ -407,7 +407,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_getChannelSkuInventory( $channelId, $skuId){
 		
 		$this->initInvocation("getChannelSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_getChannelSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_getChannelSkuInventory_args();
 		
 		$args->channelId = $channelId;
 		
@@ -418,7 +418,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_getChannelSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_getChannelSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_getChannelSkuInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -437,7 +437,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_getSumChannelQuantity( $channelId){
 		
 		$this->initInvocation("getSumChannelQuantity");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_getSumChannelQuantity_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_getSumChannelQuantity_args();
 		
 		$args->channelId = $channelId;
 		
@@ -446,7 +446,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_getSumChannelQuantity(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_getSumChannelQuantity_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_getSumChannelQuantity_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -465,7 +465,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_getSumWarehouseQuantity( $warehouseId){
 		
 		$this->initInvocation("getSumWarehouseQuantity");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_getSumWarehouseQuantity_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_getSumWarehouseQuantity_args();
 		
 		$args->warehouseId = $warehouseId;
 		
@@ -474,7 +474,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_getSumWarehouseQuantity(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_getSumWarehouseQuantity_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_getSumWarehouseQuantity_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -493,7 +493,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_getWarehouseSkuInventory( $warehouseId, $skuId){
 		
 		$this->initInvocation("getWarehouseSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_getWarehouseSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_getWarehouseSkuInventory_args();
 		
 		$args->warehouseId = $warehouseId;
 		
@@ -504,7 +504,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_getWarehouseSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_getWarehouseSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_getWarehouseSkuInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -523,14 +523,14 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -540,16 +540,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function holdChannelInventory(\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq){
+	public function holdChannelInventory(\Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq){
 		
 		$this->send_holdChannelInventory( $holdReq);
 		return $this->recv_holdChannelInventory();
 	}
 	
-	public function send_holdChannelInventory(\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq){
+	public function send_holdChannelInventory(\Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq){
 		
 		$this->initInvocation("holdChannelInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_holdChannelInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_holdChannelInventory_args();
 		
 		$args->holdReq = $holdReq;
 		
@@ -558,7 +558,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_holdChannelInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_holdChannelInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_holdChannelInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -568,16 +568,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function holdForceChannelInventory(\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq){
+	public function holdForceChannelInventory(\Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq){
 		
 		$this->send_holdForceChannelInventory( $holdReq);
 		return $this->recv_holdForceChannelInventory();
 	}
 	
-	public function send_holdForceChannelInventory(\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq){
+	public function send_holdForceChannelInventory(\Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold $holdReq){
 		
 		$this->initInvocation("holdForceChannelInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_holdForceChannelInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_holdForceChannelInventory_args();
 		
 		$args->holdReq = $holdReq;
 		
@@ -586,7 +586,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_holdForceChannelInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_holdForceChannelInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_holdForceChannelInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -605,7 +605,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_incrUpdateChannelSkuInventory( $transId, $channelId, $skuId, $quantity){
 		
 		$this->initInvocation("incrUpdateChannelSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_incrUpdateChannelSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_incrUpdateChannelSkuInventory_args();
 		
 		$args->transId = $transId;
 		
@@ -620,7 +620,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_incrUpdateChannelSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_incrUpdateChannelSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_incrUpdateChannelSkuInventory_result();
 		$this->receive_base($result);
 		
 	}
@@ -635,7 +635,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_incrUpdateWarehouseSkuInventory( $transId, $warehouseId, $skuId, $quantity, $source){
 		
 		$this->initInvocation("incrUpdateWarehouseSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_incrUpdateWarehouseSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_incrUpdateWarehouseSkuInventory_args();
 		
 		$args->transId = $transId;
 		
@@ -652,22 +652,22 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_incrUpdateWarehouseSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_incrUpdateWarehouseSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_incrUpdateWarehouseSkuInventory_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function listByWarehouseInventoryLogQueryCriteria(\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\com\vip\vop\vcloud\common\api\Pagination $pagination){
+	public function listByWarehouseInventoryLogQueryCriteria(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\com\vip\vop\vcloud\common\api\Pagination $pagination){
 		
 		$this->send_listByWarehouseInventoryLogQueryCriteria( $criteria, $pagination);
 		return $this->recv_listByWarehouseInventoryLogQueryCriteria();
 	}
 	
-	public function send_listByWarehouseInventoryLogQueryCriteria(\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\com\vip\vop\vcloud\common\api\Pagination $pagination){
+	public function send_listByWarehouseInventoryLogQueryCriteria(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\com\vip\vop\vcloud\common\api\Pagination $pagination){
 		
 		$this->initInvocation("listByWarehouseInventoryLogQueryCriteria");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_listByWarehouseInventoryLogQueryCriteria_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listByWarehouseInventoryLogQueryCriteria_args();
 		
 		$args->criteria = $criteria;
 		
@@ -678,7 +678,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_listByWarehouseInventoryLogQueryCriteria(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_listByWarehouseInventoryLogQueryCriteria_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listByWarehouseInventoryLogQueryCriteria_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -697,7 +697,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_listChannelSkuInventory( $skuList){
 		
 		$this->initInvocation("listChannelSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_listChannelSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listChannelSkuInventory_args();
 		
 		$args->skuList = $skuList;
 		
@@ -706,7 +706,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_listChannelSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_listChannelSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listChannelSkuInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -725,7 +725,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_listChannelSkuInventoryByChannelId( $channelId,\com\vip\vop\vcloud\common\api\Pagination $pagination){
 		
 		$this->initInvocation("listChannelSkuInventoryByChannelId");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_listChannelSkuInventoryByChannelId_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listChannelSkuInventoryByChannelId_args();
 		
 		$args->channelId = $channelId;
 		
@@ -736,7 +736,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_listChannelSkuInventoryByChannelId(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_listChannelSkuInventoryByChannelId_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listChannelSkuInventoryByChannelId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -755,7 +755,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_listWarehouseSkuInventory( $skuList){
 		
 		$this->initInvocation("listWarehouseSkuInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_listWarehouseSkuInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listWarehouseSkuInventory_args();
 		
 		$args->skuList = $skuList;
 		
@@ -764,7 +764,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_listWarehouseSkuInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_listWarehouseSkuInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listWarehouseSkuInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -783,7 +783,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_listWarehouseSkuInventoryByWarehouseId( $warehouseId,\com\vip\vop\vcloud\common\api\Pagination $pagination){
 		
 		$this->initInvocation("listWarehouseSkuInventoryByWarehouseId");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_listWarehouseSkuInventoryByWarehouseId_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listWarehouseSkuInventoryByWarehouseId_args();
 		
 		$args->warehouseId = $warehouseId;
 		
@@ -794,7 +794,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_listWarehouseSkuInventoryByWarehouseId(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_listWarehouseSkuInventoryByWarehouseId_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listWarehouseSkuInventoryByWarehouseId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -804,16 +804,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function releaseChannelHold(\com\vip\vop\vcloud\inventory\api\ChannelInventoryRelease $releaseReq){
+	public function releaseChannelHold(\Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryRelease $releaseReq){
 		
 		$this->send_releaseChannelHold( $releaseReq);
 		return $this->recv_releaseChannelHold();
 	}
 	
-	public function send_releaseChannelHold(\com\vip\vop\vcloud\inventory\api\ChannelInventoryRelease $releaseReq){
+	public function send_releaseChannelHold(\Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryRelease $releaseReq){
 		
 		$this->initInvocation("releaseChannelHold");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_releaseChannelHold_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_releaseChannelHold_args();
 		
 		$args->releaseReq = $releaseReq;
 		
@@ -822,7 +822,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_releaseChannelHold(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_releaseChannelHold_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_releaseChannelHold_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -841,7 +841,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_setWarehouseSkuDisabled( $warehouseId, $skuId, $disabled){
 		
 		$this->initInvocation("setWarehouseSkuDisabled");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_setWarehouseSkuDisabled_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_setWarehouseSkuDisabled_args();
 		
 		$args->warehouseId = $warehouseId;
 		
@@ -854,7 +854,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_setWarehouseSkuDisabled(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_setWarehouseSkuDisabled_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_setWarehouseSkuDisabled_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -873,7 +873,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_setWarehouseSkuSafeQuantity( $warehouseId, $skuId, $safeQuantity){
 		
 		$this->initInvocation("setWarehouseSkuSafeQuantity");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_setWarehouseSkuSafeQuantity_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_setWarehouseSkuSafeQuantity_args();
 		
 		$args->warehouseId = $warehouseId;
 		
@@ -886,7 +886,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_setWarehouseSkuSafeQuantity(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_setWarehouseSkuSafeQuantity_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_setWarehouseSkuSafeQuantity_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -896,16 +896,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function updateInventory(\com\vip\vop\vcloud\inventory\api\InventoryUpdateRequest $request){
+	public function updateInventory(\Voop\com\vip\vop\vcloud\inventory\api\InventoryUpdateRequest $request){
 		
 		$this->send_updateInventory( $request);
 		return $this->recv_updateInventory();
 	}
 	
-	public function send_updateInventory(\com\vip\vop\vcloud\inventory\api\InventoryUpdateRequest $request){
+	public function send_updateInventory(\Voop\com\vip\vop\vcloud\inventory\api\InventoryUpdateRequest $request){
 		
 		$this->initInvocation("updateInventory");
-		$args = new \com\vip\vop\vcloud\inventory\api\InventoryService_updateInventory_args();
+		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_updateInventory_args();
 		
 		$args->request = $request;
 		
@@ -914,7 +914,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_updateInventory(){
 		
-		$result = new \com\vip\vop\vcloud\inventory\api\InventoryService_updateInventory_result();
+		$result = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_updateInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -978,7 +978,7 @@ class InventoryService_batchForceHoldChannelInventory_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryHold();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold();
 					$elem0->read($input);
 					
 					$this->reqList[$_size0++] = $elem0;
@@ -1009,7 +1009,7 @@ class InventoryService_batchForceHoldChannelInventory_args {
 		
 		if (!is_array($this->reqList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1018,7 +1018,7 @@ class InventoryService_batchForceHoldChannelInventory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1079,7 +1079,7 @@ class InventoryService_batchForceHoldOneWarehouseInventory_args {
 		if(true) {
 			
 			
-			$this->holdReq = new \com\vip\vop\vcloud\inventory\api\WarehouseInventoryForceHold();
+			$this->holdReq = new \Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryForceHold();
 			$this->holdReq->read($input);
 			
 		}
@@ -1100,7 +1100,7 @@ class InventoryService_batchForceHoldOneWarehouseInventory_args {
 		
 		if (!is_object($this->holdReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->holdReq->write($output);
@@ -1166,7 +1166,7 @@ class InventoryService_batchFullUpdateChannelSkuInventory_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\ChannelSkuInventoryUpdateReq();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelSkuInventoryUpdateReq();
 					$elem0->read($input);
 					
 					$this->reqList[$_size0++] = $elem0;
@@ -1199,7 +1199,7 @@ class InventoryService_batchFullUpdateChannelSkuInventory_args {
 			
 			if (!is_array($this->reqList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1208,7 +1208,7 @@ class InventoryService_batchFullUpdateChannelSkuInventory_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1290,7 +1290,7 @@ class InventoryService_batchFullUpdateWarehouseSkuInventory_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\vcloud\inventory\api\WarehouseSkuInventoryUpdateReq();
+					$elem1 = new \Voop\com\vip\vop\vcloud\inventory\api\WarehouseSkuInventoryUpdateReq();
 					$elem1->read($input);
 					
 					$this->reqList[$_size1++] = $elem1;
@@ -1332,7 +1332,7 @@ class InventoryService_batchFullUpdateWarehouseSkuInventory_args {
 			
 			if (!is_array($this->reqList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1341,7 +1341,7 @@ class InventoryService_batchFullUpdateWarehouseSkuInventory_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1422,7 +1422,7 @@ class InventoryService_batchHoldChannelInventory_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryHold();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold();
 					$elem0->read($input);
 					
 					$this->reqList[$_size0++] = $elem0;
@@ -1453,7 +1453,7 @@ class InventoryService_batchHoldChannelInventory_args {
 		
 		if (!is_array($this->reqList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1462,7 +1462,7 @@ class InventoryService_batchHoldChannelInventory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1523,7 +1523,7 @@ class InventoryService_batchHoldOneWarehouseInventory_args {
 		if(true) {
 			
 			
-			$this->holdReq = new \com\vip\vop\vcloud\inventory\api\WarehouseInventoryHold();
+			$this->holdReq = new \Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryHold();
 			$this->holdReq->read($input);
 			
 		}
@@ -1544,7 +1544,7 @@ class InventoryService_batchHoldOneWarehouseInventory_args {
 		
 		if (!is_object($this->holdReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->holdReq->write($output);
@@ -1610,7 +1610,7 @@ class InventoryService_batchIncrUpdateChannelSkuInventory_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\ChannelSkuInventoryUpdateReq();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelSkuInventoryUpdateReq();
 					$elem0->read($input);
 					
 					$this->reqList[$_size0++] = $elem0;
@@ -1643,7 +1643,7 @@ class InventoryService_batchIncrUpdateChannelSkuInventory_args {
 			
 			if (!is_array($this->reqList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1652,7 +1652,7 @@ class InventoryService_batchIncrUpdateChannelSkuInventory_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1734,7 +1734,7 @@ class InventoryService_batchIncrUpdateWarehouseSkuInventory_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\vcloud\inventory\api\WarehouseSkuInventoryUpdateReq();
+					$elem1 = new \Voop\com\vip\vop\vcloud\inventory\api\WarehouseSkuInventoryUpdateReq();
 					$elem1->read($input);
 					
 					$this->reqList[$_size1++] = $elem1;
@@ -1776,7 +1776,7 @@ class InventoryService_batchIncrUpdateWarehouseSkuInventory_args {
 			
 			if (!is_array($this->reqList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1785,7 +1785,7 @@ class InventoryService_batchIncrUpdateWarehouseSkuInventory_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1866,7 +1866,7 @@ class InventoryService_batchReleaseChannelHold_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryRelease();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryRelease();
 					$elem0->read($input);
 					
 					$this->reqList[$_size0++] = $elem0;
@@ -1897,7 +1897,7 @@ class InventoryService_batchReleaseChannelHold_args {
 		
 		if (!is_array($this->reqList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1906,7 +1906,7 @@ class InventoryService_batchReleaseChannelHold_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2709,7 +2709,7 @@ class InventoryService_holdChannelInventory_args {
 		if(true) {
 			
 			
-			$this->holdReq = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryHold();
+			$this->holdReq = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold();
 			$this->holdReq->read($input);
 			
 		}
@@ -2732,7 +2732,7 @@ class InventoryService_holdChannelInventory_args {
 			
 			if (!is_object($this->holdReq)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->holdReq->write($output);
@@ -2791,7 +2791,7 @@ class InventoryService_holdForceChannelInventory_args {
 		if(true) {
 			
 			
-			$this->holdReq = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryHold();
+			$this->holdReq = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold();
 			$this->holdReq->read($input);
 			
 		}
@@ -2814,7 +2814,7 @@ class InventoryService_holdForceChannelInventory_args {
 			
 			if (!is_object($this->holdReq)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->holdReq->write($output);
@@ -3227,7 +3227,7 @@ class InventoryService_listByWarehouseInventoryLogQueryCriteria_args {
 		if(true) {
 			
 			
-			$this->criteria = new \com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria();
+			$this->criteria = new \Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria();
 			$this->criteria->read($input);
 			
 		}
@@ -3238,7 +3238,7 @@ class InventoryService_listByWarehouseInventoryLogQueryCriteria_args {
 		if(true) {
 			
 			
-			$this->pagination = new \com\vip\vop\vcloud\common\api\Pagination();
+			$this->pagination = new \Voop\com\vip\vop\vcloud\common\api\Pagination();
 			$this->pagination->read($input);
 			
 		}
@@ -3261,7 +3261,7 @@ class InventoryService_listByWarehouseInventoryLogQueryCriteria_args {
 			
 			if (!is_object($this->criteria)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->criteria->write($output);
@@ -3276,7 +3276,7 @@ class InventoryService_listByWarehouseInventoryLogQueryCriteria_args {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -3344,7 +3344,7 @@ class InventoryService_listChannelSkuInventory_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\ChannelSku();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelSku();
 					$elem0->read($input);
 					
 					$this->skuList[$_size0++] = $elem0;
@@ -3377,7 +3377,7 @@ class InventoryService_listChannelSkuInventory_args {
 			
 			if (!is_array($this->skuList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3386,7 +3386,7 @@ class InventoryService_listChannelSkuInventory_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3468,7 +3468,7 @@ class InventoryService_listChannelSkuInventoryByChannelId_args {
 		if(true) {
 			
 			
-			$this->pagination = new \com\vip\vop\vcloud\common\api\Pagination();
+			$this->pagination = new \Voop\com\vip\vop\vcloud\common\api\Pagination();
 			$this->pagination->read($input);
 			
 		}
@@ -3500,7 +3500,7 @@ class InventoryService_listChannelSkuInventoryByChannelId_args {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -3568,7 +3568,7 @@ class InventoryService_listWarehouseSkuInventory_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\WarehouseSku();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\WarehouseSku();
 					$elem0->read($input);
 					
 					$this->skuList[$_size0++] = $elem0;
@@ -3599,7 +3599,7 @@ class InventoryService_listWarehouseSkuInventory_args {
 		
 		if (!is_array($this->skuList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3608,7 +3608,7 @@ class InventoryService_listWarehouseSkuInventory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3688,7 +3688,7 @@ class InventoryService_listWarehouseSkuInventoryByWarehouseId_args {
 		if(true) {
 			
 			
-			$this->pagination = new \com\vip\vop\vcloud\common\api\Pagination();
+			$this->pagination = new \Voop\com\vip\vop\vcloud\common\api\Pagination();
 			$this->pagination->read($input);
 			
 		}
@@ -3720,7 +3720,7 @@ class InventoryService_listWarehouseSkuInventoryByWarehouseId_args {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -3779,7 +3779,7 @@ class InventoryService_releaseChannelHold_args {
 		if(true) {
 			
 			
-			$this->releaseReq = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryRelease();
+			$this->releaseReq = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryRelease();
 			$this->releaseReq->read($input);
 			
 		}
@@ -3802,7 +3802,7 @@ class InventoryService_releaseChannelHold_args {
 			
 			if (!is_object($this->releaseReq)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->releaseReq->write($output);
@@ -4121,7 +4121,7 @@ class InventoryService_updateInventory_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\vop\vcloud\inventory\api\InventoryUpdateRequest();
+			$this->request = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryUpdateRequest();
 			$this->request->read($input);
 			
 		}
@@ -4142,7 +4142,7 @@ class InventoryService_updateInventory_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -4219,7 +4219,7 @@ class InventoryService_batchForceHoldChannelInventory_result {
 							
 							$elem1 = null;
 							
-							$elem1 = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
+							$elem1 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
 							$elem1->read($input);
 							
 							$val0[$_size1++] = $elem1;
@@ -4262,7 +4262,7 @@ class InventoryService_batchForceHoldChannelInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -4273,7 +4273,7 @@ class InventoryService_batchForceHoldChannelInventory_result {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();
@@ -4282,7 +4282,7 @@ class InventoryService_batchForceHoldChannelInventory_result {
 					
 					if (!is_object($iter1)) {
 						
-						throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 					}
 					
 					$xfer += $iter1->write($output);
@@ -4428,7 +4428,7 @@ class InventoryService_batchFullUpdateChannelSkuInventory_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\UpdateResult();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\UpdateResult();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -4461,7 +4461,7 @@ class InventoryService_batchFullUpdateChannelSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4470,7 +4470,7 @@ class InventoryService_batchFullUpdateChannelSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4542,7 +4542,7 @@ class InventoryService_batchFullUpdateWarehouseSkuInventory_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\vcloud\inventory\api\UpdateResult();
+					$elem1 = new \Voop\com\vip\vop\vcloud\inventory\api\UpdateResult();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -4575,7 +4575,7 @@ class InventoryService_batchFullUpdateWarehouseSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4584,7 +4584,7 @@ class InventoryService_batchFullUpdateWarehouseSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4667,7 +4667,7 @@ class InventoryService_batchHoldChannelInventory_result {
 							
 							$elem2 = null;
 							
-							$elem2 = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
+							$elem2 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
 							$elem2->read($input);
 							
 							$val1[$_size2++] = $elem2;
@@ -4710,7 +4710,7 @@ class InventoryService_batchHoldChannelInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -4721,7 +4721,7 @@ class InventoryService_batchHoldChannelInventory_result {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();
@@ -4730,7 +4730,7 @@ class InventoryService_batchHoldChannelInventory_result {
 					
 					if (!is_object($iter1)) {
 						
-						throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 					}
 					
 					$xfer += $iter1->write($output);
@@ -4797,7 +4797,7 @@ class InventoryService_batchHoldOneWarehouseInventory_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\warehouse\api\Warehouse();
+			$this->success = new \Voop\com\vip\vop\vcloud\warehouse\api\Warehouse();
 			$this->success->read($input);
 			
 		}
@@ -4820,7 +4820,7 @@ class InventoryService_batchHoldOneWarehouseInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4888,7 +4888,7 @@ class InventoryService_batchIncrUpdateChannelSkuInventory_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\UpdateResult();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\UpdateResult();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -4921,7 +4921,7 @@ class InventoryService_batchIncrUpdateChannelSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4930,7 +4930,7 @@ class InventoryService_batchIncrUpdateChannelSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5002,7 +5002,7 @@ class InventoryService_batchIncrUpdateWarehouseSkuInventory_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\vcloud\inventory\api\UpdateResult();
+					$elem1 = new \Voop\com\vip\vop\vcloud\inventory\api\UpdateResult();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -5035,7 +5035,7 @@ class InventoryService_batchIncrUpdateWarehouseSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5044,7 +5044,7 @@ class InventoryService_batchIncrUpdateWarehouseSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5127,7 +5127,7 @@ class InventoryService_batchReleaseChannelHold_result {
 							
 							$elem2 = null;
 							
-							$elem2 = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
+							$elem2 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
 							$elem2->read($input);
 							
 							$val1[$_size2++] = $elem2;
@@ -5170,7 +5170,7 @@ class InventoryService_batchReleaseChannelHold_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -5181,7 +5181,7 @@ class InventoryService_batchReleaseChannelHold_result {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();
@@ -5190,7 +5190,7 @@ class InventoryService_batchReleaseChannelHold_result {
 					
 					if (!is_object($iter1)) {
 						
-						throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 					}
 					
 					$xfer += $iter1->write($output);
@@ -5355,7 +5355,7 @@ class InventoryService_getChannelSkuInventory_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\inventory\api\ChannelSkuInventory();
+			$this->success = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelSkuInventory();
 			$this->success->read($input);
 			
 		}
@@ -5378,7 +5378,7 @@ class InventoryService_getChannelSkuInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5577,7 +5577,7 @@ class InventoryService_getWarehouseSkuInventory_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\inventory\api\WarehouseSkuInventory();
+			$this->success = new \Voop\com\vip\vop\vcloud\inventory\api\WarehouseSkuInventory();
 			$this->success->read($input);
 			
 		}
@@ -5600,7 +5600,7 @@ class InventoryService_getWarehouseSkuInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5659,7 +5659,7 @@ class InventoryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -5682,7 +5682,7 @@ class InventoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5750,7 +5750,7 @@ class InventoryService_holdChannelInventory_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -5783,7 +5783,7 @@ class InventoryService_holdChannelInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5792,7 +5792,7 @@ class InventoryService_holdChannelInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5864,7 +5864,7 @@ class InventoryService_holdForceChannelInventory_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
+					$elem1 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -5897,7 +5897,7 @@ class InventoryService_holdForceChannelInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5906,7 +5906,7 @@ class InventoryService_holdForceChannelInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6067,7 +6067,7 @@ class InventoryService_listByWarehouseInventoryLogQueryCriteria_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryResult();
+			$this->success = new \Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryResult();
 			$this->success->read($input);
 			
 		}
@@ -6090,7 +6090,7 @@ class InventoryService_listByWarehouseInventoryLogQueryCriteria_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6158,7 +6158,7 @@ class InventoryService_listChannelSkuInventory_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\ChannelSkuInventory();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelSkuInventory();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -6191,7 +6191,7 @@ class InventoryService_listChannelSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6200,7 +6200,7 @@ class InventoryService_listChannelSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6263,7 +6263,7 @@ class InventoryService_listChannelSkuInventoryByChannelId_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryQueryResult();
+			$this->success = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryQueryResult();
 			$this->success->read($input);
 			
 		}
@@ -6286,7 +6286,7 @@ class InventoryService_listChannelSkuInventoryByChannelId_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6354,7 +6354,7 @@ class InventoryService_listWarehouseSkuInventory_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\WarehouseSkuInventory();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\WarehouseSkuInventory();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -6387,7 +6387,7 @@ class InventoryService_listWarehouseSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6396,7 +6396,7 @@ class InventoryService_listWarehouseSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6459,7 +6459,7 @@ class InventoryService_listWarehouseSkuInventoryByWarehouseId_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\inventory\api\WarehouseInventoryQueryResult();
+			$this->success = new \Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryQueryResult();
 			$this->success->read($input);
 			
 		}
@@ -6482,7 +6482,7 @@ class InventoryService_listWarehouseSkuInventoryByWarehouseId_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6550,7 +6550,7 @@ class InventoryService_releaseChannelHold_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
+					$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHoldResult();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -6583,7 +6583,7 @@ class InventoryService_releaseChannelHold_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6592,7 +6592,7 @@ class InventoryService_releaseChannelHold_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

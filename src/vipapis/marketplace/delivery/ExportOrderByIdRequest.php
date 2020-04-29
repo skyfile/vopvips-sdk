@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\delivery;
+namespace Voop\vipapis\marketplace\delivery;
 
 class ExportOrderByIdRequest {
 	
@@ -87,7 +87,7 @@ class ExportOrderByIdRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -110,7 +110,7 @@ class ExportOrderByIdRequest {
 			
 			if (!is_array($this->order_ids)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

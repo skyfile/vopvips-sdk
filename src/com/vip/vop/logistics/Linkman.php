@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics;
+namespace Voop\com\vip\vop\logistics;
 
 class Linkman {
 	

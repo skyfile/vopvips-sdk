@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\finance;
+namespace Voop\vipapis\finance;
 
 class Error {
 	
@@ -128,7 +128,7 @@ class Error {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

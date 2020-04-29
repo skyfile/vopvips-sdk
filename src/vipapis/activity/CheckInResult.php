@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\activity;
+namespace Voop\vipapis\activity;
 
 class CheckInResult {
 	
@@ -101,7 +101,7 @@ class CheckInResult {
 				
 				$needSkip = false;
 				
-				$this->data = new \vipapis\activity\CouponData();
+				$this->data = new \Voop\vipapis\activity\CouponData();
 				$this->data->read($input);
 				
 			}
@@ -110,7 +110,7 @@ class CheckInResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -151,7 +151,7 @@ class CheckInResult {
 			
 			if (!is_object($this->data)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->data->write($output);

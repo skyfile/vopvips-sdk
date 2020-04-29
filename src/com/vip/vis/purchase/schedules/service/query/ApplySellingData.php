@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vis\purchase\schedules\service\query;
+namespace Voop\com\vip\vis\purchase\schedules\service\query;
 
 class ApplySellingData {
 	
@@ -930,7 +930,7 @@ class ApplySellingData {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vis\purchase\schedules\service\query\ApplyBrand();
+						$elem0 = new \Voop\com\vip\vis\purchase\schedules\service\query\ApplyBrand();
 						$elem0->read($input);
 						
 						$this->brandList[$_size0++] = $elem0;
@@ -1270,7 +1270,7 @@ class ApplySellingData {
 						
 						$elem4 = null;
 						
-						$elem4 = new \com\vip\vis\purchase\schedules\service\query\GrossProfitRateLadder();
+						$elem4 = new \Voop\com\vip\vis\purchase\schedules\service\query\GrossProfitRateLadder();
 						$elem4->read($input);
 						
 						$this->grossProfitRateLadderList[$_size4++] = $elem4;
@@ -1593,7 +1593,7 @@ class ApplySellingData {
 			
 			if (!is_array($this->brandList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1602,7 +1602,7 @@ class ApplySellingData {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1621,7 +1621,7 @@ class ApplySellingData {
 			
 			if (!is_array($this->labelList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1643,7 +1643,7 @@ class ApplySellingData {
 			
 			if (!is_array($this->flagMap)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -1838,7 +1838,7 @@ class ApplySellingData {
 			
 			if (!is_array($this->purchaseChannel)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1887,7 +1887,7 @@ class ApplySellingData {
 			
 			if (!is_array($this->grossProfitRateLadderList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1896,7 +1896,7 @@ class ApplySellingData {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

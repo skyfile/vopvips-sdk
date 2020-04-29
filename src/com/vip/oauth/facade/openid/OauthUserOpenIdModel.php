@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\oauth\facade\openid;
+namespace Voop\com\vip\oauth\facade\openid;
 
 class OauthUserOpenIdModel {
 	

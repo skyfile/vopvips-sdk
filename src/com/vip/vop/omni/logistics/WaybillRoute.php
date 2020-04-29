@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\omni\logistics;
+namespace Voop\com\vip\vop\omni\logistics;
 
 class WaybillRoute {
 	

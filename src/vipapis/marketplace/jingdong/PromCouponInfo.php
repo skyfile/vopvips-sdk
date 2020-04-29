@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\jingdong;
+namespace Voop\vipapis\marketplace\jingdong;
 
 class PromCouponInfo {
 	
@@ -68,7 +68,7 @@ class PromCouponInfo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

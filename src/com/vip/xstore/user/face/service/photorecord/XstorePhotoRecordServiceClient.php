@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service\photorecord;
+namespace Voop\com\vip\xstore\user\face\service\photorecord;
 $base_path = dirname(__FILE__).'/../../../../../../../';
 require_once $base_path.'/Osp/Util/PathUtil.php';
 require_once $base_path.'/Osp/ClassLoader/ClassLoader.php';
@@ -21,7 +21,7 @@ class XstorePhotoRecordServiceClient{
 	private static function regis(){
 		
 		$path = \Osp\Util\PathUtil::getRootPath ();
-		$nsLoader = new \Osp\ClassLoader\ClassLoader ();
+		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
 		$nsLoader->registerNamespace ( 'com', $path );
@@ -70,7 +70,7 @@ class XstorePhotoRecordServiceClient{
 		
 		//$ctx->setProtocol ( \Osp\Protocol\OspProtocol::$Binary );
 		
-		return new \com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordServiceHelper();
+		return new \Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordServiceHelper();
 	}
 	
 }

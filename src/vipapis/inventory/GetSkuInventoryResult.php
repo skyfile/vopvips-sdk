@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\inventory;
+namespace Voop\vipapis\inventory;
 
 class GetSkuInventoryResult {
 	
@@ -188,7 +188,7 @@ class GetSkuInventoryResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

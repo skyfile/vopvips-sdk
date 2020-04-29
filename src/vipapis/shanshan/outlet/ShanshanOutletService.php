@@ -8,25 +8,25 @@
 *
 */
 
-namespace vipapis\shanshan\outlet;
+namespace Voop\vipapis\shanshan\outlet;
 interface ShanshanOutletServiceIf{
 	
 	
-	public function getMallStores(\vipapis\shanshan\outlet\MallStoreQueryReq $storeQueryReq);
+	public function getMallStores(\Voop\vipapis\shanshan\outlet\MallStoreQueryReq $storeQueryReq);
 	
-	public function getOnlineOrders(\vipapis\shanshan\outlet\OnlineOrderQueryReq $orderQueryReq);
+	public function getOnlineOrders(\Voop\vipapis\shanshan\outlet\OnlineOrderQueryReq $orderQueryReq);
 	
-	public function getStoreCoupons(\vipapis\shanshan\outlet\CouponQueryReq $couponQueryReq);
+	public function getStoreCoupons(\Voop\vipapis\shanshan\outlet\CouponQueryReq $couponQueryReq);
 	
 	public function healthCheck();
 	
-	public function reportOfflineOrders(\vipapis\shanshan\outlet\ReportOfflineOrderReq $reportOfflineOrderReq);
+	public function reportOfflineOrders(\Voop\vipapis\shanshan\outlet\ReportOfflineOrderReq $reportOfflineOrderReq);
 	
-	public function uploadProduct(\vipapis\shanshan\outlet\UploadProductRequest $req);
+	public function uploadProduct(\Voop\vipapis\shanshan\outlet\UploadProductRequest $req);
 	
-	public function uploadRendOrder(\vipapis\shanshan\outlet\UploadRendOrderRequest $req);
+	public function uploadRendOrder(\Voop\vipapis\shanshan\outlet\UploadRendOrderRequest $req);
 	
-	public function verifyElectronicCoupon(\vipapis\shanshan\outlet\VerifyECouponReq $verifyECouponReq);
+	public function verifyElectronicCoupon(\Voop\vipapis\shanshan\outlet\VerifyECouponReq $verifyECouponReq);
 	
 }
 
@@ -38,16 +38,16 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function getMallStores(\vipapis\shanshan\outlet\MallStoreQueryReq $storeQueryReq){
+	public function getMallStores(\Voop\vipapis\shanshan\outlet\MallStoreQueryReq $storeQueryReq){
 		
 		$this->send_getMallStores( $storeQueryReq);
 		return $this->recv_getMallStores();
 	}
 	
-	public function send_getMallStores(\vipapis\shanshan\outlet\MallStoreQueryReq $storeQueryReq){
+	public function send_getMallStores(\Voop\vipapis\shanshan\outlet\MallStoreQueryReq $storeQueryReq){
 		
 		$this->initInvocation("getMallStores");
-		$args = new \vipapis\shanshan\outlet\ShanshanOutletService_getMallStores_args();
+		$args = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_getMallStores_args();
 		
 		$args->storeQueryReq = $storeQueryReq;
 		
@@ -56,7 +56,7 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getMallStores(){
 		
-		$result = new \vipapis\shanshan\outlet\ShanshanOutletService_getMallStores_result();
+		$result = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_getMallStores_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -66,16 +66,16 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function getOnlineOrders(\vipapis\shanshan\outlet\OnlineOrderQueryReq $orderQueryReq){
+	public function getOnlineOrders(\Voop\vipapis\shanshan\outlet\OnlineOrderQueryReq $orderQueryReq){
 		
 		$this->send_getOnlineOrders( $orderQueryReq);
 		return $this->recv_getOnlineOrders();
 	}
 	
-	public function send_getOnlineOrders(\vipapis\shanshan\outlet\OnlineOrderQueryReq $orderQueryReq){
+	public function send_getOnlineOrders(\Voop\vipapis\shanshan\outlet\OnlineOrderQueryReq $orderQueryReq){
 		
 		$this->initInvocation("getOnlineOrders");
-		$args = new \vipapis\shanshan\outlet\ShanshanOutletService_getOnlineOrders_args();
+		$args = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_getOnlineOrders_args();
 		
 		$args->orderQueryReq = $orderQueryReq;
 		
@@ -84,7 +84,7 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getOnlineOrders(){
 		
-		$result = new \vipapis\shanshan\outlet\ShanshanOutletService_getOnlineOrders_result();
+		$result = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_getOnlineOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -94,16 +94,16 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function getStoreCoupons(\vipapis\shanshan\outlet\CouponQueryReq $couponQueryReq){
+	public function getStoreCoupons(\Voop\vipapis\shanshan\outlet\CouponQueryReq $couponQueryReq){
 		
 		$this->send_getStoreCoupons( $couponQueryReq);
 		return $this->recv_getStoreCoupons();
 	}
 	
-	public function send_getStoreCoupons(\vipapis\shanshan\outlet\CouponQueryReq $couponQueryReq){
+	public function send_getStoreCoupons(\Voop\vipapis\shanshan\outlet\CouponQueryReq $couponQueryReq){
 		
 		$this->initInvocation("getStoreCoupons");
-		$args = new \vipapis\shanshan\outlet\ShanshanOutletService_getStoreCoupons_args();
+		$args = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_getStoreCoupons_args();
 		
 		$args->couponQueryReq = $couponQueryReq;
 		
@@ -112,7 +112,7 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getStoreCoupons(){
 		
-		$result = new \vipapis\shanshan\outlet\ShanshanOutletService_getStoreCoupons_result();
+		$result = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_getStoreCoupons_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -131,14 +131,14 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\shanshan\outlet\ShanshanOutletService_healthCheck_args();
+		$args = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\shanshan\outlet\ShanshanOutletService_healthCheck_result();
+		$result = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -148,16 +148,16 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function reportOfflineOrders(\vipapis\shanshan\outlet\ReportOfflineOrderReq $reportOfflineOrderReq){
+	public function reportOfflineOrders(\Voop\vipapis\shanshan\outlet\ReportOfflineOrderReq $reportOfflineOrderReq){
 		
 		$this->send_reportOfflineOrders( $reportOfflineOrderReq);
 		return $this->recv_reportOfflineOrders();
 	}
 	
-	public function send_reportOfflineOrders(\vipapis\shanshan\outlet\ReportOfflineOrderReq $reportOfflineOrderReq){
+	public function send_reportOfflineOrders(\Voop\vipapis\shanshan\outlet\ReportOfflineOrderReq $reportOfflineOrderReq){
 		
 		$this->initInvocation("reportOfflineOrders");
-		$args = new \vipapis\shanshan\outlet\ShanshanOutletService_reportOfflineOrders_args();
+		$args = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_reportOfflineOrders_args();
 		
 		$args->reportOfflineOrderReq = $reportOfflineOrderReq;
 		
@@ -166,7 +166,7 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_reportOfflineOrders(){
 		
-		$result = new \vipapis\shanshan\outlet\ShanshanOutletService_reportOfflineOrders_result();
+		$result = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_reportOfflineOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -176,16 +176,16 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function uploadProduct(\vipapis\shanshan\outlet\UploadProductRequest $req){
+	public function uploadProduct(\Voop\vipapis\shanshan\outlet\UploadProductRequest $req){
 		
 		$this->send_uploadProduct( $req);
 		return $this->recv_uploadProduct();
 	}
 	
-	public function send_uploadProduct(\vipapis\shanshan\outlet\UploadProductRequest $req){
+	public function send_uploadProduct(\Voop\vipapis\shanshan\outlet\UploadProductRequest $req){
 		
 		$this->initInvocation("uploadProduct");
-		$args = new \vipapis\shanshan\outlet\ShanshanOutletService_uploadProduct_args();
+		$args = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_uploadProduct_args();
 		
 		$args->req = $req;
 		
@@ -194,7 +194,7 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_uploadProduct(){
 		
-		$result = new \vipapis\shanshan\outlet\ShanshanOutletService_uploadProduct_result();
+		$result = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_uploadProduct_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -204,16 +204,16 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function uploadRendOrder(\vipapis\shanshan\outlet\UploadRendOrderRequest $req){
+	public function uploadRendOrder(\Voop\vipapis\shanshan\outlet\UploadRendOrderRequest $req){
 		
 		$this->send_uploadRendOrder( $req);
 		return $this->recv_uploadRendOrder();
 	}
 	
-	public function send_uploadRendOrder(\vipapis\shanshan\outlet\UploadRendOrderRequest $req){
+	public function send_uploadRendOrder(\Voop\vipapis\shanshan\outlet\UploadRendOrderRequest $req){
 		
 		$this->initInvocation("uploadRendOrder");
-		$args = new \vipapis\shanshan\outlet\ShanshanOutletService_uploadRendOrder_args();
+		$args = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_uploadRendOrder_args();
 		
 		$args->req = $req;
 		
@@ -222,7 +222,7 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_uploadRendOrder(){
 		
-		$result = new \vipapis\shanshan\outlet\ShanshanOutletService_uploadRendOrder_result();
+		$result = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_uploadRendOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -232,16 +232,16 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function verifyElectronicCoupon(\vipapis\shanshan\outlet\VerifyECouponReq $verifyECouponReq){
+	public function verifyElectronicCoupon(\Voop\vipapis\shanshan\outlet\VerifyECouponReq $verifyECouponReq){
 		
 		$this->send_verifyElectronicCoupon( $verifyECouponReq);
 		return $this->recv_verifyElectronicCoupon();
 	}
 	
-	public function send_verifyElectronicCoupon(\vipapis\shanshan\outlet\VerifyECouponReq $verifyECouponReq){
+	public function send_verifyElectronicCoupon(\Voop\vipapis\shanshan\outlet\VerifyECouponReq $verifyECouponReq){
 		
 		$this->initInvocation("verifyElectronicCoupon");
-		$args = new \vipapis\shanshan\outlet\ShanshanOutletService_verifyElectronicCoupon_args();
+		$args = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_verifyElectronicCoupon_args();
 		
 		$args->verifyECouponReq = $verifyECouponReq;
 		
@@ -250,7 +250,7 @@ class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_verifyElectronicCoupon(){
 		
-		$result = new \vipapis\shanshan\outlet\ShanshanOutletService_verifyElectronicCoupon_result();
+		$result = new \Voop\vipapis\shanshan\outlet\ShanshanOutletService_verifyElectronicCoupon_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -305,7 +305,7 @@ class ShanshanOutletService_getMallStores_args {
 		if(true) {
 			
 			
-			$this->storeQueryReq = new \vipapis\shanshan\outlet\MallStoreQueryReq();
+			$this->storeQueryReq = new \Voop\vipapis\shanshan\outlet\MallStoreQueryReq();
 			$this->storeQueryReq->read($input);
 			
 		}
@@ -326,7 +326,7 @@ class ShanshanOutletService_getMallStores_args {
 		
 		if (!is_object($this->storeQueryReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->storeQueryReq->write($output);
@@ -383,7 +383,7 @@ class ShanshanOutletService_getOnlineOrders_args {
 		if(true) {
 			
 			
-			$this->orderQueryReq = new \vipapis\shanshan\outlet\OnlineOrderQueryReq();
+			$this->orderQueryReq = new \Voop\vipapis\shanshan\outlet\OnlineOrderQueryReq();
 			$this->orderQueryReq->read($input);
 			
 		}
@@ -404,7 +404,7 @@ class ShanshanOutletService_getOnlineOrders_args {
 		
 		if (!is_object($this->orderQueryReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->orderQueryReq->write($output);
@@ -461,7 +461,7 @@ class ShanshanOutletService_getStoreCoupons_args {
 		if(true) {
 			
 			
-			$this->couponQueryReq = new \vipapis\shanshan\outlet\CouponQueryReq();
+			$this->couponQueryReq = new \Voop\vipapis\shanshan\outlet\CouponQueryReq();
 			$this->couponQueryReq->read($input);
 			
 		}
@@ -482,7 +482,7 @@ class ShanshanOutletService_getStoreCoupons_args {
 		
 		if (!is_object($this->couponQueryReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->couponQueryReq->write($output);
@@ -585,7 +585,7 @@ class ShanshanOutletService_reportOfflineOrders_args {
 		if(true) {
 			
 			
-			$this->reportOfflineOrderReq = new \vipapis\shanshan\outlet\ReportOfflineOrderReq();
+			$this->reportOfflineOrderReq = new \Voop\vipapis\shanshan\outlet\ReportOfflineOrderReq();
 			$this->reportOfflineOrderReq->read($input);
 			
 		}
@@ -606,7 +606,7 @@ class ShanshanOutletService_reportOfflineOrders_args {
 		
 		if (!is_object($this->reportOfflineOrderReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reportOfflineOrderReq->write($output);
@@ -663,7 +663,7 @@ class ShanshanOutletService_uploadProduct_args {
 		if(true) {
 			
 			
-			$this->req = new \vipapis\shanshan\outlet\UploadProductRequest();
+			$this->req = new \Voop\vipapis\shanshan\outlet\UploadProductRequest();
 			$this->req->read($input);
 			
 		}
@@ -684,7 +684,7 @@ class ShanshanOutletService_uploadProduct_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -741,7 +741,7 @@ class ShanshanOutletService_uploadRendOrder_args {
 		if(true) {
 			
 			
-			$this->req = new \vipapis\shanshan\outlet\UploadRendOrderRequest();
+			$this->req = new \Voop\vipapis\shanshan\outlet\UploadRendOrderRequest();
 			$this->req->read($input);
 			
 		}
@@ -762,7 +762,7 @@ class ShanshanOutletService_uploadRendOrder_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -819,7 +819,7 @@ class ShanshanOutletService_verifyElectronicCoupon_args {
 		if(true) {
 			
 			
-			$this->verifyECouponReq = new \vipapis\shanshan\outlet\VerifyECouponReq();
+			$this->verifyECouponReq = new \Voop\vipapis\shanshan\outlet\VerifyECouponReq();
 			$this->verifyECouponReq->read($input);
 			
 		}
@@ -840,7 +840,7 @@ class ShanshanOutletService_verifyElectronicCoupon_args {
 		
 		if (!is_object($this->verifyECouponReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->verifyECouponReq->write($output);
@@ -897,7 +897,7 @@ class ShanshanOutletService_getMallStores_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\shanshan\outlet\MallStoreQueryResp();
+			$this->success = new \Voop\vipapis\shanshan\outlet\MallStoreQueryResp();
 			$this->success->read($input);
 			
 		}
@@ -920,7 +920,7 @@ class ShanshanOutletService_getMallStores_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -979,7 +979,7 @@ class ShanshanOutletService_getOnlineOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\shanshan\outlet\OnlineOrderQueryResp();
+			$this->success = new \Voop\vipapis\shanshan\outlet\OnlineOrderQueryResp();
 			$this->success->read($input);
 			
 		}
@@ -1002,7 +1002,7 @@ class ShanshanOutletService_getOnlineOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1070,7 +1070,7 @@ class ShanshanOutletService_getStoreCoupons_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\shanshan\outlet\StoreCoupon();
+					$elem0 = new \Voop\vipapis\shanshan\outlet\StoreCoupon();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1103,7 +1103,7 @@ class ShanshanOutletService_getStoreCoupons_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1112,7 +1112,7 @@ class ShanshanOutletService_getStoreCoupons_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1175,7 +1175,7 @@ class ShanshanOutletService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1198,7 +1198,7 @@ class ShanshanOutletService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1257,7 +1257,7 @@ class ShanshanOutletService_reportOfflineOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\shanshan\outlet\ReportOfflineOrderResp();
+			$this->success = new \Voop\vipapis\shanshan\outlet\ReportOfflineOrderResp();
 			$this->success->read($input);
 			
 		}
@@ -1280,7 +1280,7 @@ class ShanshanOutletService_reportOfflineOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1339,7 +1339,7 @@ class ShanshanOutletService_uploadProduct_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\shanshan\outlet\UploadProductResponse();
+			$this->success = new \Voop\vipapis\shanshan\outlet\UploadProductResponse();
 			$this->success->read($input);
 			
 		}
@@ -1362,7 +1362,7 @@ class ShanshanOutletService_uploadProduct_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1421,7 +1421,7 @@ class ShanshanOutletService_uploadRendOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\shanshan\outlet\UploadRendOrderResponse();
+			$this->success = new \Voop\vipapis\shanshan\outlet\UploadRendOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -1444,7 +1444,7 @@ class ShanshanOutletService_uploadRendOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1503,7 +1503,7 @@ class ShanshanOutletService_verifyElectronicCoupon_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\shanshan\outlet\VerifyECouponResp();
+			$this->success = new \Voop\vipapis\shanshan\outlet\VerifyECouponResp();
 			$this->success->read($input);
 			
 		}
@@ -1526,7 +1526,7 @@ class ShanshanOutletService_verifyElectronicCoupon_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\platform\api\cipher;
+namespace Voop\com\vip\platform\api\cipher;
 
 class CipherResult {
 	

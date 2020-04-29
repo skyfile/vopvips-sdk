@@ -8,19 +8,19 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 interface UnionPidServiceIf{
 	
 	
-	public function genPid(\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest);
+	public function genPid(\Voop\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest);
 	
-	public function genPidWithOauth(\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest);
+	public function genPidWithOauth(\Voop\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest);
 	
 	public function healthCheck();
 	
-	public function queryPid(\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest);
+	public function queryPid(\Voop\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest);
 	
-	public function queryPidWithOauth(\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest);
+	public function queryPidWithOauth(\Voop\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest);
 	
 }
 
@@ -32,16 +32,16 @@ class _UnionPidServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	}
 	
 	
-	public function genPid(\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest){
+	public function genPid(\Voop\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest){
 		
 		$this->send_genPid( $pidGenRequest);
 		return $this->recv_genPid();
 	}
 	
-	public function send_genPid(\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest){
+	public function send_genPid(\Voop\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest){
 		
 		$this->initInvocation("genPid");
-		$args = new \com\vip\adp\api\open\service\UnionPidService_genPid_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionPidService_genPid_args();
 		
 		$args->pidGenRequest = $pidGenRequest;
 		
@@ -50,7 +50,7 @@ class _UnionPidServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	
 	public function recv_genPid(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionPidService_genPid_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionPidService_genPid_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -60,16 +60,16 @@ class _UnionPidServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	}
 	
 	
-	public function genPidWithOauth(\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest){
+	public function genPidWithOauth(\Voop\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest){
 		
 		$this->send_genPidWithOauth( $pidGenRequest);
 		return $this->recv_genPidWithOauth();
 	}
 	
-	public function send_genPidWithOauth(\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest){
+	public function send_genPidWithOauth(\Voop\com\vip\adp\api\open\service\PidGenRequest $pidGenRequest){
 		
 		$this->initInvocation("genPidWithOauth");
-		$args = new \com\vip\adp\api\open\service\UnionPidService_genPidWithOauth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionPidService_genPidWithOauth_args();
 		
 		$args->pidGenRequest = $pidGenRequest;
 		
@@ -78,7 +78,7 @@ class _UnionPidServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	
 	public function recv_genPidWithOauth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionPidService_genPidWithOauth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionPidService_genPidWithOauth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -97,14 +97,14 @@ class _UnionPidServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\adp\api\open\service\UnionPidService_healthCheck_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionPidService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionPidService_healthCheck_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionPidService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -114,16 +114,16 @@ class _UnionPidServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	}
 	
 	
-	public function queryPid(\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest){
+	public function queryPid(\Voop\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest){
 		
 		$this->send_queryPid( $pidQueryRequest);
 		return $this->recv_queryPid();
 	}
 	
-	public function send_queryPid(\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest){
+	public function send_queryPid(\Voop\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest){
 		
 		$this->initInvocation("queryPid");
-		$args = new \com\vip\adp\api\open\service\UnionPidService_queryPid_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionPidService_queryPid_args();
 		
 		$args->pidQueryRequest = $pidQueryRequest;
 		
@@ -132,7 +132,7 @@ class _UnionPidServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	
 	public function recv_queryPid(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionPidService_queryPid_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionPidService_queryPid_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -142,16 +142,16 @@ class _UnionPidServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	}
 	
 	
-	public function queryPidWithOauth(\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest){
+	public function queryPidWithOauth(\Voop\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest){
 		
 		$this->send_queryPidWithOauth( $pidQueryRequest);
 		return $this->recv_queryPidWithOauth();
 	}
 	
-	public function send_queryPidWithOauth(\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest){
+	public function send_queryPidWithOauth(\Voop\com\vip\adp\api\open\service\PidQueryRequest $pidQueryRequest){
 		
 		$this->initInvocation("queryPidWithOauth");
-		$args = new \com\vip\adp\api\open\service\UnionPidService_queryPidWithOauth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionPidService_queryPidWithOauth_args();
 		
 		$args->pidQueryRequest = $pidQueryRequest;
 		
@@ -160,7 +160,7 @@ class _UnionPidServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	
 	public function recv_queryPidWithOauth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionPidService_queryPidWithOauth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionPidService_queryPidWithOauth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -215,7 +215,7 @@ class UnionPidService_genPid_args {
 		if(true) {
 			
 			
-			$this->pidGenRequest = new \com\vip\adp\api\open\service\PidGenRequest();
+			$this->pidGenRequest = new \Voop\com\vip\adp\api\open\service\PidGenRequest();
 			$this->pidGenRequest->read($input);
 			
 		}
@@ -238,7 +238,7 @@ class UnionPidService_genPid_args {
 			
 			if (!is_object($this->pidGenRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pidGenRequest->write($output);
@@ -297,7 +297,7 @@ class UnionPidService_genPidWithOauth_args {
 		if(true) {
 			
 			
-			$this->pidGenRequest = new \com\vip\adp\api\open\service\PidGenRequest();
+			$this->pidGenRequest = new \Voop\com\vip\adp\api\open\service\PidGenRequest();
 			$this->pidGenRequest->read($input);
 			
 		}
@@ -320,7 +320,7 @@ class UnionPidService_genPidWithOauth_args {
 			
 			if (!is_object($this->pidGenRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pidGenRequest->write($output);
@@ -425,7 +425,7 @@ class UnionPidService_queryPid_args {
 		if(true) {
 			
 			
-			$this->pidQueryRequest = new \com\vip\adp\api\open\service\PidQueryRequest();
+			$this->pidQueryRequest = new \Voop\com\vip\adp\api\open\service\PidQueryRequest();
 			$this->pidQueryRequest->read($input);
 			
 		}
@@ -448,7 +448,7 @@ class UnionPidService_queryPid_args {
 			
 			if (!is_object($this->pidQueryRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pidQueryRequest->write($output);
@@ -507,7 +507,7 @@ class UnionPidService_queryPidWithOauth_args {
 		if(true) {
 			
 			
-			$this->pidQueryRequest = new \com\vip\adp\api\open\service\PidQueryRequest();
+			$this->pidQueryRequest = new \Voop\com\vip\adp\api\open\service\PidQueryRequest();
 			$this->pidQueryRequest->read($input);
 			
 		}
@@ -530,7 +530,7 @@ class UnionPidService_queryPidWithOauth_args {
 			
 			if (!is_object($this->pidQueryRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pidQueryRequest->write($output);
@@ -589,7 +589,7 @@ class UnionPidService_genPid_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\CpsUnionPidGenResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\CpsUnionPidGenResponse();
 			$this->success->read($input);
 			
 		}
@@ -612,7 +612,7 @@ class UnionPidService_genPid_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -671,7 +671,7 @@ class UnionPidService_genPidWithOauth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\CpsUnionPidGenResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\CpsUnionPidGenResponse();
 			$this->success->read($input);
 			
 		}
@@ -694,7 +694,7 @@ class UnionPidService_genPidWithOauth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -753,7 +753,7 @@ class UnionPidService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -776,7 +776,7 @@ class UnionPidService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -835,7 +835,7 @@ class UnionPidService_queryPid_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\CpsUnionPidQueryResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\CpsUnionPidQueryResponse();
 			$this->success->read($input);
 			
 		}
@@ -858,7 +858,7 @@ class UnionPidService_queryPid_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -917,7 +917,7 @@ class UnionPidService_queryPidWithOauth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\CpsUnionPidQueryResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\CpsUnionPidQueryResponse();
 			$this->success->read($input);
 			
 		}
@@ -940,7 +940,7 @@ class UnionPidService_queryPidWithOauth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

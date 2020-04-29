@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\NewRetail;
+namespace Voop\vipapis\NewRetail;
 interface WholeSaleServiceIf{
 	
 	
@@ -41,7 +41,7 @@ class _WholeSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\NewR
 	public function send_getAfterSaleApplyId( $st_query_time, $et_query_time, $page, $limit){
 		
 		$this->initInvocation("getAfterSaleApplyId");
-		$args = new \vipapis\NewRetail\WholeSaleService_getAfterSaleApplyId_args();
+		$args = new \Voop\vipapis\NewRetail\WholeSaleService_getAfterSaleApplyId_args();
 		
 		$args->st_query_time = $st_query_time;
 		
@@ -56,7 +56,7 @@ class _WholeSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\NewR
 	
 	public function recv_getAfterSaleApplyId(){
 		
-		$result = new \vipapis\NewRetail\WholeSaleService_getAfterSaleApplyId_result();
+		$result = new \Voop\vipapis\NewRetail\WholeSaleService_getAfterSaleApplyId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -75,7 +75,7 @@ class _WholeSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\NewR
 	public function send_getAfterSaleDetail( $apply_ids){
 		
 		$this->initInvocation("getAfterSaleDetail");
-		$args = new \vipapis\NewRetail\WholeSaleService_getAfterSaleDetail_args();
+		$args = new \Voop\vipapis\NewRetail\WholeSaleService_getAfterSaleDetail_args();
 		
 		$args->apply_ids = $apply_ids;
 		
@@ -84,7 +84,7 @@ class _WholeSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\NewR
 	
 	public function recv_getAfterSaleDetail(){
 		
-		$result = new \vipapis\NewRetail\WholeSaleService_getAfterSaleDetail_result();
+		$result = new \Voop\vipapis\NewRetail\WholeSaleService_getAfterSaleDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -103,7 +103,7 @@ class _WholeSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\NewR
 	public function send_getOrder( $st_query_time, $et_query_time, $page, $limit){
 		
 		$this->initInvocation("getOrder");
-		$args = new \vipapis\NewRetail\WholeSaleService_getOrder_args();
+		$args = new \Voop\vipapis\NewRetail\WholeSaleService_getOrder_args();
 		
 		$args->st_query_time = $st_query_time;
 		
@@ -118,7 +118,7 @@ class _WholeSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\NewR
 	
 	public function recv_getOrder(){
 		
-		$result = new \vipapis\NewRetail\WholeSaleService_getOrder_result();
+		$result = new \Voop\vipapis\NewRetail\WholeSaleService_getOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -137,7 +137,7 @@ class _WholeSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\NewR
 	public function send_getOrderDetail( $order_ids){
 		
 		$this->initInvocation("getOrderDetail");
-		$args = new \vipapis\NewRetail\WholeSaleService_getOrderDetail_args();
+		$args = new \Voop\vipapis\NewRetail\WholeSaleService_getOrderDetail_args();
 		
 		$args->order_ids = $order_ids;
 		
@@ -146,7 +146,7 @@ class _WholeSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\NewR
 	
 	public function recv_getOrderDetail(){
 		
-		$result = new \vipapis\NewRetail\WholeSaleService_getOrderDetail_result();
+		$result = new \Voop\vipapis\NewRetail\WholeSaleService_getOrderDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -165,14 +165,14 @@ class _WholeSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\NewR
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\NewRetail\WholeSaleService_healthCheck_args();
+		$args = new \Voop\vipapis\NewRetail\WholeSaleService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\NewRetail\WholeSaleService_healthCheck_result();
+		$result = new \Voop\vipapis\NewRetail\WholeSaleService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -419,7 +419,7 @@ class WholeSaleService_getAfterSaleDetail_args {
 		
 		if (!is_array($this->apply_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -675,7 +675,7 @@ class WholeSaleService_getOrderDetail_args {
 		
 		if (!is_array($this->order_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -785,7 +785,7 @@ class WholeSaleService_getAfterSaleApplyId_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\newretail\GetAfterSaleApplyIdsResponse();
+			$this->success = new \Voop\com\vip\vop\cup\api\newretail\GetAfterSaleApplyIdsResponse();
 			$this->success->read($input);
 			
 		}
@@ -808,7 +808,7 @@ class WholeSaleService_getAfterSaleApplyId_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -876,7 +876,7 @@ class WholeSaleService_getAfterSaleDetail_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\cup\api\newretail\AfterSaleDetail();
+					$elem0 = new \Voop\com\vip\vop\cup\api\newretail\AfterSaleDetail();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -909,7 +909,7 @@ class WholeSaleService_getAfterSaleDetail_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -918,7 +918,7 @@ class WholeSaleService_getAfterSaleDetail_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -981,7 +981,7 @@ class WholeSaleService_getOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\newretail\GetOrdersResponse();
+			$this->success = new \Voop\com\vip\vop\cup\api\newretail\GetOrdersResponse();
 			$this->success->read($input);
 			
 		}
@@ -1004,7 +1004,7 @@ class WholeSaleService_getOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1072,7 +1072,7 @@ class WholeSaleService_getOrderDetail_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\cup\api\newretail\OrderDetail();
+					$elem0 = new \Voop\com\vip\vop\cup\api\newretail\OrderDetail();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1105,7 +1105,7 @@ class WholeSaleService_getOrderDetail_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1114,7 +1114,7 @@ class WholeSaleService_getOrderDetail_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1177,7 +1177,7 @@ class WholeSaleService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1200,7 +1200,7 @@ class WholeSaleService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

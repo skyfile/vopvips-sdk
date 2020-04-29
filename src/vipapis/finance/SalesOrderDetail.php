@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\finance;
+namespace Voop\vipapis\finance;
 
 class SalesOrderDetail {
 	
@@ -228,7 +228,7 @@ class SalesOrderDetail {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\inventory;
+namespace Voop\vipapis\xstore\inventory;
 interface InventoryFlowServiceIf{
 	
 	
@@ -37,14 +37,14 @@ class _InventoryFlowServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\xstore\inventory\InventoryFlowService_healthCheck_args();
+		$args = new \Voop\vipapis\xstore\inventory\InventoryFlowService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\xstore\inventory\InventoryFlowService_healthCheck_result();
+		$result = new \Voop\vipapis\xstore\inventory\InventoryFlowService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,7 +63,7 @@ class _InventoryFlowServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	public function send_pushUnknownFlows( $id, $companyCode){
 		
 		$this->initInvocation("pushUnknownFlows");
-		$args = new \vipapis\xstore\inventory\InventoryFlowService_pushUnknownFlows_args();
+		$args = new \Voop\vipapis\xstore\inventory\InventoryFlowService_pushUnknownFlows_args();
 		
 		$args->id = $id;
 		
@@ -74,7 +74,7 @@ class _InventoryFlowServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	
 	public function recv_pushUnknownFlows(){
 		
-		$result = new \vipapis\xstore\inventory\InventoryFlowService_pushUnknownFlows_result();
+		$result = new \Voop\vipapis\xstore\inventory\InventoryFlowService_pushUnknownFlows_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -93,7 +93,7 @@ class _InventoryFlowServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	public function send_receiving( $items){
 		
 		$this->initInvocation("receiving");
-		$args = new \vipapis\xstore\inventory\InventoryFlowService_receiving_args();
+		$args = new \Voop\vipapis\xstore\inventory\InventoryFlowService_receiving_args();
 		
 		$args->items = $items;
 		
@@ -102,7 +102,7 @@ class _InventoryFlowServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	
 	public function recv_receiving(){
 		
-		$result = new \vipapis\xstore\inventory\InventoryFlowService_receiving_result();
+		$result = new \Voop\vipapis\xstore\inventory\InventoryFlowService_receiving_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -306,7 +306,7 @@ class InventoryFlowService_receiving_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\xstore\inventory\InventoryFlow();
+					$elem0 = new \Voop\vipapis\xstore\inventory\InventoryFlow();
 					$elem0->read($input);
 					
 					$this->items[$_size0++] = $elem0;
@@ -337,7 +337,7 @@ class InventoryFlowService_receiving_args {
 		
 		if (!is_array($this->items)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -346,7 +346,7 @@ class InventoryFlowService_receiving_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -407,7 +407,7 @@ class InventoryFlowService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -430,7 +430,7 @@ class InventoryFlowService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -574,7 +574,7 @@ class InventoryFlowService_receiving_result {
 					
 					$val0 = null;
 					
-					$val0 = new \vipapis\xstore\inventory\InventoryFlowResult();
+					$val0 = new \Voop\vipapis\xstore\inventory\InventoryFlowResult();
 					$val0->read($input);
 					
 					$this->success[$key0] = $val0;
@@ -607,7 +607,7 @@ class InventoryFlowService_receiving_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -618,7 +618,7 @@ class InventoryFlowService_receiving_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

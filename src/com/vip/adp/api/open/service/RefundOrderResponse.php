@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 
 class RefundOrderResponse {
 	
@@ -100,7 +100,7 @@ class RefundOrderResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\adp\api\open\service\RefundOrderInfo();
+						$elem0 = new \Voop\com\vip\adp\api\open\service\RefundOrderInfo();
 						$elem0->read($input);
 						
 						$this->refundOrderInfoList[$_size0++] = $elem0;
@@ -172,7 +172,7 @@ class RefundOrderResponse {
 			
 			if (!is_array($this->refundOrderInfoList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -181,7 +181,7 @@ class RefundOrderResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

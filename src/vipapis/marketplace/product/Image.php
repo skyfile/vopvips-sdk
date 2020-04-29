@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 
 class Image {
 	
@@ -168,7 +168,7 @@ class Image {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

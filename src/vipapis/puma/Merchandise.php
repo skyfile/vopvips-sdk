@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\puma;
+namespace Voop\vipapis\puma;
 
 class Merchandise {
 	
@@ -187,7 +187,7 @@ class Merchandise {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -246,7 +246,7 @@ class Merchandise {
 			
 			if (!is_array($this->sales_sites)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

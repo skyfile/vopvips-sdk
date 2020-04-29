@@ -8,7 +8,7 @@
 *
 */
 
-namespace vip\vop\omni\inventory;
+namespace Voop\vip\vop\omni\inventory;
 require_once dirname(__FILE__).'/OmniInventoryService.php';
 class OmniInventoryServiceHelper extends _OmniInventoryServiceClient{
 	

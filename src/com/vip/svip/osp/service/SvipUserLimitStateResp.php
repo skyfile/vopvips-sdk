@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\svip\osp\service;
+namespace Voop\com\vip\svip\osp\service;
 
 class SvipUserLimitStateResp {
 	
@@ -101,7 +101,7 @@ class SvipUserLimitStateResp {
 				
 				$needSkip = false;
 				
-				$this->formal = new \com\vip\svip\osp\service\BaseResult();
+				$this->formal = new \Voop\com\vip\svip\osp\service\BaseResult();
 				$this->formal->read($input);
 				
 			}
@@ -113,7 +113,7 @@ class SvipUserLimitStateResp {
 				
 				$needSkip = false;
 				
-				$this->trial = new \com\vip\svip\osp\service\BaseResult();
+				$this->trial = new \Voop\com\vip\svip\osp\service\BaseResult();
 				$this->trial->read($input);
 				
 			}
@@ -175,7 +175,7 @@ class SvipUserLimitStateResp {
 			
 			if (!is_object($this->formal)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->formal->write($output);
@@ -190,7 +190,7 @@ class SvipUserLimitStateResp {
 			
 			if (!is_object($this->trial)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->trial->write($output);

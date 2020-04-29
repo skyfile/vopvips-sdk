@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\common\switcher;
+namespace Voop\com\vip\vop\common\switcher;
 require_once dirname(__FILE__).'/AppSwitcherService.php';
 class AppSwitcherServiceHelper extends _AppSwitcherServiceClient{
 	

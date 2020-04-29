@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\common;
+namespace Voop\com\vip\api\promotion\vis\common;
 
 class FileFid {
 	

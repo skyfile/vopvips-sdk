@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\pda\common;
+namespace Voop\com\vip\xstore\pda\common;
 
 class BaseOrderItem {
 	

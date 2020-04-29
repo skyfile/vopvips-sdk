@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\omni\logistics;
+namespace Voop\com\vip\vop\omni\logistics;
 
 class Package {
 	
@@ -110,7 +110,7 @@ class Package {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\omni\logistics\TraceInfo();
+						$elem0 = new \Voop\com\vip\vop\omni\logistics\TraceInfo();
 						$elem0->read($input);
 						
 						$this->traceInfos[$_size0++] = $elem0;
@@ -170,7 +170,7 @@ class Package {
 			
 			if (!is_array($this->traceInfos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -179,7 +179,7 @@ class Package {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

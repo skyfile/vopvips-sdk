@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 
 class BatchUploadAndBindImageResult {
 	
@@ -80,7 +80,7 @@ class BatchUploadAndBindImageResult {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\product\UploadSuccessResult();
+						$elem0 = new \Voop\vipapis\product\UploadSuccessResult();
 						$elem0->read($input);
 						
 						$this->success_list[$_size0++] = $elem0;
@@ -111,7 +111,7 @@ class BatchUploadAndBindImageResult {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\product\UploadFailResult();
+						$elem1 = new \Voop\vipapis\product\UploadFailResult();
 						$elem1->read($input);
 						
 						$this->fail_list[$_size1++] = $elem1;
@@ -130,7 +130,7 @@ class BatchUploadAndBindImageResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -153,7 +153,7 @@ class BatchUploadAndBindImageResult {
 			
 			if (!is_array($this->success_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -162,7 +162,7 @@ class BatchUploadAndBindImageResult {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -181,7 +181,7 @@ class BatchUploadAndBindImageResult {
 			
 			if (!is_array($this->fail_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -190,7 +190,7 @@ class BatchUploadAndBindImageResult {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

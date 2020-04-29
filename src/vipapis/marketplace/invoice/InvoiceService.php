@@ -8,13 +8,13 @@
 *
 */
 
-namespace vipapis\marketplace\invoice;
+namespace Voop\vipapis\marketplace\invoice;
 interface InvoiceServiceIf{
 	
 	
-	public function confirmInvoice(\vipapis\marketplace\invoice\ConfirmInvoiceRequest $request);
+	public function confirmInvoice(\Voop\vipapis\marketplace\invoice\ConfirmInvoiceRequest $request);
 	
-	public function getInvoices(\vipapis\marketplace\invoice\GetInvoicesRequest $request);
+	public function getInvoices(\Voop\vipapis\marketplace\invoice\GetInvoicesRequest $request);
 	
 	public function healthCheck();
 	
@@ -28,16 +28,16 @@ class _InvoiceServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	}
 	
 	
-	public function confirmInvoice(\vipapis\marketplace\invoice\ConfirmInvoiceRequest $request){
+	public function confirmInvoice(\Voop\vipapis\marketplace\invoice\ConfirmInvoiceRequest $request){
 		
 		$this->send_confirmInvoice( $request);
 		return $this->recv_confirmInvoice();
 	}
 	
-	public function send_confirmInvoice(\vipapis\marketplace\invoice\ConfirmInvoiceRequest $request){
+	public function send_confirmInvoice(\Voop\vipapis\marketplace\invoice\ConfirmInvoiceRequest $request){
 		
 		$this->initInvocation("confirmInvoice");
-		$args = new \vipapis\marketplace\invoice\InvoiceService_confirmInvoice_args();
+		$args = new \Voop\vipapis\marketplace\invoice\InvoiceService_confirmInvoice_args();
 		
 		$args->request = $request;
 		
@@ -46,7 +46,7 @@ class _InvoiceServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_confirmInvoice(){
 		
-		$result = new \vipapis\marketplace\invoice\InvoiceService_confirmInvoice_result();
+		$result = new \Voop\vipapis\marketplace\invoice\InvoiceService_confirmInvoice_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -56,16 +56,16 @@ class _InvoiceServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	}
 	
 	
-	public function getInvoices(\vipapis\marketplace\invoice\GetInvoicesRequest $request){
+	public function getInvoices(\Voop\vipapis\marketplace\invoice\GetInvoicesRequest $request){
 		
 		$this->send_getInvoices( $request);
 		return $this->recv_getInvoices();
 	}
 	
-	public function send_getInvoices(\vipapis\marketplace\invoice\GetInvoicesRequest $request){
+	public function send_getInvoices(\Voop\vipapis\marketplace\invoice\GetInvoicesRequest $request){
 		
 		$this->initInvocation("getInvoices");
-		$args = new \vipapis\marketplace\invoice\InvoiceService_getInvoices_args();
+		$args = new \Voop\vipapis\marketplace\invoice\InvoiceService_getInvoices_args();
 		
 		$args->request = $request;
 		
@@ -74,7 +74,7 @@ class _InvoiceServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_getInvoices(){
 		
-		$result = new \vipapis\marketplace\invoice\InvoiceService_getInvoices_result();
+		$result = new \Voop\vipapis\marketplace\invoice\InvoiceService_getInvoices_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -93,14 +93,14 @@ class _InvoiceServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\marketplace\invoice\InvoiceService_healthCheck_args();
+		$args = new \Voop\vipapis\marketplace\invoice\InvoiceService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\marketplace\invoice\InvoiceService_healthCheck_result();
+		$result = new \Voop\vipapis\marketplace\invoice\InvoiceService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -155,7 +155,7 @@ class InvoiceService_confirmInvoice_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\invoice\ConfirmInvoiceRequest();
+			$this->request = new \Voop\vipapis\marketplace\invoice\ConfirmInvoiceRequest();
 			$this->request->read($input);
 			
 		}
@@ -176,7 +176,7 @@ class InvoiceService_confirmInvoice_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -233,7 +233,7 @@ class InvoiceService_getInvoices_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\invoice\GetInvoicesRequest();
+			$this->request = new \Voop\vipapis\marketplace\invoice\GetInvoicesRequest();
 			$this->request->read($input);
 			
 		}
@@ -254,7 +254,7 @@ class InvoiceService_getInvoices_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -357,7 +357,7 @@ class InvoiceService_confirmInvoice_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\invoice\ConfirmInvoiceResponse();
+			$this->success = new \Voop\vipapis\marketplace\invoice\ConfirmInvoiceResponse();
 			$this->success->read($input);
 			
 		}
@@ -380,7 +380,7 @@ class InvoiceService_confirmInvoice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -439,7 +439,7 @@ class InvoiceService_getInvoices_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\invoice\GetInvoicesResponse();
+			$this->success = new \Voop\vipapis\marketplace\invoice\GetInvoicesResponse();
 			$this->success->read($input);
 			
 		}
@@ -462,7 +462,7 @@ class InvoiceService_getInvoices_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -521,7 +521,7 @@ class InvoiceService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -544,7 +544,7 @@ class InvoiceService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 
 class UploadImageInfo {
 	
@@ -108,7 +108,7 @@ class UploadImageInfo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

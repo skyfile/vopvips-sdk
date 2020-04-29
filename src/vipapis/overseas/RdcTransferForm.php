@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\overseas;
+namespace Voop\vipapis\overseas;
 
 class RdcTransferForm {
 	
@@ -468,7 +468,7 @@ class RdcTransferForm {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

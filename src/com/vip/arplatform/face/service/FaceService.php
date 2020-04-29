@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\arplatform\face\service;
+namespace Voop\com\vip\arplatform\face\service;
 interface FaceServiceIf{
 	
 	
@@ -30,7 +30,7 @@ interface FaceServiceIf{
 	
 	public function getSearchResult( $token);
 	
-	public function getSearchWithFeaturesResult(\com\vip\arplatform\face\service\GetSearchWithFeaturesParamResultModel $getSearchWithFeaturesParamResultModel);
+	public function getSearchWithFeaturesResult(\Voop\com\vip\arplatform\face\service\GetSearchWithFeaturesParamResultModel $getSearchWithFeaturesParamResultModel);
 	
 	public function healthCheck();
 	
@@ -38,7 +38,7 @@ interface FaceServiceIf{
 	
 	public function search( $faceset_key, $image_url, $results_count, $asynchronization);
 	
-	public function searchWithFeatures(\com\vip\arplatform\face\service\SearchWithFeaturesParamModel $searchWithFeaturesParamModel);
+	public function searchWithFeatures(\Voop\com\vip\arplatform\face\service\SearchWithFeaturesParamModel $searchWithFeaturesParamModel);
 	
 	public function shapeSimilarity( $img_src, $img_target);
 	
@@ -61,7 +61,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_faceCartoon( $imageInPath, $faceUrl, $facelessUrl, $cr, $cb, $point){
 		
 		$this->initInvocation("faceCartoon");
-		$args = new \com\vip\arplatform\face\service\FaceService_faceCartoon_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_faceCartoon_args();
 		
 		$args->imageInPath = $imageInPath;
 		
@@ -80,7 +80,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_faceCartoon(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_faceCartoon_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_faceCartoon_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -99,7 +99,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_faceSimilarity( $image_url1, $image_url2){
 		
 		$this->initInvocation("faceSimilarity");
-		$args = new \com\vip\arplatform\face\service\FaceService_faceSimilarity_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_faceSimilarity_args();
 		
 		$args->image_url1 = $image_url1;
 		
@@ -110,7 +110,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_faceSimilarity(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_faceSimilarity_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_faceSimilarity_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -129,7 +129,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_facesetCreate( $faceset_key, $image_urls){
 		
 		$this->initInvocation("facesetCreate");
-		$args = new \com\vip\arplatform\face\service\FaceService_facesetCreate_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_facesetCreate_args();
 		
 		$args->faceset_key = $faceset_key;
 		
@@ -140,7 +140,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_facesetCreate(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_facesetCreate_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_facesetCreate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -159,7 +159,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_facesetDelete( $faceset_key, $image_urls){
 		
 		$this->initInvocation("facesetDelete");
-		$args = new \com\vip\arplatform\face\service\FaceService_facesetDelete_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_facesetDelete_args();
 		
 		$args->faceset_key = $faceset_key;
 		
@@ -170,7 +170,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_facesetDelete(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_facesetDelete_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_facesetDelete_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -189,7 +189,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_facesetStatus( $faceset_key){
 		
 		$this->initInvocation("facesetStatus");
-		$args = new \com\vip\arplatform\face\service\FaceService_facesetStatus_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_facesetStatus_args();
 		
 		$args->faceset_key = $faceset_key;
 		
@@ -198,7 +198,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_facesetStatus(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_facesetStatus_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_facesetStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -217,7 +217,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_facesetUpdate( $faceset_key, $image_urls){
 		
 		$this->initInvocation("facesetUpdate");
-		$args = new \com\vip\arplatform\face\service\FaceService_facesetUpdate_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_facesetUpdate_args();
 		
 		$args->faceset_key = $faceset_key;
 		
@@ -228,7 +228,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_facesetUpdate(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_facesetUpdate_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_facesetUpdate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -247,7 +247,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_getCrCb( $facelessUrl, $point){
 		
 		$this->initInvocation("getCrCb");
-		$args = new \com\vip\arplatform\face\service\FaceService_getCrCb_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_getCrCb_args();
 		
 		$args->facelessUrl = $facelessUrl;
 		
@@ -258,7 +258,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_getCrCb(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_getCrCb_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_getCrCb_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -277,7 +277,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_getFacesetUrl( $faceset_key){
 		
 		$this->initInvocation("getFacesetUrl");
-		$args = new \com\vip\arplatform\face\service\FaceService_getFacesetUrl_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_getFacesetUrl_args();
 		
 		$args->faceset_key = $faceset_key;
 		
@@ -286,7 +286,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_getFacesetUrl(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_getFacesetUrl_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_getFacesetUrl_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -305,7 +305,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_getSearchResult( $token){
 		
 		$this->initInvocation("getSearchResult");
-		$args = new \com\vip\arplatform\face\service\FaceService_getSearchResult_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_getSearchResult_args();
 		
 		$args->token = $token;
 		
@@ -314,7 +314,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_getSearchResult(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_getSearchResult_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_getSearchResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -324,16 +324,16 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	}
 	
 	
-	public function getSearchWithFeaturesResult(\com\vip\arplatform\face\service\GetSearchWithFeaturesParamResultModel $getSearchWithFeaturesParamResultModel){
+	public function getSearchWithFeaturesResult(\Voop\com\vip\arplatform\face\service\GetSearchWithFeaturesParamResultModel $getSearchWithFeaturesParamResultModel){
 		
 		$this->send_getSearchWithFeaturesResult( $getSearchWithFeaturesParamResultModel);
 		return $this->recv_getSearchWithFeaturesResult();
 	}
 	
-	public function send_getSearchWithFeaturesResult(\com\vip\arplatform\face\service\GetSearchWithFeaturesParamResultModel $getSearchWithFeaturesParamResultModel){
+	public function send_getSearchWithFeaturesResult(\Voop\com\vip\arplatform\face\service\GetSearchWithFeaturesParamResultModel $getSearchWithFeaturesParamResultModel){
 		
 		$this->initInvocation("getSearchWithFeaturesResult");
-		$args = new \com\vip\arplatform\face\service\FaceService_getSearchWithFeaturesResult_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_getSearchWithFeaturesResult_args();
 		
 		$args->getSearchWithFeaturesParamResultModel = $getSearchWithFeaturesParamResultModel;
 		
@@ -342,7 +342,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_getSearchWithFeaturesResult(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_getSearchWithFeaturesResult_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_getSearchWithFeaturesResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -361,14 +361,14 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\arplatform\face\service\FaceService_healthCheck_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_healthCheck_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -387,7 +387,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_imageStylize( $imageInPath, $type){
 		
 		$this->initInvocation("imageStylize");
-		$args = new \com\vip\arplatform\face\service\FaceService_imageStylize_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_imageStylize_args();
 		
 		$args->imageInPath = $imageInPath;
 		
@@ -398,7 +398,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_imageStylize(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_imageStylize_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_imageStylize_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -417,7 +417,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_search( $faceset_key, $image_url, $results_count, $asynchronization){
 		
 		$this->initInvocation("search");
-		$args = new \com\vip\arplatform\face\service\FaceService_search_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_search_args();
 		
 		$args->faceset_key = $faceset_key;
 		
@@ -432,7 +432,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_search(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_search_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_search_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -442,16 +442,16 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	}
 	
 	
-	public function searchWithFeatures(\com\vip\arplatform\face\service\SearchWithFeaturesParamModel $searchWithFeaturesParamModel){
+	public function searchWithFeatures(\Voop\com\vip\arplatform\face\service\SearchWithFeaturesParamModel $searchWithFeaturesParamModel){
 		
 		$this->send_searchWithFeatures( $searchWithFeaturesParamModel);
 		return $this->recv_searchWithFeatures();
 	}
 	
-	public function send_searchWithFeatures(\com\vip\arplatform\face\service\SearchWithFeaturesParamModel $searchWithFeaturesParamModel){
+	public function send_searchWithFeatures(\Voop\com\vip\arplatform\face\service\SearchWithFeaturesParamModel $searchWithFeaturesParamModel){
 		
 		$this->initInvocation("searchWithFeatures");
-		$args = new \com\vip\arplatform\face\service\FaceService_searchWithFeatures_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_searchWithFeatures_args();
 		
 		$args->searchWithFeaturesParamModel = $searchWithFeaturesParamModel;
 		
@@ -460,7 +460,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_searchWithFeatures(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_searchWithFeatures_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_searchWithFeatures_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -479,7 +479,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	public function send_shapeSimilarity( $img_src, $img_target){
 		
 		$this->initInvocation("shapeSimilarity");
-		$args = new \com\vip\arplatform\face\service\FaceService_shapeSimilarity_args();
+		$args = new \Voop\com\vip\arplatform\face\service\FaceService_shapeSimilarity_args();
 		
 		$args->img_src = $img_src;
 		
@@ -490,7 +490,7 @@ class _FaceServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatfor
 	
 	public function recv_shapeSimilarity(){
 		
-		$result = new \com\vip\arplatform\face\service\FaceService_shapeSimilarity_result();
+		$result = new \Voop\com\vip\arplatform\face\service\FaceService_shapeSimilarity_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1427,7 +1427,7 @@ class FaceService_getSearchWithFeaturesResult_args {
 		if(true) {
 			
 			
-			$this->getSearchWithFeaturesParamResultModel = new \com\vip\arplatform\face\service\GetSearchWithFeaturesParamResultModel();
+			$this->getSearchWithFeaturesParamResultModel = new \Voop\com\vip\arplatform\face\service\GetSearchWithFeaturesParamResultModel();
 			$this->getSearchWithFeaturesParamResultModel->read($input);
 			
 		}
@@ -1448,7 +1448,7 @@ class FaceService_getSearchWithFeaturesResult_args {
 		
 		if (!is_object($this->getSearchWithFeaturesParamResultModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->getSearchWithFeaturesParamResultModel->write($output);
@@ -1791,7 +1791,7 @@ class FaceService_searchWithFeatures_args {
 		if(true) {
 			
 			
-			$this->searchWithFeaturesParamModel = new \com\vip\arplatform\face\service\SearchWithFeaturesParamModel();
+			$this->searchWithFeaturesParamModel = new \Voop\com\vip\arplatform\face\service\SearchWithFeaturesParamModel();
 			$this->searchWithFeaturesParamModel->read($input);
 			
 		}
@@ -1812,7 +1812,7 @@ class FaceService_searchWithFeatures_args {
 		
 		if (!is_object($this->searchWithFeaturesParamModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->searchWithFeaturesParamModel->write($output);
@@ -1963,7 +1963,7 @@ class FaceService_faceCartoon_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\CartoonModel();
+			$this->success = new \Voop\com\vip\arplatform\face\service\CartoonModel();
 			$this->success->read($input);
 			
 		}
@@ -1986,7 +1986,7 @@ class FaceService_faceCartoon_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2045,7 +2045,7 @@ class FaceService_faceSimilarity_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\FacesetCompareResult();
+			$this->success = new \Voop\com\vip\arplatform\face\service\FacesetCompareResult();
 			$this->success->read($input);
 			
 		}
@@ -2068,7 +2068,7 @@ class FaceService_faceSimilarity_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2127,7 +2127,7 @@ class FaceService_facesetCreate_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\FacesetCreateModel();
+			$this->success = new \Voop\com\vip\arplatform\face\service\FacesetCreateModel();
 			$this->success->read($input);
 			
 		}
@@ -2150,7 +2150,7 @@ class FaceService_facesetCreate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2249,7 +2249,7 @@ class FaceService_facesetDelete_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2315,7 +2315,7 @@ class FaceService_facesetStatus_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\FacesetCreateModel();
+			$this->success = new \Voop\com\vip\arplatform\face\service\FacesetCreateModel();
 			$this->success->read($input);
 			
 		}
@@ -2338,7 +2338,7 @@ class FaceService_facesetStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2397,7 +2397,7 @@ class FaceService_facesetUpdate_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\FacesetCreateModel();
+			$this->success = new \Voop\com\vip\arplatform\face\service\FacesetCreateModel();
 			$this->success->read($input);
 			
 		}
@@ -2420,7 +2420,7 @@ class FaceService_facesetUpdate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2479,7 +2479,7 @@ class FaceService_getCrCb_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\CrCbModel();
+			$this->success = new \Voop\com\vip\arplatform\face\service\CrCbModel();
 			$this->success->read($input);
 			
 		}
@@ -2502,7 +2502,7 @@ class FaceService_getCrCb_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2601,7 +2601,7 @@ class FaceService_getFacesetUrl_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2667,7 +2667,7 @@ class FaceService_getSearchResult_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\CompareResponse();
+			$this->success = new \Voop\com\vip\arplatform\face\service\CompareResponse();
 			$this->success->read($input);
 			
 		}
@@ -2690,7 +2690,7 @@ class FaceService_getSearchResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2749,7 +2749,7 @@ class FaceService_getSearchWithFeaturesResult_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\SearchWithFeaturesResultModel();
+			$this->success = new \Voop\com\vip\arplatform\face\service\SearchWithFeaturesResultModel();
 			$this->success->read($input);
 			
 		}
@@ -2772,7 +2772,7 @@ class FaceService_getSearchWithFeaturesResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2831,7 +2831,7 @@ class FaceService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -2854,7 +2854,7 @@ class FaceService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2913,7 +2913,7 @@ class FaceService_imageStylize_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\ImageStylizationModel();
+			$this->success = new \Voop\com\vip\arplatform\face\service\ImageStylizationModel();
 			$this->success->read($input);
 			
 		}
@@ -2936,7 +2936,7 @@ class FaceService_imageStylize_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2995,7 +2995,7 @@ class FaceService_search_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\CompareResponse();
+			$this->success = new \Voop\com\vip\arplatform\face\service\CompareResponse();
 			$this->success->read($input);
 			
 		}
@@ -3018,7 +3018,7 @@ class FaceService_search_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3077,7 +3077,7 @@ class FaceService_searchWithFeatures_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\SearchWithFeaturesResultModel();
+			$this->success = new \Voop\com\vip\arplatform\face\service\SearchWithFeaturesResultModel();
 			$this->success->read($input);
 			
 		}
@@ -3100,7 +3100,7 @@ class FaceService_searchWithFeatures_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3159,7 +3159,7 @@ class FaceService_shapeSimilarity_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\arplatform\face\service\ShapeSimilarityModel();
+			$this->success = new \Voop\com\vip\arplatform\face\service\ShapeSimilarityModel();
 			$this->success->read($input);
 			
 		}
@@ -3182,7 +3182,7 @@ class FaceService_shapeSimilarity_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\carrier\service;
+namespace Voop\com\vip\vop\logistics\carrier\service;
 
 class UploadCarrierBillRequest {
 	
@@ -170,7 +170,7 @@ class UploadCarrierBillRequest {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\logistics\carrier\service\CarrierBill();
+						$elem0 = new \Voop\com\vip\vop\logistics\carrier\service\CarrierBill();
 						$elem0->read($input);
 						
 						$this->bills[$_size0++] = $elem0;
@@ -235,7 +235,7 @@ class UploadCarrierBillRequest {
 		
 		if (!is_array($this->bills)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -244,7 +244,7 @@ class UploadCarrierBillRequest {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\store;
+namespace Voop\vipapis\store;
 require_once dirname(__FILE__).'/VendorStoreService.php';
 class VendorStoreServiceHelper extends _VendorStoreServiceClient{
 	

@@ -8,13 +8,13 @@
 *
 */
 
-namespace vipapis\cup\bill;
+namespace Voop\vipapis\cup\bill;
 interface BillServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function updateBillInfo(\com\vip\vop\cup\api\bill\BillHeaderInfo $bill_header_info);
+	public function updateBillInfo(\Voop\com\vip\vop\cup\api\bill\BillHeaderInfo $bill_header_info);
 	
 }
 
@@ -35,14 +35,14 @@ class _BillServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\bill\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\cup\bill\BillService_healthCheck_args();
+		$args = new \Voop\vipapis\cup\bill\BillService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\cup\bill\BillService_healthCheck_result();
+		$result = new \Voop\vipapis\cup\bill\BillService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -52,16 +52,16 @@ class _BillServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\bill\
 	}
 	
 	
-	public function updateBillInfo(\com\vip\vop\cup\api\bill\BillHeaderInfo $bill_header_info){
+	public function updateBillInfo(\Voop\com\vip\vop\cup\api\bill\BillHeaderInfo $bill_header_info){
 		
 		$this->send_updateBillInfo( $bill_header_info);
 		return $this->recv_updateBillInfo();
 	}
 	
-	public function send_updateBillInfo(\com\vip\vop\cup\api\bill\BillHeaderInfo $bill_header_info){
+	public function send_updateBillInfo(\Voop\com\vip\vop\cup\api\bill\BillHeaderInfo $bill_header_info){
 		
 		$this->initInvocation("updateBillInfo");
-		$args = new \vipapis\cup\bill\BillService_updateBillInfo_args();
+		$args = new \Voop\vipapis\cup\bill\BillService_updateBillInfo_args();
 		
 		$args->bill_header_info = $bill_header_info;
 		
@@ -70,7 +70,7 @@ class _BillServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\bill\
 	
 	public function recv_updateBillInfo(){
 		
-		$result = new \vipapis\cup\bill\BillService_updateBillInfo_result();
+		$result = new \Voop\vipapis\cup\bill\BillService_updateBillInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -171,7 +171,7 @@ class BillService_updateBillInfo_args {
 		if(true) {
 			
 			
-			$this->bill_header_info = new \com\vip\vop\cup\api\bill\BillHeaderInfo();
+			$this->bill_header_info = new \Voop\com\vip\vop\cup\api\bill\BillHeaderInfo();
 			$this->bill_header_info->read($input);
 			
 		}
@@ -192,7 +192,7 @@ class BillService_updateBillInfo_args {
 		
 		if (!is_object($this->bill_header_info)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->bill_header_info->write($output);
@@ -249,7 +249,7 @@ class BillService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -272,7 +272,7 @@ class BillService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -331,7 +331,7 @@ class BillService_updateBillInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\bill\UpdateBillResult();
+			$this->success = new \Voop\com\vip\vop\cup\api\bill\UpdateBillResult();
 			$this->success->read($input);
 			
 		}
@@ -354,7 +354,7 @@ class BillService_updateBillInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

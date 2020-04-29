@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\tpc\api\model;
+namespace Voop\com\vip\tpc\api\model;
 
 class GetReturnAddressRequest {
 	
@@ -81,7 +81,7 @@ class GetReturnAddressRequest {
 				
 				$needSkip = false;
 				
-				$this->header = new \com\vip\tpc\api\model\common\TpcRequestHeader();
+				$this->header = new \Voop\com\vip\tpc\api\model\common\TpcRequestHeader();
 				$this->header->read($input);
 				
 			}
@@ -150,7 +150,7 @@ class GetReturnAddressRequest {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -172,7 +172,7 @@ class GetReturnAddressRequest {
 			
 			if (!is_array($this->transportNos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();

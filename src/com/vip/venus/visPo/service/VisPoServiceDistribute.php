@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\venus\visPo\service;
+namespace Voop\com\vip\venus\visPo\service;
 interface VisPoServiceDistributeIf{
 	
 	
@@ -47,14 +47,14 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_dispatchNoParameter(){
 		
 		$this->initInvocation("dispatchNoParameter");
-		$args = new \com\vip\venus\visPo\service\VisPoServiceDistribute_dispatchNoParameter_args();
+		$args = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_dispatchNoParameter_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_dispatchNoParameter(){
 		
-		$result = new \com\vip\venus\visPo\service\VisPoServiceDistribute_dispatchNoParameter_result();
+		$result = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_dispatchNoParameter_result();
 		$this->receive_base($result);
 		
 	}
@@ -69,7 +69,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_getPoDataByMaxId( $maxId, $count, $warehouseCode){
 		
 		$this->initInvocation("getPoDataByMaxId");
-		$args = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoDataByMaxId_args();
+		$args = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoDataByMaxId_args();
 		
 		$args->maxId = $maxId;
 		
@@ -82,7 +82,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	
 	public function recv_getPoDataByMaxId(){
 		
-		$result = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoDataByMaxId_result();
+		$result = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoDataByMaxId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -101,7 +101,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_getPoDetailsWMSByPoNoAndItemNo( $queryParams){
 		
 		$this->initInvocation("getPoDetailsWMSByPoNoAndItemNo");
-		$args = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoDetailsWMSByPoNoAndItemNo_args();
+		$args = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoDetailsWMSByPoNoAndItemNo_args();
 		
 		$args->queryParams = $queryParams;
 		
@@ -110,7 +110,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	
 	public function recv_getPoDetailsWMSByPoNoAndItemNo(){
 		
-		$result = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoDetailsWMSByPoNoAndItemNo_result();
+		$result = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoDetailsWMSByPoNoAndItemNo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -129,7 +129,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_getPoEBSDetailsByPo( $po, $page, $size){
 		
 		$this->initInvocation("getPoEBSDetailsByPo");
-		$args = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPo_args();
+		$args = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPo_args();
 		
 		$args->po = $po;
 		
@@ -142,7 +142,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	
 	public function recv_getPoEBSDetailsByPo(){
 		
-		$result = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPo_result();
+		$result = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -161,7 +161,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_getPoEBSDetailsByPoBatchNum( $po, $batchNum, $page, $size){
 		
 		$this->initInvocation("getPoEBSDetailsByPoBatchNum");
-		$args = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPoBatchNum_args();
+		$args = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPoBatchNum_args();
 		
 		$args->po = $po;
 		
@@ -176,7 +176,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	
 	public function recv_getPoEBSDetailsByPoBatchNum(){
 		
-		$result = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPoBatchNum_result();
+		$result = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPoBatchNum_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -195,7 +195,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_getPoEBSDetailsByPoSKU( $poNum, $itemNum){
 		
 		$this->initInvocation("getPoEBSDetailsByPoSKU");
-		$args = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPoSKU_args();
+		$args = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPoSKU_args();
 		
 		$args->poNum = $poNum;
 		
@@ -206,7 +206,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	
 	public function recv_getPoEBSDetailsByPoSKU(){
 		
-		$result = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPoSKU_result();
+		$result = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoEBSDetailsByPoSKU_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -225,7 +225,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_getPoWMSDetailsByMaxId( $maxId, $saleArea, $count){
 		
 		$this->initInvocation("getPoWMSDetailsByMaxId");
-		$args = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoWMSDetailsByMaxId_args();
+		$args = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoWMSDetailsByMaxId_args();
 		
 		$args->maxId = $maxId;
 		
@@ -238,7 +238,7 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	
 	public function recv_getPoWMSDetailsByMaxId(){
 		
-		$result = new \com\vip\venus\visPo\service\VisPoServiceDistribute_getPoWMSDetailsByMaxId_result();
+		$result = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_getPoWMSDetailsByMaxId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -257,14 +257,14 @@ class _VisPoServiceDistributeClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\venus\visPo\service\VisPoServiceDistribute_healthCheck_args();
+		$args = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\venus\visPo\service\VisPoServiceDistribute_healthCheck_result();
+		$result = new \Voop\com\vip\venus\visPo\service\VisPoServiceDistribute_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -542,7 +542,7 @@ class VisPoServiceDistribute_getPoDetailsWMSByPoNoAndItemNo_args {
 		
 		if (!is_array($this->queryParams)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeMapBegin();
@@ -553,7 +553,7 @@ class VisPoServiceDistribute_getPoDetailsWMSByPoNoAndItemNo_args {
 			
 			if (!is_array($viter0)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1197,7 +1197,7 @@ class VisPoServiceDistribute_getPoDataByMaxId_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\venus\visPo\service\PoDetailData();
+					$elem0 = new \Voop\com\vip\venus\visPo\service\PoDetailData();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1230,7 +1230,7 @@ class VisPoServiceDistribute_getPoDataByMaxId_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1239,7 +1239,7 @@ class VisPoServiceDistribute_getPoDataByMaxId_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1311,7 +1311,7 @@ class VisPoServiceDistribute_getPoDetailsWMSByPoNoAndItemNo_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\venus\visPo\service\WMSPoDetail();
+					$elem1 = new \Voop\com\vip\venus\visPo\service\WMSPoDetail();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1344,7 +1344,7 @@ class VisPoServiceDistribute_getPoDetailsWMSByPoNoAndItemNo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1353,7 +1353,7 @@ class VisPoServiceDistribute_getPoDetailsWMSByPoNoAndItemNo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1425,7 +1425,7 @@ class VisPoServiceDistribute_getPoEBSDetailsByPo_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\venus\visPo\service\EBSPoDetail();
+					$elem1 = new \Voop\com\vip\venus\visPo\service\EBSPoDetail();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1458,7 +1458,7 @@ class VisPoServiceDistribute_getPoEBSDetailsByPo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1467,7 +1467,7 @@ class VisPoServiceDistribute_getPoEBSDetailsByPo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1539,7 +1539,7 @@ class VisPoServiceDistribute_getPoEBSDetailsByPoBatchNum_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\venus\visPo\service\EBSPoDetail();
+					$elem1 = new \Voop\com\vip\venus\visPo\service\EBSPoDetail();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1572,7 +1572,7 @@ class VisPoServiceDistribute_getPoEBSDetailsByPoBatchNum_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1581,7 +1581,7 @@ class VisPoServiceDistribute_getPoEBSDetailsByPoBatchNum_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1644,7 +1644,7 @@ class VisPoServiceDistribute_getPoEBSDetailsByPoSKU_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\venus\visPo\service\EBSPoDetail();
+			$this->success = new \Voop\com\vip\venus\visPo\service\EBSPoDetail();
 			$this->success->read($input);
 			
 		}
@@ -1667,7 +1667,7 @@ class VisPoServiceDistribute_getPoEBSDetailsByPoSKU_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1800,7 +1800,7 @@ class VisPoServiceDistribute_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1823,7 +1823,7 @@ class VisPoServiceDistribute_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

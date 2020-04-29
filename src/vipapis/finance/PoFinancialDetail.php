@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\finance;
+namespace Voop\vipapis\finance;
 
 class PoFinancialDetail {
 	
@@ -468,7 +468,7 @@ class PoFinancialDetail {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

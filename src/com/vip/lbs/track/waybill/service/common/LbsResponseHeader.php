@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\lbs\track\waybill\service\common;
+namespace Voop\com\vip\lbs\track\waybill\service\common;
 
 class LbsResponseHeader {
 	

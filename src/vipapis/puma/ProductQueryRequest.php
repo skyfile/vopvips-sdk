@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\puma;
+namespace Voop\vipapis\puma;
 
 class ProductQueryRequest {
 	
@@ -161,7 +161,7 @@ class ProductQueryRequest {
 				
 				$needSkip = false;
 				
-				$this->pagination = new \vipapis\puma\Pagination();
+				$this->pagination = new \Voop\vipapis\puma\Pagination();
 				$this->pagination->read($input);
 				
 			}
@@ -318,7 +318,7 @@ class ProductQueryRequest {
 						
 						$elem4 = null;
 						
-						$elem4 = new \vipapis\puma\NumberRange();
+						$elem4 = new \Voop\vipapis\puma\NumberRange();
 						$elem4->read($input);
 						
 						$this->price_ranges[$_size4++] = $elem4;
@@ -378,7 +378,7 @@ class ProductQueryRequest {
 						
 						$elem6 = null;
 						
-						$elem6 = new \vipapis\puma\SortAttr();
+						$elem6 = new \Voop\vipapis\puma\SortAttr();
 						$elem6->read($input);
 						
 						$this->sort_attres[$_size6++] = $elem6;
@@ -409,7 +409,7 @@ class ProductQueryRequest {
 						
 						$elem7 = null;
 						
-						$elem7 = new \vipapis\puma\NumberRange();
+						$elem7 = new \Voop\vipapis\puma\NumberRange();
 						$elem7->read($input);
 						
 						$this->discount_ranges[$_size7++] = $elem7;
@@ -428,7 +428,7 @@ class ProductQueryRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -449,7 +449,7 @@ class ProductQueryRequest {
 		
 		if (!is_object($this->pagination)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->pagination->write($output);
@@ -462,7 +462,7 @@ class ProductQueryRequest {
 			
 			if (!is_array($this->product_ids)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -484,7 +484,7 @@ class ProductQueryRequest {
 			
 			if (!is_array($this->brand_sns)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -506,7 +506,7 @@ class ProductQueryRequest {
 			
 			if (!is_array($this->third_level_category_ids)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -526,7 +526,7 @@ class ProductQueryRequest {
 		
 		if (!is_array($this->query_types)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeSetBegin();
@@ -564,7 +564,7 @@ class ProductQueryRequest {
 			
 			if (!is_array($this->price_ranges)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -573,7 +573,7 @@ class ProductQueryRequest {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -592,7 +592,7 @@ class ProductQueryRequest {
 			
 			if (!is_array($this->product_tags)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -614,7 +614,7 @@ class ProductQueryRequest {
 			
 			if (!is_array($this->sort_attres)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -623,7 +623,7 @@ class ProductQueryRequest {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -642,7 +642,7 @@ class ProductQueryRequest {
 			
 			if (!is_array($this->discount_ranges)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -651,7 +651,7 @@ class ProductQueryRequest {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

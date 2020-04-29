@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 
 class DvdOrderStatus {
 	
@@ -241,7 +241,7 @@ class DvdOrderStatus {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -280,7 +280,7 @@ class DvdOrderStatus {
 			
 			$xfer += $output->writeFieldBegin('order_status');
 			
-			$em = new \vipapis\common\OrderStatus; 
+			$em = new \Voop\vipapis\common\OrderStatus; 
 			$output->writeString($em::$__names[$this->order_status]);  
 			
 			$xfer += $output->writeFieldEnd();

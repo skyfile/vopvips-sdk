@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\sce\vlg\osp\wms\service;
+namespace Voop\com\vip\sce\vlg\osp\wms\service;
 
 class PostResponse {
 	
@@ -71,7 +71,7 @@ class PostResponse {
 				
 				$needSkip = false;
 				
-				$this->header = new \com\vip\sce\vlg\osp\wms\service\PostHeader();
+				$this->header = new \Voop\com\vip\sce\vlg\osp\wms\service\PostHeader();
 				$this->header->read($input);
 				
 			}
@@ -83,7 +83,7 @@ class PostResponse {
 				
 				$needSkip = false;
 				
-				$this->body = new \com\vip\sce\vlg\osp\wms\service\PostBody();
+				$this->body = new \Voop\com\vip\sce\vlg\osp\wms\service\PostBody();
 				$this->body->read($input);
 				
 			}
@@ -113,7 +113,7 @@ class PostResponse {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -126,7 +126,7 @@ class PostResponse {
 			
 			if (!is_object($this->body)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->body->write($output);

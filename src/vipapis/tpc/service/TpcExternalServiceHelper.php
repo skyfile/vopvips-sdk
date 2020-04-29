@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\tpc\service;
+namespace Voop\vipapis\tpc\service;
 require_once dirname(__FILE__).'/TpcExternalService.php';
 class TpcExternalServiceHelper extends _TpcExternalServiceClient{
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\category;
+namespace Voop\vipapis\category;
 final class CategoryType{
 	
 	

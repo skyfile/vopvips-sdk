@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\invoice;
+namespace Voop\vipapis\marketplace\invoice;
 require_once dirname(__FILE__).'/InvoiceService.php';
 class InvoiceServiceHelper extends _InvoiceServiceClient{
 	

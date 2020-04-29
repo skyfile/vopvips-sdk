@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\invoice\api;
+namespace Voop\com\vip\vop\vcloud\invoice\api;
 
 class QueryRefundReq {
 	
@@ -161,7 +161,7 @@ class QueryRefundReq {
 				
 				$needSkip = false;
 				
-				$this->pagination = new \com\vip\vop\vcloud\common\api\Pagination();
+				$this->pagination = new \Voop\com\vip\vop\vcloud\common\api\Pagination();
 				$this->pagination->read($input);
 				
 			}
@@ -249,7 +249,7 @@ class QueryRefundReq {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\activity;
+namespace Voop\vipapis\activity;
 interface ActivityServiceIf{
 	
 	
@@ -39,7 +39,7 @@ class _ActivityServiceClient extends \Osp\Base\OspStub implements \vipapis\activ
 	public function send_checkIn( $activityId, $mobile){
 		
 		$this->initInvocation("checkIn");
-		$args = new \vipapis\activity\ActivityService_checkIn_args();
+		$args = new \Voop\vipapis\activity\ActivityService_checkIn_args();
 		
 		$args->activityId = $activityId;
 		
@@ -50,7 +50,7 @@ class _ActivityServiceClient extends \Osp\Base\OspStub implements \vipapis\activ
 	
 	public function recv_checkIn(){
 		
-		$result = new \vipapis\activity\ActivityService_checkIn_result();
+		$result = new \Voop\vipapis\activity\ActivityService_checkIn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -69,7 +69,7 @@ class _ActivityServiceClient extends \Osp\Base\OspStub implements \vipapis\activ
 	public function send_checkInV2( $activityId, $mobile){
 		
 		$this->initInvocation("checkInV2");
-		$args = new \vipapis\activity\ActivityService_checkInV2_args();
+		$args = new \Voop\vipapis\activity\ActivityService_checkInV2_args();
 		
 		$args->activityId = $activityId;
 		
@@ -80,7 +80,7 @@ class _ActivityServiceClient extends \Osp\Base\OspStub implements \vipapis\activ
 	
 	public function recv_checkInV2(){
 		
-		$result = new \vipapis\activity\ActivityService_checkInV2_result();
+		$result = new \Voop\vipapis\activity\ActivityService_checkInV2_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -99,7 +99,7 @@ class _ActivityServiceClient extends \Osp\Base\OspStub implements \vipapis\activ
 	public function send_checkInV3( $activityId, $mobile){
 		
 		$this->initInvocation("checkInV3");
-		$args = new \vipapis\activity\ActivityService_checkInV3_args();
+		$args = new \Voop\vipapis\activity\ActivityService_checkInV3_args();
 		
 		$args->activityId = $activityId;
 		
@@ -110,7 +110,7 @@ class _ActivityServiceClient extends \Osp\Base\OspStub implements \vipapis\activ
 	
 	public function recv_checkInV3(){
 		
-		$result = new \vipapis\activity\ActivityService_checkInV3_result();
+		$result = new \Voop\vipapis\activity\ActivityService_checkInV3_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -129,14 +129,14 @@ class _ActivityServiceClient extends \Osp\Base\OspStub implements \vipapis\activ
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\activity\ActivityService_healthCheck_args();
+		$args = new \Voop\vipapis\activity\ActivityService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\activity\ActivityService_healthCheck_result();
+		$result = new \Voop\vipapis\activity\ActivityService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -528,7 +528,7 @@ class ActivityService_checkIn_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\activity\Coupon();
+					$elem0 = new \Voop\vipapis\activity\Coupon();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -561,7 +561,7 @@ class ActivityService_checkIn_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -570,7 +570,7 @@ class ActivityService_checkIn_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -633,7 +633,7 @@ class ActivityService_checkInV2_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\activity\CheckInResult();
+			$this->success = new \Voop\vipapis\activity\CheckInResult();
 			$this->success->read($input);
 			
 		}
@@ -656,7 +656,7 @@ class ActivityService_checkInV2_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -715,7 +715,7 @@ class ActivityService_checkInV3_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\activity\CheckInResult();
+			$this->success = new \Voop\vipapis\activity\CheckInResult();
 			$this->success->read($input);
 			
 		}
@@ -738,7 +738,7 @@ class ActivityService_checkInV3_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -797,7 +797,7 @@ class ActivityService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -820,7 +820,7 @@ class ActivityService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

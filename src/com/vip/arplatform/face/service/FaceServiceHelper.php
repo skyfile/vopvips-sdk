@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\arplatform\face\service;
+namespace Voop\com\vip\arplatform\face\service;
 require_once dirname(__FILE__).'/FaceService.php';
 class FaceServiceHelper extends _FaceServiceClient{
 	

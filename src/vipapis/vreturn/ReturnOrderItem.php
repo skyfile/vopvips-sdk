@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vreturn;
+namespace Voop\vipapis\vreturn;
 
 class ReturnOrderItem {
 	
@@ -148,7 +148,7 @@ class ReturnOrderItem {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

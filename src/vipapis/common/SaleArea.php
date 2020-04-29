@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\common;
+namespace Voop\vipapis\common;
 final class SaleArea{
 	
 	

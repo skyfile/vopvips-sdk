@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\cup\address;
+namespace Voop\vipapis\cup\address;
 interface AddressServiceIf{
 	
 	
@@ -35,7 +35,7 @@ class _AddressServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\ad
 	public function send_getVipAddress( $province, $city, $county, $street){
 		
 		$this->initInvocation("getVipAddress");
-		$args = new \vipapis\cup\address\AddressService_getVipAddress_args();
+		$args = new \Voop\vipapis\cup\address\AddressService_getVipAddress_args();
 		
 		$args->province = $province;
 		
@@ -50,7 +50,7 @@ class _AddressServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\ad
 	
 	public function recv_getVipAddress(){
 		
-		$result = new \vipapis\cup\address\AddressService_getVipAddress_result();
+		$result = new \Voop\vipapis\cup\address\AddressService_getVipAddress_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -69,14 +69,14 @@ class _AddressServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\ad
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\cup\address\AddressService_healthCheck_args();
+		$args = new \Voop\vipapis\cup\address\AddressService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\cup\address\AddressService_healthCheck_result();
+		$result = new \Voop\vipapis\cup\address\AddressService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -323,7 +323,7 @@ class AddressService_getVipAddress_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\address\VipAddressInfo();
+			$this->success = new \Voop\com\vip\vop\cup\api\address\VipAddressInfo();
 			$this->success->read($input);
 			
 		}
@@ -346,7 +346,7 @@ class AddressService_getVipAddress_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -405,7 +405,7 @@ class AddressService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -428,7 +428,7 @@ class AddressService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

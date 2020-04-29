@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\carrier\service;
+namespace Voop\com\vip\vop\logistics\carrier\service;
 
 class ReportPacketInfoResp {
 	
@@ -90,7 +90,7 @@ class ReportPacketInfoResp {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\vop\logistics\carrier\service\Packets();
+						$elem1 = new \Voop\com\vip\vop\logistics\carrier\service\Packets();
 						$elem1->read($input);
 						
 						$this->packetsList[$_size1++] = $elem1;
@@ -141,7 +141,7 @@ class ReportPacketInfoResp {
 			
 			if (!is_array($this->packetsList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -150,7 +150,7 @@ class ReportPacketInfoResp {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

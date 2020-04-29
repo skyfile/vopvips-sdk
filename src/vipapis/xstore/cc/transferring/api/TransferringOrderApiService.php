@@ -8,13 +8,13 @@
 *
 */
 
-namespace vipapis\xstore\cc\transferring\api;
+namespace Voop\vipapis\xstore\cc\transferring\api;
 interface TransferringOrderApiServiceIf{
 	
 	
-	public function completeTransferringOrder(\vipapis\xstore\cc\transferring\api\CompleteOrderRequest $request);
+	public function completeTransferringOrder(\Voop\vipapis\xstore\cc\transferring\api\CompleteOrderRequest $request);
 	
-	public function confirmTransferringDelivery(\vipapis\xstore\cc\transferring\api\ConfirmTransferringDeliveryReq $request);
+	public function confirmTransferringDelivery(\Voop\vipapis\xstore\cc\transferring\api\ConfirmTransferringDeliveryReq $request);
 	
 	public function confirmTransferringOrder( $confirm_transferring_order);
 	
@@ -38,11 +38,11 @@ interface TransferringOrderApiServiceIf{
 	
 	public function transferringBatchCancel( $batch_no);
 	
-	public function transferringBatchCreate(\vipapis\xstore\cc\transferring\api\TransferringBatchCreateReq $req);
+	public function transferringBatchCreate(\Voop\vipapis\xstore\cc\transferring\api\TransferringBatchCreateReq $req);
 	
 	public function transferringBatchEmpty( $batch_no);
 	
-	public function transferringBatchImportDetail(\vipapis\xstore\cc\transferring\api\TransferringBatchImportDetailReq $req);
+	public function transferringBatchImportDetail(\Voop\vipapis\xstore\cc\transferring\api\TransferringBatchImportDetailReq $req);
 	
 	public function transferringBatchSubmit( $batch_no);
 	
@@ -64,16 +64,16 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	}
 	
 	
-	public function completeTransferringOrder(\vipapis\xstore\cc\transferring\api\CompleteOrderRequest $request){
+	public function completeTransferringOrder(\Voop\vipapis\xstore\cc\transferring\api\CompleteOrderRequest $request){
 		
 		$this->send_completeTransferringOrder( $request);
 		return $this->recv_completeTransferringOrder();
 	}
 	
-	public function send_completeTransferringOrder(\vipapis\xstore\cc\transferring\api\CompleteOrderRequest $request){
+	public function send_completeTransferringOrder(\Voop\vipapis\xstore\cc\transferring\api\CompleteOrderRequest $request){
 		
 		$this->initInvocation("completeTransferringOrder");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_completeTransferringOrder_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_completeTransferringOrder_args();
 		
 		$args->request = $request;
 		
@@ -82,7 +82,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_completeTransferringOrder(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_completeTransferringOrder_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_completeTransferringOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -92,16 +92,16 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	}
 	
 	
-	public function confirmTransferringDelivery(\vipapis\xstore\cc\transferring\api\ConfirmTransferringDeliveryReq $request){
+	public function confirmTransferringDelivery(\Voop\vipapis\xstore\cc\transferring\api\ConfirmTransferringDeliveryReq $request){
 		
 		$this->send_confirmTransferringDelivery( $request);
 		return $this->recv_confirmTransferringDelivery();
 	}
 	
-	public function send_confirmTransferringDelivery(\vipapis\xstore\cc\transferring\api\ConfirmTransferringDeliveryReq $request){
+	public function send_confirmTransferringDelivery(\Voop\vipapis\xstore\cc\transferring\api\ConfirmTransferringDeliveryReq $request){
 		
 		$this->initInvocation("confirmTransferringDelivery");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_confirmTransferringDelivery_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_confirmTransferringDelivery_args();
 		
 		$args->request = $request;
 		
@@ -110,7 +110,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_confirmTransferringDelivery(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_confirmTransferringDelivery_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_confirmTransferringDelivery_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -129,7 +129,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_confirmTransferringOrder( $confirm_transferring_order){
 		
 		$this->initInvocation("confirmTransferringOrder");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_confirmTransferringOrder_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_confirmTransferringOrder_args();
 		
 		$args->confirm_transferring_order = $confirm_transferring_order;
 		
@@ -138,7 +138,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_confirmTransferringOrder(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_confirmTransferringOrder_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_confirmTransferringOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -157,14 +157,14 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_healthCheck_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_healthCheck_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -183,7 +183,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_queryTransferringDelivery( $start_delivery_time, $end_delivery_time, $transferring_type, $page, $page_size){
 		
 		$this->initInvocation("queryTransferringDelivery");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDelivery_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDelivery_args();
 		
 		$args->start_delivery_time = $start_delivery_time;
 		
@@ -200,7 +200,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_queryTransferringDelivery(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDelivery_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDelivery_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -219,7 +219,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_queryTransferringDeliveryForPDA( $start_delivery_time, $end_delivery_time, $transferring_type, $page, $page_size, $transferringOrderNo){
 		
 		$this->initInvocation("queryTransferringDeliveryForPDA");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDeliveryForPDA_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDeliveryForPDA_args();
 		
 		$args->start_delivery_time = $start_delivery_time;
 		
@@ -238,7 +238,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_queryTransferringDeliveryForPDA(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDeliveryForPDA_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDeliveryForPDA_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -257,7 +257,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_queryTransferringDeliveryItem( $transferring_order_no, $page, $page_size){
 		
 		$this->initInvocation("queryTransferringDeliveryItem");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDeliveryItem_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDeliveryItem_args();
 		
 		$args->transferring_order_no = $transferring_order_no;
 		
@@ -270,7 +270,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_queryTransferringDeliveryItem(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDeliveryItem_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringDeliveryItem_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -289,7 +289,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_queryTransferringOrder( $transferring_type, $create_time_start, $create_time_end, $page, $page_size, $confirm_status){
 		
 		$this->initInvocation("queryTransferringOrder");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrder_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrder_args();
 		
 		$args->transferring_type = $transferring_type;
 		
@@ -308,7 +308,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_queryTransferringOrder(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrder_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -327,7 +327,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_queryTransferringOrderForPDA( $transferring_types, $create_time_start, $create_time_end, $page, $page_size, $confirm_status, $transferringOrderNo){
 		
 		$this->initInvocation("queryTransferringOrderForPDA");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrderForPDA_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrderForPDA_args();
 		
 		$args->transferring_types = $transferring_types;
 		
@@ -348,7 +348,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_queryTransferringOrderForPDA(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrderForPDA_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrderForPDA_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -367,7 +367,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_queryTransferringOrderItem( $transferring_order_no, $page, $page_size){
 		
 		$this->initInvocation("queryTransferringOrderItem");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrderItem_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrderItem_args();
 		
 		$args->transferring_order_no = $transferring_order_no;
 		
@@ -380,7 +380,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_queryTransferringOrderItem(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrderItem_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringOrderItem_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -399,7 +399,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_queryTransferringReceipt( $start_received_time, $end_received_time, $transferring_type, $page, $page_size, $transferringOrderNo){
 		
 		$this->initInvocation("queryTransferringReceipt");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringReceipt_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringReceipt_args();
 		
 		$args->start_received_time = $start_received_time;
 		
@@ -418,7 +418,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_queryTransferringReceipt(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringReceipt_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringReceipt_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -437,7 +437,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_queryTransferringReceiptItem( $transferring_order_no, $page, $page_size){
 		
 		$this->initInvocation("queryTransferringReceiptItem");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringReceiptItem_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringReceiptItem_args();
 		
 		$args->transferring_order_no = $transferring_order_no;
 		
@@ -450,7 +450,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_queryTransferringReceiptItem(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringReceiptItem_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_queryTransferringReceiptItem_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -469,7 +469,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_transferringBatchCancel( $batch_no){
 		
 		$this->initInvocation("transferringBatchCancel");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchCancel_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchCancel_args();
 		
 		$args->batch_no = $batch_no;
 		
@@ -478,7 +478,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_transferringBatchCancel(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchCancel_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchCancel_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -488,16 +488,16 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	}
 	
 	
-	public function transferringBatchCreate(\vipapis\xstore\cc\transferring\api\TransferringBatchCreateReq $req){
+	public function transferringBatchCreate(\Voop\vipapis\xstore\cc\transferring\api\TransferringBatchCreateReq $req){
 		
 		$this->send_transferringBatchCreate( $req);
 		return $this->recv_transferringBatchCreate();
 	}
 	
-	public function send_transferringBatchCreate(\vipapis\xstore\cc\transferring\api\TransferringBatchCreateReq $req){
+	public function send_transferringBatchCreate(\Voop\vipapis\xstore\cc\transferring\api\TransferringBatchCreateReq $req){
 		
 		$this->initInvocation("transferringBatchCreate");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchCreate_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchCreate_args();
 		
 		$args->req = $req;
 		
@@ -506,7 +506,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_transferringBatchCreate(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchCreate_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchCreate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -525,7 +525,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_transferringBatchEmpty( $batch_no){
 		
 		$this->initInvocation("transferringBatchEmpty");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchEmpty_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchEmpty_args();
 		
 		$args->batch_no = $batch_no;
 		
@@ -534,7 +534,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_transferringBatchEmpty(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchEmpty_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchEmpty_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -544,16 +544,16 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	}
 	
 	
-	public function transferringBatchImportDetail(\vipapis\xstore\cc\transferring\api\TransferringBatchImportDetailReq $req){
+	public function transferringBatchImportDetail(\Voop\vipapis\xstore\cc\transferring\api\TransferringBatchImportDetailReq $req){
 		
 		$this->send_transferringBatchImportDetail( $req);
 		return $this->recv_transferringBatchImportDetail();
 	}
 	
-	public function send_transferringBatchImportDetail(\vipapis\xstore\cc\transferring\api\TransferringBatchImportDetailReq $req){
+	public function send_transferringBatchImportDetail(\Voop\vipapis\xstore\cc\transferring\api\TransferringBatchImportDetailReq $req){
 		
 		$this->initInvocation("transferringBatchImportDetail");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchImportDetail_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchImportDetail_args();
 		
 		$args->req = $req;
 		
@@ -562,7 +562,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_transferringBatchImportDetail(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchImportDetail_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchImportDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -581,7 +581,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_transferringBatchSubmit( $batch_no){
 		
 		$this->initInvocation("transferringBatchSubmit");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchSubmit_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchSubmit_args();
 		
 		$args->batch_no = $batch_no;
 		
@@ -590,7 +590,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_transferringBatchSubmit(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchSubmit_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringBatchSubmit_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -609,7 +609,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_transferringOrderCancel( $transferringOrderNo){
 		
 		$this->initInvocation("transferringOrderCancel");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringOrderCancel_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringOrderCancel_args();
 		
 		$args->transferringOrderNo = $transferringOrderNo;
 		
@@ -618,7 +618,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_transferringOrderCancel(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringOrderCancel_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_transferringOrderCancel_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -637,7 +637,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_updateTransferringItemQuantity( $transferring_order_no, $delivery_date, $ship_warehouse_code, $transferring_order_items, $carrier_code, $carrier_name, $transport_no, $total_row){
 		
 		$this->initInvocation("updateTransferringItemQuantity");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringItemQuantity_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringItemQuantity_args();
 		
 		$args->transferring_order_no = $transferring_order_no;
 		
@@ -660,7 +660,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_updateTransferringItemQuantity(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringItemQuantity_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringItemQuantity_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -679,7 +679,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_updateTransferringReceivedQuantity( $transferring_order_no, $received_date, $received_warehouse_code, $transferring_order_received, $total_row){
 		
 		$this->initInvocation("updateTransferringReceivedQuantity");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringReceivedQuantity_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringReceivedQuantity_args();
 		
 		$args->transferring_order_no = $transferring_order_no;
 		
@@ -696,7 +696,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_updateTransferringReceivedQuantity(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringReceivedQuantity_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringReceivedQuantity_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -715,7 +715,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_updateTransferringWopReceivedQuantity( $transferring_order_no, $batch_no, $batch_line_count, $out_order_no, $received_warehouse_code, $received_date, $received_items, $total_row){
 		
 		$this->initInvocation("updateTransferringWopReceivedQuantity");
-		$args = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringWopReceivedQuantity_args();
+		$args = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringWopReceivedQuantity_args();
 		
 		$args->transferring_order_no = $transferring_order_no;
 		
@@ -738,7 +738,7 @@ class _TransferringOrderApiServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_updateTransferringWopReceivedQuantity(){
 		
-		$result = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringWopReceivedQuantity_result();
+		$result = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiService_updateTransferringWopReceivedQuantity_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -793,7 +793,7 @@ class TransferringOrderApiService_completeTransferringOrder_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\xstore\cc\transferring\api\CompleteOrderRequest();
+			$this->request = new \Voop\vipapis\xstore\cc\transferring\api\CompleteOrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -814,7 +814,7 @@ class TransferringOrderApiService_completeTransferringOrder_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -871,7 +871,7 @@ class TransferringOrderApiService_confirmTransferringDelivery_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\xstore\cc\transferring\api\ConfirmTransferringDeliveryReq();
+			$this->request = new \Voop\vipapis\xstore\cc\transferring\api\ConfirmTransferringDeliveryReq();
 			$this->request->read($input);
 			
 		}
@@ -892,7 +892,7 @@ class TransferringOrderApiService_confirmTransferringDelivery_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -958,7 +958,7 @@ class TransferringOrderApiService_confirmTransferringOrder_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiConfirmQuery();
+					$elem0 = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiConfirmQuery();
 					$elem0->read($input);
 					
 					$this->confirm_transferring_order[$_size0++] = $elem0;
@@ -989,7 +989,7 @@ class TransferringOrderApiService_confirmTransferringOrder_args {
 		
 		if (!is_array($this->confirm_transferring_order)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -998,7 +998,7 @@ class TransferringOrderApiService_confirmTransferringOrder_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1422,7 +1422,7 @@ class TransferringOrderApiService_queryTransferringDeliveryForPDA_args {
 		
 		if (!is_array($this->transferring_type)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2003,7 +2003,7 @@ class TransferringOrderApiService_queryTransferringOrderForPDA_args {
 			
 			if (!is_array($this->transferring_types)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2647,7 +2647,7 @@ class TransferringOrderApiService_transferringBatchCreate_args {
 		if(true) {
 			
 			
-			$this->req = new \vipapis\xstore\cc\transferring\api\TransferringBatchCreateReq();
+			$this->req = new \Voop\vipapis\xstore\cc\transferring\api\TransferringBatchCreateReq();
 			$this->req->read($input);
 			
 		}
@@ -2668,7 +2668,7 @@ class TransferringOrderApiService_transferringBatchCreate_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -2795,7 +2795,7 @@ class TransferringOrderApiService_transferringBatchImportDetail_args {
 		if(true) {
 			
 			
-			$this->req = new \vipapis\xstore\cc\transferring\api\TransferringBatchImportDetailReq();
+			$this->req = new \Voop\vipapis\xstore\cc\transferring\api\TransferringBatchImportDetailReq();
 			$this->req->read($input);
 			
 		}
@@ -2816,7 +2816,7 @@ class TransferringOrderApiService_transferringBatchImportDetail_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -3119,7 +3119,7 @@ class TransferringOrderApiService_updateTransferringItemQuantity_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\xstore\cc\transferring\api\UpdateTransOrderItemApiModel();
+					$elem0 = new \Voop\vipapis\xstore\cc\transferring\api\UpdateTransOrderItemApiModel();
 					$elem0->read($input);
 					
 					$this->transferring_order_items[$_size0++] = $elem0;
@@ -3215,7 +3215,7 @@ class TransferringOrderApiService_updateTransferringItemQuantity_args {
 			
 			if (!is_array($this->transferring_order_items)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3224,7 +3224,7 @@ class TransferringOrderApiService_updateTransferringItemQuantity_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3399,7 +3399,7 @@ class TransferringOrderApiService_updateTransferringReceivedQuantity_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\xstore\cc\transferring\api\UpdateTransferringOrderReceivedApiModel();
+					$elem0 = new \Voop\vipapis\xstore\cc\transferring\api\UpdateTransferringOrderReceivedApiModel();
 					$elem0->read($input);
 					
 					$this->transferring_order_received[$_size0++] = $elem0;
@@ -3468,7 +3468,7 @@ class TransferringOrderApiService_updateTransferringReceivedQuantity_args {
 			
 			if (!is_array($this->transferring_order_received)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3477,7 +3477,7 @@ class TransferringOrderApiService_updateTransferringReceivedQuantity_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3682,7 +3682,7 @@ class TransferringOrderApiService_updateTransferringWopReceivedQuantity_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\xstore\cc\transferring\api\TransferringWopReceivedQty();
+					$elem0 = new \Voop\vipapis\xstore\cc\transferring\api\TransferringWopReceivedQty();
 					$elem0->read($input);
 					
 					$this->received_items[$_size0++] = $elem0;
@@ -3752,7 +3752,7 @@ class TransferringOrderApiService_updateTransferringWopReceivedQuantity_args {
 		
 		if (!is_array($this->received_items)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3761,7 +3761,7 @@ class TransferringOrderApiService_updateTransferringWopReceivedQuantity_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3831,7 +3831,7 @@ class TransferringOrderApiService_completeTransferringOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\CompleteOrderResponse();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\CompleteOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -3854,7 +3854,7 @@ class TransferringOrderApiService_completeTransferringOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3913,7 +3913,7 @@ class TransferringOrderApiService_confirmTransferringDelivery_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\ConfirmTransferringDeliveryRes();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\ConfirmTransferringDeliveryRes();
 			$this->success->read($input);
 			
 		}
@@ -3936,7 +3936,7 @@ class TransferringOrderApiService_confirmTransferringDelivery_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3995,7 +3995,7 @@ class TransferringOrderApiService_confirmTransferringOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiConfirmResult();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiConfirmResult();
 			$this->success->read($input);
 			
 		}
@@ -4018,7 +4018,7 @@ class TransferringOrderApiService_confirmTransferringOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4077,7 +4077,7 @@ class TransferringOrderApiService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -4100,7 +4100,7 @@ class TransferringOrderApiService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4159,7 +4159,7 @@ class TransferringOrderApiService_queryTransferringDelivery_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\QueryTransferringDeliveryResult();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\QueryTransferringDeliveryResult();
 			$this->success->read($input);
 			
 		}
@@ -4182,7 +4182,7 @@ class TransferringOrderApiService_queryTransferringDelivery_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4241,7 +4241,7 @@ class TransferringOrderApiService_queryTransferringDeliveryForPDA_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\QueryTransferringDeliveryResult();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\QueryTransferringDeliveryResult();
 			$this->success->read($input);
 			
 		}
@@ -4264,7 +4264,7 @@ class TransferringOrderApiService_queryTransferringDeliveryForPDA_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4323,7 +4323,7 @@ class TransferringOrderApiService_queryTransferringDeliveryItem_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\QueryTransferringDeliveryItemResult();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\QueryTransferringDeliveryItemResult();
 			$this->success->read($input);
 			
 		}
@@ -4346,7 +4346,7 @@ class TransferringOrderApiService_queryTransferringDeliveryItem_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4405,7 +4405,7 @@ class TransferringOrderApiService_queryTransferringOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiResultModel();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiResultModel();
 			$this->success->read($input);
 			
 		}
@@ -4428,7 +4428,7 @@ class TransferringOrderApiService_queryTransferringOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4487,7 +4487,7 @@ class TransferringOrderApiService_queryTransferringOrderForPDA_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\TransferringOrderApiResultModel();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiResultModel();
 			$this->success->read($input);
 			
 		}
@@ -4510,7 +4510,7 @@ class TransferringOrderApiService_queryTransferringOrderForPDA_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4569,7 +4569,7 @@ class TransferringOrderApiService_queryTransferringOrderItem_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\TransferringOrderItemApiResult();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderItemApiResult();
 			$this->success->read($input);
 			
 		}
@@ -4592,7 +4592,7 @@ class TransferringOrderApiService_queryTransferringOrderItem_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4651,7 +4651,7 @@ class TransferringOrderApiService_queryTransferringReceipt_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\QueryTransferringReceiptResult();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\QueryTransferringReceiptResult();
 			$this->success->read($input);
 			
 		}
@@ -4674,7 +4674,7 @@ class TransferringOrderApiService_queryTransferringReceipt_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4733,7 +4733,7 @@ class TransferringOrderApiService_queryTransferringReceiptItem_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\QueryTransferringReceiptItemResult();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\QueryTransferringReceiptItemResult();
 			$this->success->read($input);
 			
 		}
@@ -4756,7 +4756,7 @@ class TransferringOrderApiService_queryTransferringReceiptItem_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4815,7 +4815,7 @@ class TransferringOrderApiService_transferringBatchCancel_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\TransferringBatchRes();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\TransferringBatchRes();
 			$this->success->read($input);
 			
 		}
@@ -4838,7 +4838,7 @@ class TransferringOrderApiService_transferringBatchCancel_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4897,7 +4897,7 @@ class TransferringOrderApiService_transferringBatchCreate_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\TransferringBatchCreateRes();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\TransferringBatchCreateRes();
 			$this->success->read($input);
 			
 		}
@@ -4920,7 +4920,7 @@ class TransferringOrderApiService_transferringBatchCreate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4979,7 +4979,7 @@ class TransferringOrderApiService_transferringBatchEmpty_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\TransferringBatchRes();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\TransferringBatchRes();
 			$this->success->read($input);
 			
 		}
@@ -5002,7 +5002,7 @@ class TransferringOrderApiService_transferringBatchEmpty_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5061,7 +5061,7 @@ class TransferringOrderApiService_transferringBatchImportDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\TransferringBatchImportDetailRes();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\TransferringBatchImportDetailRes();
 			$this->success->read($input);
 			
 		}
@@ -5084,7 +5084,7 @@ class TransferringOrderApiService_transferringBatchImportDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5143,7 +5143,7 @@ class TransferringOrderApiService_transferringBatchSubmit_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\TransferringBatchSubmitRes();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\TransferringBatchSubmitRes();
 			$this->success->read($input);
 			
 		}
@@ -5166,7 +5166,7 @@ class TransferringOrderApiService_transferringBatchSubmit_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5225,7 +5225,7 @@ class TransferringOrderApiService_transferringOrderCancel_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\TransferringOrderCancelRes();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderCancelRes();
 			$this->success->read($input);
 			
 		}
@@ -5248,7 +5248,7 @@ class TransferringOrderApiService_transferringOrderCancel_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5307,7 +5307,7 @@ class TransferringOrderApiService_updateTransferringItemQuantity_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\UpdateTransItemQtyApiResult();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\UpdateTransItemQtyApiResult();
 			$this->success->read($input);
 			
 		}
@@ -5330,7 +5330,7 @@ class TransferringOrderApiService_updateTransferringItemQuantity_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5389,7 +5389,7 @@ class TransferringOrderApiService_updateTransferringReceivedQuantity_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\UpdateTransReceivedQtyApiResult();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\UpdateTransReceivedQtyApiResult();
 			$this->success->read($input);
 			
 		}
@@ -5412,7 +5412,7 @@ class TransferringOrderApiService_updateTransferringReceivedQuantity_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5471,7 +5471,7 @@ class TransferringOrderApiService_updateTransferringWopReceivedQuantity_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\transferring\api\UpdateTransferringWopReceivedQuantityResult();
+			$this->success = new \Voop\vipapis\xstore\cc\transferring\api\UpdateTransferringWopReceivedQuantityResult();
 			$this->success->read($input);
 			
 		}
@@ -5494,7 +5494,7 @@ class TransferringOrderApiService_updateTransferringWopReceivedQuantity_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

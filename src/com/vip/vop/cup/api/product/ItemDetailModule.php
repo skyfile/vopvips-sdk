@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\product;
+namespace Voop\com\vip\vop\cup\api\product;
 
 class ItemDetailModule {
 	

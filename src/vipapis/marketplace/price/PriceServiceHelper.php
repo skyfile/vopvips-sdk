@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\price;
+namespace Voop\vipapis\marketplace\price;
 require_once dirname(__FILE__).'/PriceService.php';
 class PriceServiceHelper extends _PriceServiceClient{
 	

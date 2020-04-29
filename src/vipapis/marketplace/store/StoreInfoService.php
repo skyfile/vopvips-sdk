@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\store;
+namespace Voop\vipapis\marketplace\store;
 interface StoreInfoServiceIf{
 	
 	
@@ -37,14 +37,14 @@ class _StoreInfoServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	public function send_getStoreInfo(){
 		
 		$this->initInvocation("getStoreInfo");
-		$args = new \vipapis\marketplace\store\StoreInfoService_getStoreInfo_args();
+		$args = new \Voop\vipapis\marketplace\store\StoreInfoService_getStoreInfo_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_getStoreInfo(){
 		
-		$result = new \vipapis\marketplace\store\StoreInfoService_getStoreInfo_result();
+		$result = new \Voop\vipapis\marketplace\store\StoreInfoService_getStoreInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,14 +63,14 @@ class _StoreInfoServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	public function send_getWarehouse(){
 		
 		$this->initInvocation("getWarehouse");
-		$args = new \vipapis\marketplace\store\StoreInfoService_getWarehouse_args();
+		$args = new \Voop\vipapis\marketplace\store\StoreInfoService_getWarehouse_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_getWarehouse(){
 		
-		$result = new \vipapis\marketplace\store\StoreInfoService_getWarehouse_result();
+		$result = new \Voop\vipapis\marketplace\store\StoreInfoService_getWarehouse_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -89,14 +89,14 @@ class _StoreInfoServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\marketplace\store\StoreInfoService_healthCheck_args();
+		$args = new \Voop\vipapis\marketplace\store\StoreInfoService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\marketplace\store\StoreInfoService_healthCheck_result();
+		$result = new \Voop\vipapis\marketplace\store\StoreInfoService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -289,7 +289,7 @@ class StoreInfoService_getStoreInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\store\GetStoreInfoResponse();
+			$this->success = new \Voop\vipapis\marketplace\store\GetStoreInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -312,7 +312,7 @@ class StoreInfoService_getStoreInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -371,7 +371,7 @@ class StoreInfoService_getWarehouse_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\store\GetWarehouseResponse();
+			$this->success = new \Voop\vipapis\marketplace\store\GetWarehouseResponse();
 			$this->success->read($input);
 			
 		}
@@ -394,7 +394,7 @@ class StoreInfoService_getWarehouse_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -453,7 +453,7 @@ class StoreInfoService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -476,7 +476,7 @@ class StoreInfoService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

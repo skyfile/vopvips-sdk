@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\inventory\service\wop;
+namespace Voop\com\vip\xstore\inventory\service\wop;
 require_once dirname(__FILE__).'/WopInventoryService.php';
 class WopInventoryServiceHelper extends _WopInventoryServiceClient{
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\activity;
+namespace Voop\vipapis\activity;
 
 class Coupon {
 	
@@ -248,7 +248,7 @@ class Coupon {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

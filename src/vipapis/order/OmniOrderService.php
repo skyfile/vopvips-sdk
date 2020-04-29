@@ -8,11 +8,11 @@
 *
 */
 
-namespace vipapis\order;
+namespace Voop\vipapis\order;
 interface OmniOrderServiceIf{
 	
 	
-	public function batchConfirmDelivery(\vipapis\order\BatchConfirmDeliveryRequest $request);
+	public function batchConfirmDelivery(\Voop\vipapis\order\BatchConfirmDeliveryRequest $request);
 	
 	public function confirmDelivery( $vendor_id, $store_sn, $package_no, $is_preformed, $orders, $estimate_delivery_time);
 	
@@ -28,11 +28,11 @@ interface OmniOrderServiceIf{
 	
 	public function getDeliveryInfo( $vendor_id, $store_sn, $orders);
 	
-	public function getInventoryCancelledOrders(\vipapis\order\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest);
+	public function getInventoryCancelledOrders(\Voop\vipapis\order\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest);
 	
-	public function getInventoryDeductOrders(\vipapis\order\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest);
+	public function getInventoryDeductOrders(\Voop\vipapis\order\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest);
 	
-	public function getInventoryOccupiedOrders(\vipapis\order\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest);
+	public function getInventoryOccupiedOrders(\Voop\vipapis\order\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest);
 	
 	public function getOmniCancelledOrders( $vendor_id, $brand_id, $order_type, $st_query_time, $et_query_time, $limit, $page);
 	
@@ -42,9 +42,9 @@ interface OmniOrderServiceIf{
 	
 	public function getOrderInvoice( $vendor_id, $orders);
 	
-	public function getOxoOrders(\vipapis\order\OxoOrderRequest $ordersRequest);
+	public function getOxoOrders(\Voop\vipapis\order\OxoOrderRequest $ordersRequest);
 	
-	public function getOxoReturnOrders(\vipapis\order\OxoReturnOrderRequest $request);
+	public function getOxoReturnOrders(\Voop\vipapis\order\OxoReturnOrderRequest $request);
 	
 	public function healthCheck();
 	
@@ -74,16 +74,16 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	}
 	
 	
-	public function batchConfirmDelivery(\vipapis\order\BatchConfirmDeliveryRequest $request){
+	public function batchConfirmDelivery(\Voop\vipapis\order\BatchConfirmDeliveryRequest $request){
 		
 		$this->send_batchConfirmDelivery( $request);
 		return $this->recv_batchConfirmDelivery();
 	}
 	
-	public function send_batchConfirmDelivery(\vipapis\order\BatchConfirmDeliveryRequest $request){
+	public function send_batchConfirmDelivery(\Voop\vipapis\order\BatchConfirmDeliveryRequest $request){
 		
 		$this->initInvocation("batchConfirmDelivery");
-		$args = new \vipapis\order\OmniOrderService_batchConfirmDelivery_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_batchConfirmDelivery_args();
 		
 		$args->request = $request;
 		
@@ -92,7 +92,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_batchConfirmDelivery(){
 		
-		$result = new \vipapis\order\OmniOrderService_batchConfirmDelivery_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_batchConfirmDelivery_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -111,7 +111,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_confirmDelivery( $vendor_id, $store_sn, $package_no, $is_preformed, $orders, $estimate_delivery_time){
 		
 		$this->initInvocation("confirmDelivery");
-		$args = new \vipapis\order\OmniOrderService_confirmDelivery_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_confirmDelivery_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -130,7 +130,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_confirmDelivery(){
 		
-		$result = new \vipapis\order\OmniOrderService_confirmDelivery_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_confirmDelivery_result();
 		$this->receive_base($result);
 		
 	}
@@ -145,7 +145,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_confirmInvoice( $vendor_id,\vipapis\order\OrderInvoiceReq $order_invoice){
 		
 		$this->initInvocation("confirmInvoice");
-		$args = new \vipapis\order\OmniOrderService_confirmInvoice_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_confirmInvoice_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -156,7 +156,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_confirmInvoice(){
 		
-		$result = new \vipapis\order\OmniOrderService_confirmInvoice_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_confirmInvoice_result();
 		$this->receive_base($result);
 		
 	}
@@ -171,7 +171,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_confirmOrderInvoice( $vendor_id, $order_invoices){
 		
 		$this->initInvocation("confirmOrderInvoice");
-		$args = new \vipapis\order\OmniOrderService_confirmOrderInvoice_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_confirmOrderInvoice_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -182,7 +182,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_confirmOrderInvoice(){
 		
-		$result = new \vipapis\order\OmniOrderService_confirmOrderInvoice_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_confirmOrderInvoice_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -201,7 +201,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_confirmOxoDelivery( $vendor_id, $order_id, $store_sn, $notice_type, $package_no, $estimate_delivery_time){
 		
 		$this->initInvocation("confirmOxoDelivery");
-		$args = new \vipapis\order\OmniOrderService_confirmOxoDelivery_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_confirmOxoDelivery_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -220,7 +220,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_confirmOxoDelivery(){
 		
-		$result = new \vipapis\order\OmniOrderService_confirmOxoDelivery_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_confirmOxoDelivery_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -239,7 +239,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_confirmOxoShipment( $vendor_id, $order_id, $store_sn, $carrier_code, $transport_no){
 		
 		$this->initInvocation("confirmOxoShipment");
-		$args = new \vipapis\order\OmniOrderService_confirmOxoShipment_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_confirmOxoShipment_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -256,7 +256,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_confirmOxoShipment(){
 		
-		$result = new \vipapis\order\OmniOrderService_confirmOxoShipment_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_confirmOxoShipment_result();
 		$this->receive_base($result);
 		
 	}
@@ -271,7 +271,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_confirmStoreDelivery( $vendor_id, $order_id, $store_sn, $package_no, $estimate_delivery_time){
 		
 		$this->initInvocation("confirmStoreDelivery");
-		$args = new \vipapis\order\OmniOrderService_confirmStoreDelivery_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_confirmStoreDelivery_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -288,7 +288,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_confirmStoreDelivery(){
 		
-		$result = new \vipapis\order\OmniOrderService_confirmStoreDelivery_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_confirmStoreDelivery_result();
 		$this->receive_base($result);
 		
 	}
@@ -303,7 +303,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_getDeliveryInfo( $vendor_id, $store_sn, $orders){
 		
 		$this->initInvocation("getDeliveryInfo");
-		$args = new \vipapis\order\OmniOrderService_getDeliveryInfo_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_getDeliveryInfo_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -316,7 +316,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_getDeliveryInfo(){
 		
-		$result = new \vipapis\order\OmniOrderService_getDeliveryInfo_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_getDeliveryInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -326,16 +326,16 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	}
 	
 	
-	public function getInventoryCancelledOrders(\vipapis\order\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest){
+	public function getInventoryCancelledOrders(\Voop\vipapis\order\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest){
 		
 		$this->send_getInventoryCancelledOrders( $inventoryCancelledOrdersRequest);
 		return $this->recv_getInventoryCancelledOrders();
 	}
 	
-	public function send_getInventoryCancelledOrders(\vipapis\order\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest){
+	public function send_getInventoryCancelledOrders(\Voop\vipapis\order\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest){
 		
 		$this->initInvocation("getInventoryCancelledOrders");
-		$args = new \vipapis\order\OmniOrderService_getInventoryCancelledOrders_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_getInventoryCancelledOrders_args();
 		
 		$args->inventoryCancelledOrdersRequest = $inventoryCancelledOrdersRequest;
 		
@@ -344,7 +344,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_getInventoryCancelledOrders(){
 		
-		$result = new \vipapis\order\OmniOrderService_getInventoryCancelledOrders_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_getInventoryCancelledOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -354,16 +354,16 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	}
 	
 	
-	public function getInventoryDeductOrders(\vipapis\order\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
+	public function getInventoryDeductOrders(\Voop\vipapis\order\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
 		
 		$this->send_getInventoryDeductOrders( $inventoryDeductOrdersRequest);
 		return $this->recv_getInventoryDeductOrders();
 	}
 	
-	public function send_getInventoryDeductOrders(\vipapis\order\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
+	public function send_getInventoryDeductOrders(\Voop\vipapis\order\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
 		
 		$this->initInvocation("getInventoryDeductOrders");
-		$args = new \vipapis\order\OmniOrderService_getInventoryDeductOrders_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_getInventoryDeductOrders_args();
 		
 		$args->inventoryDeductOrdersRequest = $inventoryDeductOrdersRequest;
 		
@@ -372,7 +372,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_getInventoryDeductOrders(){
 		
-		$result = new \vipapis\order\OmniOrderService_getInventoryDeductOrders_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_getInventoryDeductOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -382,16 +382,16 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	}
 	
 	
-	public function getInventoryOccupiedOrders(\vipapis\order\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest){
+	public function getInventoryOccupiedOrders(\Voop\vipapis\order\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest){
 		
 		$this->send_getInventoryOccupiedOrders( $inventoryOccupiedOrdersRequest);
 		return $this->recv_getInventoryOccupiedOrders();
 	}
 	
-	public function send_getInventoryOccupiedOrders(\vipapis\order\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest){
+	public function send_getInventoryOccupiedOrders(\Voop\vipapis\order\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest){
 		
 		$this->initInvocation("getInventoryOccupiedOrders");
-		$args = new \vipapis\order\OmniOrderService_getInventoryOccupiedOrders_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_getInventoryOccupiedOrders_args();
 		
 		$args->inventoryOccupiedOrdersRequest = $inventoryOccupiedOrdersRequest;
 		
@@ -400,7 +400,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_getInventoryOccupiedOrders(){
 		
-		$result = new \vipapis\order\OmniOrderService_getInventoryOccupiedOrders_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_getInventoryOccupiedOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -419,7 +419,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_getOmniCancelledOrders( $vendor_id, $brand_id, $order_type, $st_query_time, $et_query_time, $limit, $page){
 		
 		$this->initInvocation("getOmniCancelledOrders");
-		$args = new \vipapis\order\OmniOrderService_getOmniCancelledOrders_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_getOmniCancelledOrders_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -440,7 +440,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_getOmniCancelledOrders(){
 		
-		$result = new \vipapis\order\OmniOrderService_getOmniCancelledOrders_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_getOmniCancelledOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -459,7 +459,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_getOmniOrders( $vendor_id, $brand_id, $business_type, $st_query_time, $et_query_time, $limit, $page){
 		
 		$this->initInvocation("getOmniOrders");
-		$args = new \vipapis\order\OmniOrderService_getOmniOrders_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_getOmniOrders_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -480,7 +480,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_getOmniOrders(){
 		
-		$result = new \vipapis\order\OmniOrderService_getOmniOrders_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_getOmniOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -499,7 +499,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_getOrderEInvoiceInfo( $vendorId, $orders){
 		
 		$this->initInvocation("getOrderEInvoiceInfo");
-		$args = new \vipapis\order\OmniOrderService_getOrderEInvoiceInfo_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_getOrderEInvoiceInfo_args();
 		
 		$args->vendorId = $vendorId;
 		
@@ -510,7 +510,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_getOrderEInvoiceInfo(){
 		
-		$result = new \vipapis\order\OmniOrderService_getOrderEInvoiceInfo_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_getOrderEInvoiceInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -529,7 +529,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_getOrderInvoice( $vendor_id, $orders){
 		
 		$this->initInvocation("getOrderInvoice");
-		$args = new \vipapis\order\OmniOrderService_getOrderInvoice_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_getOrderInvoice_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -540,7 +540,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_getOrderInvoice(){
 		
-		$result = new \vipapis\order\OmniOrderService_getOrderInvoice_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_getOrderInvoice_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -550,16 +550,16 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	}
 	
 	
-	public function getOxoOrders(\vipapis\order\OxoOrderRequest $ordersRequest){
+	public function getOxoOrders(\Voop\vipapis\order\OxoOrderRequest $ordersRequest){
 		
 		$this->send_getOxoOrders( $ordersRequest);
 		return $this->recv_getOxoOrders();
 	}
 	
-	public function send_getOxoOrders(\vipapis\order\OxoOrderRequest $ordersRequest){
+	public function send_getOxoOrders(\Voop\vipapis\order\OxoOrderRequest $ordersRequest){
 		
 		$this->initInvocation("getOxoOrders");
-		$args = new \vipapis\order\OmniOrderService_getOxoOrders_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_getOxoOrders_args();
 		
 		$args->ordersRequest = $ordersRequest;
 		
@@ -568,7 +568,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_getOxoOrders(){
 		
-		$result = new \vipapis\order\OmniOrderService_getOxoOrders_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_getOxoOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -578,16 +578,16 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	}
 	
 	
-	public function getOxoReturnOrders(\vipapis\order\OxoReturnOrderRequest $request){
+	public function getOxoReturnOrders(\Voop\vipapis\order\OxoReturnOrderRequest $request){
 		
 		$this->send_getOxoReturnOrders( $request);
 		return $this->recv_getOxoReturnOrders();
 	}
 	
-	public function send_getOxoReturnOrders(\vipapis\order\OxoReturnOrderRequest $request){
+	public function send_getOxoReturnOrders(\Voop\vipapis\order\OxoReturnOrderRequest $request){
 		
 		$this->initInvocation("getOxoReturnOrders");
-		$args = new \vipapis\order\OmniOrderService_getOxoReturnOrders_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_getOxoReturnOrders_args();
 		
 		$args->request = $request;
 		
@@ -596,7 +596,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_getOxoReturnOrders(){
 		
-		$result = new \vipapis\order\OmniOrderService_getOxoReturnOrders_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_getOxoReturnOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -615,14 +615,14 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\order\OmniOrderService_healthCheck_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\order\OmniOrderService_healthCheck_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -641,7 +641,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_printInvoice( $vendor_id, $store_sn, $batch_no, $orders,\vipapis\order\ExtInfo $ext_info, $print_type){
 		
 		$this->initInvocation("printInvoice");
-		$args = new \vipapis\order\OmniOrderService_printInvoice_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_printInvoice_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -660,7 +660,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_printInvoice(){
 		
-		$result = new \vipapis\order\OmniOrderService_printInvoice_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_printInvoice_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -679,14 +679,14 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_pushOrderEInvoice(){
 		
 		$this->initInvocation("pushOrderEInvoice");
-		$args = new \vipapis\order\OmniOrderService_pushOrderEInvoice_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_pushOrderEInvoice_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_pushOrderEInvoice(){
 		
-		$result = new \vipapis\order\OmniOrderService_pushOrderEInvoice_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_pushOrderEInvoice_result();
 		$this->receive_base($result);
 		
 	}
@@ -701,7 +701,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_pushOrderPackageWeight( $vendor_id, $store_sn, $orders){
 		
 		$this->initInvocation("pushOrderPackageWeight");
-		$args = new \vipapis\order\OmniOrderService_pushOrderPackageWeight_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_pushOrderPackageWeight_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -714,7 +714,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_pushOrderPackageWeight(){
 		
-		$result = new \vipapis\order\OmniOrderService_pushOrderPackageWeight_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_pushOrderPackageWeight_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -733,7 +733,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_pushQCResult( $vendor_id, $store_sn, $orders){
 		
 		$this->initInvocation("pushQCResult");
-		$args = new \vipapis\order\OmniOrderService_pushQCResult_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_pushQCResult_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -746,7 +746,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_pushQCResult(){
 		
-		$result = new \vipapis\order\OmniOrderService_pushQCResult_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_pushQCResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -765,7 +765,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_replyStoreSn( $vendor_id, $order_store_mapping){
 		
 		$this->initInvocation("replyStoreSn");
-		$args = new \vipapis\order\OmniOrderService_replyStoreSn_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_replyStoreSn_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -776,7 +776,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_replyStoreSn(){
 		
-		$result = new \vipapis\order\OmniOrderService_replyStoreSn_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_replyStoreSn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -795,7 +795,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_resetConfirmStoreState( $vendor_id, $orderSn){
 		
 		$this->initInvocation("resetConfirmStoreState");
-		$args = new \vipapis\order\OmniOrderService_resetConfirmStoreState_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_resetConfirmStoreState_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -806,7 +806,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_resetConfirmStoreState(){
 		
-		$result = new \vipapis\order\OmniOrderService_resetConfirmStoreState_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_resetConfirmStoreState_result();
 		$this->receive_base($result);
 		
 	}
@@ -821,7 +821,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_responseOrderStore( $vendor_id, $order_id, $store_sn){
 		
 		$this->initInvocation("responseOrderStore");
-		$args = new \vipapis\order\OmniOrderService_responseOrderStore_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_responseOrderStore_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -834,7 +834,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_responseOrderStore(){
 		
-		$result = new \vipapis\order\OmniOrderService_responseOrderStore_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_responseOrderStore_result();
 		$this->receive_base($result);
 		
 	}
@@ -849,7 +849,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	public function send_updateStoreSn( $vendor_id, $order_store_mapping){
 		
 		$this->initInvocation("updateStoreSn");
-		$args = new \vipapis\order\OmniOrderService_updateStoreSn_args();
+		$args = new \Voop\vipapis\order\OmniOrderService_updateStoreSn_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -860,7 +860,7 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	
 	public function recv_updateStoreSn(){
 		
-		$result = new \vipapis\order\OmniOrderService_updateStoreSn_result();
+		$result = new \Voop\vipapis\order\OmniOrderService_updateStoreSn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -915,7 +915,7 @@ class OmniOrderService_batchConfirmDelivery_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\order\BatchConfirmDeliveryRequest();
+			$this->request = new \Voop\vipapis\order\BatchConfirmDeliveryRequest();
 			$this->request->read($input);
 			
 		}
@@ -936,7 +936,7 @@ class OmniOrderService_batchConfirmDelivery_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1150,7 +1150,7 @@ class OmniOrderService_confirmDelivery_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1242,7 +1242,7 @@ class OmniOrderService_confirmInvoice_args {
 		if(true) {
 			
 			
-			$this->order_invoice = new \vipapis\order\OrderInvoiceReq();
+			$this->order_invoice = new \Voop\vipapis\order\OrderInvoiceReq();
 			$this->order_invoice->read($input);
 			
 		}
@@ -1268,7 +1268,7 @@ class OmniOrderService_confirmInvoice_args {
 		
 		if (!is_object($this->order_invoice)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->order_invoice->write($output);
@@ -1353,7 +1353,7 @@ class OmniOrderService_confirmOrderInvoice_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\order\OrderInvoiceReq();
+					$elem0 = new \Voop\vipapis\order\OrderInvoiceReq();
 					$elem0->read($input);
 					
 					$this->order_invoices[$_size0++] = $elem0;
@@ -1389,7 +1389,7 @@ class OmniOrderService_confirmOrderInvoice_args {
 		
 		if (!is_array($this->order_invoices)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1398,7 +1398,7 @@ class OmniOrderService_confirmOrderInvoice_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2087,7 +2087,7 @@ class OmniOrderService_getDeliveryInfo_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2151,7 +2151,7 @@ class OmniOrderService_getInventoryCancelledOrders_args {
 		if(true) {
 			
 			
-			$this->inventoryCancelledOrdersRequest = new \vipapis\order\InventoryCancelledOrdersRequest();
+			$this->inventoryCancelledOrdersRequest = new \Voop\vipapis\order\InventoryCancelledOrdersRequest();
 			$this->inventoryCancelledOrdersRequest->read($input);
 			
 		}
@@ -2174,7 +2174,7 @@ class OmniOrderService_getInventoryCancelledOrders_args {
 			
 			if (!is_object($this->inventoryCancelledOrdersRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->inventoryCancelledOrdersRequest->write($output);
@@ -2233,7 +2233,7 @@ class OmniOrderService_getInventoryDeductOrders_args {
 		if(true) {
 			
 			
-			$this->inventoryDeductOrdersRequest = new \vipapis\order\InventoryDeductOrdersRequest();
+			$this->inventoryDeductOrdersRequest = new \Voop\vipapis\order\InventoryDeductOrdersRequest();
 			$this->inventoryDeductOrdersRequest->read($input);
 			
 		}
@@ -2256,7 +2256,7 @@ class OmniOrderService_getInventoryDeductOrders_args {
 			
 			if (!is_object($this->inventoryDeductOrdersRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->inventoryDeductOrdersRequest->write($output);
@@ -2315,7 +2315,7 @@ class OmniOrderService_getInventoryOccupiedOrders_args {
 		if(true) {
 			
 			
-			$this->inventoryOccupiedOrdersRequest = new \vipapis\order\InventoryOccupiedOrdersRequest();
+			$this->inventoryOccupiedOrdersRequest = new \Voop\vipapis\order\InventoryOccupiedOrdersRequest();
 			$this->inventoryOccupiedOrdersRequest->read($input);
 			
 		}
@@ -2338,7 +2338,7 @@ class OmniOrderService_getInventoryOccupiedOrders_args {
 			
 			if (!is_object($this->inventoryOccupiedOrdersRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->inventoryOccupiedOrdersRequest->write($output);
@@ -2919,7 +2919,7 @@ class OmniOrderService_getOrderEInvoiceInfo_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3045,7 +3045,7 @@ class OmniOrderService_getOrderInvoice_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3109,7 +3109,7 @@ class OmniOrderService_getOxoOrders_args {
 		if(true) {
 			
 			
-			$this->ordersRequest = new \vipapis\order\OxoOrderRequest();
+			$this->ordersRequest = new \Voop\vipapis\order\OxoOrderRequest();
 			$this->ordersRequest->read($input);
 			
 		}
@@ -3132,7 +3132,7 @@ class OmniOrderService_getOxoOrders_args {
 			
 			if (!is_object($this->ordersRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->ordersRequest->write($output);
@@ -3191,7 +3191,7 @@ class OmniOrderService_getOxoReturnOrders_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\order\OxoReturnOrderRequest();
+			$this->request = new \Voop\vipapis\order\OxoReturnOrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -3212,7 +3212,7 @@ class OmniOrderService_getOxoReturnOrders_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -3401,7 +3401,7 @@ class OmniOrderService_printInvoice_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\order\OrderSeq();
+					$elem0 = new \Voop\vipapis\order\OrderSeq();
 					$elem0->read($input);
 					
 					$this->orders[$_size0++] = $elem0;
@@ -3422,7 +3422,7 @@ class OmniOrderService_printInvoice_args {
 		if(true) {
 			
 			
-			$this->ext_info = new \vipapis\order\ExtInfo();
+			$this->ext_info = new \Voop\vipapis\order\ExtInfo();
 			$this->ext_info->read($input);
 			
 		}
@@ -3467,7 +3467,7 @@ class OmniOrderService_printInvoice_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3476,7 +3476,7 @@ class OmniOrderService_printInvoice_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3493,7 +3493,7 @@ class OmniOrderService_printInvoice_args {
 			
 			if (!is_object($this->ext_info)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->ext_info->write($output);
@@ -3654,7 +3654,7 @@ class OmniOrderService_pushOrderPackageWeight_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\order\OrderPackageWeight();
+					$elem0 = new \Voop\vipapis\order\OrderPackageWeight();
 					$elem0->read($input);
 					
 					$this->orders[$_size0++] = $elem0;
@@ -3695,7 +3695,7 @@ class OmniOrderService_pushOrderPackageWeight_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3704,7 +3704,7 @@ class OmniOrderService_pushOrderPackageWeight_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3812,7 +3812,7 @@ class OmniOrderService_pushQCResult_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\order\OrderQCResult();
+					$elem1 = new \Voop\vipapis\order\OrderQCResult();
 					$elem1->read($input);
 					
 					$this->orders[$_size1++] = $elem1;
@@ -3853,7 +3853,7 @@ class OmniOrderService_pushQCResult_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3862,7 +3862,7 @@ class OmniOrderService_pushQCResult_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3951,7 +3951,7 @@ class OmniOrderService_replyStoreSn_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\order\OrderStoreMapping();
+					$elem1 = new \Voop\vipapis\order\OrderStoreMapping();
 					$elem1->read($input);
 					
 					$this->order_store_mapping[$_size1++] = $elem1;
@@ -3987,7 +3987,7 @@ class OmniOrderService_replyStoreSn_args {
 		
 		if (!is_array($this->order_store_mapping)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3996,7 +3996,7 @@ class OmniOrderService_replyStoreSn_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4297,7 +4297,7 @@ class OmniOrderService_updateStoreSn_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\order\OrderStoreMappingEx();
+					$elem0 = new \Voop\vipapis\order\OrderStoreMappingEx();
 					$elem0->read($input);
 					
 					$this->order_store_mapping[$_size0++] = $elem0;
@@ -4333,7 +4333,7 @@ class OmniOrderService_updateStoreSn_args {
 		
 		if (!is_array($this->order_store_mapping)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4342,7 +4342,7 @@ class OmniOrderService_updateStoreSn_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4403,7 +4403,7 @@ class OmniOrderService_batchConfirmDelivery_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\BatchConfirmDeliveryResult();
+			$this->success = new \Voop\vipapis\order\BatchConfirmDeliveryResult();
 			$this->success->read($input);
 			
 		}
@@ -4426,7 +4426,7 @@ class OmniOrderService_batchConfirmDelivery_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4583,7 +4583,7 @@ class OmniOrderService_confirmOrderInvoice_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\OrderInvoiceConfirmResp();
+			$this->success = new \Voop\vipapis\order\OrderInvoiceConfirmResp();
 			$this->success->read($input);
 			
 		}
@@ -4606,7 +4606,7 @@ class OmniOrderService_confirmOrderInvoice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4665,7 +4665,7 @@ class OmniOrderService_confirmOxoDelivery_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\ConfirmDeliveryResp();
+			$this->success = new \Voop\vipapis\order\ConfirmDeliveryResp();
 			$this->success->read($input);
 			
 		}
@@ -4688,7 +4688,7 @@ class OmniOrderService_confirmOxoDelivery_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4854,7 +4854,7 @@ class OmniOrderService_getDeliveryInfo_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\order\OrderDeliveryInfo();
+					$elem0 = new \Voop\vipapis\order\OrderDeliveryInfo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -4887,7 +4887,7 @@ class OmniOrderService_getDeliveryInfo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4896,7 +4896,7 @@ class OmniOrderService_getDeliveryInfo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4959,7 +4959,7 @@ class OmniOrderService_getInventoryCancelledOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\CancelledOrdersResponse();
+			$this->success = new \Voop\vipapis\order\CancelledOrdersResponse();
 			$this->success->read($input);
 			
 		}
@@ -4982,7 +4982,7 @@ class OmniOrderService_getInventoryCancelledOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5041,7 +5041,7 @@ class OmniOrderService_getInventoryDeductOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\InventoryDeductOrdersResponse();
+			$this->success = new \Voop\vipapis\order\InventoryDeductOrdersResponse();
 			$this->success->read($input);
 			
 		}
@@ -5064,7 +5064,7 @@ class OmniOrderService_getInventoryDeductOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5123,7 +5123,7 @@ class OmniOrderService_getInventoryOccupiedOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\OccupiedOrderResponse();
+			$this->success = new \Voop\vipapis\order\OccupiedOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -5146,7 +5146,7 @@ class OmniOrderService_getInventoryOccupiedOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5205,7 +5205,7 @@ class OmniOrderService_getOmniCancelledOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\GetOmniCancelledOrdersResp();
+			$this->success = new \Voop\vipapis\order\GetOmniCancelledOrdersResp();
 			$this->success->read($input);
 			
 		}
@@ -5228,7 +5228,7 @@ class OmniOrderService_getOmniCancelledOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5287,7 +5287,7 @@ class OmniOrderService_getOmniOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\GetOmniOrdersResp();
+			$this->success = new \Voop\vipapis\order\GetOmniOrdersResp();
 			$this->success->read($input);
 			
 		}
@@ -5310,7 +5310,7 @@ class OmniOrderService_getOmniOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5378,7 +5378,7 @@ class OmniOrderService_getOrderEInvoiceInfo_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\order\EInvoiceInfo();
+					$elem0 = new \Voop\vipapis\order\EInvoiceInfo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -5411,7 +5411,7 @@ class OmniOrderService_getOrderEInvoiceInfo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5420,7 +5420,7 @@ class OmniOrderService_getOrderEInvoiceInfo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5483,7 +5483,7 @@ class OmniOrderService_getOrderInvoice_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\OrderInvoiceQueryResp();
+			$this->success = new \Voop\vipapis\order\OrderInvoiceQueryResp();
 			$this->success->read($input);
 			
 		}
@@ -5506,7 +5506,7 @@ class OmniOrderService_getOrderInvoice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5565,7 +5565,7 @@ class OmniOrderService_getOxoOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\OxoOrderResponse();
+			$this->success = new \Voop\vipapis\order\OxoOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -5588,7 +5588,7 @@ class OmniOrderService_getOxoOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5647,7 +5647,7 @@ class OmniOrderService_getOxoReturnOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\OxoReturnOrderResponse();
+			$this->success = new \Voop\vipapis\order\OxoReturnOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -5670,7 +5670,7 @@ class OmniOrderService_getOxoReturnOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5729,7 +5729,7 @@ class OmniOrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -5752,7 +5752,7 @@ class OmniOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5811,7 +5811,7 @@ class OmniOrderService_printInvoice_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\PrintInvoiceResp();
+			$this->success = new \Voop\vipapis\order\PrintInvoiceResp();
 			$this->success->read($input);
 			
 		}
@@ -5834,7 +5834,7 @@ class OmniOrderService_printInvoice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5942,7 +5942,7 @@ class OmniOrderService_pushOrderPackageWeight_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\PushOrderPackageWeightResp();
+			$this->success = new \Voop\vipapis\order\PushOrderPackageWeightResp();
 			$this->success->read($input);
 			
 		}
@@ -5965,7 +5965,7 @@ class OmniOrderService_pushOrderPackageWeight_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6024,7 +6024,7 @@ class OmniOrderService_pushQCResult_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\PushQCResultResp();
+			$this->success = new \Voop\vipapis\order\PushQCResultResp();
 			$this->success->read($input);
 			
 		}
@@ -6047,7 +6047,7 @@ class OmniOrderService_pushQCResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6106,7 +6106,7 @@ class OmniOrderService_replyStoreSn_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\ReplyStoreSnResp();
+			$this->success = new \Voop\vipapis\order\ReplyStoreSnResp();
 			$this->success->read($input);
 			
 		}
@@ -6129,7 +6129,7 @@ class OmniOrderService_replyStoreSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6286,7 +6286,7 @@ class OmniOrderService_updateStoreSn_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\order\UpdateStoreSnResp();
+			$this->success = new \Voop\vipapis\order\UpdateStoreSnResp();
 			$this->success->read($input);
 			
 		}
@@ -6309,7 +6309,7 @@ class OmniOrderService_updateStoreSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

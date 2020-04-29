@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\rfid\api;
+namespace Voop\vipapis\xstore\cc\rfid\api;
 require_once dirname(__FILE__).'/RFIDService.php';
 class RFIDServiceHelper extends _RFIDServiceClient{
 	

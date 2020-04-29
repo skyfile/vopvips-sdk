@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\shanshan\outlet;
+namespace Voop\vipapis\shanshan\outlet;
 $base_path = dirname(__FILE__).'/../../../';
 require_once $base_path.'/Osp/Util/PathUtil.php';
 require_once $base_path.'/Osp/ClassLoader/ClassLoader.php';
@@ -21,7 +21,7 @@ class ShanshanOutletServiceClient{
 	private static function regis(){
 		
 		$path = \Osp\Util\PathUtil::getRootPath ();
-		$nsLoader = new \Osp\ClassLoader\ClassLoader ();
+		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
 		$nsLoader->registerNamespace ( 'vipapis', $path );
@@ -70,7 +70,7 @@ class ShanshanOutletServiceClient{
 		
 		//$ctx->setProtocol ( \Osp\Protocol\OspProtocol::$Binary );
 		
-		return new \vipapis\shanshan\outlet\ShanshanOutletServiceHelper();
+		return new \Voop\vipapis\shanshan\outlet\ShanshanOutletServiceHelper();
 	}
 	
 }

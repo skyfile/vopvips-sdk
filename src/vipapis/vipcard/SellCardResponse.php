@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipcard;
+namespace Voop\vipapis\vipcard;
 
 class SellCardResponse {
 	
@@ -108,7 +108,7 @@ class SellCardResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

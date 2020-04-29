@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\order;
+namespace Voop\com\vip\vop\cup\api\order;
 
 class OrderConsigneeInfo {
 	

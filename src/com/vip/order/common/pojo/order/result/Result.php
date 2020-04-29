@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\order\common\pojo\order\result;
+namespace Voop\com\vip\order\common\pojo\order\result;
 
 class Result {
 	

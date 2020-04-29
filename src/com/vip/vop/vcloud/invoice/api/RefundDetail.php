@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\invoice\api;
+namespace Voop\com\vip\vop\vcloud\invoice\api;
 
 class RefundDetail {
 	

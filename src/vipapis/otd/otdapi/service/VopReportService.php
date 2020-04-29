@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\otd\otdapi\service;
+namespace Voop\vipapis\otd\otdapi\service;
 interface VopReportServiceIf{
 	
 	
@@ -35,7 +35,7 @@ class _VopReportServiceClient extends \Osp\Base\OspStub implements \vipapis\otd\
 	public function send_getDailyReports( $advertiser_id, $channel, $level, $start_date, $end_date, $page_no, $page_size){
 		
 		$this->initInvocation("getDailyReports");
-		$args = new \vipapis\otd\otdapi\service\VopReportService_getDailyReports_args();
+		$args = new \Voop\vipapis\otd\otdapi\service\VopReportService_getDailyReports_args();
 		
 		$args->advertiser_id = $advertiser_id;
 		
@@ -56,7 +56,7 @@ class _VopReportServiceClient extends \Osp\Base\OspStub implements \vipapis\otd\
 	
 	public function recv_getDailyReports(){
 		
-		$result = new \vipapis\otd\otdapi\service\VopReportService_getDailyReports_result();
+		$result = new \Voop\vipapis\otd\otdapi\service\VopReportService_getDailyReports_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -75,14 +75,14 @@ class _VopReportServiceClient extends \Osp\Base\OspStub implements \vipapis\otd\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\otd\otdapi\service\VopReportService_healthCheck_args();
+		$args = new \Voop\vipapis\otd\otdapi\service\VopReportService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\otd\otdapi\service\VopReportService_healthCheck_result();
+		$result = new \Voop\vipapis\otd\otdapi\service\VopReportService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -305,7 +305,7 @@ class VopReportService_getDailyReports_args {
 			
 			$xfer += $output->writeFieldBegin('channel');
 			
-			$em = new \com\vip\imp\otd\otdapi\service\VopDeliveryChannelType; 
+			$em = new \Voop\com\vip\imp\otd\otdapi\service\VopDeliveryChannelType; 
 			$output->writeString($em::$__names[$this->channel]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -316,7 +316,7 @@ class VopReportService_getDailyReports_args {
 			
 			$xfer += $output->writeFieldBegin('level');
 			
-			$em = new \com\vip\imp\otd\otdapi\service\VopReportLevel; 
+			$em = new \Voop\com\vip\imp\otd\otdapi\service\VopReportLevel; 
 			$output->writeString($em::$__names[$this->level]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -447,7 +447,7 @@ class VopReportService_getDailyReports_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\imp\otd\otdapi\service\VopReportsModel();
+			$this->success = new \Voop\com\vip\imp\otd\otdapi\service\VopReportsModel();
 			$this->success->read($input);
 			
 		}
@@ -470,7 +470,7 @@ class VopReportService_getDailyReports_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -529,7 +529,7 @@ class VopReportService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -552,7 +552,7 @@ class VopReportService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

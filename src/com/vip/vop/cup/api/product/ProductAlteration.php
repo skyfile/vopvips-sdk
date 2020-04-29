@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\product;
+namespace Voop\com\vip\vop\cup\api\product;
 
 class ProductAlteration {
 	
@@ -193,7 +193,7 @@ class ProductAlteration {
 			
 			$xfer += $output->writeFieldBegin('event_type');
 			
-			$em = new \com\vip\vop\cup\api\product\EventType; 
+			$em = new \Voop\com\vip\vop\cup\api\product\EventType; 
 			$output->writeString($em::$__names[$this->event_type]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -204,7 +204,7 @@ class ProductAlteration {
 			
 			$xfer += $output->writeFieldBegin('product_type');
 			
-			$em = new \com\vip\vop\cup\api\product\ProductType; 
+			$em = new \Voop\com\vip\vop\cup\api\product\ProductType; 
 			$output->writeString($em::$__names[$this->product_type]);  
 			
 			$xfer += $output->writeFieldEnd();

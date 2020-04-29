@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 
 class AutoBindProductSizeTableResponse {
 	
@@ -129,7 +129,7 @@ class AutoBindProductSizeTableResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -162,7 +162,7 @@ class AutoBindProductSizeTableResponse {
 			
 			if (!is_array($this->sku_size_detail_id_mappings)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();

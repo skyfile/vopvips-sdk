@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\domain\inventory;
+namespace Voop\com\vip\domain\inventory;
 
 class SearchPoResponse {
 	
@@ -90,7 +90,7 @@ class SearchPoResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\domain\inventory\PoObject();
+						$elem0 = new \Voop\com\vip\domain\inventory\PoObject();
 						$elem0->read($input);
 						
 						$this->poList[$_size0++] = $elem0;
@@ -137,7 +137,7 @@ class SearchPoResponse {
 			
 			if (!is_array($this->poList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -146,7 +146,7 @@ class SearchPoResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

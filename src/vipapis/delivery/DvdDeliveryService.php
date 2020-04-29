@@ -8,17 +8,17 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 interface DvdDeliveryServiceIf{
 	
 	
-	public function auditReturnResult(\vipapis\delivery\AuditReturnResultRequest $request);
+	public function auditReturnResult(\Voop\vipapis\delivery\AuditReturnResultRequest $request);
 	
-	public function confirmRefuseResult(\vipapis\delivery\ConfirmRefuseResultRequest $request);
+	public function confirmRefuseResult(\Voop\vipapis\delivery\ConfirmRefuseResultRequest $request);
 	
-	public function confirmReturnOrder(\vipapis\delivery\ConfirmReturnOrderRequest $request);
+	public function confirmReturnOrder(\Voop\vipapis\delivery\ConfirmReturnOrderRequest $request);
 	
-	public function confirmReturnResult(\vipapis\delivery\ConfirmReturnResultRequest $request);
+	public function confirmReturnResult(\Voop\vipapis\delivery\ConfirmReturnResultRequest $request);
 	
 	public function editShipInfo( $vendor_id, $ship_list);
 	
@@ -34,7 +34,7 @@ interface DvdDeliveryServiceIf{
 	
 	public function getOrderListByCreateTime( $st_create_time, $et_create_time, $order_status, $po_no, $order_id, $vendor_id, $page, $limit);
 	
-	public function getOrderReturnDetails(\vipapis\delivery\ReturnOrderDetailsRequest $request);
+	public function getOrderReturnDetails(\Voop\vipapis\delivery\ReturnOrderDetailsRequest $request);
 	
 	public function getOrderReturnList( $st_time, $et_time, $vendor_id, $order_id, $return_type, $page, $limit);
 	
@@ -66,16 +66,16 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	}
 	
 	
-	public function auditReturnResult(\vipapis\delivery\AuditReturnResultRequest $request){
+	public function auditReturnResult(\Voop\vipapis\delivery\AuditReturnResultRequest $request){
 		
 		$this->send_auditReturnResult( $request);
 		return $this->recv_auditReturnResult();
 	}
 	
-	public function send_auditReturnResult(\vipapis\delivery\AuditReturnResultRequest $request){
+	public function send_auditReturnResult(\Voop\vipapis\delivery\AuditReturnResultRequest $request){
 		
 		$this->initInvocation("auditReturnResult");
-		$args = new \vipapis\delivery\DvdDeliveryService_auditReturnResult_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_auditReturnResult_args();
 		
 		$args->request = $request;
 		
@@ -84,7 +84,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_auditReturnResult(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_auditReturnResult_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_auditReturnResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -94,16 +94,16 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	}
 	
 	
-	public function confirmRefuseResult(\vipapis\delivery\ConfirmRefuseResultRequest $request){
+	public function confirmRefuseResult(\Voop\vipapis\delivery\ConfirmRefuseResultRequest $request){
 		
 		$this->send_confirmRefuseResult( $request);
 		return $this->recv_confirmRefuseResult();
 	}
 	
-	public function send_confirmRefuseResult(\vipapis\delivery\ConfirmRefuseResultRequest $request){
+	public function send_confirmRefuseResult(\Voop\vipapis\delivery\ConfirmRefuseResultRequest $request){
 		
 		$this->initInvocation("confirmRefuseResult");
-		$args = new \vipapis\delivery\DvdDeliveryService_confirmRefuseResult_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_confirmRefuseResult_args();
 		
 		$args->request = $request;
 		
@@ -112,22 +112,22 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_confirmRefuseResult(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_confirmRefuseResult_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_confirmRefuseResult_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function confirmReturnOrder(\vipapis\delivery\ConfirmReturnOrderRequest $request){
+	public function confirmReturnOrder(\Voop\vipapis\delivery\ConfirmReturnOrderRequest $request){
 		
 		$this->send_confirmReturnOrder( $request);
 		return $this->recv_confirmReturnOrder();
 	}
 	
-	public function send_confirmReturnOrder(\vipapis\delivery\ConfirmReturnOrderRequest $request){
+	public function send_confirmReturnOrder(\Voop\vipapis\delivery\ConfirmReturnOrderRequest $request){
 		
 		$this->initInvocation("confirmReturnOrder");
-		$args = new \vipapis\delivery\DvdDeliveryService_confirmReturnOrder_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_confirmReturnOrder_args();
 		
 		$args->request = $request;
 		
@@ -136,22 +136,22 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_confirmReturnOrder(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_confirmReturnOrder_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_confirmReturnOrder_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function confirmReturnResult(\vipapis\delivery\ConfirmReturnResultRequest $request){
+	public function confirmReturnResult(\Voop\vipapis\delivery\ConfirmReturnResultRequest $request){
 		
 		$this->send_confirmReturnResult( $request);
 		return $this->recv_confirmReturnResult();
 	}
 	
-	public function send_confirmReturnResult(\vipapis\delivery\ConfirmReturnResultRequest $request){
+	public function send_confirmReturnResult(\Voop\vipapis\delivery\ConfirmReturnResultRequest $request){
 		
 		$this->initInvocation("confirmReturnResult");
-		$args = new \vipapis\delivery\DvdDeliveryService_confirmReturnResult_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_confirmReturnResult_args();
 		
 		$args->request = $request;
 		
@@ -160,7 +160,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_confirmReturnResult(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_confirmReturnResult_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_confirmReturnResult_result();
 		$this->receive_base($result);
 		
 	}
@@ -175,7 +175,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_editShipInfo( $vendor_id, $ship_list){
 		
 		$this->initInvocation("editShipInfo");
-		$args = new \vipapis\delivery\DvdDeliveryService_editShipInfo_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_editShipInfo_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -186,7 +186,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_editShipInfo(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_editShipInfo_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_editShipInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -205,7 +205,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_exportOrderById( $vendor_id, $order_id){
 		
 		$this->initInvocation("exportOrderById");
-		$args = new \vipapis\delivery\DvdDeliveryService_exportOrderById_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_exportOrderById_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -216,7 +216,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_exportOrderById(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_exportOrderById_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_exportOrderById_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -235,7 +235,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_getCarrierList( $vendor_id, $page, $limit){
 		
 		$this->initInvocation("getCarrierList");
-		$args = new \vipapis\delivery\DvdDeliveryService_getCarrierList_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_getCarrierList_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -248,7 +248,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_getCarrierList(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_getCarrierList_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_getCarrierList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -267,7 +267,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_getOrderDetail( $vendor_id, $order_id, $page, $limit){
 		
 		$this->initInvocation("getOrderDetail");
-		$args = new \vipapis\delivery\DvdDeliveryService_getOrderDetail_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderDetail_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -282,7 +282,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_getOrderDetail(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_getOrderDetail_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -301,7 +301,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_getOrderFinancialFields( $vendor_id, $order_id, $po_no, $deduction_indicator, $active_no){
 		
 		$this->initInvocation("getOrderFinancialFields");
-		$args = new \vipapis\delivery\DvdDeliveryService_getOrderFinancialFields_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderFinancialFields_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -318,7 +318,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_getOrderFinancialFields(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_getOrderFinancialFields_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderFinancialFields_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -337,7 +337,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_getOrderList( $st_add_time, $et_add_time, $order_status, $po_no, $order_id, $vendor_id, $page, $limit, $sale_type){
 		
 		$this->initInvocation("getOrderList");
-		$args = new \vipapis\delivery\DvdDeliveryService_getOrderList_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderList_args();
 		
 		$args->st_add_time = $st_add_time;
 		
@@ -362,7 +362,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_getOrderList(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_getOrderList_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -381,7 +381,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_getOrderListByCreateTime( $st_create_time, $et_create_time, $order_status, $po_no, $order_id, $vendor_id, $page, $limit){
 		
 		$this->initInvocation("getOrderListByCreateTime");
-		$args = new \vipapis\delivery\DvdDeliveryService_getOrderListByCreateTime_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderListByCreateTime_args();
 		
 		$args->st_create_time = $st_create_time;
 		
@@ -404,7 +404,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_getOrderListByCreateTime(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_getOrderListByCreateTime_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderListByCreateTime_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -414,16 +414,16 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	}
 	
 	
-	public function getOrderReturnDetails(\vipapis\delivery\ReturnOrderDetailsRequest $request){
+	public function getOrderReturnDetails(\Voop\vipapis\delivery\ReturnOrderDetailsRequest $request){
 		
 		$this->send_getOrderReturnDetails( $request);
 		return $this->recv_getOrderReturnDetails();
 	}
 	
-	public function send_getOrderReturnDetails(\vipapis\delivery\ReturnOrderDetailsRequest $request){
+	public function send_getOrderReturnDetails(\Voop\vipapis\delivery\ReturnOrderDetailsRequest $request){
 		
 		$this->initInvocation("getOrderReturnDetails");
-		$args = new \vipapis\delivery\DvdDeliveryService_getOrderReturnDetails_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderReturnDetails_args();
 		
 		$args->request = $request;
 		
@@ -432,7 +432,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_getOrderReturnDetails(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_getOrderReturnDetails_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderReturnDetails_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -451,7 +451,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_getOrderReturnList( $st_time, $et_time, $vendor_id, $order_id, $return_type, $page, $limit){
 		
 		$this->initInvocation("getOrderReturnList");
-		$args = new \vipapis\delivery\DvdDeliveryService_getOrderReturnList_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderReturnList_args();
 		
 		$args->st_time = $st_time;
 		
@@ -472,7 +472,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_getOrderReturnList(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_getOrderReturnList_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderReturnList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -491,7 +491,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_getOrderStatusById( $vendor_id, $order_id, $sale_type){
 		
 		$this->initInvocation("getOrderStatusById");
-		$args = new \vipapis\delivery\DvdDeliveryService_getOrderStatusById_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderStatusById_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -504,7 +504,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_getOrderStatusById(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_getOrderStatusById_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_getOrderStatusById_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -523,7 +523,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_getPrintTemplate( $vendor_id, $print_type, $order_id){
 		
 		$this->initInvocation("getPrintTemplate");
-		$args = new \vipapis\delivery\DvdDeliveryService_getPrintTemplate_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_getPrintTemplate_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -536,7 +536,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_getPrintTemplate(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_getPrintTemplate_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_getPrintTemplate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -555,7 +555,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_getReturnList( $vendor_id, $st_create_time, $et_create_time, $return_status, $page, $limit){
 		
 		$this->initInvocation("getReturnList");
-		$args = new \vipapis\delivery\DvdDeliveryService_getReturnList_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_getReturnList_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -574,7 +574,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_getReturnList(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_getReturnList_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_getReturnList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -593,7 +593,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_getReturnProduct( $vendor_id, $back_sn, $page, $limit){
 		
 		$this->initInvocation("getReturnProduct");
-		$args = new \vipapis\delivery\DvdDeliveryService_getReturnProduct_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_getReturnProduct_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -608,7 +608,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_getReturnProduct(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_getReturnProduct_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_getReturnProduct_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -627,14 +627,14 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\delivery\DvdDeliveryService_healthCheck_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_healthCheck_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -653,7 +653,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_mergeAfterSaleAddress( $vendor_id, $username, $address, $postcode, $tel){
 		
 		$this->initInvocation("mergeAfterSaleAddress");
-		$args = new \vipapis\delivery\DvdDeliveryService_mergeAfterSaleAddress_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_mergeAfterSaleAddress_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -670,7 +670,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_mergeAfterSaleAddress(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_mergeAfterSaleAddress_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_mergeAfterSaleAddress_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -689,7 +689,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_refuseOrder( $vendor_id, $refuse_product_list){
 		
 		$this->initInvocation("refuseOrder");
-		$args = new \vipapis\delivery\DvdDeliveryService_refuseOrder_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_refuseOrder_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -700,7 +700,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_refuseOrder(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_refuseOrder_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_refuseOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -719,7 +719,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_returnOrder( $vendor_id, $dvd_return_list){
 		
 		$this->initInvocation("returnOrder");
-		$args = new \vipapis\delivery\DvdDeliveryService_returnOrder_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_returnOrder_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -730,7 +730,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_returnOrder(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_returnOrder_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_returnOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -749,7 +749,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	public function send_ship( $vendor_id, $ship_list){
 		
 		$this->initInvocation("ship");
-		$args = new \vipapis\delivery\DvdDeliveryService_ship_args();
+		$args = new \Voop\vipapis\delivery\DvdDeliveryService_ship_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -760,7 +760,7 @@ class _DvdDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\de
 	
 	public function recv_ship(){
 		
-		$result = new \vipapis\delivery\DvdDeliveryService_ship_result();
+		$result = new \Voop\vipapis\delivery\DvdDeliveryService_ship_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -815,7 +815,7 @@ class DvdDeliveryService_auditReturnResult_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\delivery\AuditReturnResultRequest();
+			$this->request = new \Voop\vipapis\delivery\AuditReturnResultRequest();
 			$this->request->read($input);
 			
 		}
@@ -838,7 +838,7 @@ class DvdDeliveryService_auditReturnResult_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -897,7 +897,7 @@ class DvdDeliveryService_confirmRefuseResult_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\delivery\ConfirmRefuseResultRequest();
+			$this->request = new \Voop\vipapis\delivery\ConfirmRefuseResultRequest();
 			$this->request->read($input);
 			
 		}
@@ -918,7 +918,7 @@ class DvdDeliveryService_confirmRefuseResult_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -975,7 +975,7 @@ class DvdDeliveryService_confirmReturnOrder_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\delivery\ConfirmReturnOrderRequest();
+			$this->request = new \Voop\vipapis\delivery\ConfirmReturnOrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -998,7 +998,7 @@ class DvdDeliveryService_confirmReturnOrder_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -1057,7 +1057,7 @@ class DvdDeliveryService_confirmReturnResult_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\delivery\ConfirmReturnResultRequest();
+			$this->request = new \Voop\vipapis\delivery\ConfirmReturnResultRequest();
 			$this->request->read($input);
 			
 		}
@@ -1078,7 +1078,7 @@ class DvdDeliveryService_confirmReturnResult_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1163,7 +1163,7 @@ class DvdDeliveryService_editShipInfo_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\delivery\Ship();
+					$elem0 = new \Voop\vipapis\delivery\Ship();
 					$elem0->read($input);
 					
 					$this->ship_list[$_size0++] = $elem0;
@@ -1199,7 +1199,7 @@ class DvdDeliveryService_editShipInfo_args {
 		
 		if (!is_array($this->ship_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1208,7 +1208,7 @@ class DvdDeliveryService_editShipInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2007,7 +2007,7 @@ class DvdDeliveryService_getOrderList_args {
 			
 			$xfer += $output->writeFieldBegin('order_status');
 			
-			$em = new \vipapis\common\OrderStatus; 
+			$em = new \Voop\vipapis\common\OrderStatus; 
 			$output->writeString($em::$__names[$this->order_status]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -2289,7 +2289,7 @@ class DvdDeliveryService_getOrderListByCreateTime_args {
 			
 			$xfer += $output->writeFieldBegin('order_status');
 			
-			$em = new \vipapis\common\OrderStatus; 
+			$em = new \Voop\vipapis\common\OrderStatus; 
 			$output->writeString($em::$__names[$this->order_status]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -2383,7 +2383,7 @@ class DvdDeliveryService_getOrderReturnDetails_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\delivery\ReturnOrderDetailsRequest();
+			$this->request = new \Voop\vipapis\delivery\ReturnOrderDetailsRequest();
 			$this->request->read($input);
 			
 		}
@@ -2406,7 +2406,7 @@ class DvdDeliveryService_getOrderReturnDetails_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3531,7 +3531,7 @@ class DvdDeliveryService_refuseOrder_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\delivery\RefuseOrReturnOrder();
+					$elem0 = new \Voop\vipapis\delivery\RefuseOrReturnOrder();
 					$elem0->read($input);
 					
 					$this->refuse_product_list[$_size0++] = $elem0;
@@ -3567,7 +3567,7 @@ class DvdDeliveryService_refuseOrder_args {
 		
 		if (!is_array($this->refuse_product_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3576,7 +3576,7 @@ class DvdDeliveryService_refuseOrder_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3665,7 +3665,7 @@ class DvdDeliveryService_returnOrder_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\delivery\RefuseOrReturnOrder();
+					$elem1 = new \Voop\vipapis\delivery\RefuseOrReturnOrder();
 					$elem1->read($input);
 					
 					$this->dvd_return_list[$_size1++] = $elem1;
@@ -3701,7 +3701,7 @@ class DvdDeliveryService_returnOrder_args {
 		
 		if (!is_array($this->dvd_return_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3710,7 +3710,7 @@ class DvdDeliveryService_returnOrder_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3799,7 +3799,7 @@ class DvdDeliveryService_ship_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\delivery\Ship();
+					$elem1 = new \Voop\vipapis\delivery\Ship();
 					$elem1->read($input);
 					
 					$this->ship_list[$_size1++] = $elem1;
@@ -3835,7 +3835,7 @@ class DvdDeliveryService_ship_args {
 		
 		if (!is_array($this->ship_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3844,7 +3844,7 @@ class DvdDeliveryService_ship_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4122,7 +4122,7 @@ class DvdDeliveryService_editShipInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\ShipResult();
+			$this->success = new \Voop\vipapis\delivery\ShipResult();
 			$this->success->read($input);
 			
 		}
@@ -4145,7 +4145,7 @@ class DvdDeliveryService_editShipInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4204,7 +4204,7 @@ class DvdDeliveryService_exportOrderById_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\ExportOrderByIdResponse();
+			$this->success = new \Voop\vipapis\delivery\ExportOrderByIdResponse();
 			$this->success->read($input);
 			
 		}
@@ -4227,7 +4227,7 @@ class DvdDeliveryService_exportOrderById_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4286,7 +4286,7 @@ class DvdDeliveryService_getCarrierList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\GetCarrierListResponse();
+			$this->success = new \Voop\vipapis\delivery\GetCarrierListResponse();
 			$this->success->read($input);
 			
 		}
@@ -4309,7 +4309,7 @@ class DvdDeliveryService_getCarrierList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4368,7 +4368,7 @@ class DvdDeliveryService_getOrderDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\GetOrderDetailResponse();
+			$this->success = new \Voop\vipapis\delivery\GetOrderDetailResponse();
 			$this->success->read($input);
 			
 		}
@@ -4391,7 +4391,7 @@ class DvdDeliveryService_getOrderDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4459,7 +4459,7 @@ class DvdDeliveryService_getOrderFinancialFields_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\delivery\OrderFinancialFields();
+					$elem0 = new \Voop\vipapis\delivery\OrderFinancialFields();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -4492,7 +4492,7 @@ class DvdDeliveryService_getOrderFinancialFields_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4501,7 +4501,7 @@ class DvdDeliveryService_getOrderFinancialFields_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4564,7 +4564,7 @@ class DvdDeliveryService_getOrderList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\GetOrderListResponse();
+			$this->success = new \Voop\vipapis\delivery\GetOrderListResponse();
 			$this->success->read($input);
 			
 		}
@@ -4587,7 +4587,7 @@ class DvdDeliveryService_getOrderList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4646,7 +4646,7 @@ class DvdDeliveryService_getOrderListByCreateTime_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\GetOrderListByCreateTimeResponse();
+			$this->success = new \Voop\vipapis\delivery\GetOrderListByCreateTimeResponse();
 			$this->success->read($input);
 			
 		}
@@ -4669,7 +4669,7 @@ class DvdDeliveryService_getOrderListByCreateTime_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4728,7 +4728,7 @@ class DvdDeliveryService_getOrderReturnDetails_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\OrderReturnDetailResponse();
+			$this->success = new \Voop\vipapis\delivery\OrderReturnDetailResponse();
 			$this->success->read($input);
 			
 		}
@@ -4751,7 +4751,7 @@ class DvdDeliveryService_getOrderReturnDetails_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4810,7 +4810,7 @@ class DvdDeliveryService_getOrderReturnList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\OrderReturnResponse();
+			$this->success = new \Voop\vipapis\delivery\OrderReturnResponse();
 			$this->success->read($input);
 			
 		}
@@ -4833,7 +4833,7 @@ class DvdDeliveryService_getOrderReturnList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4901,7 +4901,7 @@ class DvdDeliveryService_getOrderStatusById_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\delivery\DvdOrderStatus();
+					$elem0 = new \Voop\vipapis\delivery\DvdOrderStatus();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -4934,7 +4934,7 @@ class DvdDeliveryService_getOrderStatusById_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4943,7 +4943,7 @@ class DvdDeliveryService_getOrderStatusById_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5006,7 +5006,7 @@ class DvdDeliveryService_getPrintTemplate_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\PrintTemplateResponse();
+			$this->success = new \Voop\vipapis\delivery\PrintTemplateResponse();
 			$this->success->read($input);
 			
 		}
@@ -5029,7 +5029,7 @@ class DvdDeliveryService_getPrintTemplate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5088,7 +5088,7 @@ class DvdDeliveryService_getReturnList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\GetReturnListResponse();
+			$this->success = new \Voop\vipapis\delivery\GetReturnListResponse();
 			$this->success->read($input);
 			
 		}
@@ -5111,7 +5111,7 @@ class DvdDeliveryService_getReturnList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5170,7 +5170,7 @@ class DvdDeliveryService_getReturnProduct_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\GetReturnProductResponse();
+			$this->success = new \Voop\vipapis\delivery\GetReturnProductResponse();
 			$this->success->read($input);
 			
 		}
@@ -5193,7 +5193,7 @@ class DvdDeliveryService_getReturnProduct_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5252,7 +5252,7 @@ class DvdDeliveryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -5275,7 +5275,7 @@ class DvdDeliveryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5408,7 +5408,7 @@ class DvdDeliveryService_refuseOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\RefuseOrReturnProductResponse();
+			$this->success = new \Voop\vipapis\delivery\RefuseOrReturnProductResponse();
 			$this->success->read($input);
 			
 		}
@@ -5431,7 +5431,7 @@ class DvdDeliveryService_refuseOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5490,7 +5490,7 @@ class DvdDeliveryService_returnOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\RefuseOrReturnProductResponse();
+			$this->success = new \Voop\vipapis\delivery\RefuseOrReturnProductResponse();
 			$this->success->read($input);
 			
 		}
@@ -5513,7 +5513,7 @@ class DvdDeliveryService_returnOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5572,7 +5572,7 @@ class DvdDeliveryService_ship_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\delivery\ShipResult();
+			$this->success = new \Voop\vipapis\delivery\ShipResult();
 			$this->success->read($input);
 			
 		}
@@ -5595,7 +5595,7 @@ class DvdDeliveryService_ship_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\asc;
+namespace Voop\vipapis\marketplace\asc;
 
 class Asc {
 	
@@ -71,7 +71,7 @@ class Asc {
 				
 				$needSkip = false;
 				
-				$this->asc_brief = new \vipapis\marketplace\asc\AscBrief();
+				$this->asc_brief = new \Voop\vipapis\marketplace\asc\AscBrief();
 				$this->asc_brief->read($input);
 				
 			}
@@ -109,7 +109,7 @@ class Asc {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -132,7 +132,7 @@ class Asc {
 			
 			if (!is_object($this->asc_brief)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->asc_brief->write($output);
@@ -147,7 +147,7 @@ class Asc {
 			
 			if (!is_array($this->problem_order_sns)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

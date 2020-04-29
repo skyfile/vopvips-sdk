@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\track\service;
+namespace Voop\vipapis\track\service;
 require_once dirname(__FILE__).'/CarrierLogisticTrackService.php';
 class CarrierLogisticTrackServiceHelper extends _CarrierLogisticTrackServiceClient{
 	

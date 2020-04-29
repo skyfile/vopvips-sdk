@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\aftersale;
+namespace Voop\com\vip\vop\cup\api\aftersale;
 
 class Consignee {
 	

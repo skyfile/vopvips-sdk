@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vms\common;
+namespace Voop\com\vip\vms\common;
 
 class Pager {
 	

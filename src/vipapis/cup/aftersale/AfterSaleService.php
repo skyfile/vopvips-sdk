@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\cup\aftersale;
+namespace Voop\vipapis\cup\aftersale;
 interface AfterSaleServiceIf{
 	
 	
@@ -41,7 +41,7 @@ class _AfterSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	public function send_createReturnApply( $req_list){
 		
 		$this->initInvocation("createReturnApply");
-		$args = new \vipapis\cup\aftersale\AfterSaleService_createReturnApply_args();
+		$args = new \Voop\vipapis\cup\aftersale\AfterSaleService_createReturnApply_args();
 		
 		$args->req_list = $req_list;
 		
@@ -50,7 +50,7 @@ class _AfterSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	
 	public function recv_createReturnApply(){
 		
-		$result = new \vipapis\cup\aftersale\AfterSaleService_createReturnApply_result();
+		$result = new \Voop\vipapis\cup\aftersale\AfterSaleService_createReturnApply_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -69,7 +69,7 @@ class _AfterSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	public function send_getReturnApplyStatus( $start_time, $end_time, $page, $page_size){
 		
 		$this->initInvocation("getReturnApplyStatus");
-		$args = new \vipapis\cup\aftersale\AfterSaleService_getReturnApplyStatus_args();
+		$args = new \Voop\vipapis\cup\aftersale\AfterSaleService_getReturnApplyStatus_args();
 		
 		$args->start_time = $start_time;
 		
@@ -84,7 +84,7 @@ class _AfterSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	
 	public function recv_getReturnApplyStatus(){
 		
-		$result = new \vipapis\cup\aftersale\AfterSaleService_getReturnApplyStatus_result();
+		$result = new \Voop\vipapis\cup\aftersale\AfterSaleService_getReturnApplyStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -103,14 +103,14 @@ class _AfterSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\cup\aftersale\AfterSaleService_healthCheck_args();
+		$args = new \Voop\vipapis\cup\aftersale\AfterSaleService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\cup\aftersale\AfterSaleService_healthCheck_result();
+		$result = new \Voop\vipapis\cup\aftersale\AfterSaleService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -129,7 +129,7 @@ class _AfterSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	public function send_updateReturnApplyStatus( $req_list){
 		
 		$this->initInvocation("updateReturnApplyStatus");
-		$args = new \vipapis\cup\aftersale\AfterSaleService_updateReturnApplyStatus_args();
+		$args = new \Voop\vipapis\cup\aftersale\AfterSaleService_updateReturnApplyStatus_args();
 		
 		$args->req_list = $req_list;
 		
@@ -138,7 +138,7 @@ class _AfterSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	
 	public function recv_updateReturnApplyStatus(){
 		
-		$result = new \vipapis\cup\aftersale\AfterSaleService_updateReturnApplyStatus_result();
+		$result = new \Voop\vipapis\cup\aftersale\AfterSaleService_updateReturnApplyStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -157,7 +157,7 @@ class _AfterSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	public function send_updateReturnRefundResult( $req_list){
 		
 		$this->initInvocation("updateReturnRefundResult");
-		$args = new \vipapis\cup\aftersale\AfterSaleService_updateReturnRefundResult_args();
+		$args = new \Voop\vipapis\cup\aftersale\AfterSaleService_updateReturnRefundResult_args();
 		
 		$args->req_list = $req_list;
 		
@@ -166,7 +166,7 @@ class _AfterSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	
 	public function recv_updateReturnRefundResult(){
 		
-		$result = new \vipapis\cup\aftersale\AfterSaleService_updateReturnRefundResult_result();
+		$result = new \Voop\vipapis\cup\aftersale\AfterSaleService_updateReturnRefundResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -230,7 +230,7 @@ class AfterSaleService_createReturnApply_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\cup\api\aftersale\CreateReturnApplyReq();
+					$elem1 = new \Voop\com\vip\vop\cup\api\aftersale\CreateReturnApplyReq();
 					$elem1->read($input);
 					
 					$this->req_list[$_size1++] = $elem1;
@@ -261,7 +261,7 @@ class AfterSaleService_createReturnApply_args {
 		
 		if (!is_array($this->req_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -270,7 +270,7 @@ class AfterSaleService_createReturnApply_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -536,7 +536,7 @@ class AfterSaleService_updateReturnApplyStatus_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\cup\api\aftersale\UpdateReturnApplyStatusReq();
+					$elem0 = new \Voop\com\vip\vop\cup\api\aftersale\UpdateReturnApplyStatusReq();
 					$elem0->read($input);
 					
 					$this->req_list[$_size0++] = $elem0;
@@ -567,7 +567,7 @@ class AfterSaleService_updateReturnApplyStatus_args {
 		
 		if (!is_array($this->req_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -576,7 +576,7 @@ class AfterSaleService_updateReturnApplyStatus_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -646,7 +646,7 @@ class AfterSaleService_updateReturnRefundResult_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\cup\api\aftersale\UpdateReturnRefundResultReq();
+					$elem1 = new \Voop\com\vip\vop\cup\api\aftersale\UpdateReturnRefundResultReq();
 					$elem1->read($input);
 					
 					$this->req_list[$_size1++] = $elem1;
@@ -677,7 +677,7 @@ class AfterSaleService_updateReturnRefundResult_args {
 		
 		if (!is_array($this->req_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -686,7 +686,7 @@ class AfterSaleService_updateReturnRefundResult_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -747,7 +747,7 @@ class AfterSaleService_createReturnApply_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\aftersale\CreateReturnApplyResp();
+			$this->success = new \Voop\com\vip\vop\cup\api\aftersale\CreateReturnApplyResp();
 			$this->success->read($input);
 			
 		}
@@ -770,7 +770,7 @@ class AfterSaleService_createReturnApply_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -829,7 +829,7 @@ class AfterSaleService_getReturnApplyStatus_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\aftersale\GetReturnApplyStatusResp();
+			$this->success = new \Voop\com\vip\vop\cup\api\aftersale\GetReturnApplyStatusResp();
 			$this->success->read($input);
 			
 		}
@@ -852,7 +852,7 @@ class AfterSaleService_getReturnApplyStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -911,7 +911,7 @@ class AfterSaleService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -934,7 +934,7 @@ class AfterSaleService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -993,7 +993,7 @@ class AfterSaleService_updateReturnApplyStatus_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\aftersale\UpdateReturnApplyStatusResp();
+			$this->success = new \Voop\com\vip\vop\cup\api\aftersale\UpdateReturnApplyStatusResp();
 			$this->success->read($input);
 			
 		}
@@ -1016,7 +1016,7 @@ class AfterSaleService_updateReturnApplyStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1075,7 +1075,7 @@ class AfterSaleService_updateReturnRefundResult_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\aftersale\UpdateReturnRefundResultResp();
+			$this->success = new \Voop\com\vip\vop\cup\api\aftersale\UpdateReturnRefundResultResp();
 			$this->success->read($input);
 			
 		}
@@ -1098,7 +1098,7 @@ class AfterSaleService_updateReturnRefundResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

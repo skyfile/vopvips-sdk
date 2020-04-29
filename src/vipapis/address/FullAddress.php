@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\address;
+namespace Voop\vipapis\address;
 
 class FullAddress {
 	
@@ -80,7 +80,7 @@ class FullAddress {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\address\City();
+						$elem0 = new \Voop\vipapis\address\City();
 						$elem0->read($input);
 						
 						$this->cities[$_size0++] = $elem0;
@@ -102,7 +102,7 @@ class FullAddress {
 				
 				$needSkip = false;
 				
-				$this->address = new \vipapis\address\Address();
+				$this->address = new \Voop\vipapis\address\Address();
 				$this->address->read($input);
 				
 			}
@@ -111,7 +111,7 @@ class FullAddress {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -132,7 +132,7 @@ class FullAddress {
 		
 		if (!is_array($this->cities)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -141,7 +141,7 @@ class FullAddress {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -158,7 +158,7 @@ class FullAddress {
 			
 			if (!is_object($this->address)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->address->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\cup\aftersale;
+namespace Voop\vipapis\cup\aftersale;
 require_once dirname(__FILE__).'/AfterSaleService.php';
 class AfterSaleServiceHelper extends _AfterSaleServiceClient{
 	

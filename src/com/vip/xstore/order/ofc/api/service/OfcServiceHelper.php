@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\service;
+namespace Voop\com\vip\xstore\order\ofc\api\service;
 require_once dirname(__FILE__).'/OfcService.php';
 class OfcServiceHelper extends _OfcServiceClient{
 	

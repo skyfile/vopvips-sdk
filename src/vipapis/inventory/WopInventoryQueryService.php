@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\inventory;
+namespace Voop\vipapis\inventory;
 interface WopInventoryQueryServiceIf{
 	
 	
@@ -41,7 +41,7 @@ class _WopInventoryQueryServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_getChannelInventory( $vendor_id, $page_index, $page_count,\com\vip\domain\inventory\ChannelInventoryQueryCondition $queryCondition){
 		
 		$this->initInvocation("getChannelInventory");
-		$args = new \vipapis\inventory\WopInventoryQueryService_getChannelInventory_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryQueryService_getChannelInventory_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -56,7 +56,7 @@ class _WopInventoryQueryServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_getChannelInventory(){
 		
-		$result = new \vipapis\inventory\WopInventoryQueryService_getChannelInventory_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryQueryService_getChannelInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -75,7 +75,7 @@ class _WopInventoryQueryServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_getInbound( $vendor_id, $page_index, $page_count,\com\vip\domain\inventory\InboundCondition $queryCondition){
 		
 		$this->initInvocation("getInbound");
-		$args = new \vipapis\inventory\WopInventoryQueryService_getInbound_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryQueryService_getInbound_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -90,7 +90,7 @@ class _WopInventoryQueryServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_getInbound(){
 		
-		$result = new \vipapis\inventory\WopInventoryQueryService_getInbound_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryQueryService_getInbound_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -109,7 +109,7 @@ class _WopInventoryQueryServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_getPurchaseSalesInventory( $vendor_id, $page_index, $page_count,\com\vip\domain\inventory\PurchaseSalesInventoryCondition $queryCondition){
 		
 		$this->initInvocation("getPurchaseSalesInventory");
-		$args = new \vipapis\inventory\WopInventoryQueryService_getPurchaseSalesInventory_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryQueryService_getPurchaseSalesInventory_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -124,7 +124,7 @@ class _WopInventoryQueryServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_getPurchaseSalesInventory(){
 		
-		$result = new \vipapis\inventory\WopInventoryQueryService_getPurchaseSalesInventory_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryQueryService_getPurchaseSalesInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -143,7 +143,7 @@ class _WopInventoryQueryServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_getRealtimeInventory( $vendor_id, $page_index, $page_count,\com\vip\domain\inventory\RealtimeInventoryCondition $queryCondition){
 		
 		$this->initInvocation("getRealtimeInventory");
-		$args = new \vipapis\inventory\WopInventoryQueryService_getRealtimeInventory_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryQueryService_getRealtimeInventory_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -158,7 +158,7 @@ class _WopInventoryQueryServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_getRealtimeInventory(){
 		
-		$result = new \vipapis\inventory\WopInventoryQueryService_getRealtimeInventory_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryQueryService_getRealtimeInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -177,14 +177,14 @@ class _WopInventoryQueryServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\inventory\WopInventoryQueryService_healthCheck_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryQueryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\inventory\WopInventoryQueryService_healthCheck_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryQueryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -296,7 +296,7 @@ class WopInventoryQueryService_getChannelInventory_args {
 		if(true) {
 			
 			
-			$this->queryCondition = new \com\vip\domain\inventory\ChannelInventoryQueryCondition();
+			$this->queryCondition = new \Voop\com\vip\domain\inventory\ChannelInventoryQueryCondition();
 			$this->queryCondition->read($input);
 			
 		}
@@ -340,7 +340,7 @@ class WopInventoryQueryService_getChannelInventory_args {
 		
 		if (!is_object($this->queryCondition)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryCondition->write($output);
@@ -454,7 +454,7 @@ class WopInventoryQueryService_getInbound_args {
 		if(true) {
 			
 			
-			$this->queryCondition = new \com\vip\domain\inventory\InboundCondition();
+			$this->queryCondition = new \Voop\com\vip\domain\inventory\InboundCondition();
 			$this->queryCondition->read($input);
 			
 		}
@@ -498,7 +498,7 @@ class WopInventoryQueryService_getInbound_args {
 		
 		if (!is_object($this->queryCondition)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryCondition->write($output);
@@ -612,7 +612,7 @@ class WopInventoryQueryService_getPurchaseSalesInventory_args {
 		if(true) {
 			
 			
-			$this->queryCondition = new \com\vip\domain\inventory\PurchaseSalesInventoryCondition();
+			$this->queryCondition = new \Voop\com\vip\domain\inventory\PurchaseSalesInventoryCondition();
 			$this->queryCondition->read($input);
 			
 		}
@@ -660,7 +660,7 @@ class WopInventoryQueryService_getPurchaseSalesInventory_args {
 		
 		if (!is_object($this->queryCondition)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryCondition->write($output);
@@ -774,7 +774,7 @@ class WopInventoryQueryService_getRealtimeInventory_args {
 		if(true) {
 			
 			
-			$this->queryCondition = new \com\vip\domain\inventory\RealtimeInventoryCondition();
+			$this->queryCondition = new \Voop\com\vip\domain\inventory\RealtimeInventoryCondition();
 			$this->queryCondition->read($input);
 			
 		}
@@ -818,7 +818,7 @@ class WopInventoryQueryService_getRealtimeInventory_args {
 		
 		if (!is_object($this->queryCondition)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryCondition->write($output);
@@ -921,7 +921,7 @@ class WopInventoryQueryService_getChannelInventory_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\GetChannelInventoryResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\GetChannelInventoryResponse();
 			$this->success->read($input);
 			
 		}
@@ -944,7 +944,7 @@ class WopInventoryQueryService_getChannelInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1003,7 +1003,7 @@ class WopInventoryQueryService_getInbound_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\GetInboundResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\GetInboundResponse();
 			$this->success->read($input);
 			
 		}
@@ -1026,7 +1026,7 @@ class WopInventoryQueryService_getInbound_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1085,7 +1085,7 @@ class WopInventoryQueryService_getPurchaseSalesInventory_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\PurchaseSalesInventoryResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\PurchaseSalesInventoryResponse();
 			$this->success->read($input);
 			
 		}
@@ -1108,7 +1108,7 @@ class WopInventoryQueryService_getPurchaseSalesInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1167,7 +1167,7 @@ class WopInventoryQueryService_getRealtimeInventory_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\GetRealtimeInventoryResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\GetRealtimeInventoryResponse();
 			$this->success->read($input);
 			
 		}
@@ -1190,7 +1190,7 @@ class WopInventoryQueryService_getRealtimeInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1249,7 +1249,7 @@ class WopInventoryQueryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1272,7 +1272,7 @@ class WopInventoryQueryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

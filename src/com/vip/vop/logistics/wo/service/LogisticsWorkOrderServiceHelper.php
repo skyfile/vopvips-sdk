@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\wo\service;
+namespace Voop\com\vip\vop\logistics\wo\service;
 require_once dirname(__FILE__).'/LogisticsWorkOrderService.php';
 class LogisticsWorkOrderServiceHelper extends _LogisticsWorkOrderServiceClient{
 	

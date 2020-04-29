@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\size;
+namespace Voop\vipapis\size;
 
 class SizeDetailDo {
 	
@@ -88,7 +88,7 @@ class SizeDetailDo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

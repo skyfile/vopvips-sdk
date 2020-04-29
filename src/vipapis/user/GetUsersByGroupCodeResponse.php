@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\user;
+namespace Voop\vipapis\user;
 
 class GetUsersByGroupCodeResponse {
 	
@@ -87,7 +87,7 @@ class GetUsersByGroupCodeResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -110,7 +110,7 @@ class GetUsersByGroupCodeResponse {
 			
 			if (!is_array($this->users)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

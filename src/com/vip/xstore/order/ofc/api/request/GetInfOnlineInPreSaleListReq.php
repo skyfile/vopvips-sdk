@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\request;
+namespace Voop\com\vip\xstore\order\ofc\api\request;
 
 class GetInfOnlineInPreSaleListReq {
 	
@@ -111,7 +111,7 @@ class GetInfOnlineInPreSaleListReq {
 				
 				$needSkip = false;
 				
-				$this->errorCountRange = new \com\vip\xstore\order\common\pojo\vo\RangeParam();
+				$this->errorCountRange = new \Voop\com\vip\xstore\order\common\pojo\vo\RangeParam();
 				$this->errorCountRange->read($input);
 				
 			}
@@ -182,7 +182,7 @@ class GetInfOnlineInPreSaleListReq {
 			
 			if (!is_object($this->errorCountRange)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->errorCountRange->write($output);

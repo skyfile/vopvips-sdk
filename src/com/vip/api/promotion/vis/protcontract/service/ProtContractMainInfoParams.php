@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\protcontract\service;
+namespace Voop\com\vip\api\promotion\vis\protcontract\service;
 
 class ProtContractMainInfoParams {
 	
@@ -570,7 +570,7 @@ class ProtContractMainInfoParams {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\api\promotion\vis\protcontract\service\SalesWarehouse();
+						$elem0 = new \Voop\com\vip\api\promotion\vis\protcontract\service\SalesWarehouse();
 						$elem0->read($input);
 						
 						$this->salesWarehouseList[$_size0++] = $elem0;
@@ -851,7 +851,7 @@ class ProtContractMainInfoParams {
 			
 			if (!is_array($this->salesWarehouseList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -860,7 +860,7 @@ class ProtContractMainInfoParams {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

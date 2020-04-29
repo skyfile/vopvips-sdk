@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\domain\order;
+namespace Voop\com\vip\domain\order;
 final class OrderIsPrintingPrice{
 	
 	

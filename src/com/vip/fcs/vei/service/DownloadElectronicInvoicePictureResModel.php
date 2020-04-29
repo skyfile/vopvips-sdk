@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vei\service;
+namespace Voop\com\vip\fcs\vei\service;
 
 class DownloadElectronicInvoicePictureResModel {
 	
@@ -81,7 +81,7 @@ class DownloadElectronicInvoicePictureResModel {
 				
 				$needSkip = false;
 				
-				$this->restulMesg = new \com\vip\fcs\vei\service\BaseRetMsg();
+				$this->restulMesg = new \Voop\com\vip\fcs\vei\service\BaseRetMsg();
 				$this->restulMesg->read($input);
 				
 			}
@@ -122,7 +122,7 @@ class DownloadElectronicInvoicePictureResModel {
 			
 			if (!is_object($this->restulMesg)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->restulMesg->write($output);

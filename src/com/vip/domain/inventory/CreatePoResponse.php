@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\domain\inventory;
+namespace Voop\com\vip\domain\inventory;
 
 class CreatePoResponse {
 	
@@ -140,7 +140,7 @@ class CreatePoResponse {
 		
 		$xfer += $output->writeFieldBegin('opResult');
 		
-		$em = new \com\vip\domain\inventory\PoResult; 
+		$em = new \Voop\com\vip\domain\inventory\PoResult; 
 		$output->writeString($em::$__names[$this->opResult]);  
 		
 		$xfer += $output->writeFieldEnd();

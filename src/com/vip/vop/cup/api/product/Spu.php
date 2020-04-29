@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\product;
+namespace Voop\com\vip\vop\cup\api\product;
 
 class Spu {
 	
@@ -110,7 +110,7 @@ class Spu {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\vop\cup\api\product\ProdSkuInfo();
+						$elem1 = new \Voop\com\vip\vop\cup\api\product\ProdSkuInfo();
 						$elem1->read($input);
 						
 						$this->prod_sku_list[$_size1++] = $elem1;
@@ -170,7 +170,7 @@ class Spu {
 			
 			if (!is_array($this->prod_sku_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -179,7 +179,7 @@ class Spu {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

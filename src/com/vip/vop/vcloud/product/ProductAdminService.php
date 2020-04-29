@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\product;
+namespace Voop\com\vip\vop\vcloud\product;
 interface ProductAdminServiceIf{
 	
 	
@@ -32,11 +32,11 @@ interface ProductAdminServiceIf{
 	
 	public function pushProductToVdgBySpuIdList( $spuIdList);
 	
-	public function saveEmailConfig(\com\vip\vop\vcloud\product\EmailConfig $config);
+	public function saveEmailConfig(\Voop\com\vip\vop\vcloud\product\EmailConfig $config);
 	
-	public function saveFileLogSetting(\com\vip\vop\vcloud\product\FileLogSetting $fileLogSetting);
+	public function saveFileLogSetting(\Voop\com\vip\vop\vcloud\product\FileLogSetting $fileLogSetting);
 	
-	public function saveHost(\com\vip\vop\vcloud\product\Host $host);
+	public function saveHost(\Voop\com\vip\vop\vcloud\product\Host $host);
 	
 	public function testSftpConnectivity( $host, $port, $username, $password);
 	
@@ -46,7 +46,7 @@ interface ProductAdminServiceIf{
 	
 	public function updateProductSkuPrice( $skuPrices);
 	
-	public function updateProductSkuStatus(\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus);
+	public function updateProductSkuStatus(\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus);
 	
 	public function updateProductSpu( $spuId,\com\vip\vop\vcloud\product\Spu $spu);
 	
@@ -75,7 +75,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_deleteEmailConfig( $partnerId, $email){
 		
 		$this->initInvocation("deleteEmailConfig");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_deleteEmailConfig_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_deleteEmailConfig_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -86,7 +86,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_deleteEmailConfig(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_deleteEmailConfig_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_deleteEmailConfig_result();
 		$this->receive_base($result);
 		
 	}
@@ -101,7 +101,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_deleteFileLogSettingByPrimaryKey( $id){
 		
 		$this->initInvocation("deleteFileLogSettingByPrimaryKey");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_deleteFileLogSettingByPrimaryKey_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_deleteFileLogSettingByPrimaryKey_args();
 		
 		$args->id = $id;
 		
@@ -110,7 +110,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_deleteFileLogSettingByPrimaryKey(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_deleteFileLogSettingByPrimaryKey_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_deleteFileLogSettingByPrimaryKey_result();
 		$this->receive_base($result);
 		
 	}
@@ -125,7 +125,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_deleteHostByPrimaryKey( $id){
 		
 		$this->initInvocation("deleteHostByPrimaryKey");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_deleteHostByPrimaryKey_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_deleteHostByPrimaryKey_args();
 		
 		$args->id = $id;
 		
@@ -134,7 +134,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_deleteHostByPrimaryKey(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_deleteHostByPrimaryKey_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_deleteHostByPrimaryKey_result();
 		$this->receive_base($result);
 		
 	}
@@ -149,7 +149,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_deleteProductByPartner( $partnerId){
 		
 		$this->initInvocation("deleteProductByPartner");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_deleteProductByPartner_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_deleteProductByPartner_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -158,7 +158,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_deleteProductByPartner(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_deleteProductByPartner_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_deleteProductByPartner_result();
 		$this->receive_base($result);
 		
 	}
@@ -173,14 +173,14 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -199,14 +199,14 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_listAllFileLogSettings(){
 		
 		$this->initInvocation("listAllFileLogSettings");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_listAllFileLogSettings_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_listAllFileLogSettings_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_listAllFileLogSettings(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_listAllFileLogSettings_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_listAllFileLogSettings_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -225,7 +225,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_listHosts( $partnerId){
 		
 		$this->initInvocation("listHosts");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_listHosts_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_listHosts_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -234,7 +234,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_listHosts(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_listHosts_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_listHosts_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -253,7 +253,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_pushPriceToVdgByIdList( $idList){
 		
 		$this->initInvocation("pushPriceToVdgByIdList");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_pushPriceToVdgByIdList_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_pushPriceToVdgByIdList_args();
 		
 		$args->idList = $idList;
 		
@@ -262,7 +262,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_pushPriceToVdgByIdList(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_pushPriceToVdgByIdList_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_pushPriceToVdgByIdList_result();
 		$this->receive_base($result);
 		
 	}
@@ -277,7 +277,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_pushProductToVdgBySkuIdList( $skuIdList){
 		
 		$this->initInvocation("pushProductToVdgBySkuIdList");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_pushProductToVdgBySkuIdList_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_pushProductToVdgBySkuIdList_args();
 		
 		$args->skuIdList = $skuIdList;
 		
@@ -286,7 +286,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_pushProductToVdgBySkuIdList(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_pushProductToVdgBySkuIdList_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_pushProductToVdgBySkuIdList_result();
 		$this->receive_base($result);
 		
 	}
@@ -301,7 +301,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_pushProductToVdgBySpuIdList( $spuIdList){
 		
 		$this->initInvocation("pushProductToVdgBySpuIdList");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_pushProductToVdgBySpuIdList_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_pushProductToVdgBySpuIdList_args();
 		
 		$args->spuIdList = $spuIdList;
 		
@@ -310,22 +310,22 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_pushProductToVdgBySpuIdList(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_pushProductToVdgBySpuIdList_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_pushProductToVdgBySpuIdList_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function saveEmailConfig(\com\vip\vop\vcloud\product\EmailConfig $config){
+	public function saveEmailConfig(\Voop\com\vip\vop\vcloud\product\EmailConfig $config){
 		
 		$this->send_saveEmailConfig( $config);
 		return $this->recv_saveEmailConfig();
 	}
 	
-	public function send_saveEmailConfig(\com\vip\vop\vcloud\product\EmailConfig $config){
+	public function send_saveEmailConfig(\Voop\com\vip\vop\vcloud\product\EmailConfig $config){
 		
 		$this->initInvocation("saveEmailConfig");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_saveEmailConfig_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_saveEmailConfig_args();
 		
 		$args->config = $config;
 		
@@ -334,22 +334,22 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_saveEmailConfig(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_saveEmailConfig_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_saveEmailConfig_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function saveFileLogSetting(\com\vip\vop\vcloud\product\FileLogSetting $fileLogSetting){
+	public function saveFileLogSetting(\Voop\com\vip\vop\vcloud\product\FileLogSetting $fileLogSetting){
 		
 		$this->send_saveFileLogSetting( $fileLogSetting);
 		return $this->recv_saveFileLogSetting();
 	}
 	
-	public function send_saveFileLogSetting(\com\vip\vop\vcloud\product\FileLogSetting $fileLogSetting){
+	public function send_saveFileLogSetting(\Voop\com\vip\vop\vcloud\product\FileLogSetting $fileLogSetting){
 		
 		$this->initInvocation("saveFileLogSetting");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_saveFileLogSetting_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_saveFileLogSetting_args();
 		
 		$args->fileLogSetting = $fileLogSetting;
 		
@@ -358,22 +358,22 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_saveFileLogSetting(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_saveFileLogSetting_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_saveFileLogSetting_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function saveHost(\com\vip\vop\vcloud\product\Host $host){
+	public function saveHost(\Voop\com\vip\vop\vcloud\product\Host $host){
 		
 		$this->send_saveHost( $host);
 		return $this->recv_saveHost();
 	}
 	
-	public function send_saveHost(\com\vip\vop\vcloud\product\Host $host){
+	public function send_saveHost(\Voop\com\vip\vop\vcloud\product\Host $host){
 		
 		$this->initInvocation("saveHost");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_saveHost_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_saveHost_args();
 		
 		$args->host = $host;
 		
@@ -382,7 +382,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_saveHost(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_saveHost_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_saveHost_result();
 		$this->receive_base($result);
 		
 	}
@@ -397,7 +397,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_testSftpConnectivity( $host, $port, $username, $password){
 		
 		$this->initInvocation("testSftpConnectivity");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_testSftpConnectivity_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_testSftpConnectivity_args();
 		
 		$args->host = $host;
 		
@@ -412,7 +412,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_testSftpConnectivity(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_testSftpConnectivity_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_testSftpConnectivity_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -431,7 +431,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_updateProductSku( $skuId,\com\vip\vop\vcloud\product\Sku $sku){
 		
 		$this->initInvocation("updateProductSku");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSku_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSku_args();
 		
 		$args->skuId = $skuId;
 		
@@ -442,7 +442,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_updateProductSku(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSku_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSku_result();
 		$this->receive_base($result);
 		
 	}
@@ -457,7 +457,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_updateProductSkuAttr( $skuId, $attributes){
 		
 		$this->initInvocation("updateProductSkuAttr");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuAttr_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuAttr_args();
 		
 		$args->skuId = $skuId;
 		
@@ -468,7 +468,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_updateProductSkuAttr(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuAttr_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuAttr_result();
 		$this->receive_base($result);
 		
 	}
@@ -483,7 +483,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_updateProductSkuPrice( $skuPrices){
 		
 		$this->initInvocation("updateProductSkuPrice");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuPrice_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuPrice_args();
 		
 		$args->skuPrices = $skuPrices;
 		
@@ -492,22 +492,22 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_updateProductSkuPrice(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuPrice_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuPrice_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function updateProductSkuStatus(\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus){
+	public function updateProductSkuStatus(\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus){
 		
 		$this->send_updateProductSkuStatus( $criteria, $skuStatus);
 		return $this->recv_updateProductSkuStatus();
 	}
 	
-	public function send_updateProductSkuStatus(\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus){
+	public function send_updateProductSkuStatus(\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus){
 		
 		$this->initInvocation("updateProductSkuStatus");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuStatus_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuStatus_args();
 		
 		$args->criteria = $criteria;
 		
@@ -518,7 +518,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_updateProductSkuStatus(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuStatus_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuStatus_result();
 		$this->receive_base($result);
 		
 	}
@@ -533,7 +533,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_updateProductSpu( $spuId,\com\vip\vop\vcloud\product\Spu $spu){
 		
 		$this->initInvocation("updateProductSpu");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSpu_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSpu_args();
 		
 		$args->spuId = $spuId;
 		
@@ -544,7 +544,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_updateProductSpu(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSpu_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSpu_result();
 		$this->receive_base($result);
 		
 	}
@@ -559,7 +559,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_updateProductSpuAttr( $spuId, $attributes){
 		
 		$this->initInvocation("updateProductSpuAttr");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSpuAttr_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSpuAttr_args();
 		
 		$args->spuId = $spuId;
 		
@@ -570,7 +570,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_updateProductSpuAttr(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_updateProductSpuAttr_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSpuAttr_result();
 		$this->receive_base($result);
 		
 	}
@@ -585,7 +585,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_updateSftpFileLog( $logIdList, $logType, $status){
 		
 		$this->initInvocation("updateSftpFileLog");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_updateSftpFileLog_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateSftpFileLog_args();
 		
 		$args->logIdList = $logIdList;
 		
@@ -598,7 +598,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_updateSftpFileLog(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_updateSftpFileLog_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateSftpFileLog_result();
 		$this->receive_base($result);
 		
 	}
@@ -613,7 +613,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	public function send_updateSpuImageUrl( $partnerId, $spu, $imgPath, $url){
 		
 		$this->initInvocation("updateSpuImageUrl");
-		$args = new \com\vip\vop\vcloud\product\ProductAdminService_updateSpuImageUrl_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateSpuImageUrl_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -628,7 +628,7 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	
 	public function recv_updateSpuImageUrl(){
 		
-		$result = new \com\vip\vop\vcloud\product\ProductAdminService_updateSpuImageUrl_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateSpuImageUrl_result();
 		$this->receive_base($result);
 		
 	}
@@ -1183,7 +1183,7 @@ class ProductAdminService_pushPriceToVdgByIdList_args {
 		
 		if (!is_array($this->idList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1285,7 +1285,7 @@ class ProductAdminService_pushProductToVdgBySkuIdList_args {
 		
 		if (!is_array($this->skuIdList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1387,7 +1387,7 @@ class ProductAdminService_pushProductToVdgBySpuIdList_args {
 		
 		if (!is_array($this->spuIdList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1451,7 +1451,7 @@ class ProductAdminService_saveEmailConfig_args {
 		if(true) {
 			
 			
-			$this->config = new \com\vip\vop\vcloud\product\EmailConfig();
+			$this->config = new \Voop\com\vip\vop\vcloud\product\EmailConfig();
 			$this->config->read($input);
 			
 		}
@@ -1472,7 +1472,7 @@ class ProductAdminService_saveEmailConfig_args {
 		
 		if (!is_object($this->config)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->config->write($output);
@@ -1529,7 +1529,7 @@ class ProductAdminService_saveFileLogSetting_args {
 		if(true) {
 			
 			
-			$this->fileLogSetting = new \com\vip\vop\vcloud\product\FileLogSetting();
+			$this->fileLogSetting = new \Voop\com\vip\vop\vcloud\product\FileLogSetting();
 			$this->fileLogSetting->read($input);
 			
 		}
@@ -1550,7 +1550,7 @@ class ProductAdminService_saveFileLogSetting_args {
 		
 		if (!is_object($this->fileLogSetting)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->fileLogSetting->write($output);
@@ -1607,7 +1607,7 @@ class ProductAdminService_saveHost_args {
 		if(true) {
 			
 			
-			$this->host = new \com\vip\vop\vcloud\product\Host();
+			$this->host = new \Voop\com\vip\vop\vcloud\product\Host();
 			$this->host->read($input);
 			
 		}
@@ -1628,7 +1628,7 @@ class ProductAdminService_saveHost_args {
 		
 		if (!is_object($this->host)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->host->write($output);
@@ -1846,7 +1846,7 @@ class ProductAdminService_updateProductSku_args {
 		if(true) {
 			
 			
-			$this->sku = new \com\vip\vop\vcloud\product\Sku();
+			$this->sku = new \Voop\com\vip\vop\vcloud\product\Sku();
 			$this->sku->read($input);
 			
 		}
@@ -1876,7 +1876,7 @@ class ProductAdminService_updateProductSku_args {
 		
 		if (!is_object($this->sku)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->sku->write($output);
@@ -1961,7 +1961,7 @@ class ProductAdminService_updateProductSkuAttr_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\product\Attribute();
+					$elem0 = new \Voop\com\vip\vop\vcloud\product\Attribute();
 					$elem0->read($input);
 					
 					$this->attributes[$_size0++] = $elem0;
@@ -2001,7 +2001,7 @@ class ProductAdminService_updateProductSkuAttr_args {
 		
 		if (!is_array($this->attributes)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2010,7 +2010,7 @@ class ProductAdminService_updateProductSkuAttr_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2080,7 +2080,7 @@ class ProductAdminService_updateProductSkuPrice_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\vcloud\product\SkuPrice();
+					$elem1 = new \Voop\com\vip\vop\vcloud\product\SkuPrice();
 					$elem1->read($input);
 					
 					$this->skuPrices[$_size1++] = $elem1;
@@ -2111,7 +2111,7 @@ class ProductAdminService_updateProductSkuPrice_args {
 		
 		if (!is_array($this->skuPrices)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2120,7 +2120,7 @@ class ProductAdminService_updateProductSkuPrice_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2191,7 +2191,7 @@ class ProductAdminService_updateProductSkuStatus_args {
 		if(true) {
 			
 			
-			$this->criteria = new \com\vip\vop\vcloud\product\ProductSkuStatus();
+			$this->criteria = new \Voop\com\vip\vop\vcloud\product\ProductSkuStatus();
 			$this->criteria->read($input);
 			
 		}
@@ -2202,7 +2202,7 @@ class ProductAdminService_updateProductSkuStatus_args {
 		if(true) {
 			
 			
-			$this->skuStatus = new \com\vip\vop\vcloud\product\ProductSkuStatus();
+			$this->skuStatus = new \Voop\com\vip\vop\vcloud\product\ProductSkuStatus();
 			$this->skuStatus->read($input);
 			
 		}
@@ -2223,7 +2223,7 @@ class ProductAdminService_updateProductSkuStatus_args {
 		
 		if (!is_object($this->criteria)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->criteria->write($output);
@@ -2234,7 +2234,7 @@ class ProductAdminService_updateProductSkuStatus_args {
 		
 		if (!is_object($this->skuStatus)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->skuStatus->write($output);
@@ -2310,7 +2310,7 @@ class ProductAdminService_updateProductSpu_args {
 		if(true) {
 			
 			
-			$this->spu = new \com\vip\vop\vcloud\product\Spu();
+			$this->spu = new \Voop\com\vip\vop\vcloud\product\Spu();
 			$this->spu->read($input);
 			
 		}
@@ -2340,7 +2340,7 @@ class ProductAdminService_updateProductSpu_args {
 		
 		if (!is_object($this->spu)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->spu->write($output);
@@ -2425,7 +2425,7 @@ class ProductAdminService_updateProductSpuAttr_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\product\Attribute();
+					$elem0 = new \Voop\com\vip\vop\vcloud\product\Attribute();
 					$elem0->read($input);
 					
 					$this->attributes[$_size0++] = $elem0;
@@ -2465,7 +2465,7 @@ class ProductAdminService_updateProductSpuAttr_args {
 		
 		if (!is_array($this->attributes)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2474,7 +2474,7 @@ class ProductAdminService_updateProductSpuAttr_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2613,7 +2613,7 @@ class ProductAdminService_updateSftpFileLog_args {
 			
 			if (!is_array($this->logIdList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3039,7 +3039,7 @@ class ProductAdminService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -3062,7 +3062,7 @@ class ProductAdminService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3130,7 +3130,7 @@ class ProductAdminService_listAllFileLogSettings_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\product\FileLogSetting();
+					$elem0 = new \Voop\com\vip\vop\vcloud\product\FileLogSetting();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -3163,7 +3163,7 @@ class ProductAdminService_listAllFileLogSettings_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3172,7 +3172,7 @@ class ProductAdminService_listAllFileLogSettings_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3244,7 +3244,7 @@ class ProductAdminService_listHosts_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\vcloud\product\Host();
+					$elem1 = new \Voop\com\vip\vop\vcloud\product\Host();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -3277,7 +3277,7 @@ class ProductAdminService_listHosts_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3286,7 +3286,7 @@ class ProductAdminService_listHosts_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3683,7 +3683,7 @@ class ProductAdminService_testSftpConnectivity_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

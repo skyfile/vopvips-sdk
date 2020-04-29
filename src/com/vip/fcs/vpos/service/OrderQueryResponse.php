@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vpos\service;
+namespace Voop\com\vip\fcs\vpos\service;
 
 class OrderQueryResponse {
 	
@@ -71,7 +71,7 @@ class OrderQueryResponse {
 				
 				$needSkip = false;
 				
-				$this->orderQueryRequest = new \com\vip\fcs\vpos\service\OrderQueryRequest();
+				$this->orderQueryRequest = new \Voop\com\vip\fcs\vpos\service\OrderQueryRequest();
 				$this->orderQueryRequest->read($input);
 				
 			}
@@ -92,7 +92,7 @@ class OrderQueryResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\fcs\vpos\service\VposOrderResultVO();
+						$elem0 = new \Voop\com\vip\fcs\vpos\service\VposOrderResultVO();
 						$elem0->read($input);
 						
 						$this->orderQueryResult[$_size0++] = $elem0;
@@ -134,7 +134,7 @@ class OrderQueryResponse {
 			
 			if (!is_object($this->orderQueryRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->orderQueryRequest->write($output);
@@ -149,7 +149,7 @@ class OrderQueryResponse {
 			
 			if (!is_array($this->orderQueryResult)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -158,7 +158,7 @@ class OrderQueryResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

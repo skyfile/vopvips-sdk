@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vipapis\productsale\service;
+namespace Voop\com\vip\vipapis\productsale\service;
 
 class ProductSaleParam {
 	

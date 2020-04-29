@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\protcontract\service;
+namespace Voop\com\vip\api\promotion\vis\protcontract\service;
 
 class ProtContractSubmitParam {
 	
@@ -81,7 +81,7 @@ class ProtContractSubmitParam {
 				
 				$needSkip = false;
 				
-				$this->checkCaptchaParam = new \com\vip\api\promotion\vis\protcontract\service\CheckCaptchaParam();
+				$this->checkCaptchaParam = new \Voop\com\vip\api\promotion\vis\protcontract\service\CheckCaptchaParam();
 				$this->checkCaptchaParam->read($input);
 				
 			}
@@ -118,7 +118,7 @@ class ProtContractSubmitParam {
 			
 			if (!is_object($this->checkCaptchaParam)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->checkCaptchaParam->write($output);

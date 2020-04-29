@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\bulkbuying\api;
+namespace Voop\vipapis\xstore\cc\bulkbuying\api;
 
 class QueryPoWarehouseReceiptReq {
 	
@@ -128,7 +128,7 @@ class QueryPoWarehouseReceiptReq {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

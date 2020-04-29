@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\price\api;
+namespace Voop\vipapis\xstore\cc\price\api;
 require_once dirname(__FILE__).'/PriceService.php';
 class PriceServiceHelper extends _PriceServiceClient{
 	

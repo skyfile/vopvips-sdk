@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipmax\order;
+namespace Voop\vipapis\vipmax\order;
 
 class WarehouseInfo {
 	
@@ -128,7 +128,7 @@ class WarehouseInfo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

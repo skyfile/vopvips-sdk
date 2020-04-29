@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\request;
+namespace Voop\com\vip\xstore\order\ofc\api\request;
 
 class UpdateOfcSyncPreSaleDataReq {
 	
@@ -91,7 +91,7 @@ class UpdateOfcSyncPreSaleDataReq {
 				
 				$needSkip = false;
 				
-				$this->syncData = new \com\vip\xstore\order\common\pojo\vo\OfcSyncPreSaleDataVO();
+				$this->syncData = new \Voop\com\vip\xstore\order\common\pojo\vo\OfcSyncPreSaleDataVO();
 				$this->syncData->read($input);
 				
 			}
@@ -142,7 +142,7 @@ class UpdateOfcSyncPreSaleDataReq {
 			
 			if (!is_object($this->syncData)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->syncData->write($output);

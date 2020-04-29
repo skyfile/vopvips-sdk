@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vlg\wms;
+namespace Voop\vipapis\vlg\wms;
 require_once dirname(__FILE__).'/OutWmsService.php';
 class OutWmsServiceHelper extends _OutWmsServiceClient{
 	

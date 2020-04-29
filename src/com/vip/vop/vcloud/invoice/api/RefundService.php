@@ -8,21 +8,21 @@
 *
 */
 
-namespace com\vip\vop\vcloud\invoice\api;
+namespace Voop\com\vip\vop\vcloud\invoice\api;
 interface RefundServiceIf{
 	
 	
-	public function dealRefund(\com\vip\vop\vcloud\invoice\api\Refund $refund);
+	public function dealRefund(\Voop\com\vip\vop\vcloud\invoice\api\Refund $refund);
 	
 	public function healthCheck();
 	
-	public function matchReturnApplication(\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req);
+	public function matchReturnApplication(\Voop\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req);
 	
 	public function pullRefundFromVdg( $lastUpdateTime);
 	
-	public function queryRefunds(\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req);
+	public function queryRefunds(\Voop\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req);
 	
-	public function receiveRefund(\com\vip\vop\vcloud\invoice\api\Refund $refund);
+	public function receiveRefund(\Voop\com\vip\vop\vcloud\invoice\api\Refund $refund);
 	
 	public function updateDealType( $id);
 	
@@ -36,16 +36,16 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	}
 	
 	
-	public function dealRefund(\com\vip\vop\vcloud\invoice\api\Refund $refund){
+	public function dealRefund(\Voop\com\vip\vop\vcloud\invoice\api\Refund $refund){
 		
 		$this->send_dealRefund( $refund);
 		return $this->recv_dealRefund();
 	}
 	
-	public function send_dealRefund(\com\vip\vop\vcloud\invoice\api\Refund $refund){
+	public function send_dealRefund(\Voop\com\vip\vop\vcloud\invoice\api\Refund $refund){
 		
 		$this->initInvocation("dealRefund");
-		$args = new \com\vip\vop\vcloud\invoice\api\RefundService_dealRefund_args();
+		$args = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_dealRefund_args();
 		
 		$args->refund = $refund;
 		
@@ -54,7 +54,7 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	
 	public function recv_dealRefund(){
 		
-		$result = new \com\vip\vop\vcloud\invoice\api\RefundService_dealRefund_result();
+		$result = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_dealRefund_result();
 		$this->receive_base($result);
 		
 	}
@@ -69,14 +69,14 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\vcloud\invoice\api\RefundService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\vcloud\invoice\api\RefundService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -86,16 +86,16 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	}
 	
 	
-	public function matchReturnApplication(\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req){
+	public function matchReturnApplication(\Voop\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req){
 		
 		$this->send_matchReturnApplication( $req);
 		return $this->recv_matchReturnApplication();
 	}
 	
-	public function send_matchReturnApplication(\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req){
+	public function send_matchReturnApplication(\Voop\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req){
 		
 		$this->initInvocation("matchReturnApplication");
-		$args = new \com\vip\vop\vcloud\invoice\api\RefundService_matchReturnApplication_args();
+		$args = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_matchReturnApplication_args();
 		
 		$args->req = $req;
 		
@@ -104,7 +104,7 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	
 	public function recv_matchReturnApplication(){
 		
-		$result = new \com\vip\vop\vcloud\invoice\api\RefundService_matchReturnApplication_result();
+		$result = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_matchReturnApplication_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -123,7 +123,7 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	public function send_pullRefundFromVdg( $lastUpdateTime){
 		
 		$this->initInvocation("pullRefundFromVdg");
-		$args = new \com\vip\vop\vcloud\invoice\api\RefundService_pullRefundFromVdg_args();
+		$args = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_pullRefundFromVdg_args();
 		
 		$args->lastUpdateTime = $lastUpdateTime;
 		
@@ -132,22 +132,22 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	
 	public function recv_pullRefundFromVdg(){
 		
-		$result = new \com\vip\vop\vcloud\invoice\api\RefundService_pullRefundFromVdg_result();
+		$result = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_pullRefundFromVdg_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function queryRefunds(\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req){
+	public function queryRefunds(\Voop\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req){
 		
 		$this->send_queryRefunds( $req);
 		return $this->recv_queryRefunds();
 	}
 	
-	public function send_queryRefunds(\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req){
+	public function send_queryRefunds(\Voop\com\vip\vop\vcloud\invoice\api\QueryRefundReq $req){
 		
 		$this->initInvocation("queryRefunds");
-		$args = new \com\vip\vop\vcloud\invoice\api\RefundService_queryRefunds_args();
+		$args = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_queryRefunds_args();
 		
 		$args->req = $req;
 		
@@ -156,7 +156,7 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	
 	public function recv_queryRefunds(){
 		
-		$result = new \com\vip\vop\vcloud\invoice\api\RefundService_queryRefunds_result();
+		$result = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_queryRefunds_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -166,16 +166,16 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	}
 	
 	
-	public function receiveRefund(\com\vip\vop\vcloud\invoice\api\Refund $refund){
+	public function receiveRefund(\Voop\com\vip\vop\vcloud\invoice\api\Refund $refund){
 		
 		$this->send_receiveRefund( $refund);
 		return $this->recv_receiveRefund();
 	}
 	
-	public function send_receiveRefund(\com\vip\vop\vcloud\invoice\api\Refund $refund){
+	public function send_receiveRefund(\Voop\com\vip\vop\vcloud\invoice\api\Refund $refund){
 		
 		$this->initInvocation("receiveRefund");
-		$args = new \com\vip\vop\vcloud\invoice\api\RefundService_receiveRefund_args();
+		$args = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_receiveRefund_args();
 		
 		$args->refund = $refund;
 		
@@ -184,7 +184,7 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	
 	public function recv_receiveRefund(){
 		
-		$result = new \com\vip\vop\vcloud\invoice\api\RefundService_receiveRefund_result();
+		$result = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_receiveRefund_result();
 		$this->receive_base($result);
 		
 	}
@@ -199,7 +199,7 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	public function send_updateDealType( $id){
 		
 		$this->initInvocation("updateDealType");
-		$args = new \com\vip\vop\vcloud\invoice\api\RefundService_updateDealType_args();
+		$args = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_updateDealType_args();
 		
 		$args->id = $id;
 		
@@ -208,7 +208,7 @@ class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcl
 	
 	public function recv_updateDealType(){
 		
-		$result = new \com\vip\vop\vcloud\invoice\api\RefundService_updateDealType_result();
+		$result = new \Voop\com\vip\vop\vcloud\invoice\api\RefundService_updateDealType_result();
 		$this->receive_base($result);
 		
 	}
@@ -259,7 +259,7 @@ class RefundService_dealRefund_args {
 		if(true) {
 			
 			
-			$this->refund = new \com\vip\vop\vcloud\invoice\api\Refund();
+			$this->refund = new \Voop\com\vip\vop\vcloud\invoice\api\Refund();
 			$this->refund->read($input);
 			
 		}
@@ -282,7 +282,7 @@ class RefundService_dealRefund_args {
 			
 			if (!is_object($this->refund)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->refund->write($output);
@@ -387,7 +387,7 @@ class RefundService_matchReturnApplication_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\vop\vcloud\invoice\api\QueryRefundReq();
+			$this->req = new \Voop\com\vip\vop\vcloud\invoice\api\QueryRefundReq();
 			$this->req->read($input);
 			
 		}
@@ -410,7 +410,7 @@ class RefundService_matchReturnApplication_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -543,7 +543,7 @@ class RefundService_queryRefunds_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\vop\vcloud\invoice\api\QueryRefundReq();
+			$this->req = new \Voop\com\vip\vop\vcloud\invoice\api\QueryRefundReq();
 			$this->req->read($input);
 			
 		}
@@ -566,7 +566,7 @@ class RefundService_queryRefunds_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -625,7 +625,7 @@ class RefundService_receiveRefund_args {
 		if(true) {
 			
 			
-			$this->refund = new \com\vip\vop\vcloud\invoice\api\Refund();
+			$this->refund = new \Voop\com\vip\vop\vcloud\invoice\api\Refund();
 			$this->refund->read($input);
 			
 		}
@@ -648,7 +648,7 @@ class RefundService_receiveRefund_args {
 			
 			if (!is_object($this->refund)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->refund->write($output);
@@ -826,7 +826,7 @@ class RefundService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -849,7 +849,7 @@ class RefundService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1031,7 +1031,7 @@ class RefundService_queryRefunds_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\invoice\api\QueryRefundRes();
+			$this->success = new \Voop\com\vip\vop\vcloud\invoice\api\QueryRefundRes();
 			$this->success->read($input);
 			
 		}
@@ -1054,7 +1054,7 @@ class RefundService_queryRefunds_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

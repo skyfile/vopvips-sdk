@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\price;
+namespace Voop\vipapis\price;
 
 class PriceApplicationStatus {
 	
@@ -108,7 +108,7 @@ class PriceApplicationStatus {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class CommandRequestModel {
 	
@@ -61,7 +61,7 @@ class CommandRequestModel {
 				
 				$needSkip = false;
 				
-				$this->commandCoreModel = new \com\vip\pms\data\service\PmsCommandCoreModel();
+				$this->commandCoreModel = new \Voop\com\vip\pms\data\service\PmsCommandCoreModel();
 				$this->commandCoreModel->read($input);
 				
 			}
@@ -91,7 +91,7 @@ class CommandRequestModel {
 		
 		if (!is_object($this->commandCoreModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commandCoreModel->write($output);

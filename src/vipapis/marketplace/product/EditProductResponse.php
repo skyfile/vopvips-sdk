@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 
 class EditProductResponse {
 	
@@ -68,7 +68,7 @@ class EditProductResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

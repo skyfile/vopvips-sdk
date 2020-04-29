@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\invoice;
+namespace Voop\vipapis\marketplace\invoice;
 
 class GetInvoicesRequest {
 	
@@ -188,7 +188,7 @@ class GetInvoicesRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\domain\inventory;
+namespace Voop\com\vip\domain\inventory;
 
 class RealtimeInventoryCondition {
 	
@@ -292,21 +292,21 @@ class RealtimeInventoryCondition {
 		
 		$xfer += $output->writeFieldBegin('query_type');
 		
-		$em = new \com\vip\domain\inventory\RealtimeInventoryQueryType; 
+		$em = new \Voop\com\vip\domain\inventory\RealtimeInventoryQueryType; 
 		$output->writeString($em::$__names[$this->query_type]);  
 		
 		$xfer += $output->writeFieldEnd();
 		
 		$xfer += $output->writeFieldBegin('distribution_model');
 		
-		$em = new \com\vip\domain\inventory\DistributionModel; 
+		$em = new \Voop\com\vip\domain\inventory\DistributionModel; 
 		$output->writeString($em::$__names[$this->distribution_model]);  
 		
 		$xfer += $output->writeFieldEnd();
 		
 		$xfer += $output->writeFieldBegin('warehouse_code');
 		
-		$em = new \com\vip\domain\inventory\WarehouseCode; 
+		$em = new \Voop\com\vip\domain\inventory\WarehouseCode; 
 		$output->writeString($em::$__names[$this->warehouse_code]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -331,14 +331,14 @@ class RealtimeInventoryCondition {
 		
 		$xfer += $output->writeFieldBegin('inventory_location_parameter');
 		
-		$em = new \com\vip\domain\inventory\RealtimeInventoryLocationParameter; 
+		$em = new \Voop\com\vip\domain\inventory\RealtimeInventoryLocationParameter; 
 		$output->writeString($em::$__names[$this->inventory_location_parameter]);  
 		
 		$xfer += $output->writeFieldEnd();
 		
 		$xfer += $output->writeFieldBegin('commodity_parameter');
 		
-		$em = new \com\vip\domain\inventory\RealtimeInventoryCommodityParameter; 
+		$em = new \Voop\com\vip\domain\inventory\RealtimeInventoryCommodityParameter; 
 		$output->writeString($em::$__names[$this->commodity_parameter]);  
 		
 		$xfer += $output->writeFieldEnd();

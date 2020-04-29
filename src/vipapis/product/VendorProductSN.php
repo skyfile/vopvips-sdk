@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 
 class VendorProductSN {
 	
@@ -88,7 +88,7 @@ class VendorProductSN {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

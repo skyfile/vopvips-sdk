@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\address;
+namespace Voop\vipapis\address;
 
 class ProvinceWarehouse {
 	
@@ -90,7 +90,7 @@ class ProvinceWarehouse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\address\City();
+						$elem0 = new \Voop\vipapis\address\City();
 						$elem0->read($input);
 						
 						$this->children[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class ProvinceWarehouse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -135,7 +135,7 @@ class ProvinceWarehouse {
 		
 		if (!is_array($this->children)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -144,7 +144,7 @@ class ProvinceWarehouse {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

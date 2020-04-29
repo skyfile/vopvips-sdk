@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\vreceipt;
+namespace Voop\com\vip\isv\vreceipt;
 
 class Revinfo {
 	
@@ -270,7 +270,7 @@ class Revinfo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\isv\vreceipt\RevinfoDetail();
+						$elem0 = new \Voop\com\vip\isv\vreceipt\RevinfoDetail();
 						$elem0->read($input);
 						
 						$this->details[$_size0++] = $elem0;
@@ -360,7 +360,7 @@ class Revinfo {
 		
 		if (!is_array($this->details)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -369,7 +369,7 @@ class Revinfo {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

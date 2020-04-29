@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class PmsActScopeModel {
 	

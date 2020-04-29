@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\sce\vlg\osp\wms\service;
+namespace Voop\com\vip\sce\vlg\osp\wms\service;
 
 class ReturnOutDetailInfo {
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\carrier\service;
+namespace Voop\com\vip\vop\logistics\carrier\service;
 
 class ForwardShipping {
 	
@@ -131,7 +131,7 @@ class ForwardShipping {
 				
 				$needSkip = false;
 				
-				$this->receiver = new \com\vip\vop\logistics\Linkman();
+				$this->receiver = new \Voop\com\vip\vop\logistics\Linkman();
 				$this->receiver->read($input);
 				
 			}
@@ -143,7 +143,7 @@ class ForwardShipping {
 				
 				$needSkip = false;
 				
-				$this->receiver_address = new \com\vip\vop\logistics\Address();
+				$this->receiver_address = new \Voop\com\vip\vop\logistics\Address();
 				$this->receiver_address->read($input);
 				
 			}
@@ -202,7 +202,7 @@ class ForwardShipping {
 			
 			if (!is_object($this->receiver)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->receiver->write($output);
@@ -217,7 +217,7 @@ class ForwardShipping {
 			
 			if (!is_object($this->receiver_address)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->receiver_address->write($output);

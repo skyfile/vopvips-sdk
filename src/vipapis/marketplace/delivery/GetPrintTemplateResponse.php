@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\delivery;
+namespace Voop\vipapis\marketplace\delivery;
 
 class GetPrintTemplateResponse {
 	
@@ -107,7 +107,7 @@ class GetPrintTemplateResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -130,7 +130,7 @@ class GetPrintTemplateResponse {
 			
 			if (!is_array($this->part_order_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

@@ -8,19 +8,19 @@
 *
 */
 
-namespace vipapis\account;
+namespace Voop\vipapis\account;
 interface AccountServiceIf{
 	
 	
-	public function getEnterpriseAccounts(\vipapis\account\EnterpriseAccountQueryRequest $request);
+	public function getEnterpriseAccounts(\Voop\vipapis\account\EnterpriseAccountQueryRequest $request);
 	
-	public function getEnterpriseOrders(\vipapis\account\EnterpriseOrderQueryRequest $request);
+	public function getEnterpriseOrders(\Voop\vipapis\account\EnterpriseOrderQueryRequest $request);
 	
 	public function healthCheck();
 	
-	public function updateEnterpriseAccount(\vipapis\account\EnterpriseAccountUpdateRequest $request);
+	public function updateEnterpriseAccount(\Voop\vipapis\account\EnterpriseAccountUpdateRequest $request);
 	
-	public function updateEnterpriseAccounts(\vipapis\account\EnterpriseAccountBatchUpdateRequest $request);
+	public function updateEnterpriseAccounts(\Voop\vipapis\account\EnterpriseAccountBatchUpdateRequest $request);
 	
 }
 
@@ -32,16 +32,16 @@ class _AccountServiceClient extends \Osp\Base\OspStub implements \vipapis\accoun
 	}
 	
 	
-	public function getEnterpriseAccounts(\vipapis\account\EnterpriseAccountQueryRequest $request){
+	public function getEnterpriseAccounts(\Voop\vipapis\account\EnterpriseAccountQueryRequest $request){
 		
 		$this->send_getEnterpriseAccounts( $request);
 		return $this->recv_getEnterpriseAccounts();
 	}
 	
-	public function send_getEnterpriseAccounts(\vipapis\account\EnterpriseAccountQueryRequest $request){
+	public function send_getEnterpriseAccounts(\Voop\vipapis\account\EnterpriseAccountQueryRequest $request){
 		
 		$this->initInvocation("getEnterpriseAccounts");
-		$args = new \vipapis\account\AccountService_getEnterpriseAccounts_args();
+		$args = new \Voop\vipapis\account\AccountService_getEnterpriseAccounts_args();
 		
 		$args->request = $request;
 		
@@ -50,7 +50,7 @@ class _AccountServiceClient extends \Osp\Base\OspStub implements \vipapis\accoun
 	
 	public function recv_getEnterpriseAccounts(){
 		
-		$result = new \vipapis\account\AccountService_getEnterpriseAccounts_result();
+		$result = new \Voop\vipapis\account\AccountService_getEnterpriseAccounts_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -60,16 +60,16 @@ class _AccountServiceClient extends \Osp\Base\OspStub implements \vipapis\accoun
 	}
 	
 	
-	public function getEnterpriseOrders(\vipapis\account\EnterpriseOrderQueryRequest $request){
+	public function getEnterpriseOrders(\Voop\vipapis\account\EnterpriseOrderQueryRequest $request){
 		
 		$this->send_getEnterpriseOrders( $request);
 		return $this->recv_getEnterpriseOrders();
 	}
 	
-	public function send_getEnterpriseOrders(\vipapis\account\EnterpriseOrderQueryRequest $request){
+	public function send_getEnterpriseOrders(\Voop\vipapis\account\EnterpriseOrderQueryRequest $request){
 		
 		$this->initInvocation("getEnterpriseOrders");
-		$args = new \vipapis\account\AccountService_getEnterpriseOrders_args();
+		$args = new \Voop\vipapis\account\AccountService_getEnterpriseOrders_args();
 		
 		$args->request = $request;
 		
@@ -78,7 +78,7 @@ class _AccountServiceClient extends \Osp\Base\OspStub implements \vipapis\accoun
 	
 	public function recv_getEnterpriseOrders(){
 		
-		$result = new \vipapis\account\AccountService_getEnterpriseOrders_result();
+		$result = new \Voop\vipapis\account\AccountService_getEnterpriseOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -97,14 +97,14 @@ class _AccountServiceClient extends \Osp\Base\OspStub implements \vipapis\accoun
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\account\AccountService_healthCheck_args();
+		$args = new \Voop\vipapis\account\AccountService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\account\AccountService_healthCheck_result();
+		$result = new \Voop\vipapis\account\AccountService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -114,16 +114,16 @@ class _AccountServiceClient extends \Osp\Base\OspStub implements \vipapis\accoun
 	}
 	
 	
-	public function updateEnterpriseAccount(\vipapis\account\EnterpriseAccountUpdateRequest $request){
+	public function updateEnterpriseAccount(\Voop\vipapis\account\EnterpriseAccountUpdateRequest $request){
 		
 		$this->send_updateEnterpriseAccount( $request);
 		return $this->recv_updateEnterpriseAccount();
 	}
 	
-	public function send_updateEnterpriseAccount(\vipapis\account\EnterpriseAccountUpdateRequest $request){
+	public function send_updateEnterpriseAccount(\Voop\vipapis\account\EnterpriseAccountUpdateRequest $request){
 		
 		$this->initInvocation("updateEnterpriseAccount");
-		$args = new \vipapis\account\AccountService_updateEnterpriseAccount_args();
+		$args = new \Voop\vipapis\account\AccountService_updateEnterpriseAccount_args();
 		
 		$args->request = $request;
 		
@@ -132,7 +132,7 @@ class _AccountServiceClient extends \Osp\Base\OspStub implements \vipapis\accoun
 	
 	public function recv_updateEnterpriseAccount(){
 		
-		$result = new \vipapis\account\AccountService_updateEnterpriseAccount_result();
+		$result = new \Voop\vipapis\account\AccountService_updateEnterpriseAccount_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -142,16 +142,16 @@ class _AccountServiceClient extends \Osp\Base\OspStub implements \vipapis\accoun
 	}
 	
 	
-	public function updateEnterpriseAccounts(\vipapis\account\EnterpriseAccountBatchUpdateRequest $request){
+	public function updateEnterpriseAccounts(\Voop\vipapis\account\EnterpriseAccountBatchUpdateRequest $request){
 		
 		$this->send_updateEnterpriseAccounts( $request);
 		return $this->recv_updateEnterpriseAccounts();
 	}
 	
-	public function send_updateEnterpriseAccounts(\vipapis\account\EnterpriseAccountBatchUpdateRequest $request){
+	public function send_updateEnterpriseAccounts(\Voop\vipapis\account\EnterpriseAccountBatchUpdateRequest $request){
 		
 		$this->initInvocation("updateEnterpriseAccounts");
-		$args = new \vipapis\account\AccountService_updateEnterpriseAccounts_args();
+		$args = new \Voop\vipapis\account\AccountService_updateEnterpriseAccounts_args();
 		
 		$args->request = $request;
 		
@@ -160,7 +160,7 @@ class _AccountServiceClient extends \Osp\Base\OspStub implements \vipapis\accoun
 	
 	public function recv_updateEnterpriseAccounts(){
 		
-		$result = new \vipapis\account\AccountService_updateEnterpriseAccounts_result();
+		$result = new \Voop\vipapis\account\AccountService_updateEnterpriseAccounts_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -215,7 +215,7 @@ class AccountService_getEnterpriseAccounts_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\account\EnterpriseAccountQueryRequest();
+			$this->request = new \Voop\vipapis\account\EnterpriseAccountQueryRequest();
 			$this->request->read($input);
 			
 		}
@@ -236,7 +236,7 @@ class AccountService_getEnterpriseAccounts_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -293,7 +293,7 @@ class AccountService_getEnterpriseOrders_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\account\EnterpriseOrderQueryRequest();
+			$this->request = new \Voop\vipapis\account\EnterpriseOrderQueryRequest();
 			$this->request->read($input);
 			
 		}
@@ -314,7 +314,7 @@ class AccountService_getEnterpriseOrders_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -417,7 +417,7 @@ class AccountService_updateEnterpriseAccount_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\account\EnterpriseAccountUpdateRequest();
+			$this->request = new \Voop\vipapis\account\EnterpriseAccountUpdateRequest();
 			$this->request->read($input);
 			
 		}
@@ -438,7 +438,7 @@ class AccountService_updateEnterpriseAccount_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -495,7 +495,7 @@ class AccountService_updateEnterpriseAccounts_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\account\EnterpriseAccountBatchUpdateRequest();
+			$this->request = new \Voop\vipapis\account\EnterpriseAccountBatchUpdateRequest();
 			$this->request->read($input);
 			
 		}
@@ -516,7 +516,7 @@ class AccountService_updateEnterpriseAccounts_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -573,7 +573,7 @@ class AccountService_getEnterpriseAccounts_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\account\EnterpriseAccountResponse();
+			$this->success = new \Voop\vipapis\account\EnterpriseAccountResponse();
 			$this->success->read($input);
 			
 		}
@@ -596,7 +596,7 @@ class AccountService_getEnterpriseAccounts_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -655,7 +655,7 @@ class AccountService_getEnterpriseOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\account\EnterpriseOrderResponse();
+			$this->success = new \Voop\vipapis\account\EnterpriseOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -678,7 +678,7 @@ class AccountService_getEnterpriseOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -737,7 +737,7 @@ class AccountService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -760,7 +760,7 @@ class AccountService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -889,7 +889,7 @@ class AccountService_updateEnterpriseAccounts_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\account\EnterpriseAccountsApplyResponse();
+			$this->success = new \Voop\vipapis\account\EnterpriseAccountsApplyResponse();
 			$this->success->read($input);
 			
 		}
@@ -912,7 +912,7 @@ class AccountService_updateEnterpriseAccounts_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

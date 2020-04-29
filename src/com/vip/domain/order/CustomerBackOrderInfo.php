@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\domain\order;
+namespace Voop\com\vip\domain\order;
 
 class CustomerBackOrderInfo {
 	
@@ -150,7 +150,7 @@ class CustomerBackOrderInfo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\domain\order\CustomerBackOrderItemInfo();
+						$elem0 = new \Voop\com\vip\domain\order\CustomerBackOrderItemInfo();
 						$elem0->read($input);
 						
 						$this->itemList[$_size0++] = $elem0;
@@ -210,7 +210,7 @@ class CustomerBackOrderInfo {
 		
 		if (!is_array($this->itemList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -219,7 +219,7 @@ class CustomerBackOrderInfo {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

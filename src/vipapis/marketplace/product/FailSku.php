@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 
 class FailSku {
 	
@@ -100,7 +100,7 @@ class FailSku {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\marketplace\product\SimpleProperty();
+						$elem0 = new \Voop\vipapis\marketplace\product\SimpleProperty();
 						$elem0->read($input);
 						
 						$this->simple_sale_props[$_size0++] = $elem0;
@@ -129,7 +129,7 @@ class FailSku {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -161,7 +161,7 @@ class FailSku {
 			
 			if (!is_array($this->simple_sale_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -170,7 +170,7 @@ class FailSku {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

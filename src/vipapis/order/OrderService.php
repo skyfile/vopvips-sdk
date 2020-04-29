@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\order;
+namespace Voop\vipapis\order;
 interface OrderServiceIf{
 	
 	
@@ -35,7 +35,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order\Or
 	public function send_getChannelOrderList( $channel_id, $order_sn){
 		
 		$this->initInvocation("getChannelOrderList");
-		$args = new \vipapis\order\OrderService_getChannelOrderList_args();
+		$args = new \Voop\vipapis\order\OrderService_getChannelOrderList_args();
 		
 		$args->channel_id = $channel_id;
 		
@@ -46,7 +46,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order\Or
 	
 	public function recv_getChannelOrderList(){
 		
-		$result = new \vipapis\order\OrderService_getChannelOrderList_result();
+		$result = new \Voop\vipapis\order\OrderService_getChannelOrderList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -65,14 +65,14 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order\Or
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\order\OrderService_healthCheck_args();
+		$args = new \Voop\vipapis\order\OrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\order\OrderService_healthCheck_result();
+		$result = new \Voop\vipapis\order\OrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -189,7 +189,7 @@ class OrderService_getChannelOrderList_args {
 		
 		if (!is_array($this->order_sn)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -308,7 +308,7 @@ class OrderService_getChannelOrderList_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\order\ChannelOrderResult();
+					$elem1 = new \Voop\vipapis\order\ChannelOrderResult();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -341,7 +341,7 @@ class OrderService_getChannelOrderList_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -350,7 +350,7 @@ class OrderService_getChannelOrderList_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -413,7 +413,7 @@ class OrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -436,7 +436,7 @@ class OrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

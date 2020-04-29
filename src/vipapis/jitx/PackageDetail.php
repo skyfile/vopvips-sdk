@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\jitx;
+namespace Voop\vipapis\jitx;
 
 class PackageDetail {
 	
@@ -108,7 +108,7 @@ class PackageDetail {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

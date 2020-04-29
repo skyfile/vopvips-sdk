@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\cup\bill;
+namespace Voop\vipapis\cup\bill;
 require_once dirname(__FILE__).'/BillService.php';
 class BillServiceHelper extends _BillServiceClient{
 	

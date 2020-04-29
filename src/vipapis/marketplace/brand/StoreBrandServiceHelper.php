@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\brand;
+namespace Voop\vipapis\marketplace\brand;
 require_once dirname(__FILE__).'/StoreBrandService.php';
 class StoreBrandServiceHelper extends _StoreBrandServiceClient{
 	

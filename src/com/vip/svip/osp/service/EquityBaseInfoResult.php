@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\svip\osp\service;
+namespace Voop\com\vip\svip\osp\service;
 
 class EquityBaseInfoResult {
 	
@@ -101,7 +101,7 @@ class EquityBaseInfoResult {
 				
 				$needSkip = false;
 				
-				$this->data = new \com\vip\svip\osp\service\EquityBaseInfo();
+				$this->data = new \Voop\com\vip\svip\osp\service\EquityBaseInfo();
 				$this->data->read($input);
 				
 			}
@@ -147,7 +147,7 @@ class EquityBaseInfoResult {
 			
 			if (!is_object($this->data)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->data->write($output);

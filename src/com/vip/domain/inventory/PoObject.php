@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\domain\inventory;
+namespace Voop\com\vip\domain\inventory;
 
 class PoObject {
 	
@@ -868,7 +868,7 @@ class PoObject {
 			
 			$xfer += $output->writeFieldBegin('channel');
 			
-			$em = new \com\vip\domain\inventory\ChannelInventoryChannel; 
+			$em = new \Voop\com\vip\domain\inventory\ChannelInventoryChannel; 
 			$output->writeString($em::$__names[$this->channel]);  
 			
 			$xfer += $output->writeFieldEnd();

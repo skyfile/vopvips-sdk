@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\fcs;
+namespace Voop\vipapis\fcs;
 require_once dirname(__FILE__).'/TrusteeshipInfoService.php';
 class TrusteeshipInfoServiceHelper extends _TrusteeshipInfoServiceClient{
 	

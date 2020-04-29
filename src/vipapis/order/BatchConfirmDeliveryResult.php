@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\order;
+namespace Voop\vipapis\order;
 
 class BatchConfirmDeliveryResult {
 	
@@ -70,7 +70,7 @@ class BatchConfirmDeliveryResult {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\order\ConfirmDeliveryFailItem();
+						$elem0 = new \Voop\vipapis\order\ConfirmDeliveryFailItem();
 						$elem0->read($input);
 						
 						$this->data[$_size0++] = $elem0;
@@ -89,7 +89,7 @@ class BatchConfirmDeliveryResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -110,7 +110,7 @@ class BatchConfirmDeliveryResult {
 		
 		if (!is_array($this->data)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -119,7 +119,7 @@ class BatchConfirmDeliveryResult {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

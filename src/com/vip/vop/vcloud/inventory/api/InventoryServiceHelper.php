@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\inventory\api;
+namespace Voop\com\vip\vop\vcloud\inventory\api;
 require_once dirname(__FILE__).'/InventoryService.php';
 class InventoryServiceHelper extends _InventoryServiceClient{
 	

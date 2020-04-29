@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 
 class CreateVendorProductItem {
 	
@@ -781,7 +781,7 @@ class CreateVendorProductItem {
 				
 				$needSkip = false;
 				
-				$this->size_table_prop = new \vipapis\product\SizeTableProp();
+				$this->size_table_prop = new \Voop\vipapis\product\SizeTableProp();
 				$this->size_table_prop->read($input);
 				
 			}
@@ -790,7 +790,7 @@ class CreateVendorProductItem {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -850,7 +850,7 @@ class CreateVendorProductItem {
 		
 		if (!is_array($this->product_props)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeMapBegin();
@@ -887,7 +887,7 @@ class CreateVendorProductItem {
 		
 		$xfer += $output->writeFieldBegin('unit');
 		
-		$em = new \vipapis\product\Unit; 
+		$em = new \Voop\vipapis\product\Unit; 
 		$output->writeString($em::$__names[$this->unit]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -1032,7 +1032,7 @@ class CreateVendorProductItem {
 		
 		$xfer += $output->writeFieldBegin('product_type');
 		
-		$em = new \vipapis\product\ProductType; 
+		$em = new \Voop\vipapis\product\ProductType; 
 		$output->writeString($em::$__names[$this->product_type]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -1041,7 +1041,7 @@ class CreateVendorProductItem {
 			
 			$xfer += $output->writeFieldBegin('currency');
 			
-			$em = new \vipapis\common\Currency; 
+			$em = new \Voop\vipapis\common\Currency; 
 			$output->writeString($em::$__names[$this->currency]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -1063,7 +1063,7 @@ class CreateVendorProductItem {
 			
 			if (!is_object($this->size_table_prop)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->size_table_prop->write($output);

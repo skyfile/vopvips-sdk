@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vei\service;
+namespace Voop\com\vip\fcs\vei\service;
 
 class GetTrusteeshipInfoResponseModel {
 	
@@ -71,7 +71,7 @@ class GetTrusteeshipInfoResponseModel {
 				
 				$needSkip = false;
 				
-				$this->trusteeshipInfoModel = new \com\vip\fcs\vei\service\TrusteeshipInfoModel();
+				$this->trusteeshipInfoModel = new \Voop\com\vip\fcs\vei\service\TrusteeshipInfoModel();
 				$this->trusteeshipInfoModel->read($input);
 				
 			}
@@ -83,7 +83,7 @@ class GetTrusteeshipInfoResponseModel {
 				
 				$needSkip = false;
 				
-				$this->restulMesg = new \com\vip\fcs\vei\service\BaseRetMsg();
+				$this->restulMesg = new \Voop\com\vip\fcs\vei\service\BaseRetMsg();
 				$this->restulMesg->read($input);
 				
 			}
@@ -115,7 +115,7 @@ class GetTrusteeshipInfoResponseModel {
 			
 			if (!is_object($this->trusteeshipInfoModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->trusteeshipInfoModel->write($output);
@@ -128,7 +128,7 @@ class GetTrusteeshipInfoResponseModel {
 		
 		if (!is_object($this->restulMesg)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->restulMesg->write($output);

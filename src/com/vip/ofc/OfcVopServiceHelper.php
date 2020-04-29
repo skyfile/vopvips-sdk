@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\ofc;
+namespace Voop\com\vip\ofc;
 require_once dirname(__FILE__).'/OfcVopService.php';
 class OfcVopServiceHelper extends _OfcVopServiceClient{
 	

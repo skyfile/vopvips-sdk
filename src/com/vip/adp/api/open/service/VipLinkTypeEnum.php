@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 final class VipLinkTypeEnum{
 	
 	

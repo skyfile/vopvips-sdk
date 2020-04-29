@@ -8,15 +8,15 @@
 *
 */
 
-namespace com\vip\api\ubc\facade\bankcard;
+namespace Voop\com\vip\api\ubc\facade\bankcard;
 interface BankFileFacadeIf{
 	
 	
 	public function healthCheck();
 	
-	public function receiveBankData(\com\vip\api\ubc\facade\bankcard\BankDataRequest $request);
+	public function receiveBankData(\Voop\com\vip\api\ubc\facade\bankcard\BankDataRequest $request);
 	
-	public function receiveBankFile(\com\vip\api\ubc\facade\bankcard\BankFileRequest $request);
+	public function receiveBankFile(\Voop\com\vip\api\ubc\facade\bankcard\BankFileRequest $request);
 	
 }
 
@@ -37,14 +37,14 @@ class _BankFileFacadeClient extends \Osp\Base\OspStub implements \com\vip\api\ub
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\api\ubc\facade\bankcard\BankFileFacade_healthCheck_args();
+		$args = new \Voop\com\vip\api\ubc\facade\bankcard\BankFileFacade_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\api\ubc\facade\bankcard\BankFileFacade_healthCheck_result();
+		$result = new \Voop\com\vip\api\ubc\facade\bankcard\BankFileFacade_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -54,16 +54,16 @@ class _BankFileFacadeClient extends \Osp\Base\OspStub implements \com\vip\api\ub
 	}
 	
 	
-	public function receiveBankData(\com\vip\api\ubc\facade\bankcard\BankDataRequest $request){
+	public function receiveBankData(\Voop\com\vip\api\ubc\facade\bankcard\BankDataRequest $request){
 		
 		$this->send_receiveBankData( $request);
 		return $this->recv_receiveBankData();
 	}
 	
-	public function send_receiveBankData(\com\vip\api\ubc\facade\bankcard\BankDataRequest $request){
+	public function send_receiveBankData(\Voop\com\vip\api\ubc\facade\bankcard\BankDataRequest $request){
 		
 		$this->initInvocation("receiveBankData");
-		$args = new \com\vip\api\ubc\facade\bankcard\BankFileFacade_receiveBankData_args();
+		$args = new \Voop\com\vip\api\ubc\facade\bankcard\BankFileFacade_receiveBankData_args();
 		
 		$args->request = $request;
 		
@@ -72,7 +72,7 @@ class _BankFileFacadeClient extends \Osp\Base\OspStub implements \com\vip\api\ub
 	
 	public function recv_receiveBankData(){
 		
-		$result = new \com\vip\api\ubc\facade\bankcard\BankFileFacade_receiveBankData_result();
+		$result = new \Voop\com\vip\api\ubc\facade\bankcard\BankFileFacade_receiveBankData_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -82,16 +82,16 @@ class _BankFileFacadeClient extends \Osp\Base\OspStub implements \com\vip\api\ub
 	}
 	
 	
-	public function receiveBankFile(\com\vip\api\ubc\facade\bankcard\BankFileRequest $request){
+	public function receiveBankFile(\Voop\com\vip\api\ubc\facade\bankcard\BankFileRequest $request){
 		
 		$this->send_receiveBankFile( $request);
 		return $this->recv_receiveBankFile();
 	}
 	
-	public function send_receiveBankFile(\com\vip\api\ubc\facade\bankcard\BankFileRequest $request){
+	public function send_receiveBankFile(\Voop\com\vip\api\ubc\facade\bankcard\BankFileRequest $request){
 		
 		$this->initInvocation("receiveBankFile");
-		$args = new \com\vip\api\ubc\facade\bankcard\BankFileFacade_receiveBankFile_args();
+		$args = new \Voop\com\vip\api\ubc\facade\bankcard\BankFileFacade_receiveBankFile_args();
 		
 		$args->request = $request;
 		
@@ -100,7 +100,7 @@ class _BankFileFacadeClient extends \Osp\Base\OspStub implements \com\vip\api\ub
 	
 	public function recv_receiveBankFile(){
 		
-		$result = new \com\vip\api\ubc\facade\bankcard\BankFileFacade_receiveBankFile_result();
+		$result = new \Voop\com\vip\api\ubc\facade\bankcard\BankFileFacade_receiveBankFile_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -201,7 +201,7 @@ class BankFileFacade_receiveBankData_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\api\ubc\facade\bankcard\BankDataRequest();
+			$this->request = new \Voop\com\vip\api\ubc\facade\bankcard\BankDataRequest();
 			$this->request->read($input);
 			
 		}
@@ -222,7 +222,7 @@ class BankFileFacade_receiveBankData_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -279,7 +279,7 @@ class BankFileFacade_receiveBankFile_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\api\ubc\facade\bankcard\BankFileRequest();
+			$this->request = new \Voop\com\vip\api\ubc\facade\bankcard\BankFileRequest();
 			$this->request->read($input);
 			
 		}
@@ -300,7 +300,7 @@ class BankFileFacade_receiveBankFile_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -357,7 +357,7 @@ class BankFileFacade_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -380,7 +380,7 @@ class BankFileFacade_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -439,7 +439,7 @@ class BankFileFacade_receiveBankData_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\api\ubc\facade\bankcard\BankDataResponse();
+			$this->success = new \Voop\com\vip\api\ubc\facade\bankcard\BankDataResponse();
 			$this->success->read($input);
 			
 		}
@@ -462,7 +462,7 @@ class BankFileFacade_receiveBankData_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -521,7 +521,7 @@ class BankFileFacade_receiveBankFile_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\api\ubc\facade\bankcard\BankFileResponse();
+			$this->success = new \Voop\com\vip\api\ubc\facade\bankcard\BankFileResponse();
 			$this->success->read($input);
 			
 		}
@@ -544,7 +544,7 @@ class BankFileFacade_receiveBankFile_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

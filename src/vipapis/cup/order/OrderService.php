@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\cup\order;
+namespace Voop\vipapis\cup\order;
 interface OrderServiceIf{
 	
 	
@@ -45,7 +45,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	public function send_cancelOrder( $cancel_order_req_list){
 		
 		$this->initInvocation("cancelOrder");
-		$args = new \vipapis\cup\order\OrderService_cancelOrder_args();
+		$args = new \Voop\vipapis\cup\order\OrderService_cancelOrder_args();
 		
 		$args->cancel_order_req_list = $cancel_order_req_list;
 		
@@ -54,7 +54,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	
 	public function recv_cancelOrder(){
 		
-		$result = new \vipapis\cup\order\OrderService_cancelOrder_result();
+		$result = new \Voop\vipapis\cup\order\OrderService_cancelOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -73,7 +73,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	public function send_createOrder( $create_order_req_list){
 		
 		$this->initInvocation("createOrder");
-		$args = new \vipapis\cup\order\OrderService_createOrder_args();
+		$args = new \Voop\vipapis\cup\order\OrderService_createOrder_args();
 		
 		$args->create_order_req_list = $create_order_req_list;
 		
@@ -82,7 +82,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	
 	public function recv_createOrder(){
 		
-		$result = new \vipapis\cup\order\OrderService_createOrder_result();
+		$result = new \Voop\vipapis\cup\order\OrderService_createOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -101,7 +101,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	public function send_getOrderStatus( $start_time, $end_time, $page, $page_size){
 		
 		$this->initInvocation("getOrderStatus");
-		$args = new \vipapis\cup\order\OrderService_getOrderStatus_args();
+		$args = new \Voop\vipapis\cup\order\OrderService_getOrderStatus_args();
 		
 		$args->start_time = $start_time;
 		
@@ -116,7 +116,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	
 	public function recv_getOrderStatus(){
 		
-		$result = new \vipapis\cup\order\OrderService_getOrderStatus_result();
+		$result = new \Voop\vipapis\cup\order\OrderService_getOrderStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -135,7 +135,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	public function send_getOrderTransportInfo( $start_time, $end_time, $page, $page_size){
 		
 		$this->initInvocation("getOrderTransportInfo");
-		$args = new \vipapis\cup\order\OrderService_getOrderTransportInfo_args();
+		$args = new \Voop\vipapis\cup\order\OrderService_getOrderTransportInfo_args();
 		
 		$args->start_time = $start_time;
 		
@@ -150,7 +150,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	
 	public function recv_getOrderTransportInfo(){
 		
-		$result = new \vipapis\cup\order\OrderService_getOrderTransportInfo_result();
+		$result = new \Voop\vipapis\cup\order\OrderService_getOrderTransportInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -169,14 +169,14 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\cup\order\OrderService_healthCheck_args();
+		$args = new \Voop\vipapis\cup\order\OrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\cup\order\OrderService_healthCheck_result();
+		$result = new \Voop\vipapis\cup\order\OrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -195,7 +195,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	public function send_updateCancelOrderRefundResult( $update_cancel_order_refund_result_req_list){
 		
 		$this->initInvocation("updateCancelOrderRefundResult");
-		$args = new \vipapis\cup\order\OrderService_updateCancelOrderRefundResult_args();
+		$args = new \Voop\vipapis\cup\order\OrderService_updateCancelOrderRefundResult_args();
 		
 		$args->update_cancel_order_refund_result_req_list = $update_cancel_order_refund_result_req_list;
 		
@@ -204,7 +204,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	
 	public function recv_updateCancelOrderRefundResult(){
 		
-		$result = new \vipapis\cup\order\OrderService_updateCancelOrderRefundResult_result();
+		$result = new \Voop\vipapis\cup\order\OrderService_updateCancelOrderRefundResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -223,7 +223,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	public function send_updateOrderStatus( $update_order_status_req_list){
 		
 		$this->initInvocation("updateOrderStatus");
-		$args = new \vipapis\cup\order\OrderService_updateOrderStatus_args();
+		$args = new \Voop\vipapis\cup\order\OrderService_updateOrderStatus_args();
 		
 		$args->update_order_status_req_list = $update_order_status_req_list;
 		
@@ -232,7 +232,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\orde
 	
 	public function recv_updateOrderStatus(){
 		
-		$result = new \vipapis\cup\order\OrderService_updateOrderStatus_result();
+		$result = new \Voop\vipapis\cup\order\OrderService_updateOrderStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -296,7 +296,7 @@ class OrderService_cancelOrder_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\cup\api\order\CancelOrderReq();
+					$elem1 = new \Voop\com\vip\vop\cup\api\order\CancelOrderReq();
 					$elem1->read($input);
 					
 					$this->cancel_order_req_list[$_size1++] = $elem1;
@@ -327,7 +327,7 @@ class OrderService_cancelOrder_args {
 		
 		if (!is_array($this->cancel_order_req_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -336,7 +336,7 @@ class OrderService_cancelOrder_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -406,7 +406,7 @@ class OrderService_createOrder_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\cup\api\order\CreateOrderReq();
+					$elem1 = new \Voop\com\vip\vop\cup\api\order\CreateOrderReq();
 					$elem1->read($input);
 					
 					$this->create_order_req_list[$_size1++] = $elem1;
@@ -437,7 +437,7 @@ class OrderService_createOrder_args {
 		
 		if (!is_array($this->create_order_req_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -446,7 +446,7 @@ class OrderService_createOrder_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -862,7 +862,7 @@ class OrderService_updateCancelOrderRefundResult_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\cup\api\order\UpdateCancelOrderRefundResultReq();
+					$elem0 = new \Voop\com\vip\vop\cup\api\order\UpdateCancelOrderRefundResultReq();
 					$elem0->read($input);
 					
 					$this->update_cancel_order_refund_result_req_list[$_size0++] = $elem0;
@@ -893,7 +893,7 @@ class OrderService_updateCancelOrderRefundResult_args {
 		
 		if (!is_array($this->update_cancel_order_refund_result_req_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -902,7 +902,7 @@ class OrderService_updateCancelOrderRefundResult_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -972,7 +972,7 @@ class OrderService_updateOrderStatus_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\cup\api\order\UpdateOrderStatusReq();
+					$elem1 = new \Voop\com\vip\vop\cup\api\order\UpdateOrderStatusReq();
 					$elem1->read($input);
 					
 					$this->update_order_status_req_list[$_size1++] = $elem1;
@@ -1003,7 +1003,7 @@ class OrderService_updateOrderStatus_args {
 		
 		if (!is_array($this->update_order_status_req_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1012,7 +1012,7 @@ class OrderService_updateOrderStatus_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1073,7 +1073,7 @@ class OrderService_cancelOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\order\OrderOpResult();
+			$this->success = new \Voop\com\vip\vop\cup\api\order\OrderOpResult();
 			$this->success->read($input);
 			
 		}
@@ -1096,7 +1096,7 @@ class OrderService_cancelOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1155,7 +1155,7 @@ class OrderService_createOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\order\OrderOpResult();
+			$this->success = new \Voop\com\vip\vop\cup\api\order\OrderOpResult();
 			$this->success->read($input);
 			
 		}
@@ -1178,7 +1178,7 @@ class OrderService_createOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1237,7 +1237,7 @@ class OrderService_getOrderStatus_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\order\GetOrderStatusResult();
+			$this->success = new \Voop\com\vip\vop\cup\api\order\GetOrderStatusResult();
 			$this->success->read($input);
 			
 		}
@@ -1260,7 +1260,7 @@ class OrderService_getOrderStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1319,7 +1319,7 @@ class OrderService_getOrderTransportInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\order\GetOrderTransportInfoResult();
+			$this->success = new \Voop\com\vip\vop\cup\api\order\GetOrderTransportInfoResult();
 			$this->success->read($input);
 			
 		}
@@ -1342,7 +1342,7 @@ class OrderService_getOrderTransportInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1401,7 +1401,7 @@ class OrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1424,7 +1424,7 @@ class OrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1483,7 +1483,7 @@ class OrderService_updateCancelOrderRefundResult_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\order\OrderOpResult();
+			$this->success = new \Voop\com\vip\vop\cup\api\order\OrderOpResult();
 			$this->success->read($input);
 			
 		}
@@ -1506,7 +1506,7 @@ class OrderService_updateCancelOrderRefundResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1565,7 +1565,7 @@ class OrderService_updateOrderStatus_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\order\OrderOpResult();
+			$this->success = new \Voop\com\vip\vop\cup\api\order\OrderOpResult();
 			$this->success->read($input);
 			
 		}
@@ -1588,7 +1588,7 @@ class OrderService_updateOrderStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

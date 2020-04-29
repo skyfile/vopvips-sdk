@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\ofc\request\vop;
+namespace Voop\com\vip\ofc\request\vop;
 
 class WmsUpdateOrderStatusReq {
 	
@@ -80,7 +80,7 @@ class WmsUpdateOrderStatusReq {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\ofc\request\vop\WmsOrderStatusVO();
+						$elem0 = new \Voop\com\vip\ofc\request\vop\WmsOrderStatusVO();
 						$elem0->read($input);
 						
 						$this->wmsOrderStatusList[$_size0++] = $elem0;
@@ -132,7 +132,7 @@ class WmsUpdateOrderStatusReq {
 			
 			if (!is_array($this->wmsOrderStatusList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -141,7 +141,7 @@ class WmsUpdateOrderStatusReq {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

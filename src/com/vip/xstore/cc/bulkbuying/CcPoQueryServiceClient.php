@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying;
+namespace Voop\com\vip\xstore\cc\bulkbuying;
 $base_path = dirname(__FILE__).'/../../../../../';
 require_once $base_path.'/Osp/Util/PathUtil.php';
 require_once $base_path.'/Osp/ClassLoader/ClassLoader.php';
@@ -21,7 +21,7 @@ class CcPoQueryServiceClient{
 	private static function regis(){
 		
 		$path = \Osp\Util\PathUtil::getRootPath ();
-		$nsLoader = new \Osp\ClassLoader\ClassLoader ();
+		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
 		$nsLoader->registerNamespace ( 'com', $path );
@@ -70,7 +70,7 @@ class CcPoQueryServiceClient{
 		
 		//$ctx->setProtocol ( \Osp\Protocol\OspProtocol::$Binary );
 		
-		return new \com\vip\xstore\cc\bulkbuying\CcPoQueryServiceHelper();
+		return new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryServiceHelper();
 	}
 	
 }

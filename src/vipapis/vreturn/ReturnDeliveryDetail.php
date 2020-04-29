@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vreturn;
+namespace Voop\vipapis\vreturn;
 
 class ReturnDeliveryDetail {
 	
@@ -168,7 +168,7 @@ class ReturnDeliveryDetail {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\transferring\api;
+namespace Voop\vipapis\xstore\cc\transferring\api;
 
 class TransferringBatchImportDetailReq {
 	
@@ -90,7 +90,7 @@ class TransferringBatchImportDetailReq {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\xstore\cc\transferring\api\TransferringBatchImportItem();
+						$elem0 = new \Voop\vipapis\xstore\cc\transferring\api\TransferringBatchImportItem();
 						$elem0->read($input);
 						
 						$this->items[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class TransferringBatchImportDetailReq {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -135,7 +135,7 @@ class TransferringBatchImportDetailReq {
 		
 		if (!is_array($this->items)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -144,7 +144,7 @@ class TransferringBatchImportDetailReq {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

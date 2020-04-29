@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vpos\service;
+namespace Voop\com\vip\fcs\vpos\service;
 require_once dirname(__FILE__).'/VposTaxOspService.php';
 class VposTaxOspServiceHelper extends _VposTaxOspServiceClient{
 	

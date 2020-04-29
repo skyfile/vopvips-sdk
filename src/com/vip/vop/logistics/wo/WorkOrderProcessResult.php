@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\wo;
+namespace Voop\com\vip\vop\logistics\wo;
 
 class WorkOrderProcessResult {
 	
@@ -81,7 +81,7 @@ class WorkOrderProcessResult {
 				
 				$needSkip = false;
 				
-				$this->rely_content = new \com\vip\vop\logistics\wo\RelyContent();
+				$this->rely_content = new \Voop\com\vip\vop\logistics\wo\RelyContent();
 				$this->rely_content->read($input);
 				
 			}
@@ -116,7 +116,7 @@ class WorkOrderProcessResult {
 		
 		if (!is_object($this->rely_content)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->rely_content->write($output);

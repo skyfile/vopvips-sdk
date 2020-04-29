@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\ap\service;
+namespace Voop\com\vip\fcs\ap\service;
 
 class VendorBillDetailRespItem {
 	
@@ -131,7 +131,7 @@ class VendorBillDetailRespItem {
 				
 				$needSkip = false;
 				
-				$this->billDetailReqItem = new \com\vip\fcs\ap\service\BillAndDiscountDetailReqItem();
+				$this->billDetailReqItem = new \Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem();
 				$this->billDetailReqItem->read($input);
 				
 			}
@@ -152,7 +152,7 @@ class VendorBillDetailRespItem {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\fcs\ap\service\VendorBillGoodsDetail();
+						$elem1 = new \Voop\com\vip\fcs\ap\service\VendorBillGoodsDetail();
 						$elem1->read($input);
 						
 						$this->billDetails[$_size1++] = $elem1;
@@ -221,7 +221,7 @@ class VendorBillDetailRespItem {
 			
 			if (!is_object($this->billDetailReqItem)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->billDetailReqItem->write($output);
@@ -236,7 +236,7 @@ class VendorBillDetailRespItem {
 			
 			if (!is_array($this->billDetails)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -245,7 +245,7 @@ class VendorBillDetailRespItem {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

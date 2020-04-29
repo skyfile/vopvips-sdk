@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\product;
+namespace Voop\com\vip\vop\vcloud\product;
 interface DieselCategorySynServiceIf{
 	
 	
@@ -35,14 +35,14 @@ class _DieselCategorySynServiceClient extends \Osp\Base\OspStub implements \com\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\vcloud\product\DieselCategorySynService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\DieselCategorySynService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\vcloud\product\DieselCategorySynService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\DieselCategorySynService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -61,14 +61,14 @@ class _DieselCategorySynServiceClient extends \Osp\Base\OspStub implements \com\
 	public function send_processCategoryItem(){
 		
 		$this->initInvocation("processCategoryItem");
-		$args = new \com\vip\vop\vcloud\product\DieselCategorySynService_processCategoryItem_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\DieselCategorySynService_processCategoryItem_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_processCategoryItem(){
 		
-		$result = new \com\vip\vop\vcloud\product\DieselCategorySynService_processCategoryItem_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\DieselCategorySynService_processCategoryItem_result();
 		$this->receive_base($result);
 		
 	}
@@ -211,7 +211,7 @@ class DieselCategorySynService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -234,7 +234,7 @@ class DieselCategorySynService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

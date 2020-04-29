@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\inventory\service\wop;
+namespace Voop\com\vip\xstore\inventory\service\wop;
 interface WopInventoryServiceIf{
 	
 	
@@ -37,14 +37,14 @@ class _WopInventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\x
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\xstore\inventory\service\wop\WopInventoryService_healthCheck_args();
+		$args = new \Voop\com\vip\xstore\inventory\service\wop\WopInventoryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\xstore\inventory\service\wop\WopInventoryService_healthCheck_result();
+		$result = new \Voop\com\vip\xstore\inventory\service\wop\WopInventoryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,7 +63,7 @@ class _WopInventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\x
 	public function send_inventoryAdjust( $wopInvChgLogReqs){
 		
 		$this->initInvocation("inventoryAdjust");
-		$args = new \com\vip\xstore\inventory\service\wop\WopInventoryService_inventoryAdjust_args();
+		$args = new \Voop\com\vip\xstore\inventory\service\wop\WopInventoryService_inventoryAdjust_args();
 		
 		$args->wopInvChgLogReqs = $wopInvChgLogReqs;
 		
@@ -72,7 +72,7 @@ class _WopInventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\x
 	
 	public function recv_inventoryAdjust(){
 		
-		$result = new \com\vip\xstore\inventory\service\wop\WopInventoryService_inventoryAdjust_result();
+		$result = new \Voop\com\vip\xstore\inventory\service\wop\WopInventoryService_inventoryAdjust_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -91,7 +91,7 @@ class _WopInventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\x
 	public function send_receiving( $items){
 		
 		$this->initInvocation("receiving");
-		$args = new \com\vip\xstore\inventory\service\wop\WopInventoryService_receiving_args();
+		$args = new \Voop\com\vip\xstore\inventory\service\wop\WopInventoryService_receiving_args();
 		
 		$args->items = $items;
 		
@@ -100,7 +100,7 @@ class _WopInventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\x
 	
 	public function recv_receiving(){
 		
-		$result = new \com\vip\xstore\inventory\service\wop\WopInventoryService_receiving_result();
+		$result = new \Voop\com\vip\xstore\inventory\service\wop\WopInventoryService_receiving_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -210,7 +210,7 @@ class WopInventoryService_inventoryAdjust_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\xstore\inventory\service\wop\WopInvChgLogReq();
+					$elem0 = new \Voop\com\vip\xstore\inventory\service\wop\WopInvChgLogReq();
 					$elem0->read($input);
 					
 					$this->wopInvChgLogReqs[$_size0++] = $elem0;
@@ -241,7 +241,7 @@ class WopInventoryService_inventoryAdjust_args {
 		
 		if (!is_array($this->wopInvChgLogReqs)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -250,7 +250,7 @@ class WopInventoryService_inventoryAdjust_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -320,7 +320,7 @@ class WopInventoryService_receiving_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\xstore\inventory\service\wop\InventoryFlow();
+					$elem1 = new \Voop\com\vip\xstore\inventory\service\wop\InventoryFlow();
 					$elem1->read($input);
 					
 					$this->items[$_size1++] = $elem1;
@@ -351,7 +351,7 @@ class WopInventoryService_receiving_args {
 		
 		if (!is_array($this->items)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -360,7 +360,7 @@ class WopInventoryService_receiving_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -421,7 +421,7 @@ class WopInventoryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -444,7 +444,7 @@ class WopInventoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -514,7 +514,7 @@ class WopInventoryService_inventoryAdjust_result {
 					
 					$val0 = null;
 					
-					$val0 = new \com\vip\xstore\inventory\service\wop\WopInvChgRsp();
+					$val0 = new \Voop\com\vip\xstore\inventory\service\wop\WopInvChgRsp();
 					$val0->read($input);
 					
 					$this->success[$key0] = $val0;
@@ -547,7 +547,7 @@ class WopInventoryService_inventoryAdjust_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -558,7 +558,7 @@ class WopInventoryService_inventoryAdjust_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);
@@ -632,7 +632,7 @@ class WopInventoryService_receiving_result {
 					
 					$val1 = null;
 					
-					$val1 = new \com\vip\xstore\inventory\service\wop\InventoryFlowResult();
+					$val1 = new \Voop\com\vip\xstore\inventory\service\wop\InventoryFlowResult();
 					$val1->read($input);
 					
 					$this->success[$key1] = $val1;
@@ -665,7 +665,7 @@ class WopInventoryService_receiving_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -676,7 +676,7 @@ class WopInventoryService_receiving_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

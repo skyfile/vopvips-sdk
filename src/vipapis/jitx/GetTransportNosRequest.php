@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\jitx;
+namespace Voop\vipapis\jitx;
 
 class GetTransportNosRequest {
 	
@@ -128,7 +128,7 @@ class GetTransportNosRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

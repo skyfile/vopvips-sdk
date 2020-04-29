@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service\common;
+namespace Voop\com\vip\xstore\user\face\service\common;
 
 class PageInfo {
 	

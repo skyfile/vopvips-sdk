@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\oto;
+namespace Voop\com\vip\vop\cup\api\oto;
 
 class SkuHealthCheck {
 	
@@ -171,7 +171,7 @@ class SkuHealthCheck {
 				
 				$needSkip = false;
 				
-				$this->error_code_message = new \com\vip\vop\cup\api\oto\ErrorCodeMessage();
+				$this->error_code_message = new \Voop\com\vip\vop\cup\api\oto\ErrorCodeMessage();
 				$this->error_code_message->read($input);
 				
 			}
@@ -192,7 +192,7 @@ class SkuHealthCheck {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\cup\api\oto\HealthCheckDetail();
+						$elem0 = new \Voop\com\vip\vop\cup\api\oto\HealthCheckDetail();
 						$elem0->read($input);
 						
 						$this->health_check_detail_list[$_size0++] = $elem0;
@@ -279,7 +279,7 @@ class SkuHealthCheck {
 			
 			if (!is_object($this->error_code_message)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->error_code_message->write($output);
@@ -294,7 +294,7 @@ class SkuHealthCheck {
 			
 			if (!is_array($this->health_check_detail_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -303,7 +303,7 @@ class SkuHealthCheck {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

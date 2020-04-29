@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\top\carrier\bizservice;
+namespace Voop\com\vip\top\carrier\bizservice;
 
 class TransportNoInfosResponseModel {
 	
@@ -110,7 +110,7 @@ class TransportNoInfosResponseModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\top\carrier\bizservice\TransportNoInfoModel();
+						$elem0 = new \Voop\com\vip\top\carrier\bizservice\TransportNoInfoModel();
 						$elem0->read($input);
 						
 						$this->transportNoInfos[$_size0++] = $elem0;
@@ -170,7 +170,7 @@ class TransportNoInfosResponseModel {
 			
 			if (!is_array($this->transportNoInfos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -179,7 +179,7 @@ class TransportNoInfosResponseModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

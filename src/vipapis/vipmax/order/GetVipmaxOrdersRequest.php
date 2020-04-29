@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipmax\order;
+namespace Voop\vipapis\vipmax\order;
 
 class GetVipmaxOrdersRequest {
 	
@@ -148,7 +148,7 @@ class GetVipmaxOrdersRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

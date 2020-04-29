@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\cabinet;
+namespace Voop\com\vip\vop\logistics\cabinet;
 
 class GetShippingReq {
 	
@@ -166,7 +166,7 @@ class GetShippingReq {
 		
 		if (!is_array($this->logistics_nos)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\bill;
+namespace Voop\com\vip\vop\cup\api\bill;
 
 class UpdateBillResult {
 	
@@ -188,7 +188,7 @@ class UpdateBillResult {
 			
 			if (!is_array($this->success_channel_data_id_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -210,7 +210,7 @@ class UpdateBillResult {
 			
 			if (!is_array($this->failure_channel_data_id_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -232,7 +232,7 @@ class UpdateBillResult {
 			
 			if (!is_array($this->failure_msg_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

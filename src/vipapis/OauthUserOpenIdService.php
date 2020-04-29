@@ -37,7 +37,7 @@ class _OauthUserOpenIdServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_getOpenIdByUserId( $userId){
 		
 		$this->initInvocation("getOpenIdByUserId");
-		$args = new \vipapis\OauthUserOpenIdService_getOpenIdByUserId_args();
+		$args = new \Voop\vipapis\OauthUserOpenIdService_getOpenIdByUserId_args();
 		
 		$args->userId = $userId;
 		
@@ -46,7 +46,7 @@ class _OauthUserOpenIdServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_getOpenIdByUserId(){
 		
-		$result = new \vipapis\OauthUserOpenIdService_getOpenIdByUserId_result();
+		$result = new \Voop\vipapis\OauthUserOpenIdService_getOpenIdByUserId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -65,7 +65,7 @@ class _OauthUserOpenIdServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_getUserIdByOpenId( $openId){
 		
 		$this->initInvocation("getUserIdByOpenId");
-		$args = new \vipapis\OauthUserOpenIdService_getUserIdByOpenId_args();
+		$args = new \Voop\vipapis\OauthUserOpenIdService_getUserIdByOpenId_args();
 		
 		$args->openId = $openId;
 		
@@ -74,7 +74,7 @@ class _OauthUserOpenIdServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_getUserIdByOpenId(){
 		
-		$result = new \vipapis\OauthUserOpenIdService_getUserIdByOpenId_result();
+		$result = new \Voop\vipapis\OauthUserOpenIdService_getUserIdByOpenId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -93,14 +93,14 @@ class _OauthUserOpenIdServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\OauthUserOpenIdService_healthCheck_args();
+		$args = new \Voop\vipapis\OauthUserOpenIdService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\OauthUserOpenIdService_healthCheck_result();
+		$result = new \Voop\vipapis\OauthUserOpenIdService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -489,7 +489,7 @@ class OauthUserOpenIdService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -512,7 +512,7 @@ class OauthUserOpenIdService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

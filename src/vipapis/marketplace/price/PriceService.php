@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\price;
+namespace Voop\vipapis\marketplace\price;
 interface PriceServiceIf{
 	
 	
@@ -37,7 +37,7 @@ class _PriceServiceClient extends \Osp\Base\OspStub implements \vipapis\marketpl
 	public function send_getSkuPrice( $sku_id){
 		
 		$this->initInvocation("getSkuPrice");
-		$args = new \vipapis\marketplace\price\PriceService_getSkuPrice_args();
+		$args = new \Voop\vipapis\marketplace\price\PriceService_getSkuPrice_args();
 		
 		$args->sku_id = $sku_id;
 		
@@ -46,7 +46,7 @@ class _PriceServiceClient extends \Osp\Base\OspStub implements \vipapis\marketpl
 	
 	public function recv_getSkuPrice(){
 		
-		$result = new \vipapis\marketplace\price\PriceService_getSkuPrice_result();
+		$result = new \Voop\vipapis\marketplace\price\PriceService_getSkuPrice_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -65,14 +65,14 @@ class _PriceServiceClient extends \Osp\Base\OspStub implements \vipapis\marketpl
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\marketplace\price\PriceService_healthCheck_args();
+		$args = new \Voop\vipapis\marketplace\price\PriceService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\marketplace\price\PriceService_healthCheck_result();
+		$result = new \Voop\vipapis\marketplace\price\PriceService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -91,7 +91,7 @@ class _PriceServiceClient extends \Osp\Base\OspStub implements \vipapis\marketpl
 	public function send_updateSkuPrice( $sku_id, $market_price, $sale_price){
 		
 		$this->initInvocation("updateSkuPrice");
-		$args = new \vipapis\marketplace\price\PriceService_updateSkuPrice_args();
+		$args = new \Voop\vipapis\marketplace\price\PriceService_updateSkuPrice_args();
 		
 		$args->sku_id = $sku_id;
 		
@@ -104,7 +104,7 @@ class _PriceServiceClient extends \Osp\Base\OspStub implements \vipapis\marketpl
 	
 	public function recv_updateSkuPrice(){
 		
-		$result = new \vipapis\marketplace\price\PriceService_updateSkuPrice_result();
+		$result = new \Voop\vipapis\marketplace\price\PriceService_updateSkuPrice_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -393,7 +393,7 @@ class PriceService_getSkuPrice_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\price\GetSkuPriceResponse();
+			$this->success = new \Voop\vipapis\marketplace\price\GetSkuPriceResponse();
 			$this->success->read($input);
 			
 		}
@@ -416,7 +416,7 @@ class PriceService_getSkuPrice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -475,7 +475,7 @@ class PriceService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -498,7 +498,7 @@ class PriceService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -557,7 +557,7 @@ class PriceService_updateSkuPrice_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\price\UpdateSkuPriceResponse();
+			$this->success = new \Voop\vipapis\marketplace\price\UpdateSkuPriceResponse();
 			$this->success->read($input);
 			
 		}
@@ -580,7 +580,7 @@ class PriceService_updateSkuPrice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

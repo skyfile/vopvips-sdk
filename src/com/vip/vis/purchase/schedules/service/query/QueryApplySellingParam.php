@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vis\purchase\schedules\service\query;
+namespace Voop\com\vip\vis\purchase\schedules\service\query;
 
 class QueryApplySellingParam {
 	
@@ -587,7 +587,7 @@ class QueryApplySellingParam {
 			
 			if (!is_array($this->brandIdList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -645,7 +645,7 @@ class QueryApplySellingParam {
 			
 			if (!is_array($this->dataAreaDivideList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -772,7 +772,7 @@ class QueryApplySellingParam {
 			
 			if (!is_array($this->shopCodeList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -794,7 +794,7 @@ class QueryApplySellingParam {
 			
 			if (!is_array($this->sellingModeArr)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

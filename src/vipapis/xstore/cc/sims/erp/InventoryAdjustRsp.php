@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\sims\erp;
+namespace Voop\vipapis\xstore\cc\sims\erp;
 
 class InventoryAdjustRsp {
 	
@@ -162,7 +162,7 @@ class InventoryAdjustRsp {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -186,7 +186,7 @@ class InventoryAdjustRsp {
 		
 		$xfer += $output->writeFieldBegin('resCode');
 		
-		$em = new \vipapis\xstore\cc\sims\erp\RspCodeEnum; 
+		$em = new \Voop\vipapis\xstore\cc\sims\erp\RspCodeEnum; 
 		$output->writeString($em::$__names[$this->resCode]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -206,7 +206,7 @@ class InventoryAdjustRsp {
 			
 			if (!is_array($this->poMap)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();

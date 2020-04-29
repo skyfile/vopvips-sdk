@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\product\pool\service;
+namespace Voop\com\vip\xstore\cc\product\pool\service;
 
 class ProdPoolSkuModel {
 	

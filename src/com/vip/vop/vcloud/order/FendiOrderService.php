@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\order;
+namespace Voop\com\vip\vop\vcloud\order;
 interface FendiOrderServiceIf{
 	
 	
@@ -39,14 +39,14 @@ class _FendiOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\vcloud\order\FendiOrderService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\FendiOrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\vcloud\order\FendiOrderService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\FendiOrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -65,7 +65,7 @@ class _FendiOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	public function send_pushCancelledOrderToFendi( $partnerId, $channelId){
 		
 		$this->initInvocation("pushCancelledOrderToFendi");
-		$args = new \com\vip\vop\vcloud\order\FendiOrderService_pushCancelledOrderToFendi_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\FendiOrderService_pushCancelledOrderToFendi_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -76,7 +76,7 @@ class _FendiOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	
 	public function recv_pushCancelledOrderToFendi(){
 		
-		$result = new \com\vip\vop\vcloud\order\FendiOrderService_pushCancelledOrderToFendi_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\FendiOrderService_pushCancelledOrderToFendi_result();
 		$this->receive_base($result);
 		
 	}
@@ -91,7 +91,7 @@ class _FendiOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	public function send_pushNewOrderToFendi( $channelId, $partnerId){
 		
 		$this->initInvocation("pushNewOrderToFendi");
-		$args = new \com\vip\vop\vcloud\order\FendiOrderService_pushNewOrderToFendi_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\FendiOrderService_pushNewOrderToFendi_args();
 		
 		$args->channelId = $channelId;
 		
@@ -102,7 +102,7 @@ class _FendiOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	
 	public function recv_pushNewOrderToFendi(){
 		
-		$result = new \com\vip\vop\vcloud\order\FendiOrderService_pushNewOrderToFendi_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\FendiOrderService_pushNewOrderToFendi_result();
 		$this->receive_base($result);
 		
 	}
@@ -117,7 +117,7 @@ class _FendiOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	public function send_pushShippedOrderToFendi( $partnerId, $channelId){
 		
 		$this->initInvocation("pushShippedOrderToFendi");
-		$args = new \com\vip\vop\vcloud\order\FendiOrderService_pushShippedOrderToFendi_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\FendiOrderService_pushShippedOrderToFendi_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -128,7 +128,7 @@ class _FendiOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	
 	public function recv_pushShippedOrderToFendi(){
 		
-		$result = new \com\vip\vop\vcloud\order\FendiOrderService_pushShippedOrderToFendi_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\FendiOrderService_pushShippedOrderToFendi_result();
 		$this->receive_base($result);
 		
 	}
@@ -531,7 +531,7 @@ class FendiOrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -554,7 +554,7 @@ class FendiOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

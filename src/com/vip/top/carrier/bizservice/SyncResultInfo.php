@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\top\carrier\bizservice;
+namespace Voop\com\vip\top\carrier\bizservice;
 
 class SyncResultInfo {
 	

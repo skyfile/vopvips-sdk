@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 
 class CancelSubmissionResult {
 	
@@ -71,7 +71,7 @@ class CancelSubmissionResult {
 				
 				$needSkip = false;
 				
-				$this->vendorProductSN = new \vipapis\product\VendorProductSN();
+				$this->vendorProductSN = new \Voop\vipapis\product\VendorProductSN();
 				$this->vendorProductSN->read($input);
 				
 			}
@@ -90,7 +90,7 @@ class CancelSubmissionResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -113,7 +113,7 @@ class CancelSubmissionResult {
 			
 			if (!is_object($this->vendorProductSN)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->vendorProductSN->write($output);

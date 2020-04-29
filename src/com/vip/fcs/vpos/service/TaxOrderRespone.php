@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vpos\service;
+namespace Voop\com\vip\fcs\vpos\service;
 
 class TaxOrderRespone {
 	
@@ -71,7 +71,7 @@ class TaxOrderRespone {
 				
 				$needSkip = false;
 				
-				$this->taxOrderHeader = new \com\vip\fcs\vpos\service\TaxOrderHeader();
+				$this->taxOrderHeader = new \Voop\com\vip\fcs\vpos\service\TaxOrderHeader();
 				$this->taxOrderHeader->read($input);
 				
 			}
@@ -92,7 +92,7 @@ class TaxOrderRespone {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\fcs\vpos\service\TaxOrderItem();
+						$elem0 = new \Voop\com\vip\fcs\vpos\service\TaxOrderItem();
 						$elem0->read($input);
 						
 						$this->orderItemList[$_size0++] = $elem0;
@@ -134,7 +134,7 @@ class TaxOrderRespone {
 			
 			if (!is_object($this->taxOrderHeader)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->taxOrderHeader->write($output);
@@ -149,7 +149,7 @@ class TaxOrderRespone {
 			
 			if (!is_array($this->orderItemList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -158,7 +158,7 @@ class TaxOrderRespone {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

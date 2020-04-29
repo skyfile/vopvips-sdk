@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\common\pojo\vo;
+namespace Voop\com\vip\xstore\order\common\pojo\vo;
 
 class ResultFilter {
 	
@@ -171,7 +171,7 @@ class ResultFilter {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\xstore\order\common\pojo\vo\OrderBy();
+						$elem1 = new \Voop\com\vip\xstore\order\common\pojo\vo\OrderBy();
 						$elem1->read($input);
 						
 						$this->orderby[$_size1++] = $elem1;
@@ -246,7 +246,7 @@ class ResultFilter {
 			
 			if (!is_array($this->returnFields)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -288,7 +288,7 @@ class ResultFilter {
 			
 			if (!is_array($this->orderby)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -297,7 +297,7 @@ class ResultFilter {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -314,7 +314,7 @@ class ResultFilter {
 			
 			$xfer += $output->writeFieldBegin('selector');
 			
-			$em = new \com\vip\xstore\order\common\pojo\vo\Selector; 
+			$em = new \Voop\com\vip\xstore\order\common\pojo\vo\Selector; 
 			$output->writeString($em::$__names[$this->selector]);  
 			
 			$xfer += $output->writeFieldEnd();

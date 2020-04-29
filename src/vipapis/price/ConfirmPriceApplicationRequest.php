@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\price;
+namespace Voop\vipapis\price;
 
 class ConfirmPriceApplicationRequest {
 	
@@ -88,7 +88,7 @@ class ConfirmPriceApplicationRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

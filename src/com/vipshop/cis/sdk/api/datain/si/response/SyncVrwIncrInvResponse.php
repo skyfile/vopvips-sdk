@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vipshop\cis\sdk\api\datain\si\response;
+namespace Voop\com\vipshop\cis\sdk\api\datain\si\response;
 
 class SyncVrwIncrInvResponse {
 	
@@ -71,7 +71,7 @@ class SyncVrwIncrInvResponse {
 				
 				$needSkip = false;
 				
-				$this->header = new \com\vipshop\cis\sdk\api\datain\si\response\ChannelResponseHeader();
+				$this->header = new \Voop\com\vipshop\cis\sdk\api\datain\si\response\ChannelResponseHeader();
 				$this->header->read($input);
 				
 			}
@@ -83,7 +83,7 @@ class SyncVrwIncrInvResponse {
 				
 				$needSkip = false;
 				
-				$this->payload = new \com\vipshop\cis\sdk\api\datain\si\response\SyncVrwIncrInvResponsePayload();
+				$this->payload = new \Voop\com\vipshop\cis\sdk\api\datain\si\response\SyncVrwIncrInvResponsePayload();
 				$this->payload->read($input);
 				
 			}
@@ -113,7 +113,7 @@ class SyncVrwIncrInvResponse {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -126,7 +126,7 @@ class SyncVrwIncrInvResponse {
 			
 			if (!is_object($this->payload)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->payload->write($output);

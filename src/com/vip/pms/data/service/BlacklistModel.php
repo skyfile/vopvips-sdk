@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class BlacklistModel {
 	
@@ -251,7 +251,7 @@ class BlacklistModel {
 		
 		$xfer += $output->writeFieldBegin('syncType');
 		
-		$em = new \com\vip\pms\data\service\SyncType; 
+		$em = new \Voop\com\vip\pms\data\service\SyncType; 
 		$output->writeString($em::$__names[$this->syncType]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -260,7 +260,7 @@ class BlacklistModel {
 		
 		if (!is_array($this->blacklistIds)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeSetBegin();
@@ -276,7 +276,7 @@ class BlacklistModel {
 		
 		$xfer += $output->writeFieldBegin('blackListType');
 		
-		$em = new \com\vip\pms\data\service\BlackListType; 
+		$em = new \Voop\com\vip\pms\data\service\BlackListType; 
 		$output->writeString($em::$__names[$this->blackListType]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -287,7 +287,7 @@ class BlacklistModel {
 			
 			if (!is_array($this->salesModes)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

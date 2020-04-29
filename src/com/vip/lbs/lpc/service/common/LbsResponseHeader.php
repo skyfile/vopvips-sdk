@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\lbs\lpc\service\common;
+namespace Voop\com\vip\lbs\lpc\service\common;
 
 class LbsResponseHeader {
 	

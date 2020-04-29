@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class CouponRequestModel {
 	
@@ -71,7 +71,7 @@ class CouponRequestModel {
 				
 				$needSkip = false;
 				
-				$this->couponCoreModel = new \com\vip\pms\data\service\CouponCoreModel();
+				$this->couponCoreModel = new \Voop\com\vip\pms\data\service\CouponCoreModel();
 				$this->couponCoreModel->read($input);
 				
 			}
@@ -83,7 +83,7 @@ class CouponRequestModel {
 				
 				$needSkip = false;
 				
-				$this->couponGroupCoreModel = new \com\vip\pms\data\service\CouponGroupCoreModel();
+				$this->couponGroupCoreModel = new \Voop\com\vip\pms\data\service\CouponGroupCoreModel();
 				$this->couponGroupCoreModel->read($input);
 				
 			}
@@ -115,7 +115,7 @@ class CouponRequestModel {
 			
 			if (!is_object($this->couponCoreModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->couponCoreModel->write($output);
@@ -130,7 +130,7 @@ class CouponRequestModel {
 			
 			if (!is_object($this->couponGroupCoreModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->couponGroupCoreModel->write($output);

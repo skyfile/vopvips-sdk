@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 
 class ProductColorImageBindModel {
 	
@@ -90,7 +90,7 @@ class ProductColorImageBindModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\marketplace\product\ColorImage();
+						$elem0 = new \Voop\vipapis\marketplace\product\ColorImage();
 						$elem0->read($input);
 						
 						$this->color_images[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class ProductColorImageBindModel {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -135,7 +135,7 @@ class ProductColorImageBindModel {
 		
 		if (!is_array($this->color_images)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -144,7 +144,7 @@ class ProductColorImageBindModel {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

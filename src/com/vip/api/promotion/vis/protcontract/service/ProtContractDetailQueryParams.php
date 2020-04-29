@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\protcontract\service;
+namespace Voop\com\vip\api\promotion\vis\protcontract\service;
 
 class ProtContractDetailQueryParams {
 	
@@ -71,7 +71,7 @@ class ProtContractDetailQueryParams {
 				
 				$needSkip = false;
 				
-				$this->pager = new \com\vip\api\promotion\vis\common\Pager();
+				$this->pager = new \Voop\com\vip\api\promotion\vis\common\Pager();
 				$this->pager->read($input);
 				
 			}
@@ -83,7 +83,7 @@ class ProtContractDetailQueryParams {
 				
 				$needSkip = false;
 				
-				$this->protContractDetailQueryParam = new \com\vip\api\promotion\vis\protcontract\service\ProtContractDetailQueryParam();
+				$this->protContractDetailQueryParam = new \Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractDetailQueryParam();
 				$this->protContractDetailQueryParam->read($input);
 				
 			}
@@ -115,7 +115,7 @@ class ProtContractDetailQueryParams {
 			
 			if (!is_object($this->pager)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pager->write($output);
@@ -130,7 +130,7 @@ class ProtContractDetailQueryParams {
 			
 			if (!is_object($this->protContractDetailQueryParam)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->protContractDetailQueryParam->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 
 class UrlGenResponse {
 	
@@ -70,7 +70,7 @@ class UrlGenResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\adp\api\open\service\UrlInfo();
+						$elem0 = new \Voop\com\vip\adp\api\open\service\UrlInfo();
 						$elem0->read($input);
 						
 						$this->urlInfoList[$_size0++] = $elem0;
@@ -112,7 +112,7 @@ class UrlGenResponse {
 			
 			if (!is_array($this->urlInfoList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -121,7 +121,7 @@ class UrlGenResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

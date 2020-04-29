@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\third\service;
+namespace Voop\com\vip\api\promotion\vis\third\service;
 
 class QueryParam {
 	

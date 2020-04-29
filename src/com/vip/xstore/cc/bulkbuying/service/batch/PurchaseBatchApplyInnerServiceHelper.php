@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying\service\batch;
+namespace Voop\com\vip\xstore\cc\bulkbuying\service\batch;
 require_once dirname(__FILE__).'/PurchaseBatchApplyInnerService.php';
 class PurchaseBatchApplyInnerServiceHelper extends _PurchaseBatchApplyInnerServiceClient{
 	

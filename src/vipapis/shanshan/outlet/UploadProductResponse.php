@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\shanshan\outlet;
+namespace Voop\vipapis\shanshan\outlet;
 
 class UploadProductResponse {
 	
@@ -80,7 +80,7 @@ class UploadProductResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\shanshan\outlet\UploadProductResult();
+						$elem0 = new \Voop\vipapis\shanshan\outlet\UploadProductResult();
 						$elem0->read($input);
 						
 						$this->successes[$_size0++] = $elem0;
@@ -111,7 +111,7 @@ class UploadProductResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\shanshan\outlet\UploadProductResult();
+						$elem1 = new \Voop\vipapis\shanshan\outlet\UploadProductResult();
 						$elem1->read($input);
 						
 						$this->failures[$_size1++] = $elem1;
@@ -130,7 +130,7 @@ class UploadProductResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -153,7 +153,7 @@ class UploadProductResponse {
 			
 			if (!is_array($this->successes)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -162,7 +162,7 @@ class UploadProductResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -181,7 +181,7 @@ class UploadProductResponse {
 			
 			if (!is_array($this->failures)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -190,7 +190,7 @@ class UploadProductResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

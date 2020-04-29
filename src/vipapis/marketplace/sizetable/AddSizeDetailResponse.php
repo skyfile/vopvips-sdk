@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\sizetable;
+namespace Voop\vipapis\marketplace\sizetable;
 
 class AddSizeDetailResponse {
 	
@@ -68,7 +68,7 @@ class AddSizeDetailResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

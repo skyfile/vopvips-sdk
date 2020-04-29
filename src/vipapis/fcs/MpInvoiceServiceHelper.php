@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\fcs;
+namespace Voop\vipapis\fcs;
 require_once dirname(__FILE__).'/MpInvoiceService.php';
 class MpInvoiceServiceHelper extends _MpInvoiceServiceClient{
 	

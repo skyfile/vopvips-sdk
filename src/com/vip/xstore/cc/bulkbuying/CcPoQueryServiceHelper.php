@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying;
+namespace Voop\com\vip\xstore\cc\bulkbuying;
 require_once dirname(__FILE__).'/CcPoQueryService.php';
 class CcPoQueryServiceHelper extends _CcPoQueryServiceClient{
 	

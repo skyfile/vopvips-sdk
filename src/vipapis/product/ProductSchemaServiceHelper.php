@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 require_once dirname(__FILE__).'/ProductSchemaService.php';
 class ProductSchemaServiceHelper extends _ProductSchemaServiceClient{
 	

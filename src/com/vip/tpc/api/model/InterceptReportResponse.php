@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\tpc\api\model;
+namespace Voop\com\vip\tpc\api\model;
 
 class InterceptReportResponse {
 	
@@ -71,7 +71,7 @@ class InterceptReportResponse {
 				
 				$needSkip = false;
 				
-				$this->header = new \com\vip\tpc\api\model\common\TpcResponseHeader();
+				$this->header = new \Voop\com\vip\tpc\api\model\common\TpcResponseHeader();
 				$this->header->read($input);
 				
 			}
@@ -92,7 +92,7 @@ class InterceptReportResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\tpc\api\model\InterceptResponse();
+						$elem0 = new \Voop\com\vip\tpc\api\model\InterceptResponse();
 						$elem0->read($input);
 						
 						$this->interceptResponses[$_size0++] = $elem0;
@@ -132,7 +132,7 @@ class InterceptReportResponse {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -145,7 +145,7 @@ class InterceptReportResponse {
 			
 			if (!is_array($this->interceptResponses)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -154,7 +154,7 @@ class InterceptReportResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\common;
+namespace Voop\com\vip\api\promotion\vis\common;
 
 class ResultModel {
 	
@@ -337,7 +337,7 @@ class ResultModel {
 			
 			if (!is_array($this->errorMsg)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -386,7 +386,7 @@ class ResultModel {
 			
 			if (!is_array($this->noticeMsgList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

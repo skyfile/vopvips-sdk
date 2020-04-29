@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\price;
+namespace Voop\vipapis\marketplace\price;
 
 class UpdateSkuPriceResponse {
 	
@@ -68,7 +68,7 @@ class UpdateSkuPriceResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

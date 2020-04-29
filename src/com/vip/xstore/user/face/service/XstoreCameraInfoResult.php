@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service;
+namespace Voop\com\vip\xstore\user\face\service;
 
 class XstoreCameraInfoResult {
 	
@@ -71,7 +71,7 @@ class XstoreCameraInfoResult {
 				
 				$needSkip = false;
 				
-				$this->codeResult = new \com\vip\xstore\user\face\service\common\CodeResult();
+				$this->codeResult = new \Voop\com\vip\xstore\user\face\service\common\CodeResult();
 				$this->codeResult->read($input);
 				
 			}
@@ -83,7 +83,7 @@ class XstoreCameraInfoResult {
 				
 				$needSkip = false;
 				
-				$this->xstoreCameraInfoModel = new \com\vip\xstore\user\face\service\XstoreCameraInfoModel();
+				$this->xstoreCameraInfoModel = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoModel();
 				$this->xstoreCameraInfoModel->read($input);
 				
 			}
@@ -115,7 +115,7 @@ class XstoreCameraInfoResult {
 			
 			if (!is_object($this->codeResult)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->codeResult->write($output);
@@ -130,7 +130,7 @@ class XstoreCameraInfoResult {
 			
 			if (!is_object($this->xstoreCameraInfoModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->xstoreCameraInfoModel->write($output);

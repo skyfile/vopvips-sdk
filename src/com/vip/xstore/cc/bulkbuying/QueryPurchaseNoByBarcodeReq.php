@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying;
+namespace Voop\com\vip\xstore\cc\bulkbuying;
 
 class QueryPurchaseNoByBarcodeReq {
 	
@@ -133,7 +133,7 @@ class QueryPurchaseNoByBarcodeReq {
 		
 		if (!is_array($this->barcodes)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

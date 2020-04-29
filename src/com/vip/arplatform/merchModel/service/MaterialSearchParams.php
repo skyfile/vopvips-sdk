@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\arplatform\merchModel\service;
+namespace Voop\com\vip\arplatform\merchModel\service;
 
 class MaterialSearchParams {
 	

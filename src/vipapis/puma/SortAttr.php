@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\puma;
+namespace Voop\vipapis\puma;
 
 class SortAttr {
 	
@@ -88,7 +88,7 @@ class SortAttr {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

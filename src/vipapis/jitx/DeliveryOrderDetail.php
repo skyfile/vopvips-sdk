@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\jitx;
+namespace Voop\vipapis\jitx;
 
 class DeliveryOrderDetail {
 	
@@ -208,7 +208,7 @@ class DeliveryOrderDetail {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

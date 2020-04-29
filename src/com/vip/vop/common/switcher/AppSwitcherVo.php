@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\common\switcher;
+namespace Voop\com\vip\vop\common\switcher;
 
 class AppSwitcherVo {
 	

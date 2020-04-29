@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\jitx;
+namespace Voop\vipapis\jitx;
 
 class MutilWarehousingOrderRequest {
 	
@@ -226,7 +226,7 @@ class MutilWarehousingOrderRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -264,7 +264,7 @@ class MutilWarehousingOrderRequest {
 			
 			if (!is_array($this->status_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -304,7 +304,7 @@ class MutilWarehousingOrderRequest {
 			
 			if (!is_array($this->cooperation_nos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();

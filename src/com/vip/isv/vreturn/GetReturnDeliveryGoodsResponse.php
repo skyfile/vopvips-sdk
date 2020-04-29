@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\vreturn;
+namespace Voop\com\vip\isv\vreturn;
 
 class GetReturnDeliveryGoodsResponse {
 	
@@ -80,7 +80,7 @@ class GetReturnDeliveryGoodsResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\isv\vreturn\ReturnDeliveryGoods();
+						$elem0 = new \Voop\com\vip\isv\vreturn\ReturnDeliveryGoods();
 						$elem0->read($input);
 						
 						$this->return_delivery_goods[$_size0++] = $elem0;
@@ -132,7 +132,7 @@ class GetReturnDeliveryGoodsResponse {
 			
 			if (!is_array($this->return_delivery_goods)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -141,7 +141,7 @@ class GetReturnDeliveryGoodsResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

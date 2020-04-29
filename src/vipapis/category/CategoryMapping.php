@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\category;
+namespace Voop\vipapis\category;
 
 class CategoryMapping {
 	
@@ -71,7 +71,7 @@ class CategoryMapping {
 				
 				$needSkip = false;
 				
-				$this->sourcecategory = new \vipapis\category\Category();
+				$this->sourcecategory = new \Voop\vipapis\category\Category();
 				$this->sourcecategory->read($input);
 				
 			}
@@ -90,7 +90,7 @@ class CategoryMapping {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -111,7 +111,7 @@ class CategoryMapping {
 		
 		if (!is_object($this->sourcecategory)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->sourcecategory->write($output);

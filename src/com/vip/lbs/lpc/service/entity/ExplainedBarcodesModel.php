@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\lbs\lpc\service\entity;
+namespace Voop\com\vip\lbs\lpc\service\entity;
 
 class ExplainedBarcodesModel {
 	

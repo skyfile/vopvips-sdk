@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\common\switcher;
+namespace Voop\com\vip\vop\common\switcher;
 interface AppSwitcherServiceIf{
 	
 	
@@ -18,7 +18,7 @@ interface AppSwitcherServiceIf{
 	
 	public function healthCheck();
 	
-	public function insertOrUpdate(\com\vip\vop\common\switcher\AppSwitcherVo $switcherVo);
+	public function insertOrUpdate(\Voop\com\vip\vop\common\switcher\AppSwitcherVo $switcherVo);
 	
 	public function isOpenSwither( $domainName, $moduleName);
 	
@@ -45,7 +45,7 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	public function send_closeSwitcher( $domainName, $moduleName){
 		
 		$this->initInvocation("closeSwitcher");
-		$args = new \com\vip\vop\common\switcher\AppSwitcherService_closeSwitcher_args();
+		$args = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_closeSwitcher_args();
 		
 		$args->domainName = $domainName;
 		
@@ -56,7 +56,7 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	
 	public function recv_closeSwitcher(){
 		
-		$result = new \com\vip\vop\common\switcher\AppSwitcherService_closeSwitcher_result();
+		$result = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_closeSwitcher_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -75,7 +75,7 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	public function send_createSwitcher( $domainName, $moduleName, $remark){
 		
 		$this->initInvocation("createSwitcher");
-		$args = new \com\vip\vop\common\switcher\AppSwitcherService_createSwitcher_args();
+		$args = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_createSwitcher_args();
 		
 		$args->domainName = $domainName;
 		
@@ -88,7 +88,7 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	
 	public function recv_createSwitcher(){
 		
-		$result = new \com\vip\vop\common\switcher\AppSwitcherService_createSwitcher_result();
+		$result = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_createSwitcher_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -107,14 +107,14 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\common\switcher\AppSwitcherService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\common\switcher\AppSwitcherService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -124,16 +124,16 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	}
 	
 	
-	public function insertOrUpdate(\com\vip\vop\common\switcher\AppSwitcherVo $switcherVo){
+	public function insertOrUpdate(\Voop\com\vip\vop\common\switcher\AppSwitcherVo $switcherVo){
 		
 		$this->send_insertOrUpdate( $switcherVo);
 		return $this->recv_insertOrUpdate();
 	}
 	
-	public function send_insertOrUpdate(\com\vip\vop\common\switcher\AppSwitcherVo $switcherVo){
+	public function send_insertOrUpdate(\Voop\com\vip\vop\common\switcher\AppSwitcherVo $switcherVo){
 		
 		$this->initInvocation("insertOrUpdate");
-		$args = new \com\vip\vop\common\switcher\AppSwitcherService_insertOrUpdate_args();
+		$args = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_insertOrUpdate_args();
 		
 		$args->switcherVo = $switcherVo;
 		
@@ -142,7 +142,7 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	
 	public function recv_insertOrUpdate(){
 		
-		$result = new \com\vip\vop\common\switcher\AppSwitcherService_insertOrUpdate_result();
+		$result = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_insertOrUpdate_result();
 		$this->receive_base($result);
 		
 	}
@@ -157,7 +157,7 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	public function send_isOpenSwither( $domainName, $moduleName){
 		
 		$this->initInvocation("isOpenSwither");
-		$args = new \com\vip\vop\common\switcher\AppSwitcherService_isOpenSwither_args();
+		$args = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_isOpenSwither_args();
 		
 		$args->domainName = $domainName;
 		
@@ -168,7 +168,7 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	
 	public function recv_isOpenSwither(){
 		
-		$result = new \com\vip\vop\common\switcher\AppSwitcherService_isOpenSwither_result();
+		$result = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_isOpenSwither_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -187,7 +187,7 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	public function send_listSwitcher( $domainName, $moduleName, $page, $pageSize){
 		
 		$this->initInvocation("listSwitcher");
-		$args = new \com\vip\vop\common\switcher\AppSwitcherService_listSwitcher_args();
+		$args = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_listSwitcher_args();
 		
 		$args->domainName = $domainName;
 		
@@ -202,7 +202,7 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	
 	public function recv_listSwitcher(){
 		
-		$result = new \com\vip\vop\common\switcher\AppSwitcherService_listSwitcher_result();
+		$result = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_listSwitcher_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -221,7 +221,7 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	public function send_openSwitcher( $domainName, $moduleName){
 		
 		$this->initInvocation("openSwitcher");
-		$args = new \com\vip\vop\common\switcher\AppSwitcherService_openSwitcher_args();
+		$args = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_openSwitcher_args();
 		
 		$args->domainName = $domainName;
 		
@@ -232,7 +232,7 @@ class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vo
 	
 	public function recv_openSwitcher(){
 		
-		$result = new \com\vip\vop\common\switcher\AppSwitcherService_openSwitcher_result();
+		$result = new \Voop\com\vip\vop\common\switcher\AppSwitcherService_openSwitcher_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -549,7 +549,7 @@ class AppSwitcherService_insertOrUpdate_args {
 		if(true) {
 			
 			
-			$this->switcherVo = new \com\vip\vop\common\switcher\AppSwitcherVo();
+			$this->switcherVo = new \Voop\com\vip\vop\common\switcher\AppSwitcherVo();
 			$this->switcherVo->read($input);
 			
 		}
@@ -570,7 +570,7 @@ class AppSwitcherService_insertOrUpdate_args {
 		
 		if (!is_object($this->switcherVo)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->switcherVo->write($output);
@@ -1121,7 +1121,7 @@ class AppSwitcherService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1144,7 +1144,7 @@ class AppSwitcherService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1326,7 +1326,7 @@ class AppSwitcherService_listSwitcher_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\common\switcher\ListSwitcherResponse();
+			$this->success = new \Voop\com\vip\vop\common\switcher\ListSwitcherResponse();
 			$this->success->read($input);
 			
 		}
@@ -1349,7 +1349,7 @@ class AppSwitcherService_listSwitcher_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

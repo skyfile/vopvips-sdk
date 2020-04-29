@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\ordererp\api\response;
+namespace Voop\vipapis\xstore\cc\ordererp\api\response;
 
 class AddFailMsgVO {
 	
@@ -108,7 +108,7 @@ class AddFailMsgVO {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

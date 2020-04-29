@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vis\purchase\schedules\service\query;
+namespace Voop\com\vip\vis\purchase\schedules\service\query;
 
 class QueryScheduleByShopCodeResponse {
 	
@@ -130,7 +130,7 @@ class QueryScheduleByShopCodeResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vis\purchase\schedules\service\query\ScheduleByShopCode();
+						$elem0 = new \Voop\com\vip\vis\purchase\schedules\service\query\ScheduleByShopCode();
 						$elem0->read($input);
 						
 						$this->scheduleByShopCodeList[$_size0++] = $elem0;
@@ -199,7 +199,7 @@ class QueryScheduleByShopCodeResponse {
 			
 			if (!is_array($this->scheduleByShopCodeList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -208,7 +208,7 @@ class QueryScheduleByShopCodeResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

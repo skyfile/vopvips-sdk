@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\puma;
+namespace Voop\vipapis\puma;
 require_once dirname(__FILE__).'/ChannelPumaService.php';
 class ChannelPumaServiceHelper extends _ChannelPumaServiceClient{
 	

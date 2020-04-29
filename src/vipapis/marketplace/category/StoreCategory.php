@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\category;
+namespace Voop\vipapis\marketplace\category;
 
 class StoreCategory {
 	
@@ -68,7 +68,7 @@ class StoreCategory {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

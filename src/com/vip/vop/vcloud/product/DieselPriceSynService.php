@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\product;
+namespace Voop\com\vip\vop\vcloud\product;
 interface DieselPriceSynServiceIf{
 	
 	
@@ -37,14 +37,14 @@ class _DieselPriceSynServiceClient extends \Osp\Base\OspStub implements \com\vip
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\vcloud\product\DieselPriceSynService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\DieselPriceSynService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\vcloud\product\DieselPriceSynService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\DieselPriceSynService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,14 +63,14 @@ class _DieselPriceSynServiceClient extends \Osp\Base\OspStub implements \com\vip
 	public function send_processPriceItem(){
 		
 		$this->initInvocation("processPriceItem");
-		$args = new \com\vip\vop\vcloud\product\DieselPriceSynService_processPriceItem_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\DieselPriceSynService_processPriceItem_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_processPriceItem(){
 		
-		$result = new \com\vip\vop\vcloud\product\DieselPriceSynService_processPriceItem_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\DieselPriceSynService_processPriceItem_result();
 		$this->receive_base($result);
 		
 	}
@@ -85,14 +85,14 @@ class _DieselPriceSynServiceClient extends \Osp\Base\OspStub implements \com\vip
 	public function send_pushPriceToVdg(){
 		
 		$this->initInvocation("pushPriceToVdg");
-		$args = new \com\vip\vop\vcloud\product\DieselPriceSynService_pushPriceToVdg_args();
+		$args = new \Voop\com\vip\vop\vcloud\product\DieselPriceSynService_pushPriceToVdg_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_pushPriceToVdg(){
 		
-		$result = new \com\vip\vop\vcloud\product\DieselPriceSynService_pushPriceToVdg_result();
+		$result = new \Voop\com\vip\vop\vcloud\product\DieselPriceSynService_pushPriceToVdg_result();
 		$this->receive_base($result);
 		
 	}
@@ -281,7 +281,7 @@ class DieselPriceSynService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -304,7 +304,7 @@ class DieselPriceSynService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

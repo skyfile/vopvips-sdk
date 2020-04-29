@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\message;
+namespace Voop\vipapis\message;
 require_once dirname(__FILE__).'/MessageService.php';
 class MessageServiceHelper extends _MessageServiceClient{
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\tpc\api\model;
+namespace Voop\com\vip\tpc\api\model;
 
 class CarrierBillCheckResult {
 	

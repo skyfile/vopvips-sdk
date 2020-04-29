@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 
 class AddSkuItem {
 	
@@ -130,7 +130,7 @@ class AddSkuItem {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\marketplace\product\SimpleProperty();
+						$elem1 = new \Voop\vipapis\marketplace\product\SimpleProperty();
 						$elem1->read($input);
 						
 						$this->simple_sale_props[$_size1++] = $elem1;
@@ -149,7 +149,7 @@ class AddSkuItem {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -185,7 +185,7 @@ class AddSkuItem {
 		
 		if (!is_array($this->simple_sale_props)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -194,7 +194,7 @@ class AddSkuItem {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\lbs\track\waybill\service\entity;
+namespace Voop\com\vip\lbs\track\waybill\service\entity;
 
 class LbsAcceptLogisticsTrackResponse {
 	
@@ -61,7 +61,7 @@ class LbsAcceptLogisticsTrackResponse {
 				
 				$needSkip = false;
 				
-				$this->header = new \com\vip\lbs\track\waybill\service\common\LbsResponseHeader();
+				$this->header = new \Voop\com\vip\lbs\track\waybill\service\common\LbsResponseHeader();
 				$this->header->read($input);
 				
 			}
@@ -91,7 +91,7 @@ class LbsAcceptLogisticsTrackResponse {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);

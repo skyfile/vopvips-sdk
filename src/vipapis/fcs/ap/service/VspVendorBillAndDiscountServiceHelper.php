@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\fcs\ap\service;
+namespace Voop\vipapis\fcs\ap\service;
 require_once dirname(__FILE__).'/VspVendorBillAndDiscountService.php';
 class VspVendorBillAndDiscountServiceHelper extends _VspVendorBillAndDiscountServiceClient{
 	

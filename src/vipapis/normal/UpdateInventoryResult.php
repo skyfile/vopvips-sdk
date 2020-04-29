@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\normal;
+namespace Voop\vipapis\normal;
 
 class UpdateInventoryResult {
 	
@@ -168,7 +168,7 @@ class UpdateInventoryResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

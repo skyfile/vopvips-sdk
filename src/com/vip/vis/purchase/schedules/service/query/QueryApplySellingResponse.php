@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vis\purchase\schedules\service\query;
+namespace Voop\com\vip\vis\purchase\schedules\service\query;
 
 class QueryApplySellingResponse {
 	
@@ -140,7 +140,7 @@ class QueryApplySellingResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vis\purchase\schedules\service\query\ApplySellingData();
+						$elem0 = new \Voop\com\vip\vis\purchase\schedules\service\query\ApplySellingData();
 						$elem0->read($input);
 						
 						$this->applySellingDataList[$_size0++] = $elem0;
@@ -219,7 +219,7 @@ class QueryApplySellingResponse {
 			
 			if (!is_array($this->applySellingDataList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -228,7 +228,7 @@ class QueryApplySellingResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

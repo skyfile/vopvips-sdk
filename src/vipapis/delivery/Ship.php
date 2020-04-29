@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 
 class Ship {
 	
@@ -160,7 +160,7 @@ class Ship {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\delivery\Package();
+						$elem0 = new \Voop\vipapis\delivery\Package();
 						$elem0->read($input);
 						
 						$this->packages[$_size0++] = $elem0;
@@ -189,7 +189,7 @@ class Ship {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -230,7 +230,7 @@ class Ship {
 		
 		if (!is_array($this->packages)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -239,7 +239,7 @@ class Ship {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

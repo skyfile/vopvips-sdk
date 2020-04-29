@@ -8,19 +8,19 @@
 *
 */
 
-namespace vipapis\productsale;
+namespace Voop\vipapis\productsale;
 interface ProductSaleServiceIf{
 	
 	
-	public function exportExcel(\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam);
+	public function exportExcel(\Voop\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam);
 	
 	public function getProductSaleInfoLogs( $productSaleInfoId);
 	
-	public function getProductSaleInfos(\com\vip\vipapis\productsale\service\ProductSaleParam $productSaleParam);
+	public function getProductSaleInfos(\Voop\com\vip\vipapis\productsale\service\ProductSaleParam $productSaleParam);
 	
 	public function getProductSaleInfosByIds( $ids);
 	
-	public function getProductSaleInfosByParam(\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam);
+	public function getProductSaleInfosByParam(\Voop\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam);
 	
 	public function healthCheck();
 	
@@ -36,16 +36,16 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	}
 	
 	
-	public function exportExcel(\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam){
+	public function exportExcel(\Voop\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam){
 		
 		$this->send_exportExcel( $productSaleInfosParam);
 		return $this->recv_exportExcel();
 	}
 	
-	public function send_exportExcel(\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam){
+	public function send_exportExcel(\Voop\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam){
 		
 		$this->initInvocation("exportExcel");
-		$args = new \vipapis\productsale\ProductSaleService_exportExcel_args();
+		$args = new \Voop\vipapis\productsale\ProductSaleService_exportExcel_args();
 		
 		$args->productSaleInfosParam = $productSaleInfosParam;
 		
@@ -54,7 +54,7 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	
 	public function recv_exportExcel(){
 		
-		$result = new \vipapis\productsale\ProductSaleService_exportExcel_result();
+		$result = new \Voop\vipapis\productsale\ProductSaleService_exportExcel_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -73,7 +73,7 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	public function send_getProductSaleInfoLogs( $productSaleInfoId){
 		
 		$this->initInvocation("getProductSaleInfoLogs");
-		$args = new \vipapis\productsale\ProductSaleService_getProductSaleInfoLogs_args();
+		$args = new \Voop\vipapis\productsale\ProductSaleService_getProductSaleInfoLogs_args();
 		
 		$args->productSaleInfoId = $productSaleInfoId;
 		
@@ -82,7 +82,7 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	
 	public function recv_getProductSaleInfoLogs(){
 		
-		$result = new \vipapis\productsale\ProductSaleService_getProductSaleInfoLogs_result();
+		$result = new \Voop\vipapis\productsale\ProductSaleService_getProductSaleInfoLogs_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -92,16 +92,16 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	}
 	
 	
-	public function getProductSaleInfos(\com\vip\vipapis\productsale\service\ProductSaleParam $productSaleParam){
+	public function getProductSaleInfos(\Voop\com\vip\vipapis\productsale\service\ProductSaleParam $productSaleParam){
 		
 		$this->send_getProductSaleInfos( $productSaleParam);
 		return $this->recv_getProductSaleInfos();
 	}
 	
-	public function send_getProductSaleInfos(\com\vip\vipapis\productsale\service\ProductSaleParam $productSaleParam){
+	public function send_getProductSaleInfos(\Voop\com\vip\vipapis\productsale\service\ProductSaleParam $productSaleParam){
 		
 		$this->initInvocation("getProductSaleInfos");
-		$args = new \vipapis\productsale\ProductSaleService_getProductSaleInfos_args();
+		$args = new \Voop\vipapis\productsale\ProductSaleService_getProductSaleInfos_args();
 		
 		$args->productSaleParam = $productSaleParam;
 		
@@ -110,7 +110,7 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	
 	public function recv_getProductSaleInfos(){
 		
-		$result = new \vipapis\productsale\ProductSaleService_getProductSaleInfos_result();
+		$result = new \Voop\vipapis\productsale\ProductSaleService_getProductSaleInfos_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -129,7 +129,7 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	public function send_getProductSaleInfosByIds( $ids){
 		
 		$this->initInvocation("getProductSaleInfosByIds");
-		$args = new \vipapis\productsale\ProductSaleService_getProductSaleInfosByIds_args();
+		$args = new \Voop\vipapis\productsale\ProductSaleService_getProductSaleInfosByIds_args();
 		
 		$args->ids = $ids;
 		
@@ -138,7 +138,7 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	
 	public function recv_getProductSaleInfosByIds(){
 		
-		$result = new \vipapis\productsale\ProductSaleService_getProductSaleInfosByIds_result();
+		$result = new \Voop\vipapis\productsale\ProductSaleService_getProductSaleInfosByIds_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -148,16 +148,16 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	}
 	
 	
-	public function getProductSaleInfosByParam(\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam){
+	public function getProductSaleInfosByParam(\Voop\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam){
 		
 		$this->send_getProductSaleInfosByParam( $productSaleInfosParam);
 		return $this->recv_getProductSaleInfosByParam();
 	}
 	
-	public function send_getProductSaleInfosByParam(\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam){
+	public function send_getProductSaleInfosByParam(\Voop\com\vip\vipapis\productsale\service\ProductSaleInfosParam $productSaleInfosParam){
 		
 		$this->initInvocation("getProductSaleInfosByParam");
-		$args = new \vipapis\productsale\ProductSaleService_getProductSaleInfosByParam_args();
+		$args = new \Voop\vipapis\productsale\ProductSaleService_getProductSaleInfosByParam_args();
 		
 		$args->productSaleInfosParam = $productSaleInfosParam;
 		
@@ -166,7 +166,7 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	
 	public function recv_getProductSaleInfosByParam(){
 		
-		$result = new \vipapis\productsale\ProductSaleService_getProductSaleInfosByParam_result();
+		$result = new \Voop\vipapis\productsale\ProductSaleService_getProductSaleInfosByParam_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -185,14 +185,14 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\productsale\ProductSaleService_healthCheck_args();
+		$args = new \Voop\vipapis\productsale\ProductSaleService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\productsale\ProductSaleService_healthCheck_result();
+		$result = new \Voop\vipapis\productsale\ProductSaleService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -211,7 +211,7 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	public function send_updateProductSaleInfos( $productSaleInfoModel){
 		
 		$this->initInvocation("updateProductSaleInfos");
-		$args = new \vipapis\productsale\ProductSaleService_updateProductSaleInfos_args();
+		$args = new \Voop\vipapis\productsale\ProductSaleService_updateProductSaleInfos_args();
 		
 		$args->productSaleInfoModel = $productSaleInfoModel;
 		
@@ -220,7 +220,7 @@ class _ProductSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\pr
 	
 	public function recv_updateProductSaleInfos(){
 		
-		$result = new \vipapis\productsale\ProductSaleService_updateProductSaleInfos_result();
+		$result = new \Voop\vipapis\productsale\ProductSaleService_updateProductSaleInfos_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -275,7 +275,7 @@ class ProductSaleService_exportExcel_args {
 		if(true) {
 			
 			
-			$this->productSaleInfosParam = new \com\vip\vipapis\productsale\service\ProductSaleInfosParam();
+			$this->productSaleInfosParam = new \Voop\com\vip\vipapis\productsale\service\ProductSaleInfosParam();
 			$this->productSaleInfosParam->read($input);
 			
 		}
@@ -298,7 +298,7 @@ class ProductSaleService_exportExcel_args {
 			
 			if (!is_object($this->productSaleInfosParam)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->productSaleInfosParam->write($output);
@@ -431,7 +431,7 @@ class ProductSaleService_getProductSaleInfos_args {
 		if(true) {
 			
 			
-			$this->productSaleParam = new \com\vip\vipapis\productsale\service\ProductSaleParam();
+			$this->productSaleParam = new \Voop\com\vip\vipapis\productsale\service\ProductSaleParam();
 			$this->productSaleParam->read($input);
 			
 		}
@@ -454,7 +454,7 @@ class ProductSaleService_getProductSaleInfos_args {
 			
 			if (!is_object($this->productSaleParam)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->productSaleParam->write($output);
@@ -553,7 +553,7 @@ class ProductSaleService_getProductSaleInfosByIds_args {
 			
 			if (!is_array($this->ids)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -619,7 +619,7 @@ class ProductSaleService_getProductSaleInfosByParam_args {
 		if(true) {
 			
 			
-			$this->productSaleInfosParam = new \com\vip\vipapis\productsale\service\ProductSaleInfosParam();
+			$this->productSaleInfosParam = new \Voop\com\vip\vipapis\productsale\service\ProductSaleInfosParam();
 			$this->productSaleInfosParam->read($input);
 			
 		}
@@ -642,7 +642,7 @@ class ProductSaleService_getProductSaleInfosByParam_args {
 			
 			if (!is_object($this->productSaleInfosParam)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->productSaleInfosParam->write($output);
@@ -756,7 +756,7 @@ class ProductSaleService_updateProductSaleInfos_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vipapis\productsale\service\ProductSaleInfoModel();
+					$elem0 = new \Voop\com\vip\vipapis\productsale\service\ProductSaleInfoModel();
 					$elem0->read($input);
 					
 					$this->productSaleInfoModel[$_size0++] = $elem0;
@@ -789,7 +789,7 @@ class ProductSaleService_updateProductSaleInfos_args {
 			
 			if (!is_array($this->productSaleInfoModel)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -798,7 +798,7 @@ class ProductSaleService_updateProductSaleInfos_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -944,7 +944,7 @@ class ProductSaleService_getProductSaleInfoLogs_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vipapis\productsale\service\ProductSaleInfoLog();
+					$elem0 = new \Voop\com\vip\vipapis\productsale\service\ProductSaleInfoLog();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -977,7 +977,7 @@ class ProductSaleService_getProductSaleInfoLogs_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -986,7 +986,7 @@ class ProductSaleService_getProductSaleInfoLogs_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1049,7 +1049,7 @@ class ProductSaleService_getProductSaleInfos_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vipapis\productsale\service\ProductSaleInfosResponse();
+			$this->success = new \Voop\com\vip\vipapis\productsale\service\ProductSaleInfosResponse();
 			$this->success->read($input);
 			
 		}
@@ -1072,7 +1072,7 @@ class ProductSaleService_getProductSaleInfos_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1140,7 +1140,7 @@ class ProductSaleService_getProductSaleInfosByIds_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vipapis\productsale\service\ProductSaleInfoModel();
+					$elem0 = new \Voop\com\vip\vipapis\productsale\service\ProductSaleInfoModel();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1173,7 +1173,7 @@ class ProductSaleService_getProductSaleInfosByIds_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1182,7 +1182,7 @@ class ProductSaleService_getProductSaleInfosByIds_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1245,7 +1245,7 @@ class ProductSaleService_getProductSaleInfosByParam_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vipapis\productsale\service\ProductSaleInfoModelResponse();
+			$this->success = new \Voop\com\vip\vipapis\productsale\service\ProductSaleInfoModelResponse();
 			$this->success->read($input);
 			
 		}
@@ -1268,7 +1268,7 @@ class ProductSaleService_getProductSaleInfosByParam_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1327,7 +1327,7 @@ class ProductSaleService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1350,7 +1350,7 @@ class ProductSaleService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

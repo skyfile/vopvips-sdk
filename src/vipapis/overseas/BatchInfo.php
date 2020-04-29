@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\overseas;
+namespace Voop\vipapis\overseas;
 
 class BatchInfo {
 	
@@ -190,7 +190,7 @@ class BatchInfo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\overseas\BatchDetailInfo();
+						$elem0 = new \Voop\vipapis\overseas\BatchDetailInfo();
 						$elem0->read($input);
 						
 						$this->product_list[$_size0++] = $elem0;
@@ -209,7 +209,7 @@ class BatchInfo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -264,7 +264,7 @@ class BatchInfo {
 		
 		if (!is_array($this->product_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -273,7 +273,7 @@ class BatchInfo {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

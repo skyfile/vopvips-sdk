@@ -20,7 +20,7 @@
  * @package thrift.protocol
  */
 
-namespace Osp\Protocol\JSON;
+namespace Voop\Osp\Protocol\JSON;
 
 use Osp\Protocol\JSON\BaseContext;
 use Osp\Protocol\JSONProtocol;

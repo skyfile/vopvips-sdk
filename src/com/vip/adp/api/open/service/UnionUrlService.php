@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 interface UnionUrlServiceIf{
 	
 	
@@ -22,9 +22,9 @@ interface UnionUrlServiceIf{
 	
 	public function healthCheck();
 	
-	public function vipLinkCheck(\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq);
+	public function vipLinkCheck(\Voop\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq);
 	
-	public function vipLinkCheckWithOuth(\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq);
+	public function vipLinkCheckWithOuth(\Voop\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq);
 	
 }
 
@@ -45,7 +45,7 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	public function send_genByGoodsId( $goodsIdList, $chanTag, $requestId){
 		
 		$this->initInvocation("genByGoodsId");
-		$args = new \com\vip\adp\api\open\service\UnionUrlService_genByGoodsId_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionUrlService_genByGoodsId_args();
 		
 		$args->goodsIdList = $goodsIdList;
 		
@@ -58,7 +58,7 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	
 	public function recv_genByGoodsId(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionUrlService_genByGoodsId_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionUrlService_genByGoodsId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -77,7 +77,7 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	public function send_genByGoodsIdWithOauth( $goodsIdList, $chanTag, $requestId){
 		
 		$this->initInvocation("genByGoodsIdWithOauth");
-		$args = new \com\vip\adp\api\open\service\UnionUrlService_genByGoodsIdWithOauth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionUrlService_genByGoodsIdWithOauth_args();
 		
 		$args->goodsIdList = $goodsIdList;
 		
@@ -90,7 +90,7 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	
 	public function recv_genByGoodsIdWithOauth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionUrlService_genByGoodsIdWithOauth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionUrlService_genByGoodsIdWithOauth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -109,7 +109,7 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	public function send_genByVIPUrl( $urlList, $chanTag, $requestId){
 		
 		$this->initInvocation("genByVIPUrl");
-		$args = new \com\vip\adp\api\open\service\UnionUrlService_genByVIPUrl_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionUrlService_genByVIPUrl_args();
 		
 		$args->urlList = $urlList;
 		
@@ -122,7 +122,7 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	
 	public function recv_genByVIPUrl(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionUrlService_genByVIPUrl_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionUrlService_genByVIPUrl_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -141,7 +141,7 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	public function send_genByVIPUrlWithOauth( $urlList, $chanTag, $requestId){
 		
 		$this->initInvocation("genByVIPUrlWithOauth");
-		$args = new \com\vip\adp\api\open\service\UnionUrlService_genByVIPUrlWithOauth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionUrlService_genByVIPUrlWithOauth_args();
 		
 		$args->urlList = $urlList;
 		
@@ -154,7 +154,7 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	
 	public function recv_genByVIPUrlWithOauth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionUrlService_genByVIPUrlWithOauth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionUrlService_genByVIPUrlWithOauth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -173,14 +173,14 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\adp\api\open\service\UnionUrlService_healthCheck_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionUrlService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionUrlService_healthCheck_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionUrlService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -190,16 +190,16 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	}
 	
 	
-	public function vipLinkCheck(\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq){
+	public function vipLinkCheck(\Voop\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq){
 		
 		$this->send_vipLinkCheck( $vipLinkCheckReq);
 		return $this->recv_vipLinkCheck();
 	}
 	
-	public function send_vipLinkCheck(\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq){
+	public function send_vipLinkCheck(\Voop\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq){
 		
 		$this->initInvocation("vipLinkCheck");
-		$args = new \com\vip\adp\api\open\service\UnionUrlService_vipLinkCheck_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionUrlService_vipLinkCheck_args();
 		
 		$args->vipLinkCheckReq = $vipLinkCheckReq;
 		
@@ -208,7 +208,7 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	
 	public function recv_vipLinkCheck(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionUrlService_vipLinkCheck_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionUrlService_vipLinkCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -218,16 +218,16 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	}
 	
 	
-	public function vipLinkCheckWithOuth(\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq){
+	public function vipLinkCheckWithOuth(\Voop\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq){
 		
 		$this->send_vipLinkCheckWithOuth( $vipLinkCheckReq);
 		return $this->recv_vipLinkCheckWithOuth();
 	}
 	
-	public function send_vipLinkCheckWithOuth(\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq){
+	public function send_vipLinkCheckWithOuth(\Voop\com\vip\adp\api\open\service\VipLinkCheckReq $vipLinkCheckReq){
 		
 		$this->initInvocation("vipLinkCheckWithOuth");
-		$args = new \com\vip\adp\api\open\service\UnionUrlService_vipLinkCheckWithOuth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionUrlService_vipLinkCheckWithOuth_args();
 		
 		$args->vipLinkCheckReq = $vipLinkCheckReq;
 		
@@ -236,7 +236,7 @@ class _UnionUrlServiceClient extends \Osp\Base\OspStub implements \com\vip\adp\a
 	
 	public function recv_vipLinkCheckWithOuth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionUrlService_vipLinkCheckWithOuth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionUrlService_vipLinkCheckWithOuth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -367,7 +367,7 @@ class UnionUrlService_genByGoodsId_args {
 		
 		if (!is_array($this->goodsIdList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -521,7 +521,7 @@ class UnionUrlService_genByGoodsIdWithOauth_args {
 		
 		if (!is_array($this->goodsIdList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -675,7 +675,7 @@ class UnionUrlService_genByVIPUrl_args {
 		
 		if (!is_array($this->urlList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -829,7 +829,7 @@ class UnionUrlService_genByVIPUrlWithOauth_args {
 		
 		if (!is_array($this->urlList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -953,7 +953,7 @@ class UnionUrlService_vipLinkCheck_args {
 		if(true) {
 			
 			
-			$this->vipLinkCheckReq = new \com\vip\adp\api\open\service\VipLinkCheckReq();
+			$this->vipLinkCheckReq = new \Voop\com\vip\adp\api\open\service\VipLinkCheckReq();
 			$this->vipLinkCheckReq->read($input);
 			
 		}
@@ -974,7 +974,7 @@ class UnionUrlService_vipLinkCheck_args {
 		
 		if (!is_object($this->vipLinkCheckReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->vipLinkCheckReq->write($output);
@@ -1031,7 +1031,7 @@ class UnionUrlService_vipLinkCheckWithOuth_args {
 		if(true) {
 			
 			
-			$this->vipLinkCheckReq = new \com\vip\adp\api\open\service\VipLinkCheckReq();
+			$this->vipLinkCheckReq = new \Voop\com\vip\adp\api\open\service\VipLinkCheckReq();
 			$this->vipLinkCheckReq->read($input);
 			
 		}
@@ -1052,7 +1052,7 @@ class UnionUrlService_vipLinkCheckWithOuth_args {
 		
 		if (!is_object($this->vipLinkCheckReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->vipLinkCheckReq->write($output);
@@ -1109,7 +1109,7 @@ class UnionUrlService_genByGoodsId_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\UrlGenResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\UrlGenResponse();
 			$this->success->read($input);
 			
 		}
@@ -1132,7 +1132,7 @@ class UnionUrlService_genByGoodsId_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1191,7 +1191,7 @@ class UnionUrlService_genByGoodsIdWithOauth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\UrlGenResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\UrlGenResponse();
 			$this->success->read($input);
 			
 		}
@@ -1214,7 +1214,7 @@ class UnionUrlService_genByGoodsIdWithOauth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1273,7 +1273,7 @@ class UnionUrlService_genByVIPUrl_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\UrlGenResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\UrlGenResponse();
 			$this->success->read($input);
 			
 		}
@@ -1296,7 +1296,7 @@ class UnionUrlService_genByVIPUrl_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1355,7 +1355,7 @@ class UnionUrlService_genByVIPUrlWithOauth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\UrlGenResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\UrlGenResponse();
 			$this->success->read($input);
 			
 		}
@@ -1378,7 +1378,7 @@ class UnionUrlService_genByVIPUrlWithOauth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1437,7 +1437,7 @@ class UnionUrlService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1460,7 +1460,7 @@ class UnionUrlService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1519,7 +1519,7 @@ class UnionUrlService_vipLinkCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\VipLinkCheckResp();
+			$this->success = new \Voop\com\vip\adp\api\open\service\VipLinkCheckResp();
 			$this->success->read($input);
 			
 		}
@@ -1542,7 +1542,7 @@ class UnionUrlService_vipLinkCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1601,7 +1601,7 @@ class UnionUrlService_vipLinkCheckWithOuth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\VipLinkCheckResp();
+			$this->success = new \Voop\com\vip\adp\api\open\service\VipLinkCheckResp();
 			$this->success->read($input);
 			
 		}
@@ -1624,7 +1624,7 @@ class UnionUrlService_vipLinkCheckWithOuth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

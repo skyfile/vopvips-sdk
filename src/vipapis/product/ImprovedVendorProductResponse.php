@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 
 class ImprovedVendorProductResponse {
 	
@@ -80,7 +80,7 @@ class ImprovedVendorProductResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\product\ImprovedVendorProductSuccessItem();
+						$elem0 = new \Voop\vipapis\product\ImprovedVendorProductSuccessItem();
 						$elem0->read($input);
 						
 						$this->success_items[$_size0++] = $elem0;
@@ -111,7 +111,7 @@ class ImprovedVendorProductResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\product\ImprovedVendorProductFailItem();
+						$elem1 = new \Voop\vipapis\product\ImprovedVendorProductFailItem();
 						$elem1->read($input);
 						
 						$this->fail_items[$_size1++] = $elem1;
@@ -130,7 +130,7 @@ class ImprovedVendorProductResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -153,7 +153,7 @@ class ImprovedVendorProductResponse {
 			
 			if (!is_array($this->success_items)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -162,7 +162,7 @@ class ImprovedVendorProductResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -181,7 +181,7 @@ class ImprovedVendorProductResponse {
 			
 			if (!is_array($this->fail_items)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -190,7 +190,7 @@ class ImprovedVendorProductResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

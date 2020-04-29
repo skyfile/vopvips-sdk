@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\shanshan\outlet;
+namespace Voop\vipapis\shanshan\outlet;
 require_once dirname(__FILE__).'/ShanshanOutletService.php';
 class ShanshanOutletServiceHelper extends _ShanshanOutletServiceClient{
 	

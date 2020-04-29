@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\overseas;
+namespace Voop\vipapis\overseas;
 
 class PoDetail {
 	
@@ -208,7 +208,7 @@ class PoDetail {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

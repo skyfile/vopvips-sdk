@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\arplatform\face\service;
+namespace Voop\com\vip\arplatform\face\service;
 
 class CompareResponse {
 	
@@ -90,7 +90,7 @@ class CompareResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\arplatform\face\service\CompareResult();
+						$elem0 = new \Voop\com\vip\arplatform\face\service\CompareResult();
 						$elem0->read($input);
 						
 						$this->resultList[$_size0++] = $elem0;
@@ -135,7 +135,7 @@ class CompareResponse {
 		
 		if (!is_array($this->resultList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -144,7 +144,7 @@ class CompareResponse {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

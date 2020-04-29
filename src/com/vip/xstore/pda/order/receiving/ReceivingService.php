@@ -8,45 +8,45 @@
 *
 */
 
-namespace com\vip\xstore\pda\order\receiving;
+namespace Voop\com\vip\xstore\pda\order\receiving;
 interface ReceivingServiceIf{
 	
 	
-	public function approvalFlow(\com\vip\xstore\pda\order\common\ApprovalFlowRequest $req);
+	public function approvalFlow(\Voop\com\vip\xstore\pda\order\common\ApprovalFlowRequest $req);
 	
-	public function autoMatchQuantity(\com\vip\xstore\pda\order\receiving\DeliveryAutoMatchQuantityRequest $req);
+	public function autoMatchQuantity(\Voop\com\vip\xstore\pda\order\receiving\DeliveryAutoMatchQuantityRequest $req);
 	
-	public function confirmFlow(\com\vip\xstore\pda\order\common\ConfirmFlowRequest $req);
+	public function confirmFlow(\Voop\com\vip\xstore\pda\order\common\ConfirmFlowRequest $req);
 	
 	public function downloadReceivingOrder( $transferring_no);
 	
-	public function fixReceivingBoxStatus(\com\vip\xstore\pda\common\TimeRange $time_range);
+	public function fixReceivingBoxStatus(\Voop\com\vip\xstore\pda\common\TimeRange $time_range);
 	
 	public function fixReceivingBoxStatusByReceivingNo( $receiving_no);
 	
 	public function healthCheck();
 	
-	public function initReceivingBoxByDate(\com\vip\xstore\pda\common\TimeRange $time_range);
+	public function initReceivingBoxByDate(\Voop\com\vip\xstore\pda\common\TimeRange $time_range);
 	
 	public function initReceivingBoxByNo( $receiving_no);
 	
-	public function queryReceivingItem(\com\vip\xstore\pda\order\receiving\QueryReceivingItemRequest $req);
+	public function queryReceivingItem(\Voop\com\vip\xstore\pda\order\receiving\QueryReceivingItemRequest $req);
 	
-	public function queryReceivingOrder4PDA(\com\vip\xstore\pda\order\receiving\PDAReceivingOrderRequest $req);
+	public function queryReceivingOrder4PDA(\Voop\com\vip\xstore\pda\order\receiving\PDAReceivingOrderRequest $req);
 	
-	public function queryReceivingOrder4XUP(\com\vip\xstore\pda\order\receiving\XUPReceivingOrderRequest $req);
+	public function queryReceivingOrder4XUP(\Voop\com\vip\xstore\pda\order\receiving\XUPReceivingOrderRequest $req);
 	
-	public function queryReceivingOrderDetail(\com\vip\xstore\pda\order\receiving\QueryReceivingDetailRequest $req);
+	public function queryReceivingOrderDetail(\Voop\com\vip\xstore\pda\order\receiving\QueryReceivingDetailRequest $req);
 	
-	public function querySendFailure(\com\vip\xstore\pda\common\QuerySendFailureRequest $req);
+	public function querySendFailure(\Voop\com\vip\xstore\pda\common\QuerySendFailureRequest $req);
 	
-	public function querySubmitBarcodeFlow(\com\vip\xstore\pda\order\common\QuerySubmitBarcodeFlowRequest $req);
+	public function querySubmitBarcodeFlow(\Voop\com\vip\xstore\pda\order\common\QuerySubmitBarcodeFlowRequest $req);
 	
-	public function querySubmitFlow(\com\vip\xstore\pda\order\common\QuerySubmitFlowRequest $req);
+	public function querySubmitFlow(\Voop\com\vip\xstore\pda\order\common\QuerySubmitFlowRequest $req);
 	
-	public function submitFlow(\com\vip\xstore\pda\order\common\SubmitFlowRequest $req);
+	public function submitFlow(\Voop\com\vip\xstore\pda\order\common\SubmitFlowRequest $req);
 	
-	public function updateRemark(\com\vip\xstore\pda\order\common\UpdateRemarkRequest $req);
+	public function updateRemark(\Voop\com\vip\xstore\pda\order\common\UpdateRemarkRequest $req);
 	
 }
 
@@ -58,16 +58,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function approvalFlow(\com\vip\xstore\pda\order\common\ApprovalFlowRequest $req){
+	public function approvalFlow(\Voop\com\vip\xstore\pda\order\common\ApprovalFlowRequest $req){
 		
 		$this->send_approvalFlow( $req);
 		return $this->recv_approvalFlow();
 	}
 	
-	public function send_approvalFlow(\com\vip\xstore\pda\order\common\ApprovalFlowRequest $req){
+	public function send_approvalFlow(\Voop\com\vip\xstore\pda\order\common\ApprovalFlowRequest $req){
 		
 		$this->initInvocation("approvalFlow");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_approvalFlow_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_approvalFlow_args();
 		
 		$args->req = $req;
 		
@@ -76,7 +76,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_approvalFlow(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_approvalFlow_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_approvalFlow_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -86,16 +86,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function autoMatchQuantity(\com\vip\xstore\pda\order\receiving\DeliveryAutoMatchQuantityRequest $req){
+	public function autoMatchQuantity(\Voop\com\vip\xstore\pda\order\receiving\DeliveryAutoMatchQuantityRequest $req){
 		
 		$this->send_autoMatchQuantity( $req);
 		return $this->recv_autoMatchQuantity();
 	}
 	
-	public function send_autoMatchQuantity(\com\vip\xstore\pda\order\receiving\DeliveryAutoMatchQuantityRequest $req){
+	public function send_autoMatchQuantity(\Voop\com\vip\xstore\pda\order\receiving\DeliveryAutoMatchQuantityRequest $req){
 		
 		$this->initInvocation("autoMatchQuantity");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_autoMatchQuantity_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_autoMatchQuantity_args();
 		
 		$args->req = $req;
 		
@@ -104,7 +104,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_autoMatchQuantity(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_autoMatchQuantity_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_autoMatchQuantity_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -114,16 +114,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function confirmFlow(\com\vip\xstore\pda\order\common\ConfirmFlowRequest $req){
+	public function confirmFlow(\Voop\com\vip\xstore\pda\order\common\ConfirmFlowRequest $req){
 		
 		$this->send_confirmFlow( $req);
 		return $this->recv_confirmFlow();
 	}
 	
-	public function send_confirmFlow(\com\vip\xstore\pda\order\common\ConfirmFlowRequest $req){
+	public function send_confirmFlow(\Voop\com\vip\xstore\pda\order\common\ConfirmFlowRequest $req){
 		
 		$this->initInvocation("confirmFlow");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_confirmFlow_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_confirmFlow_args();
 		
 		$args->req = $req;
 		
@@ -132,7 +132,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_confirmFlow(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_confirmFlow_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_confirmFlow_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -151,7 +151,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	public function send_downloadReceivingOrder( $transferring_no){
 		
 		$this->initInvocation("downloadReceivingOrder");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_downloadReceivingOrder_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_downloadReceivingOrder_args();
 		
 		$args->transferring_no = $transferring_no;
 		
@@ -160,22 +160,22 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_downloadReceivingOrder(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_downloadReceivingOrder_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_downloadReceivingOrder_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function fixReceivingBoxStatus(\com\vip\xstore\pda\common\TimeRange $time_range){
+	public function fixReceivingBoxStatus(\Voop\com\vip\xstore\pda\common\TimeRange $time_range){
 		
 		$this->send_fixReceivingBoxStatus( $time_range);
 		return $this->recv_fixReceivingBoxStatus();
 	}
 	
-	public function send_fixReceivingBoxStatus(\com\vip\xstore\pda\common\TimeRange $time_range){
+	public function send_fixReceivingBoxStatus(\Voop\com\vip\xstore\pda\common\TimeRange $time_range){
 		
 		$this->initInvocation("fixReceivingBoxStatus");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_fixReceivingBoxStatus_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_fixReceivingBoxStatus_args();
 		
 		$args->time_range = $time_range;
 		
@@ -184,7 +184,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_fixReceivingBoxStatus(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_fixReceivingBoxStatus_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_fixReceivingBoxStatus_result();
 		$this->receive_base($result);
 		
 	}
@@ -199,7 +199,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	public function send_fixReceivingBoxStatusByReceivingNo( $receiving_no){
 		
 		$this->initInvocation("fixReceivingBoxStatusByReceivingNo");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_fixReceivingBoxStatusByReceivingNo_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_fixReceivingBoxStatusByReceivingNo_args();
 		
 		$args->receiving_no = $receiving_no;
 		
@@ -208,7 +208,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_fixReceivingBoxStatusByReceivingNo(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_fixReceivingBoxStatusByReceivingNo_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_fixReceivingBoxStatusByReceivingNo_result();
 		$this->receive_base($result);
 		
 	}
@@ -223,14 +223,14 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_healthCheck_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_healthCheck_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -240,16 +240,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function initReceivingBoxByDate(\com\vip\xstore\pda\common\TimeRange $time_range){
+	public function initReceivingBoxByDate(\Voop\com\vip\xstore\pda\common\TimeRange $time_range){
 		
 		$this->send_initReceivingBoxByDate( $time_range);
 		return $this->recv_initReceivingBoxByDate();
 	}
 	
-	public function send_initReceivingBoxByDate(\com\vip\xstore\pda\common\TimeRange $time_range){
+	public function send_initReceivingBoxByDate(\Voop\com\vip\xstore\pda\common\TimeRange $time_range){
 		
 		$this->initInvocation("initReceivingBoxByDate");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_initReceivingBoxByDate_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_initReceivingBoxByDate_args();
 		
 		$args->time_range = $time_range;
 		
@@ -258,7 +258,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_initReceivingBoxByDate(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_initReceivingBoxByDate_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_initReceivingBoxByDate_result();
 		$this->receive_base($result);
 		
 	}
@@ -273,7 +273,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	public function send_initReceivingBoxByNo( $receiving_no){
 		
 		$this->initInvocation("initReceivingBoxByNo");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_initReceivingBoxByNo_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_initReceivingBoxByNo_args();
 		
 		$args->receiving_no = $receiving_no;
 		
@@ -282,22 +282,22 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_initReceivingBoxByNo(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_initReceivingBoxByNo_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_initReceivingBoxByNo_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function queryReceivingItem(\com\vip\xstore\pda\order\receiving\QueryReceivingItemRequest $req){
+	public function queryReceivingItem(\Voop\com\vip\xstore\pda\order\receiving\QueryReceivingItemRequest $req){
 		
 		$this->send_queryReceivingItem( $req);
 		return $this->recv_queryReceivingItem();
 	}
 	
-	public function send_queryReceivingItem(\com\vip\xstore\pda\order\receiving\QueryReceivingItemRequest $req){
+	public function send_queryReceivingItem(\Voop\com\vip\xstore\pda\order\receiving\QueryReceivingItemRequest $req){
 		
 		$this->initInvocation("queryReceivingItem");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingItem_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingItem_args();
 		
 		$args->req = $req;
 		
@@ -306,7 +306,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_queryReceivingItem(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingItem_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingItem_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -316,16 +316,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function queryReceivingOrder4PDA(\com\vip\xstore\pda\order\receiving\PDAReceivingOrderRequest $req){
+	public function queryReceivingOrder4PDA(\Voop\com\vip\xstore\pda\order\receiving\PDAReceivingOrderRequest $req){
 		
 		$this->send_queryReceivingOrder4PDA( $req);
 		return $this->recv_queryReceivingOrder4PDA();
 	}
 	
-	public function send_queryReceivingOrder4PDA(\com\vip\xstore\pda\order\receiving\PDAReceivingOrderRequest $req){
+	public function send_queryReceivingOrder4PDA(\Voop\com\vip\xstore\pda\order\receiving\PDAReceivingOrderRequest $req){
 		
 		$this->initInvocation("queryReceivingOrder4PDA");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrder4PDA_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrder4PDA_args();
 		
 		$args->req = $req;
 		
@@ -334,7 +334,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_queryReceivingOrder4PDA(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrder4PDA_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrder4PDA_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -344,16 +344,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function queryReceivingOrder4XUP(\com\vip\xstore\pda\order\receiving\XUPReceivingOrderRequest $req){
+	public function queryReceivingOrder4XUP(\Voop\com\vip\xstore\pda\order\receiving\XUPReceivingOrderRequest $req){
 		
 		$this->send_queryReceivingOrder4XUP( $req);
 		return $this->recv_queryReceivingOrder4XUP();
 	}
 	
-	public function send_queryReceivingOrder4XUP(\com\vip\xstore\pda\order\receiving\XUPReceivingOrderRequest $req){
+	public function send_queryReceivingOrder4XUP(\Voop\com\vip\xstore\pda\order\receiving\XUPReceivingOrderRequest $req){
 		
 		$this->initInvocation("queryReceivingOrder4XUP");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrder4XUP_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrder4XUP_args();
 		
 		$args->req = $req;
 		
@@ -362,7 +362,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_queryReceivingOrder4XUP(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrder4XUP_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrder4XUP_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -372,16 +372,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function queryReceivingOrderDetail(\com\vip\xstore\pda\order\receiving\QueryReceivingDetailRequest $req){
+	public function queryReceivingOrderDetail(\Voop\com\vip\xstore\pda\order\receiving\QueryReceivingDetailRequest $req){
 		
 		$this->send_queryReceivingOrderDetail( $req);
 		return $this->recv_queryReceivingOrderDetail();
 	}
 	
-	public function send_queryReceivingOrderDetail(\com\vip\xstore\pda\order\receiving\QueryReceivingDetailRequest $req){
+	public function send_queryReceivingOrderDetail(\Voop\com\vip\xstore\pda\order\receiving\QueryReceivingDetailRequest $req){
 		
 		$this->initInvocation("queryReceivingOrderDetail");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrderDetail_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrderDetail_args();
 		
 		$args->req = $req;
 		
@@ -390,7 +390,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_queryReceivingOrderDetail(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrderDetail_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_queryReceivingOrderDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -400,16 +400,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function querySendFailure(\com\vip\xstore\pda\common\QuerySendFailureRequest $req){
+	public function querySendFailure(\Voop\com\vip\xstore\pda\common\QuerySendFailureRequest $req){
 		
 		$this->send_querySendFailure( $req);
 		return $this->recv_querySendFailure();
 	}
 	
-	public function send_querySendFailure(\com\vip\xstore\pda\common\QuerySendFailureRequest $req){
+	public function send_querySendFailure(\Voop\com\vip\xstore\pda\common\QuerySendFailureRequest $req){
 		
 		$this->initInvocation("querySendFailure");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_querySendFailure_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_querySendFailure_args();
 		
 		$args->req = $req;
 		
@@ -418,7 +418,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_querySendFailure(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_querySendFailure_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_querySendFailure_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -428,16 +428,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function querySubmitBarcodeFlow(\com\vip\xstore\pda\order\common\QuerySubmitBarcodeFlowRequest $req){
+	public function querySubmitBarcodeFlow(\Voop\com\vip\xstore\pda\order\common\QuerySubmitBarcodeFlowRequest $req){
 		
 		$this->send_querySubmitBarcodeFlow( $req);
 		return $this->recv_querySubmitBarcodeFlow();
 	}
 	
-	public function send_querySubmitBarcodeFlow(\com\vip\xstore\pda\order\common\QuerySubmitBarcodeFlowRequest $req){
+	public function send_querySubmitBarcodeFlow(\Voop\com\vip\xstore\pda\order\common\QuerySubmitBarcodeFlowRequest $req){
 		
 		$this->initInvocation("querySubmitBarcodeFlow");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_querySubmitBarcodeFlow_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_querySubmitBarcodeFlow_args();
 		
 		$args->req = $req;
 		
@@ -446,7 +446,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_querySubmitBarcodeFlow(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_querySubmitBarcodeFlow_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_querySubmitBarcodeFlow_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -456,16 +456,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function querySubmitFlow(\com\vip\xstore\pda\order\common\QuerySubmitFlowRequest $req){
+	public function querySubmitFlow(\Voop\com\vip\xstore\pda\order\common\QuerySubmitFlowRequest $req){
 		
 		$this->send_querySubmitFlow( $req);
 		return $this->recv_querySubmitFlow();
 	}
 	
-	public function send_querySubmitFlow(\com\vip\xstore\pda\order\common\QuerySubmitFlowRequest $req){
+	public function send_querySubmitFlow(\Voop\com\vip\xstore\pda\order\common\QuerySubmitFlowRequest $req){
 		
 		$this->initInvocation("querySubmitFlow");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_querySubmitFlow_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_querySubmitFlow_args();
 		
 		$args->req = $req;
 		
@@ -474,7 +474,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_querySubmitFlow(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_querySubmitFlow_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_querySubmitFlow_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -484,16 +484,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function submitFlow(\com\vip\xstore\pda\order\common\SubmitFlowRequest $req){
+	public function submitFlow(\Voop\com\vip\xstore\pda\order\common\SubmitFlowRequest $req){
 		
 		$this->send_submitFlow( $req);
 		return $this->recv_submitFlow();
 	}
 	
-	public function send_submitFlow(\com\vip\xstore\pda\order\common\SubmitFlowRequest $req){
+	public function send_submitFlow(\Voop\com\vip\xstore\pda\order\common\SubmitFlowRequest $req){
 		
 		$this->initInvocation("submitFlow");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_submitFlow_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_submitFlow_args();
 		
 		$args->req = $req;
 		
@@ -502,7 +502,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_submitFlow(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_submitFlow_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_submitFlow_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -512,16 +512,16 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function updateRemark(\com\vip\xstore\pda\order\common\UpdateRemarkRequest $req){
+	public function updateRemark(\Voop\com\vip\xstore\pda\order\common\UpdateRemarkRequest $req){
 		
 		$this->send_updateRemark( $req);
 		return $this->recv_updateRemark();
 	}
 	
-	public function send_updateRemark(\com\vip\xstore\pda\order\common\UpdateRemarkRequest $req){
+	public function send_updateRemark(\Voop\com\vip\xstore\pda\order\common\UpdateRemarkRequest $req){
 		
 		$this->initInvocation("updateRemark");
-		$args = new \com\vip\xstore\pda\order\receiving\ReceivingService_updateRemark_args();
+		$args = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_updateRemark_args();
 		
 		$args->req = $req;
 		
@@ -530,7 +530,7 @@ class _ReceivingServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_updateRemark(){
 		
-		$result = new \com\vip\xstore\pda\order\receiving\ReceivingService_updateRemark_result();
+		$result = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingService_updateRemark_result();
 		$this->receive_base($result);
 		
 	}
@@ -581,7 +581,7 @@ class ReceivingService_approvalFlow_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\order\common\ApprovalFlowRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\order\common\ApprovalFlowRequest();
 			$this->req->read($input);
 			
 		}
@@ -602,7 +602,7 @@ class ReceivingService_approvalFlow_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -659,7 +659,7 @@ class ReceivingService_autoMatchQuantity_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\order\receiving\DeliveryAutoMatchQuantityRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\order\receiving\DeliveryAutoMatchQuantityRequest();
 			$this->req->read($input);
 			
 		}
@@ -680,7 +680,7 @@ class ReceivingService_autoMatchQuantity_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -737,7 +737,7 @@ class ReceivingService_confirmFlow_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\order\common\ConfirmFlowRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\order\common\ConfirmFlowRequest();
 			$this->req->read($input);
 			
 		}
@@ -758,7 +758,7 @@ class ReceivingService_confirmFlow_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -885,7 +885,7 @@ class ReceivingService_fixReceivingBoxStatus_args {
 		if(true) {
 			
 			
-			$this->time_range = new \com\vip\xstore\pda\common\TimeRange();
+			$this->time_range = new \Voop\com\vip\xstore\pda\common\TimeRange();
 			$this->time_range->read($input);
 			
 		}
@@ -906,7 +906,7 @@ class ReceivingService_fixReceivingBoxStatus_args {
 		
 		if (!is_object($this->time_range)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->time_range->write($output);
@@ -1079,7 +1079,7 @@ class ReceivingService_initReceivingBoxByDate_args {
 		if(true) {
 			
 			
-			$this->time_range = new \com\vip\xstore\pda\common\TimeRange();
+			$this->time_range = new \Voop\com\vip\xstore\pda\common\TimeRange();
 			$this->time_range->read($input);
 			
 		}
@@ -1100,7 +1100,7 @@ class ReceivingService_initReceivingBoxByDate_args {
 		
 		if (!is_object($this->time_range)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->time_range->write($output);
@@ -1227,7 +1227,7 @@ class ReceivingService_queryReceivingItem_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\order\receiving\QueryReceivingItemRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\order\receiving\QueryReceivingItemRequest();
 			$this->req->read($input);
 			
 		}
@@ -1248,7 +1248,7 @@ class ReceivingService_queryReceivingItem_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1305,7 +1305,7 @@ class ReceivingService_queryReceivingOrder4PDA_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\order\receiving\PDAReceivingOrderRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\order\receiving\PDAReceivingOrderRequest();
 			$this->req->read($input);
 			
 		}
@@ -1326,7 +1326,7 @@ class ReceivingService_queryReceivingOrder4PDA_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1383,7 +1383,7 @@ class ReceivingService_queryReceivingOrder4XUP_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\order\receiving\XUPReceivingOrderRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\order\receiving\XUPReceivingOrderRequest();
 			$this->req->read($input);
 			
 		}
@@ -1404,7 +1404,7 @@ class ReceivingService_queryReceivingOrder4XUP_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1461,7 +1461,7 @@ class ReceivingService_queryReceivingOrderDetail_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\order\receiving\QueryReceivingDetailRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\order\receiving\QueryReceivingDetailRequest();
 			$this->req->read($input);
 			
 		}
@@ -1482,7 +1482,7 @@ class ReceivingService_queryReceivingOrderDetail_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1539,7 +1539,7 @@ class ReceivingService_querySendFailure_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\common\QuerySendFailureRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\common\QuerySendFailureRequest();
 			$this->req->read($input);
 			
 		}
@@ -1560,7 +1560,7 @@ class ReceivingService_querySendFailure_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1617,7 +1617,7 @@ class ReceivingService_querySubmitBarcodeFlow_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\order\common\QuerySubmitBarcodeFlowRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\order\common\QuerySubmitBarcodeFlowRequest();
 			$this->req->read($input);
 			
 		}
@@ -1638,7 +1638,7 @@ class ReceivingService_querySubmitBarcodeFlow_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1695,7 +1695,7 @@ class ReceivingService_querySubmitFlow_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\order\common\QuerySubmitFlowRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\order\common\QuerySubmitFlowRequest();
 			$this->req->read($input);
 			
 		}
@@ -1716,7 +1716,7 @@ class ReceivingService_querySubmitFlow_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1773,7 +1773,7 @@ class ReceivingService_submitFlow_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\order\common\SubmitFlowRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\order\common\SubmitFlowRequest();
 			$this->req->read($input);
 			
 		}
@@ -1794,7 +1794,7 @@ class ReceivingService_submitFlow_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1851,7 +1851,7 @@ class ReceivingService_updateRemark_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\pda\order\common\UpdateRemarkRequest();
+			$this->req = new \Voop\com\vip\xstore\pda\order\common\UpdateRemarkRequest();
 			$this->req->read($input);
 			
 		}
@@ -1872,7 +1872,7 @@ class ReceivingService_updateRemark_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1929,7 +1929,7 @@ class ReceivingService_approvalFlow_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\pda\order\common\ApprovalFlowResponse();
+			$this->success = new \Voop\com\vip\xstore\pda\order\common\ApprovalFlowResponse();
 			$this->success->read($input);
 			
 		}
@@ -1952,7 +1952,7 @@ class ReceivingService_approvalFlow_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2011,7 +2011,7 @@ class ReceivingService_autoMatchQuantity_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\pda\order\common\AutoMatchQuantityResponse();
+			$this->success = new \Voop\com\vip\xstore\pda\order\common\AutoMatchQuantityResponse();
 			$this->success->read($input);
 			
 		}
@@ -2034,7 +2034,7 @@ class ReceivingService_autoMatchQuantity_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2093,7 +2093,7 @@ class ReceivingService_confirmFlow_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\pda\order\common\ConfirmFlowResponse();
+			$this->success = new \Voop\com\vip\xstore\pda\order\common\ConfirmFlowResponse();
 			$this->success->read($input);
 			
 		}
@@ -2116,7 +2116,7 @@ class ReceivingService_confirmFlow_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2322,7 +2322,7 @@ class ReceivingService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -2345,7 +2345,7 @@ class ReceivingService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2502,7 +2502,7 @@ class ReceivingService_queryReceivingItem_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\pda\order\receiving\QueryReceivingItemResponse();
+			$this->success = new \Voop\com\vip\xstore\pda\order\receiving\QueryReceivingItemResponse();
 			$this->success->read($input);
 			
 		}
@@ -2525,7 +2525,7 @@ class ReceivingService_queryReceivingItem_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2584,7 +2584,7 @@ class ReceivingService_queryReceivingOrder4PDA_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\pda\order\receiving\ReceivingOrderResponse();
+			$this->success = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -2607,7 +2607,7 @@ class ReceivingService_queryReceivingOrder4PDA_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2666,7 +2666,7 @@ class ReceivingService_queryReceivingOrder4XUP_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\pda\order\receiving\ReceivingOrderResponse();
+			$this->success = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -2689,7 +2689,7 @@ class ReceivingService_queryReceivingOrder4XUP_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2748,7 +2748,7 @@ class ReceivingService_queryReceivingOrderDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\pda\order\receiving\ReceivingOrder();
+			$this->success = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingOrder();
 			$this->success->read($input);
 			
 		}
@@ -2771,7 +2771,7 @@ class ReceivingService_queryReceivingOrderDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2830,7 +2830,7 @@ class ReceivingService_querySendFailure_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\pda\common\QuerySendFailureResponse();
+			$this->success = new \Voop\com\vip\xstore\pda\common\QuerySendFailureResponse();
 			$this->success->read($input);
 			
 		}
@@ -2853,7 +2853,7 @@ class ReceivingService_querySendFailure_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2912,7 +2912,7 @@ class ReceivingService_querySubmitBarcodeFlow_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\pda\order\common\QuerySubmitBarcodeFlowResponse();
+			$this->success = new \Voop\com\vip\xstore\pda\order\common\QuerySubmitBarcodeFlowResponse();
 			$this->success->read($input);
 			
 		}
@@ -2935,7 +2935,7 @@ class ReceivingService_querySubmitBarcodeFlow_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2994,7 +2994,7 @@ class ReceivingService_querySubmitFlow_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\pda\order\common\QuerySubmitFlowResponse();
+			$this->success = new \Voop\com\vip\xstore\pda\order\common\QuerySubmitFlowResponse();
 			$this->success->read($input);
 			
 		}
@@ -3017,7 +3017,7 @@ class ReceivingService_querySubmitFlow_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3076,7 +3076,7 @@ class ReceivingService_submitFlow_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\pda\order\common\SubmitFlowResponse();
+			$this->success = new \Voop\com\vip\xstore\pda\order\common\SubmitFlowResponse();
 			$this->success->read($input);
 			
 		}
@@ -3099,7 +3099,7 @@ class ReceivingService_submitFlow_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

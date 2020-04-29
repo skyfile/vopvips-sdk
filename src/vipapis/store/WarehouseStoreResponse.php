@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\store;
+namespace Voop\vipapis\store;
 
 class WarehouseStoreResponse {
 	
@@ -81,7 +81,7 @@ class WarehouseStoreResponse {
 								
 								$elem1 = null;
 								
-								$elem1 = new \vipapis\store\StoreInfo();
+								$elem1 = new \Voop\vipapis\store\StoreInfo();
 								$elem1->read($input);
 								
 								$val0[$_size1++] = $elem1;
@@ -110,7 +110,7 @@ class WarehouseStoreResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -131,7 +131,7 @@ class WarehouseStoreResponse {
 		
 		if (!is_array($this->warehouse_store)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeMapBegin();
@@ -142,7 +142,7 @@ class WarehouseStoreResponse {
 			
 			if (!is_array($viter0)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -151,7 +151,7 @@ class WarehouseStoreResponse {
 				
 				if (!is_object($iter1)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter1->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\history;
+namespace Voop\com\vip\vop\vcloud\history;
 require_once dirname(__FILE__).'/VdgHistoryDataService.php';
 class VdgHistoryDataServiceHelper extends _VdgHistoryDataServiceClient{
 	

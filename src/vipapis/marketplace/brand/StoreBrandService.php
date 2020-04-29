@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\brand;
+namespace Voop\vipapis\marketplace\brand;
 interface StoreBrandServiceIf{
 	
 	
@@ -35,14 +35,14 @@ class _StoreBrandServiceClient extends \Osp\Base\OspStub implements \vipapis\mar
 	public function send_getStoreBrands(){
 		
 		$this->initInvocation("getStoreBrands");
-		$args = new \vipapis\marketplace\brand\StoreBrandService_getStoreBrands_args();
+		$args = new \Voop\vipapis\marketplace\brand\StoreBrandService_getStoreBrands_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_getStoreBrands(){
 		
-		$result = new \vipapis\marketplace\brand\StoreBrandService_getStoreBrands_result();
+		$result = new \Voop\vipapis\marketplace\brand\StoreBrandService_getStoreBrands_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -61,14 +61,14 @@ class _StoreBrandServiceClient extends \Osp\Base\OspStub implements \vipapis\mar
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\marketplace\brand\StoreBrandService_healthCheck_args();
+		$args = new \Voop\vipapis\marketplace\brand\StoreBrandService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\marketplace\brand\StoreBrandService_healthCheck_result();
+		$result = new \Voop\vipapis\marketplace\brand\StoreBrandService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -224,7 +224,7 @@ class StoreBrandService_getStoreBrands_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\marketplace\brand\StoreBrand();
+					$elem0 = new \Voop\vipapis\marketplace\brand\StoreBrand();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -257,7 +257,7 @@ class StoreBrandService_getStoreBrands_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -266,7 +266,7 @@ class StoreBrandService_getStoreBrands_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -329,7 +329,7 @@ class StoreBrandService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -352,7 +352,7 @@ class StoreBrandService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

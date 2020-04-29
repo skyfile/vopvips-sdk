@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\sims\erp;
+namespace Voop\vipapis\xstore\cc\sims\erp;
 final class RspCodeEnum{
 	
 	

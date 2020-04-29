@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\model\sync;
+namespace Voop\com\vip\pms\data\model\sync;
 
 class ActObjectRequest {
 	
@@ -71,7 +71,7 @@ class ActObjectRequest {
 				
 				$needSkip = false;
 				
-				$this->objectBaseModel = new \com\vip\pms\data\model\sync\ActObjectBaseModel();
+				$this->objectBaseModel = new \Voop\com\vip\pms\data\model\sync\ActObjectBaseModel();
 				$this->objectBaseModel->read($input);
 				
 			}
@@ -83,7 +83,7 @@ class ActObjectRequest {
 				
 				$needSkip = false;
 				
-				$this->objectMemberModel = new \com\vip\pms\data\model\sync\ActObjectMemberModel();
+				$this->objectMemberModel = new \Voop\com\vip\pms\data\model\sync\ActObjectMemberModel();
 				$this->objectMemberModel->read($input);
 				
 			}
@@ -113,7 +113,7 @@ class ActObjectRequest {
 		
 		if (!is_object($this->objectBaseModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->objectBaseModel->write($output);
@@ -124,7 +124,7 @@ class ActObjectRequest {
 		
 		if (!is_object($this->objectMemberModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->objectMemberModel->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\transferring\api;
+namespace Voop\vipapis\xstore\cc\transferring\api;
 $base_path = dirname(__FILE__).'/../../../../../';
 require_once $base_path.'/Osp/Util/PathUtil.php';
 require_once $base_path.'/Osp/ClassLoader/ClassLoader.php';
@@ -21,7 +21,7 @@ class TransferringOrderApiServiceClient{
 	private static function regis(){
 		
 		$path = \Osp\Util\PathUtil::getRootPath ();
-		$nsLoader = new \Osp\ClassLoader\ClassLoader ();
+		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
 		$nsLoader->registerNamespace ( 'vipapis', $path );
@@ -68,9 +68,9 @@ class TransferringOrderApiServiceClient{
 			$ctx->setCalleePort ( $port );
 		}
 		
-		//$ctx->setProtocol ( \Osp\Protocol\OspProtocol::$Binary );
+		//$ctx->setProtocol ( \Voop\Osp\Protocol\OspProtocol::$Binary );
 		
-		return new \vipapis\xstore\cc\transferring\api\TransferringOrderApiServiceHelper();
+		return new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderApiServiceHelper();
 	}
 	
 }

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\inventory;
+namespace Voop\com\vip\vop\cup\api\inventory;
 
 class ProdSkuInv {
 	

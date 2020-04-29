@@ -8,99 +8,99 @@
 *
 */
 
-namespace com\vip\svip\osp\service;
+namespace Voop\com\vip\svip\osp\service;
 interface SvipOspServiceV2If{
 	
 	
-	public function SearchSvipHistory(\com\vip\svip\osp\service\SearchSvipHistoryRequest $request);
+	public function SearchSvipHistory(\Voop\com\vip\svip\osp\service\SearchSvipHistoryRequest $request);
 	
-	public function SvipCompensate(\com\vip\svip\osp\service\SvipCompensateParam $param);
+	public function SvipCompensate(\Voop\com\vip\svip\osp\service\SvipCompensateParam $param);
 	
-	public function SvipCompensateByHand(\com\vip\svip\osp\service\SvipCompensateParam $param);
+	public function SvipCompensateByHand(\Voop\com\vip\svip\osp\service\SvipCompensateParam $param);
 	
-	public function batchCancel(\com\vip\svip\osp\service\BatchCancelRequest $request);
+	public function batchCancel(\Voop\com\vip\svip\osp\service\BatchCancelRequest $request);
 	
-	public function batchCancelV2(\com\vip\svip\osp\service\BatchCancelRequestV2 $request);
+	public function batchCancelV2(\Voop\com\vip\svip\osp\service\BatchCancelRequestV2 $request);
 	
-	public function bindTxUserAccount(\com\vip\svip\osp\service\BindTxAccRequest $request);
+	public function bindTxUserAccount(\Voop\com\vip\svip\osp\service\BindTxAccRequest $request);
 	
-	public function brandGiftDetailList(\com\vip\svip\osp\service\BrandGiftDetailRequest $request);
+	public function brandGiftDetailList(\Voop\com\vip\svip\osp\service\BrandGiftDetailRequest $request);
 	
-	public function checkTxAccLimit(\com\vip\svip\osp\service\CheckTxAccLimitRequest $request);
+	public function checkTxAccLimit(\Voop\com\vip\svip\osp\service\CheckTxAccLimitRequest $request);
 	
-	public function createThirdSvipToken(\com\vip\svip\osp\service\ThirdCreatSvipTokenRequest $request);
+	public function createThirdSvipToken(\Voop\com\vip\svip\osp\service\ThirdCreatSvipTokenRequest $request);
 	
-	public function doCancelJob(\com\vip\svip\osp\service\DoCancelJobRequest $request);
+	public function doCancelJob(\Voop\com\vip\svip\osp\service\DoCancelJobRequest $request);
 	
-	public function doCancelSvipUser(\com\vip\svip\osp\service\DoCancelRequest $request);
+	public function doCancelSvipUser(\Voop\com\vip\svip\osp\service\DoCancelRequest $request);
 	
-	public function draw(\com\vip\svip\osp\service\DrawRequest $request);
+	public function draw(\Voop\com\vip\svip\osp\service\DrawRequest $request);
 	
-	public function getBindAccountInfo(\com\vip\svip\osp\service\GetBindAccountRequest $request);
+	public function getBindAccountInfo(\Voop\com\vip\svip\osp\service\GetBindAccountRequest $request);
 	
-	public function getBrandGiftIdList(\com\vip\svip\osp\service\BrandGiftRequest $request);
+	public function getBrandGiftIdList(\Voop\com\vip\svip\osp\service\BrandGiftRequest $request);
 	
-	public function getBuyLimitResult(\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param);
+	public function getBuyLimitResult(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param);
 	
-	public function getGoodsIdByPickNo(\com\vip\svip\osp\service\GetGoodsIdByPickNoReq $request);
+	public function getGoodsIdByPickNo(\Voop\com\vip\svip\osp\service\GetGoodsIdByPickNoReq $request);
 	
-	public function getGroupValuesConf(\com\vip\svip\osp\service\GetGroupValuesRequest $request);
+	public function getGroupValuesConf(\Voop\com\vip\svip\osp\service\GetGroupValuesRequest $request);
 	
-	public function getOpGoodsDetailList(\com\vip\svip\osp\service\GetOpGoodsDetailRequest $request);
+	public function getOpGoodsDetailList(\Voop\com\vip\svip\osp\service\GetOpGoodsDetailRequest $request);
 	
-	public function getOpGoodsIds(\com\vip\svip\osp\service\GetOpGoodsIdRequest $request);
+	public function getOpGoodsIds(\Voop\com\vip\svip\osp\service\GetOpGoodsIdRequest $request);
 	
-	public function getPmsPriceByProductId(\com\vip\svip\osp\service\BrandGoodsPriceRequest $request);
+	public function getPmsPriceByProductId(\Voop\com\vip\svip\osp\service\BrandGoodsPriceRequest $request);
 	
-	public function getSumCount(\com\vip\svip\osp\service\GetSumCountRequest $request);
+	public function getSumCount(\Voop\com\vip\svip\osp\service\GetSumCountRequest $request);
 	
 	public function getSvipBindInfo();
 	
 	public function getSvipBindInfoByUserId( $userId);
 	
-	public function getSvipEquityInfo(\com\vip\svip\osp\service\SvipEquityInfoRequest $request);
+	public function getSvipEquityInfo(\Voop\com\vip\svip\osp\service\SvipEquityInfoRequest $request);
 	
-	public function getSvipGoodsByMid(\com\vip\svip\osp\service\GetSvipGoodsRequest $request);
+	public function getSvipGoodsByMid(\Voop\com\vip\svip\osp\service\GetSvipGoodsRequest $request);
 	
-	public function getSvipGoodsDetail(\com\vip\svip\osp\service\GetSvipGoodsDetailReq $request);
+	public function getSvipGoodsDetail(\Voop\com\vip\svip\osp\service\GetSvipGoodsDetailReq $request);
 	
-	public function getSvipInfo4AppClub(\com\vip\svip\osp\service\GetSvipInfo4AppClubRequest $request);
+	public function getSvipInfo4AppClub(\Voop\com\vip\svip\osp\service\GetSvipInfo4AppClubRequest $request);
 	
-	public function getSvipMainInfo(\com\vip\svip\osp\service\BaseRequestHeader $header);
+	public function getSvipMainInfo(\Voop\com\vip\svip\osp\service\BaseRequestHeader $header);
 	
-	public function getSvipUserHealth(\com\vip\svip\osp\service\GetSvipUserHealthReq $req);
+	public function getSvipUserHealth(\Voop\com\vip\svip\osp\service\GetSvipUserHealthReq $req);
 	
-	public function getSvipUserInfo(\com\vip\svip\osp\service\SvipUserLimitStateReq $req);
+	public function getSvipUserInfo(\Voop\com\vip\svip\osp\service\SvipUserLimitStateReq $req);
 	
 	public function getTencentVipSvipCardInfo( $userId);
 	
-	public function getTheTimeSvipPrice(\com\vip\svip\osp\service\GetTheTimeSvipPrice $request);
+	public function getTheTimeSvipPrice(\Voop\com\vip\svip\osp\service\GetTheTimeSvipPrice $request);
 	
-	public function getUnionSvipGoodsInfo(\com\vip\svip\osp\service\UnionSvipGoodsRequest $request);
+	public function getUnionSvipGoodsInfo(\Voop\com\vip\svip\osp\service\UnionSvipGoodsRequest $request);
 	
-	public function getUserAttendInfo(\com\vip\svip\osp\service\UserAttendInfoRequest $request);
+	public function getUserAttendInfo(\Voop\com\vip\svip\osp\service\UserAttendInfoRequest $request);
 	
 	public function healthCheck();
 	
 	public function isSvipBanArea( $areaId);
 	
-	public function isSvipBuyLimit(\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param);
+	public function isSvipBuyLimit(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param);
 	
-	public function isSvipLimitUser(\com\vip\svip\osp\service\BuyLimitStateRequest $request);
+	public function isSvipLimitUser(\Voop\com\vip\svip\osp\service\BuyLimitStateRequest $request);
 	
-	public function isSvipLimitUserByPhone(\com\vip\svip\osp\service\CheckSvipUserLimitByPhoneParam $request);
+	public function isSvipLimitUserByPhone(\Voop\com\vip\svip\osp\service\CheckSvipUserLimitByPhoneParam $request);
 	
-	public function joinSvipForTencentVideoSide(\com\vip\svip\osp\service\DoubleSvipRequest $request);
+	public function joinSvipForTencentVideoSide(\Voop\com\vip\svip\osp\service\DoubleSvipRequest $request);
 	
-	public function joinTencentVideoMemberAtVipSide(\com\vip\svip\osp\service\DoubleSvipRequest $request);
+	public function joinTencentVideoMemberAtVipSide(\Voop\com\vip\svip\osp\service\DoubleSvipRequest $request);
 	
-	public function offlineChannelTrySvip(\com\vip\svip\osp\service\SimpleRequestHeader $header,\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo);
+	public function offlineChannelTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header,\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo);
 	
-	public function openLimitCheck(\com\vip\svip\osp\service\OpenLimitRequest $request);
+	public function openLimitCheck(\Voop\com\vip\svip\osp\service\OpenLimitRequest $request);
 	
-	public function prepareDoubleSvipAccess(\com\vip\svip\osp\service\DoubleSvipRequest $request);
+	public function prepareDoubleSvipAccess(\Voop\com\vip\svip\osp\service\DoubleSvipRequest $request);
 	
-	public function receivePrize(\com\vip\svip\osp\service\ReceivePrizeRequest $request);
+	public function receivePrize(\Voop\com\vip\svip\osp\service\ReceivePrizeRequest $request);
 	
 	public function rejoinTencentMember( $serial, $admin);
 	
@@ -112,25 +112,25 @@ interface SvipOspServiceV2If{
 	
 	public function retrySvipOperate();
 	
-	public function scrapeAction(\com\vip\svip\osp\service\ScrapeActionRequest $request);
+	public function scrapeAction(\Voop\com\vip\svip\osp\service\ScrapeActionRequest $request);
 	
-	public function searchSvipTXHistory(\com\vip\svip\osp\service\SearchSvipHistoryRequest $request);
+	public function searchSvipTXHistory(\Voop\com\vip\svip\osp\service\SearchSvipHistoryRequest $request);
 	
-	public function specialMemberTrySvip(\com\vip\svip\osp\service\SimpleRequestHeader $header);
+	public function specialMemberTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header);
 	
-	public function svipCompensateForCommon(\com\vip\svip\osp\service\SvipCompensateParam $param);
+	public function svipCompensateForCommon(\Voop\com\vip\svip\osp\service\SvipCompensateParam $param);
 	
-	public function svipUserOperate(\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck);
+	public function svipUserOperate(\Voop\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck);
 	
 	public function syncCancelResult();
 	
-	public function thirdOpenLimitCheck(\com\vip\svip\osp\service\ThirdOpenLimitRequest $request);
+	public function thirdOpenLimitCheck(\Voop\com\vip\svip\osp\service\ThirdOpenLimitRequest $request);
 	
-	public function thirdOpenSvip(\com\vip\svip\osp\service\ThirdOpenSvipRequest $request);
+	public function thirdOpenSvip(\Voop\com\vip\svip\osp\service\ThirdOpenSvipRequest $request);
 	
-	public function txGetSvipToken(\com\vip\svip\osp\service\TxGetTokenRequest $request);
+	public function txGetSvipToken(\Voop\com\vip\svip\osp\service\TxGetTokenRequest $request);
 	
-	public function txOpenSvip(\com\vip\svip\osp\service\TxOpenSvipRequest $request);
+	public function txOpenSvip(\Voop\com\vip\svip\osp\service\TxOpenSvipRequest $request);
 	
 	public function vOrderCallSvip( $json);
 	
@@ -144,16 +144,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function SearchSvipHistory(\com\vip\svip\osp\service\SearchSvipHistoryRequest $request){
+	public function SearchSvipHistory(\Voop\com\vip\svip\osp\service\SearchSvipHistoryRequest $request){
 		
 		$this->send_SearchSvipHistory( $request);
 		return $this->recv_SearchSvipHistory();
 	}
 	
-	public function send_SearchSvipHistory(\com\vip\svip\osp\service\SearchSvipHistoryRequest $request){
+	public function send_SearchSvipHistory(\Voop\com\vip\svip\osp\service\SearchSvipHistoryRequest $request){
 		
 		$this->initInvocation("SearchSvipHistory");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_SearchSvipHistory_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_SearchSvipHistory_args();
 		
 		$args->request = $request;
 		
@@ -162,7 +162,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_SearchSvipHistory(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_SearchSvipHistory_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_SearchSvipHistory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -172,16 +172,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function SvipCompensate(\com\vip\svip\osp\service\SvipCompensateParam $param){
+	public function SvipCompensate(\Voop\com\vip\svip\osp\service\SvipCompensateParam $param){
 		
 		$this->send_SvipCompensate( $param);
 		return $this->recv_SvipCompensate();
 	}
 	
-	public function send_SvipCompensate(\com\vip\svip\osp\service\SvipCompensateParam $param){
+	public function send_SvipCompensate(\Voop\com\vip\svip\osp\service\SvipCompensateParam $param){
 		
 		$this->initInvocation("SvipCompensate");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_SvipCompensate_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_SvipCompensate_args();
 		
 		$args->param = $param;
 		
@@ -190,7 +190,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_SvipCompensate(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_SvipCompensate_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_SvipCompensate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -200,16 +200,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function SvipCompensateByHand(\com\vip\svip\osp\service\SvipCompensateParam $param){
+	public function SvipCompensateByHand(\Voop\com\vip\svip\osp\service\SvipCompensateParam $param){
 		
 		$this->send_SvipCompensateByHand( $param);
 		return $this->recv_SvipCompensateByHand();
 	}
 	
-	public function send_SvipCompensateByHand(\com\vip\svip\osp\service\SvipCompensateParam $param){
+	public function send_SvipCompensateByHand(\Voop\com\vip\svip\osp\service\SvipCompensateParam $param){
 		
 		$this->initInvocation("SvipCompensateByHand");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_SvipCompensateByHand_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_SvipCompensateByHand_args();
 		
 		$args->param = $param;
 		
@@ -218,7 +218,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_SvipCompensateByHand(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_SvipCompensateByHand_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_SvipCompensateByHand_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -228,16 +228,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function batchCancel(\com\vip\svip\osp\service\BatchCancelRequest $request){
+	public function batchCancel(\Voop\com\vip\svip\osp\service\BatchCancelRequest $request){
 		
 		$this->send_batchCancel( $request);
 		return $this->recv_batchCancel();
 	}
 	
-	public function send_batchCancel(\com\vip\svip\osp\service\BatchCancelRequest $request){
+	public function send_batchCancel(\Voop\com\vip\svip\osp\service\BatchCancelRequest $request){
 		
 		$this->initInvocation("batchCancel");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_batchCancel_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_batchCancel_args();
 		
 		$args->request = $request;
 		
@@ -246,7 +246,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_batchCancel(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_batchCancel_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_batchCancel_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -256,16 +256,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function batchCancelV2(\com\vip\svip\osp\service\BatchCancelRequestV2 $request){
+	public function batchCancelV2(\Voop\com\vip\svip\osp\service\BatchCancelRequestV2 $request){
 		
 		$this->send_batchCancelV2( $request);
 		return $this->recv_batchCancelV2();
 	}
 	
-	public function send_batchCancelV2(\com\vip\svip\osp\service\BatchCancelRequestV2 $request){
+	public function send_batchCancelV2(\Voop\com\vip\svip\osp\service\BatchCancelRequestV2 $request){
 		
 		$this->initInvocation("batchCancelV2");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_batchCancelV2_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_batchCancelV2_args();
 		
 		$args->request = $request;
 		
@@ -274,7 +274,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_batchCancelV2(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_batchCancelV2_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_batchCancelV2_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -284,16 +284,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function bindTxUserAccount(\com\vip\svip\osp\service\BindTxAccRequest $request){
+	public function bindTxUserAccount(\Voop\com\vip\svip\osp\service\BindTxAccRequest $request){
 		
 		$this->send_bindTxUserAccount( $request);
 		return $this->recv_bindTxUserAccount();
 	}
 	
-	public function send_bindTxUserAccount(\com\vip\svip\osp\service\BindTxAccRequest $request){
+	public function send_bindTxUserAccount(\Voop\com\vip\svip\osp\service\BindTxAccRequest $request){
 		
 		$this->initInvocation("bindTxUserAccount");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_bindTxUserAccount_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_bindTxUserAccount_args();
 		
 		$args->request = $request;
 		
@@ -302,7 +302,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_bindTxUserAccount(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_bindTxUserAccount_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_bindTxUserAccount_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -312,16 +312,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function brandGiftDetailList(\com\vip\svip\osp\service\BrandGiftDetailRequest $request){
+	public function brandGiftDetailList(\Voop\com\vip\svip\osp\service\BrandGiftDetailRequest $request){
 		
 		$this->send_brandGiftDetailList( $request);
 		return $this->recv_brandGiftDetailList();
 	}
 	
-	public function send_brandGiftDetailList(\com\vip\svip\osp\service\BrandGiftDetailRequest $request){
+	public function send_brandGiftDetailList(\Voop\com\vip\svip\osp\service\BrandGiftDetailRequest $request){
 		
 		$this->initInvocation("brandGiftDetailList");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_brandGiftDetailList_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_brandGiftDetailList_args();
 		
 		$args->request = $request;
 		
@@ -330,7 +330,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_brandGiftDetailList(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_brandGiftDetailList_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_brandGiftDetailList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -340,16 +340,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function checkTxAccLimit(\com\vip\svip\osp\service\CheckTxAccLimitRequest $request){
+	public function checkTxAccLimit(\Voop\com\vip\svip\osp\service\CheckTxAccLimitRequest $request){
 		
 		$this->send_checkTxAccLimit( $request);
 		return $this->recv_checkTxAccLimit();
 	}
 	
-	public function send_checkTxAccLimit(\com\vip\svip\osp\service\CheckTxAccLimitRequest $request){
+	public function send_checkTxAccLimit(\Voop\com\vip\svip\osp\service\CheckTxAccLimitRequest $request){
 		
 		$this->initInvocation("checkTxAccLimit");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_checkTxAccLimit_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_checkTxAccLimit_args();
 		
 		$args->request = $request;
 		
@@ -358,7 +358,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_checkTxAccLimit(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_checkTxAccLimit_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_checkTxAccLimit_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -368,16 +368,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function createThirdSvipToken(\com\vip\svip\osp\service\ThirdCreatSvipTokenRequest $request){
+	public function createThirdSvipToken(\Voop\com\vip\svip\osp\service\ThirdCreatSvipTokenRequest $request){
 		
 		$this->send_createThirdSvipToken( $request);
 		return $this->recv_createThirdSvipToken();
 	}
 	
-	public function send_createThirdSvipToken(\com\vip\svip\osp\service\ThirdCreatSvipTokenRequest $request){
+	public function send_createThirdSvipToken(\Voop\com\vip\svip\osp\service\ThirdCreatSvipTokenRequest $request){
 		
 		$this->initInvocation("createThirdSvipToken");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_createThirdSvipToken_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_createThirdSvipToken_args();
 		
 		$args->request = $request;
 		
@@ -386,7 +386,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_createThirdSvipToken(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_createThirdSvipToken_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_createThirdSvipToken_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -396,16 +396,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function doCancelJob(\com\vip\svip\osp\service\DoCancelJobRequest $request){
+	public function doCancelJob(\Voop\com\vip\svip\osp\service\DoCancelJobRequest $request){
 		
 		$this->send_doCancelJob( $request);
 		return $this->recv_doCancelJob();
 	}
 	
-	public function send_doCancelJob(\com\vip\svip\osp\service\DoCancelJobRequest $request){
+	public function send_doCancelJob(\Voop\com\vip\svip\osp\service\DoCancelJobRequest $request){
 		
 		$this->initInvocation("doCancelJob");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_doCancelJob_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_doCancelJob_args();
 		
 		$args->request = $request;
 		
@@ -414,7 +414,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_doCancelJob(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_doCancelJob_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_doCancelJob_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -424,16 +424,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function doCancelSvipUser(\com\vip\svip\osp\service\DoCancelRequest $request){
+	public function doCancelSvipUser(\Voop\com\vip\svip\osp\service\DoCancelRequest $request){
 		
 		$this->send_doCancelSvipUser( $request);
 		return $this->recv_doCancelSvipUser();
 	}
 	
-	public function send_doCancelSvipUser(\com\vip\svip\osp\service\DoCancelRequest $request){
+	public function send_doCancelSvipUser(\Voop\com\vip\svip\osp\service\DoCancelRequest $request){
 		
 		$this->initInvocation("doCancelSvipUser");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_doCancelSvipUser_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_doCancelSvipUser_args();
 		
 		$args->request = $request;
 		
@@ -442,7 +442,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_doCancelSvipUser(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_doCancelSvipUser_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_doCancelSvipUser_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -452,16 +452,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function draw(\com\vip\svip\osp\service\DrawRequest $request){
+	public function draw(\Voop\com\vip\svip\osp\service\DrawRequest $request){
 		
 		$this->send_draw( $request);
 		return $this->recv_draw();
 	}
 	
-	public function send_draw(\com\vip\svip\osp\service\DrawRequest $request){
+	public function send_draw(\Voop\com\vip\svip\osp\service\DrawRequest $request){
 		
 		$this->initInvocation("draw");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_draw_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_draw_args();
 		
 		$args->request = $request;
 		
@@ -470,7 +470,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_draw(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_draw_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_draw_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -480,16 +480,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getBindAccountInfo(\com\vip\svip\osp\service\GetBindAccountRequest $request){
+	public function getBindAccountInfo(\Voop\com\vip\svip\osp\service\GetBindAccountRequest $request){
 		
 		$this->send_getBindAccountInfo( $request);
 		return $this->recv_getBindAccountInfo();
 	}
 	
-	public function send_getBindAccountInfo(\com\vip\svip\osp\service\GetBindAccountRequest $request){
+	public function send_getBindAccountInfo(\Voop\com\vip\svip\osp\service\GetBindAccountRequest $request){
 		
 		$this->initInvocation("getBindAccountInfo");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getBindAccountInfo_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getBindAccountInfo_args();
 		
 		$args->request = $request;
 		
@@ -498,7 +498,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getBindAccountInfo(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getBindAccountInfo_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getBindAccountInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -508,16 +508,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getBrandGiftIdList(\com\vip\svip\osp\service\BrandGiftRequest $request){
+	public function getBrandGiftIdList(\Voop\com\vip\svip\osp\service\BrandGiftRequest $request){
 		
 		$this->send_getBrandGiftIdList( $request);
 		return $this->recv_getBrandGiftIdList();
 	}
 	
-	public function send_getBrandGiftIdList(\com\vip\svip\osp\service\BrandGiftRequest $request){
+	public function send_getBrandGiftIdList(\Voop\com\vip\svip\osp\service\BrandGiftRequest $request){
 		
 		$this->initInvocation("getBrandGiftIdList");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getBrandGiftIdList_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getBrandGiftIdList_args();
 		
 		$args->request = $request;
 		
@@ -526,7 +526,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getBrandGiftIdList(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getBrandGiftIdList_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getBrandGiftIdList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -536,16 +536,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getBuyLimitResult(\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
+	public function getBuyLimitResult(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
 		
 		$this->send_getBuyLimitResult( $header, $param);
 		return $this->recv_getBuyLimitResult();
 	}
 	
-	public function send_getBuyLimitResult(\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
+	public function send_getBuyLimitResult(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
 		
 		$this->initInvocation("getBuyLimitResult");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getBuyLimitResult_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getBuyLimitResult_args();
 		
 		$args->header = $header;
 		
@@ -556,7 +556,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getBuyLimitResult(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getBuyLimitResult_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getBuyLimitResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -566,16 +566,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getGoodsIdByPickNo(\com\vip\svip\osp\service\GetGoodsIdByPickNoReq $request){
+	public function getGoodsIdByPickNo(\Voop\com\vip\svip\osp\service\GetGoodsIdByPickNoReq $request){
 		
 		$this->send_getGoodsIdByPickNo( $request);
 		return $this->recv_getGoodsIdByPickNo();
 	}
 	
-	public function send_getGoodsIdByPickNo(\com\vip\svip\osp\service\GetGoodsIdByPickNoReq $request){
+	public function send_getGoodsIdByPickNo(\Voop\com\vip\svip\osp\service\GetGoodsIdByPickNoReq $request){
 		
 		$this->initInvocation("getGoodsIdByPickNo");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getGoodsIdByPickNo_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getGoodsIdByPickNo_args();
 		
 		$args->request = $request;
 		
@@ -584,7 +584,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getGoodsIdByPickNo(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getGoodsIdByPickNo_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getGoodsIdByPickNo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -594,16 +594,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getGroupValuesConf(\com\vip\svip\osp\service\GetGroupValuesRequest $request){
+	public function getGroupValuesConf(\Voop\com\vip\svip\osp\service\GetGroupValuesRequest $request){
 		
 		$this->send_getGroupValuesConf( $request);
 		return $this->recv_getGroupValuesConf();
 	}
 	
-	public function send_getGroupValuesConf(\com\vip\svip\osp\service\GetGroupValuesRequest $request){
+	public function send_getGroupValuesConf(\Voop\com\vip\svip\osp\service\GetGroupValuesRequest $request){
 		
 		$this->initInvocation("getGroupValuesConf");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getGroupValuesConf_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getGroupValuesConf_args();
 		
 		$args->request = $request;
 		
@@ -612,7 +612,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getGroupValuesConf(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getGroupValuesConf_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getGroupValuesConf_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -622,16 +622,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getOpGoodsDetailList(\com\vip\svip\osp\service\GetOpGoodsDetailRequest $request){
+	public function getOpGoodsDetailList(\Voop\com\vip\svip\osp\service\GetOpGoodsDetailRequest $request){
 		
 		$this->send_getOpGoodsDetailList( $request);
 		return $this->recv_getOpGoodsDetailList();
 	}
 	
-	public function send_getOpGoodsDetailList(\com\vip\svip\osp\service\GetOpGoodsDetailRequest $request){
+	public function send_getOpGoodsDetailList(\Voop\com\vip\svip\osp\service\GetOpGoodsDetailRequest $request){
 		
 		$this->initInvocation("getOpGoodsDetailList");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getOpGoodsDetailList_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getOpGoodsDetailList_args();
 		
 		$args->request = $request;
 		
@@ -640,7 +640,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getOpGoodsDetailList(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getOpGoodsDetailList_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getOpGoodsDetailList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -650,16 +650,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getOpGoodsIds(\com\vip\svip\osp\service\GetOpGoodsIdRequest $request){
+	public function getOpGoodsIds(\Voop\com\vip\svip\osp\service\GetOpGoodsIdRequest $request){
 		
 		$this->send_getOpGoodsIds( $request);
 		return $this->recv_getOpGoodsIds();
 	}
 	
-	public function send_getOpGoodsIds(\com\vip\svip\osp\service\GetOpGoodsIdRequest $request){
+	public function send_getOpGoodsIds(\Voop\com\vip\svip\osp\service\GetOpGoodsIdRequest $request){
 		
 		$this->initInvocation("getOpGoodsIds");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getOpGoodsIds_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getOpGoodsIds_args();
 		
 		$args->request = $request;
 		
@@ -668,7 +668,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getOpGoodsIds(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getOpGoodsIds_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getOpGoodsIds_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -678,16 +678,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getPmsPriceByProductId(\com\vip\svip\osp\service\BrandGoodsPriceRequest $request){
+	public function getPmsPriceByProductId(\Voop\com\vip\svip\osp\service\BrandGoodsPriceRequest $request){
 		
 		$this->send_getPmsPriceByProductId( $request);
 		return $this->recv_getPmsPriceByProductId();
 	}
 	
-	public function send_getPmsPriceByProductId(\com\vip\svip\osp\service\BrandGoodsPriceRequest $request){
+	public function send_getPmsPriceByProductId(\Voop\com\vip\svip\osp\service\BrandGoodsPriceRequest $request){
 		
 		$this->initInvocation("getPmsPriceByProductId");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getPmsPriceByProductId_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getPmsPriceByProductId_args();
 		
 		$args->request = $request;
 		
@@ -696,7 +696,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getPmsPriceByProductId(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getPmsPriceByProductId_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getPmsPriceByProductId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -706,16 +706,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getSumCount(\com\vip\svip\osp\service\GetSumCountRequest $request){
+	public function getSumCount(\Voop\com\vip\svip\osp\service\GetSumCountRequest $request){
 		
 		$this->send_getSumCount( $request);
 		return $this->recv_getSumCount();
 	}
 	
-	public function send_getSumCount(\com\vip\svip\osp\service\GetSumCountRequest $request){
+	public function send_getSumCount(\Voop\com\vip\svip\osp\service\GetSumCountRequest $request){
 		
 		$this->initInvocation("getSumCount");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getSumCount_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSumCount_args();
 		
 		$args->request = $request;
 		
@@ -724,7 +724,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getSumCount(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getSumCount_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSumCount_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -743,14 +743,14 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_getSvipBindInfo(){
 		
 		$this->initInvocation("getSvipBindInfo");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipBindInfo_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipBindInfo_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_getSvipBindInfo(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipBindInfo_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipBindInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -769,7 +769,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_getSvipBindInfoByUserId( $userId){
 		
 		$this->initInvocation("getSvipBindInfoByUserId");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipBindInfoByUserId_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipBindInfoByUserId_args();
 		
 		$args->userId = $userId;
 		
@@ -778,7 +778,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getSvipBindInfoByUserId(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipBindInfoByUserId_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipBindInfoByUserId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -788,16 +788,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getSvipEquityInfo(\com\vip\svip\osp\service\SvipEquityInfoRequest $request){
+	public function getSvipEquityInfo(\Voop\com\vip\svip\osp\service\SvipEquityInfoRequest $request){
 		
 		$this->send_getSvipEquityInfo( $request);
 		return $this->recv_getSvipEquityInfo();
 	}
 	
-	public function send_getSvipEquityInfo(\com\vip\svip\osp\service\SvipEquityInfoRequest $request){
+	public function send_getSvipEquityInfo(\Voop\com\vip\svip\osp\service\SvipEquityInfoRequest $request){
 		
 		$this->initInvocation("getSvipEquityInfo");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipEquityInfo_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipEquityInfo_args();
 		
 		$args->request = $request;
 		
@@ -806,7 +806,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getSvipEquityInfo(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipEquityInfo_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipEquityInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -816,16 +816,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getSvipGoodsByMid(\com\vip\svip\osp\service\GetSvipGoodsRequest $request){
+	public function getSvipGoodsByMid(\Voop\com\vip\svip\osp\service\GetSvipGoodsRequest $request){
 		
 		$this->send_getSvipGoodsByMid( $request);
 		return $this->recv_getSvipGoodsByMid();
 	}
 	
-	public function send_getSvipGoodsByMid(\com\vip\svip\osp\service\GetSvipGoodsRequest $request){
+	public function send_getSvipGoodsByMid(\Voop\com\vip\svip\osp\service\GetSvipGoodsRequest $request){
 		
 		$this->initInvocation("getSvipGoodsByMid");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipGoodsByMid_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipGoodsByMid_args();
 		
 		$args->request = $request;
 		
@@ -834,7 +834,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getSvipGoodsByMid(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipGoodsByMid_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipGoodsByMid_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -844,16 +844,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getSvipGoodsDetail(\com\vip\svip\osp\service\GetSvipGoodsDetailReq $request){
+	public function getSvipGoodsDetail(\Voop\com\vip\svip\osp\service\GetSvipGoodsDetailReq $request){
 		
 		$this->send_getSvipGoodsDetail( $request);
 		return $this->recv_getSvipGoodsDetail();
 	}
 	
-	public function send_getSvipGoodsDetail(\com\vip\svip\osp\service\GetSvipGoodsDetailReq $request){
+	public function send_getSvipGoodsDetail(\Voop\com\vip\svip\osp\service\GetSvipGoodsDetailReq $request){
 		
 		$this->initInvocation("getSvipGoodsDetail");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipGoodsDetail_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipGoodsDetail_args();
 		
 		$args->request = $request;
 		
@@ -862,7 +862,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getSvipGoodsDetail(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipGoodsDetail_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipGoodsDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -872,16 +872,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getSvipInfo4AppClub(\com\vip\svip\osp\service\GetSvipInfo4AppClubRequest $request){
+	public function getSvipInfo4AppClub(\Voop\com\vip\svip\osp\service\GetSvipInfo4AppClubRequest $request){
 		
 		$this->send_getSvipInfo4AppClub( $request);
 		return $this->recv_getSvipInfo4AppClub();
 	}
 	
-	public function send_getSvipInfo4AppClub(\com\vip\svip\osp\service\GetSvipInfo4AppClubRequest $request){
+	public function send_getSvipInfo4AppClub(\Voop\com\vip\svip\osp\service\GetSvipInfo4AppClubRequest $request){
 		
 		$this->initInvocation("getSvipInfo4AppClub");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipInfo4AppClub_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipInfo4AppClub_args();
 		
 		$args->request = $request;
 		
@@ -890,7 +890,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getSvipInfo4AppClub(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipInfo4AppClub_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipInfo4AppClub_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -900,16 +900,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getSvipMainInfo(\com\vip\svip\osp\service\BaseRequestHeader $header){
+	public function getSvipMainInfo(\Voop\com\vip\svip\osp\service\BaseRequestHeader $header){
 		
 		$this->send_getSvipMainInfo( $header);
 		return $this->recv_getSvipMainInfo();
 	}
 	
-	public function send_getSvipMainInfo(\com\vip\svip\osp\service\BaseRequestHeader $header){
+	public function send_getSvipMainInfo(\Voop\com\vip\svip\osp\service\BaseRequestHeader $header){
 		
 		$this->initInvocation("getSvipMainInfo");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipMainInfo_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipMainInfo_args();
 		
 		$args->header = $header;
 		
@@ -918,7 +918,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getSvipMainInfo(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipMainInfo_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipMainInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -928,16 +928,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getSvipUserHealth(\com\vip\svip\osp\service\GetSvipUserHealthReq $req){
+	public function getSvipUserHealth(\Voop\com\vip\svip\osp\service\GetSvipUserHealthReq $req){
 		
 		$this->send_getSvipUserHealth( $req);
 		return $this->recv_getSvipUserHealth();
 	}
 	
-	public function send_getSvipUserHealth(\com\vip\svip\osp\service\GetSvipUserHealthReq $req){
+	public function send_getSvipUserHealth(\Voop\com\vip\svip\osp\service\GetSvipUserHealthReq $req){
 		
 		$this->initInvocation("getSvipUserHealth");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipUserHealth_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipUserHealth_args();
 		
 		$args->req = $req;
 		
@@ -946,7 +946,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getSvipUserHealth(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipUserHealth_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipUserHealth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -956,16 +956,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getSvipUserInfo(\com\vip\svip\osp\service\SvipUserLimitStateReq $req){
+	public function getSvipUserInfo(\Voop\com\vip\svip\osp\service\SvipUserLimitStateReq $req){
 		
 		$this->send_getSvipUserInfo( $req);
 		return $this->recv_getSvipUserInfo();
 	}
 	
-	public function send_getSvipUserInfo(\com\vip\svip\osp\service\SvipUserLimitStateReq $req){
+	public function send_getSvipUserInfo(\Voop\com\vip\svip\osp\service\SvipUserLimitStateReq $req){
 		
 		$this->initInvocation("getSvipUserInfo");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipUserInfo_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipUserInfo_args();
 		
 		$args->req = $req;
 		
@@ -974,7 +974,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getSvipUserInfo(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getSvipUserInfo_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getSvipUserInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -993,7 +993,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_getTencentVipSvipCardInfo( $userId){
 		
 		$this->initInvocation("getTencentVipSvipCardInfo");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getTencentVipSvipCardInfo_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getTencentVipSvipCardInfo_args();
 		
 		$args->userId = $userId;
 		
@@ -1002,7 +1002,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getTencentVipSvipCardInfo(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getTencentVipSvipCardInfo_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getTencentVipSvipCardInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1012,16 +1012,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getTheTimeSvipPrice(\com\vip\svip\osp\service\GetTheTimeSvipPrice $request){
+	public function getTheTimeSvipPrice(\Voop\com\vip\svip\osp\service\GetTheTimeSvipPrice $request){
 		
 		$this->send_getTheTimeSvipPrice( $request);
 		return $this->recv_getTheTimeSvipPrice();
 	}
 	
-	public function send_getTheTimeSvipPrice(\com\vip\svip\osp\service\GetTheTimeSvipPrice $request){
+	public function send_getTheTimeSvipPrice(\Voop\com\vip\svip\osp\service\GetTheTimeSvipPrice $request){
 		
 		$this->initInvocation("getTheTimeSvipPrice");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getTheTimeSvipPrice_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getTheTimeSvipPrice_args();
 		
 		$args->request = $request;
 		
@@ -1030,7 +1030,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getTheTimeSvipPrice(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getTheTimeSvipPrice_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getTheTimeSvipPrice_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1040,16 +1040,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getUnionSvipGoodsInfo(\com\vip\svip\osp\service\UnionSvipGoodsRequest $request){
+	public function getUnionSvipGoodsInfo(\Voop\com\vip\svip\osp\service\UnionSvipGoodsRequest $request){
 		
 		$this->send_getUnionSvipGoodsInfo( $request);
 		return $this->recv_getUnionSvipGoodsInfo();
 	}
 	
-	public function send_getUnionSvipGoodsInfo(\com\vip\svip\osp\service\UnionSvipGoodsRequest $request){
+	public function send_getUnionSvipGoodsInfo(\Voop\com\vip\svip\osp\service\UnionSvipGoodsRequest $request){
 		
 		$this->initInvocation("getUnionSvipGoodsInfo");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getUnionSvipGoodsInfo_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getUnionSvipGoodsInfo_args();
 		
 		$args->request = $request;
 		
@@ -1058,7 +1058,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getUnionSvipGoodsInfo(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getUnionSvipGoodsInfo_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getUnionSvipGoodsInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1068,16 +1068,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getUserAttendInfo(\com\vip\svip\osp\service\UserAttendInfoRequest $request){
+	public function getUserAttendInfo(\Voop\com\vip\svip\osp\service\UserAttendInfoRequest $request){
 		
 		$this->send_getUserAttendInfo( $request);
 		return $this->recv_getUserAttendInfo();
 	}
 	
-	public function send_getUserAttendInfo(\com\vip\svip\osp\service\UserAttendInfoRequest $request){
+	public function send_getUserAttendInfo(\Voop\com\vip\svip\osp\service\UserAttendInfoRequest $request){
 		
 		$this->initInvocation("getUserAttendInfo");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_getUserAttendInfo_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getUserAttendInfo_args();
 		
 		$args->request = $request;
 		
@@ -1086,7 +1086,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_getUserAttendInfo(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_getUserAttendInfo_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getUserAttendInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1105,14 +1105,14 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_healthCheck_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_healthCheck_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1131,7 +1131,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_isSvipBanArea( $areaId){
 		
 		$this->initInvocation("isSvipBanArea");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_isSvipBanArea_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_isSvipBanArea_args();
 		
 		$args->areaId = $areaId;
 		
@@ -1140,7 +1140,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_isSvipBanArea(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_isSvipBanArea_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_isSvipBanArea_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1150,16 +1150,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function isSvipBuyLimit(\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
+	public function isSvipBuyLimit(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
 		
 		$this->send_isSvipBuyLimit( $header, $param);
 		return $this->recv_isSvipBuyLimit();
 	}
 	
-	public function send_isSvipBuyLimit(\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
+	public function send_isSvipBuyLimit(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
 		
 		$this->initInvocation("isSvipBuyLimit");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_isSvipBuyLimit_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_isSvipBuyLimit_args();
 		
 		$args->header = $header;
 		
@@ -1170,7 +1170,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_isSvipBuyLimit(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_isSvipBuyLimit_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_isSvipBuyLimit_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1180,16 +1180,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function isSvipLimitUser(\com\vip\svip\osp\service\BuyLimitStateRequest $request){
+	public function isSvipLimitUser(\Voop\com\vip\svip\osp\service\BuyLimitStateRequest $request){
 		
 		$this->send_isSvipLimitUser( $request);
 		return $this->recv_isSvipLimitUser();
 	}
 	
-	public function send_isSvipLimitUser(\com\vip\svip\osp\service\BuyLimitStateRequest $request){
+	public function send_isSvipLimitUser(\Voop\com\vip\svip\osp\service\BuyLimitStateRequest $request){
 		
 		$this->initInvocation("isSvipLimitUser");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_isSvipLimitUser_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_isSvipLimitUser_args();
 		
 		$args->request = $request;
 		
@@ -1198,7 +1198,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_isSvipLimitUser(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_isSvipLimitUser_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_isSvipLimitUser_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1208,16 +1208,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function isSvipLimitUserByPhone(\com\vip\svip\osp\service\CheckSvipUserLimitByPhoneParam $request){
+	public function isSvipLimitUserByPhone(\Voop\com\vip\svip\osp\service\CheckSvipUserLimitByPhoneParam $request){
 		
 		$this->send_isSvipLimitUserByPhone( $request);
 		return $this->recv_isSvipLimitUserByPhone();
 	}
 	
-	public function send_isSvipLimitUserByPhone(\com\vip\svip\osp\service\CheckSvipUserLimitByPhoneParam $request){
+	public function send_isSvipLimitUserByPhone(\Voop\com\vip\svip\osp\service\CheckSvipUserLimitByPhoneParam $request){
 		
 		$this->initInvocation("isSvipLimitUserByPhone");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_isSvipLimitUserByPhone_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_isSvipLimitUserByPhone_args();
 		
 		$args->request = $request;
 		
@@ -1226,7 +1226,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_isSvipLimitUserByPhone(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_isSvipLimitUserByPhone_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_isSvipLimitUserByPhone_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1236,16 +1236,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function joinSvipForTencentVideoSide(\com\vip\svip\osp\service\DoubleSvipRequest $request){
+	public function joinSvipForTencentVideoSide(\Voop\com\vip\svip\osp\service\DoubleSvipRequest $request){
 		
 		$this->send_joinSvipForTencentVideoSide( $request);
 		return $this->recv_joinSvipForTencentVideoSide();
 	}
 	
-	public function send_joinSvipForTencentVideoSide(\com\vip\svip\osp\service\DoubleSvipRequest $request){
+	public function send_joinSvipForTencentVideoSide(\Voop\com\vip\svip\osp\service\DoubleSvipRequest $request){
 		
 		$this->initInvocation("joinSvipForTencentVideoSide");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_joinSvipForTencentVideoSide_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_joinSvipForTencentVideoSide_args();
 		
 		$args->request = $request;
 		
@@ -1254,7 +1254,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_joinSvipForTencentVideoSide(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_joinSvipForTencentVideoSide_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_joinSvipForTencentVideoSide_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1264,16 +1264,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function joinTencentVideoMemberAtVipSide(\com\vip\svip\osp\service\DoubleSvipRequest $request){
+	public function joinTencentVideoMemberAtVipSide(\Voop\com\vip\svip\osp\service\DoubleSvipRequest $request){
 		
 		$this->send_joinTencentVideoMemberAtVipSide( $request);
 		return $this->recv_joinTencentVideoMemberAtVipSide();
 	}
 	
-	public function send_joinTencentVideoMemberAtVipSide(\com\vip\svip\osp\service\DoubleSvipRequest $request){
+	public function send_joinTencentVideoMemberAtVipSide(\Voop\com\vip\svip\osp\service\DoubleSvipRequest $request){
 		
 		$this->initInvocation("joinTencentVideoMemberAtVipSide");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_joinTencentVideoMemberAtVipSide_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_joinTencentVideoMemberAtVipSide_args();
 		
 		$args->request = $request;
 		
@@ -1282,7 +1282,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_joinTencentVideoMemberAtVipSide(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_joinTencentVideoMemberAtVipSide_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_joinTencentVideoMemberAtVipSide_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1292,16 +1292,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function offlineChannelTrySvip(\com\vip\svip\osp\service\SimpleRequestHeader $header,\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo){
+	public function offlineChannelTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header,\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo){
 		
 		$this->send_offlineChannelTrySvip( $header, $channelInfo);
 		return $this->recv_offlineChannelTrySvip();
 	}
 	
-	public function send_offlineChannelTrySvip(\com\vip\svip\osp\service\SimpleRequestHeader $header,\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo){
+	public function send_offlineChannelTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header,\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo){
 		
 		$this->initInvocation("offlineChannelTrySvip");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_offlineChannelTrySvip_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_offlineChannelTrySvip_args();
 		
 		$args->header = $header;
 		
@@ -1312,7 +1312,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_offlineChannelTrySvip(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_offlineChannelTrySvip_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_offlineChannelTrySvip_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1322,16 +1322,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function openLimitCheck(\com\vip\svip\osp\service\OpenLimitRequest $request){
+	public function openLimitCheck(\Voop\com\vip\svip\osp\service\OpenLimitRequest $request){
 		
 		$this->send_openLimitCheck( $request);
 		return $this->recv_openLimitCheck();
 	}
 	
-	public function send_openLimitCheck(\com\vip\svip\osp\service\OpenLimitRequest $request){
+	public function send_openLimitCheck(\Voop\com\vip\svip\osp\service\OpenLimitRequest $request){
 		
 		$this->initInvocation("openLimitCheck");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_openLimitCheck_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_openLimitCheck_args();
 		
 		$args->request = $request;
 		
@@ -1340,7 +1340,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_openLimitCheck(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_openLimitCheck_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_openLimitCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1350,16 +1350,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function prepareDoubleSvipAccess(\com\vip\svip\osp\service\DoubleSvipRequest $request){
+	public function prepareDoubleSvipAccess(\Voop\com\vip\svip\osp\service\DoubleSvipRequest $request){
 		
 		$this->send_prepareDoubleSvipAccess( $request);
 		return $this->recv_prepareDoubleSvipAccess();
 	}
 	
-	public function send_prepareDoubleSvipAccess(\com\vip\svip\osp\service\DoubleSvipRequest $request){
+	public function send_prepareDoubleSvipAccess(\Voop\com\vip\svip\osp\service\DoubleSvipRequest $request){
 		
 		$this->initInvocation("prepareDoubleSvipAccess");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_prepareDoubleSvipAccess_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_prepareDoubleSvipAccess_args();
 		
 		$args->request = $request;
 		
@@ -1368,7 +1368,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_prepareDoubleSvipAccess(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_prepareDoubleSvipAccess_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_prepareDoubleSvipAccess_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1378,16 +1378,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function receivePrize(\com\vip\svip\osp\service\ReceivePrizeRequest $request){
+	public function receivePrize(\Voop\com\vip\svip\osp\service\ReceivePrizeRequest $request){
 		
 		$this->send_receivePrize( $request);
 		return $this->recv_receivePrize();
 	}
 	
-	public function send_receivePrize(\com\vip\svip\osp\service\ReceivePrizeRequest $request){
+	public function send_receivePrize(\Voop\com\vip\svip\osp\service\ReceivePrizeRequest $request){
 		
 		$this->initInvocation("receivePrize");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_receivePrize_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_receivePrize_args();
 		
 		$args->request = $request;
 		
@@ -1396,7 +1396,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_receivePrize(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_receivePrize_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_receivePrize_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1415,7 +1415,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_rejoinTencentMember( $serial, $admin){
 		
 		$this->initInvocation("rejoinTencentMember");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_rejoinTencentMember_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_rejoinTencentMember_args();
 		
 		$args->serial = $serial;
 		
@@ -1426,7 +1426,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_rejoinTencentMember(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_rejoinTencentMember_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_rejoinTencentMember_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1445,14 +1445,14 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_retryOthersOperateRecord(){
 		
 		$this->initInvocation("retryOthersOperateRecord");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_retryOthersOperateRecord_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_retryOthersOperateRecord_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_retryOthersOperateRecord(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_retryOthersOperateRecord_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_retryOthersOperateRecord_result();
 		$this->receive_base($result);
 		
 	}
@@ -1467,14 +1467,14 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_retryProcessGifts(){
 		
 		$this->initInvocation("retryProcessGifts");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_retryProcessGifts_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_retryProcessGifts_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_retryProcessGifts(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_retryProcessGifts_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_retryProcessGifts_result();
 		$this->receive_base($result);
 		
 	}
@@ -1489,14 +1489,14 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_retrySvipExceptionLog(){
 		
 		$this->initInvocation("retrySvipExceptionLog");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_retrySvipExceptionLog_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_retrySvipExceptionLog_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_retrySvipExceptionLog(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_retrySvipExceptionLog_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_retrySvipExceptionLog_result();
 		$this->receive_base($result);
 		
 	}
@@ -1511,29 +1511,29 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_retrySvipOperate(){
 		
 		$this->initInvocation("retrySvipOperate");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_retrySvipOperate_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_retrySvipOperate_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_retrySvipOperate(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_retrySvipOperate_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_retrySvipOperate_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function scrapeAction(\com\vip\svip\osp\service\ScrapeActionRequest $request){
+	public function scrapeAction(\Voop\com\vip\svip\osp\service\ScrapeActionRequest $request){
 		
 		$this->send_scrapeAction( $request);
 		return $this->recv_scrapeAction();
 	}
 	
-	public function send_scrapeAction(\com\vip\svip\osp\service\ScrapeActionRequest $request){
+	public function send_scrapeAction(\Voop\com\vip\svip\osp\service\ScrapeActionRequest $request){
 		
 		$this->initInvocation("scrapeAction");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_scrapeAction_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_scrapeAction_args();
 		
 		$args->request = $request;
 		
@@ -1542,7 +1542,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_scrapeAction(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_scrapeAction_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_scrapeAction_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1552,16 +1552,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function searchSvipTXHistory(\com\vip\svip\osp\service\SearchSvipHistoryRequest $request){
+	public function searchSvipTXHistory(\Voop\com\vip\svip\osp\service\SearchSvipHistoryRequest $request){
 		
 		$this->send_searchSvipTXHistory( $request);
 		return $this->recv_searchSvipTXHistory();
 	}
 	
-	public function send_searchSvipTXHistory(\com\vip\svip\osp\service\SearchSvipHistoryRequest $request){
+	public function send_searchSvipTXHistory(\Voop\com\vip\svip\osp\service\SearchSvipHistoryRequest $request){
 		
 		$this->initInvocation("searchSvipTXHistory");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_searchSvipTXHistory_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_searchSvipTXHistory_args();
 		
 		$args->request = $request;
 		
@@ -1570,7 +1570,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_searchSvipTXHistory(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_searchSvipTXHistory_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_searchSvipTXHistory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1580,16 +1580,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function specialMemberTrySvip(\com\vip\svip\osp\service\SimpleRequestHeader $header){
+	public function specialMemberTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header){
 		
 		$this->send_specialMemberTrySvip( $header);
 		return $this->recv_specialMemberTrySvip();
 	}
 	
-	public function send_specialMemberTrySvip(\com\vip\svip\osp\service\SimpleRequestHeader $header){
+	public function send_specialMemberTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header){
 		
 		$this->initInvocation("specialMemberTrySvip");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_specialMemberTrySvip_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_specialMemberTrySvip_args();
 		
 		$args->header = $header;
 		
@@ -1598,7 +1598,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_specialMemberTrySvip(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_specialMemberTrySvip_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_specialMemberTrySvip_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1608,16 +1608,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function svipCompensateForCommon(\com\vip\svip\osp\service\SvipCompensateParam $param){
+	public function svipCompensateForCommon(\Voop\com\vip\svip\osp\service\SvipCompensateParam $param){
 		
 		$this->send_svipCompensateForCommon( $param);
 		return $this->recv_svipCompensateForCommon();
 	}
 	
-	public function send_svipCompensateForCommon(\com\vip\svip\osp\service\SvipCompensateParam $param){
+	public function send_svipCompensateForCommon(\Voop\com\vip\svip\osp\service\SvipCompensateParam $param){
 		
 		$this->initInvocation("svipCompensateForCommon");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_svipCompensateForCommon_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_svipCompensateForCommon_args();
 		
 		$args->param = $param;
 		
@@ -1626,7 +1626,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_svipCompensateForCommon(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_svipCompensateForCommon_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_svipCompensateForCommon_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1636,16 +1636,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function svipUserOperate(\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck){
+	public function svipUserOperate(\Voop\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck){
 		
 		$this->send_svipUserOperate( $info, $signCheck);
 		return $this->recv_svipUserOperate();
 	}
 	
-	public function send_svipUserOperate(\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck){
+	public function send_svipUserOperate(\Voop\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck){
 		
 		$this->initInvocation("svipUserOperate");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_svipUserOperate_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_svipUserOperate_args();
 		
 		$args->info = $info;
 		
@@ -1656,7 +1656,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_svipUserOperate(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_svipUserOperate_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_svipUserOperate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1675,29 +1675,29 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_syncCancelResult(){
 		
 		$this->initInvocation("syncCancelResult");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_syncCancelResult_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_syncCancelResult_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_syncCancelResult(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_syncCancelResult_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_syncCancelResult_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function thirdOpenLimitCheck(\com\vip\svip\osp\service\ThirdOpenLimitRequest $request){
+	public function thirdOpenLimitCheck(\Voop\com\vip\svip\osp\service\ThirdOpenLimitRequest $request){
 		
 		$this->send_thirdOpenLimitCheck( $request);
 		return $this->recv_thirdOpenLimitCheck();
 	}
 	
-	public function send_thirdOpenLimitCheck(\com\vip\svip\osp\service\ThirdOpenLimitRequest $request){
+	public function send_thirdOpenLimitCheck(\Voop\com\vip\svip\osp\service\ThirdOpenLimitRequest $request){
 		
 		$this->initInvocation("thirdOpenLimitCheck");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_thirdOpenLimitCheck_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_thirdOpenLimitCheck_args();
 		
 		$args->request = $request;
 		
@@ -1706,7 +1706,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_thirdOpenLimitCheck(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_thirdOpenLimitCheck_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_thirdOpenLimitCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1716,16 +1716,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function thirdOpenSvip(\com\vip\svip\osp\service\ThirdOpenSvipRequest $request){
+	public function thirdOpenSvip(\Voop\com\vip\svip\osp\service\ThirdOpenSvipRequest $request){
 		
 		$this->send_thirdOpenSvip( $request);
 		return $this->recv_thirdOpenSvip();
 	}
 	
-	public function send_thirdOpenSvip(\com\vip\svip\osp\service\ThirdOpenSvipRequest $request){
+	public function send_thirdOpenSvip(\Voop\com\vip\svip\osp\service\ThirdOpenSvipRequest $request){
 		
 		$this->initInvocation("thirdOpenSvip");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_thirdOpenSvip_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_thirdOpenSvip_args();
 		
 		$args->request = $request;
 		
@@ -1734,7 +1734,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_thirdOpenSvip(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_thirdOpenSvip_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_thirdOpenSvip_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1744,16 +1744,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function txGetSvipToken(\com\vip\svip\osp\service\TxGetTokenRequest $request){
+	public function txGetSvipToken(\Voop\com\vip\svip\osp\service\TxGetTokenRequest $request){
 		
 		$this->send_txGetSvipToken( $request);
 		return $this->recv_txGetSvipToken();
 	}
 	
-	public function send_txGetSvipToken(\com\vip\svip\osp\service\TxGetTokenRequest $request){
+	public function send_txGetSvipToken(\Voop\com\vip\svip\osp\service\TxGetTokenRequest $request){
 		
 		$this->initInvocation("txGetSvipToken");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_txGetSvipToken_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_txGetSvipToken_args();
 		
 		$args->request = $request;
 		
@@ -1762,7 +1762,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_txGetSvipToken(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_txGetSvipToken_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_txGetSvipToken_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1772,16 +1772,16 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function txOpenSvip(\com\vip\svip\osp\service\TxOpenSvipRequest $request){
+	public function txOpenSvip(\Voop\com\vip\svip\osp\service\TxOpenSvipRequest $request){
 		
 		$this->send_txOpenSvip( $request);
 		return $this->recv_txOpenSvip();
 	}
 	
-	public function send_txOpenSvip(\com\vip\svip\osp\service\TxOpenSvipRequest $request){
+	public function send_txOpenSvip(\Voop\com\vip\svip\osp\service\TxOpenSvipRequest $request){
 		
 		$this->initInvocation("txOpenSvip");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_txOpenSvip_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_txOpenSvip_args();
 		
 		$args->request = $request;
 		
@@ -1790,7 +1790,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_txOpenSvip(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_txOpenSvip_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_txOpenSvip_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1809,7 +1809,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	public function send_vOrderCallSvip( $json){
 		
 		$this->initInvocation("vOrderCallSvip");
-		$args = new \com\vip\svip\osp\service\SvipOspServiceV2_vOrderCallSvip_args();
+		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_vOrderCallSvip_args();
 		
 		$args->json = $json;
 		
@@ -1818,7 +1818,7 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	
 	public function recv_vOrderCallSvip(){
 		
-		$result = new \com\vip\svip\osp\service\SvipOspServiceV2_vOrderCallSvip_result();
+		$result = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_vOrderCallSvip_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1873,7 +1873,7 @@ class SvipOspServiceV2_SearchSvipHistory_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\SearchSvipHistoryRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\SearchSvipHistoryRequest();
 			$this->request->read($input);
 			
 		}
@@ -1896,7 +1896,7 @@ class SvipOspServiceV2_SearchSvipHistory_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -1955,7 +1955,7 @@ class SvipOspServiceV2_SvipCompensate_args {
 		if(true) {
 			
 			
-			$this->param = new \com\vip\svip\osp\service\SvipCompensateParam();
+			$this->param = new \Voop\com\vip\svip\osp\service\SvipCompensateParam();
 			$this->param->read($input);
 			
 		}
@@ -1978,7 +1978,7 @@ class SvipOspServiceV2_SvipCompensate_args {
 			
 			if (!is_object($this->param)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->param->write($output);
@@ -2037,7 +2037,7 @@ class SvipOspServiceV2_SvipCompensateByHand_args {
 		if(true) {
 			
 			
-			$this->param = new \com\vip\svip\osp\service\SvipCompensateParam();
+			$this->param = new \Voop\com\vip\svip\osp\service\SvipCompensateParam();
 			$this->param->read($input);
 			
 		}
@@ -2060,7 +2060,7 @@ class SvipOspServiceV2_SvipCompensateByHand_args {
 			
 			if (!is_object($this->param)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->param->write($output);
@@ -2119,7 +2119,7 @@ class SvipOspServiceV2_batchCancel_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\BatchCancelRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\BatchCancelRequest();
 			$this->request->read($input);
 			
 		}
@@ -2142,7 +2142,7 @@ class SvipOspServiceV2_batchCancel_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2201,7 +2201,7 @@ class SvipOspServiceV2_batchCancelV2_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\BatchCancelRequestV2();
+			$this->request = new \Voop\com\vip\svip\osp\service\BatchCancelRequestV2();
 			$this->request->read($input);
 			
 		}
@@ -2224,7 +2224,7 @@ class SvipOspServiceV2_batchCancelV2_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2283,7 +2283,7 @@ class SvipOspServiceV2_bindTxUserAccount_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\BindTxAccRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\BindTxAccRequest();
 			$this->request->read($input);
 			
 		}
@@ -2306,7 +2306,7 @@ class SvipOspServiceV2_bindTxUserAccount_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2365,7 +2365,7 @@ class SvipOspServiceV2_brandGiftDetailList_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\BrandGiftDetailRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\BrandGiftDetailRequest();
 			$this->request->read($input);
 			
 		}
@@ -2388,7 +2388,7 @@ class SvipOspServiceV2_brandGiftDetailList_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2447,7 +2447,7 @@ class SvipOspServiceV2_checkTxAccLimit_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\CheckTxAccLimitRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\CheckTxAccLimitRequest();
 			$this->request->read($input);
 			
 		}
@@ -2470,7 +2470,7 @@ class SvipOspServiceV2_checkTxAccLimit_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2529,7 +2529,7 @@ class SvipOspServiceV2_createThirdSvipToken_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\ThirdCreatSvipTokenRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\ThirdCreatSvipTokenRequest();
 			$this->request->read($input);
 			
 		}
@@ -2552,7 +2552,7 @@ class SvipOspServiceV2_createThirdSvipToken_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2611,7 +2611,7 @@ class SvipOspServiceV2_doCancelJob_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\DoCancelJobRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\DoCancelJobRequest();
 			$this->request->read($input);
 			
 		}
@@ -2634,7 +2634,7 @@ class SvipOspServiceV2_doCancelJob_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2693,7 +2693,7 @@ class SvipOspServiceV2_doCancelSvipUser_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\DoCancelRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\DoCancelRequest();
 			$this->request->read($input);
 			
 		}
@@ -2716,7 +2716,7 @@ class SvipOspServiceV2_doCancelSvipUser_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2775,7 +2775,7 @@ class SvipOspServiceV2_draw_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\DrawRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\DrawRequest();
 			$this->request->read($input);
 			
 		}
@@ -2798,7 +2798,7 @@ class SvipOspServiceV2_draw_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2857,7 +2857,7 @@ class SvipOspServiceV2_getBindAccountInfo_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\GetBindAccountRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\GetBindAccountRequest();
 			$this->request->read($input);
 			
 		}
@@ -2880,7 +2880,7 @@ class SvipOspServiceV2_getBindAccountInfo_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2939,7 +2939,7 @@ class SvipOspServiceV2_getBrandGiftIdList_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\BrandGiftRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\BrandGiftRequest();
 			$this->request->read($input);
 			
 		}
@@ -2962,7 +2962,7 @@ class SvipOspServiceV2_getBrandGiftIdList_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3031,7 +3031,7 @@ class SvipOspServiceV2_getBuyLimitResult_args {
 		if(true) {
 			
 			
-			$this->header = new \com\vip\svip\osp\service\BuyLimitRequestHeader();
+			$this->header = new \Voop\com\vip\svip\osp\service\BuyLimitRequestHeader();
 			$this->header->read($input);
 			
 		}
@@ -3042,7 +3042,7 @@ class SvipOspServiceV2_getBuyLimitResult_args {
 		if(true) {
 			
 			
-			$this->param = new \com\vip\svip\osp\service\BuyLimitRequestParam();
+			$this->param = new \Voop\com\vip\svip\osp\service\BuyLimitRequestParam();
 			$this->param->read($input);
 			
 		}
@@ -3063,7 +3063,7 @@ class SvipOspServiceV2_getBuyLimitResult_args {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -3074,7 +3074,7 @@ class SvipOspServiceV2_getBuyLimitResult_args {
 		
 		if (!is_object($this->param)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->param->write($output);
@@ -3131,7 +3131,7 @@ class SvipOspServiceV2_getGoodsIdByPickNo_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\GetGoodsIdByPickNoReq();
+			$this->request = new \Voop\com\vip\svip\osp\service\GetGoodsIdByPickNoReq();
 			$this->request->read($input);
 			
 		}
@@ -3154,7 +3154,7 @@ class SvipOspServiceV2_getGoodsIdByPickNo_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3213,7 +3213,7 @@ class SvipOspServiceV2_getGroupValuesConf_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\GetGroupValuesRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\GetGroupValuesRequest();
 			$this->request->read($input);
 			
 		}
@@ -3236,7 +3236,7 @@ class SvipOspServiceV2_getGroupValuesConf_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3295,7 +3295,7 @@ class SvipOspServiceV2_getOpGoodsDetailList_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\GetOpGoodsDetailRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\GetOpGoodsDetailRequest();
 			$this->request->read($input);
 			
 		}
@@ -3318,7 +3318,7 @@ class SvipOspServiceV2_getOpGoodsDetailList_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3377,7 +3377,7 @@ class SvipOspServiceV2_getOpGoodsIds_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\GetOpGoodsIdRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\GetOpGoodsIdRequest();
 			$this->request->read($input);
 			
 		}
@@ -3400,7 +3400,7 @@ class SvipOspServiceV2_getOpGoodsIds_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3459,7 +3459,7 @@ class SvipOspServiceV2_getPmsPriceByProductId_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\BrandGoodsPriceRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\BrandGoodsPriceRequest();
 			$this->request->read($input);
 			
 		}
@@ -3482,7 +3482,7 @@ class SvipOspServiceV2_getPmsPriceByProductId_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3541,7 +3541,7 @@ class SvipOspServiceV2_getSumCount_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\GetSumCountRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\GetSumCountRequest();
 			$this->request->read($input);
 			
 		}
@@ -3564,7 +3564,7 @@ class SvipOspServiceV2_getSumCount_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3743,7 +3743,7 @@ class SvipOspServiceV2_getSvipEquityInfo_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\SvipEquityInfoRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\SvipEquityInfoRequest();
 			$this->request->read($input);
 			
 		}
@@ -3764,7 +3764,7 @@ class SvipOspServiceV2_getSvipEquityInfo_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -3821,7 +3821,7 @@ class SvipOspServiceV2_getSvipGoodsByMid_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\GetSvipGoodsRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\GetSvipGoodsRequest();
 			$this->request->read($input);
 			
 		}
@@ -3844,7 +3844,7 @@ class SvipOspServiceV2_getSvipGoodsByMid_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3903,7 +3903,7 @@ class SvipOspServiceV2_getSvipGoodsDetail_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\GetSvipGoodsDetailReq();
+			$this->request = new \Voop\com\vip\svip\osp\service\GetSvipGoodsDetailReq();
 			$this->request->read($input);
 			
 		}
@@ -3926,7 +3926,7 @@ class SvipOspServiceV2_getSvipGoodsDetail_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3985,7 +3985,7 @@ class SvipOspServiceV2_getSvipInfo4AppClub_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\GetSvipInfo4AppClubRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\GetSvipInfo4AppClubRequest();
 			$this->request->read($input);
 			
 		}
@@ -4008,7 +4008,7 @@ class SvipOspServiceV2_getSvipInfo4AppClub_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4067,7 +4067,7 @@ class SvipOspServiceV2_getSvipMainInfo_args {
 		if(true) {
 			
 			
-			$this->header = new \com\vip\svip\osp\service\BaseRequestHeader();
+			$this->header = new \Voop\com\vip\svip\osp\service\BaseRequestHeader();
 			$this->header->read($input);
 			
 		}
@@ -4088,7 +4088,7 @@ class SvipOspServiceV2_getSvipMainInfo_args {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -4145,7 +4145,7 @@ class SvipOspServiceV2_getSvipUserHealth_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\svip\osp\service\GetSvipUserHealthReq();
+			$this->req = new \Voop\com\vip\svip\osp\service\GetSvipUserHealthReq();
 			$this->req->read($input);
 			
 		}
@@ -4168,7 +4168,7 @@ class SvipOspServiceV2_getSvipUserHealth_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -4227,7 +4227,7 @@ class SvipOspServiceV2_getSvipUserInfo_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\svip\osp\service\SvipUserLimitStateReq();
+			$this->req = new \Voop\com\vip\svip\osp\service\SvipUserLimitStateReq();
 			$this->req->read($input);
 			
 		}
@@ -4250,7 +4250,7 @@ class SvipOspServiceV2_getSvipUserInfo_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -4383,7 +4383,7 @@ class SvipOspServiceV2_getTheTimeSvipPrice_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\GetTheTimeSvipPrice();
+			$this->request = new \Voop\com\vip\svip\osp\service\GetTheTimeSvipPrice();
 			$this->request->read($input);
 			
 		}
@@ -4406,7 +4406,7 @@ class SvipOspServiceV2_getTheTimeSvipPrice_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4465,7 +4465,7 @@ class SvipOspServiceV2_getUnionSvipGoodsInfo_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\UnionSvipGoodsRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\UnionSvipGoodsRequest();
 			$this->request->read($input);
 			
 		}
@@ -4488,7 +4488,7 @@ class SvipOspServiceV2_getUnionSvipGoodsInfo_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4547,7 +4547,7 @@ class SvipOspServiceV2_getUserAttendInfo_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\UserAttendInfoRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\UserAttendInfoRequest();
 			$this->request->read($input);
 			
 		}
@@ -4570,7 +4570,7 @@ class SvipOspServiceV2_getUserAttendInfo_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4759,7 +4759,7 @@ class SvipOspServiceV2_isSvipBuyLimit_args {
 		if(true) {
 			
 			
-			$this->header = new \com\vip\svip\osp\service\BuyLimitRequestHeader();
+			$this->header = new \Voop\com\vip\svip\osp\service\BuyLimitRequestHeader();
 			$this->header->read($input);
 			
 		}
@@ -4770,7 +4770,7 @@ class SvipOspServiceV2_isSvipBuyLimit_args {
 		if(true) {
 			
 			
-			$this->param = new \com\vip\svip\osp\service\BuyLimitRequestParam();
+			$this->param = new \Voop\com\vip\svip\osp\service\BuyLimitRequestParam();
 			$this->param->read($input);
 			
 		}
@@ -4791,7 +4791,7 @@ class SvipOspServiceV2_isSvipBuyLimit_args {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -4802,7 +4802,7 @@ class SvipOspServiceV2_isSvipBuyLimit_args {
 		
 		if (!is_object($this->param)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->param->write($output);
@@ -4859,7 +4859,7 @@ class SvipOspServiceV2_isSvipLimitUser_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\BuyLimitStateRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\BuyLimitStateRequest();
 			$this->request->read($input);
 			
 		}
@@ -4882,7 +4882,7 @@ class SvipOspServiceV2_isSvipLimitUser_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4941,7 +4941,7 @@ class SvipOspServiceV2_isSvipLimitUserByPhone_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\CheckSvipUserLimitByPhoneParam();
+			$this->request = new \Voop\com\vip\svip\osp\service\CheckSvipUserLimitByPhoneParam();
 			$this->request->read($input);
 			
 		}
@@ -4964,7 +4964,7 @@ class SvipOspServiceV2_isSvipLimitUserByPhone_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5023,7 +5023,7 @@ class SvipOspServiceV2_joinSvipForTencentVideoSide_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\DoubleSvipRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\DoubleSvipRequest();
 			$this->request->read($input);
 			
 		}
@@ -5046,7 +5046,7 @@ class SvipOspServiceV2_joinSvipForTencentVideoSide_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5105,7 +5105,7 @@ class SvipOspServiceV2_joinTencentVideoMemberAtVipSide_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\DoubleSvipRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\DoubleSvipRequest();
 			$this->request->read($input);
 			
 		}
@@ -5128,7 +5128,7 @@ class SvipOspServiceV2_joinTencentVideoMemberAtVipSide_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5197,7 +5197,7 @@ class SvipOspServiceV2_offlineChannelTrySvip_args {
 		if(true) {
 			
 			
-			$this->header = new \com\vip\svip\osp\service\SimpleRequestHeader();
+			$this->header = new \Voop\com\vip\svip\osp\service\SimpleRequestHeader();
 			$this->header->read($input);
 			
 		}
@@ -5208,7 +5208,7 @@ class SvipOspServiceV2_offlineChannelTrySvip_args {
 		if(true) {
 			
 			
-			$this->channelInfo = new \com\vip\svip\osp\service\OfflineChannelInfo();
+			$this->channelInfo = new \Voop\com\vip\svip\osp\service\OfflineChannelInfo();
 			$this->channelInfo->read($input);
 			
 		}
@@ -5229,7 +5229,7 @@ class SvipOspServiceV2_offlineChannelTrySvip_args {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -5240,7 +5240,7 @@ class SvipOspServiceV2_offlineChannelTrySvip_args {
 		
 		if (!is_object($this->channelInfo)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->channelInfo->write($output);
@@ -5297,7 +5297,7 @@ class SvipOspServiceV2_openLimitCheck_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\OpenLimitRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\OpenLimitRequest();
 			$this->request->read($input);
 			
 		}
@@ -5320,7 +5320,7 @@ class SvipOspServiceV2_openLimitCheck_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5379,7 +5379,7 @@ class SvipOspServiceV2_prepareDoubleSvipAccess_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\DoubleSvipRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\DoubleSvipRequest();
 			$this->request->read($input);
 			
 		}
@@ -5402,7 +5402,7 @@ class SvipOspServiceV2_prepareDoubleSvipAccess_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5461,7 +5461,7 @@ class SvipOspServiceV2_receivePrize_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\ReceivePrizeRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\ReceivePrizeRequest();
 			$this->request->read($input);
 			
 		}
@@ -5484,7 +5484,7 @@ class SvipOspServiceV2_receivePrize_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5821,7 +5821,7 @@ class SvipOspServiceV2_scrapeAction_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\ScrapeActionRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\ScrapeActionRequest();
 			$this->request->read($input);
 			
 		}
@@ -5844,7 +5844,7 @@ class SvipOspServiceV2_scrapeAction_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5903,7 +5903,7 @@ class SvipOspServiceV2_searchSvipTXHistory_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\SearchSvipHistoryRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\SearchSvipHistoryRequest();
 			$this->request->read($input);
 			
 		}
@@ -5926,7 +5926,7 @@ class SvipOspServiceV2_searchSvipTXHistory_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5985,7 +5985,7 @@ class SvipOspServiceV2_specialMemberTrySvip_args {
 		if(true) {
 			
 			
-			$this->header = new \com\vip\svip\osp\service\SimpleRequestHeader();
+			$this->header = new \Voop\com\vip\svip\osp\service\SimpleRequestHeader();
 			$this->header->read($input);
 			
 		}
@@ -6006,7 +6006,7 @@ class SvipOspServiceV2_specialMemberTrySvip_args {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -6063,7 +6063,7 @@ class SvipOspServiceV2_svipCompensateForCommon_args {
 		if(true) {
 			
 			
-			$this->param = new \com\vip\svip\osp\service\SvipCompensateParam();
+			$this->param = new \Voop\com\vip\svip\osp\service\SvipCompensateParam();
 			$this->param->read($input);
 			
 		}
@@ -6086,7 +6086,7 @@ class SvipOspServiceV2_svipCompensateForCommon_args {
 			
 			if (!is_object($this->param)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->param->write($output);
@@ -6155,7 +6155,7 @@ class SvipOspServiceV2_svipUserOperate_args {
 		if(true) {
 			
 			
-			$this->info = new \com\vip\svip\osp\service\SvipUserOperateInfoParam();
+			$this->info = new \Voop\com\vip\svip\osp\service\SvipUserOperateInfoParam();
 			$this->info->read($input);
 			
 		}
@@ -6166,7 +6166,7 @@ class SvipOspServiceV2_svipUserOperate_args {
 		if(true) {
 			
 			
-			$this->signCheck = new \com\vip\svip\osp\service\SvipUserOperateSignCheck();
+			$this->signCheck = new \Voop\com\vip\svip\osp\service\SvipUserOperateSignCheck();
 			$this->signCheck->read($input);
 			
 		}
@@ -6187,7 +6187,7 @@ class SvipOspServiceV2_svipUserOperate_args {
 		
 		if (!is_object($this->info)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->info->write($output);
@@ -6198,7 +6198,7 @@ class SvipOspServiceV2_svipUserOperate_args {
 		
 		if (!is_object($this->signCheck)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->signCheck->write($output);
@@ -6301,7 +6301,7 @@ class SvipOspServiceV2_thirdOpenLimitCheck_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\ThirdOpenLimitRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\ThirdOpenLimitRequest();
 			$this->request->read($input);
 			
 		}
@@ -6324,7 +6324,7 @@ class SvipOspServiceV2_thirdOpenLimitCheck_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -6383,7 +6383,7 @@ class SvipOspServiceV2_thirdOpenSvip_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\ThirdOpenSvipRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\ThirdOpenSvipRequest();
 			$this->request->read($input);
 			
 		}
@@ -6406,7 +6406,7 @@ class SvipOspServiceV2_thirdOpenSvip_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -6465,7 +6465,7 @@ class SvipOspServiceV2_txGetSvipToken_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\TxGetTokenRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\TxGetTokenRequest();
 			$this->request->read($input);
 			
 		}
@@ -6488,7 +6488,7 @@ class SvipOspServiceV2_txGetSvipToken_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -6547,7 +6547,7 @@ class SvipOspServiceV2_txOpenSvip_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\svip\osp\service\TxOpenSvipRequest();
+			$this->request = new \Voop\com\vip\svip\osp\service\TxOpenSvipRequest();
 			$this->request->read($input);
 			
 		}
@@ -6570,7 +6570,7 @@ class SvipOspServiceV2_txOpenSvip_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -6712,7 +6712,7 @@ class SvipOspServiceV2_SearchSvipHistory_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\svip\osp\service\SearchSvipHistoryResult();
+					$elem0 = new \Voop\com\vip\svip\osp\service\SearchSvipHistoryResult();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -6745,7 +6745,7 @@ class SvipOspServiceV2_SearchSvipHistory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6754,7 +6754,7 @@ class SvipOspServiceV2_SearchSvipHistory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6817,7 +6817,7 @@ class SvipOspServiceV2_SvipCompensate_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BaseResult();
 			$this->success->read($input);
 			
 		}
@@ -6840,7 +6840,7 @@ class SvipOspServiceV2_SvipCompensate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6899,7 +6899,7 @@ class SvipOspServiceV2_SvipCompensateByHand_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BaseResult();
 			$this->success->read($input);
 			
 		}
@@ -6922,7 +6922,7 @@ class SvipOspServiceV2_SvipCompensateByHand_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6981,7 +6981,7 @@ class SvipOspServiceV2_batchCancel_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BatchCancelBaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BatchCancelBaseResult();
 			$this->success->read($input);
 			
 		}
@@ -7004,7 +7004,7 @@ class SvipOspServiceV2_batchCancel_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7063,7 +7063,7 @@ class SvipOspServiceV2_batchCancelV2_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BatchCancelBaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BatchCancelBaseResult();
 			$this->success->read($input);
 			
 		}
@@ -7086,7 +7086,7 @@ class SvipOspServiceV2_batchCancelV2_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7145,7 +7145,7 @@ class SvipOspServiceV2_bindTxUserAccount_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BaseResult();
 			$this->success->read($input);
 			
 		}
@@ -7168,7 +7168,7 @@ class SvipOspServiceV2_bindTxUserAccount_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7236,7 +7236,7 @@ class SvipOspServiceV2_brandGiftDetailList_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\svip\osp\service\BrandGiftItem();
+					$elem0 = new \Voop\com\vip\svip\osp\service\BrandGiftItem();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -7269,7 +7269,7 @@ class SvipOspServiceV2_brandGiftDetailList_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -7278,7 +7278,7 @@ class SvipOspServiceV2_brandGiftDetailList_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -7341,7 +7341,7 @@ class SvipOspServiceV2_checkTxAccLimit_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BaseResult();
 			$this->success->read($input);
 			
 		}
@@ -7364,7 +7364,7 @@ class SvipOspServiceV2_checkTxAccLimit_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7423,7 +7423,7 @@ class SvipOspServiceV2_createThirdSvipToken_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\ThirdCreatSvipTokenResponse();
+			$this->success = new \Voop\com\vip\svip\osp\service\ThirdCreatSvipTokenResponse();
 			$this->success->read($input);
 			
 		}
@@ -7446,7 +7446,7 @@ class SvipOspServiceV2_createThirdSvipToken_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7505,7 +7505,7 @@ class SvipOspServiceV2_doCancelJob_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BaseResult();
 			$this->success->read($input);
 			
 		}
@@ -7528,7 +7528,7 @@ class SvipOspServiceV2_doCancelJob_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7587,7 +7587,7 @@ class SvipOspServiceV2_doCancelSvipUser_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BaseResult();
 			$this->success->read($input);
 			
 		}
@@ -7610,7 +7610,7 @@ class SvipOspServiceV2_doCancelSvipUser_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7743,7 +7743,7 @@ class SvipOspServiceV2_getBindAccountInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\AccountInfoResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\AccountInfoResult();
 			$this->success->read($input);
 			
 		}
@@ -7766,7 +7766,7 @@ class SvipOspServiceV2_getBindAccountInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7825,7 +7825,7 @@ class SvipOspServiceV2_getBrandGiftIdList_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BrandGiftIdResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BrandGiftIdResult();
 			$this->success->read($input);
 			
 		}
@@ -7848,7 +7848,7 @@ class SvipOspServiceV2_getBrandGiftIdList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7907,7 +7907,7 @@ class SvipOspServiceV2_getBuyLimitResult_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BuyLimitResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BuyLimitResult();
 			$this->success->read($input);
 			
 		}
@@ -7930,7 +7930,7 @@ class SvipOspServiceV2_getBuyLimitResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7989,7 +7989,7 @@ class SvipOspServiceV2_getGoodsIdByPickNo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\GetGoodsIdByPickNoResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\GetGoodsIdByPickNoResult();
 			$this->success->read($input);
 			
 		}
@@ -8012,7 +8012,7 @@ class SvipOspServiceV2_getGoodsIdByPickNo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8080,7 +8080,7 @@ class SvipOspServiceV2_getGroupValuesConf_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\svip\osp\service\GroupValues();
+					$elem0 = new \Voop\com\vip\svip\osp\service\GroupValues();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -8113,7 +8113,7 @@ class SvipOspServiceV2_getGroupValuesConf_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -8122,7 +8122,7 @@ class SvipOspServiceV2_getGroupValuesConf_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -8185,7 +8185,7 @@ class SvipOspServiceV2_getOpGoodsDetailList_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\GetOpGoodsDetailResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\GetOpGoodsDetailResult();
 			$this->success->read($input);
 			
 		}
@@ -8208,7 +8208,7 @@ class SvipOspServiceV2_getOpGoodsDetailList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8267,7 +8267,7 @@ class SvipOspServiceV2_getOpGoodsIds_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\GetOpGoodsIdResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\GetOpGoodsIdResult();
 			$this->success->read($input);
 			
 		}
@@ -8290,7 +8290,7 @@ class SvipOspServiceV2_getOpGoodsIds_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8349,7 +8349,7 @@ class SvipOspServiceV2_getPmsPriceByProductId_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BrandGoodsPriceResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BrandGoodsPriceResult();
 			$this->success->read($input);
 			
 		}
@@ -8372,7 +8372,7 @@ class SvipOspServiceV2_getPmsPriceByProductId_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8588,7 +8588,7 @@ class SvipOspServiceV2_getSvipBindInfoByUserId_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\svip\osp\service\SvipBindInfo();
+					$elem0 = new \Voop\com\vip\svip\osp\service\SvipBindInfo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -8621,7 +8621,7 @@ class SvipOspServiceV2_getSvipBindInfoByUserId_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -8630,7 +8630,7 @@ class SvipOspServiceV2_getSvipBindInfoByUserId_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -8693,7 +8693,7 @@ class SvipOspServiceV2_getSvipEquityInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\EquityBaseInfoResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\EquityBaseInfoResult();
 			$this->success->read($input);
 			
 		}
@@ -8716,7 +8716,7 @@ class SvipOspServiceV2_getSvipEquityInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8775,7 +8775,7 @@ class SvipOspServiceV2_getSvipGoodsByMid_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\GetSvipGoodsResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\GetSvipGoodsResult();
 			$this->success->read($input);
 			
 		}
@@ -8798,7 +8798,7 @@ class SvipOspServiceV2_getSvipGoodsByMid_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8857,7 +8857,7 @@ class SvipOspServiceV2_getSvipGoodsDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\GetSvipGoodsDetailResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\GetSvipGoodsDetailResult();
 			$this->success->read($input);
 			
 		}
@@ -8880,7 +8880,7 @@ class SvipOspServiceV2_getSvipGoodsDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8939,7 +8939,7 @@ class SvipOspServiceV2_getSvipInfo4AppClub_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\GetSvipInfo4AppClubResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\GetSvipInfo4AppClubResult();
 			$this->success->read($input);
 			
 		}
@@ -8962,7 +8962,7 @@ class SvipOspServiceV2_getSvipInfo4AppClub_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9021,7 +9021,7 @@ class SvipOspServiceV2_getSvipMainInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\KTBaseInfoResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\KTBaseInfoResult();
 			$this->success->read($input);
 			
 		}
@@ -9044,7 +9044,7 @@ class SvipOspServiceV2_getSvipMainInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9103,7 +9103,7 @@ class SvipOspServiceV2_getSvipUserHealth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\SvipUserHealthResp();
+			$this->success = new \Voop\com\vip\svip\osp\service\SvipUserHealthResp();
 			$this->success->read($input);
 			
 		}
@@ -9126,7 +9126,7 @@ class SvipOspServiceV2_getSvipUserHealth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9185,7 +9185,7 @@ class SvipOspServiceV2_getSvipUserInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\SvipUserLimitStateResp();
+			$this->success = new \Voop\com\vip\svip\osp\service\SvipUserLimitStateResp();
 			$this->success->read($input);
 			
 		}
@@ -9208,7 +9208,7 @@ class SvipOspServiceV2_getSvipUserInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9267,7 +9267,7 @@ class SvipOspServiceV2_getTencentVipSvipCardInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\TencentSvipGoodsInfo();
+			$this->success = new \Voop\com\vip\svip\osp\service\TencentSvipGoodsInfo();
 			$this->success->read($input);
 			
 		}
@@ -9290,7 +9290,7 @@ class SvipOspServiceV2_getTencentVipSvipCardInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9349,7 +9349,7 @@ class SvipOspServiceV2_getTheTimeSvipPrice_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\GetTheTimeSvipPriceResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\GetTheTimeSvipPriceResult();
 			$this->success->read($input);
 			
 		}
@@ -9372,7 +9372,7 @@ class SvipOspServiceV2_getTheTimeSvipPrice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9579,7 +9579,7 @@ class SvipOspServiceV2_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -9602,7 +9602,7 @@ class SvipOspServiceV2_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9735,7 +9735,7 @@ class SvipOspServiceV2_isSvipBuyLimit_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BuyLimitResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BuyLimitResult();
 			$this->success->read($input);
 			
 		}
@@ -9758,7 +9758,7 @@ class SvipOspServiceV2_isSvipBuyLimit_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9817,7 +9817,7 @@ class SvipOspServiceV2_isSvipLimitUser_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BuyLimitState();
+			$this->success = new \Voop\com\vip\svip\osp\service\BuyLimitState();
 			$this->success->read($input);
 			
 		}
@@ -9840,7 +9840,7 @@ class SvipOspServiceV2_isSvipLimitUser_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9899,7 +9899,7 @@ class SvipOspServiceV2_isSvipLimitUserByPhone_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BuyLimitState();
+			$this->success = new \Voop\com\vip\svip\osp\service\BuyLimitState();
 			$this->success->read($input);
 			
 		}
@@ -9922,7 +9922,7 @@ class SvipOspServiceV2_isSvipLimitUserByPhone_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9981,7 +9981,7 @@ class SvipOspServiceV2_joinSvipForTencentVideoSide_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\DoubleSvipCreateResponse();
+			$this->success = new \Voop\com\vip\svip\osp\service\DoubleSvipCreateResponse();
 			$this->success->read($input);
 			
 		}
@@ -10004,7 +10004,7 @@ class SvipOspServiceV2_joinSvipForTencentVideoSide_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10063,7 +10063,7 @@ class SvipOspServiceV2_joinTencentVideoMemberAtVipSide_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BaseResult();
 			$this->success->read($input);
 			
 		}
@@ -10086,7 +10086,7 @@ class SvipOspServiceV2_joinTencentVideoMemberAtVipSide_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10145,7 +10145,7 @@ class SvipOspServiceV2_offlineChannelTrySvip_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BaseResult();
 			$this->success->read($input);
 			
 		}
@@ -10168,7 +10168,7 @@ class SvipOspServiceV2_offlineChannelTrySvip_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10227,7 +10227,7 @@ class SvipOspServiceV2_openLimitCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BuyLimitResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BuyLimitResult();
 			$this->success->read($input);
 			
 		}
@@ -10250,7 +10250,7 @@ class SvipOspServiceV2_openLimitCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10309,7 +10309,7 @@ class SvipOspServiceV2_prepareDoubleSvipAccess_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\DoubleSvipStatus();
+			$this->success = new \Voop\com\vip\svip\osp\service\DoubleSvipStatus();
 			$this->success->read($input);
 			
 		}
@@ -10332,7 +10332,7 @@ class SvipOspServiceV2_prepareDoubleSvipAccess_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10465,7 +10465,7 @@ class SvipOspServiceV2_rejoinTencentMember_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BaseResult();
 			$this->success->read($input);
 			
 		}
@@ -10488,7 +10488,7 @@ class SvipOspServiceV2_rejoinTencentMember_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10817,7 +10817,7 @@ class SvipOspServiceV2_searchSvipTXHistory_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\SvipTXBindHistoryResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\SvipTXBindHistoryResult();
 			$this->success->read($input);
 			
 		}
@@ -10840,7 +10840,7 @@ class SvipOspServiceV2_searchSvipTXHistory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10899,7 +10899,7 @@ class SvipOspServiceV2_specialMemberTrySvip_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BaseResult();
 			$this->success->read($input);
 			
 		}
@@ -10922,7 +10922,7 @@ class SvipOspServiceV2_specialMemberTrySvip_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10981,7 +10981,7 @@ class SvipOspServiceV2_svipCompensateForCommon_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\BaseResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\BaseResult();
 			$this->success->read($input);
 			
 		}
@@ -11004,7 +11004,7 @@ class SvipOspServiceV2_svipCompensateForCommon_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11063,7 +11063,7 @@ class SvipOspServiceV2_svipUserOperate_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\SvipOperateResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\SvipOperateResult();
 			$this->success->read($input);
 			
 		}
@@ -11086,7 +11086,7 @@ class SvipOspServiceV2_svipUserOperate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11194,7 +11194,7 @@ class SvipOspServiceV2_thirdOpenLimitCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\ThirdOpenLimitResponse();
+			$this->success = new \Voop\com\vip\svip\osp\service\ThirdOpenLimitResponse();
 			$this->success->read($input);
 			
 		}
@@ -11217,7 +11217,7 @@ class SvipOspServiceV2_thirdOpenLimitCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11276,7 +11276,7 @@ class SvipOspServiceV2_thirdOpenSvip_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\ThirdSvipOpenResponse();
+			$this->success = new \Voop\com\vip\svip\osp\service\ThirdSvipOpenResponse();
 			$this->success->read($input);
 			
 		}
@@ -11299,7 +11299,7 @@ class SvipOspServiceV2_thirdOpenSvip_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11358,7 +11358,7 @@ class SvipOspServiceV2_txGetSvipToken_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\TxGetSvipTokenResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\TxGetSvipTokenResult();
 			$this->success->read($input);
 			
 		}
@@ -11381,7 +11381,7 @@ class SvipOspServiceV2_txGetSvipToken_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11440,7 +11440,7 @@ class SvipOspServiceV2_txOpenSvip_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\DoubleSvipCreateResponse();
+			$this->success = new \Voop\com\vip\svip\osp\service\DoubleSvipCreateResponse();
 			$this->success->read($input);
 			
 		}
@@ -11463,7 +11463,7 @@ class SvipOspServiceV2_txOpenSvip_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11522,7 +11522,7 @@ class SvipOspServiceV2_vOrderCallSvip_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\svip\osp\service\SvipOperateResult();
+			$this->success = new \Voop\com\vip\svip\osp\service\SvipOperateResult();
 			$this->success->read($input);
 			
 		}
@@ -11545,7 +11545,7 @@ class SvipOspServiceV2_vOrderCallSvip_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

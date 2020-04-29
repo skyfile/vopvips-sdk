@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\size;
+namespace Voop\vipapis\size;
 
 class SizeCategoryDo {
 	
@@ -160,7 +160,7 @@ class SizeCategoryDo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\size\SizeDetailDo();
+						$elem0 = new \Voop\vipapis\size\SizeDetailDo();
 						$elem0->read($input);
 						
 						$this->size_detail_does[$_size0++] = $elem0;
@@ -182,7 +182,7 @@ class SizeCategoryDo {
 				
 				$needSkip = false;
 				
-				$this->size_template_do = new \vipapis\size\SizeTemplateDo();
+				$this->size_template_do = new \Voop\vipapis\size\SizeTemplateDo();
 				$this->size_template_do->read($input);
 				
 			}
@@ -191,7 +191,7 @@ class SizeCategoryDo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -250,7 +250,7 @@ class SizeCategoryDo {
 			
 			if (!is_array($this->size_detail_does)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -259,7 +259,7 @@ class SizeCategoryDo {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -278,7 +278,7 @@ class SizeCategoryDo {
 			
 			if (!is_object($this->size_template_do)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->size_template_do->write($output);

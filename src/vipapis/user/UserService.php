@@ -8,13 +8,13 @@
 *
 */
 
-namespace vipapis\user;
+namespace Voop\vipapis\user;
 interface UserServiceIf{
 	
 	
-	public function getGroups(\vipapis\user\GetGroupsRequest $request);
+	public function getGroups(\Voop\vipapis\user\GetGroupsRequest $request);
 	
-	public function getUsersByGroupCode(\vipapis\user\GetUsersByGroupCodeRequest $request);
+	public function getUsersByGroupCode(\Voop\vipapis\user\GetUsersByGroupCodeRequest $request);
 	
 	public function healthCheck();
 	
@@ -28,16 +28,16 @@ class _UserServiceClient extends \Osp\Base\OspStub implements \vipapis\user\User
 	}
 	
 	
-	public function getGroups(\vipapis\user\GetGroupsRequest $request){
+	public function getGroups(\Voop\vipapis\user\GetGroupsRequest $request){
 		
 		$this->send_getGroups( $request);
 		return $this->recv_getGroups();
 	}
 	
-	public function send_getGroups(\vipapis\user\GetGroupsRequest $request){
+	public function send_getGroups(\Voop\vipapis\user\GetGroupsRequest $request){
 		
 		$this->initInvocation("getGroups");
-		$args = new \vipapis\user\UserService_getGroups_args();
+		$args = new \Voop\vipapis\user\UserService_getGroups_args();
 		
 		$args->request = $request;
 		
@@ -46,7 +46,7 @@ class _UserServiceClient extends \Osp\Base\OspStub implements \vipapis\user\User
 	
 	public function recv_getGroups(){
 		
-		$result = new \vipapis\user\UserService_getGroups_result();
+		$result = new \Voop\vipapis\user\UserService_getGroups_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -56,16 +56,16 @@ class _UserServiceClient extends \Osp\Base\OspStub implements \vipapis\user\User
 	}
 	
 	
-	public function getUsersByGroupCode(\vipapis\user\GetUsersByGroupCodeRequest $request){
+	public function getUsersByGroupCode(\Voop\vipapis\user\GetUsersByGroupCodeRequest $request){
 		
 		$this->send_getUsersByGroupCode( $request);
 		return $this->recv_getUsersByGroupCode();
 	}
 	
-	public function send_getUsersByGroupCode(\vipapis\user\GetUsersByGroupCodeRequest $request){
+	public function send_getUsersByGroupCode(\Voop\vipapis\user\GetUsersByGroupCodeRequest $request){
 		
 		$this->initInvocation("getUsersByGroupCode");
-		$args = new \vipapis\user\UserService_getUsersByGroupCode_args();
+		$args = new \Voop\vipapis\user\UserService_getUsersByGroupCode_args();
 		
 		$args->request = $request;
 		
@@ -74,7 +74,7 @@ class _UserServiceClient extends \Osp\Base\OspStub implements \vipapis\user\User
 	
 	public function recv_getUsersByGroupCode(){
 		
-		$result = new \vipapis\user\UserService_getUsersByGroupCode_result();
+		$result = new \Voop\vipapis\user\UserService_getUsersByGroupCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -93,14 +93,14 @@ class _UserServiceClient extends \Osp\Base\OspStub implements \vipapis\user\User
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\user\UserService_healthCheck_args();
+		$args = new \Voop\vipapis\user\UserService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\user\UserService_healthCheck_result();
+		$result = new \Voop\vipapis\user\UserService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -155,7 +155,7 @@ class UserService_getGroups_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\user\GetGroupsRequest();
+			$this->request = new \Voop\vipapis\user\GetGroupsRequest();
 			$this->request->read($input);
 			
 		}
@@ -176,7 +176,7 @@ class UserService_getGroups_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -233,7 +233,7 @@ class UserService_getUsersByGroupCode_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\user\GetUsersByGroupCodeRequest();
+			$this->request = new \Voop\vipapis\user\GetUsersByGroupCodeRequest();
 			$this->request->read($input);
 			
 		}
@@ -254,7 +254,7 @@ class UserService_getUsersByGroupCode_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -357,7 +357,7 @@ class UserService_getGroups_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\user\GetGroupsResponse();
+			$this->success = new \Voop\vipapis\user\GetGroupsResponse();
 			$this->success->read($input);
 			
 		}
@@ -380,7 +380,7 @@ class UserService_getGroups_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -439,7 +439,7 @@ class UserService_getUsersByGroupCode_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\user\GetUsersByGroupCodeResponse();
+			$this->success = new \Voop\vipapis\user\GetUsersByGroupCodeResponse();
 			$this->success->read($input);
 			
 		}
@@ -462,7 +462,7 @@ class UserService_getUsersByGroupCode_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -521,7 +521,7 @@ class UserService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -544,7 +544,7 @@ class UserService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

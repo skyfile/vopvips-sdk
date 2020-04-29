@@ -8,13 +8,13 @@
 *
 */
 
-namespace vipapis\size;
+namespace Voop\vipapis\size;
 interface VendorSizeMappingServiceIf{
 	
 	
 	public function addSizeCategories( $size_category_does);
 	
-	public function addSizeTable(\vipapis\size\AddSizeTableRequest $req);
+	public function addSizeTable(\Voop\vipapis\size\AddSizeTableRequest $req);
 	
 	public function addSizeTemplate( $size_template_code, $size_template_name);
 	
@@ -24,21 +24,21 @@ interface VendorSizeMappingServiceIf{
 	
 	public function findCategoryByTemplateId( $size_template_id);
 	
-	public function findSizeMapping(\vipapis\size\FindSizeMappingRequest $req);
+	public function findSizeMapping(\Voop\vipapis\size\FindSizeMappingRequest $req);
 	
-	public function findSizeTemplateDetail(\vipapis\size\SizeTemplateDo $size_template_do);
+	public function findSizeTemplateDetail(\Voop\vipapis\size\SizeTemplateDo $size_template_do);
 	
 	public function healthCheck();
 	
-	public function listVendorSizeTable(\vipapis\size\ListVendorSizeTableRequest $request);
+	public function listVendorSizeTable(\Voop\vipapis\size\ListVendorSizeTableRequest $request);
 	
-	public function selectByCondition(\vipapis\size\VendorSizeMappingDo $condition);
+	public function selectByCondition(\Voop\vipapis\size\VendorSizeMappingDo $condition);
 	
 	public function unBindingCategory( $category_id);
 	
-	public function updateSizeTable(\vipapis\size\UpdateSizeTableRequest $req);
+	public function updateSizeTable(\Voop\vipapis\size\UpdateSizeTableRequest $req);
 	
-	public function updateSizeTemplate(\vipapis\size\SizeTemplateDo $size_template_do);
+	public function updateSizeTemplate(\Voop\vipapis\size\SizeTemplateDo $size_template_do);
 	
 	public function updateSizeTemplateDetail( $size_template_id, $size_detail_id);
 	
@@ -61,7 +61,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_addSizeCategories( $size_category_does){
 		
 		$this->initInvocation("addSizeCategories");
-		$args = new \vipapis\size\VendorSizeMappingService_addSizeCategories_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_addSizeCategories_args();
 		
 		$args->size_category_does = $size_category_does;
 		
@@ -70,7 +70,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_addSizeCategories(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_addSizeCategories_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_addSizeCategories_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -80,16 +80,16 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	}
 	
 	
-	public function addSizeTable(\vipapis\size\AddSizeTableRequest $req){
+	public function addSizeTable(\Voop\vipapis\size\AddSizeTableRequest $req){
 		
 		$this->send_addSizeTable( $req);
 		return $this->recv_addSizeTable();
 	}
 	
-	public function send_addSizeTable(\vipapis\size\AddSizeTableRequest $req){
+	public function send_addSizeTable(\Voop\vipapis\size\AddSizeTableRequest $req){
 		
 		$this->initInvocation("addSizeTable");
-		$args = new \vipapis\size\VendorSizeMappingService_addSizeTable_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_addSizeTable_args();
 		
 		$args->req = $req;
 		
@@ -98,7 +98,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_addSizeTable(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_addSizeTable_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_addSizeTable_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -117,7 +117,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_addSizeTemplate( $size_template_code, $size_template_name){
 		
 		$this->initInvocation("addSizeTemplate");
-		$args = new \vipapis\size\VendorSizeMappingService_addSizeTemplate_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_addSizeTemplate_args();
 		
 		$args->size_template_code = $size_template_code;
 		
@@ -128,7 +128,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_addSizeTemplate(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_addSizeTemplate_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_addSizeTemplate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -147,14 +147,14 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_findAllSizeDetail(){
 		
 		$this->initInvocation("findAllSizeDetail");
-		$args = new \vipapis\size\VendorSizeMappingService_findAllSizeDetail_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_findAllSizeDetail_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_findAllSizeDetail(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_findAllSizeDetail_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_findAllSizeDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -173,7 +173,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_findBindedCategory( $category_id){
 		
 		$this->initInvocation("findBindedCategory");
-		$args = new \vipapis\size\VendorSizeMappingService_findBindedCategory_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_findBindedCategory_args();
 		
 		$args->category_id = $category_id;
 		
@@ -182,7 +182,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_findBindedCategory(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_findBindedCategory_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_findBindedCategory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -201,7 +201,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_findCategoryByTemplateId( $size_template_id){
 		
 		$this->initInvocation("findCategoryByTemplateId");
-		$args = new \vipapis\size\VendorSizeMappingService_findCategoryByTemplateId_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_findCategoryByTemplateId_args();
 		
 		$args->size_template_id = $size_template_id;
 		
@@ -210,7 +210,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_findCategoryByTemplateId(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_findCategoryByTemplateId_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_findCategoryByTemplateId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -220,16 +220,16 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	}
 	
 	
-	public function findSizeMapping(\vipapis\size\FindSizeMappingRequest $req){
+	public function findSizeMapping(\Voop\vipapis\size\FindSizeMappingRequest $req){
 		
 		$this->send_findSizeMapping( $req);
 		return $this->recv_findSizeMapping();
 	}
 	
-	public function send_findSizeMapping(\vipapis\size\FindSizeMappingRequest $req){
+	public function send_findSizeMapping(\Voop\vipapis\size\FindSizeMappingRequest $req){
 		
 		$this->initInvocation("findSizeMapping");
-		$args = new \vipapis\size\VendorSizeMappingService_findSizeMapping_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_findSizeMapping_args();
 		
 		$args->req = $req;
 		
@@ -238,7 +238,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_findSizeMapping(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_findSizeMapping_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_findSizeMapping_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -248,16 +248,16 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	}
 	
 	
-	public function findSizeTemplateDetail(\vipapis\size\SizeTemplateDo $size_template_do){
+	public function findSizeTemplateDetail(\Voop\vipapis\size\SizeTemplateDo $size_template_do){
 		
 		$this->send_findSizeTemplateDetail( $size_template_do);
 		return $this->recv_findSizeTemplateDetail();
 	}
 	
-	public function send_findSizeTemplateDetail(\vipapis\size\SizeTemplateDo $size_template_do){
+	public function send_findSizeTemplateDetail(\Voop\vipapis\size\SizeTemplateDo $size_template_do){
 		
 		$this->initInvocation("findSizeTemplateDetail");
-		$args = new \vipapis\size\VendorSizeMappingService_findSizeTemplateDetail_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_findSizeTemplateDetail_args();
 		
 		$args->size_template_do = $size_template_do;
 		
@@ -266,7 +266,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_findSizeTemplateDetail(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_findSizeTemplateDetail_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_findSizeTemplateDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -285,14 +285,14 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\size\VendorSizeMappingService_healthCheck_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_healthCheck_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -302,16 +302,16 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	}
 	
 	
-	public function listVendorSizeTable(\vipapis\size\ListVendorSizeTableRequest $request){
+	public function listVendorSizeTable(\Voop\vipapis\size\ListVendorSizeTableRequest $request){
 		
 		$this->send_listVendorSizeTable( $request);
 		return $this->recv_listVendorSizeTable();
 	}
 	
-	public function send_listVendorSizeTable(\vipapis\size\ListVendorSizeTableRequest $request){
+	public function send_listVendorSizeTable(\Voop\vipapis\size\ListVendorSizeTableRequest $request){
 		
 		$this->initInvocation("listVendorSizeTable");
-		$args = new \vipapis\size\VendorSizeMappingService_listVendorSizeTable_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_listVendorSizeTable_args();
 		
 		$args->request = $request;
 		
@@ -320,7 +320,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_listVendorSizeTable(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_listVendorSizeTable_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_listVendorSizeTable_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -330,16 +330,16 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	}
 	
 	
-	public function selectByCondition(\vipapis\size\VendorSizeMappingDo $condition){
+	public function selectByCondition(\Voop\vipapis\size\VendorSizeMappingDo $condition){
 		
 		$this->send_selectByCondition( $condition);
 		return $this->recv_selectByCondition();
 	}
 	
-	public function send_selectByCondition(\vipapis\size\VendorSizeMappingDo $condition){
+	public function send_selectByCondition(\Voop\vipapis\size\VendorSizeMappingDo $condition){
 		
 		$this->initInvocation("selectByCondition");
-		$args = new \vipapis\size\VendorSizeMappingService_selectByCondition_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_selectByCondition_args();
 		
 		$args->condition = $condition;
 		
@@ -348,7 +348,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_selectByCondition(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_selectByCondition_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_selectByCondition_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -367,7 +367,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_unBindingCategory( $category_id){
 		
 		$this->initInvocation("unBindingCategory");
-		$args = new \vipapis\size\VendorSizeMappingService_unBindingCategory_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_unBindingCategory_args();
 		
 		$args->category_id = $category_id;
 		
@@ -376,7 +376,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_unBindingCategory(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_unBindingCategory_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_unBindingCategory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -386,16 +386,16 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	}
 	
 	
-	public function updateSizeTable(\vipapis\size\UpdateSizeTableRequest $req){
+	public function updateSizeTable(\Voop\vipapis\size\UpdateSizeTableRequest $req){
 		
 		$this->send_updateSizeTable( $req);
 		return $this->recv_updateSizeTable();
 	}
 	
-	public function send_updateSizeTable(\vipapis\size\UpdateSizeTableRequest $req){
+	public function send_updateSizeTable(\Voop\vipapis\size\UpdateSizeTableRequest $req){
 		
 		$this->initInvocation("updateSizeTable");
-		$args = new \vipapis\size\VendorSizeMappingService_updateSizeTable_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_updateSizeTable_args();
 		
 		$args->req = $req;
 		
@@ -404,7 +404,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_updateSizeTable(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_updateSizeTable_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_updateSizeTable_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -414,16 +414,16 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	}
 	
 	
-	public function updateSizeTemplate(\vipapis\size\SizeTemplateDo $size_template_do){
+	public function updateSizeTemplate(\Voop\vipapis\size\SizeTemplateDo $size_template_do){
 		
 		$this->send_updateSizeTemplate( $size_template_do);
 		return $this->recv_updateSizeTemplate();
 	}
 	
-	public function send_updateSizeTemplate(\vipapis\size\SizeTemplateDo $size_template_do){
+	public function send_updateSizeTemplate(\Voop\vipapis\size\SizeTemplateDo $size_template_do){
 		
 		$this->initInvocation("updateSizeTemplate");
-		$args = new \vipapis\size\VendorSizeMappingService_updateSizeTemplate_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_updateSizeTemplate_args();
 		
 		$args->size_template_do = $size_template_do;
 		
@@ -432,7 +432,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_updateSizeTemplate(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_updateSizeTemplate_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_updateSizeTemplate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -451,7 +451,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	public function send_updateSizeTemplateDetail( $size_template_id, $size_detail_id){
 		
 		$this->initInvocation("updateSizeTemplateDetail");
-		$args = new \vipapis\size\VendorSizeMappingService_updateSizeTemplateDetail_args();
+		$args = new \Voop\vipapis\size\VendorSizeMappingService_updateSizeTemplateDetail_args();
 		
 		$args->size_template_id = $size_template_id;
 		
@@ -462,7 +462,7 @@ class _VendorSizeMappingServiceClient extends \Osp\Base\OspStub implements \vipa
 	
 	public function recv_updateSizeTemplateDetail(){
 		
-		$result = new \vipapis\size\VendorSizeMappingService_updateSizeTemplateDetail_result();
+		$result = new \Voop\vipapis\size\VendorSizeMappingService_updateSizeTemplateDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -526,7 +526,7 @@ class VendorSizeMappingService_addSizeCategories_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\size\SizeCategoryDo();
+					$elem0 = new \Voop\vipapis\size\SizeCategoryDo();
 					$elem0->read($input);
 					
 					$this->size_category_does[$_size0++] = $elem0;
@@ -559,7 +559,7 @@ class VendorSizeMappingService_addSizeCategories_args {
 			
 			if (!is_array($this->size_category_does)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -568,7 +568,7 @@ class VendorSizeMappingService_addSizeCategories_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -631,7 +631,7 @@ class VendorSizeMappingService_addSizeTable_args {
 		if(true) {
 			
 			
-			$this->req = new \vipapis\size\AddSizeTableRequest();
+			$this->req = new \Voop\vipapis\size\AddSizeTableRequest();
 			$this->req->read($input);
 			
 		}
@@ -652,7 +652,7 @@ class VendorSizeMappingService_addSizeTable_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -997,7 +997,7 @@ class VendorSizeMappingService_findSizeMapping_args {
 		if(true) {
 			
 			
-			$this->req = new \vipapis\size\FindSizeMappingRequest();
+			$this->req = new \Voop\vipapis\size\FindSizeMappingRequest();
 			$this->req->read($input);
 			
 		}
@@ -1018,7 +1018,7 @@ class VendorSizeMappingService_findSizeMapping_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1075,7 +1075,7 @@ class VendorSizeMappingService_findSizeTemplateDetail_args {
 		if(true) {
 			
 			
-			$this->size_template_do = new \vipapis\size\SizeTemplateDo();
+			$this->size_template_do = new \Voop\vipapis\size\SizeTemplateDo();
 			$this->size_template_do->read($input);
 			
 		}
@@ -1098,7 +1098,7 @@ class VendorSizeMappingService_findSizeTemplateDetail_args {
 			
 			if (!is_object($this->size_template_do)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->size_template_do->write($output);
@@ -1203,7 +1203,7 @@ class VendorSizeMappingService_listVendorSizeTable_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\size\ListVendorSizeTableRequest();
+			$this->request = new \Voop\vipapis\size\ListVendorSizeTableRequest();
 			$this->request->read($input);
 			
 		}
@@ -1224,7 +1224,7 @@ class VendorSizeMappingService_listVendorSizeTable_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1281,7 +1281,7 @@ class VendorSizeMappingService_selectByCondition_args {
 		if(true) {
 			
 			
-			$this->condition = new \vipapis\size\VendorSizeMappingDo();
+			$this->condition = new \Voop\vipapis\size\VendorSizeMappingDo();
 			$this->condition->read($input);
 			
 		}
@@ -1302,7 +1302,7 @@ class VendorSizeMappingService_selectByCondition_args {
 		
 		if (!is_object($this->condition)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->condition->write($output);
@@ -1433,7 +1433,7 @@ class VendorSizeMappingService_updateSizeTable_args {
 		if(true) {
 			
 			
-			$this->req = new \vipapis\size\UpdateSizeTableRequest();
+			$this->req = new \Voop\vipapis\size\UpdateSizeTableRequest();
 			$this->req->read($input);
 			
 		}
@@ -1454,7 +1454,7 @@ class VendorSizeMappingService_updateSizeTable_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1511,7 +1511,7 @@ class VendorSizeMappingService_updateSizeTemplate_args {
 		if(true) {
 			
 			
-			$this->size_template_do = new \vipapis\size\SizeTemplateDo();
+			$this->size_template_do = new \Voop\vipapis\size\SizeTemplateDo();
 			$this->size_template_do->read($input);
 			
 		}
@@ -1534,7 +1534,7 @@ class VendorSizeMappingService_updateSizeTemplate_args {
 			
 			if (!is_object($this->size_template_do)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->size_template_do->write($output);
@@ -1655,7 +1655,7 @@ class VendorSizeMappingService_updateSizeTemplateDetail_args {
 		
 		if (!is_array($this->size_detail_id)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1946,7 +1946,7 @@ class VendorSizeMappingService_findAllSizeDetail_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\size\SizeDetailDo();
+					$elem0 = new \Voop\vipapis\size\SizeDetailDo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1979,7 +1979,7 @@ class VendorSizeMappingService_findAllSizeDetail_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1988,7 +1988,7 @@ class VendorSizeMappingService_findAllSizeDetail_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2060,7 +2060,7 @@ class VendorSizeMappingService_findBindedCategory_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\size\SizeCategoryDo();
+					$elem1 = new \Voop\vipapis\size\SizeCategoryDo();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -2093,7 +2093,7 @@ class VendorSizeMappingService_findBindedCategory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2102,7 +2102,7 @@ class VendorSizeMappingService_findBindedCategory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2174,7 +2174,7 @@ class VendorSizeMappingService_findCategoryByTemplateId_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\size\SizeCategoryDo();
+					$elem1 = new \Voop\vipapis\size\SizeCategoryDo();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -2207,7 +2207,7 @@ class VendorSizeMappingService_findCategoryByTemplateId_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2216,7 +2216,7 @@ class VendorSizeMappingService_findCategoryByTemplateId_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2279,7 +2279,7 @@ class VendorSizeMappingService_findSizeMapping_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\size\FindSizeMappingResponse();
+			$this->success = new \Voop\vipapis\size\FindSizeMappingResponse();
 			$this->success->read($input);
 			
 		}
@@ -2302,7 +2302,7 @@ class VendorSizeMappingService_findSizeMapping_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2370,7 +2370,7 @@ class VendorSizeMappingService_findSizeTemplateDetail_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\size\SizeTemplateDo();
+					$elem0 = new \Voop\vipapis\size\SizeTemplateDo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2403,7 +2403,7 @@ class VendorSizeMappingService_findSizeTemplateDetail_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2412,7 +2412,7 @@ class VendorSizeMappingService_findSizeTemplateDetail_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2475,7 +2475,7 @@ class VendorSizeMappingService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -2498,7 +2498,7 @@ class VendorSizeMappingService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2557,7 +2557,7 @@ class VendorSizeMappingService_listVendorSizeTable_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\size\ListVendorSizeTableResponse();
+			$this->success = new \Voop\vipapis\size\ListVendorSizeTableResponse();
 			$this->success->read($input);
 			
 		}
@@ -2580,7 +2580,7 @@ class VendorSizeMappingService_listVendorSizeTable_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2648,7 +2648,7 @@ class VendorSizeMappingService_selectByCondition_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\size\VendorSizeMappingDo();
+					$elem0 = new \Voop\vipapis\size\VendorSizeMappingDo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2681,7 +2681,7 @@ class VendorSizeMappingService_selectByCondition_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2690,7 +2690,7 @@ class VendorSizeMappingService_selectByCondition_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

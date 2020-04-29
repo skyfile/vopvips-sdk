@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\domain\order;
+namespace Voop\com\vip\domain\order;
 
 class RequestResult {
 	
@@ -122,7 +122,7 @@ class RequestResult {
 			
 			$xfer += $output->writeFieldBegin('response_code');
 			
-			$em = new \com\vip\domain\order\ResponseCodeStatus; 
+			$em = new \Voop\com\vip\domain\order\ResponseCodeStatus; 
 			$output->writeString($em::$__names[$this->response_code]);  
 			
 			$xfer += $output->writeFieldEnd();

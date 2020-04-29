@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\hermes\core\health;
+namespace Voop\com\vip\hermes\core\health;
 
 class Status {
 	

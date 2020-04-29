@@ -8,11 +8,11 @@
 *
 */
 
-namespace com\vip\isv\vreceipt;
+namespace Voop\com\vip\isv\vreceipt;
 interface ReceiptContainerServiceIf{
 	
 	
-	public function addReceiptContainer(\com\vip\isv\vreceipt\Revinfo $revinfo);
+	public function addReceiptContainer(\Voop\com\vip\isv\vreceipt\Revinfo $revinfo);
 	
 	public function healthCheck();
 	
@@ -26,16 +26,16 @@ class _ReceiptContainerServiceClient extends \Osp\Base\OspStub implements \com\v
 	}
 	
 	
-	public function addReceiptContainer(\com\vip\isv\vreceipt\Revinfo $revinfo){
+	public function addReceiptContainer(\Voop\com\vip\isv\vreceipt\Revinfo $revinfo){
 		
 		$this->send_addReceiptContainer( $revinfo);
 		return $this->recv_addReceiptContainer();
 	}
 	
-	public function send_addReceiptContainer(\com\vip\isv\vreceipt\Revinfo $revinfo){
+	public function send_addReceiptContainer(\Voop\com\vip\isv\vreceipt\Revinfo $revinfo){
 		
 		$this->initInvocation("addReceiptContainer");
-		$args = new \com\vip\isv\vreceipt\ReceiptContainerService_addReceiptContainer_args();
+		$args = new \Voop\com\vip\isv\vreceipt\ReceiptContainerService_addReceiptContainer_args();
 		
 		$args->revinfo = $revinfo;
 		
@@ -44,7 +44,7 @@ class _ReceiptContainerServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_addReceiptContainer(){
 		
-		$result = new \com\vip\isv\vreceipt\ReceiptContainerService_addReceiptContainer_result();
+		$result = new \Voop\com\vip\isv\vreceipt\ReceiptContainerService_addReceiptContainer_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,14 +63,14 @@ class _ReceiptContainerServiceClient extends \Osp\Base\OspStub implements \com\v
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\isv\vreceipt\ReceiptContainerService_healthCheck_args();
+		$args = new \Voop\com\vip\isv\vreceipt\ReceiptContainerService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\isv\vreceipt\ReceiptContainerService_healthCheck_result();
+		$result = new \Voop\com\vip\isv\vreceipt\ReceiptContainerService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -125,7 +125,7 @@ class ReceiptContainerService_addReceiptContainer_args {
 		if(true) {
 			
 			
-			$this->revinfo = new \com\vip\isv\vreceipt\Revinfo();
+			$this->revinfo = new \Voop\com\vip\isv\vreceipt\Revinfo();
 			$this->revinfo->read($input);
 			
 		}
@@ -146,7 +146,7 @@ class ReceiptContainerService_addReceiptContainer_args {
 		
 		if (!is_object($this->revinfo)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->revinfo->write($output);
@@ -323,7 +323,7 @@ class ReceiptContainerService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -346,7 +346,7 @@ class ReceiptContainerService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

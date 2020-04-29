@@ -8,11 +8,11 @@
 *
 */
 
-namespace vipapis\vipmax\user;
+namespace Voop\vipapis\vipmax\user;
 interface UserServiceIf{
 	
 	
-	public function getUserInfo(\vipapis\vipmax\user\GetUserInfoRequest $getUserInfoRequest);
+	public function getUserInfo(\Voop\vipapis\vipmax\user\GetUserInfoRequest $getUserInfoRequest);
 	
 	public function healthCheck();
 	
@@ -26,16 +26,16 @@ class _UserServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\us
 	}
 	
 	
-	public function getUserInfo(\vipapis\vipmax\user\GetUserInfoRequest $getUserInfoRequest){
+	public function getUserInfo(\Voop\vipapis\vipmax\user\GetUserInfoRequest $getUserInfoRequest){
 		
 		$this->send_getUserInfo( $getUserInfoRequest);
 		return $this->recv_getUserInfo();
 	}
 	
-	public function send_getUserInfo(\vipapis\vipmax\user\GetUserInfoRequest $getUserInfoRequest){
+	public function send_getUserInfo(\Voop\vipapis\vipmax\user\GetUserInfoRequest $getUserInfoRequest){
 		
 		$this->initInvocation("getUserInfo");
-		$args = new \vipapis\vipmax\user\UserService_getUserInfo_args();
+		$args = new \Voop\vipapis\vipmax\user\UserService_getUserInfo_args();
 		
 		$args->getUserInfoRequest = $getUserInfoRequest;
 		
@@ -44,7 +44,7 @@ class _UserServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\us
 	
 	public function recv_getUserInfo(){
 		
-		$result = new \vipapis\vipmax\user\UserService_getUserInfo_result();
+		$result = new \Voop\vipapis\vipmax\user\UserService_getUserInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,14 +63,14 @@ class _UserServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\us
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\vipmax\user\UserService_healthCheck_args();
+		$args = new \Voop\vipapis\vipmax\user\UserService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\vipmax\user\UserService_healthCheck_result();
+		$result = new \Voop\vipapis\vipmax\user\UserService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -125,7 +125,7 @@ class UserService_getUserInfo_args {
 		if(true) {
 			
 			
-			$this->getUserInfoRequest = new \vipapis\vipmax\user\GetUserInfoRequest();
+			$this->getUserInfoRequest = new \Voop\vipapis\vipmax\user\GetUserInfoRequest();
 			$this->getUserInfoRequest->read($input);
 			
 		}
@@ -146,7 +146,7 @@ class UserService_getUserInfo_args {
 		
 		if (!is_object($this->getUserInfoRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->getUserInfoRequest->write($output);
@@ -249,7 +249,7 @@ class UserService_getUserInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipmax\user\GetUserInfoResponse();
+			$this->success = new \Voop\vipapis\vipmax\user\GetUserInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -272,7 +272,7 @@ class UserService_getUserInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -331,7 +331,7 @@ class UserService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -354,7 +354,7 @@ class UserService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

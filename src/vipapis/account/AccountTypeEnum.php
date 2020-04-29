@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\account;
+namespace Voop\vipapis\account;
 final class AccountTypeEnum{
 	
 	

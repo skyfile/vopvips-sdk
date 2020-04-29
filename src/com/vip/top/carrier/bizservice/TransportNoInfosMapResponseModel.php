@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\top\carrier\bizservice;
+namespace Voop\com\vip\top\carrier\bizservice;
 
 class TransportNoInfosMapResponseModel {
 	
@@ -121,7 +121,7 @@ class TransportNoInfosMapResponseModel {
 								
 								$elem1 = null;
 								
-								$elem1 = new \com\vip\top\carrier\bizservice\TransportNoInfo();
+								$elem1 = new \Voop\com\vip\top\carrier\bizservice\TransportNoInfo();
 								$elem1->read($input);
 								
 								$val0[$_size1++] = $elem1;
@@ -191,7 +191,7 @@ class TransportNoInfosMapResponseModel {
 			
 			if (!is_array($this->transportNoInfosMap)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -202,7 +202,7 @@ class TransportNoInfosMapResponseModel {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();
@@ -211,7 +211,7 @@ class TransportNoInfosMapResponseModel {
 					
 					if (!is_object($iter1)) {
 						
-						throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 					}
 					
 					$xfer += $iter1->write($output);

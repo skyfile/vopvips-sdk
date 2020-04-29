@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\delivery;
+namespace Voop\vipapis\marketplace\delivery;
 require_once dirname(__FILE__).'/SovDeliveryService.php';
 class SovDeliveryServiceHelper extends _SovDeliveryServiceClient{
 	

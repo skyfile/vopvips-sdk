@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vei\service;
+namespace Voop\com\vip\fcs\vei\service;
 
 class CanInvoicingByGroupResponseModel {
 	
@@ -81,7 +81,7 @@ class CanInvoicingByGroupResponseModel {
 				
 				$needSkip = false;
 				
-				$this->restulMesg = new \com\vip\fcs\vei\service\BaseRetMsg();
+				$this->restulMesg = new \Voop\com\vip\fcs\vei\service\BaseRetMsg();
 				$this->restulMesg->read($input);
 				
 			}
@@ -102,7 +102,7 @@ class CanInvoicingByGroupResponseModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\fcs\vei\service\CanInvoicingGroupResultModel();
+						$elem0 = new \Voop\com\vip\fcs\vei\service\CanInvoicingGroupResultModel();
 						$elem0->read($input);
 						
 						$this->canInvoicingGroupResModelList[$_size0++] = $elem0;
@@ -124,7 +124,7 @@ class CanInvoicingByGroupResponseModel {
 				
 				$needSkip = false;
 				
-				$this->canInvoicingSummaryResModel = new \com\vip\fcs\vei\service\CanInvoicingGroupResultModel();
+				$this->canInvoicingSummaryResModel = new \Voop\com\vip\fcs\vei\service\CanInvoicingGroupResultModel();
 				$this->canInvoicingSummaryResModel->read($input);
 				
 			}
@@ -156,7 +156,7 @@ class CanInvoicingByGroupResponseModel {
 			
 			if (!is_object($this->restulMesg)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->restulMesg->write($output);
@@ -171,7 +171,7 @@ class CanInvoicingByGroupResponseModel {
 			
 			if (!is_array($this->canInvoicingGroupResModelList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -180,7 +180,7 @@ class CanInvoicingByGroupResponseModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -199,7 +199,7 @@ class CanInvoicingByGroupResponseModel {
 			
 			if (!is_object($this->canInvoicingSummaryResModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->canInvoicingSummaryResModel->write($output);

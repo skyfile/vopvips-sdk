@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\sales;
+namespace Voop\vipapis\sales;
 
 class BarcodeMessage {
 	
@@ -108,7 +108,7 @@ class BarcodeMessage {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

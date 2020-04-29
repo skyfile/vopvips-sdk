@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\dvd;
+namespace Voop\vipapis\dvd;
 
 class AreaWarehouse {
 	
@@ -128,7 +128,7 @@ class AreaWarehouse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

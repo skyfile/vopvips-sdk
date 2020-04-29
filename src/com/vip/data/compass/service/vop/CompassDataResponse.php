@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\data\compass\service\vop;
+namespace Voop\com\vip\data\compass\service\vop;
 
 class CompassDataResponse {
 	
@@ -179,7 +179,7 @@ class CompassDataResponse {
 		
 		if (!is_array($this->data)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -188,7 +188,7 @@ class CompassDataResponse {
 			
 			if (!is_array($iter0)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 
 class GetActualStorageInfoResponse {
 	
@@ -130,7 +130,7 @@ class GetActualStorageInfoResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\delivery\ActualStorageInfo();
+						$elem0 = new \Voop\vipapis\delivery\ActualStorageInfo();
 						$elem0->read($input);
 						
 						$this->actual_storage_list[$_size0++] = $elem0;
@@ -149,7 +149,7 @@ class GetActualStorageInfoResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -199,7 +199,7 @@ class GetActualStorageInfoResponse {
 			
 			if (!is_array($this->actual_storage_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -208,7 +208,7 @@ class GetActualStorageInfoResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

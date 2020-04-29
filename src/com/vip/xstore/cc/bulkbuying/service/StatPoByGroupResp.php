@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying\service;
+namespace Voop\com\vip\xstore\cc\bulkbuying\service;
 
 class StatPoByGroupResp {
 	
@@ -81,7 +81,7 @@ class StatPoByGroupResp {
 				
 				$needSkip = false;
 				
-				$this->pagination = new \com\vip\xstore\cc\bulkbuying\model\PaginationModel();
+				$this->pagination = new \Voop\com\vip\xstore\cc\bulkbuying\model\PaginationModel();
 				$this->pagination->read($input);
 				
 			}
@@ -102,7 +102,7 @@ class StatPoByGroupResp {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\xstore\cc\bulkbuying\service\PoGroup();
+						$elem0 = new \Voop\com\vip\xstore\cc\bulkbuying\service\PoGroup();
 						$elem0->read($input);
 						
 						$this->list[$_size0++] = $elem0;
@@ -173,7 +173,7 @@ class StatPoByGroupResp {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -186,7 +186,7 @@ class StatPoByGroupResp {
 		
 		if (!is_array($this->list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -195,7 +195,7 @@ class StatPoByGroupResp {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -212,7 +212,7 @@ class StatPoByGroupResp {
 			
 			if (!is_array($this->barcodeWithoutTagPrice)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

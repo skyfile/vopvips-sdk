@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vpos\service;
+namespace Voop\com\vip\fcs\vpos\service;
 interface VposTaxOspServiceIf{
 	
 	
@@ -16,7 +16,7 @@ interface VposTaxOspServiceIf{
 	
 	public function queryOrder( $vposOrderNum);
 	
-	public function syncTaxInfo(\com\vip\fcs\vpos\service\TaxInfo $taxInfo);
+	public function syncTaxInfo(\Voop\com\vip\fcs\vpos\service\TaxInfo $taxInfo);
 	
 }
 
@@ -37,14 +37,14 @@ class _VposTaxOspServiceClient extends \Osp\Base\OspStub implements \com\vip\fcs
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\fcs\vpos\service\VposTaxOspService_healthCheck_args();
+		$args = new \Voop\com\vip\fcs\vpos\service\VposTaxOspService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\fcs\vpos\service\VposTaxOspService_healthCheck_result();
+		$result = new \Voop\com\vip\fcs\vpos\service\VposTaxOspService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,7 +63,7 @@ class _VposTaxOspServiceClient extends \Osp\Base\OspStub implements \com\vip\fcs
 	public function send_queryOrder( $vposOrderNum){
 		
 		$this->initInvocation("queryOrder");
-		$args = new \com\vip\fcs\vpos\service\VposTaxOspService_queryOrder_args();
+		$args = new \Voop\com\vip\fcs\vpos\service\VposTaxOspService_queryOrder_args();
 		
 		$args->vposOrderNum = $vposOrderNum;
 		
@@ -72,7 +72,7 @@ class _VposTaxOspServiceClient extends \Osp\Base\OspStub implements \com\vip\fcs
 	
 	public function recv_queryOrder(){
 		
-		$result = new \com\vip\fcs\vpos\service\VposTaxOspService_queryOrder_result();
+		$result = new \Voop\com\vip\fcs\vpos\service\VposTaxOspService_queryOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -82,16 +82,16 @@ class _VposTaxOspServiceClient extends \Osp\Base\OspStub implements \com\vip\fcs
 	}
 	
 	
-	public function syncTaxInfo(\com\vip\fcs\vpos\service\TaxInfo $taxInfo){
+	public function syncTaxInfo(\Voop\com\vip\fcs\vpos\service\TaxInfo $taxInfo){
 		
 		$this->send_syncTaxInfo( $taxInfo);
 		return $this->recv_syncTaxInfo();
 	}
 	
-	public function send_syncTaxInfo(\com\vip\fcs\vpos\service\TaxInfo $taxInfo){
+	public function send_syncTaxInfo(\Voop\com\vip\fcs\vpos\service\TaxInfo $taxInfo){
 		
 		$this->initInvocation("syncTaxInfo");
-		$args = new \com\vip\fcs\vpos\service\VposTaxOspService_syncTaxInfo_args();
+		$args = new \Voop\com\vip\fcs\vpos\service\VposTaxOspService_syncTaxInfo_args();
 		
 		$args->taxInfo = $taxInfo;
 		
@@ -100,7 +100,7 @@ class _VposTaxOspServiceClient extends \Osp\Base\OspStub implements \com\vip\fcs
 	
 	public function recv_syncTaxInfo(){
 		
-		$result = new \com\vip\fcs\vpos\service\VposTaxOspService_syncTaxInfo_result();
+		$result = new \Voop\com\vip\fcs\vpos\service\VposTaxOspService_syncTaxInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -275,7 +275,7 @@ class VposTaxOspService_syncTaxInfo_args {
 		if(true) {
 			
 			
-			$this->taxInfo = new \com\vip\fcs\vpos\service\TaxInfo();
+			$this->taxInfo = new \Voop\com\vip\fcs\vpos\service\TaxInfo();
 			$this->taxInfo->read($input);
 			
 		}
@@ -298,7 +298,7 @@ class VposTaxOspService_syncTaxInfo_args {
 			
 			if (!is_object($this->taxInfo)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->taxInfo->write($output);
@@ -357,7 +357,7 @@ class VposTaxOspService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -380,7 +380,7 @@ class VposTaxOspService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -439,7 +439,7 @@ class VposTaxOspService_queryOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vpos\service\TaxOrderRespone();
+			$this->success = new \Voop\com\vip\fcs\vpos\service\TaxOrderRespone();
 			$this->success->read($input);
 			
 		}
@@ -462,7 +462,7 @@ class VposTaxOspService_queryOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -521,7 +521,7 @@ class VposTaxOspService_syncTaxInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vpos\service\TaxInfoRespone();
+			$this->success = new \Voop\com\vip\fcs\vpos\service\TaxInfoRespone();
 			$this->success->read($input);
 			
 		}
@@ -544,7 +544,7 @@ class VposTaxOspService_syncTaxInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

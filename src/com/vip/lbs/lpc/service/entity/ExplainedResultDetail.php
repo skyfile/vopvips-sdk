@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\lbs\lpc\service\entity;
+namespace Voop\com\vip\lbs\lpc\service\entity;
 
 class ExplainedResultDetail {
 	
@@ -130,7 +130,7 @@ class ExplainedResultDetail {
 			
 			if (!is_array($this->explainedBarcodes)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

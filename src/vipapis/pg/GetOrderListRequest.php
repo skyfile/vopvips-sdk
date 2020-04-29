@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\pg;
+namespace Voop\vipapis\pg;
 
 class GetOrderListRequest {
 	
@@ -128,7 +128,7 @@ class GetOrderListRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

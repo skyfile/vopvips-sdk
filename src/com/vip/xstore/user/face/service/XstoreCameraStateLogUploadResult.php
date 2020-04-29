@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service;
+namespace Voop\com\vip\xstore\user\face\service;
 
 class XstoreCameraStateLogUploadResult {
 	

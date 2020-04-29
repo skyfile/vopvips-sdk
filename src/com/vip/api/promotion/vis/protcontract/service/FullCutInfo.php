@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\protcontract\service;
+namespace Voop\com\vip\api\promotion\vis\protcontract\service;
 
 class FullCutInfo {
 	
@@ -230,7 +230,7 @@ class FullCutInfo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\api\promotion\vis\protcontract\service\BuyAndCutInfo();
+						$elem0 = new \Voop\com\vip\api\promotion\vis\protcontract\service\BuyAndCutInfo();
 						$elem0->read($input);
 						
 						$this->buyCuts[$_size0++] = $elem0;
@@ -302,7 +302,7 @@ class FullCutInfo {
 				
 				$needSkip = false;
 				
-				$this->vendorBearInfo = new \com\vip\api\promotion\vis\protcontract\service\VendorBearInfo();
+				$this->vendorBearInfo = new \Voop\com\vip\api\promotion\vis\protcontract\service\VendorBearInfo();
 				$this->vendorBearInfo->read($input);
 				
 			}
@@ -390,7 +390,7 @@ class FullCutInfo {
 			
 			if (!is_array($this->buyCuts)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -399,7 +399,7 @@ class FullCutInfo {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -463,7 +463,7 @@ class FullCutInfo {
 			
 			if (!is_object($this->vendorBearInfo)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->vendorBearInfo->write($output);

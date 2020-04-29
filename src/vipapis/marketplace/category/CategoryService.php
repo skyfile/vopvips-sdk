@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\category;
+namespace Voop\vipapis\marketplace\category;
 interface CategoryServiceIf{
 	
 	
@@ -35,14 +35,14 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\marke
 	public function send_getStoreCategories(){
 		
 		$this->initInvocation("getStoreCategories");
-		$args = new \vipapis\marketplace\category\CategoryService_getStoreCategories_args();
+		$args = new \Voop\vipapis\marketplace\category\CategoryService_getStoreCategories_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_getStoreCategories(){
 		
-		$result = new \vipapis\marketplace\category\CategoryService_getStoreCategories_result();
+		$result = new \Voop\vipapis\marketplace\category\CategoryService_getStoreCategories_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -61,14 +61,14 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\marke
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\marketplace\category\CategoryService_healthCheck_args();
+		$args = new \Voop\vipapis\marketplace\category\CategoryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\marketplace\category\CategoryService_healthCheck_result();
+		$result = new \Voop\vipapis\marketplace\category\CategoryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -215,7 +215,7 @@ class CategoryService_getStoreCategories_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\category\GetStoreCategoriesResponse();
+			$this->success = new \Voop\vipapis\marketplace\category\GetStoreCategoriesResponse();
 			$this->success->read($input);
 			
 		}
@@ -238,7 +238,7 @@ class CategoryService_getStoreCategories_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -297,7 +297,7 @@ class CategoryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -320,7 +320,7 @@ class CategoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

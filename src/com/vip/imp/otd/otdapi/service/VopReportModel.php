@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\imp\otd\otdapi\service;
+namespace Voop\com\vip\imp\otd\otdapi\service;
 
 class VopReportModel {
 	
@@ -951,7 +951,7 @@ class VopReportModel {
 			
 			$xfer += $output->writeFieldBegin('channel');
 			
-			$em = new \com\vip\imp\otd\otdapi\service\VopDeliveryChannelType; 
+			$em = new \Voop\com\vip\imp\otd\otdapi\service\VopDeliveryChannelType; 
 			$output->writeString($em::$__names[$this->channel]);  
 			
 			$xfer += $output->writeFieldEnd();

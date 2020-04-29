@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\finance;
+namespace Voop\vipapis\finance;
 require_once dirname(__FILE__).'/FastService.php';
 class FastServiceHelper extends _FastServiceClient{
 	

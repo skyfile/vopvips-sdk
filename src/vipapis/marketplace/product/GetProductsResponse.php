@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 
 class GetProductsResponse {
 	
@@ -80,7 +80,7 @@ class GetProductsResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\marketplace\product\Product();
+						$elem0 = new \Voop\vipapis\marketplace\product\Product();
 						$elem0->read($input);
 						
 						$this->products[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class GetProductsResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -132,7 +132,7 @@ class GetProductsResponse {
 			
 			if (!is_array($this->products)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -141,7 +141,7 @@ class GetProductsResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

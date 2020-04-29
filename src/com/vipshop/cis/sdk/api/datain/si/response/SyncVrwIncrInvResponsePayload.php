@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vipshop\cis\sdk\api\datain\si\response;
+namespace Voop\com\vipshop\cis\sdk\api\datain\si\response;
 
 class SyncVrwIncrInvResponsePayload {
 	
@@ -70,7 +70,7 @@ class SyncVrwIncrInvResponsePayload {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vipshop\cis\sdk\api\datain\si\response\SyncVrwIncrInvResponsePayloadItem();
+						$elem0 = new \Voop\com\vipshop\cis\sdk\api\datain\si\response\SyncVrwIncrInvResponsePayloadItem();
 						$elem0->read($input);
 						
 						$this->data_list[$_size0++] = $elem0;
@@ -112,7 +112,7 @@ class SyncVrwIncrInvResponsePayload {
 			
 			if (!is_array($this->data_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -121,7 +121,7 @@ class SyncVrwIncrInvResponsePayload {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\enums;
+namespace Voop\com\vip\pms\data\enums;
 final class PrepayFavType{
 	
 	

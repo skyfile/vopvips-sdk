@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vsizetable;
+namespace Voop\vipapis\vsizetable;
 
 class SizetableConfig {
 	
@@ -148,7 +148,7 @@ class SizetableConfig {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

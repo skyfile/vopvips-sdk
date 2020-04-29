@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vpos\service;
+namespace Voop\com\vip\fcs\vpos\service;
 
 class OrderQueryRequest {
 	

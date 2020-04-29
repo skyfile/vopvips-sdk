@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\request;
+namespace Voop\com\vip\xstore\order\ofc\api\request;
 
 class SyncInfOutletsOrderInfoReq {
 	
@@ -70,7 +70,7 @@ class SyncInfOutletsOrderInfoReq {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\xstore\order\common\pojo\vo\InfOutletsOrderInfoVO();
+						$elem0 = new \Voop\com\vip\xstore\order\common\pojo\vo\InfOutletsOrderInfoVO();
 						$elem0->read($input);
 						
 						$this->infOutletsOrderInfoVOs[$_size0++] = $elem0;
@@ -112,7 +112,7 @@ class SyncInfOutletsOrderInfoReq {
 			
 			if (!is_array($this->infOutletsOrderInfoVOs)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -121,7 +121,7 @@ class SyncInfOutletsOrderInfoReq {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

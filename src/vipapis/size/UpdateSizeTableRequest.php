@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\size;
+namespace Voop\vipapis\size;
 
 class UpdateSizeTableRequest {
 	
@@ -188,7 +188,7 @@ class UpdateSizeTableRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

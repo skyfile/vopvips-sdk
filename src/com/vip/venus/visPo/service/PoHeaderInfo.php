@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\venus\visPo\service;
+namespace Voop\com\vip\venus\visPo\service;
 
 class PoHeaderInfo {
 	

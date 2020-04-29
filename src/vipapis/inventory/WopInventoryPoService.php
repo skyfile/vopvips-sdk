@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\inventory;
+namespace Voop\vipapis\inventory;
 interface WopInventoryPoServiceIf{
 	
 	
@@ -49,7 +49,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_cancelPo( $vendor_id, $systemPoNo){
 		
 		$this->initInvocation("cancelPo");
-		$args = new \vipapis\inventory\WopInventoryPoService_cancelPo_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryPoService_cancelPo_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -60,7 +60,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_cancelPo(){
 		
-		$result = new \vipapis\inventory\WopInventoryPoService_cancelPo_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryPoService_cancelPo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -79,7 +79,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_cleanPoDetail( $vendor_id, $systemPoNo){
 		
 		$this->initInvocation("cleanPoDetail");
-		$args = new \vipapis\inventory\WopInventoryPoService_cleanPoDetail_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryPoService_cleanPoDetail_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -90,7 +90,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_cleanPoDetail(){
 		
-		$result = new \vipapis\inventory\WopInventoryPoService_cleanPoDetail_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryPoService_cleanPoDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -109,7 +109,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_createPo( $vendor_id,\com\vip\domain\inventory\CreatePoRequest $poReq){
 		
 		$this->initInvocation("createPo");
-		$args = new \vipapis\inventory\WopInventoryPoService_createPo_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryPoService_createPo_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -120,7 +120,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_createPo(){
 		
-		$result = new \vipapis\inventory\WopInventoryPoService_createPo_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryPoService_createPo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -139,7 +139,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_editPO( $vendor_id,\com\vip\domain\inventory\EditPoRequest $poReq){
 		
 		$this->initInvocation("editPO");
-		$args = new \vipapis\inventory\WopInventoryPoService_editPO_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryPoService_editPO_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -150,7 +150,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_editPO(){
 		
-		$result = new \vipapis\inventory\WopInventoryPoService_editPO_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryPoService_editPO_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -169,7 +169,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_getPoDetailList( $vendor_id, $systemPoNo, $pageNum, $pageSize){
 		
 		$this->initInvocation("getPoDetailList");
-		$args = new \vipapis\inventory\WopInventoryPoService_getPoDetailList_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryPoService_getPoDetailList_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -184,7 +184,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getPoDetailList(){
 		
-		$result = new \vipapis\inventory\WopInventoryPoService_getPoDetailList_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryPoService_getPoDetailList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -203,14 +203,14 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\inventory\WopInventoryPoService_healthCheck_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryPoService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\inventory\WopInventoryPoService_healthCheck_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryPoService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -229,7 +229,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_importPoDetail( $vendor_id, $systemPoNo, $impSkuList){
 		
 		$this->initInvocation("importPoDetail");
-		$args = new \vipapis\inventory\WopInventoryPoService_importPoDetail_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryPoService_importPoDetail_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -242,7 +242,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_importPoDetail(){
 		
-		$result = new \vipapis\inventory\WopInventoryPoService_importPoDetail_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryPoService_importPoDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -261,7 +261,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_searchPoList( $vendor_id, $pageNum, $pageSize,\com\vip\domain\inventory\SearchPoRequest $searchRequest){
 		
 		$this->initInvocation("searchPoList");
-		$args = new \vipapis\inventory\WopInventoryPoService_searchPoList_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryPoService_searchPoList_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -276,7 +276,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_searchPoList(){
 		
-		$result = new \vipapis\inventory\WopInventoryPoService_searchPoList_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryPoService_searchPoList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -295,7 +295,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_submitPo( $vendor_id, $systemPoNo){
 		
 		$this->initInvocation("submitPo");
-		$args = new \vipapis\inventory\WopInventoryPoService_submitPo_args();
+		$args = new \Voop\vipapis\inventory\WopInventoryPoService_submitPo_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -306,7 +306,7 @@ class _WopInventoryPoServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_submitPo(){
 		
-		$result = new \vipapis\inventory\WopInventoryPoService_submitPo_result();
+		$result = new \Voop\vipapis\inventory\WopInventoryPoService_submitPo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -568,7 +568,7 @@ class WopInventoryPoService_createPo_args {
 		if(true) {
 			
 			
-			$this->poReq = new \com\vip\domain\inventory\CreatePoRequest();
+			$this->poReq = new \Voop\com\vip\domain\inventory\CreatePoRequest();
 			$this->poReq->read($input);
 			
 		}
@@ -594,7 +594,7 @@ class WopInventoryPoService_createPo_args {
 		
 		if (!is_object($this->poReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->poReq->write($output);
@@ -670,7 +670,7 @@ class WopInventoryPoService_editPO_args {
 		if(true) {
 			
 			
-			$this->poReq = new \com\vip\domain\inventory\EditPoRequest();
+			$this->poReq = new \Voop\com\vip\domain\inventory\EditPoRequest();
 			$this->poReq->read($input);
 			
 		}
@@ -696,7 +696,7 @@ class WopInventoryPoService_editPO_args {
 		
 		if (!is_object($this->poReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->poReq->write($output);
@@ -988,7 +988,7 @@ class WopInventoryPoService_importPoDetail_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\domain\inventory\PoSku();
+					$elem0 = new \Voop\com\vip\domain\inventory\PoSku();
 					$elem0->read($input);
 					
 					$this->impSkuList[$_size0++] = $elem0;
@@ -1029,7 +1029,7 @@ class WopInventoryPoService_importPoDetail_args {
 		
 		if (!is_array($this->impSkuList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1038,7 +1038,7 @@ class WopInventoryPoService_importPoDetail_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1156,7 +1156,7 @@ class WopInventoryPoService_searchPoList_args {
 		if(true) {
 			
 			
-			$this->searchRequest = new \com\vip\domain\inventory\SearchPoRequest();
+			$this->searchRequest = new \Voop\com\vip\domain\inventory\SearchPoRequest();
 			$this->searchRequest->read($input);
 			
 		}
@@ -1194,7 +1194,7 @@ class WopInventoryPoService_searchPoList_args {
 			
 			if (!is_object($this->searchRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->searchRequest->write($output);
@@ -1347,7 +1347,7 @@ class WopInventoryPoService_cancelPo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\OpPoResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\OpPoResponse();
 			$this->success->read($input);
 			
 		}
@@ -1370,7 +1370,7 @@ class WopInventoryPoService_cancelPo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1429,7 +1429,7 @@ class WopInventoryPoService_cleanPoDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\OpPoResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\OpPoResponse();
 			$this->success->read($input);
 			
 		}
@@ -1452,7 +1452,7 @@ class WopInventoryPoService_cleanPoDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1511,7 +1511,7 @@ class WopInventoryPoService_createPo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\CreatePoResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\CreatePoResponse();
 			$this->success->read($input);
 			
 		}
@@ -1534,7 +1534,7 @@ class WopInventoryPoService_createPo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1593,7 +1593,7 @@ class WopInventoryPoService_editPO_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\OpPoResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\OpPoResponse();
 			$this->success->read($input);
 			
 		}
@@ -1616,7 +1616,7 @@ class WopInventoryPoService_editPO_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1675,7 +1675,7 @@ class WopInventoryPoService_getPoDetailList_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\GetPoItemResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\GetPoItemResponse();
 			$this->success->read($input);
 			
 		}
@@ -1698,7 +1698,7 @@ class WopInventoryPoService_getPoDetailList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1757,7 +1757,7 @@ class WopInventoryPoService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1780,7 +1780,7 @@ class WopInventoryPoService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1839,7 +1839,7 @@ class WopInventoryPoService_importPoDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\OpPoResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\OpPoResponse();
 			$this->success->read($input);
 			
 		}
@@ -1862,7 +1862,7 @@ class WopInventoryPoService_importPoDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1921,7 +1921,7 @@ class WopInventoryPoService_searchPoList_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\SearchPoResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\SearchPoResponse();
 			$this->success->read($input);
 			
 		}
@@ -1944,7 +1944,7 @@ class WopInventoryPoService_searchPoList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2003,7 +2003,7 @@ class WopInventoryPoService_submitPo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\domain\inventory\OpPoResponse();
+			$this->success = new \Voop\com\vip\domain\inventory\OpPoResponse();
 			$this->success->read($input);
 			
 		}
@@ -2026,7 +2026,7 @@ class WopInventoryPoService_submitPo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

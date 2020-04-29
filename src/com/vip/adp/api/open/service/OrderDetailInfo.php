@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 
 class OrderDetailInfo {
 	
@@ -290,7 +290,7 @@ class OrderDetailInfo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\adp\api\open\service\AfterSaleDetailInfo();
+						$elem0 = new \Voop\com\vip\adp\api\open\service\AfterSaleDetailInfo();
 						$elem0->read($input);
 						
 						$this->afterSaleInfo[$_size0++] = $elem0;
@@ -442,7 +442,7 @@ class OrderDetailInfo {
 			
 			if (!is_array($this->afterSaleInfo)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -451,7 +451,7 @@ class OrderDetailInfo {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

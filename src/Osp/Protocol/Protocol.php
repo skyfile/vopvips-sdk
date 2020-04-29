@@ -1,5 +1,5 @@
 <?php
-namespace Osp\Protocol;
+namespace Voop\Osp\Protocol;
 
 abstract class Protocol {
 	public abstract function reset();

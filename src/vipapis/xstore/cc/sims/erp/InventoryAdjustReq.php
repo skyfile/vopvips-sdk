@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\sims\erp;
+namespace Voop\vipapis\xstore\cc\sims\erp;
 
 class InventoryAdjustReq {
 	
@@ -208,7 +208,7 @@ class InventoryAdjustReq {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

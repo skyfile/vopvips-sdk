@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\data\compass\service\vop;
+namespace Voop\com\vip\data\compass\service\vop;
 require_once dirname(__FILE__).'/CompassDataOspService.php';
 class CompassDataOspServiceHelper extends _CompassDataOspServiceClient{
 	

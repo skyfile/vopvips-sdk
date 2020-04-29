@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vreturn;
+namespace Voop\vipapis\vreturn;
 
 class GetReturnDetailResponse {
 	
@@ -80,7 +80,7 @@ class GetReturnDetailResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\vreturn\ReturnDeliveryInfo();
+						$elem1 = new \Voop\vipapis\vreturn\ReturnDeliveryInfo();
 						$elem1->read($input);
 						
 						$this->returnDeliveryInfos[$_size1++] = $elem1;
@@ -109,7 +109,7 @@ class GetReturnDetailResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -132,7 +132,7 @@ class GetReturnDetailResponse {
 			
 			if (!is_array($this->returnDeliveryInfos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -141,7 +141,7 @@ class GetReturnDetailResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

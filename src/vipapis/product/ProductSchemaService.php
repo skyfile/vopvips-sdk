@@ -8,17 +8,17 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 interface ProductSchemaServiceIf{
 	
 	
-	public function createProductBySchema(\com\vip\isv\schema\CreateProductBySchemaRequest $createProductSchemaRequest);
+	public function createProductBySchema(\Voop\com\vip\isv\schema\CreateProductBySchemaRequest $createProductSchemaRequest);
 	
-	public function getProductSchema(\com\vip\isv\schema\GetProductSchemaRequest $getProductSchemaRequest);
+	public function getProductSchema(\Voop\com\vip\isv\schema\GetProductSchemaRequest $getProductSchemaRequest);
 	
 	public function healthCheck();
 	
-	public function updateProductBySchema(\com\vip\isv\schema\UpdateProductBySchemaRequest $updateProductSchemaRequest);
+	public function updateProductBySchema(\Voop\com\vip\isv\schema\UpdateProductBySchemaRequest $updateProductSchemaRequest);
 	
 }
 
@@ -30,16 +30,16 @@ class _ProductSchemaServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	}
 	
 	
-	public function createProductBySchema(\com\vip\isv\schema\CreateProductBySchemaRequest $createProductSchemaRequest){
+	public function createProductBySchema(\Voop\com\vip\isv\schema\CreateProductBySchemaRequest $createProductSchemaRequest){
 		
 		$this->send_createProductBySchema( $createProductSchemaRequest);
 		return $this->recv_createProductBySchema();
 	}
 	
-	public function send_createProductBySchema(\com\vip\isv\schema\CreateProductBySchemaRequest $createProductSchemaRequest){
+	public function send_createProductBySchema(\Voop\com\vip\isv\schema\CreateProductBySchemaRequest $createProductSchemaRequest){
 		
 		$this->initInvocation("createProductBySchema");
-		$args = new \vipapis\product\ProductSchemaService_createProductBySchema_args();
+		$args = new \Voop\vipapis\product\ProductSchemaService_createProductBySchema_args();
 		
 		$args->createProductSchemaRequest = $createProductSchemaRequest;
 		
@@ -48,7 +48,7 @@ class _ProductSchemaServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	
 	public function recv_createProductBySchema(){
 		
-		$result = new \vipapis\product\ProductSchemaService_createProductBySchema_result();
+		$result = new \Voop\vipapis\product\ProductSchemaService_createProductBySchema_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -58,16 +58,16 @@ class _ProductSchemaServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	}
 	
 	
-	public function getProductSchema(\com\vip\isv\schema\GetProductSchemaRequest $getProductSchemaRequest){
+	public function getProductSchema(\Voop\com\vip\isv\schema\GetProductSchemaRequest $getProductSchemaRequest){
 		
 		$this->send_getProductSchema( $getProductSchemaRequest);
 		return $this->recv_getProductSchema();
 	}
 	
-	public function send_getProductSchema(\com\vip\isv\schema\GetProductSchemaRequest $getProductSchemaRequest){
+	public function send_getProductSchema(\Voop\com\vip\isv\schema\GetProductSchemaRequest $getProductSchemaRequest){
 		
 		$this->initInvocation("getProductSchema");
-		$args = new \vipapis\product\ProductSchemaService_getProductSchema_args();
+		$args = new \Voop\vipapis\product\ProductSchemaService_getProductSchema_args();
 		
 		$args->getProductSchemaRequest = $getProductSchemaRequest;
 		
@@ -76,7 +76,7 @@ class _ProductSchemaServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	
 	public function recv_getProductSchema(){
 		
-		$result = new \vipapis\product\ProductSchemaService_getProductSchema_result();
+		$result = new \Voop\vipapis\product\ProductSchemaService_getProductSchema_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -95,14 +95,14 @@ class _ProductSchemaServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\product\ProductSchemaService_healthCheck_args();
+		$args = new \Voop\vipapis\product\ProductSchemaService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\product\ProductSchemaService_healthCheck_result();
+		$result = new \Voop\vipapis\product\ProductSchemaService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -112,16 +112,16 @@ class _ProductSchemaServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	}
 	
 	
-	public function updateProductBySchema(\com\vip\isv\schema\UpdateProductBySchemaRequest $updateProductSchemaRequest){
+	public function updateProductBySchema(\Voop\com\vip\isv\schema\UpdateProductBySchemaRequest $updateProductSchemaRequest){
 		
 		$this->send_updateProductBySchema( $updateProductSchemaRequest);
 		return $this->recv_updateProductBySchema();
 	}
 	
-	public function send_updateProductBySchema(\com\vip\isv\schema\UpdateProductBySchemaRequest $updateProductSchemaRequest){
+	public function send_updateProductBySchema(\Voop\com\vip\isv\schema\UpdateProductBySchemaRequest $updateProductSchemaRequest){
 		
 		$this->initInvocation("updateProductBySchema");
-		$args = new \vipapis\product\ProductSchemaService_updateProductBySchema_args();
+		$args = new \Voop\vipapis\product\ProductSchemaService_updateProductBySchema_args();
 		
 		$args->updateProductSchemaRequest = $updateProductSchemaRequest;
 		
@@ -130,7 +130,7 @@ class _ProductSchemaServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	
 	public function recv_updateProductBySchema(){
 		
-		$result = new \vipapis\product\ProductSchemaService_updateProductBySchema_result();
+		$result = new \Voop\vipapis\product\ProductSchemaService_updateProductBySchema_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -185,7 +185,7 @@ class ProductSchemaService_createProductBySchema_args {
 		if(true) {
 			
 			
-			$this->createProductSchemaRequest = new \com\vip\isv\schema\CreateProductBySchemaRequest();
+			$this->createProductSchemaRequest = new \Voop\com\vip\isv\schema\CreateProductBySchemaRequest();
 			$this->createProductSchemaRequest->read($input);
 			
 		}
@@ -206,7 +206,7 @@ class ProductSchemaService_createProductBySchema_args {
 		
 		if (!is_object($this->createProductSchemaRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->createProductSchemaRequest->write($output);
@@ -263,7 +263,7 @@ class ProductSchemaService_getProductSchema_args {
 		if(true) {
 			
 			
-			$this->getProductSchemaRequest = new \com\vip\isv\schema\GetProductSchemaRequest();
+			$this->getProductSchemaRequest = new \Voop\com\vip\isv\schema\GetProductSchemaRequest();
 			$this->getProductSchemaRequest->read($input);
 			
 		}
@@ -284,7 +284,7 @@ class ProductSchemaService_getProductSchema_args {
 		
 		if (!is_object($this->getProductSchemaRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->getProductSchemaRequest->write($output);
@@ -387,7 +387,7 @@ class ProductSchemaService_updateProductBySchema_args {
 		if(true) {
 			
 			
-			$this->updateProductSchemaRequest = new \com\vip\isv\schema\UpdateProductBySchemaRequest();
+			$this->updateProductSchemaRequest = new \Voop\com\vip\isv\schema\UpdateProductBySchemaRequest();
 			$this->updateProductSchemaRequest->read($input);
 			
 		}
@@ -408,7 +408,7 @@ class ProductSchemaService_updateProductBySchema_args {
 		
 		if (!is_object($this->updateProductSchemaRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->updateProductSchemaRequest->write($output);
@@ -474,7 +474,7 @@ class ProductSchemaService_createProductBySchema_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\isv\schema\ProductResponse();
+					$elem0 = new \Voop\com\vip\isv\schema\ProductResponse();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -507,7 +507,7 @@ class ProductSchemaService_createProductBySchema_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -516,7 +516,7 @@ class ProductSchemaService_createProductBySchema_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -653,7 +653,7 @@ class ProductSchemaService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -676,7 +676,7 @@ class ProductSchemaService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -735,7 +735,7 @@ class ProductSchemaService_updateProductBySchema_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\isv\schema\ProductResponse();
+			$this->success = new \Voop\com\vip\isv\schema\ProductResponse();
 			$this->success->read($input);
 			
 		}
@@ -758,7 +758,7 @@ class ProductSchemaService_updateProductBySchema_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

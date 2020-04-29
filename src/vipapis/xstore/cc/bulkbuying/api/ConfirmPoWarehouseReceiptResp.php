@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\bulkbuying\api;
+namespace Voop\vipapis\xstore\cc\bulkbuying\api;
 
 class ConfirmPoWarehouseReceiptResp {
 	
@@ -88,7 +88,7 @@ class ConfirmPoWarehouseReceiptResp {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

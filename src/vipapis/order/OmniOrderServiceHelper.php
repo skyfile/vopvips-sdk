@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\order;
+namespace Voop\vipapis\order;
 require_once dirname(__FILE__).'/OmniOrderService.php';
 class OmniOrderServiceHelper extends _OmniOrderServiceClient{
 	

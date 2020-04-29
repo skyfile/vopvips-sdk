@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\ezr;
+namespace Voop\vipapis\ezr;
 require_once dirname(__FILE__).'/ChannelEzrService.php';
 class ChannelEzrServiceHelper extends _ChannelEzrServiceClient{
 	

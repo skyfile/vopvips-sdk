@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\aftersale;
+namespace Voop\com\vip\vop\cup\api\aftersale;
 
 class CreateReturnApplyReq {
 	
@@ -81,7 +81,7 @@ class CreateReturnApplyReq {
 				
 				$needSkip = false;
 				
-				$this->return_apply = new \com\vip\vop\cup\api\aftersale\ReturnApply();
+				$this->return_apply = new \Voop\com\vip\vop\cup\api\aftersale\ReturnApply();
 				$this->return_apply->read($input);
 				
 			}
@@ -102,7 +102,7 @@ class CreateReturnApplyReq {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\cup\api\aftersale\ReturnApplyGood();
+						$elem0 = new \Voop\com\vip\vop\cup\api\aftersale\ReturnApplyGood();
 						$elem0->read($input);
 						
 						$this->return_apply_goods[$_size0++] = $elem0;
@@ -124,7 +124,7 @@ class CreateReturnApplyReq {
 				
 				$needSkip = false;
 				
-				$this->consignee = new \com\vip\vop\cup\api\aftersale\Consignee();
+				$this->consignee = new \Voop\com\vip\vop\cup\api\aftersale\Consignee();
 				$this->consignee->read($input);
 				
 			}
@@ -154,7 +154,7 @@ class CreateReturnApplyReq {
 		
 		if (!is_object($this->return_apply)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->return_apply->write($output);
@@ -165,7 +165,7 @@ class CreateReturnApplyReq {
 		
 		if (!is_array($this->return_apply_goods)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -174,7 +174,7 @@ class CreateReturnApplyReq {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -191,7 +191,7 @@ class CreateReturnApplyReq {
 			
 			if (!is_object($this->consignee)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->consignee->write($output);

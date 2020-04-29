@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service\photorecord;
+namespace Voop\com\vip\xstore\user\face\service\photorecord;
 
 class XstorePhotoRecordResponse {
 	

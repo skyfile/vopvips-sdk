@@ -8,17 +8,17 @@
 *
 */
 
-namespace vipapis\finance;
+namespace Voop\vipapis\finance;
 interface FastServiceIf{
 	
 	
 	public function getBasicPickFinancialData( $vendor_id, $po_no, $pick_no, $page, $limit);
 	
-	public function getDvdFinancialDetail(\vipapis\finance\FinancialDetailRequest $detailRequest);
+	public function getDvdFinancialDetail(\Voop\vipapis\finance\FinancialDetailRequest $detailRequest);
 	
 	public function getOrderFinancialData( $vendor_id, $order_ids);
 	
-	public function getPoFinancialDetail(\vipapis\finance\GetPoFinancialDetailRequest $request);
+	public function getPoFinancialDetail(\Voop\vipapis\finance\GetPoFinancialDetailRequest $request);
 	
 	public function getSaleDetailData( $vendor_id, $po_no, $st_query_time, $et_query_time, $limit, $page);
 	
@@ -43,7 +43,7 @@ class _FastServiceClient extends \Osp\Base\OspStub implements \vipapis\finance\F
 	public function send_getBasicPickFinancialData( $vendor_id, $po_no, $pick_no, $page, $limit){
 		
 		$this->initInvocation("getBasicPickFinancialData");
-		$args = new \vipapis\finance\FastService_getBasicPickFinancialData_args();
+		$args = new \Voop\vipapis\finance\FastService_getBasicPickFinancialData_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -60,7 +60,7 @@ class _FastServiceClient extends \Osp\Base\OspStub implements \vipapis\finance\F
 	
 	public function recv_getBasicPickFinancialData(){
 		
-		$result = new \vipapis\finance\FastService_getBasicPickFinancialData_result();
+		$result = new \Voop\vipapis\finance\FastService_getBasicPickFinancialData_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -70,16 +70,16 @@ class _FastServiceClient extends \Osp\Base\OspStub implements \vipapis\finance\F
 	}
 	
 	
-	public function getDvdFinancialDetail(\vipapis\finance\FinancialDetailRequest $detailRequest){
+	public function getDvdFinancialDetail(\Voop\vipapis\finance\FinancialDetailRequest $detailRequest){
 		
 		$this->send_getDvdFinancialDetail( $detailRequest);
 		return $this->recv_getDvdFinancialDetail();
 	}
 	
-	public function send_getDvdFinancialDetail(\vipapis\finance\FinancialDetailRequest $detailRequest){
+	public function send_getDvdFinancialDetail(\Voop\vipapis\finance\FinancialDetailRequest $detailRequest){
 		
 		$this->initInvocation("getDvdFinancialDetail");
-		$args = new \vipapis\finance\FastService_getDvdFinancialDetail_args();
+		$args = new \Voop\vipapis\finance\FastService_getDvdFinancialDetail_args();
 		
 		$args->detailRequest = $detailRequest;
 		
@@ -88,7 +88,7 @@ class _FastServiceClient extends \Osp\Base\OspStub implements \vipapis\finance\F
 	
 	public function recv_getDvdFinancialDetail(){
 		
-		$result = new \vipapis\finance\FastService_getDvdFinancialDetail_result();
+		$result = new \Voop\vipapis\finance\FastService_getDvdFinancialDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -107,7 +107,7 @@ class _FastServiceClient extends \Osp\Base\OspStub implements \vipapis\finance\F
 	public function send_getOrderFinancialData( $vendor_id, $order_ids){
 		
 		$this->initInvocation("getOrderFinancialData");
-		$args = new \vipapis\finance\FastService_getOrderFinancialData_args();
+		$args = new \Voop\vipapis\finance\FastService_getOrderFinancialData_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -118,7 +118,7 @@ class _FastServiceClient extends \Osp\Base\OspStub implements \vipapis\finance\F
 	
 	public function recv_getOrderFinancialData(){
 		
-		$result = new \vipapis\finance\FastService_getOrderFinancialData_result();
+		$result = new \Voop\vipapis\finance\FastService_getOrderFinancialData_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -128,16 +128,16 @@ class _FastServiceClient extends \Osp\Base\OspStub implements \vipapis\finance\F
 	}
 	
 	
-	public function getPoFinancialDetail(\vipapis\finance\GetPoFinancialDetailRequest $request){
+	public function getPoFinancialDetail(\Voop\vipapis\finance\GetPoFinancialDetailRequest $request){
 		
 		$this->send_getPoFinancialDetail( $request);
 		return $this->recv_getPoFinancialDetail();
 	}
 	
-	public function send_getPoFinancialDetail(\vipapis\finance\GetPoFinancialDetailRequest $request){
+	public function send_getPoFinancialDetail(\Voop\vipapis\finance\GetPoFinancialDetailRequest $request){
 		
 		$this->initInvocation("getPoFinancialDetail");
-		$args = new \vipapis\finance\FastService_getPoFinancialDetail_args();
+		$args = new \Voop\vipapis\finance\FastService_getPoFinancialDetail_args();
 		
 		$args->request = $request;
 		
@@ -146,7 +146,7 @@ class _FastServiceClient extends \Osp\Base\OspStub implements \vipapis\finance\F
 	
 	public function recv_getPoFinancialDetail(){
 		
-		$result = new \vipapis\finance\FastService_getPoFinancialDetail_result();
+		$result = new \Voop\vipapis\finance\FastService_getPoFinancialDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -165,7 +165,7 @@ class _FastServiceClient extends \Osp\Base\OspStub implements \vipapis\finance\F
 	public function send_getSaleDetailData( $vendor_id, $po_no, $st_query_time, $et_query_time, $limit, $page){
 		
 		$this->initInvocation("getSaleDetailData");
-		$args = new \vipapis\finance\FastService_getSaleDetailData_args();
+		$args = new \Voop\vipapis\finance\FastService_getSaleDetailData_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -184,7 +184,7 @@ class _FastServiceClient extends \Osp\Base\OspStub implements \vipapis\finance\F
 	
 	public function recv_getSaleDetailData(){
 		
-		$result = new \vipapis\finance\FastService_getSaleDetailData_result();
+		$result = new \Voop\vipapis\finance\FastService_getSaleDetailData_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -203,14 +203,14 @@ class _FastServiceClient extends \Osp\Base\OspStub implements \vipapis\finance\F
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\finance\FastService_healthCheck_args();
+		$args = new \Voop\vipapis\finance\FastService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\finance\FastService_healthCheck_result();
+		$result = new \Voop\vipapis\finance\FastService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -439,7 +439,7 @@ class FastService_getDvdFinancialDetail_args {
 		if(true) {
 			
 			
-			$this->detailRequest = new \vipapis\finance\FinancialDetailRequest();
+			$this->detailRequest = new \Voop\vipapis\finance\FinancialDetailRequest();
 			$this->detailRequest->read($input);
 			
 		}
@@ -460,7 +460,7 @@ class FastService_getDvdFinancialDetail_args {
 		
 		if (!is_object($this->detailRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->detailRequest->write($output);
@@ -579,7 +579,7 @@ class FastService_getOrderFinancialData_args {
 		
 		if (!is_array($this->order_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -643,7 +643,7 @@ class FastService_getPoFinancialDetail_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\finance\GetPoFinancialDetailRequest();
+			$this->request = new \Voop\vipapis\finance\GetPoFinancialDetailRequest();
 			$this->request->read($input);
 			
 		}
@@ -664,7 +664,7 @@ class FastService_getPoFinancialDetail_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -969,7 +969,7 @@ class FastService_getBasicPickFinancialData_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\finance\GetBasicPickFinancialDataResponse();
+			$this->success = new \Voop\vipapis\finance\GetBasicPickFinancialDataResponse();
 			$this->success->read($input);
 			
 		}
@@ -992,7 +992,7 @@ class FastService_getBasicPickFinancialData_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1051,7 +1051,7 @@ class FastService_getDvdFinancialDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\finance\FinancialDetailResponse();
+			$this->success = new \Voop\vipapis\finance\FinancialDetailResponse();
 			$this->success->read($input);
 			
 		}
@@ -1074,7 +1074,7 @@ class FastService_getDvdFinancialDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1133,7 +1133,7 @@ class FastService_getOrderFinancialData_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\finance\GetOrderFinancialDataResponse();
+			$this->success = new \Voop\vipapis\finance\GetOrderFinancialDataResponse();
 			$this->success->read($input);
 			
 		}
@@ -1156,7 +1156,7 @@ class FastService_getOrderFinancialData_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1215,7 +1215,7 @@ class FastService_getPoFinancialDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\finance\GetPoFinancialDetailResponse();
+			$this->success = new \Voop\vipapis\finance\GetPoFinancialDetailResponse();
 			$this->success->read($input);
 			
 		}
@@ -1238,7 +1238,7 @@ class FastService_getPoFinancialDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1297,7 +1297,7 @@ class FastService_getSaleDetailData_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\finance\GetSaleDetailResponse();
+			$this->success = new \Voop\vipapis\finance\GetSaleDetailResponse();
 			$this->success->read($input);
 			
 		}
@@ -1320,7 +1320,7 @@ class FastService_getSaleDetailData_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1379,7 +1379,7 @@ class FastService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1402,7 +1402,7 @@ class FastService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

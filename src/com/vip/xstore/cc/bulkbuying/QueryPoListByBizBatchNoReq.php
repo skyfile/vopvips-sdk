@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying;
+namespace Voop\com\vip\xstore\cc\bulkbuying;
 
 class QueryPoListByBizBatchNoReq {
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\price\api;
+namespace Voop\vipapis\xstore\cc\price\api;
 
 class ConfirmStoreSalePriceChangeReq {
 	
@@ -107,7 +107,7 @@ class ConfirmStoreSalePriceChangeReq {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -137,7 +137,7 @@ class ConfirmStoreSalePriceChangeReq {
 		
 		if (!is_array($this->sale_price_change_nos)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

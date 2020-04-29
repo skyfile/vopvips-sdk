@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\invoice\api;
+namespace Voop\com\vip\vop\vcloud\invoice\api;
 
 class Refund {
 	
@@ -300,7 +300,7 @@ class Refund {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\vcloud\invoice\api\RefundDetail();
+						$elem0 = new \Voop\com\vip\vop\vcloud\invoice\api\RefundDetail();
 						$elem0->read($input);
 						
 						$this->details[$_size0++] = $elem0;
@@ -352,7 +352,7 @@ class Refund {
 				
 				$needSkip = false;
 				
-				$this->shippingAddress = new \com\vip\vop\vcloud\invoice\api\RefundShippingAddress();
+				$this->shippingAddress = new \Voop\com\vip\vop\vcloud\invoice\api\RefundShippingAddress();
 				$this->shippingAddress->read($input);
 				
 			}
@@ -504,7 +504,7 @@ class Refund {
 			
 			if (!is_array($this->details)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -513,7 +513,7 @@ class Refund {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -555,7 +555,7 @@ class Refund {
 			
 			if (!is_object($this->shippingAddress)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->shippingAddress->write($output);

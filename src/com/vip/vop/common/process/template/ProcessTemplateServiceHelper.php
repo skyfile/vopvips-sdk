@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\common\process\template;
+namespace Voop\com\vip\vop\common\process\template;
 require_once dirname(__FILE__).'/ProcessTemplateService.php';
 class ProcessTemplateServiceHelper extends _ProcessTemplateServiceClient{
 	

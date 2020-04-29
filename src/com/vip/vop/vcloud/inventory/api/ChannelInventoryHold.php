@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\inventory\api;
+namespace Voop\com\vip\vop\vcloud\inventory\api;
 
 class ChannelInventoryHold {
 	
@@ -181,7 +181,7 @@ class ChannelInventoryHold {
 				
 				$needSkip = false;
 				
-				$this->address = new \com\vip\vop\vcloud\warehouse\api\Address();
+				$this->address = new \Voop\com\vip\vop\vcloud\warehouse\api\Address();
 				$this->address->read($input);
 				
 			}
@@ -289,7 +289,7 @@ class ChannelInventoryHold {
 			
 			if (!is_object($this->address)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->address->write($output);

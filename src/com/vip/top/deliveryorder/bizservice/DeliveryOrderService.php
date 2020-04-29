@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\top\deliveryorder\bizservice;
+namespace Voop\com\vip\top\deliveryorder\bizservice;
 interface DeliveryOrderServiceIf{
 	
 	
@@ -38,17 +38,17 @@ interface DeliveryOrderServiceIf{
 	
 	public function matchCarrier( $tmsOrderIds, $warehouse);
 	
-	public function modifyTmsOrderInfo(\com\vip\top\deliveryorder\bizservice\TmsOrderModifyRequest $tmsOrderModifyRequest, $warehouse);
+	public function modifyTmsOrderInfo(\Voop\com\vip\top\deliveryorder\bizservice\TmsOrderModifyRequest $tmsOrderModifyRequest, $warehouse);
 	
 	public function processOdsMessage( $orderMsg);
 	
 	public function processOdsOrderStatus( $orderMsg);
 	
-	public function selectPageByReceiverPhone(\com\vip\top\deliveryorder\service\TmsOrderModel $tmsOrderModel, $pageIndex, $pageSize);
+	public function selectPageByReceiverPhone(\Voop\com\vip\top\deliveryorder\service\TmsOrderModel $tmsOrderModel, $pageIndex, $pageSize);
 	
 	public function updatePackageNumFlag( $orderSn, $packageNumFlag, $departdatabase);
 	
-	public function updateTmsOrderInfo(\com\vip\top\deliveryorder\bizservice\TmsOrderUpdateRequest $tmsOrderUpdateRequest, $warehouse);
+	public function updateTmsOrderInfo(\Voop\com\vip\top\deliveryorder\bizservice\TmsOrderUpdateRequest $tmsOrderUpdateRequest, $warehouse);
 	
 }
 
@@ -69,7 +69,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_findDeliveryTracks( $transportNo){
 		
 		$this->initInvocation("findDeliveryTracks");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findDeliveryTracks_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findDeliveryTracks_args();
 		
 		$args->transportNo = $transportNo;
 		
@@ -78,7 +78,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_findDeliveryTracks(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findDeliveryTracks_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findDeliveryTracks_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -97,7 +97,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_findDeliveryTracksToStorage( $transportNo, $storage){
 		
 		$this->initInvocation("findDeliveryTracksToStorage");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findDeliveryTracksToStorage_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findDeliveryTracksToStorage_args();
 		
 		$args->transportNo = $transportNo;
 		
@@ -108,7 +108,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_findDeliveryTracksToStorage(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findDeliveryTracksToStorage_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findDeliveryTracksToStorage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -127,7 +127,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_findListDeliveryTracks( $transportNoList){
 		
 		$this->initInvocation("findListDeliveryTracks");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findListDeliveryTracks_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findListDeliveryTracks_args();
 		
 		$args->transportNoList = $transportNoList;
 		
@@ -136,7 +136,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_findListDeliveryTracks(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findListDeliveryTracks_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findListDeliveryTracks_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -155,7 +155,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_findOrderSnByTransportNo( $orderType, $transportNoList, $storage){
 		
 		$this->initInvocation("findOrderSnByTransportNo");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findOrderSnByTransportNo_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findOrderSnByTransportNo_args();
 		
 		$args->orderType = $orderType;
 		
@@ -168,7 +168,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_findOrderSnByTransportNo(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findOrderSnByTransportNo_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findOrderSnByTransportNo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -187,7 +187,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_findTmsOrderByReceiverPhone( $receiverPhone, $pageIndex, $pageSize){
 		
 		$this->initInvocation("findTmsOrderByReceiverPhone");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findTmsOrderByReceiverPhone_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findTmsOrderByReceiverPhone_args();
 		
 		$args->receiverPhone = $receiverPhone;
 		
@@ -200,7 +200,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_findTmsOrderByReceiverPhone(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findTmsOrderByReceiverPhone_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findTmsOrderByReceiverPhone_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -219,7 +219,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_findTmsOrderByReceiverPhoneToStorage( $receiverPhone, $pageIndex, $pageSize, $storage){
 		
 		$this->initInvocation("findTmsOrderByReceiverPhoneToStorage");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findTmsOrderByReceiverPhoneToStorage_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findTmsOrderByReceiverPhoneToStorage_args();
 		
 		$args->receiverPhone = $receiverPhone;
 		
@@ -234,7 +234,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_findTmsOrderByReceiverPhoneToStorage(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findTmsOrderByReceiverPhoneToStorage_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_findTmsOrderByReceiverPhoneToStorage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -253,7 +253,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_getTmsOrderByOrderSnAndWareHouse( $orderSn, $wareHouse, $pageIndex, $pageSize){
 		
 		$this->initInvocation("getTmsOrderByOrderSnAndWareHouse");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByOrderSnAndWareHouse_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByOrderSnAndWareHouse_args();
 		
 		$args->orderSn = $orderSn;
 		
@@ -268,7 +268,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_getTmsOrderByOrderSnAndWareHouse(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByOrderSnAndWareHouse_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByOrderSnAndWareHouse_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -287,7 +287,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_getTmsOrderByTransportNo( $transportNo, $pageIndex, $pageSize){
 		
 		$this->initInvocation("getTmsOrderByTransportNo");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNo_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNo_args();
 		
 		$args->transportNo = $transportNo;
 		
@@ -300,7 +300,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_getTmsOrderByTransportNo(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNo_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -319,7 +319,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_getTmsOrderByTransportNoAndWareHouse( $transportNo, $wareHouse, $pageIndex, $pageSize){
 		
 		$this->initInvocation("getTmsOrderByTransportNoAndWareHouse");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNoAndWareHouse_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNoAndWareHouse_args();
 		
 		$args->transportNo = $transportNo;
 		
@@ -334,7 +334,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_getTmsOrderByTransportNoAndWareHouse(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNoAndWareHouse_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNoAndWareHouse_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -353,7 +353,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_getTmsOrderByTransportNoToStorage( $transportNo, $pageIndex, $pageSize, $storage){
 		
 		$this->initInvocation("getTmsOrderByTransportNoToStorage");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNoToStorage_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNoToStorage_args();
 		
 		$args->transportNo = $transportNo;
 		
@@ -368,7 +368,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_getTmsOrderByTransportNoToStorage(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNoToStorage_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTmsOrderByTransportNoToStorage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -387,7 +387,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_getTransportNoByOrderSn( $orderSn, $warehouse){
 		
 		$this->initInvocation("getTransportNoByOrderSn");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTransportNoByOrderSn_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTransportNoByOrderSn_args();
 		
 		$args->orderSn = $orderSn;
 		
@@ -398,7 +398,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_getTransportNoByOrderSn(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTransportNoByOrderSn_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_getTransportNoByOrderSn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -417,14 +417,14 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_healthCheck_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_healthCheck_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -443,7 +443,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_matchCarrier( $tmsOrderIds, $warehouse){
 		
 		$this->initInvocation("matchCarrier");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_matchCarrier_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_matchCarrier_args();
 		
 		$args->tmsOrderIds = $tmsOrderIds;
 		
@@ -454,22 +454,22 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_matchCarrier(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_matchCarrier_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_matchCarrier_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function modifyTmsOrderInfo(\com\vip\top\deliveryorder\bizservice\TmsOrderModifyRequest $tmsOrderModifyRequest, $warehouse){
+	public function modifyTmsOrderInfo(\Voop\com\vip\top\deliveryorder\bizservice\TmsOrderModifyRequest $tmsOrderModifyRequest, $warehouse){
 		
 		$this->send_modifyTmsOrderInfo( $tmsOrderModifyRequest, $warehouse);
 		return $this->recv_modifyTmsOrderInfo();
 	}
 	
-	public function send_modifyTmsOrderInfo(\com\vip\top\deliveryorder\bizservice\TmsOrderModifyRequest $tmsOrderModifyRequest, $warehouse){
+	public function send_modifyTmsOrderInfo(\Voop\com\vip\top\deliveryorder\bizservice\TmsOrderModifyRequest $tmsOrderModifyRequest, $warehouse){
 		
 		$this->initInvocation("modifyTmsOrderInfo");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_modifyTmsOrderInfo_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_modifyTmsOrderInfo_args();
 		
 		$args->tmsOrderModifyRequest = $tmsOrderModifyRequest;
 		
@@ -480,7 +480,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_modifyTmsOrderInfo(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_modifyTmsOrderInfo_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_modifyTmsOrderInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -499,7 +499,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_processOdsMessage( $orderMsg){
 		
 		$this->initInvocation("processOdsMessage");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_processOdsMessage_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_processOdsMessage_args();
 		
 		$args->orderMsg = $orderMsg;
 		
@@ -508,7 +508,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_processOdsMessage(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_processOdsMessage_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_processOdsMessage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -527,7 +527,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_processOdsOrderStatus( $orderMsg){
 		
 		$this->initInvocation("processOdsOrderStatus");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_processOdsOrderStatus_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_processOdsOrderStatus_args();
 		
 		$args->orderMsg = $orderMsg;
 		
@@ -536,22 +536,22 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_processOdsOrderStatus(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_processOdsOrderStatus_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_processOdsOrderStatus_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function selectPageByReceiverPhone(\com\vip\top\deliveryorder\service\TmsOrderModel $tmsOrderModel, $pageIndex, $pageSize){
+	public function selectPageByReceiverPhone(\Voop\com\vip\top\deliveryorder\service\TmsOrderModel $tmsOrderModel, $pageIndex, $pageSize){
 		
 		$this->send_selectPageByReceiverPhone( $tmsOrderModel, $pageIndex, $pageSize);
 		return $this->recv_selectPageByReceiverPhone();
 	}
 	
-	public function send_selectPageByReceiverPhone(\com\vip\top\deliveryorder\service\TmsOrderModel $tmsOrderModel, $pageIndex, $pageSize){
+	public function send_selectPageByReceiverPhone(\Voop\com\vip\top\deliveryorder\service\TmsOrderModel $tmsOrderModel, $pageIndex, $pageSize){
 		
 		$this->initInvocation("selectPageByReceiverPhone");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_selectPageByReceiverPhone_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_selectPageByReceiverPhone_args();
 		
 		$args->tmsOrderModel = $tmsOrderModel;
 		
@@ -564,7 +564,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_selectPageByReceiverPhone(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_selectPageByReceiverPhone_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_selectPageByReceiverPhone_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -583,7 +583,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	public function send_updatePackageNumFlag( $orderSn, $packageNumFlag, $departdatabase){
 		
 		$this->initInvocation("updatePackageNumFlag");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_updatePackageNumFlag_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_updatePackageNumFlag_args();
 		
 		$args->orderSn = $orderSn;
 		
@@ -596,22 +596,22 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_updatePackageNumFlag(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_updatePackageNumFlag_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_updatePackageNumFlag_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function updateTmsOrderInfo(\com\vip\top\deliveryorder\bizservice\TmsOrderUpdateRequest $tmsOrderUpdateRequest, $warehouse){
+	public function updateTmsOrderInfo(\Voop\com\vip\top\deliveryorder\bizservice\TmsOrderUpdateRequest $tmsOrderUpdateRequest, $warehouse){
 		
 		$this->send_updateTmsOrderInfo( $tmsOrderUpdateRequest, $warehouse);
 		return $this->recv_updateTmsOrderInfo();
 	}
 	
-	public function send_updateTmsOrderInfo(\com\vip\top\deliveryorder\bizservice\TmsOrderUpdateRequest $tmsOrderUpdateRequest, $warehouse){
+	public function send_updateTmsOrderInfo(\Voop\com\vip\top\deliveryorder\bizservice\TmsOrderUpdateRequest $tmsOrderUpdateRequest, $warehouse){
 		
 		$this->initInvocation("updateTmsOrderInfo");
-		$args = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_updateTmsOrderInfo_args();
+		$args = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_updateTmsOrderInfo_args();
 		
 		$args->tmsOrderUpdateRequest = $tmsOrderUpdateRequest;
 		
@@ -622,7 +622,7 @@ class _DeliveryOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	
 	public function recv_updateTmsOrderInfo(){
 		
-		$result = new \com\vip\top\deliveryorder\bizservice\DeliveryOrderService_updateTmsOrderInfo_result();
+		$result = new \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderService_updateTmsOrderInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -893,7 +893,7 @@ class DeliveryOrderService_findListDeliveryTracks_args {
 			
 			if (!is_array($this->transportNoList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1046,7 +1046,7 @@ class DeliveryOrderService_findOrderSnByTransportNo_args {
 			
 			if (!is_array($this->transportNoList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2172,7 +2172,7 @@ class DeliveryOrderService_matchCarrier_args {
 			
 			if (!is_array($this->tmsOrderIds)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2257,7 +2257,7 @@ class DeliveryOrderService_modifyTmsOrderInfo_args {
 		if(true) {
 			
 			
-			$this->tmsOrderModifyRequest = new \com\vip\top\deliveryorder\bizservice\TmsOrderModifyRequest();
+			$this->tmsOrderModifyRequest = new \Voop\com\vip\top\deliveryorder\bizservice\TmsOrderModifyRequest();
 			$this->tmsOrderModifyRequest->read($input);
 			
 		}
@@ -2289,7 +2289,7 @@ class DeliveryOrderService_modifyTmsOrderInfo_args {
 			
 			if (!is_object($this->tmsOrderModifyRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->tmsOrderModifyRequest->write($output);
@@ -2521,7 +2521,7 @@ class DeliveryOrderService_selectPageByReceiverPhone_args {
 		if(true) {
 			
 			
-			$this->tmsOrderModel = new \com\vip\top\deliveryorder\service\TmsOrderModel();
+			$this->tmsOrderModel = new \Voop\com\vip\top\deliveryorder\service\TmsOrderModel();
 			$this->tmsOrderModel->read($input);
 			
 		}
@@ -2562,7 +2562,7 @@ class DeliveryOrderService_selectPageByReceiverPhone_args {
 			
 			if (!is_object($this->tmsOrderModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->tmsOrderModel->write($output);
@@ -2771,7 +2771,7 @@ class DeliveryOrderService_updateTmsOrderInfo_args {
 		if(true) {
 			
 			
-			$this->tmsOrderUpdateRequest = new \com\vip\top\deliveryorder\bizservice\TmsOrderUpdateRequest();
+			$this->tmsOrderUpdateRequest = new \Voop\com\vip\top\deliveryorder\bizservice\TmsOrderUpdateRequest();
 			$this->tmsOrderUpdateRequest->read($input);
 			
 		}
@@ -2803,7 +2803,7 @@ class DeliveryOrderService_updateTmsOrderInfo_args {
 			
 			if (!is_object($this->tmsOrderUpdateRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->tmsOrderUpdateRequest->write($output);
@@ -2880,7 +2880,7 @@ class DeliveryOrderService_findDeliveryTracks_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\top\deliveryorder\service\TmsOrderTrackModel();
+					$elem0 = new \Voop\com\vip\top\deliveryorder\service\TmsOrderTrackModel();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2913,7 +2913,7 @@ class DeliveryOrderService_findDeliveryTracks_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2922,7 +2922,7 @@ class DeliveryOrderService_findDeliveryTracks_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2994,7 +2994,7 @@ class DeliveryOrderService_findDeliveryTracksToStorage_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\top\deliveryorder\service\TmsOrderTrackModel();
+					$elem1 = new \Voop\com\vip\top\deliveryorder\service\TmsOrderTrackModel();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -3027,7 +3027,7 @@ class DeliveryOrderService_findDeliveryTracksToStorage_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3036,7 +3036,7 @@ class DeliveryOrderService_findDeliveryTracksToStorage_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3119,7 +3119,7 @@ class DeliveryOrderService_findListDeliveryTracks_result {
 							
 							$elem2 = null;
 							
-							$elem2 = new \com\vip\top\deliveryorder\service\TmsOrderTrackModel();
+							$elem2 = new \Voop\com\vip\top\deliveryorder\service\TmsOrderTrackModel();
 							$elem2->read($input);
 							
 							$val1[$_size2++] = $elem2;
@@ -3162,7 +3162,7 @@ class DeliveryOrderService_findListDeliveryTracks_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -3173,7 +3173,7 @@ class DeliveryOrderService_findListDeliveryTracks_result {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();
@@ -3182,7 +3182,7 @@ class DeliveryOrderService_findListDeliveryTracks_result {
 					
 					if (!is_object($iter1)) {
 						
-						throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 					}
 					
 					$xfer += $iter1->write($output);
@@ -3291,7 +3291,7 @@ class DeliveryOrderService_findOrderSnByTransportNo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -3359,7 +3359,7 @@ class DeliveryOrderService_findTmsOrderByReceiverPhone_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
+			$this->success = new \Voop\com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
 			$this->success->read($input);
 			
 		}
@@ -3382,7 +3382,7 @@ class DeliveryOrderService_findTmsOrderByReceiverPhone_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3441,7 +3441,7 @@ class DeliveryOrderService_findTmsOrderByReceiverPhoneToStorage_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
+			$this->success = new \Voop\com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
 			$this->success->read($input);
 			
 		}
@@ -3464,7 +3464,7 @@ class DeliveryOrderService_findTmsOrderByReceiverPhoneToStorage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3523,7 +3523,7 @@ class DeliveryOrderService_getTmsOrderByOrderSnAndWareHouse_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
+			$this->success = new \Voop\com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
 			$this->success->read($input);
 			
 		}
@@ -3546,7 +3546,7 @@ class DeliveryOrderService_getTmsOrderByOrderSnAndWareHouse_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3605,7 +3605,7 @@ class DeliveryOrderService_getTmsOrderByTransportNo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
+			$this->success = new \Voop\com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
 			$this->success->read($input);
 			
 		}
@@ -3628,7 +3628,7 @@ class DeliveryOrderService_getTmsOrderByTransportNo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3687,7 +3687,7 @@ class DeliveryOrderService_getTmsOrderByTransportNoAndWareHouse_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
+			$this->success = new \Voop\com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
 			$this->success->read($input);
 			
 		}
@@ -3710,7 +3710,7 @@ class DeliveryOrderService_getTmsOrderByTransportNoAndWareHouse_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3769,7 +3769,7 @@ class DeliveryOrderService_getTmsOrderByTransportNoToStorage_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
+			$this->success = new \Voop\com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
 			$this->success->read($input);
 			
 		}
@@ -3792,7 +3792,7 @@ class DeliveryOrderService_getTmsOrderByTransportNoToStorage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3925,7 +3925,7 @@ class DeliveryOrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -3948,7 +3948,7 @@ class DeliveryOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4056,7 +4056,7 @@ class DeliveryOrderService_modifyTmsOrderInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\deliveryorder\bizservice\TmsOrderModifyResponse();
+			$this->success = new \Voop\com\vip\top\deliveryorder\bizservice\TmsOrderModifyResponse();
 			$this->success->read($input);
 			
 		}
@@ -4079,7 +4079,7 @@ class DeliveryOrderService_modifyTmsOrderInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4138,7 +4138,7 @@ class DeliveryOrderService_processOdsMessage_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\deliveryorder\service\ProcessResult();
+			$this->success = new \Voop\com\vip\top\deliveryorder\service\ProcessResult();
 			$this->success->read($input);
 			
 		}
@@ -4161,7 +4161,7 @@ class DeliveryOrderService_processOdsMessage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4269,7 +4269,7 @@ class DeliveryOrderService_selectPageByReceiverPhone_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
+			$this->success = new \Voop\com\vip\top\deliveryorder\bizservice\TmsOrderPageModel();
 			$this->success->read($input);
 			
 		}
@@ -4292,7 +4292,7 @@ class DeliveryOrderService_selectPageByReceiverPhone_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4400,7 +4400,7 @@ class DeliveryOrderService_updateTmsOrderInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\deliveryorder\bizservice\TmsOrderUpdateResponse();
+			$this->success = new \Voop\com\vip\top\deliveryorder\bizservice\TmsOrderUpdateResponse();
 			$this->success->read($input);
 			
 		}
@@ -4423,7 +4423,7 @@ class DeliveryOrderService_updateTmsOrderInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

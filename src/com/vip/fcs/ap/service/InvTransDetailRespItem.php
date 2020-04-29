@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\ap\service;
+namespace Voop\com\vip\fcs\ap\service;
 
 class InvTransDetailRespItem {
 	
@@ -131,7 +131,7 @@ class InvTransDetailRespItem {
 				
 				$needSkip = false;
 				
-				$this->invTransDetailReqItem = new \com\vip\fcs\ap\service\InvTransDetailReqItem();
+				$this->invTransDetailReqItem = new \Voop\com\vip\fcs\ap\service\InvTransDetailReqItem();
 				$this->invTransDetailReqItem->read($input);
 				
 			}
@@ -152,7 +152,7 @@ class InvTransDetailRespItem {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\fcs\ap\service\InvTransDetail();
+						$elem0 = new \Voop\com\vip\fcs\ap\service\InvTransDetail();
 						$elem0->read($input);
 						
 						$this->invTransDetails[$_size0++] = $elem0;
@@ -221,7 +221,7 @@ class InvTransDetailRespItem {
 			
 			if (!is_object($this->invTransDetailReqItem)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->invTransDetailReqItem->write($output);
@@ -236,7 +236,7 @@ class InvTransDetailRespItem {
 			
 			if (!is_array($this->invTransDetails)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -245,7 +245,7 @@ class InvTransDetailRespItem {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

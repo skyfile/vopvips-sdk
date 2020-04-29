@@ -8,15 +8,15 @@
 *
 */
 
-namespace com\vip\vop\common\process\template;
+namespace Voop\com\vip\vop\common\process\template;
 interface ProcessTemplateServiceIf{
 	
 	
-	public function createProcessTemplate(\com\vip\vop\common\process\template\CreateProcessTemplateReq $createProcessTemplateReq);
+	public function createProcessTemplate(\Voop\com\vip\vop\common\process\template\CreateProcessTemplateReq $createProcessTemplateReq);
 	
 	public function healthCheck();
 	
-	public function updateProcessTemplate(\com\vip\vop\common\process\template\UpdateProcessTemplateReq $updateProcessTemplateReq);
+	public function updateProcessTemplate(\Voop\com\vip\vop\common\process\template\UpdateProcessTemplateReq $updateProcessTemplateReq);
 	
 }
 
@@ -28,16 +28,16 @@ class _ProcessTemplateServiceClient extends \Osp\Base\OspStub implements \com\vi
 	}
 	
 	
-	public function createProcessTemplate(\com\vip\vop\common\process\template\CreateProcessTemplateReq $createProcessTemplateReq){
+	public function createProcessTemplate(\Voop\com\vip\vop\common\process\template\CreateProcessTemplateReq $createProcessTemplateReq){
 		
 		$this->send_createProcessTemplate( $createProcessTemplateReq);
 		return $this->recv_createProcessTemplate();
 	}
 	
-	public function send_createProcessTemplate(\com\vip\vop\common\process\template\CreateProcessTemplateReq $createProcessTemplateReq){
+	public function send_createProcessTemplate(\Voop\com\vip\vop\common\process\template\CreateProcessTemplateReq $createProcessTemplateReq){
 		
 		$this->initInvocation("createProcessTemplate");
-		$args = new \com\vip\vop\common\process\template\ProcessTemplateService_createProcessTemplate_args();
+		$args = new \Voop\com\vip\vop\common\process\template\ProcessTemplateService_createProcessTemplate_args();
 		
 		$args->createProcessTemplateReq = $createProcessTemplateReq;
 		
@@ -46,7 +46,7 @@ class _ProcessTemplateServiceClient extends \Osp\Base\OspStub implements \com\vi
 	
 	public function recv_createProcessTemplate(){
 		
-		$result = new \com\vip\vop\common\process\template\ProcessTemplateService_createProcessTemplate_result();
+		$result = new \Voop\com\vip\vop\common\process\template\ProcessTemplateService_createProcessTemplate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -65,14 +65,14 @@ class _ProcessTemplateServiceClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\common\process\template\ProcessTemplateService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\common\process\template\ProcessTemplateService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\common\process\template\ProcessTemplateService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\common\process\template\ProcessTemplateService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -82,16 +82,16 @@ class _ProcessTemplateServiceClient extends \Osp\Base\OspStub implements \com\vi
 	}
 	
 	
-	public function updateProcessTemplate(\com\vip\vop\common\process\template\UpdateProcessTemplateReq $updateProcessTemplateReq){
+	public function updateProcessTemplate(\Voop\com\vip\vop\common\process\template\UpdateProcessTemplateReq $updateProcessTemplateReq){
 		
 		$this->send_updateProcessTemplate( $updateProcessTemplateReq);
 		return $this->recv_updateProcessTemplate();
 	}
 	
-	public function send_updateProcessTemplate(\com\vip\vop\common\process\template\UpdateProcessTemplateReq $updateProcessTemplateReq){
+	public function send_updateProcessTemplate(\Voop\com\vip\vop\common\process\template\UpdateProcessTemplateReq $updateProcessTemplateReq){
 		
 		$this->initInvocation("updateProcessTemplate");
-		$args = new \com\vip\vop\common\process\template\ProcessTemplateService_updateProcessTemplate_args();
+		$args = new \Voop\com\vip\vop\common\process\template\ProcessTemplateService_updateProcessTemplate_args();
 		
 		$args->updateProcessTemplateReq = $updateProcessTemplateReq;
 		
@@ -100,7 +100,7 @@ class _ProcessTemplateServiceClient extends \Osp\Base\OspStub implements \com\vi
 	
 	public function recv_updateProcessTemplate(){
 		
-		$result = new \com\vip\vop\common\process\template\ProcessTemplateService_updateProcessTemplate_result();
+		$result = new \Voop\com\vip\vop\common\process\template\ProcessTemplateService_updateProcessTemplate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -155,7 +155,7 @@ class ProcessTemplateService_createProcessTemplate_args {
 		if(true) {
 			
 			
-			$this->createProcessTemplateReq = new \com\vip\vop\common\process\template\CreateProcessTemplateReq();
+			$this->createProcessTemplateReq = new \Voop\com\vip\vop\common\process\template\CreateProcessTemplateReq();
 			$this->createProcessTemplateReq->read($input);
 			
 		}
@@ -178,7 +178,7 @@ class ProcessTemplateService_createProcessTemplate_args {
 			
 			if (!is_object($this->createProcessTemplateReq)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->createProcessTemplateReq->write($output);
@@ -283,7 +283,7 @@ class ProcessTemplateService_updateProcessTemplate_args {
 		if(true) {
 			
 			
-			$this->updateProcessTemplateReq = new \com\vip\vop\common\process\template\UpdateProcessTemplateReq();
+			$this->updateProcessTemplateReq = new \Voop\com\vip\vop\common\process\template\UpdateProcessTemplateReq();
 			$this->updateProcessTemplateReq->read($input);
 			
 		}
@@ -306,7 +306,7 @@ class ProcessTemplateService_updateProcessTemplate_args {
 			
 			if (!is_object($this->updateProcessTemplateReq)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->updateProcessTemplateReq->write($output);
@@ -365,7 +365,7 @@ class ProcessTemplateService_createProcessTemplate_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\common\process\template\CreateProcessTemplateResp();
+			$this->success = new \Voop\com\vip\vop\common\process\template\CreateProcessTemplateResp();
 			$this->success->read($input);
 			
 		}
@@ -388,7 +388,7 @@ class ProcessTemplateService_createProcessTemplate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -447,7 +447,7 @@ class ProcessTemplateService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -470,7 +470,7 @@ class ProcessTemplateService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -529,7 +529,7 @@ class ProcessTemplateService_updateProcessTemplate_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\common\process\template\UpdateProcessTemplateResp();
+			$this->success = new \Voop\com\vip\vop\common\process\template\UpdateProcessTemplateResp();
 			$this->success->read($input);
 			
 		}
@@ -552,7 +552,7 @@ class ProcessTemplateService_updateProcessTemplate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

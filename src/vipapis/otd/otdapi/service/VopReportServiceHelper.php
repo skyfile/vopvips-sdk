@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\otd\otdapi\service;
+namespace Voop\vipapis\otd\otdapi\service;
 require_once dirname(__FILE__).'/VopReportService.php';
 class VopReportServiceHelper extends _VopReportServiceClient{
 	

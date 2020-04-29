@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\response;
+namespace Voop\com\vip\xstore\order\ofc\api\response;
 
 class GetInfErpOrderListResp {
 	
@@ -71,7 +71,7 @@ class GetInfErpOrderListResp {
 				
 				$needSkip = false;
 				
-				$this->result = new \com\vip\xstore\order\common\pojo\vo\Result();
+				$this->result = new \Voop\com\vip\xstore\order\common\pojo\vo\Result();
 				$this->result->read($input);
 				
 			}
@@ -92,7 +92,7 @@ class GetInfErpOrderListResp {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\xstore\order\common\pojo\vo\InfErpOrderInfoVO();
+						$elem0 = new \Voop\com\vip\xstore\order\common\pojo\vo\InfErpOrderInfoVO();
 						$elem0->read($input);
 						
 						$this->infErpOrderInfoVOList[$_size0++] = $elem0;
@@ -134,7 +134,7 @@ class GetInfErpOrderListResp {
 			
 			if (!is_object($this->result)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->result->write($output);
@@ -149,7 +149,7 @@ class GetInfErpOrderListResp {
 			
 			if (!is_array($this->infErpOrderInfoVOList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -158,7 +158,7 @@ class GetInfErpOrderListResp {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\bulkbuying\api;
+namespace Voop\vipapis\xstore\cc\bulkbuying\api;
 
 class QueryPurchaseOrderItemResp {
 	
@@ -80,7 +80,7 @@ class QueryPurchaseOrderItemResp {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\xstore\cc\bulkbuying\api\PurchaseOrderItem();
+						$elem0 = new \Voop\vipapis\xstore\cc\bulkbuying\api\PurchaseOrderItem();
 						$elem0->read($input);
 						
 						$this->items[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class QueryPurchaseOrderItemResp {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -132,7 +132,7 @@ class QueryPurchaseOrderItemResp {
 			
 			if (!is_array($this->items)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -141,7 +141,7 @@ class QueryPurchaseOrderItemResp {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

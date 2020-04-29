@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\cup\inventory;
+namespace Voop\vipapis\cup\inventory;
 interface InventoryServiceIf{
 	
 	
@@ -39,7 +39,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	public function send_getSkuInventory( $area_id, $pro_sku_id_list){
 		
 		$this->initInvocation("getSkuInventory");
-		$args = new \vipapis\cup\inventory\InventoryService_getSkuInventory_args();
+		$args = new \Voop\vipapis\cup\inventory\InventoryService_getSkuInventory_args();
 		
 		$args->area_id = $area_id;
 		
@@ -50,7 +50,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	
 	public function recv_getSkuInventory(){
 		
-		$result = new \vipapis\cup\inventory\InventoryService_getSkuInventory_result();
+		$result = new \Voop\vipapis\cup\inventory\InventoryService_getSkuInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -69,14 +69,14 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\cup\inventory\InventoryService_healthCheck_args();
+		$args = new \Voop\vipapis\cup\inventory\InventoryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\cup\inventory\InventoryService_healthCheck_result();
+		$result = new \Voop\vipapis\cup\inventory\InventoryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -95,7 +95,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	public function send_preHoldSkuInventory( $area_id, $order_sn, $prod_sku_inv_list){
 		
 		$this->initInvocation("preHoldSkuInventory");
-		$args = new \vipapis\cup\inventory\InventoryService_preHoldSkuInventory_args();
+		$args = new \Voop\vipapis\cup\inventory\InventoryService_preHoldSkuInventory_args();
 		
 		$args->area_id = $area_id;
 		
@@ -108,7 +108,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	
 	public function recv_preHoldSkuInventory(){
 		
-		$result = new \vipapis\cup\inventory\InventoryService_preHoldSkuInventory_result();
+		$result = new \Voop\vipapis\cup\inventory\InventoryService_preHoldSkuInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -127,7 +127,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	public function send_releaseSkuInventory( $order_sn, $pro_sku_id_list){
 		
 		$this->initInvocation("releaseSkuInventory");
-		$args = new \vipapis\cup\inventory\InventoryService_releaseSkuInventory_args();
+		$args = new \Voop\vipapis\cup\inventory\InventoryService_releaseSkuInventory_args();
 		
 		$args->order_sn = $order_sn;
 		
@@ -138,7 +138,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\
 	
 	public function recv_releaseSkuInventory(){
 		
-		$result = new \vipapis\cup\inventory\InventoryService_releaseSkuInventory_result();
+		$result = new \Voop\vipapis\cup\inventory\InventoryService_releaseSkuInventory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -255,7 +255,7 @@ class InventoryService_getSkuInventory_args {
 		
 		if (!is_array($this->pro_sku_id_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -412,7 +412,7 @@ class InventoryService_preHoldSkuInventory_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\cup\api\inventory\ProdSkuInv();
+					$elem1 = new \Voop\com\vip\vop\cup\api\inventory\ProdSkuInv();
 					$elem1->read($input);
 					
 					$this->prod_sku_inv_list[$_size1++] = $elem1;
@@ -453,7 +453,7 @@ class InventoryService_preHoldSkuInventory_args {
 		
 		if (!is_array($this->prod_sku_inv_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -462,7 +462,7 @@ class InventoryService_preHoldSkuInventory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -585,7 +585,7 @@ class InventoryService_releaseSkuInventory_args {
 		
 		if (!is_array($this->pro_sku_id_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -658,7 +658,7 @@ class InventoryService_getSkuInventory_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\cup\api\inventory\ProdSkuInvInfo();
+					$elem1 = new \Voop\com\vip\vop\cup\api\inventory\ProdSkuInvInfo();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -691,7 +691,7 @@ class InventoryService_getSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -700,7 +700,7 @@ class InventoryService_getSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -763,7 +763,7 @@ class InventoryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -786,7 +786,7 @@ class InventoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -845,7 +845,7 @@ class InventoryService_preHoldSkuInventory_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\inventory\InventoryOpResult();
+			$this->success = new \Voop\com\vip\vop\cup\api\inventory\InventoryOpResult();
 			$this->success->read($input);
 			
 		}
@@ -868,7 +868,7 @@ class InventoryService_preHoldSkuInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -927,7 +927,7 @@ class InventoryService_releaseSkuInventory_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\inventory\InventoryOpResult();
+			$this->success = new \Voop\com\vip\vop\cup\api\inventory\InventoryOpResult();
 			$this->success->read($input);
 			
 		}
@@ -950,7 +950,7 @@ class InventoryService_releaseSkuInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

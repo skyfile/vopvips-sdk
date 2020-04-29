@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\sizetable;
+namespace Voop\vipapis\marketplace\sizetable;
 
 class GetSizeTableTemplateResponse {
 	
@@ -70,7 +70,7 @@ class GetSizeTableTemplateResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\marketplace\sizetable\SizeTableTemplate();
+						$elem0 = new \Voop\vipapis\marketplace\sizetable\SizeTableTemplate();
 						$elem0->read($input);
 						
 						$this->size_table_templates[$_size0++] = $elem0;
@@ -89,7 +89,7 @@ class GetSizeTableTemplateResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -112,7 +112,7 @@ class GetSizeTableTemplateResponse {
 			
 			if (!is_array($this->size_table_templates)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -121,7 +121,7 @@ class GetSizeTableTemplateResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

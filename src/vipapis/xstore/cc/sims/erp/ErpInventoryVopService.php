@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\sims\erp;
+namespace Voop\vipapis\xstore\cc\sims\erp;
 interface ErpInventoryVopServiceIf{
 	
 	
@@ -35,14 +35,14 @@ class _ErpInventoryVopServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\xstore\cc\sims\erp\ErpInventoryVopService_healthCheck_args();
+		$args = new \Voop\vipapis\xstore\cc\sims\erp\ErpInventoryVopService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\xstore\cc\sims\erp\ErpInventoryVopService_healthCheck_result();
+		$result = new \Voop\vipapis\xstore\cc\sims\erp\ErpInventoryVopService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -61,7 +61,7 @@ class _ErpInventoryVopServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_inventoryAdjust( $stockGainModelList){
 		
 		$this->initInvocation("inventoryAdjust");
-		$args = new \vipapis\xstore\cc\sims\erp\ErpInventoryVopService_inventoryAdjust_args();
+		$args = new \Voop\vipapis\xstore\cc\sims\erp\ErpInventoryVopService_inventoryAdjust_args();
 		
 		$args->stockGainModelList = $stockGainModelList;
 		
@@ -70,7 +70,7 @@ class _ErpInventoryVopServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_inventoryAdjust(){
 		
-		$result = new \vipapis\xstore\cc\sims\erp\ErpInventoryVopService_inventoryAdjust_result();
+		$result = new \Voop\vipapis\xstore\cc\sims\erp\ErpInventoryVopService_inventoryAdjust_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -180,7 +180,7 @@ class ErpInventoryVopService_inventoryAdjust_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\xstore\cc\sims\erp\InventoryAdjustReq();
+					$elem1 = new \Voop\vipapis\xstore\cc\sims\erp\InventoryAdjustReq();
 					$elem1->read($input);
 					
 					$this->stockGainModelList[$_size1++] = $elem1;
@@ -211,7 +211,7 @@ class ErpInventoryVopService_inventoryAdjust_args {
 		
 		if (!is_array($this->stockGainModelList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -220,7 +220,7 @@ class ErpInventoryVopService_inventoryAdjust_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -281,7 +281,7 @@ class ErpInventoryVopService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -304,7 +304,7 @@ class ErpInventoryVopService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -374,7 +374,7 @@ class ErpInventoryVopService_inventoryAdjust_result {
 					
 					$val0 = null;
 					
-					$val0 = new \vipapis\xstore\cc\sims\erp\InventoryAdjustRsp();
+					$val0 = new \Voop\vipapis\xstore\cc\sims\erp\InventoryAdjustRsp();
 					$val0->read($input);
 					
 					$this->success[$key0] = $val0;
@@ -407,7 +407,7 @@ class ErpInventoryVopService_inventoryAdjust_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -418,7 +418,7 @@ class ErpInventoryVopService_inventoryAdjust_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

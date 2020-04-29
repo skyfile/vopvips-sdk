@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\sales;
+namespace Voop\vipapis\sales;
 
 class BarcodeInventory {
 	
@@ -88,7 +88,7 @@ class BarcodeInventory {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

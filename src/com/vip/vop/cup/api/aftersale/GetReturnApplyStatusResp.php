@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\aftersale;
+namespace Voop\com\vip\vop\cup\api\aftersale;
 
 class GetReturnApplyStatusResp {
 	
@@ -80,7 +80,7 @@ class GetReturnApplyStatusResp {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\cup\api\aftersale\ReturnApplyStatusInfo();
+						$elem0 = new \Voop\com\vip\vop\cup\api\aftersale\ReturnApplyStatusInfo();
 						$elem0->read($input);
 						
 						$this->return_apply_status_info[$_size0++] = $elem0;
@@ -102,7 +102,7 @@ class GetReturnApplyStatusResp {
 				
 				$needSkip = false;
 				
-				$this->result = new \com\vip\vop\cup\api\aftersale\Result();
+				$this->result = new \Voop\com\vip\vop\cup\api\aftersale\Result();
 				$this->result->read($input);
 				
 			}
@@ -134,7 +134,7 @@ class GetReturnApplyStatusResp {
 			
 			if (!is_array($this->return_apply_status_info)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -143,7 +143,7 @@ class GetReturnApplyStatusResp {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -162,7 +162,7 @@ class GetReturnApplyStatusResp {
 			
 			if (!is_object($this->result)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->result->write($output);

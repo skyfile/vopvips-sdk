@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vis\purchase\schedules\service\query;
+namespace Voop\com\vip\vis\purchase\schedules\service\query;
 require_once dirname(__FILE__).'/QueryApplySellingService.php';
 class QueryApplySellingServiceHelper extends _QueryApplySellingServiceClient{
 	

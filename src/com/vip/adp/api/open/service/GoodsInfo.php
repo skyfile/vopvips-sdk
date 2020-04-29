@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 
 class GoodsInfo {
 	
@@ -719,7 +719,7 @@ class GoodsInfo {
 				
 				$needSkip = false;
 				
-				$this->storeInfo = new \com\vip\adp\api\open\service\StoreInfo();
+				$this->storeInfo = new \Voop\com\vip\adp\api\open\service\StoreInfo();
 				$this->storeInfo->read($input);
 				
 			}
@@ -731,7 +731,7 @@ class GoodsInfo {
 				
 				$needSkip = false;
 				
-				$this->commentsInfo = new \com\vip\adp\api\open\service\GoodsCommentsInfo();
+				$this->commentsInfo = new \Voop\com\vip\adp\api\open\service\GoodsCommentsInfo();
 				$this->commentsInfo->read($input);
 				
 			}
@@ -743,7 +743,7 @@ class GoodsInfo {
 				
 				$needSkip = false;
 				
-				$this->storeServiceCapability = new \com\vip\adp\api\open\service\StoreServiceCapability();
+				$this->storeServiceCapability = new \Voop\com\vip\adp\api\open\service\StoreServiceCapability();
 				$this->storeServiceCapability->read($input);
 				
 			}
@@ -795,7 +795,7 @@ class GoodsInfo {
 				
 				$needSkip = false;
 				
-				$this->prepayInfo = new \com\vip\adp\api\open\service\PrepayInfo();
+				$this->prepayInfo = new \Voop\com\vip\adp\api\open\service\PrepayInfo();
 				$this->prepayInfo->read($input);
 				
 			}
@@ -816,7 +816,7 @@ class GoodsInfo {
 						
 						$elem2 = null;
 						
-						$elem2 = new \com\vip\adp\api\open\service\ActivityInfo();
+						$elem2 = new \Voop\com\vip\adp\api\open\service\ActivityInfo();
 						$elem2->read($input);
 						
 						$this->joinedActivities[$_size2++] = $elem2;
@@ -903,7 +903,7 @@ class GoodsInfo {
 			
 			if (!is_array($this->goodsCarouselPictures)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1006,7 +1006,7 @@ class GoodsInfo {
 			
 			if (!is_array($this->goodsDetailPictures)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1127,7 +1127,7 @@ class GoodsInfo {
 			
 			if (!is_object($this->storeInfo)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->storeInfo->write($output);
@@ -1142,7 +1142,7 @@ class GoodsInfo {
 			
 			if (!is_object($this->commentsInfo)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->commentsInfo->write($output);
@@ -1157,7 +1157,7 @@ class GoodsInfo {
 			
 			if (!is_object($this->storeServiceCapability)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->storeServiceCapability->write($output);
@@ -1208,7 +1208,7 @@ class GoodsInfo {
 			
 			if (!is_object($this->prepayInfo)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->prepayInfo->write($output);
@@ -1223,7 +1223,7 @@ class GoodsInfo {
 			
 			if (!is_array($this->joinedActivities)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1232,7 +1232,7 @@ class GoodsInfo {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

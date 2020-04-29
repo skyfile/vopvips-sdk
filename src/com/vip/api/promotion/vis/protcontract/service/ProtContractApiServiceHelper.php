@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\protcontract\service;
+namespace Voop\com\vip\api\promotion\vis\protcontract\service;
 require_once dirname(__FILE__).'/ProtContractApiService.php';
 class ProtContractApiServiceHelper extends _ProtContractApiServiceClient{
 	

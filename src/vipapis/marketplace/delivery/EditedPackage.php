@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\delivery;
+namespace Voop\vipapis\marketplace\delivery;
 
 class EditedPackage {
 	
@@ -88,7 +88,7 @@ class EditedPackage {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

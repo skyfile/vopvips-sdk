@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\data\compass\service\vop;
+namespace Voop\com\vip\data\compass\service\vop;
 interface CompassDataOspServiceIf{
 	
 	
@@ -35,7 +35,7 @@ class _CompassDataOspServiceClient extends \Osp\Base\OspStub implements \com\vip
 	public function send_data( $api_params, $path, $vendor_id){
 		
 		$this->initInvocation("data");
-		$args = new \com\vip\data\compass\service\vop\CompassDataOspService_data_args();
+		$args = new \Voop\com\vip\data\compass\service\vop\CompassDataOspService_data_args();
 		
 		$args->api_params = $api_params;
 		
@@ -48,7 +48,7 @@ class _CompassDataOspServiceClient extends \Osp\Base\OspStub implements \com\vip
 	
 	public function recv_data(){
 		
-		$result = new \com\vip\data\compass\service\vop\CompassDataOspService_data_result();
+		$result = new \Voop\com\vip\data\compass\service\vop\CompassDataOspService_data_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -67,14 +67,14 @@ class _CompassDataOspServiceClient extends \Osp\Base\OspStub implements \com\vip
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\data\compass\service\vop\CompassDataOspService_healthCheck_args();
+		$args = new \Voop\com\vip\data\compass\service\vop\CompassDataOspService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\data\compass\service\vop\CompassDataOspService_healthCheck_result();
+		$result = new \Voop\com\vip\data\compass\service\vop\CompassDataOspService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -209,7 +209,7 @@ class CompassDataOspService_data_args {
 			
 			if (!is_array($this->api_params)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -333,7 +333,7 @@ class CompassDataOspService_data_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\data\compass\service\vop\CompassDataResponse();
+			$this->success = new \Voop\com\vip\data\compass\service\vop\CompassDataResponse();
 			$this->success->read($input);
 			
 		}
@@ -356,7 +356,7 @@ class CompassDataOspService_data_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -415,7 +415,7 @@ class CompassDataOspService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -438,7 +438,7 @@ class CompassDataOspService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

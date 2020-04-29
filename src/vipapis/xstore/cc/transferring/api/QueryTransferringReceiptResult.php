@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\transferring\api;
+namespace Voop\vipapis\xstore\cc\transferring\api;
 
 class QueryTransferringReceiptResult {
 	
@@ -80,7 +80,7 @@ class QueryTransferringReceiptResult {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\xstore\cc\transferring\api\TransferringOrderReceivedList();
+						$elem0 = new \Voop\vipapis\xstore\cc\transferring\api\TransferringOrderReceivedList();
 						$elem0->read($input);
 						
 						$this->transferring_orders[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class QueryTransferringReceiptResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -132,7 +132,7 @@ class QueryTransferringReceiptResult {
 			
 			if (!is_array($this->transferring_orders)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -141,7 +141,7 @@ class QueryTransferringReceiptResult {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

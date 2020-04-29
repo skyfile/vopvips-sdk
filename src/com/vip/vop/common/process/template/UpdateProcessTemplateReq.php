@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\common\process\template;
+namespace Voop\com\vip\vop\common\process\template;
 
 class UpdateProcessTemplateReq {
 	

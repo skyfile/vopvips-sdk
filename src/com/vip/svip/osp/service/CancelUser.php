@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\svip\osp\service;
+namespace Voop\com\vip\svip\osp\service;
 
 class CancelUser {
 	
@@ -150,7 +150,7 @@ class CancelUser {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\svip\osp\service\CancelReason();
+						$elem0 = new \Voop\com\vip\svip\osp\service\CancelReason();
 						$elem0->read($input);
 						
 						$this->reasonList[$_size0++] = $elem0;
@@ -228,7 +228,7 @@ class CancelUser {
 			
 			if (!is_array($this->reasonList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -237,7 +237,7 @@ class CancelUser {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

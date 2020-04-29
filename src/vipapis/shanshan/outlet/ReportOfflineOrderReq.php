@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\shanshan\outlet;
+namespace Voop\vipapis\shanshan\outlet;
 
 class ReportOfflineOrderReq {
 	
@@ -70,7 +70,7 @@ class ReportOfflineOrderReq {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\shanshan\outlet\OfflineOrder();
+						$elem0 = new \Voop\vipapis\shanshan\outlet\OfflineOrder();
 						$elem0->read($input);
 						
 						$this->offline_orders[$_size0++] = $elem0;
@@ -89,7 +89,7 @@ class ReportOfflineOrderReq {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -110,7 +110,7 @@ class ReportOfflineOrderReq {
 		
 		if (!is_array($this->offline_orders)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -119,7 +119,7 @@ class ReportOfflineOrderReq {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

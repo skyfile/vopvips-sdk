@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\order;
+namespace Voop\vipapis\order;
 require_once dirname(__FILE__).'/WopOrderService.php';
 class WopOrderServiceHelper extends _WopOrderServiceClient{
 	

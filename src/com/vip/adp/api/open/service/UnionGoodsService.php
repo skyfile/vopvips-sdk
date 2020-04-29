@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 interface UnionGoodsServiceIf{
 	
 	
@@ -16,23 +16,23 @@ interface UnionGoodsServiceIf{
 	
 	public function getByGoodsIdsWithOauth( $goodsIdList, $requestId);
 	
-	public function goodsList(\com\vip\adp\api\open\service\GoodsInfoRequest $request);
+	public function goodsList(\Voop\com\vip\adp\api\open\service\GoodsInfoRequest $request);
 	
-	public function goodsListWithOauth(\com\vip\adp\api\open\service\GoodsInfoRequest $request);
+	public function goodsListWithOauth(\Voop\com\vip\adp\api\open\service\GoodsInfoRequest $request);
 	
 	public function healthCheck();
 	
-	public function query(\com\vip\adp\api\open\service\QueryGoodsRequest $request);
+	public function query(\Voop\com\vip\adp\api\open\service\QueryGoodsRequest $request);
 	
-	public function queryWithOauth(\com\vip\adp\api\open\service\QueryGoodsRequest $request);
+	public function queryWithOauth(\Voop\com\vip\adp\api\open\service\QueryGoodsRequest $request);
 	
-	public function similarRecommend(\com\vip\adp\api\open\service\SimilarRecommendRequest $request);
+	public function similarRecommend(\Voop\com\vip\adp\api\open\service\SimilarRecommendRequest $request);
 	
-	public function similarRecommendWithOauth(\com\vip\adp\api\open\service\SimilarRecommendRequest $request);
+	public function similarRecommendWithOauth(\Voop\com\vip\adp\api\open\service\SimilarRecommendRequest $request);
 	
-	public function userRecommend(\com\vip\adp\api\open\service\UserRecommendRequest $request);
+	public function userRecommend(\Voop\com\vip\adp\api\open\service\UserRecommendRequest $request);
 	
-	public function userRecommendWithOauth(\com\vip\adp\api\open\service\UserRecommendRequest $request);
+	public function userRecommendWithOauth(\Voop\com\vip\adp\api\open\service\UserRecommendRequest $request);
 	
 }
 
@@ -53,7 +53,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	public function send_getByGoodsIds( $goodsIdList, $requestId){
 		
 		$this->initInvocation("getByGoodsIds");
-		$args = new \com\vip\adp\api\open\service\UnionGoodsService_getByGoodsIds_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_getByGoodsIds_args();
 		
 		$args->goodsIdList = $goodsIdList;
 		
@@ -64,7 +64,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_getByGoodsIds(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionGoodsService_getByGoodsIds_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_getByGoodsIds_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -83,7 +83,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	public function send_getByGoodsIdsWithOauth( $goodsIdList, $requestId){
 		
 		$this->initInvocation("getByGoodsIdsWithOauth");
-		$args = new \com\vip\adp\api\open\service\UnionGoodsService_getByGoodsIdsWithOauth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_getByGoodsIdsWithOauth_args();
 		
 		$args->goodsIdList = $goodsIdList;
 		
@@ -94,7 +94,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_getByGoodsIdsWithOauth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionGoodsService_getByGoodsIdsWithOauth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_getByGoodsIdsWithOauth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -104,16 +104,16 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function goodsList(\com\vip\adp\api\open\service\GoodsInfoRequest $request){
+	public function goodsList(\Voop\com\vip\adp\api\open\service\GoodsInfoRequest $request){
 		
 		$this->send_goodsList( $request);
 		return $this->recv_goodsList();
 	}
 	
-	public function send_goodsList(\com\vip\adp\api\open\service\GoodsInfoRequest $request){
+	public function send_goodsList(\Voop\com\vip\adp\api\open\service\GoodsInfoRequest $request){
 		
 		$this->initInvocation("goodsList");
-		$args = new \com\vip\adp\api\open\service\UnionGoodsService_goodsList_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_goodsList_args();
 		
 		$args->request = $request;
 		
@@ -122,7 +122,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_goodsList(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionGoodsService_goodsList_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_goodsList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -132,16 +132,16 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function goodsListWithOauth(\com\vip\adp\api\open\service\GoodsInfoRequest $request){
+	public function goodsListWithOauth(\Voop\com\vip\adp\api\open\service\GoodsInfoRequest $request){
 		
 		$this->send_goodsListWithOauth( $request);
 		return $this->recv_goodsListWithOauth();
 	}
 	
-	public function send_goodsListWithOauth(\com\vip\adp\api\open\service\GoodsInfoRequest $request){
+	public function send_goodsListWithOauth(\Voop\com\vip\adp\api\open\service\GoodsInfoRequest $request){
 		
 		$this->initInvocation("goodsListWithOauth");
-		$args = new \com\vip\adp\api\open\service\UnionGoodsService_goodsListWithOauth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_goodsListWithOauth_args();
 		
 		$args->request = $request;
 		
@@ -150,7 +150,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_goodsListWithOauth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionGoodsService_goodsListWithOauth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_goodsListWithOauth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -169,14 +169,14 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\adp\api\open\service\UnionGoodsService_healthCheck_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionGoodsService_healthCheck_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -186,16 +186,16 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function query(\com\vip\adp\api\open\service\QueryGoodsRequest $request){
+	public function query(\Voop\com\vip\adp\api\open\service\QueryGoodsRequest $request){
 		
 		$this->send_query( $request);
 		return $this->recv_query();
 	}
 	
-	public function send_query(\com\vip\adp\api\open\service\QueryGoodsRequest $request){
+	public function send_query(\Voop\com\vip\adp\api\open\service\QueryGoodsRequest $request){
 		
 		$this->initInvocation("query");
-		$args = new \com\vip\adp\api\open\service\UnionGoodsService_query_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_query_args();
 		
 		$args->request = $request;
 		
@@ -204,7 +204,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_query(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionGoodsService_query_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_query_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -214,16 +214,16 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function queryWithOauth(\com\vip\adp\api\open\service\QueryGoodsRequest $request){
+	public function queryWithOauth(\Voop\com\vip\adp\api\open\service\QueryGoodsRequest $request){
 		
 		$this->send_queryWithOauth( $request);
 		return $this->recv_queryWithOauth();
 	}
 	
-	public function send_queryWithOauth(\com\vip\adp\api\open\service\QueryGoodsRequest $request){
+	public function send_queryWithOauth(\Voop\com\vip\adp\api\open\service\QueryGoodsRequest $request){
 		
 		$this->initInvocation("queryWithOauth");
-		$args = new \com\vip\adp\api\open\service\UnionGoodsService_queryWithOauth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_queryWithOauth_args();
 		
 		$args->request = $request;
 		
@@ -232,7 +232,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_queryWithOauth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionGoodsService_queryWithOauth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_queryWithOauth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -242,16 +242,16 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function similarRecommend(\com\vip\adp\api\open\service\SimilarRecommendRequest $request){
+	public function similarRecommend(\Voop\com\vip\adp\api\open\service\SimilarRecommendRequest $request){
 		
 		$this->send_similarRecommend( $request);
 		return $this->recv_similarRecommend();
 	}
 	
-	public function send_similarRecommend(\com\vip\adp\api\open\service\SimilarRecommendRequest $request){
+	public function send_similarRecommend(\Voop\com\vip\adp\api\open\service\SimilarRecommendRequest $request){
 		
 		$this->initInvocation("similarRecommend");
-		$args = new \com\vip\adp\api\open\service\UnionGoodsService_similarRecommend_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_similarRecommend_args();
 		
 		$args->request = $request;
 		
@@ -260,7 +260,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_similarRecommend(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionGoodsService_similarRecommend_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_similarRecommend_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -270,16 +270,16 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function similarRecommendWithOauth(\com\vip\adp\api\open\service\SimilarRecommendRequest $request){
+	public function similarRecommendWithOauth(\Voop\com\vip\adp\api\open\service\SimilarRecommendRequest $request){
 		
 		$this->send_similarRecommendWithOauth( $request);
 		return $this->recv_similarRecommendWithOauth();
 	}
 	
-	public function send_similarRecommendWithOauth(\com\vip\adp\api\open\service\SimilarRecommendRequest $request){
+	public function send_similarRecommendWithOauth(\Voop\com\vip\adp\api\open\service\SimilarRecommendRequest $request){
 		
 		$this->initInvocation("similarRecommendWithOauth");
-		$args = new \com\vip\adp\api\open\service\UnionGoodsService_similarRecommendWithOauth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_similarRecommendWithOauth_args();
 		
 		$args->request = $request;
 		
@@ -288,7 +288,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_similarRecommendWithOauth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionGoodsService_similarRecommendWithOauth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_similarRecommendWithOauth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -298,16 +298,16 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function userRecommend(\com\vip\adp\api\open\service\UserRecommendRequest $request){
+	public function userRecommend(\Voop\com\vip\adp\api\open\service\UserRecommendRequest $request){
 		
 		$this->send_userRecommend( $request);
 		return $this->recv_userRecommend();
 	}
 	
-	public function send_userRecommend(\com\vip\adp\api\open\service\UserRecommendRequest $request){
+	public function send_userRecommend(\Voop\com\vip\adp\api\open\service\UserRecommendRequest $request){
 		
 		$this->initInvocation("userRecommend");
-		$args = new \com\vip\adp\api\open\service\UnionGoodsService_userRecommend_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_userRecommend_args();
 		
 		$args->request = $request;
 		
@@ -316,7 +316,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_userRecommend(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionGoodsService_userRecommend_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_userRecommend_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -326,16 +326,16 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function userRecommendWithOauth(\com\vip\adp\api\open\service\UserRecommendRequest $request){
+	public function userRecommendWithOauth(\Voop\com\vip\adp\api\open\service\UserRecommendRequest $request){
 		
 		$this->send_userRecommendWithOauth( $request);
 		return $this->recv_userRecommendWithOauth();
 	}
 	
-	public function send_userRecommendWithOauth(\com\vip\adp\api\open\service\UserRecommendRequest $request){
+	public function send_userRecommendWithOauth(\Voop\com\vip\adp\api\open\service\UserRecommendRequest $request){
 		
 		$this->initInvocation("userRecommendWithOauth");
-		$args = new \com\vip\adp\api\open\service\UnionGoodsService_userRecommendWithOauth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_userRecommendWithOauth_args();
 		
 		$args->request = $request;
 		
@@ -344,7 +344,7 @@ class _UnionGoodsServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_userRecommendWithOauth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionGoodsService_userRecommendWithOauth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionGoodsService_userRecommendWithOauth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -456,7 +456,7 @@ class UnionGoodsService_getByGoodsIds_args {
 		
 		if (!is_array($this->goodsIdList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -582,7 +582,7 @@ class UnionGoodsService_getByGoodsIdsWithOauth_args {
 		
 		if (!is_array($this->goodsIdList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -651,7 +651,7 @@ class UnionGoodsService_goodsList_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\adp\api\open\service\GoodsInfoRequest();
+			$this->request = new \Voop\com\vip\adp\api\open\service\GoodsInfoRequest();
 			$this->request->read($input);
 			
 		}
@@ -674,7 +674,7 @@ class UnionGoodsService_goodsList_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -733,7 +733,7 @@ class UnionGoodsService_goodsListWithOauth_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\adp\api\open\service\GoodsInfoRequest();
+			$this->request = new \Voop\com\vip\adp\api\open\service\GoodsInfoRequest();
 			$this->request->read($input);
 			
 		}
@@ -756,7 +756,7 @@ class UnionGoodsService_goodsListWithOauth_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -861,7 +861,7 @@ class UnionGoodsService_query_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\adp\api\open\service\QueryGoodsRequest();
+			$this->request = new \Voop\com\vip\adp\api\open\service\QueryGoodsRequest();
 			$this->request->read($input);
 			
 		}
@@ -884,7 +884,7 @@ class UnionGoodsService_query_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -943,7 +943,7 @@ class UnionGoodsService_queryWithOauth_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\adp\api\open\service\QueryGoodsRequest();
+			$this->request = new \Voop\com\vip\adp\api\open\service\QueryGoodsRequest();
 			$this->request->read($input);
 			
 		}
@@ -966,7 +966,7 @@ class UnionGoodsService_queryWithOauth_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -1025,7 +1025,7 @@ class UnionGoodsService_similarRecommend_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\adp\api\open\service\SimilarRecommendRequest();
+			$this->request = new \Voop\com\vip\adp\api\open\service\SimilarRecommendRequest();
 			$this->request->read($input);
 			
 		}
@@ -1048,7 +1048,7 @@ class UnionGoodsService_similarRecommend_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -1107,7 +1107,7 @@ class UnionGoodsService_similarRecommendWithOauth_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\adp\api\open\service\SimilarRecommendRequest();
+			$this->request = new \Voop\com\vip\adp\api\open\service\SimilarRecommendRequest();
 			$this->request->read($input);
 			
 		}
@@ -1130,7 +1130,7 @@ class UnionGoodsService_similarRecommendWithOauth_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -1189,7 +1189,7 @@ class UnionGoodsService_userRecommend_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\adp\api\open\service\UserRecommendRequest();
+			$this->request = new \Voop\com\vip\adp\api\open\service\UserRecommendRequest();
 			$this->request->read($input);
 			
 		}
@@ -1212,7 +1212,7 @@ class UnionGoodsService_userRecommend_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -1271,7 +1271,7 @@ class UnionGoodsService_userRecommendWithOauth_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\adp\api\open\service\UserRecommendRequest();
+			$this->request = new \Voop\com\vip\adp\api\open\service\UserRecommendRequest();
 			$this->request->read($input);
 			
 		}
@@ -1294,7 +1294,7 @@ class UnionGoodsService_userRecommendWithOauth_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -1362,7 +1362,7 @@ class UnionGoodsService_getByGoodsIds_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\adp\api\open\service\GoodsInfo();
+					$elem0 = new \Voop\com\vip\adp\api\open\service\GoodsInfo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1395,7 +1395,7 @@ class UnionGoodsService_getByGoodsIds_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1404,7 +1404,7 @@ class UnionGoodsService_getByGoodsIds_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1476,7 +1476,7 @@ class UnionGoodsService_getByGoodsIdsWithOauth_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\adp\api\open\service\GoodsInfo();
+					$elem1 = new \Voop\com\vip\adp\api\open\service\GoodsInfo();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1509,7 +1509,7 @@ class UnionGoodsService_getByGoodsIdsWithOauth_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1518,7 +1518,7 @@ class UnionGoodsService_getByGoodsIdsWithOauth_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1581,7 +1581,7 @@ class UnionGoodsService_goodsList_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\GoodsInfoResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\GoodsInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -1604,7 +1604,7 @@ class UnionGoodsService_goodsList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1663,7 +1663,7 @@ class UnionGoodsService_goodsListWithOauth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\GoodsInfoResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\GoodsInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -1686,7 +1686,7 @@ class UnionGoodsService_goodsListWithOauth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1745,7 +1745,7 @@ class UnionGoodsService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1768,7 +1768,7 @@ class UnionGoodsService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1827,7 +1827,7 @@ class UnionGoodsService_query_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\GoodsInfoResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\GoodsInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -1850,7 +1850,7 @@ class UnionGoodsService_query_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1909,7 +1909,7 @@ class UnionGoodsService_queryWithOauth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\GoodsInfoResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\GoodsInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -1932,7 +1932,7 @@ class UnionGoodsService_queryWithOauth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1991,7 +1991,7 @@ class UnionGoodsService_similarRecommend_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\GoodsInfoResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\GoodsInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -2014,7 +2014,7 @@ class UnionGoodsService_similarRecommend_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2073,7 +2073,7 @@ class UnionGoodsService_similarRecommendWithOauth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\GoodsInfoResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\GoodsInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -2096,7 +2096,7 @@ class UnionGoodsService_similarRecommendWithOauth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2155,7 +2155,7 @@ class UnionGoodsService_userRecommend_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\GoodsInfoResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\GoodsInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -2178,7 +2178,7 @@ class UnionGoodsService_userRecommend_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2237,7 +2237,7 @@ class UnionGoodsService_userRecommendWithOauth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\GoodsInfoResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\GoodsInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -2260,7 +2260,7 @@ class UnionGoodsService_userRecommendWithOauth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

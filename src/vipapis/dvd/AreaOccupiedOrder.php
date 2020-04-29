@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\dvd;
+namespace Voop\vipapis\dvd;
 
 class AreaOccupiedOrder {
 	
@@ -290,7 +290,7 @@ class AreaOccupiedOrder {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\dvd\AreaOccupiedOrderDetail();
+						$elem0 = new \Voop\vipapis\dvd\AreaOccupiedOrderDetail();
 						$elem0->read($input);
 						
 						$this->order_details[$_size0++] = $elem0;
@@ -309,7 +309,7 @@ class AreaOccupiedOrder {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -431,7 +431,7 @@ class AreaOccupiedOrder {
 			
 			if (!is_array($this->order_details)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -440,7 +440,7 @@ class AreaOccupiedOrder {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

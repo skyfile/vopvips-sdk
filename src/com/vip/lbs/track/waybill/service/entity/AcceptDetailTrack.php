@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\lbs\track\waybill\service\entity;
+namespace Voop\com\vip\lbs\track\waybill\service\entity;
 
 class AcceptDetailTrack {
 	
@@ -170,7 +170,7 @@ class AcceptDetailTrack {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\lbs\track\waybill\service\entity\DetailTracks();
+						$elem0 = new \Voop\com\vip\lbs\track\waybill\service\entity\DetailTracks();
 						$elem0->read($input);
 						
 						$this->trackList[$_size0++] = $elem0;
@@ -249,7 +249,7 @@ class AcceptDetailTrack {
 			
 			if (!is_array($this->trackList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -258,7 +258,7 @@ class AcceptDetailTrack {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

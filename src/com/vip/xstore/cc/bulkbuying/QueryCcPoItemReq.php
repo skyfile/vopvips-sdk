@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying;
+namespace Voop\com\vip\xstore\cc\bulkbuying;
 
 class QueryCcPoItemReq {
 	
@@ -252,7 +252,7 @@ class QueryCcPoItemReq {
 			
 			if (!is_array($this->requiredFields)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -283,7 +283,7 @@ class QueryCcPoItemReq {
 			
 			if (!is_array($this->barcodeSet)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 
 class PoOrder {
 	
@@ -380,7 +380,7 @@ class PoOrder {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\delivery\UnpickInfo();
+						$elem0 = new \Voop\vipapis\delivery\UnpickInfo();
 						$elem0->read($input);
 						
 						$this->unpick_list[$_size0++] = $elem0;
@@ -409,7 +409,7 @@ class PoOrder {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -567,7 +567,7 @@ class PoOrder {
 			
 			if (!is_array($this->unpick_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -576,7 +576,7 @@ class PoOrder {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

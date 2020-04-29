@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\ap\service;
+namespace Voop\com\vip\fcs\ap\service;
 
 class BaseBillAndDiscountSource {
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\vreceipt;
+namespace Voop\com\vip\isv\vreceipt;
 
 class RevinfoDetail {
 	

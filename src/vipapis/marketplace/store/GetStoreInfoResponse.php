@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\store;
+namespace Voop\vipapis\marketplace\store;
 
 class GetStoreInfoResponse {
 	
@@ -148,7 +148,7 @@ class GetStoreInfoResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

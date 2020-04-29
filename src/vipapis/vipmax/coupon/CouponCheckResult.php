@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipmax\coupon;
+namespace Voop\vipapis\vipmax\coupon;
 
 class CouponCheckResult {
 	
@@ -247,7 +247,7 @@ class CouponCheckResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -315,7 +315,7 @@ class CouponCheckResult {
 			
 			if (!is_array($this->sku_ids)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

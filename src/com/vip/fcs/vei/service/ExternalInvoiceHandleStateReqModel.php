@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vei\service;
+namespace Voop\com\vip\fcs\vei\service;
 
 class ExternalInvoiceHandleStateReqModel {
 	
@@ -128,7 +128,7 @@ class ExternalInvoiceHandleStateReqModel {
 		
 		if (!is_array($this->orderSnList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

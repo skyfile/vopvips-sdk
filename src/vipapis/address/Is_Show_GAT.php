@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\address;
+namespace Voop\vipapis\address;
 final class Is_Show_GAT{
 	
 	

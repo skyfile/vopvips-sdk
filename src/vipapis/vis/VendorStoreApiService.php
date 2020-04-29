@@ -8,25 +8,25 @@
 *
 */
 
-namespace vipapis\vis;
+namespace Voop\vipapis\vis;
 interface VendorStoreApiServiceIf{
 	
 	
-	public function addWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeAddParamList);
+	public function addWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeAddParamList);
 	
-	public function delWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeDeleteParamList);
+	public function delWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeDeleteParamList);
 	
-	public function getStoreByStoreCode(\com\vip\vms\common\CommonParam $commonParam, $storeCode);
+	public function getStoreByStoreCode(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeCode);
 	
 	public function healthCheck();
 	
-	public function getWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeQueryParamList);
+	public function getWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeQueryParamList);
 	
-	public function queryStoresByVendorCode(\com\vip\vms\common\CommonParam $commonParam, $vendorCode);
+	public function queryStoresByVendorCode(\Voop\com\vip\vms\common\CommonParam $commonParam, $vendorCode);
 	
-	public function updateVendorWarehouseAndVIPWarehouseMap(\com\vip\vms\common\CommonParam $commonParam, $storeWarehouseRelUpdateParamList);
+	public function updateVendorWarehouseAndVIPWarehouseMap(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeWarehouseRelUpdateParamList);
 	
-	public function updateWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeUpdateParamList);
+	public function updateWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeUpdateParamList);
 	
 }
 
@@ -38,16 +38,16 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function addWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeAddParamList){
+	public function addWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeAddParamList){
 		
 		$this->send_addWarehouseInfo( $commonParam, $storeAddParamList);
 		return $this->recv_addWarehouseInfo();
 	}
 	
-	public function send_addWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeAddParamList){
+	public function send_addWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeAddParamList){
 		
 		$this->initInvocation("addWarehouseInfo");
-		$args = new \vipapis\vis\VendorStoreApiService_addWarehouseInfo_args();
+		$args = new \Voop\vipapis\vis\VendorStoreApiService_addWarehouseInfo_args();
 		
 		$args->commonParam = $commonParam;
 		
@@ -58,7 +58,7 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_addWarehouseInfo(){
 		
-		$result = new \vipapis\vis\VendorStoreApiService_addWarehouseInfo_result();
+		$result = new \Voop\vipapis\vis\VendorStoreApiService_addWarehouseInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -68,16 +68,16 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function delWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeDeleteParamList){
+	public function delWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeDeleteParamList){
 		
 		$this->send_delWarehouseInfo( $commonParam, $storeDeleteParamList);
 		return $this->recv_delWarehouseInfo();
 	}
 	
-	public function send_delWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeDeleteParamList){
+	public function send_delWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeDeleteParamList){
 		
 		$this->initInvocation("delWarehouseInfo");
-		$args = new \vipapis\vis\VendorStoreApiService_delWarehouseInfo_args();
+		$args = new \Voop\vipapis\vis\VendorStoreApiService_delWarehouseInfo_args();
 		
 		$args->commonParam = $commonParam;
 		
@@ -88,7 +88,7 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_delWarehouseInfo(){
 		
-		$result = new \vipapis\vis\VendorStoreApiService_delWarehouseInfo_result();
+		$result = new \Voop\vipapis\vis\VendorStoreApiService_delWarehouseInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -98,16 +98,16 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function getStoreByStoreCode(\com\vip\vms\common\CommonParam $commonParam, $storeCode){
+	public function getStoreByStoreCode(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeCode){
 		
 		$this->send_getStoreByStoreCode( $commonParam, $storeCode);
 		return $this->recv_getStoreByStoreCode();
 	}
 	
-	public function send_getStoreByStoreCode(\com\vip\vms\common\CommonParam $commonParam, $storeCode){
+	public function send_getStoreByStoreCode(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeCode){
 		
 		$this->initInvocation("getStoreByStoreCode");
-		$args = new \vipapis\vis\VendorStoreApiService_getStoreByStoreCode_args();
+		$args = new \Voop\vipapis\vis\VendorStoreApiService_getStoreByStoreCode_args();
 		
 		$args->commonParam = $commonParam;
 		
@@ -118,7 +118,7 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getStoreByStoreCode(){
 		
-		$result = new \vipapis\vis\VendorStoreApiService_getStoreByStoreCode_result();
+		$result = new \Voop\vipapis\vis\VendorStoreApiService_getStoreByStoreCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -137,14 +137,14 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\vis\VendorStoreApiService_healthCheck_args();
+		$args = new \Voop\vipapis\vis\VendorStoreApiService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\vis\VendorStoreApiService_healthCheck_result();
+		$result = new \Voop\vipapis\vis\VendorStoreApiService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -154,16 +154,16 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function getWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeQueryParamList){
+	public function getWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeQueryParamList){
 		
 		$this->send_getWarehouseInfo( $commonParam, $storeQueryParamList);
 		return $this->recv_getWarehouseInfo();
 	}
 	
-	public function send_getWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeQueryParamList){
+	public function send_getWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeQueryParamList){
 		
 		$this->initInvocation("getWarehouseInfo");
-		$args = new \vipapis\vis\VendorStoreApiService_getWarehouseInfo_args();
+		$args = new \Voop\vipapis\vis\VendorStoreApiService_getWarehouseInfo_args();
 		
 		$args->commonParam = $commonParam;
 		
@@ -174,7 +174,7 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getWarehouseInfo(){
 		
-		$result = new \vipapis\vis\VendorStoreApiService_getWarehouseInfo_result();
+		$result = new \Voop\vipapis\vis\VendorStoreApiService_getWarehouseInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -184,16 +184,16 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function queryStoresByVendorCode(\com\vip\vms\common\CommonParam $commonParam, $vendorCode){
+	public function queryStoresByVendorCode(\Voop\com\vip\vms\common\CommonParam $commonParam, $vendorCode){
 		
 		$this->send_queryStoresByVendorCode( $commonParam, $vendorCode);
 		return $this->recv_queryStoresByVendorCode();
 	}
 	
-	public function send_queryStoresByVendorCode(\com\vip\vms\common\CommonParam $commonParam, $vendorCode){
+	public function send_queryStoresByVendorCode(\Voop\com\vip\vms\common\CommonParam $commonParam, $vendorCode){
 		
 		$this->initInvocation("queryStoresByVendorCode");
-		$args = new \vipapis\vis\VendorStoreApiService_queryStoresByVendorCode_args();
+		$args = new \Voop\vipapis\vis\VendorStoreApiService_queryStoresByVendorCode_args();
 		
 		$args->commonParam = $commonParam;
 		
@@ -204,7 +204,7 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_queryStoresByVendorCode(){
 		
-		$result = new \vipapis\vis\VendorStoreApiService_queryStoresByVendorCode_result();
+		$result = new \Voop\vipapis\vis\VendorStoreApiService_queryStoresByVendorCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -214,16 +214,16 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function updateVendorWarehouseAndVIPWarehouseMap(\com\vip\vms\common\CommonParam $commonParam, $storeWarehouseRelUpdateParamList){
+	public function updateVendorWarehouseAndVIPWarehouseMap(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeWarehouseRelUpdateParamList){
 		
 		$this->send_updateVendorWarehouseAndVIPWarehouseMap( $commonParam, $storeWarehouseRelUpdateParamList);
 		return $this->recv_updateVendorWarehouseAndVIPWarehouseMap();
 	}
 	
-	public function send_updateVendorWarehouseAndVIPWarehouseMap(\com\vip\vms\common\CommonParam $commonParam, $storeWarehouseRelUpdateParamList){
+	public function send_updateVendorWarehouseAndVIPWarehouseMap(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeWarehouseRelUpdateParamList){
 		
 		$this->initInvocation("updateVendorWarehouseAndVIPWarehouseMap");
-		$args = new \vipapis\vis\VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_args();
+		$args = new \Voop\vipapis\vis\VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_args();
 		
 		$args->commonParam = $commonParam;
 		
@@ -234,7 +234,7 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_updateVendorWarehouseAndVIPWarehouseMap(){
 		
-		$result = new \vipapis\vis\VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_result();
+		$result = new \Voop\vipapis\vis\VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -244,16 +244,16 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function updateWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeUpdateParamList){
+	public function updateWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeUpdateParamList){
 		
 		$this->send_updateWarehouseInfo( $commonParam, $storeUpdateParamList);
 		return $this->recv_updateWarehouseInfo();
 	}
 	
-	public function send_updateWarehouseInfo(\com\vip\vms\common\CommonParam $commonParam, $storeUpdateParamList){
+	public function send_updateWarehouseInfo(\Voop\com\vip\vms\common\CommonParam $commonParam, $storeUpdateParamList){
 		
 		$this->initInvocation("updateWarehouseInfo");
-		$args = new \vipapis\vis\VendorStoreApiService_updateWarehouseInfo_args();
+		$args = new \Voop\vipapis\vis\VendorStoreApiService_updateWarehouseInfo_args();
 		
 		$args->commonParam = $commonParam;
 		
@@ -264,7 +264,7 @@ class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_updateWarehouseInfo(){
 		
-		$result = new \vipapis\vis\VendorStoreApiService_updateWarehouseInfo_result();
+		$result = new \Voop\vipapis\vis\VendorStoreApiService_updateWarehouseInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -329,7 +329,7 @@ class VendorStoreApiService_addWarehouseInfo_args {
 		if(true) {
 			
 			
-			$this->commonParam = new \com\vip\vms\common\CommonParam();
+			$this->commonParam = new \Voop\com\vip\vms\common\CommonParam();
 			$this->commonParam->read($input);
 			
 		}
@@ -349,7 +349,7 @@ class VendorStoreApiService_addWarehouseInfo_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vms\store\service\StoreAddParam();
+					$elem0 = new \Voop\com\vip\vms\store\service\StoreAddParam();
 					$elem0->read($input);
 					
 					$this->storeAddParamList[$_size0++] = $elem0;
@@ -380,7 +380,7 @@ class VendorStoreApiService_addWarehouseInfo_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -391,7 +391,7 @@ class VendorStoreApiService_addWarehouseInfo_args {
 		
 		if (!is_array($this->storeAddParamList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -400,7 +400,7 @@ class VendorStoreApiService_addWarehouseInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -471,7 +471,7 @@ class VendorStoreApiService_delWarehouseInfo_args {
 		if(true) {
 			
 			
-			$this->commonParam = new \com\vip\vms\common\CommonParam();
+			$this->commonParam = new \Voop\com\vip\vms\common\CommonParam();
 			$this->commonParam->read($input);
 			
 		}
@@ -491,7 +491,7 @@ class VendorStoreApiService_delWarehouseInfo_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vms\store\service\StoreDeleteParam();
+					$elem1 = new \Voop\com\vip\vms\store\service\StoreDeleteParam();
 					$elem1->read($input);
 					
 					$this->storeDeleteParamList[$_size1++] = $elem1;
@@ -522,7 +522,7 @@ class VendorStoreApiService_delWarehouseInfo_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -533,7 +533,7 @@ class VendorStoreApiService_delWarehouseInfo_args {
 		
 		if (!is_array($this->storeDeleteParamList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -542,7 +542,7 @@ class VendorStoreApiService_delWarehouseInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -613,7 +613,7 @@ class VendorStoreApiService_getStoreByStoreCode_args {
 		if(true) {
 			
 			
-			$this->commonParam = new \com\vip\vms\common\CommonParam();
+			$this->commonParam = new \Voop\com\vip\vms\common\CommonParam();
 			$this->commonParam->read($input);
 			
 		}
@@ -643,7 +643,7 @@ class VendorStoreApiService_getStoreByStoreCode_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -761,7 +761,7 @@ class VendorStoreApiService_getWarehouseInfo_args {
 		if(true) {
 			
 			
-			$this->commonParam = new \com\vip\vms\common\CommonParam();
+			$this->commonParam = new \Voop\com\vip\vms\common\CommonParam();
 			$this->commonParam->read($input);
 			
 		}
@@ -781,7 +781,7 @@ class VendorStoreApiService_getWarehouseInfo_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vms\store\service\StoreQueryParam();
+					$elem0 = new \Voop\com\vip\vms\store\service\StoreQueryParam();
 					$elem0->read($input);
 					
 					$this->storeQueryParamList[$_size0++] = $elem0;
@@ -812,7 +812,7 @@ class VendorStoreApiService_getWarehouseInfo_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -823,7 +823,7 @@ class VendorStoreApiService_getWarehouseInfo_args {
 		
 		if (!is_array($this->storeQueryParamList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -832,7 +832,7 @@ class VendorStoreApiService_getWarehouseInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -903,7 +903,7 @@ class VendorStoreApiService_queryStoresByVendorCode_args {
 		if(true) {
 			
 			
-			$this->commonParam = new \com\vip\vms\common\CommonParam();
+			$this->commonParam = new \Voop\com\vip\vms\common\CommonParam();
 			$this->commonParam->read($input);
 			
 		}
@@ -933,7 +933,7 @@ class VendorStoreApiService_queryStoresByVendorCode_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -1005,7 +1005,7 @@ class VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_args {
 		if(true) {
 			
 			
-			$this->commonParam = new \com\vip\vms\common\CommonParam();
+			$this->commonParam = new \Voop\com\vip\vms\common\CommonParam();
 			$this->commonParam->read($input);
 			
 		}
@@ -1025,7 +1025,7 @@ class VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vms\store\service\StoreWarehouseRelUpdateParam();
+					$elem0 = new \Voop\com\vip\vms\store\service\StoreWarehouseRelUpdateParam();
 					$elem0->read($input);
 					
 					$this->storeWarehouseRelUpdateParamList[$_size0++] = $elem0;
@@ -1056,7 +1056,7 @@ class VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -1069,7 +1069,7 @@ class VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_args {
 			
 			if (!is_array($this->storeWarehouseRelUpdateParamList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1078,7 +1078,7 @@ class VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1151,7 +1151,7 @@ class VendorStoreApiService_updateWarehouseInfo_args {
 		if(true) {
 			
 			
-			$this->commonParam = new \com\vip\vms\common\CommonParam();
+			$this->commonParam = new \Voop\com\vip\vms\common\CommonParam();
 			$this->commonParam->read($input);
 			
 		}
@@ -1171,7 +1171,7 @@ class VendorStoreApiService_updateWarehouseInfo_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vms\store\service\StoreUpdateParam();
+					$elem1 = new \Voop\com\vip\vms\store\service\StoreUpdateParam();
 					$elem1->read($input);
 					
 					$this->storeUpdateParamList[$_size1++] = $elem1;
@@ -1202,7 +1202,7 @@ class VendorStoreApiService_updateWarehouseInfo_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -1213,7 +1213,7 @@ class VendorStoreApiService_updateWarehouseInfo_args {
 		
 		if (!is_array($this->storeUpdateParamList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1222,7 +1222,7 @@ class VendorStoreApiService_updateWarehouseInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1505,7 +1505,7 @@ class VendorStoreApiService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1528,7 +1528,7 @@ class VendorStoreApiService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

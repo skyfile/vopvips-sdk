@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\lbs\lpc\service\entity;
+namespace Voop\com\vip\lbs\lpc\service\entity;
 
 class GetExplainedBarcodesResponse {
 	
@@ -71,7 +71,7 @@ class GetExplainedBarcodesResponse {
 				
 				$needSkip = false;
 				
-				$this->header = new \com\vip\lbs\lpc\service\common\LbsResponseHeader();
+				$this->header = new \Voop\com\vip\lbs\lpc\service\common\LbsResponseHeader();
 				$this->header->read($input);
 				
 			}
@@ -94,7 +94,7 @@ class GetExplainedBarcodesResponse {
 						
 						$val1 = null;
 						
-						$val1 = new \com\vip\lbs\lpc\service\entity\ExplainedResultDetail();
+						$val1 = new \Voop\com\vip\lbs\lpc\service\entity\ExplainedResultDetail();
 						$val1->read($input);
 						
 						$this->explainedResultMap[$key1] = $val1;
@@ -134,7 +134,7 @@ class GetExplainedBarcodesResponse {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -147,7 +147,7 @@ class GetExplainedBarcodesResponse {
 			
 			if (!is_array($this->explainedResultMap)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -158,7 +158,7 @@ class GetExplainedBarcodesResponse {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

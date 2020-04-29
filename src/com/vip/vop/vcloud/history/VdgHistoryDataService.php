@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\history;
+namespace Voop\com\vip\vop\vcloud\history;
 interface VdgHistoryDataServiceIf{
 	
 	
@@ -37,14 +37,14 @@ class _VdgHistoryDataServiceClient extends \Osp\Base\OspStub implements \com\vip
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\vcloud\history\VdgHistoryDataService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\vcloud\history\VdgHistoryDataService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\vcloud\history\VdgHistoryDataService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\vcloud\history\VdgHistoryDataService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,7 +63,7 @@ class _VdgHistoryDataServiceClient extends \Osp\Base\OspStub implements \com\vip
 	public function send_pullHistoryOrders( $channelId, $partnerId, $orderSn, $beginTime, $maxId){
 		
 		$this->initInvocation("pullHistoryOrders");
-		$args = new \com\vip\vop\vcloud\history\VdgHistoryDataService_pullHistoryOrders_args();
+		$args = new \Voop\com\vip\vop\vcloud\history\VdgHistoryDataService_pullHistoryOrders_args();
 		
 		$args->channelId = $channelId;
 		
@@ -80,7 +80,7 @@ class _VdgHistoryDataServiceClient extends \Osp\Base\OspStub implements \com\vip
 	
 	public function recv_pullHistoryOrders(){
 		
-		$result = new \com\vip\vop\vcloud\history\VdgHistoryDataService_pullHistoryOrders_result();
+		$result = new \Voop\com\vip\vop\vcloud\history\VdgHistoryDataService_pullHistoryOrders_result();
 		$this->receive_base($result);
 		
 	}
@@ -95,7 +95,7 @@ class _VdgHistoryDataServiceClient extends \Osp\Base\OspStub implements \com\vip
 	public function send_synHistoricProductAndPrice( $bucket, $key){
 		
 		$this->initInvocation("synHistoricProductAndPrice");
-		$args = new \com\vip\vop\vcloud\history\VdgHistoryDataService_synHistoricProductAndPrice_args();
+		$args = new \Voop\com\vip\vop\vcloud\history\VdgHistoryDataService_synHistoricProductAndPrice_args();
 		
 		$args->bucket = $bucket;
 		
@@ -106,7 +106,7 @@ class _VdgHistoryDataServiceClient extends \Osp\Base\OspStub implements \com\vip
 	
 	public function recv_synHistoricProductAndPrice(){
 		
-		$result = new \com\vip\vop\vcloud\history\VdgHistoryDataService_synHistoricProductAndPrice_result();
+		$result = new \Voop\com\vip\vop\vcloud\history\VdgHistoryDataService_synHistoricProductAndPrice_result();
 		$this->receive_base($result);
 		
 	}
@@ -471,7 +471,7 @@ class VdgHistoryDataService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -494,7 +494,7 @@ class VdgHistoryDataService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

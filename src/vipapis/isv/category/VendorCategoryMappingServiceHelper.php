@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\isv\category;
+namespace Voop\vipapis\isv\category;
 require_once dirname(__FILE__).'/VendorCategoryMappingService.php';
 class VendorCategoryMappingServiceHelper extends _VendorCategoryMappingServiceClient{
 	

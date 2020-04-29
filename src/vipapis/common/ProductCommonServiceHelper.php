@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\common;
+namespace Voop\vipapis\common;
 require_once dirname(__FILE__).'/ProductCommonService.php';
 class ProductCommonServiceHelper extends _ProductCommonServiceClient{
 	

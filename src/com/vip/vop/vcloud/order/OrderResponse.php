@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\order;
+namespace Voop\com\vip\vop\vcloud\order;
 
 class OrderResponse {
 	
@@ -81,7 +81,7 @@ class OrderResponse {
 				
 				$needSkip = false;
 				
-				$this->pagination = new \com\vip\vop\vcloud\common\api\Pagination();
+				$this->pagination = new \Voop\com\vip\vop\vcloud\common\api\Pagination();
 				$this->pagination->read($input);
 				
 			}
@@ -102,7 +102,7 @@ class OrderResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\vcloud\order\Order();
+						$elem0 = new \Voop\com\vip\vop\vcloud\order\Order();
 						$elem0->read($input);
 						
 						$this->orders[$_size0++] = $elem0;
@@ -133,7 +133,7 @@ class OrderResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\vop\vcloud\order\OrderGoods();
+						$elem1 = new \Voop\com\vip\vop\vcloud\order\OrderGoods();
 						$elem1->read($input);
 						
 						$this->orderGoodsList[$_size1++] = $elem1;
@@ -175,7 +175,7 @@ class OrderResponse {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -190,7 +190,7 @@ class OrderResponse {
 			
 			if (!is_array($this->orders)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -199,7 +199,7 @@ class OrderResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -218,7 +218,7 @@ class OrderResponse {
 			
 			if (!is_array($this->orderGoodsList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -227,7 +227,7 @@ class OrderResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

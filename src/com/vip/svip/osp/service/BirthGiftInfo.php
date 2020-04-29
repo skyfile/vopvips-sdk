@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\svip\osp\service;
+namespace Voop\com\vip\svip\osp\service;
 
 class BirthGiftInfo {
 	
@@ -130,7 +130,7 @@ class BirthGiftInfo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\svip\osp\service\BirthGiftPrize();
+						$elem0 = new \Voop\com\vip\svip\osp\service\BirthGiftPrize();
 						$elem0->read($input);
 						
 						$this->prizeList[$_size0++] = $elem0;
@@ -195,7 +195,7 @@ class BirthGiftInfo {
 			
 			if (!is_array($this->prizeList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -204,7 +204,7 @@ class BirthGiftInfo {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying\model;
+namespace Voop\com\vip\xstore\cc\bulkbuying\model;
 
 class PaginationModel {
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service;
+namespace Voop\com\vip\xstore\user\face\service;
 
 class XstoreCameraBatchDelParam {
 	
@@ -108,7 +108,7 @@ class XstoreCameraBatchDelParam {
 		
 		if (!is_array($this->cameraIdList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

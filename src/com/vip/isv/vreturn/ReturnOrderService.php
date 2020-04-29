@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\vreturn;
+namespace Voop\com\vip\isv\vreturn;
 interface ReturnOrderServiceIf{
 	
 	
@@ -16,9 +16,9 @@ interface ReturnOrderServiceIf{
 	
 	public function doMatch();
 	
-	public function getReturnDeliveryGoods(\com\vip\isv\vreturn\GetReturnDeliveryGoodsRequest $request);
+	public function getReturnDeliveryGoods(\Voop\com\vip\isv\vreturn\GetReturnDeliveryGoodsRequest $request);
 	
-	public function getReturnOrder(\com\vip\isv\vreturn\GetReturnOrderRequest $request);
+	public function getReturnOrder(\Voop\com\vip\isv\vreturn\GetReturnOrderRequest $request);
 	
 	public function healthCheck();
 	
@@ -41,7 +41,7 @@ class _ReturnOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\is
 	public function send_addDefectiveGoods( $request){
 		
 		$this->initInvocation("addDefectiveGoods");
-		$args = new \com\vip\isv\vreturn\ReturnOrderService_addDefectiveGoods_args();
+		$args = new \Voop\com\vip\isv\vreturn\ReturnOrderService_addDefectiveGoods_args();
 		
 		$args->request = $request;
 		
@@ -50,7 +50,7 @@ class _ReturnOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\is
 	
 	public function recv_addDefectiveGoods(){
 		
-		$result = new \com\vip\isv\vreturn\ReturnOrderService_addDefectiveGoods_result();
+		$result = new \Voop\com\vip\isv\vreturn\ReturnOrderService_addDefectiveGoods_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -69,29 +69,29 @@ class _ReturnOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\is
 	public function send_doMatch(){
 		
 		$this->initInvocation("doMatch");
-		$args = new \com\vip\isv\vreturn\ReturnOrderService_doMatch_args();
+		$args = new \Voop\com\vip\isv\vreturn\ReturnOrderService_doMatch_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_doMatch(){
 		
-		$result = new \com\vip\isv\vreturn\ReturnOrderService_doMatch_result();
+		$result = new \Voop\com\vip\isv\vreturn\ReturnOrderService_doMatch_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function getReturnDeliveryGoods(\com\vip\isv\vreturn\GetReturnDeliveryGoodsRequest $request){
+	public function getReturnDeliveryGoods(\Voop\com\vip\isv\vreturn\GetReturnDeliveryGoodsRequest $request){
 		
 		$this->send_getReturnDeliveryGoods( $request);
 		return $this->recv_getReturnDeliveryGoods();
 	}
 	
-	public function send_getReturnDeliveryGoods(\com\vip\isv\vreturn\GetReturnDeliveryGoodsRequest $request){
+	public function send_getReturnDeliveryGoods(\Voop\com\vip\isv\vreturn\GetReturnDeliveryGoodsRequest $request){
 		
 		$this->initInvocation("getReturnDeliveryGoods");
-		$args = new \com\vip\isv\vreturn\ReturnOrderService_getReturnDeliveryGoods_args();
+		$args = new \Voop\com\vip\isv\vreturn\ReturnOrderService_getReturnDeliveryGoods_args();
 		
 		$args->request = $request;
 		
@@ -100,7 +100,7 @@ class _ReturnOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\is
 	
 	public function recv_getReturnDeliveryGoods(){
 		
-		$result = new \com\vip\isv\vreturn\ReturnOrderService_getReturnDeliveryGoods_result();
+		$result = new \Voop\com\vip\isv\vreturn\ReturnOrderService_getReturnDeliveryGoods_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -110,16 +110,16 @@ class _ReturnOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\is
 	}
 	
 	
-	public function getReturnOrder(\com\vip\isv\vreturn\GetReturnOrderRequest $request){
+	public function getReturnOrder(\Voop\com\vip\isv\vreturn\GetReturnOrderRequest $request){
 		
 		$this->send_getReturnOrder( $request);
 		return $this->recv_getReturnOrder();
 	}
 	
-	public function send_getReturnOrder(\com\vip\isv\vreturn\GetReturnOrderRequest $request){
+	public function send_getReturnOrder(\Voop\com\vip\isv\vreturn\GetReturnOrderRequest $request){
 		
 		$this->initInvocation("getReturnOrder");
-		$args = new \com\vip\isv\vreturn\ReturnOrderService_getReturnOrder_args();
+		$args = new \Voop\com\vip\isv\vreturn\ReturnOrderService_getReturnOrder_args();
 		
 		$args->request = $request;
 		
@@ -128,7 +128,7 @@ class _ReturnOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\is
 	
 	public function recv_getReturnOrder(){
 		
-		$result = new \com\vip\isv\vreturn\ReturnOrderService_getReturnOrder_result();
+		$result = new \Voop\com\vip\isv\vreturn\ReturnOrderService_getReturnOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -147,14 +147,14 @@ class _ReturnOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\is
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\isv\vreturn\ReturnOrderService_healthCheck_args();
+		$args = new \Voop\com\vip\isv\vreturn\ReturnOrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\isv\vreturn\ReturnOrderService_healthCheck_result();
+		$result = new \Voop\com\vip\isv\vreturn\ReturnOrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -218,7 +218,7 @@ class ReturnOrderService_addDefectiveGoods_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\isv\vreturn\DefectiveGoods();
+					$elem0 = new \Voop\com\vip\isv\vreturn\DefectiveGoods();
 					$elem0->read($input);
 					
 					$this->request[$_size0++] = $elem0;
@@ -249,7 +249,7 @@ class ReturnOrderService_addDefectiveGoods_args {
 		
 		if (!is_array($this->request)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -258,7 +258,7 @@ class ReturnOrderService_addDefectiveGoods_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -365,7 +365,7 @@ class ReturnOrderService_getReturnDeliveryGoods_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\isv\vreturn\GetReturnDeliveryGoodsRequest();
+			$this->request = new \Voop\com\vip\isv\vreturn\GetReturnDeliveryGoodsRequest();
 			$this->request->read($input);
 			
 		}
@@ -386,7 +386,7 @@ class ReturnOrderService_getReturnDeliveryGoods_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -443,7 +443,7 @@ class ReturnOrderService_getReturnOrder_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\isv\vreturn\GetReturnOrderRequest();
+			$this->request = new \Voop\com\vip\isv\vreturn\GetReturnOrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -464,7 +464,7 @@ class ReturnOrderService_getReturnOrder_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -607,7 +607,7 @@ class ReturnOrderService_addDefectiveGoods_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -722,7 +722,7 @@ class ReturnOrderService_getReturnDeliveryGoods_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\isv\vreturn\GetReturnDeliveryGoodsResponse();
+			$this->success = new \Voop\com\vip\isv\vreturn\GetReturnDeliveryGoodsResponse();
 			$this->success->read($input);
 			
 		}
@@ -745,7 +745,7 @@ class ReturnOrderService_getReturnDeliveryGoods_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -804,7 +804,7 @@ class ReturnOrderService_getReturnOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\isv\vreturn\GetReturnOrderResponse();
+			$this->success = new \Voop\com\vip\isv\vreturn\GetReturnOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -827,7 +827,7 @@ class ReturnOrderService_getReturnOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -886,7 +886,7 @@ class ReturnOrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -909,7 +909,7 @@ class ReturnOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

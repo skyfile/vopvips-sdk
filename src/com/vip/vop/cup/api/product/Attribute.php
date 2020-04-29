@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\product;
+namespace Voop\com\vip\vop\cup\api\product;
 
 class Attribute {
 	
@@ -216,7 +216,7 @@ class Attribute {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\vop\cup\api\product\AttributeValue();
+						$elem1 = new \Voop\com\vip\vop\cup\api\product\AttributeValue();
 						$elem1->read($input);
 						
 						$this->values[$_size1++] = $elem1;
@@ -283,7 +283,7 @@ class Attribute {
 			
 			$xfer += $output->writeFieldBegin('type');
 			
-			$em = new \com\vip\vop\cup\api\product\AttributeType; 
+			$em = new \Voop\com\vip\vop\cup\api\product\AttributeType; 
 			$output->writeString($em::$__names[$this->type]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -294,7 +294,7 @@ class Attribute {
 			
 			$xfer += $output->writeFieldBegin('data_type');
 			
-			$em = new \com\vip\vop\cup\api\product\DataType; 
+			$em = new \Voop\com\vip\vop\cup\api\product\DataType; 
 			$output->writeString($em::$__names[$this->data_type]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -316,7 +316,7 @@ class Attribute {
 			
 			if (!is_array($this->values)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -325,7 +325,7 @@ class Attribute {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

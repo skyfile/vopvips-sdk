@@ -1,6 +1,6 @@
 <?php
 
-namespace Osp\Context;
+namespace Voop\Osp\Context;
 
 /**
  * 调用上下文

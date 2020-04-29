@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\top\carrier\bizservice;
+namespace Voop\com\vip\top\carrier\bizservice;
 require_once dirname(__FILE__).'/CarrierService.php';
 class CarrierServiceHelper extends _CarrierServiceClient{
 	

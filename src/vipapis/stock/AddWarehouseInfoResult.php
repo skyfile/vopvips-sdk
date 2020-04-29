@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\stock;
+namespace Voop\vipapis\stock;
 
 class AddWarehouseInfoResult {
 	
@@ -108,7 +108,7 @@ class AddWarehouseInfoResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

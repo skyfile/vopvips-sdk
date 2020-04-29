@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\store;
+namespace Voop\vipapis\marketplace\store;
 require_once dirname(__FILE__).'/StoreInfoService.php';
 class StoreInfoServiceHelper extends _StoreInfoServiceClient{
 	

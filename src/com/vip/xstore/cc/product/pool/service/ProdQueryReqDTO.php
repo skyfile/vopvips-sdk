@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\product\pool\service;
+namespace Voop\com\vip\xstore\cc\product\pool\service;
 
 class ProdQueryReqDTO {
 	
@@ -110,7 +110,7 @@ class ProdQueryReqDTO {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\xstore\cc\product\pool\service\QueryItem();
+						$elem0 = new \Voop\com\vip\xstore\cc\product\pool\service\QueryItem();
 						$elem0->read($input);
 						
 						$this->queryItems[$_size0++] = $elem0;
@@ -160,7 +160,7 @@ class ProdQueryReqDTO {
 		
 		if (!is_array($this->queryItems)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -169,7 +169,7 @@ class ProdQueryReqDTO {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

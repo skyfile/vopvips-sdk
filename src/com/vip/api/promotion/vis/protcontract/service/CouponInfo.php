@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\protcontract\service;
+namespace Voop\com\vip\api\promotion\vis\protcontract\service;
 
 class CouponInfo {
 	
@@ -161,7 +161,7 @@ class CouponInfo {
 				
 				$needSkip = false;
 				
-				$this->vendorBearInfo = new \com\vip\api\promotion\vis\protcontract\service\VendorBearInfo();
+				$this->vendorBearInfo = new \Voop\com\vip\api\promotion\vis\protcontract\service\VendorBearInfo();
 				$this->vendorBearInfo->read($input);
 				
 			}
@@ -238,7 +238,7 @@ class CouponInfo {
 			
 			if (!is_object($this->vendorBearInfo)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->vendorBearInfo->write($output);

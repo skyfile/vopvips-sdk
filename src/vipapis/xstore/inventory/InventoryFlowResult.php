@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\inventory;
+namespace Voop\vipapis\xstore\inventory;
 
 class InventoryFlowResult {
 	
@@ -108,7 +108,7 @@ class InventoryFlowResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

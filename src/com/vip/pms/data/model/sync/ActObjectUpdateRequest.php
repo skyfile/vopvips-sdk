@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\model\sync;
+namespace Voop\com\vip\pms\data\model\sync;
 
 class ActObjectUpdateRequest {
 	
@@ -120,7 +120,7 @@ class ActObjectUpdateRequest {
 				
 				$needSkip = false;
 				
-				$this->addObjectMemberModel = new \com\vip\pms\data\model\sync\ActObjectMemberModel();
+				$this->addObjectMemberModel = new \Voop\com\vip\pms\data\model\sync\ActObjectMemberModel();
 				$this->addObjectMemberModel->read($input);
 				
 			}
@@ -157,7 +157,7 @@ class ActObjectUpdateRequest {
 			
 			if (!is_array($this->delRangIdList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -179,7 +179,7 @@ class ActObjectUpdateRequest {
 			
 			if (!is_object($this->addObjectMemberModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->addObjectMemberModel->write($output);

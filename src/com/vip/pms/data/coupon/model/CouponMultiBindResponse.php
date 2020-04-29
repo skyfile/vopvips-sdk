@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\coupon\model;
+namespace Voop\com\vip\pms\data\coupon\model;
 
 class CouponMultiBindResponse {
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vipapis\productsale\service;
+namespace Voop\com\vip\vipapis\productsale\service;
 
 class ProductSaleInfosParam {
 	
@@ -464,7 +464,7 @@ class ProductSaleInfosParam {
 			
 			if (!is_array($this->globalIds)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -486,7 +486,7 @@ class ProductSaleInfosParam {
 			
 			if (!is_array($this->serialNos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -508,7 +508,7 @@ class ProductSaleInfosParam {
 			
 			if (!is_array($this->vendorCodes)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -530,7 +530,7 @@ class ProductSaleInfosParam {
 			
 			if (!is_array($this->itemDescs)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -552,7 +552,7 @@ class ProductSaleInfosParam {
 			
 			if (!is_array($this->itemNos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -610,7 +610,7 @@ class ProductSaleInfosParam {
 			
 			if (!is_array($this->auditStatus)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -650,7 +650,7 @@ class ProductSaleInfosParam {
 			
 			if (!is_array($this->orderSns)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

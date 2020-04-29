@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\overseas;
+namespace Voop\vipapis\overseas;
 
 class PoInfo {
 	
@@ -420,7 +420,7 @@ class PoInfo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\overseas\PoDetail();
+						$elem0 = new \Voop\vipapis\overseas\PoDetail();
 						$elem0->read($input);
 						
 						$this->po_detail_list[$_size0++] = $elem0;
@@ -449,7 +449,7 @@ class PoInfo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -625,7 +625,7 @@ class PoInfo {
 			
 			if (!is_array($this->po_detail_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -634,7 +634,7 @@ class PoInfo {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

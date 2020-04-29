@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying\service;
+namespace Voop\com\vip\xstore\cc\bulkbuying\service;
 
 class AddressSimpleInfo {
 	

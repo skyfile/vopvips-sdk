@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\tpc\api\model;
+namespace Voop\com\vip\tpc\api\model;
 
 class CarrierTakingAwayGoodsRequest {
 	
@@ -81,7 +81,7 @@ class CarrierTakingAwayGoodsRequest {
 				
 				$needSkip = false;
 				
-				$this->header = new \com\vip\tpc\api\model\common\TpcRequestHeader();
+				$this->header = new \Voop\com\vip\tpc\api\model\common\TpcRequestHeader();
 				$this->header->read($input);
 				
 			}
@@ -112,7 +112,7 @@ class CarrierTakingAwayGoodsRequest {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\tpc\api\model\TakingAwayGoodsRequest();
+						$elem1 = new \Voop\com\vip\tpc\api\model\TakingAwayGoodsRequest();
 						$elem1->read($input);
 						
 						$this->takingAwayGoodsRequests[$_size1++] = $elem1;
@@ -152,7 +152,7 @@ class CarrierTakingAwayGoodsRequest {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -168,7 +168,7 @@ class CarrierTakingAwayGoodsRequest {
 		
 		if (!is_array($this->takingAwayGoodsRequests)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeSetBegin();
@@ -177,7 +177,7 @@ class CarrierTakingAwayGoodsRequest {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

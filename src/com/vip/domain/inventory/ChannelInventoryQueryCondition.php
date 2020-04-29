@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\domain\inventory;
+namespace Voop\com\vip\domain\inventory;
 
 class ChannelInventoryQueryCondition {
 	
@@ -351,14 +351,14 @@ class ChannelInventoryQueryCondition {
 		
 		$xfer += $output->writeFieldBegin('warehouse_code');
 		
-		$em = new \com\vip\domain\inventory\WarehouseCode; 
+		$em = new \Voop\com\vip\domain\inventory\WarehouseCode; 
 		$output->writeString($em::$__names[$this->warehouse_code]);  
 		
 		$xfer += $output->writeFieldEnd();
 		
 		$xfer += $output->writeFieldBegin('channel');
 		
-		$em = new \com\vip\domain\inventory\ChannelInventoryChannel; 
+		$em = new \Voop\com\vip\domain\inventory\ChannelInventoryChannel; 
 		$output->writeString($em::$__names[$this->channel]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -367,14 +367,14 @@ class ChannelInventoryQueryCondition {
 		
 		if (!is_array($this->grade)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
 		foreach ($this->grade as $iter0){
 			
 			
-			$em = new \com\vip\domain\inventory\ChannelInventoryGrade; 
+			$em = new \Voop\com\vip\domain\inventory\ChannelInventoryGrade; 
 			$output->writeString($em::$__names[$iter0]);  
 			
 		}
@@ -387,7 +387,7 @@ class ChannelInventoryQueryCondition {
 			
 			$xfer += $output->writeFieldBegin('status');
 			
-			$em = new \com\vip\domain\inventory\ChannelInventoryStatus; 
+			$em = new \Voop\com\vip\domain\inventory\ChannelInventoryStatus; 
 			$output->writeString($em::$__names[$this->status]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -416,7 +416,7 @@ class ChannelInventoryQueryCondition {
 			
 			$xfer += $output->writeFieldBegin('in_vip_sales_plan');
 			
-			$em = new \com\vip\domain\inventory\ChannelInventoryInVipSalesPlan; 
+			$em = new \Voop\com\vip\domain\inventory\ChannelInventoryInVipSalesPlan; 
 			$output->writeString($em::$__names[$this->in_vip_sales_plan]);  
 			
 			$xfer += $output->writeFieldEnd();

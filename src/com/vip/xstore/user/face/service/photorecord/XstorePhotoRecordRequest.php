@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service\photorecord;
+namespace Voop\com\vip\xstore\user\face\service\photorecord;
 
 class XstorePhotoRecordRequest {
 	
@@ -151,7 +151,7 @@ class XstorePhotoRecordRequest {
 				
 				$needSkip = false;
 				
-				$this->originPhoto = new \com\vip\xstore\user\face\service\photorecord\XstorePhotoInputData();
+				$this->originPhoto = new \Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoInputData();
 				$this->originPhoto->read($input);
 				
 			}
@@ -172,7 +172,7 @@ class XstorePhotoRecordRequest {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\xstore\user\face\service\photorecord\XstorePhotoInputData();
+						$elem0 = new \Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoInputData();
 						$elem0->read($input);
 						
 						$this->cutPhotos[$_size0++] = $elem0;
@@ -262,7 +262,7 @@ class XstorePhotoRecordRequest {
 		
 		if (!is_object($this->originPhoto)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->originPhoto->write($output);
@@ -273,7 +273,7 @@ class XstorePhotoRecordRequest {
 		
 		if (!is_array($this->cutPhotos)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -282,7 +282,7 @@ class XstorePhotoRecordRequest {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

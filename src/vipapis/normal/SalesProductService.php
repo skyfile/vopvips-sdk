@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\normal;
+namespace Voop\vipapis\normal;
 interface SalesProductServiceIf{
 	
 	
@@ -37,14 +37,14 @@ class _SalesProductServiceClient extends \Osp\Base\OspStub implements \vipapis\n
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\normal\SalesProductService_healthCheck_args();
+		$args = new \Voop\vipapis\normal\SalesProductService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\normal\SalesProductService_healthCheck_result();
+		$result = new \Voop\vipapis\normal\SalesProductService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,7 +63,7 @@ class _SalesProductServiceClient extends \Osp\Base\OspStub implements \vipapis\n
 	public function send_listingSpu( $vendor_id, $cooperation_no, $warehouse_supplier, $sn){
 		
 		$this->initInvocation("listingSpu");
-		$args = new \vipapis\normal\SalesProductService_listingSpu_args();
+		$args = new \Voop\vipapis\normal\SalesProductService_listingSpu_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -78,7 +78,7 @@ class _SalesProductServiceClient extends \Osp\Base\OspStub implements \vipapis\n
 	
 	public function recv_listingSpu(){
 		
-		$result = new \vipapis\normal\SalesProductService_listingSpu_result();
+		$result = new \Voop\vipapis\normal\SalesProductService_listingSpu_result();
 		$this->receive_base($result);
 		
 	}
@@ -93,7 +93,7 @@ class _SalesProductServiceClient extends \Osp\Base\OspStub implements \vipapis\n
 	public function send_unlistingSpu( $vendor_id, $cooperation_no, $warehouse_supplier, $sn){
 		
 		$this->initInvocation("unlistingSpu");
-		$args = new \vipapis\normal\SalesProductService_unlistingSpu_args();
+		$args = new \Voop\vipapis\normal\SalesProductService_unlistingSpu_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -108,7 +108,7 @@ class _SalesProductServiceClient extends \Osp\Base\OspStub implements \vipapis\n
 	
 	public function recv_unlistingSpu(){
 		
-		$result = new \vipapis\normal\SalesProductService_unlistingSpu_result();
+		$result = new \Voop\vipapis\normal\SalesProductService_unlistingSpu_result();
 		$this->receive_base($result);
 		
 	}
@@ -505,7 +505,7 @@ class SalesProductService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -528,7 +528,7 @@ class SalesProductService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

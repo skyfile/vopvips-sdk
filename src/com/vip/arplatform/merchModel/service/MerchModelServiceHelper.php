@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\arplatform\merchModel\service;
+namespace Voop\com\vip\arplatform\merchModel\service;
 require_once dirname(__FILE__).'/MerchModelService.php';
 class MerchModelServiceHelper extends _MerchModelServiceClient{
 	

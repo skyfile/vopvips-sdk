@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 
 class ProductSkuInfo {
 	
@@ -1012,7 +1012,7 @@ class ProductSkuInfo {
 						
 						$elem4 = null;
 						
-						$elem4 = new \vipapis\product\ProductImage();
+						$elem4 = new \Voop\vipapis\product\ProductImage();
 						$elem4->read($input);
 						
 						$this->spu_image_list[$_size4++] = $elem4;
@@ -1043,7 +1043,7 @@ class ProductSkuInfo {
 						
 						$elem5 = null;
 						
-						$elem5 = new \vipapis\product\ProductImage();
+						$elem5 = new \Voop\vipapis\product\ProductImage();
 						$elem5->read($input);
 						
 						$this->color_image_list[$_size5++] = $elem5;
@@ -1072,7 +1072,7 @@ class ProductSkuInfo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -1159,7 +1159,7 @@ class ProductSkuInfo {
 			
 			if (!is_array($this->product_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -1183,7 +1183,7 @@ class ProductSkuInfo {
 			
 			if (!is_array($this->flat_sale_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -1232,7 +1232,7 @@ class ProductSkuInfo {
 			
 			$xfer += $output->writeFieldBegin('unit');
 			
-			$em = new \vipapis\product\Unit; 
+			$em = new \Voop\vipapis\product\Unit; 
 			$output->writeString($em::$__names[$this->unit]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -1414,7 +1414,7 @@ class ProductSkuInfo {
 			
 			$xfer += $output->writeFieldBegin('product_type');
 			
-			$em = new \vipapis\product\ProductType; 
+			$em = new \Voop\vipapis\product\ProductType; 
 			$output->writeString($em::$__names[$this->product_type]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -1443,7 +1443,7 @@ class ProductSkuInfo {
 			
 			$xfer += $output->writeFieldBegin('currency');
 			
-			$em = new \vipapis\common\Currency; 
+			$em = new \Voop\vipapis\common\Currency; 
 			$output->writeString($em::$__names[$this->currency]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -1483,7 +1483,7 @@ class ProductSkuInfo {
 			
 			if (!is_array($this->vendor_product_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -1507,7 +1507,7 @@ class ProductSkuInfo {
 			
 			if (!is_array($this->spu_image_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1516,7 +1516,7 @@ class ProductSkuInfo {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1535,7 +1535,7 @@ class ProductSkuInfo {
 			
 			if (!is_array($this->color_image_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1544,7 +1544,7 @@ class ProductSkuInfo {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

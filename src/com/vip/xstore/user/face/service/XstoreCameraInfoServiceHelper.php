@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service;
+namespace Voop\com\vip\xstore\user\face\service;
 require_once dirname(__FILE__).'/XstoreCameraInfoService.php';
 class XstoreCameraInfoServiceHelper extends _XstoreCameraInfoServiceClient{
 	

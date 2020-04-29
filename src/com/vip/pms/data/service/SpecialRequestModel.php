@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class SpecialRequestModel {
 	
@@ -71,7 +71,7 @@ class SpecialRequestModel {
 				
 				$needSkip = false;
 				
-				$this->specialCoreModel = new \com\vip\pms\data\service\PmsSpecialCoreModel();
+				$this->specialCoreModel = new \Voop\com\vip\pms\data\service\PmsSpecialCoreModel();
 				$this->specialCoreModel->read($input);
 				
 			}
@@ -83,7 +83,7 @@ class SpecialRequestModel {
 				
 				$needSkip = false;
 				
-				$this->speConditionModel = new \com\vip\pms\data\service\PmsSpeConditionModel();
+				$this->speConditionModel = new \Voop\com\vip\pms\data\service\PmsSpeConditionModel();
 				$this->speConditionModel->read($input);
 				
 			}
@@ -113,7 +113,7 @@ class SpecialRequestModel {
 		
 		if (!is_object($this->specialCoreModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->specialCoreModel->write($output);
@@ -126,7 +126,7 @@ class SpecialRequestModel {
 			
 			if (!is_object($this->speConditionModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->speConditionModel->write($output);

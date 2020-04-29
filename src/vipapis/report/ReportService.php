@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\report;
+namespace Voop\vipapis\report;
 interface ReportServiceIf{
 	
 	
@@ -35,7 +35,7 @@ class _ReportServiceClient extends \Osp\Base\OspStub implements \vipapis\report\
 	public function send_getCountOfServiceInvoke( $invoke_date){
 		
 		$this->initInvocation("getCountOfServiceInvoke");
-		$args = new \vipapis\report\ReportService_getCountOfServiceInvoke_args();
+		$args = new \Voop\vipapis\report\ReportService_getCountOfServiceInvoke_args();
 		
 		$args->invoke_date = $invoke_date;
 		
@@ -44,7 +44,7 @@ class _ReportServiceClient extends \Osp\Base\OspStub implements \vipapis\report\
 	
 	public function recv_getCountOfServiceInvoke(){
 		
-		$result = new \vipapis\report\ReportService_getCountOfServiceInvoke_result();
+		$result = new \Voop\vipapis\report\ReportService_getCountOfServiceInvoke_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,14 +63,14 @@ class _ReportServiceClient extends \Osp\Base\OspStub implements \vipapis\report\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\report\ReportService_healthCheck_args();
+		$args = new \Voop\vipapis\report\ReportService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\report\ReportService_healthCheck_result();
+		$result = new \Voop\vipapis\report\ReportService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -250,7 +250,7 @@ class ReportService_getCountOfServiceInvoke_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\report\CountOfServiceInvoke();
+					$elem0 = new \Voop\vipapis\report\CountOfServiceInvoke();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -283,7 +283,7 @@ class ReportService_getCountOfServiceInvoke_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -292,7 +292,7 @@ class ReportService_getCountOfServiceInvoke_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -355,7 +355,7 @@ class ReportService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -378,7 +378,7 @@ class ReportService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipmax\coupon;
+namespace Voop\vipapis\vipmax\coupon;
 
 class SubmitCouponInfoRequest {
 	
@@ -140,7 +140,7 @@ class SubmitCouponInfoRequest {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\vipmax\coupon\OrderSku();
+						$elem0 = new \Voop\vipapis\vipmax\coupon\OrderSku();
 						$elem0->read($input);
 						
 						$this->order_skus[$_size0++] = $elem0;
@@ -171,7 +171,7 @@ class SubmitCouponInfoRequest {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\vipmax\coupon\CouponInfo();
+						$elem1 = new \Voop\vipapis\vipmax\coupon\CouponInfo();
 						$elem1->read($input);
 						
 						$this->coupon_sns[$_size1++] = $elem1;
@@ -190,7 +190,7 @@ class SubmitCouponInfoRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -226,7 +226,7 @@ class SubmitCouponInfoRequest {
 		
 		if (!is_array($this->order_skus)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -235,7 +235,7 @@ class SubmitCouponInfoRequest {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -250,7 +250,7 @@ class SubmitCouponInfoRequest {
 		
 		if (!is_array($this->coupon_sns)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -259,7 +259,7 @@ class SubmitCouponInfoRequest {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

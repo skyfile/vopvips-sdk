@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\shanshan\outlet;
+namespace Voop\vipapis\shanshan\outlet;
 
 class OnlineOrderResult {
 	
@@ -71,7 +71,7 @@ class OnlineOrderResult {
 				
 				$needSkip = false;
 				
-				$this->online_order = new \vipapis\shanshan\outlet\OnlineOrder();
+				$this->online_order = new \Voop\vipapis\shanshan\outlet\OnlineOrder();
 				$this->online_order->read($input);
 				
 			}
@@ -92,7 +92,7 @@ class OnlineOrderResult {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\shanshan\outlet\OnlineOrderProduct();
+						$elem0 = new \Voop\vipapis\shanshan\outlet\OnlineOrderProduct();
 						$elem0->read($input);
 						
 						$this->order_prodcuts[$_size0++] = $elem0;
@@ -111,7 +111,7 @@ class OnlineOrderResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -134,7 +134,7 @@ class OnlineOrderResult {
 			
 			if (!is_object($this->online_order)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->online_order->write($output);
@@ -149,7 +149,7 @@ class OnlineOrderResult {
 			
 			if (!is_array($this->order_prodcuts)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -158,7 +158,7 @@ class OnlineOrderResult {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

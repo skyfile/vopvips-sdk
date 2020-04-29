@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 
 class CpsUnionPidGenResponse {
 	
@@ -90,7 +90,7 @@ class CpsUnionPidGenResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\adp\api\open\service\PidInfo();
+						$elem0 = new \Voop\com\vip\adp\api\open\service\PidInfo();
 						$elem0->read($input);
 						
 						$this->pidInfoList[$_size0++] = $elem0;
@@ -152,7 +152,7 @@ class CpsUnionPidGenResponse {
 			
 			if (!is_array($this->pidInfoList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -161,7 +161,7 @@ class CpsUnionPidGenResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

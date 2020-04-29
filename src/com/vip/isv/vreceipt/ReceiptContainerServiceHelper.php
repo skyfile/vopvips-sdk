@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\vreceipt;
+namespace Voop\com\vip\isv\vreceipt;
 require_once dirname(__FILE__).'/ReceiptContainerService.php';
 class ReceiptContainerServiceHelper extends _ReceiptContainerServiceClient{
 	

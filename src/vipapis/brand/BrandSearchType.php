@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\brand;
+namespace Voop\vipapis\brand;
 final class BrandSearchType{
 	
 	

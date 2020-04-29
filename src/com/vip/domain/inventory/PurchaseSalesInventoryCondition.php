@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\domain\inventory;
+namespace Voop\com\vip\domain\inventory;
 
 class PurchaseSalesInventoryCondition {
 	
@@ -286,21 +286,21 @@ class PurchaseSalesInventoryCondition {
 		
 		$xfer += $output->writeFieldBegin('query_type');
 		
-		$em = new \com\vip\domain\inventory\PurchaseSalesInventoryQueryType; 
+		$em = new \Voop\com\vip\domain\inventory\PurchaseSalesInventoryQueryType; 
 		$output->writeString($em::$__names[$this->query_type]);  
 		
 		$xfer += $output->writeFieldEnd();
 		
 		$xfer += $output->writeFieldBegin('distribution_model');
 		
-		$em = new \com\vip\domain\inventory\DistributionModel; 
+		$em = new \Voop\com\vip\domain\inventory\DistributionModel; 
 		$output->writeString($em::$__names[$this->distribution_model]);  
 		
 		$xfer += $output->writeFieldEnd();
 		
 		$xfer += $output->writeFieldBegin('warehouse_code');
 		
-		$em = new \com\vip\domain\inventory\WarehouseCode; 
+		$em = new \Voop\com\vip\domain\inventory\WarehouseCode; 
 		$output->writeString($em::$__names[$this->warehouse_code]);  
 		
 		$xfer += $output->writeFieldEnd();

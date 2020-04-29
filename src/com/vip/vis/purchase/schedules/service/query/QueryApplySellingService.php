@@ -8,19 +8,19 @@
 *
 */
 
-namespace com\vip\vis\purchase\schedules\service\query;
+namespace Voop\com\vip\vis\purchase\schedules\service\query;
 interface QueryApplySellingServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function queryApplySellingData(\com\vip\vis\purchase\schedules\service\query\QueryApplySellingParam $queryApplySellingParam);
+	public function queryApplySellingData(\Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingParam $queryApplySellingParam);
 	
-	public function queryApplySellingSimpleData(\com\vip\vis\purchase\schedules\service\query\QueryApplySellingSimpleParam $queryApplySellingSimpleParam);
+	public function queryApplySellingSimpleData(\Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingSimpleParam $queryApplySellingSimpleParam);
 	
-	public function queryScheduleInfoData(\com\vip\vis\purchase\schedules\service\query\QueryScheduleInfoApiParam $queryScheduleInfoApiParam);
+	public function queryScheduleInfoData(\Voop\com\vip\vis\purchase\schedules\service\query\QueryScheduleInfoApiParam $queryScheduleInfoApiParam);
 	
-	public function querySchedulesByShopCode(\com\vip\vis\purchase\schedules\service\query\QueryScheduleByShopCodeParam $queryScheduleByShopCodeParam);
+	public function querySchedulesByShopCode(\Voop\com\vip\vis\purchase\schedules\service\query\QueryScheduleByShopCodeParam $queryScheduleByShopCodeParam);
 	
 }
 
@@ -41,14 +41,14 @@ class _QueryApplySellingServiceClient extends \Osp\Base\OspStub implements \com\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_healthCheck_args();
+		$args = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_healthCheck_result();
+		$result = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -58,16 +58,16 @@ class _QueryApplySellingServiceClient extends \Osp\Base\OspStub implements \com\
 	}
 	
 	
-	public function queryApplySellingData(\com\vip\vis\purchase\schedules\service\query\QueryApplySellingParam $queryApplySellingParam){
+	public function queryApplySellingData(\Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingParam $queryApplySellingParam){
 		
 		$this->send_queryApplySellingData( $queryApplySellingParam);
 		return $this->recv_queryApplySellingData();
 	}
 	
-	public function send_queryApplySellingData(\com\vip\vis\purchase\schedules\service\query\QueryApplySellingParam $queryApplySellingParam){
+	public function send_queryApplySellingData(\Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingParam $queryApplySellingParam){
 		
 		$this->initInvocation("queryApplySellingData");
-		$args = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryApplySellingData_args();
+		$args = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryApplySellingData_args();
 		
 		$args->queryApplySellingParam = $queryApplySellingParam;
 		
@@ -76,7 +76,7 @@ class _QueryApplySellingServiceClient extends \Osp\Base\OspStub implements \com\
 	
 	public function recv_queryApplySellingData(){
 		
-		$result = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryApplySellingData_result();
+		$result = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryApplySellingData_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -86,16 +86,16 @@ class _QueryApplySellingServiceClient extends \Osp\Base\OspStub implements \com\
 	}
 	
 	
-	public function queryApplySellingSimpleData(\com\vip\vis\purchase\schedules\service\query\QueryApplySellingSimpleParam $queryApplySellingSimpleParam){
+	public function queryApplySellingSimpleData(\Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingSimpleParam $queryApplySellingSimpleParam){
 		
 		$this->send_queryApplySellingSimpleData( $queryApplySellingSimpleParam);
 		return $this->recv_queryApplySellingSimpleData();
 	}
 	
-	public function send_queryApplySellingSimpleData(\com\vip\vis\purchase\schedules\service\query\QueryApplySellingSimpleParam $queryApplySellingSimpleParam){
+	public function send_queryApplySellingSimpleData(\Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingSimpleParam $queryApplySellingSimpleParam){
 		
 		$this->initInvocation("queryApplySellingSimpleData");
-		$args = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryApplySellingSimpleData_args();
+		$args = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryApplySellingSimpleData_args();
 		
 		$args->queryApplySellingSimpleParam = $queryApplySellingSimpleParam;
 		
@@ -104,7 +104,7 @@ class _QueryApplySellingServiceClient extends \Osp\Base\OspStub implements \com\
 	
 	public function recv_queryApplySellingSimpleData(){
 		
-		$result = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryApplySellingSimpleData_result();
+		$result = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryApplySellingSimpleData_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -114,16 +114,16 @@ class _QueryApplySellingServiceClient extends \Osp\Base\OspStub implements \com\
 	}
 	
 	
-	public function queryScheduleInfoData(\com\vip\vis\purchase\schedules\service\query\QueryScheduleInfoApiParam $queryScheduleInfoApiParam){
+	public function queryScheduleInfoData(\Voop\com\vip\vis\purchase\schedules\service\query\QueryScheduleInfoApiParam $queryScheduleInfoApiParam){
 		
 		$this->send_queryScheduleInfoData( $queryScheduleInfoApiParam);
 		return $this->recv_queryScheduleInfoData();
 	}
 	
-	public function send_queryScheduleInfoData(\com\vip\vis\purchase\schedules\service\query\QueryScheduleInfoApiParam $queryScheduleInfoApiParam){
+	public function send_queryScheduleInfoData(\Voop\com\vip\vis\purchase\schedules\service\query\QueryScheduleInfoApiParam $queryScheduleInfoApiParam){
 		
 		$this->initInvocation("queryScheduleInfoData");
-		$args = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryScheduleInfoData_args();
+		$args = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryScheduleInfoData_args();
 		
 		$args->queryScheduleInfoApiParam = $queryScheduleInfoApiParam;
 		
@@ -132,7 +132,7 @@ class _QueryApplySellingServiceClient extends \Osp\Base\OspStub implements \com\
 	
 	public function recv_queryScheduleInfoData(){
 		
-		$result = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryScheduleInfoData_result();
+		$result = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_queryScheduleInfoData_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -142,16 +142,16 @@ class _QueryApplySellingServiceClient extends \Osp\Base\OspStub implements \com\
 	}
 	
 	
-	public function querySchedulesByShopCode(\com\vip\vis\purchase\schedules\service\query\QueryScheduleByShopCodeParam $queryScheduleByShopCodeParam){
+	public function querySchedulesByShopCode(\Voop\com\vip\vis\purchase\schedules\service\query\QueryScheduleByShopCodeParam $queryScheduleByShopCodeParam){
 		
 		$this->send_querySchedulesByShopCode( $queryScheduleByShopCodeParam);
 		return $this->recv_querySchedulesByShopCode();
 	}
 	
-	public function send_querySchedulesByShopCode(\com\vip\vis\purchase\schedules\service\query\QueryScheduleByShopCodeParam $queryScheduleByShopCodeParam){
+	public function send_querySchedulesByShopCode(\Voop\com\vip\vis\purchase\schedules\service\query\QueryScheduleByShopCodeParam $queryScheduleByShopCodeParam){
 		
 		$this->initInvocation("querySchedulesByShopCode");
-		$args = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_querySchedulesByShopCode_args();
+		$args = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_querySchedulesByShopCode_args();
 		
 		$args->queryScheduleByShopCodeParam = $queryScheduleByShopCodeParam;
 		
@@ -160,7 +160,7 @@ class _QueryApplySellingServiceClient extends \Osp\Base\OspStub implements \com\
 	
 	public function recv_querySchedulesByShopCode(){
 		
-		$result = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_querySchedulesByShopCode_result();
+		$result = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingService_querySchedulesByShopCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -261,7 +261,7 @@ class QueryApplySellingService_queryApplySellingData_args {
 		if(true) {
 			
 			
-			$this->queryApplySellingParam = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingParam();
+			$this->queryApplySellingParam = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingParam();
 			$this->queryApplySellingParam->read($input);
 			
 		}
@@ -282,7 +282,7 @@ class QueryApplySellingService_queryApplySellingData_args {
 		
 		if (!is_object($this->queryApplySellingParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryApplySellingParam->write($output);
@@ -339,7 +339,7 @@ class QueryApplySellingService_queryApplySellingSimpleData_args {
 		if(true) {
 			
 			
-			$this->queryApplySellingSimpleParam = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingSimpleParam();
+			$this->queryApplySellingSimpleParam = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingSimpleParam();
 			$this->queryApplySellingSimpleParam->read($input);
 			
 		}
@@ -360,7 +360,7 @@ class QueryApplySellingService_queryApplySellingSimpleData_args {
 		
 		if (!is_object($this->queryApplySellingSimpleParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryApplySellingSimpleParam->write($output);
@@ -417,7 +417,7 @@ class QueryApplySellingService_queryScheduleInfoData_args {
 		if(true) {
 			
 			
-			$this->queryScheduleInfoApiParam = new \com\vip\vis\purchase\schedules\service\query\QueryScheduleInfoApiParam();
+			$this->queryScheduleInfoApiParam = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryScheduleInfoApiParam();
 			$this->queryScheduleInfoApiParam->read($input);
 			
 		}
@@ -438,7 +438,7 @@ class QueryApplySellingService_queryScheduleInfoData_args {
 		
 		if (!is_object($this->queryScheduleInfoApiParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryScheduleInfoApiParam->write($output);
@@ -495,7 +495,7 @@ class QueryApplySellingService_querySchedulesByShopCode_args {
 		if(true) {
 			
 			
-			$this->queryScheduleByShopCodeParam = new \com\vip\vis\purchase\schedules\service\query\QueryScheduleByShopCodeParam();
+			$this->queryScheduleByShopCodeParam = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryScheduleByShopCodeParam();
 			$this->queryScheduleByShopCodeParam->read($input);
 			
 		}
@@ -516,7 +516,7 @@ class QueryApplySellingService_querySchedulesByShopCode_args {
 		
 		if (!is_object($this->queryScheduleByShopCodeParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryScheduleByShopCodeParam->write($output);
@@ -573,7 +573,7 @@ class QueryApplySellingService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -596,7 +596,7 @@ class QueryApplySellingService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -655,7 +655,7 @@ class QueryApplySellingService_queryApplySellingData_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vis\purchase\schedules\service\query\QueryApplySellingResponse();
+			$this->success = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingResponse();
 			$this->success->read($input);
 			
 		}
@@ -678,7 +678,7 @@ class QueryApplySellingService_queryApplySellingData_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -746,7 +746,7 @@ class QueryApplySellingService_queryApplySellingSimpleData_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vis\purchase\schedules\service\query\ApplySellingSimpleData();
+					$elem0 = new \Voop\com\vip\vis\purchase\schedules\service\query\ApplySellingSimpleData();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -779,7 +779,7 @@ class QueryApplySellingService_queryApplySellingSimpleData_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -788,7 +788,7 @@ class QueryApplySellingService_queryApplySellingSimpleData_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -851,7 +851,7 @@ class QueryApplySellingService_queryScheduleInfoData_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vis\purchase\schedules\service\query\QueryScheduleInfoResponse();
+			$this->success = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryScheduleInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -874,7 +874,7 @@ class QueryApplySellingService_queryScheduleInfoData_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -933,7 +933,7 @@ class QueryApplySellingService_querySchedulesByShopCode_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vis\purchase\schedules\service\query\QueryScheduleByShopCodeResponse();
+			$this->success = new \Voop\com\vip\vis\purchase\schedules\service\query\QueryScheduleByShopCodeResponse();
 			$this->success->read($input);
 			
 		}
@@ -956,7 +956,7 @@ class QueryApplySellingService_querySchedulesByShopCode_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

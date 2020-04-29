@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vei\service;
+namespace Voop\com\vip\fcs\vei\service;
 
 class ExternalInvoiceHandleState {
 	
@@ -241,7 +241,7 @@ class ExternalInvoiceHandleState {
 				
 				$needSkip = false;
 				
-				$this->retMsg = new \com\vip\fcs\vei\service\BaseRetMsg();
+				$this->retMsg = new \Voop\com\vip\fcs\vei\service\BaseRetMsg();
 				$this->retMsg->read($input);
 				
 			}
@@ -399,7 +399,7 @@ class ExternalInvoiceHandleState {
 		
 		if (!is_object($this->retMsg)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->retMsg->write($output);

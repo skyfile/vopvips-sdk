@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\category;
+namespace Voop\vipapis\category;
 
 class Attribute {
 	
@@ -296,7 +296,7 @@ class Attribute {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\category\Option();
+						$elem0 = new \Voop\vipapis\category\Option();
 						$elem0->read($input);
 						
 						$this->options[$_size0++] = $elem0;
@@ -315,7 +315,7 @@ class Attribute {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -368,7 +368,7 @@ class Attribute {
 			
 			$xfer += $output->writeFieldBegin('attribute_type');
 			
-			$em = new \vipapis\category\AttributeType; 
+			$em = new \Voop\vipapis\category\AttributeType; 
 			$output->writeString($em::$__names[$this->attribute_type]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -379,7 +379,7 @@ class Attribute {
 			
 			$xfer += $output->writeFieldBegin('data_type');
 			
-			$em = new \vipapis\category\DataType; 
+			$em = new \Voop\vipapis\category\DataType; 
 			$output->writeString($em::$__names[$this->data_type]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -428,7 +428,7 @@ class Attribute {
 			
 			if (!is_array($this->options)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -437,7 +437,7 @@ class Attribute {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

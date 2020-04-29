@@ -8,13 +8,13 @@
 *
 */
 
-namespace vipapis\fcs;
+namespace Voop\vipapis\fcs;
 interface MpInvoiceServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function receiveMpInvoiceIssueResult(\com\vip\fcs\vei\service\MpInvoiceIssueResultRequestModel $pushMpInvoiceIssueResultRequestModel);
+	public function receiveMpInvoiceIssueResult(\Voop\com\vip\fcs\vei\service\MpInvoiceIssueResultRequestModel $pushMpInvoiceIssueResultRequestModel);
 	
 }
 
@@ -35,14 +35,14 @@ class _MpInvoiceServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\fcs\MpInvoiceService_healthCheck_args();
+		$args = new \Voop\vipapis\fcs\MpInvoiceService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\fcs\MpInvoiceService_healthCheck_result();
+		$result = new \Voop\vipapis\fcs\MpInvoiceService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -52,16 +52,16 @@ class _MpInvoiceServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\
 	}
 	
 	
-	public function receiveMpInvoiceIssueResult(\com\vip\fcs\vei\service\MpInvoiceIssueResultRequestModel $pushMpInvoiceIssueResultRequestModel){
+	public function receiveMpInvoiceIssueResult(\Voop\com\vip\fcs\vei\service\MpInvoiceIssueResultRequestModel $pushMpInvoiceIssueResultRequestModel){
 		
 		$this->send_receiveMpInvoiceIssueResult( $pushMpInvoiceIssueResultRequestModel);
 		return $this->recv_receiveMpInvoiceIssueResult();
 	}
 	
-	public function send_receiveMpInvoiceIssueResult(\com\vip\fcs\vei\service\MpInvoiceIssueResultRequestModel $pushMpInvoiceIssueResultRequestModel){
+	public function send_receiveMpInvoiceIssueResult(\Voop\com\vip\fcs\vei\service\MpInvoiceIssueResultRequestModel $pushMpInvoiceIssueResultRequestModel){
 		
 		$this->initInvocation("receiveMpInvoiceIssueResult");
-		$args = new \vipapis\fcs\MpInvoiceService_receiveMpInvoiceIssueResult_args();
+		$args = new \Voop\vipapis\fcs\MpInvoiceService_receiveMpInvoiceIssueResult_args();
 		
 		$args->pushMpInvoiceIssueResultRequestModel = $pushMpInvoiceIssueResultRequestModel;
 		
@@ -70,7 +70,7 @@ class _MpInvoiceServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\
 	
 	public function recv_receiveMpInvoiceIssueResult(){
 		
-		$result = new \vipapis\fcs\MpInvoiceService_receiveMpInvoiceIssueResult_result();
+		$result = new \Voop\vipapis\fcs\MpInvoiceService_receiveMpInvoiceIssueResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -171,7 +171,7 @@ class MpInvoiceService_receiveMpInvoiceIssueResult_args {
 		if(true) {
 			
 			
-			$this->pushMpInvoiceIssueResultRequestModel = new \com\vip\fcs\vei\service\MpInvoiceIssueResultRequestModel();
+			$this->pushMpInvoiceIssueResultRequestModel = new \Voop\com\vip\fcs\vei\service\MpInvoiceIssueResultRequestModel();
 			$this->pushMpInvoiceIssueResultRequestModel->read($input);
 			
 		}
@@ -194,7 +194,7 @@ class MpInvoiceService_receiveMpInvoiceIssueResult_args {
 			
 			if (!is_object($this->pushMpInvoiceIssueResultRequestModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pushMpInvoiceIssueResultRequestModel->write($output);
@@ -253,7 +253,7 @@ class MpInvoiceService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -276,7 +276,7 @@ class MpInvoiceService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -335,7 +335,7 @@ class MpInvoiceService_receiveMpInvoiceIssueResult_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\MpInvoiceIssueResultResponseModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\MpInvoiceIssueResultResponseModel();
 			$this->success->read($input);
 			
 		}
@@ -358,7 +358,7 @@ class MpInvoiceService_receiveMpInvoiceIssueResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

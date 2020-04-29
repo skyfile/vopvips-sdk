@@ -20,7 +20,7 @@
  * @package thrift.transport
  */
 
-namespace Osp\Transport;
+namespace Voop\Osp\Transport;
 
 use Osp\StringFunc\StringFuncFactory;
 

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\ofc\vo;
+namespace Voop\com\vip\ofc\vo;
 
 class VopRequestHeader {
 	

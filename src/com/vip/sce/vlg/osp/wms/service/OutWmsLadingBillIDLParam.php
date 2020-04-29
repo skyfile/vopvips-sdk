@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\sce\vlg\osp\wms\service;
+namespace Voop\com\vip\sce\vlg\osp\wms\service;
 
 class OutWmsLadingBillIDLParam {
 	
@@ -170,7 +170,7 @@ class OutWmsLadingBillIDLParam {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\sce\vlg\osp\wms\service\SubLadingBillNumberVo();
+						$elem0 = new \Voop\com\vip\sce\vlg\osp\wms\service\SubLadingBillNumberVo();
 						$elem0->read($input);
 						
 						$this->subBillNumerList[$_size0++] = $elem0;
@@ -253,7 +253,7 @@ class OutWmsLadingBillIDLParam {
 			
 			if (!is_array($this->subBillNumerList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -262,7 +262,7 @@ class OutWmsLadingBillIDLParam {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

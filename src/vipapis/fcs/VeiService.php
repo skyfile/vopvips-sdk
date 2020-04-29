@@ -8,43 +8,43 @@
 *
 */
 
-namespace vipapis\fcs;
+namespace Voop\vipapis\fcs;
 interface VeiServiceIf{
 	
 	
-	public function acceptExternalInvoiceData(\com\vip\fcs\vei\service\EinvoiceVo $einvoiceVo);
+	public function acceptExternalInvoiceData(\Voop\com\vip\fcs\vei\service\EinvoiceVo $einvoiceVo);
 	
-	public function canInvoicing(\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel);
+	public function canInvoicing(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel);
 	
-	public function canInvoicing2(\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel);
+	public function canInvoicing2(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel);
 	
-	public function canInvoicing3(\com\vip\fcs\vei\service\CanInvoicingReqModel3 $canInvoicingReqModel);
+	public function canInvoicing3(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel3 $canInvoicingReqModel);
 	
-	public function canInvoicing4(\com\vip\fcs\vei\service\CanInvoicingReqModel4 $canInvoicingReqModel);
+	public function canInvoicing4(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel4 $canInvoicingReqModel);
 	
-	public function canInvoicingByGroup(\com\vip\fcs\vei\service\CanInvoicingByGroupReqModel $canInvoicingByGroupReqModel);
+	public function canInvoicingByGroup(\Voop\com\vip\fcs\vei\service\CanInvoicingByGroupReqModel $canInvoicingByGroupReqModel);
 	
-	public function downloadElectronicInvoice(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel);
+	public function downloadElectronicInvoice(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel);
 	
-	public function downloadElectronicInvoice2(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel);
+	public function downloadElectronicInvoice2(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel);
 	
-	public function downloadElectronicInvoiceInNewProcess(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel);
+	public function downloadElectronicInvoiceInNewProcess(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel);
 	
-	public function downloadElectronicInvoicePicture(\com\vip\fcs\vei\service\DownloadElectronicInvoicePictureReqModel $reqModel);
+	public function downloadElectronicInvoicePicture(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoicePictureReqModel $reqModel);
 	
-	public function downloadMedicineElectronicInvoice(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel);
+	public function downloadMedicineElectronicInvoice(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel);
 	
-	public function downloadRedElectronicInvoice(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel);
+	public function downloadRedElectronicInvoice(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel);
 	
-	public function getExternalInvoiceHandleState(\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModel $reqModel);
+	public function getExternalInvoiceHandleState(\Voop\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModel $reqModel);
 	
-	public function getExternalInvoiceHandleStateExt(\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModelExt $reqModel);
+	public function getExternalInvoiceHandleStateExt(\Voop\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModelExt $reqModel);
 	
 	public function healthCheck();
 	
-	public function invoiceOrderData(\com\vip\fcs\vei\service\InvoiceOrderDataReqModel $reqModel);
+	public function invoiceOrderData(\Voop\com\vip\fcs\vei\service\InvoiceOrderDataReqModel $reqModel);
 	
-	public function vCanInvoicing(\com\vip\fcs\vei\service\VCanInvoicingReqModel $reqModel);
+	public function vCanInvoicing(\Voop\com\vip\fcs\vei\service\VCanInvoicingReqModel $reqModel);
 	
 }
 
@@ -56,16 +56,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function acceptExternalInvoiceData(\com\vip\fcs\vei\service\EinvoiceVo $einvoiceVo){
+	public function acceptExternalInvoiceData(\Voop\com\vip\fcs\vei\service\EinvoiceVo $einvoiceVo){
 		
 		$this->send_acceptExternalInvoiceData( $einvoiceVo);
 		return $this->recv_acceptExternalInvoiceData();
 	}
 	
-	public function send_acceptExternalInvoiceData(\com\vip\fcs\vei\service\EinvoiceVo $einvoiceVo){
+	public function send_acceptExternalInvoiceData(\Voop\com\vip\fcs\vei\service\EinvoiceVo $einvoiceVo){
 		
 		$this->initInvocation("acceptExternalInvoiceData");
-		$args = new \vipapis\fcs\VeiService_acceptExternalInvoiceData_args();
+		$args = new \Voop\vipapis\fcs\VeiService_acceptExternalInvoiceData_args();
 		
 		$args->einvoiceVo = $einvoiceVo;
 		
@@ -74,7 +74,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_acceptExternalInvoiceData(){
 		
-		$result = new \vipapis\fcs\VeiService_acceptExternalInvoiceData_result();
+		$result = new \Voop\vipapis\fcs\VeiService_acceptExternalInvoiceData_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -84,16 +84,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function canInvoicing(\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel){
+	public function canInvoicing(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel){
 		
 		$this->send_canInvoicing( $canInvoicingReqModel);
 		return $this->recv_canInvoicing();
 	}
 	
-	public function send_canInvoicing(\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel){
+	public function send_canInvoicing(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel){
 		
 		$this->initInvocation("canInvoicing");
-		$args = new \vipapis\fcs\VeiService_canInvoicing_args();
+		$args = new \Voop\vipapis\fcs\VeiService_canInvoicing_args();
 		
 		$args->canInvoicingReqModel = $canInvoicingReqModel;
 		
@@ -102,7 +102,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_canInvoicing(){
 		
-		$result = new \vipapis\fcs\VeiService_canInvoicing_result();
+		$result = new \Voop\vipapis\fcs\VeiService_canInvoicing_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -112,16 +112,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function canInvoicing2(\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel){
+	public function canInvoicing2(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel){
 		
 		$this->send_canInvoicing2( $canInvoicingReqModel);
 		return $this->recv_canInvoicing2();
 	}
 	
-	public function send_canInvoicing2(\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel){
+	public function send_canInvoicing2(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel $canInvoicingReqModel){
 		
 		$this->initInvocation("canInvoicing2");
-		$args = new \vipapis\fcs\VeiService_canInvoicing2_args();
+		$args = new \Voop\vipapis\fcs\VeiService_canInvoicing2_args();
 		
 		$args->canInvoicingReqModel = $canInvoicingReqModel;
 		
@@ -130,7 +130,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_canInvoicing2(){
 		
-		$result = new \vipapis\fcs\VeiService_canInvoicing2_result();
+		$result = new \Voop\vipapis\fcs\VeiService_canInvoicing2_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -140,16 +140,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function canInvoicing3(\com\vip\fcs\vei\service\CanInvoicingReqModel3 $canInvoicingReqModel){
+	public function canInvoicing3(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel3 $canInvoicingReqModel){
 		
 		$this->send_canInvoicing3( $canInvoicingReqModel);
 		return $this->recv_canInvoicing3();
 	}
 	
-	public function send_canInvoicing3(\com\vip\fcs\vei\service\CanInvoicingReqModel3 $canInvoicingReqModel){
+	public function send_canInvoicing3(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel3 $canInvoicingReqModel){
 		
 		$this->initInvocation("canInvoicing3");
-		$args = new \vipapis\fcs\VeiService_canInvoicing3_args();
+		$args = new \Voop\vipapis\fcs\VeiService_canInvoicing3_args();
 		
 		$args->canInvoicingReqModel = $canInvoicingReqModel;
 		
@@ -158,7 +158,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_canInvoicing3(){
 		
-		$result = new \vipapis\fcs\VeiService_canInvoicing3_result();
+		$result = new \Voop\vipapis\fcs\VeiService_canInvoicing3_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -168,16 +168,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function canInvoicing4(\com\vip\fcs\vei\service\CanInvoicingReqModel4 $canInvoicingReqModel){
+	public function canInvoicing4(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel4 $canInvoicingReqModel){
 		
 		$this->send_canInvoicing4( $canInvoicingReqModel);
 		return $this->recv_canInvoicing4();
 	}
 	
-	public function send_canInvoicing4(\com\vip\fcs\vei\service\CanInvoicingReqModel4 $canInvoicingReqModel){
+	public function send_canInvoicing4(\Voop\com\vip\fcs\vei\service\CanInvoicingReqModel4 $canInvoicingReqModel){
 		
 		$this->initInvocation("canInvoicing4");
-		$args = new \vipapis\fcs\VeiService_canInvoicing4_args();
+		$args = new \Voop\vipapis\fcs\VeiService_canInvoicing4_args();
 		
 		$args->canInvoicingReqModel = $canInvoicingReqModel;
 		
@@ -186,7 +186,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_canInvoicing4(){
 		
-		$result = new \vipapis\fcs\VeiService_canInvoicing4_result();
+		$result = new \Voop\vipapis\fcs\VeiService_canInvoicing4_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -196,16 +196,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function canInvoicingByGroup(\com\vip\fcs\vei\service\CanInvoicingByGroupReqModel $canInvoicingByGroupReqModel){
+	public function canInvoicingByGroup(\Voop\com\vip\fcs\vei\service\CanInvoicingByGroupReqModel $canInvoicingByGroupReqModel){
 		
 		$this->send_canInvoicingByGroup( $canInvoicingByGroupReqModel);
 		return $this->recv_canInvoicingByGroup();
 	}
 	
-	public function send_canInvoicingByGroup(\com\vip\fcs\vei\service\CanInvoicingByGroupReqModel $canInvoicingByGroupReqModel){
+	public function send_canInvoicingByGroup(\Voop\com\vip\fcs\vei\service\CanInvoicingByGroupReqModel $canInvoicingByGroupReqModel){
 		
 		$this->initInvocation("canInvoicingByGroup");
-		$args = new \vipapis\fcs\VeiService_canInvoicingByGroup_args();
+		$args = new \Voop\vipapis\fcs\VeiService_canInvoicingByGroup_args();
 		
 		$args->canInvoicingByGroupReqModel = $canInvoicingByGroupReqModel;
 		
@@ -214,7 +214,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_canInvoicingByGroup(){
 		
-		$result = new \vipapis\fcs\VeiService_canInvoicingByGroup_result();
+		$result = new \Voop\vipapis\fcs\VeiService_canInvoicingByGroup_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -224,16 +224,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function downloadElectronicInvoice(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
+	public function downloadElectronicInvoice(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
 		
 		$this->send_downloadElectronicInvoice( $reqModel);
 		return $this->recv_downloadElectronicInvoice();
 	}
 	
-	public function send_downloadElectronicInvoice(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
+	public function send_downloadElectronicInvoice(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
 		
 		$this->initInvocation("downloadElectronicInvoice");
-		$args = new \vipapis\fcs\VeiService_downloadElectronicInvoice_args();
+		$args = new \Voop\vipapis\fcs\VeiService_downloadElectronicInvoice_args();
 		
 		$args->reqModel = $reqModel;
 		
@@ -242,7 +242,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_downloadElectronicInvoice(){
 		
-		$result = new \vipapis\fcs\VeiService_downloadElectronicInvoice_result();
+		$result = new \Voop\vipapis\fcs\VeiService_downloadElectronicInvoice_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -252,16 +252,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function downloadElectronicInvoice2(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel){
+	public function downloadElectronicInvoice2(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel){
 		
 		$this->send_downloadElectronicInvoice2( $reqModel);
 		return $this->recv_downloadElectronicInvoice2();
 	}
 	
-	public function send_downloadElectronicInvoice2(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel){
+	public function send_downloadElectronicInvoice2(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel){
 		
 		$this->initInvocation("downloadElectronicInvoice2");
-		$args = new \vipapis\fcs\VeiService_downloadElectronicInvoice2_args();
+		$args = new \Voop\vipapis\fcs\VeiService_downloadElectronicInvoice2_args();
 		
 		$args->reqModel = $reqModel;
 		
@@ -270,7 +270,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_downloadElectronicInvoice2(){
 		
-		$result = new \vipapis\fcs\VeiService_downloadElectronicInvoice2_result();
+		$result = new \Voop\vipapis\fcs\VeiService_downloadElectronicInvoice2_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -280,16 +280,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function downloadElectronicInvoiceInNewProcess(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
+	public function downloadElectronicInvoiceInNewProcess(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
 		
 		$this->send_downloadElectronicInvoiceInNewProcess( $reqModel);
 		return $this->recv_downloadElectronicInvoiceInNewProcess();
 	}
 	
-	public function send_downloadElectronicInvoiceInNewProcess(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
+	public function send_downloadElectronicInvoiceInNewProcess(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
 		
 		$this->initInvocation("downloadElectronicInvoiceInNewProcess");
-		$args = new \vipapis\fcs\VeiService_downloadElectronicInvoiceInNewProcess_args();
+		$args = new \Voop\vipapis\fcs\VeiService_downloadElectronicInvoiceInNewProcess_args();
 		
 		$args->reqModel = $reqModel;
 		
@@ -298,7 +298,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_downloadElectronicInvoiceInNewProcess(){
 		
-		$result = new \vipapis\fcs\VeiService_downloadElectronicInvoiceInNewProcess_result();
+		$result = new \Voop\vipapis\fcs\VeiService_downloadElectronicInvoiceInNewProcess_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -308,16 +308,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function downloadElectronicInvoicePicture(\com\vip\fcs\vei\service\DownloadElectronicInvoicePictureReqModel $reqModel){
+	public function downloadElectronicInvoicePicture(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoicePictureReqModel $reqModel){
 		
 		$this->send_downloadElectronicInvoicePicture( $reqModel);
 		return $this->recv_downloadElectronicInvoicePicture();
 	}
 	
-	public function send_downloadElectronicInvoicePicture(\com\vip\fcs\vei\service\DownloadElectronicInvoicePictureReqModel $reqModel){
+	public function send_downloadElectronicInvoicePicture(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoicePictureReqModel $reqModel){
 		
 		$this->initInvocation("downloadElectronicInvoicePicture");
-		$args = new \vipapis\fcs\VeiService_downloadElectronicInvoicePicture_args();
+		$args = new \Voop\vipapis\fcs\VeiService_downloadElectronicInvoicePicture_args();
 		
 		$args->reqModel = $reqModel;
 		
@@ -326,7 +326,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_downloadElectronicInvoicePicture(){
 		
-		$result = new \vipapis\fcs\VeiService_downloadElectronicInvoicePicture_result();
+		$result = new \Voop\vipapis\fcs\VeiService_downloadElectronicInvoicePicture_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -336,16 +336,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function downloadMedicineElectronicInvoice(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel){
+	public function downloadMedicineElectronicInvoice(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel){
 		
 		$this->send_downloadMedicineElectronicInvoice( $reqModel);
 		return $this->recv_downloadMedicineElectronicInvoice();
 	}
 	
-	public function send_downloadMedicineElectronicInvoice(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel){
+	public function send_downloadMedicineElectronicInvoice(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2 $reqModel){
 		
 		$this->initInvocation("downloadMedicineElectronicInvoice");
-		$args = new \vipapis\fcs\VeiService_downloadMedicineElectronicInvoice_args();
+		$args = new \Voop\vipapis\fcs\VeiService_downloadMedicineElectronicInvoice_args();
 		
 		$args->reqModel = $reqModel;
 		
@@ -354,7 +354,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_downloadMedicineElectronicInvoice(){
 		
-		$result = new \vipapis\fcs\VeiService_downloadMedicineElectronicInvoice_result();
+		$result = new \Voop\vipapis\fcs\VeiService_downloadMedicineElectronicInvoice_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -364,16 +364,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function downloadRedElectronicInvoice(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
+	public function downloadRedElectronicInvoice(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
 		
 		$this->send_downloadRedElectronicInvoice( $reqModel);
 		return $this->recv_downloadRedElectronicInvoice();
 	}
 	
-	public function send_downloadRedElectronicInvoice(\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
+	public function send_downloadRedElectronicInvoice(\Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel $reqModel){
 		
 		$this->initInvocation("downloadRedElectronicInvoice");
-		$args = new \vipapis\fcs\VeiService_downloadRedElectronicInvoice_args();
+		$args = new \Voop\vipapis\fcs\VeiService_downloadRedElectronicInvoice_args();
 		
 		$args->reqModel = $reqModel;
 		
@@ -382,7 +382,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_downloadRedElectronicInvoice(){
 		
-		$result = new \vipapis\fcs\VeiService_downloadRedElectronicInvoice_result();
+		$result = new \Voop\vipapis\fcs\VeiService_downloadRedElectronicInvoice_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -392,16 +392,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function getExternalInvoiceHandleState(\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModel $reqModel){
+	public function getExternalInvoiceHandleState(\Voop\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModel $reqModel){
 		
 		$this->send_getExternalInvoiceHandleState( $reqModel);
 		return $this->recv_getExternalInvoiceHandleState();
 	}
 	
-	public function send_getExternalInvoiceHandleState(\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModel $reqModel){
+	public function send_getExternalInvoiceHandleState(\Voop\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModel $reqModel){
 		
 		$this->initInvocation("getExternalInvoiceHandleState");
-		$args = new \vipapis\fcs\VeiService_getExternalInvoiceHandleState_args();
+		$args = new \Voop\vipapis\fcs\VeiService_getExternalInvoiceHandleState_args();
 		
 		$args->reqModel = $reqModel;
 		
@@ -410,7 +410,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_getExternalInvoiceHandleState(){
 		
-		$result = new \vipapis\fcs\VeiService_getExternalInvoiceHandleState_result();
+		$result = new \Voop\vipapis\fcs\VeiService_getExternalInvoiceHandleState_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -420,16 +420,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function getExternalInvoiceHandleStateExt(\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModelExt $reqModel){
+	public function getExternalInvoiceHandleStateExt(\Voop\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModelExt $reqModel){
 		
 		$this->send_getExternalInvoiceHandleStateExt( $reqModel);
 		return $this->recv_getExternalInvoiceHandleStateExt();
 	}
 	
-	public function send_getExternalInvoiceHandleStateExt(\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModelExt $reqModel){
+	public function send_getExternalInvoiceHandleStateExt(\Voop\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModelExt $reqModel){
 		
 		$this->initInvocation("getExternalInvoiceHandleStateExt");
-		$args = new \vipapis\fcs\VeiService_getExternalInvoiceHandleStateExt_args();
+		$args = new \Voop\vipapis\fcs\VeiService_getExternalInvoiceHandleStateExt_args();
 		
 		$args->reqModel = $reqModel;
 		
@@ -438,7 +438,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_getExternalInvoiceHandleStateExt(){
 		
-		$result = new \vipapis\fcs\VeiService_getExternalInvoiceHandleStateExt_result();
+		$result = new \Voop\vipapis\fcs\VeiService_getExternalInvoiceHandleStateExt_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -457,14 +457,14 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\fcs\VeiService_healthCheck_args();
+		$args = new \Voop\vipapis\fcs\VeiService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\fcs\VeiService_healthCheck_result();
+		$result = new \Voop\vipapis\fcs\VeiService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -474,16 +474,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function invoiceOrderData(\com\vip\fcs\vei\service\InvoiceOrderDataReqModel $reqModel){
+	public function invoiceOrderData(\Voop\com\vip\fcs\vei\service\InvoiceOrderDataReqModel $reqModel){
 		
 		$this->send_invoiceOrderData( $reqModel);
 		return $this->recv_invoiceOrderData();
 	}
 	
-	public function send_invoiceOrderData(\com\vip\fcs\vei\service\InvoiceOrderDataReqModel $reqModel){
+	public function send_invoiceOrderData(\Voop\com\vip\fcs\vei\service\InvoiceOrderDataReqModel $reqModel){
 		
 		$this->initInvocation("invoiceOrderData");
-		$args = new \vipapis\fcs\VeiService_invoiceOrderData_args();
+		$args = new \Voop\vipapis\fcs\VeiService_invoiceOrderData_args();
 		
 		$args->reqModel = $reqModel;
 		
@@ -492,7 +492,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_invoiceOrderData(){
 		
-		$result = new \vipapis\fcs\VeiService_invoiceOrderData_result();
+		$result = new \Voop\vipapis\fcs\VeiService_invoiceOrderData_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -502,16 +502,16 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	}
 	
 	
-	public function vCanInvoicing(\com\vip\fcs\vei\service\VCanInvoicingReqModel $reqModel){
+	public function vCanInvoicing(\Voop\com\vip\fcs\vei\service\VCanInvoicingReqModel $reqModel){
 		
 		$this->send_vCanInvoicing( $reqModel);
 		return $this->recv_vCanInvoicing();
 	}
 	
-	public function send_vCanInvoicing(\com\vip\fcs\vei\service\VCanInvoicingReqModel $reqModel){
+	public function send_vCanInvoicing(\Voop\com\vip\fcs\vei\service\VCanInvoicingReqModel $reqModel){
 		
 		$this->initInvocation("vCanInvoicing");
-		$args = new \vipapis\fcs\VeiService_vCanInvoicing_args();
+		$args = new \Voop\vipapis\fcs\VeiService_vCanInvoicing_args();
 		
 		$args->reqModel = $reqModel;
 		
@@ -520,7 +520,7 @@ class _VeiServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\VeiSer
 	
 	public function recv_vCanInvoicing(){
 		
-		$result = new \vipapis\fcs\VeiService_vCanInvoicing_result();
+		$result = new \Voop\vipapis\fcs\VeiService_vCanInvoicing_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -575,7 +575,7 @@ class VeiService_acceptExternalInvoiceData_args {
 		if(true) {
 			
 			
-			$this->einvoiceVo = new \com\vip\fcs\vei\service\EinvoiceVo();
+			$this->einvoiceVo = new \Voop\com\vip\fcs\vei\service\EinvoiceVo();
 			$this->einvoiceVo->read($input);
 			
 		}
@@ -596,7 +596,7 @@ class VeiService_acceptExternalInvoiceData_args {
 		
 		if (!is_object($this->einvoiceVo)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->einvoiceVo->write($output);
@@ -653,7 +653,7 @@ class VeiService_canInvoicing_args {
 		if(true) {
 			
 			
-			$this->canInvoicingReqModel = new \com\vip\fcs\vei\service\CanInvoicingReqModel();
+			$this->canInvoicingReqModel = new \Voop\com\vip\fcs\vei\service\CanInvoicingReqModel();
 			$this->canInvoicingReqModel->read($input);
 			
 		}
@@ -676,7 +676,7 @@ class VeiService_canInvoicing_args {
 			
 			if (!is_object($this->canInvoicingReqModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->canInvoicingReqModel->write($output);
@@ -735,7 +735,7 @@ class VeiService_canInvoicing2_args {
 		if(true) {
 			
 			
-			$this->canInvoicingReqModel = new \com\vip\fcs\vei\service\CanInvoicingReqModel();
+			$this->canInvoicingReqModel = new \Voop\com\vip\fcs\vei\service\CanInvoicingReqModel();
 			$this->canInvoicingReqModel->read($input);
 			
 		}
@@ -758,7 +758,7 @@ class VeiService_canInvoicing2_args {
 			
 			if (!is_object($this->canInvoicingReqModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->canInvoicingReqModel->write($output);
@@ -817,7 +817,7 @@ class VeiService_canInvoicing3_args {
 		if(true) {
 			
 			
-			$this->canInvoicingReqModel = new \com\vip\fcs\vei\service\CanInvoicingReqModel3();
+			$this->canInvoicingReqModel = new \Voop\com\vip\fcs\vei\service\CanInvoicingReqModel3();
 			$this->canInvoicingReqModel->read($input);
 			
 		}
@@ -840,7 +840,7 @@ class VeiService_canInvoicing3_args {
 			
 			if (!is_object($this->canInvoicingReqModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->canInvoicingReqModel->write($output);
@@ -899,7 +899,7 @@ class VeiService_canInvoicing4_args {
 		if(true) {
 			
 			
-			$this->canInvoicingReqModel = new \com\vip\fcs\vei\service\CanInvoicingReqModel4();
+			$this->canInvoicingReqModel = new \Voop\com\vip\fcs\vei\service\CanInvoicingReqModel4();
 			$this->canInvoicingReqModel->read($input);
 			
 		}
@@ -922,7 +922,7 @@ class VeiService_canInvoicing4_args {
 			
 			if (!is_object($this->canInvoicingReqModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->canInvoicingReqModel->write($output);
@@ -981,7 +981,7 @@ class VeiService_canInvoicingByGroup_args {
 		if(true) {
 			
 			
-			$this->canInvoicingByGroupReqModel = new \com\vip\fcs\vei\service\CanInvoicingByGroupReqModel();
+			$this->canInvoicingByGroupReqModel = new \Voop\com\vip\fcs\vei\service\CanInvoicingByGroupReqModel();
 			$this->canInvoicingByGroupReqModel->read($input);
 			
 		}
@@ -1004,7 +1004,7 @@ class VeiService_canInvoicingByGroup_args {
 			
 			if (!is_object($this->canInvoicingByGroupReqModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->canInvoicingByGroupReqModel->write($output);
@@ -1063,7 +1063,7 @@ class VeiService_downloadElectronicInvoice_args {
 		if(true) {
 			
 			
-			$this->reqModel = new \com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel();
+			$this->reqModel = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel();
 			$this->reqModel->read($input);
 			
 		}
@@ -1084,7 +1084,7 @@ class VeiService_downloadElectronicInvoice_args {
 		
 		if (!is_object($this->reqModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reqModel->write($output);
@@ -1141,7 +1141,7 @@ class VeiService_downloadElectronicInvoice2_args {
 		if(true) {
 			
 			
-			$this->reqModel = new \com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2();
+			$this->reqModel = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2();
 			$this->reqModel->read($input);
 			
 		}
@@ -1162,7 +1162,7 @@ class VeiService_downloadElectronicInvoice2_args {
 		
 		if (!is_object($this->reqModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reqModel->write($output);
@@ -1219,7 +1219,7 @@ class VeiService_downloadElectronicInvoiceInNewProcess_args {
 		if(true) {
 			
 			
-			$this->reqModel = new \com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel();
+			$this->reqModel = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel();
 			$this->reqModel->read($input);
 			
 		}
@@ -1240,7 +1240,7 @@ class VeiService_downloadElectronicInvoiceInNewProcess_args {
 		
 		if (!is_object($this->reqModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reqModel->write($output);
@@ -1297,7 +1297,7 @@ class VeiService_downloadElectronicInvoicePicture_args {
 		if(true) {
 			
 			
-			$this->reqModel = new \com\vip\fcs\vei\service\DownloadElectronicInvoicePictureReqModel();
+			$this->reqModel = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoicePictureReqModel();
 			$this->reqModel->read($input);
 			
 		}
@@ -1318,7 +1318,7 @@ class VeiService_downloadElectronicInvoicePicture_args {
 		
 		if (!is_object($this->reqModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reqModel->write($output);
@@ -1375,7 +1375,7 @@ class VeiService_downloadMedicineElectronicInvoice_args {
 		if(true) {
 			
 			
-			$this->reqModel = new \com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2();
+			$this->reqModel = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel2();
 			$this->reqModel->read($input);
 			
 		}
@@ -1396,7 +1396,7 @@ class VeiService_downloadMedicineElectronicInvoice_args {
 		
 		if (!is_object($this->reqModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reqModel->write($output);
@@ -1453,7 +1453,7 @@ class VeiService_downloadRedElectronicInvoice_args {
 		if(true) {
 			
 			
-			$this->reqModel = new \com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel();
+			$this->reqModel = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceReqModel();
 			$this->reqModel->read($input);
 			
 		}
@@ -1474,7 +1474,7 @@ class VeiService_downloadRedElectronicInvoice_args {
 		
 		if (!is_object($this->reqModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reqModel->write($output);
@@ -1531,7 +1531,7 @@ class VeiService_getExternalInvoiceHandleState_args {
 		if(true) {
 			
 			
-			$this->reqModel = new \com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModel();
+			$this->reqModel = new \Voop\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModel();
 			$this->reqModel->read($input);
 			
 		}
@@ -1552,7 +1552,7 @@ class VeiService_getExternalInvoiceHandleState_args {
 		
 		if (!is_object($this->reqModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reqModel->write($output);
@@ -1609,7 +1609,7 @@ class VeiService_getExternalInvoiceHandleStateExt_args {
 		if(true) {
 			
 			
-			$this->reqModel = new \com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModelExt();
+			$this->reqModel = new \Voop\com\vip\fcs\vei\service\ExternalInvoiceHandleStateReqModelExt();
 			$this->reqModel->read($input);
 			
 		}
@@ -1630,7 +1630,7 @@ class VeiService_getExternalInvoiceHandleStateExt_args {
 		
 		if (!is_object($this->reqModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reqModel->write($output);
@@ -1733,7 +1733,7 @@ class VeiService_invoiceOrderData_args {
 		if(true) {
 			
 			
-			$this->reqModel = new \com\vip\fcs\vei\service\InvoiceOrderDataReqModel();
+			$this->reqModel = new \Voop\com\vip\fcs\vei\service\InvoiceOrderDataReqModel();
 			$this->reqModel->read($input);
 			
 		}
@@ -1754,7 +1754,7 @@ class VeiService_invoiceOrderData_args {
 		
 		if (!is_object($this->reqModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reqModel->write($output);
@@ -1811,7 +1811,7 @@ class VeiService_vCanInvoicing_args {
 		if(true) {
 			
 			
-			$this->reqModel = new \com\vip\fcs\vei\service\VCanInvoicingReqModel();
+			$this->reqModel = new \Voop\com\vip\fcs\vei\service\VCanInvoicingReqModel();
 			$this->reqModel->read($input);
 			
 		}
@@ -1832,7 +1832,7 @@ class VeiService_vCanInvoicing_args {
 		
 		if (!is_object($this->reqModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reqModel->write($output);
@@ -1889,7 +1889,7 @@ class VeiService_acceptExternalInvoiceData_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\BaseRetMsg();
+			$this->success = new \Voop\com\vip\fcs\vei\service\BaseRetMsg();
 			$this->success->read($input);
 			
 		}
@@ -1912,7 +1912,7 @@ class VeiService_acceptExternalInvoiceData_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1971,7 +1971,7 @@ class VeiService_canInvoicing_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\CanInvoicingResModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\CanInvoicingResModel();
 			$this->success->read($input);
 			
 		}
@@ -1994,7 +1994,7 @@ class VeiService_canInvoicing_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2053,7 +2053,7 @@ class VeiService_canInvoicing2_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\CanInvoicingResModel2();
+			$this->success = new \Voop\com\vip\fcs\vei\service\CanInvoicingResModel2();
 			$this->success->read($input);
 			
 		}
@@ -2076,7 +2076,7 @@ class VeiService_canInvoicing2_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2135,7 +2135,7 @@ class VeiService_canInvoicing3_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\CanInvoicingResModel3();
+			$this->success = new \Voop\com\vip\fcs\vei\service\CanInvoicingResModel3();
 			$this->success->read($input);
 			
 		}
@@ -2158,7 +2158,7 @@ class VeiService_canInvoicing3_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2217,7 +2217,7 @@ class VeiService_canInvoicing4_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\CanInvoicingResModel4();
+			$this->success = new \Voop\com\vip\fcs\vei\service\CanInvoicingResModel4();
 			$this->success->read($input);
 			
 		}
@@ -2240,7 +2240,7 @@ class VeiService_canInvoicing4_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2299,7 +2299,7 @@ class VeiService_canInvoicingByGroup_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\CanInvoicingByGroupResponseModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\CanInvoicingByGroupResponseModel();
 			$this->success->read($input);
 			
 		}
@@ -2322,7 +2322,7 @@ class VeiService_canInvoicingByGroup_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2381,7 +2381,7 @@ class VeiService_downloadElectronicInvoice_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\DownloadElectronicInvoiceResModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceResModel();
 			$this->success->read($input);
 			
 		}
@@ -2404,7 +2404,7 @@ class VeiService_downloadElectronicInvoice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2463,7 +2463,7 @@ class VeiService_downloadElectronicInvoice2_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\DownloadElectronicInvoiceResModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceResModel();
 			$this->success->read($input);
 			
 		}
@@ -2486,7 +2486,7 @@ class VeiService_downloadElectronicInvoice2_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2545,7 +2545,7 @@ class VeiService_downloadElectronicInvoiceInNewProcess_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\DownloadElectronicInvoiceResModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceResModel();
 			$this->success->read($input);
 			
 		}
@@ -2568,7 +2568,7 @@ class VeiService_downloadElectronicInvoiceInNewProcess_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2627,7 +2627,7 @@ class VeiService_downloadElectronicInvoicePicture_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\DownloadElectronicInvoicePictureResModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoicePictureResModel();
 			$this->success->read($input);
 			
 		}
@@ -2650,7 +2650,7 @@ class VeiService_downloadElectronicInvoicePicture_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2709,7 +2709,7 @@ class VeiService_downloadMedicineElectronicInvoice_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\DownloadElectronicInvoiceResModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceResModel();
 			$this->success->read($input);
 			
 		}
@@ -2732,7 +2732,7 @@ class VeiService_downloadMedicineElectronicInvoice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2791,7 +2791,7 @@ class VeiService_downloadRedElectronicInvoice_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\DownloadElectronicInvoiceResModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\DownloadElectronicInvoiceResModel();
 			$this->success->read($input);
 			
 		}
@@ -2814,7 +2814,7 @@ class VeiService_downloadRedElectronicInvoice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2873,7 +2873,7 @@ class VeiService_getExternalInvoiceHandleState_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\ExternalInvoiceHandleStateResModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\ExternalInvoiceHandleStateResModel();
 			$this->success->read($input);
 			
 		}
@@ -2896,7 +2896,7 @@ class VeiService_getExternalInvoiceHandleState_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2955,7 +2955,7 @@ class VeiService_getExternalInvoiceHandleStateExt_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\ExternalInvoiceHandleStateResModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\ExternalInvoiceHandleStateResModel();
 			$this->success->read($input);
 			
 		}
@@ -2978,7 +2978,7 @@ class VeiService_getExternalInvoiceHandleStateExt_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3037,7 +3037,7 @@ class VeiService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -3060,7 +3060,7 @@ class VeiService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3119,7 +3119,7 @@ class VeiService_invoiceOrderData_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\InvoiceOrderDataResModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\InvoiceOrderDataResModel();
 			$this->success->read($input);
 			
 		}
@@ -3142,7 +3142,7 @@ class VeiService_invoiceOrderData_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3201,7 +3201,7 @@ class VeiService_vCanInvoicing_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\VCanInvoicingResModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\VCanInvoicingResModel();
 			$this->success->read($input);
 			
 		}
@@ -3224,7 +3224,7 @@ class VeiService_vCanInvoicing_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

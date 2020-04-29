@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\price;
+namespace Voop\vipapis\price;
 require_once dirname(__FILE__).'/JitPriceService.php';
 class JitPriceServiceHelper extends _JitPriceServiceClient{
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\model\sync;
+namespace Voop\com\vip\pms\data\model\sync;
 
 class SpecialObjectRequest {
 	
@@ -81,7 +81,7 @@ class SpecialObjectRequest {
 				
 				$needSkip = false;
 				
-				$this->objectBaseModel = new \com\vip\pms\data\model\sync\SpecialObjectBaseModel();
+				$this->objectBaseModel = new \Voop\com\vip\pms\data\model\sync\SpecialObjectBaseModel();
 				$this->objectBaseModel->read($input);
 				
 			}
@@ -102,7 +102,7 @@ class SpecialObjectRequest {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\pms\data\model\sync\ActObjectMemberModel();
+						$elem0 = new \Voop\com\vip\pms\data\model\sync\ActObjectMemberModel();
 						$elem0->read($input);
 						
 						$this->objectMemberModelList[$_size0++] = $elem0;
@@ -124,7 +124,7 @@ class SpecialObjectRequest {
 				
 				$needSkip = false;
 				
-				$this->objectMemberModel = new \com\vip\pms\data\model\sync\ActObjectMemberModel();
+				$this->objectMemberModel = new \Voop\com\vip\pms\data\model\sync\ActObjectMemberModel();
 				$this->objectMemberModel->read($input);
 				
 			}
@@ -154,7 +154,7 @@ class SpecialObjectRequest {
 		
 		if (!is_object($this->objectBaseModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->objectBaseModel->write($output);
@@ -167,7 +167,7 @@ class SpecialObjectRequest {
 			
 			if (!is_array($this->objectMemberModelList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -176,7 +176,7 @@ class SpecialObjectRequest {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -195,7 +195,7 @@ class SpecialObjectRequest {
 			
 			if (!is_object($this->objectMemberModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->objectMemberModel->write($output);

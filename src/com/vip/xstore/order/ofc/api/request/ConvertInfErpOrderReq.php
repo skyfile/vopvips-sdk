@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\request;
+namespace Voop\com\vip\xstore\order\ofc\api\request;
 
 class ConvertInfErpOrderReq {
 	
@@ -61,7 +61,7 @@ class ConvertInfErpOrderReq {
 				
 				$needSkip = false;
 				
-				$this->infErpOrderInfo = new \com\vip\xstore\order\common\pojo\vo\InfErpOrderInfoVO();
+				$this->infErpOrderInfo = new \Voop\com\vip\xstore\order\common\pojo\vo\InfErpOrderInfoVO();
 				$this->infErpOrderInfo->read($input);
 				
 			}
@@ -93,7 +93,7 @@ class ConvertInfErpOrderReq {
 			
 			if (!is_object($this->infErpOrderInfo)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->infErpOrderInfo->write($output);

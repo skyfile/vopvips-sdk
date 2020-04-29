@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\account;
+namespace Voop\vipapis\account;
 require_once dirname(__FILE__).'/AccountService.php';
 class AccountServiceHelper extends _AccountServiceClient{
 	

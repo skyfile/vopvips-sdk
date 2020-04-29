@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\dvd;
+namespace Voop\vipapis\dvd;
 
 class AreaOccupiedOrdersRequest {
 	
@@ -188,7 +188,7 @@ class AreaOccupiedOrdersRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

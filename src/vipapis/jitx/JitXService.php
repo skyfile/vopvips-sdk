@@ -8,45 +8,45 @@
 *
 */
 
-namespace vipapis\jitx;
+namespace Voop\vipapis\jitx;
 interface JitXServiceIf{
 	
 	
-	public function createChangeWarehouseWorkflow(\vipapis\jitx\CreateChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq);
+	public function createChangeWarehouseWorkflow(\Voop\vipapis\jitx\CreateChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq);
 	
-	public function feedbackDeliveryResult(\vipapis\jitx\FeedbackDeliveryResultRequest $request);
+	public function feedbackDeliveryResult(\Voop\vipapis\jitx\FeedbackDeliveryResultRequest $request);
 	
-	public function getChangeWarehouseWorkflows(\vipapis\jitx\GetChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq);
+	public function getChangeWarehouseWorkflows(\Voop\vipapis\jitx\GetChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq);
 	
-	public function getDeliveryOrders(\vipapis\jitx\GetDeliveryOrdersRequest $request);
+	public function getDeliveryOrders(\Voop\vipapis\jitx\GetDeliveryOrdersRequest $request);
 	
-	public function getDeliveryOrdersForBelle(\vipapis\jitx\BelleDeliveryOrderRequest $request);
+	public function getDeliveryOrdersForBelle(\Voop\vipapis\jitx\BelleDeliveryOrderRequest $request);
 	
-	public function getDeliveryOrdersForMutiSys(\vipapis\jitx\MutilWarehousingOrderRequest $request);
+	public function getDeliveryOrdersForMutiSys(\Voop\vipapis\jitx\MutilWarehousingOrderRequest $request);
 	
-	public function getJitXOrdersForMutiSys(\vipapis\jitx\OrderRequest $request);
+	public function getJitXOrdersForMutiSys(\Voop\vipapis\jitx\OrderRequest $request);
 	
-	public function getOrderLabel(\vipapis\jitx\GetOrderLabelRequest $request);
+	public function getOrderLabel(\Voop\vipapis\jitx\GetOrderLabelRequest $request);
 	
-	public function getOrderLabelForBelle(\vipapis\jitx\BelleOrderLabelRequest $request);
+	public function getOrderLabelForBelle(\Voop\vipapis\jitx\BelleOrderLabelRequest $request);
 	
-	public function getOrders(\vipapis\jitx\GetOrdersRequest $request);
+	public function getOrders(\Voop\vipapis\jitx\GetOrdersRequest $request);
 	
-	public function getOrdersByOrderSn(\vipapis\jitx\GetOrdersByOrderSnRequest $request);
+	public function getOrdersByOrderSn(\Voop\vipapis\jitx\GetOrdersByOrderSnRequest $request);
 	
-	public function getOrdersForBelle(\vipapis\jitx\BelleOrderRequest $request);
+	public function getOrdersForBelle(\Voop\vipapis\jitx\BelleOrderRequest $request);
 	
-	public function getPrintLabel(\vipapis\jitx\GetPrintLabelRequest $request);
+	public function getPrintLabel(\Voop\vipapis\jitx\GetPrintLabelRequest $request);
 	
-	public function getPrintTemplate(\vipapis\jitx\GetOrderLabelRequest $request);
+	public function getPrintTemplate(\Voop\vipapis\jitx\GetOrderLabelRequest $request);
 	
-	public function getTransportNos(\vipapis\jitx\GetTransportNosRequest $request);
+	public function getTransportNos(\Voop\vipapis\jitx\GetTransportNosRequest $request);
 	
-	public function getWarehouses(\vipapis\jitx\GetWarehousesRequest $request);
+	public function getWarehouses(\Voop\vipapis\jitx\GetWarehousesRequest $request);
 	
 	public function healthCheck();
 	
-	public function ship(\vipapis\jitx\ShipRequest $request);
+	public function ship(\Voop\vipapis\jitx\ShipRequest $request);
 	
 }
 
@@ -58,16 +58,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function createChangeWarehouseWorkflow(\vipapis\jitx\CreateChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq){
+	public function createChangeWarehouseWorkflow(\Voop\vipapis\jitx\CreateChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq){
 		
 		$this->send_createChangeWarehouseWorkflow( $changeWarehouseWorkflowReq);
 		return $this->recv_createChangeWarehouseWorkflow();
 	}
 	
-	public function send_createChangeWarehouseWorkflow(\vipapis\jitx\CreateChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq){
+	public function send_createChangeWarehouseWorkflow(\Voop\vipapis\jitx\CreateChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq){
 		
 		$this->initInvocation("createChangeWarehouseWorkflow");
-		$args = new \vipapis\jitx\JitXService_createChangeWarehouseWorkflow_args();
+		$args = new \Voop\vipapis\jitx\JitXService_createChangeWarehouseWorkflow_args();
 		
 		$args->changeWarehouseWorkflowReq = $changeWarehouseWorkflowReq;
 		
@@ -76,7 +76,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_createChangeWarehouseWorkflow(){
 		
-		$result = new \vipapis\jitx\JitXService_createChangeWarehouseWorkflow_result();
+		$result = new \Voop\vipapis\jitx\JitXService_createChangeWarehouseWorkflow_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -86,16 +86,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function feedbackDeliveryResult(\vipapis\jitx\FeedbackDeliveryResultRequest $request){
+	public function feedbackDeliveryResult(\Voop\vipapis\jitx\FeedbackDeliveryResultRequest $request){
 		
 		$this->send_feedbackDeliveryResult( $request);
 		return $this->recv_feedbackDeliveryResult();
 	}
 	
-	public function send_feedbackDeliveryResult(\vipapis\jitx\FeedbackDeliveryResultRequest $request){
+	public function send_feedbackDeliveryResult(\Voop\vipapis\jitx\FeedbackDeliveryResultRequest $request){
 		
 		$this->initInvocation("feedbackDeliveryResult");
-		$args = new \vipapis\jitx\JitXService_feedbackDeliveryResult_args();
+		$args = new \Voop\vipapis\jitx\JitXService_feedbackDeliveryResult_args();
 		
 		$args->request = $request;
 		
@@ -104,7 +104,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_feedbackDeliveryResult(){
 		
-		$result = new \vipapis\jitx\JitXService_feedbackDeliveryResult_result();
+		$result = new \Voop\vipapis\jitx\JitXService_feedbackDeliveryResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -114,16 +114,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getChangeWarehouseWorkflows(\vipapis\jitx\GetChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq){
+	public function getChangeWarehouseWorkflows(\Voop\vipapis\jitx\GetChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq){
 		
 		$this->send_getChangeWarehouseWorkflows( $changeWarehouseWorkflowReq);
 		return $this->recv_getChangeWarehouseWorkflows();
 	}
 	
-	public function send_getChangeWarehouseWorkflows(\vipapis\jitx\GetChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq){
+	public function send_getChangeWarehouseWorkflows(\Voop\vipapis\jitx\GetChangeWarehouseWorkflowReq $changeWarehouseWorkflowReq){
 		
 		$this->initInvocation("getChangeWarehouseWorkflows");
-		$args = new \vipapis\jitx\JitXService_getChangeWarehouseWorkflows_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getChangeWarehouseWorkflows_args();
 		
 		$args->changeWarehouseWorkflowReq = $changeWarehouseWorkflowReq;
 		
@@ -132,7 +132,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getChangeWarehouseWorkflows(){
 		
-		$result = new \vipapis\jitx\JitXService_getChangeWarehouseWorkflows_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getChangeWarehouseWorkflows_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -142,16 +142,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getDeliveryOrders(\vipapis\jitx\GetDeliveryOrdersRequest $request){
+	public function getDeliveryOrders(\Voop\vipapis\jitx\GetDeliveryOrdersRequest $request){
 		
 		$this->send_getDeliveryOrders( $request);
 		return $this->recv_getDeliveryOrders();
 	}
 	
-	public function send_getDeliveryOrders(\vipapis\jitx\GetDeliveryOrdersRequest $request){
+	public function send_getDeliveryOrders(\Voop\vipapis\jitx\GetDeliveryOrdersRequest $request){
 		
 		$this->initInvocation("getDeliveryOrders");
-		$args = new \vipapis\jitx\JitXService_getDeliveryOrders_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getDeliveryOrders_args();
 		
 		$args->request = $request;
 		
@@ -160,7 +160,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getDeliveryOrders(){
 		
-		$result = new \vipapis\jitx\JitXService_getDeliveryOrders_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getDeliveryOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -170,16 +170,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getDeliveryOrdersForBelle(\vipapis\jitx\BelleDeliveryOrderRequest $request){
+	public function getDeliveryOrdersForBelle(\Voop\vipapis\jitx\BelleDeliveryOrderRequest $request){
 		
 		$this->send_getDeliveryOrdersForBelle( $request);
 		return $this->recv_getDeliveryOrdersForBelle();
 	}
 	
-	public function send_getDeliveryOrdersForBelle(\vipapis\jitx\BelleDeliveryOrderRequest $request){
+	public function send_getDeliveryOrdersForBelle(\Voop\vipapis\jitx\BelleDeliveryOrderRequest $request){
 		
 		$this->initInvocation("getDeliveryOrdersForBelle");
-		$args = new \vipapis\jitx\JitXService_getDeliveryOrdersForBelle_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getDeliveryOrdersForBelle_args();
 		
 		$args->request = $request;
 		
@@ -188,7 +188,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getDeliveryOrdersForBelle(){
 		
-		$result = new \vipapis\jitx\JitXService_getDeliveryOrdersForBelle_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getDeliveryOrdersForBelle_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -198,16 +198,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getDeliveryOrdersForMutiSys(\vipapis\jitx\MutilWarehousingOrderRequest $request){
+	public function getDeliveryOrdersForMutiSys(\Voop\vipapis\jitx\MutilWarehousingOrderRequest $request){
 		
 		$this->send_getDeliveryOrdersForMutiSys( $request);
 		return $this->recv_getDeliveryOrdersForMutiSys();
 	}
 	
-	public function send_getDeliveryOrdersForMutiSys(\vipapis\jitx\MutilWarehousingOrderRequest $request){
+	public function send_getDeliveryOrdersForMutiSys(\Voop\vipapis\jitx\MutilWarehousingOrderRequest $request){
 		
 		$this->initInvocation("getDeliveryOrdersForMutiSys");
-		$args = new \vipapis\jitx\JitXService_getDeliveryOrdersForMutiSys_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getDeliveryOrdersForMutiSys_args();
 		
 		$args->request = $request;
 		
@@ -216,7 +216,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getDeliveryOrdersForMutiSys(){
 		
-		$result = new \vipapis\jitx\JitXService_getDeliveryOrdersForMutiSys_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getDeliveryOrdersForMutiSys_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -226,16 +226,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getJitXOrdersForMutiSys(\vipapis\jitx\OrderRequest $request){
+	public function getJitXOrdersForMutiSys(\Voop\vipapis\jitx\OrderRequest $request){
 		
 		$this->send_getJitXOrdersForMutiSys( $request);
 		return $this->recv_getJitXOrdersForMutiSys();
 	}
 	
-	public function send_getJitXOrdersForMutiSys(\vipapis\jitx\OrderRequest $request){
+	public function send_getJitXOrdersForMutiSys(\Voop\vipapis\jitx\OrderRequest $request){
 		
 		$this->initInvocation("getJitXOrdersForMutiSys");
-		$args = new \vipapis\jitx\JitXService_getJitXOrdersForMutiSys_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getJitXOrdersForMutiSys_args();
 		
 		$args->request = $request;
 		
@@ -244,7 +244,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getJitXOrdersForMutiSys(){
 		
-		$result = new \vipapis\jitx\JitXService_getJitXOrdersForMutiSys_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getJitXOrdersForMutiSys_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -254,16 +254,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getOrderLabel(\vipapis\jitx\GetOrderLabelRequest $request){
+	public function getOrderLabel(\Voop\vipapis\jitx\GetOrderLabelRequest $request){
 		
 		$this->send_getOrderLabel( $request);
 		return $this->recv_getOrderLabel();
 	}
 	
-	public function send_getOrderLabel(\vipapis\jitx\GetOrderLabelRequest $request){
+	public function send_getOrderLabel(\Voop\vipapis\jitx\GetOrderLabelRequest $request){
 		
 		$this->initInvocation("getOrderLabel");
-		$args = new \vipapis\jitx\JitXService_getOrderLabel_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getOrderLabel_args();
 		
 		$args->request = $request;
 		
@@ -272,7 +272,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getOrderLabel(){
 		
-		$result = new \vipapis\jitx\JitXService_getOrderLabel_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getOrderLabel_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -282,16 +282,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getOrderLabelForBelle(\vipapis\jitx\BelleOrderLabelRequest $request){
+	public function getOrderLabelForBelle(\Voop\vipapis\jitx\BelleOrderLabelRequest $request){
 		
 		$this->send_getOrderLabelForBelle( $request);
 		return $this->recv_getOrderLabelForBelle();
 	}
 	
-	public function send_getOrderLabelForBelle(\vipapis\jitx\BelleOrderLabelRequest $request){
+	public function send_getOrderLabelForBelle(\Voop\vipapis\jitx\BelleOrderLabelRequest $request){
 		
 		$this->initInvocation("getOrderLabelForBelle");
-		$args = new \vipapis\jitx\JitXService_getOrderLabelForBelle_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getOrderLabelForBelle_args();
 		
 		$args->request = $request;
 		
@@ -300,7 +300,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getOrderLabelForBelle(){
 		
-		$result = new \vipapis\jitx\JitXService_getOrderLabelForBelle_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getOrderLabelForBelle_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -310,16 +310,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getOrders(\vipapis\jitx\GetOrdersRequest $request){
+	public function getOrders(\Voop\vipapis\jitx\GetOrdersRequest $request){
 		
 		$this->send_getOrders( $request);
 		return $this->recv_getOrders();
 	}
 	
-	public function send_getOrders(\vipapis\jitx\GetOrdersRequest $request){
+	public function send_getOrders(\Voop\vipapis\jitx\GetOrdersRequest $request){
 		
 		$this->initInvocation("getOrders");
-		$args = new \vipapis\jitx\JitXService_getOrders_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getOrders_args();
 		
 		$args->request = $request;
 		
@@ -328,7 +328,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getOrders(){
 		
-		$result = new \vipapis\jitx\JitXService_getOrders_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -338,16 +338,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getOrdersByOrderSn(\vipapis\jitx\GetOrdersByOrderSnRequest $request){
+	public function getOrdersByOrderSn(\Voop\vipapis\jitx\GetOrdersByOrderSnRequest $request){
 		
 		$this->send_getOrdersByOrderSn( $request);
 		return $this->recv_getOrdersByOrderSn();
 	}
 	
-	public function send_getOrdersByOrderSn(\vipapis\jitx\GetOrdersByOrderSnRequest $request){
+	public function send_getOrdersByOrderSn(\Voop\vipapis\jitx\GetOrdersByOrderSnRequest $request){
 		
 		$this->initInvocation("getOrdersByOrderSn");
-		$args = new \vipapis\jitx\JitXService_getOrdersByOrderSn_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getOrdersByOrderSn_args();
 		
 		$args->request = $request;
 		
@@ -356,7 +356,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getOrdersByOrderSn(){
 		
-		$result = new \vipapis\jitx\JitXService_getOrdersByOrderSn_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getOrdersByOrderSn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -366,16 +366,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getOrdersForBelle(\vipapis\jitx\BelleOrderRequest $request){
+	public function getOrdersForBelle(\Voop\vipapis\jitx\BelleOrderRequest $request){
 		
 		$this->send_getOrdersForBelle( $request);
 		return $this->recv_getOrdersForBelle();
 	}
 	
-	public function send_getOrdersForBelle(\vipapis\jitx\BelleOrderRequest $request){
+	public function send_getOrdersForBelle(\Voop\vipapis\jitx\BelleOrderRequest $request){
 		
 		$this->initInvocation("getOrdersForBelle");
-		$args = new \vipapis\jitx\JitXService_getOrdersForBelle_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getOrdersForBelle_args();
 		
 		$args->request = $request;
 		
@@ -384,7 +384,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getOrdersForBelle(){
 		
-		$result = new \vipapis\jitx\JitXService_getOrdersForBelle_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getOrdersForBelle_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -394,16 +394,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getPrintLabel(\vipapis\jitx\GetPrintLabelRequest $request){
+	public function getPrintLabel(\Voop\vipapis\jitx\GetPrintLabelRequest $request){
 		
 		$this->send_getPrintLabel( $request);
 		return $this->recv_getPrintLabel();
 	}
 	
-	public function send_getPrintLabel(\vipapis\jitx\GetPrintLabelRequest $request){
+	public function send_getPrintLabel(\Voop\vipapis\jitx\GetPrintLabelRequest $request){
 		
 		$this->initInvocation("getPrintLabel");
-		$args = new \vipapis\jitx\JitXService_getPrintLabel_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getPrintLabel_args();
 		
 		$args->request = $request;
 		
@@ -412,7 +412,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getPrintLabel(){
 		
-		$result = new \vipapis\jitx\JitXService_getPrintLabel_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getPrintLabel_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -422,16 +422,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getPrintTemplate(\vipapis\jitx\GetOrderLabelRequest $request){
+	public function getPrintTemplate(\Voop\vipapis\jitx\GetOrderLabelRequest $request){
 		
 		$this->send_getPrintTemplate( $request);
 		return $this->recv_getPrintTemplate();
 	}
 	
-	public function send_getPrintTemplate(\vipapis\jitx\GetOrderLabelRequest $request){
+	public function send_getPrintTemplate(\Voop\vipapis\jitx\GetOrderLabelRequest $request){
 		
 		$this->initInvocation("getPrintTemplate");
-		$args = new \vipapis\jitx\JitXService_getPrintTemplate_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getPrintTemplate_args();
 		
 		$args->request = $request;
 		
@@ -440,7 +440,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getPrintTemplate(){
 		
-		$result = new \vipapis\jitx\JitXService_getPrintTemplate_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getPrintTemplate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -450,16 +450,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getTransportNos(\vipapis\jitx\GetTransportNosRequest $request){
+	public function getTransportNos(\Voop\vipapis\jitx\GetTransportNosRequest $request){
 		
 		$this->send_getTransportNos( $request);
 		return $this->recv_getTransportNos();
 	}
 	
-	public function send_getTransportNos(\vipapis\jitx\GetTransportNosRequest $request){
+	public function send_getTransportNos(\Voop\vipapis\jitx\GetTransportNosRequest $request){
 		
 		$this->initInvocation("getTransportNos");
-		$args = new \vipapis\jitx\JitXService_getTransportNos_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getTransportNos_args();
 		
 		$args->request = $request;
 		
@@ -468,7 +468,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getTransportNos(){
 		
-		$result = new \vipapis\jitx\JitXService_getTransportNos_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getTransportNos_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -478,16 +478,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function getWarehouses(\vipapis\jitx\GetWarehousesRequest $request){
+	public function getWarehouses(\Voop\vipapis\jitx\GetWarehousesRequest $request){
 		
 		$this->send_getWarehouses( $request);
 		return $this->recv_getWarehouses();
 	}
 	
-	public function send_getWarehouses(\vipapis\jitx\GetWarehousesRequest $request){
+	public function send_getWarehouses(\Voop\vipapis\jitx\GetWarehousesRequest $request){
 		
 		$this->initInvocation("getWarehouses");
-		$args = new \vipapis\jitx\JitXService_getWarehouses_args();
+		$args = new \Voop\vipapis\jitx\JitXService_getWarehouses_args();
 		
 		$args->request = $request;
 		
@@ -496,7 +496,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_getWarehouses(){
 		
-		$result = new \vipapis\jitx\JitXService_getWarehouses_result();
+		$result = new \Voop\vipapis\jitx\JitXService_getWarehouses_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -515,14 +515,14 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\jitx\JitXService_healthCheck_args();
+		$args = new \Voop\vipapis\jitx\JitXService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\jitx\JitXService_healthCheck_result();
+		$result = new \Voop\vipapis\jitx\JitXService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -532,16 +532,16 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	}
 	
 	
-	public function ship(\vipapis\jitx\ShipRequest $request){
+	public function ship(\Voop\vipapis\jitx\ShipRequest $request){
 		
 		$this->send_ship( $request);
 		return $this->recv_ship();
 	}
 	
-	public function send_ship(\vipapis\jitx\ShipRequest $request){
+	public function send_ship(\Voop\vipapis\jitx\ShipRequest $request){
 		
 		$this->initInvocation("ship");
-		$args = new \vipapis\jitx\JitXService_ship_args();
+		$args = new \Voop\vipapis\jitx\JitXService_ship_args();
 		
 		$args->request = $request;
 		
@@ -550,7 +550,7 @@ class _JitXServiceClient extends \Osp\Base\OspStub implements \vipapis\jitx\JitX
 	
 	public function recv_ship(){
 		
-		$result = new \vipapis\jitx\JitXService_ship_result();
+		$result = new \Voop\vipapis\jitx\JitXService_ship_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -605,7 +605,7 @@ class JitXService_createChangeWarehouseWorkflow_args {
 		if(true) {
 			
 			
-			$this->changeWarehouseWorkflowReq = new \vipapis\jitx\CreateChangeWarehouseWorkflowReq();
+			$this->changeWarehouseWorkflowReq = new \Voop\vipapis\jitx\CreateChangeWarehouseWorkflowReq();
 			$this->changeWarehouseWorkflowReq->read($input);
 			
 		}
@@ -628,7 +628,7 @@ class JitXService_createChangeWarehouseWorkflow_args {
 			
 			if (!is_object($this->changeWarehouseWorkflowReq)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->changeWarehouseWorkflowReq->write($output);
@@ -687,7 +687,7 @@ class JitXService_feedbackDeliveryResult_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\FeedbackDeliveryResultRequest();
+			$this->request = new \Voop\vipapis\jitx\FeedbackDeliveryResultRequest();
 			$this->request->read($input);
 			
 		}
@@ -708,7 +708,7 @@ class JitXService_feedbackDeliveryResult_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -765,7 +765,7 @@ class JitXService_getChangeWarehouseWorkflows_args {
 		if(true) {
 			
 			
-			$this->changeWarehouseWorkflowReq = new \vipapis\jitx\GetChangeWarehouseWorkflowReq();
+			$this->changeWarehouseWorkflowReq = new \Voop\vipapis\jitx\GetChangeWarehouseWorkflowReq();
 			$this->changeWarehouseWorkflowReq->read($input);
 			
 		}
@@ -788,7 +788,7 @@ class JitXService_getChangeWarehouseWorkflows_args {
 			
 			if (!is_object($this->changeWarehouseWorkflowReq)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->changeWarehouseWorkflowReq->write($output);
@@ -847,7 +847,7 @@ class JitXService_getDeliveryOrders_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\GetDeliveryOrdersRequest();
+			$this->request = new \Voop\vipapis\jitx\GetDeliveryOrdersRequest();
 			$this->request->read($input);
 			
 		}
@@ -868,7 +868,7 @@ class JitXService_getDeliveryOrders_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -925,7 +925,7 @@ class JitXService_getDeliveryOrdersForBelle_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\BelleDeliveryOrderRequest();
+			$this->request = new \Voop\vipapis\jitx\BelleDeliveryOrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -946,7 +946,7 @@ class JitXService_getDeliveryOrdersForBelle_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1003,7 +1003,7 @@ class JitXService_getDeliveryOrdersForMutiSys_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\MutilWarehousingOrderRequest();
+			$this->request = new \Voop\vipapis\jitx\MutilWarehousingOrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -1024,7 +1024,7 @@ class JitXService_getDeliveryOrdersForMutiSys_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1081,7 +1081,7 @@ class JitXService_getJitXOrdersForMutiSys_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\OrderRequest();
+			$this->request = new \Voop\vipapis\jitx\OrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -1102,7 +1102,7 @@ class JitXService_getJitXOrdersForMutiSys_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1159,7 +1159,7 @@ class JitXService_getOrderLabel_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\GetOrderLabelRequest();
+			$this->request = new \Voop\vipapis\jitx\GetOrderLabelRequest();
 			$this->request->read($input);
 			
 		}
@@ -1180,7 +1180,7 @@ class JitXService_getOrderLabel_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1237,7 +1237,7 @@ class JitXService_getOrderLabelForBelle_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\BelleOrderLabelRequest();
+			$this->request = new \Voop\vipapis\jitx\BelleOrderLabelRequest();
 			$this->request->read($input);
 			
 		}
@@ -1258,7 +1258,7 @@ class JitXService_getOrderLabelForBelle_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1315,7 +1315,7 @@ class JitXService_getOrders_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\GetOrdersRequest();
+			$this->request = new \Voop\vipapis\jitx\GetOrdersRequest();
 			$this->request->read($input);
 			
 		}
@@ -1336,7 +1336,7 @@ class JitXService_getOrders_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1393,7 +1393,7 @@ class JitXService_getOrdersByOrderSn_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\GetOrdersByOrderSnRequest();
+			$this->request = new \Voop\vipapis\jitx\GetOrdersByOrderSnRequest();
 			$this->request->read($input);
 			
 		}
@@ -1414,7 +1414,7 @@ class JitXService_getOrdersByOrderSn_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1471,7 +1471,7 @@ class JitXService_getOrdersForBelle_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\BelleOrderRequest();
+			$this->request = new \Voop\vipapis\jitx\BelleOrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -1492,7 +1492,7 @@ class JitXService_getOrdersForBelle_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1549,7 +1549,7 @@ class JitXService_getPrintLabel_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\GetPrintLabelRequest();
+			$this->request = new \Voop\vipapis\jitx\GetPrintLabelRequest();
 			$this->request->read($input);
 			
 		}
@@ -1570,7 +1570,7 @@ class JitXService_getPrintLabel_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1627,7 +1627,7 @@ class JitXService_getPrintTemplate_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\GetOrderLabelRequest();
+			$this->request = new \Voop\vipapis\jitx\GetOrderLabelRequest();
 			$this->request->read($input);
 			
 		}
@@ -1648,7 +1648,7 @@ class JitXService_getPrintTemplate_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1705,7 +1705,7 @@ class JitXService_getTransportNos_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\GetTransportNosRequest();
+			$this->request = new \Voop\vipapis\jitx\GetTransportNosRequest();
 			$this->request->read($input);
 			
 		}
@@ -1726,7 +1726,7 @@ class JitXService_getTransportNos_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1783,7 +1783,7 @@ class JitXService_getWarehouses_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\GetWarehousesRequest();
+			$this->request = new \Voop\vipapis\jitx\GetWarehousesRequest();
 			$this->request->read($input);
 			
 		}
@@ -1804,7 +1804,7 @@ class JitXService_getWarehouses_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1907,7 +1907,7 @@ class JitXService_ship_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\jitx\ShipRequest();
+			$this->request = new \Voop\vipapis\jitx\ShipRequest();
 			$this->request->read($input);
 			
 		}
@@ -1928,7 +1928,7 @@ class JitXService_ship_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1985,7 +1985,7 @@ class JitXService_createChangeWarehouseWorkflow_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\jitx\CreateWorkflowResp();
+			$this->success = new \Voop\vipapis\jitx\CreateWorkflowResp();
 			$this->success->read($input);
 			
 		}
@@ -2008,7 +2008,7 @@ class JitXService_createChangeWarehouseWorkflow_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2076,7 +2076,7 @@ class JitXService_feedbackDeliveryResult_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\jitx\FeedbackDeliveryResultResponse();
+					$elem0 = new \Voop\vipapis\jitx\FeedbackDeliveryResultResponse();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2109,7 +2109,7 @@ class JitXService_feedbackDeliveryResult_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2118,7 +2118,7 @@ class JitXService_feedbackDeliveryResult_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2181,7 +2181,7 @@ class JitXService_getChangeWarehouseWorkflows_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\jitx\GetChangeWarehouseWorkflowResp();
+			$this->success = new \Voop\vipapis\jitx\GetChangeWarehouseWorkflowResp();
 			$this->success->read($input);
 			
 		}
@@ -2204,7 +2204,7 @@ class JitXService_getChangeWarehouseWorkflows_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2263,7 +2263,7 @@ class JitXService_getDeliveryOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\jitx\GetDeliveryOrdersResponse();
+			$this->success = new \Voop\vipapis\jitx\GetDeliveryOrdersResponse();
 			$this->success->read($input);
 			
 		}
@@ -2286,7 +2286,7 @@ class JitXService_getDeliveryOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2345,7 +2345,7 @@ class JitXService_getDeliveryOrdersForBelle_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\jitx\BelleDeliveryOrderResponse();
+			$this->success = new \Voop\vipapis\jitx\BelleDeliveryOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -2368,7 +2368,7 @@ class JitXService_getDeliveryOrdersForBelle_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2427,7 +2427,7 @@ class JitXService_getDeliveryOrdersForMutiSys_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\jitx\MutilWarehousingOrderResponse();
+			$this->success = new \Voop\vipapis\jitx\MutilWarehousingOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -2450,7 +2450,7 @@ class JitXService_getDeliveryOrdersForMutiSys_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2509,7 +2509,7 @@ class JitXService_getJitXOrdersForMutiSys_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\jitx\GetOrdersResponse();
+			$this->success = new \Voop\vipapis\jitx\GetOrdersResponse();
 			$this->success->read($input);
 			
 		}
@@ -2532,7 +2532,7 @@ class JitXService_getJitXOrdersForMutiSys_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2600,7 +2600,7 @@ class JitXService_getOrderLabel_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\jitx\OrderLabel();
+					$elem0 = new \Voop\vipapis\jitx\OrderLabel();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2633,7 +2633,7 @@ class JitXService_getOrderLabel_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2642,7 +2642,7 @@ class JitXService_getOrderLabel_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2714,7 +2714,7 @@ class JitXService_getOrderLabelForBelle_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\jitx\OrderLabel();
+					$elem1 = new \Voop\vipapis\jitx\OrderLabel();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -2747,7 +2747,7 @@ class JitXService_getOrderLabelForBelle_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2756,7 +2756,7 @@ class JitXService_getOrderLabelForBelle_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2819,7 +2819,7 @@ class JitXService_getOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\jitx\GetOrdersResponse();
+			$this->success = new \Voop\vipapis\jitx\GetOrdersResponse();
 			$this->success->read($input);
 			
 		}
@@ -2842,7 +2842,7 @@ class JitXService_getOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2901,7 +2901,7 @@ class JitXService_getOrdersByOrderSn_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\jitx\GetOrdersResponse();
+			$this->success = new \Voop\vipapis\jitx\GetOrdersResponse();
 			$this->success->read($input);
 			
 		}
@@ -2924,7 +2924,7 @@ class JitXService_getOrdersByOrderSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2983,7 +2983,7 @@ class JitXService_getOrdersForBelle_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\jitx\BelleOrderResponse();
+			$this->success = new \Voop\vipapis\jitx\BelleOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -3006,7 +3006,7 @@ class JitXService_getOrdersForBelle_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3065,7 +3065,7 @@ class JitXService_getPrintLabel_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\jitx\GetPrintLabelResponse();
+			$this->success = new \Voop\vipapis\jitx\GetPrintLabelResponse();
 			$this->success->read($input);
 			
 		}
@@ -3088,7 +3088,7 @@ class JitXService_getPrintLabel_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3156,7 +3156,7 @@ class JitXService_getPrintTemplate_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\jitx\OrderLabel();
+					$elem0 = new \Voop\vipapis\jitx\OrderLabel();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -3189,7 +3189,7 @@ class JitXService_getPrintTemplate_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3198,7 +3198,7 @@ class JitXService_getPrintTemplate_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3301,7 +3301,7 @@ class JitXService_getTransportNos_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3376,7 +3376,7 @@ class JitXService_getWarehouses_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\jitx\WarehouseInfo();
+					$elem1 = new \Voop\vipapis\jitx\WarehouseInfo();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -3409,7 +3409,7 @@ class JitXService_getWarehouses_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3418,7 +3418,7 @@ class JitXService_getWarehouses_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3481,7 +3481,7 @@ class JitXService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -3504,7 +3504,7 @@ class JitXService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3563,7 +3563,7 @@ class JitXService_ship_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\jitx\ShipResponse();
+			$this->success = new \Voop\vipapis\jitx\ShipResponse();
 			$this->success->read($input);
 			
 		}
@@ -3586,7 +3586,7 @@ class JitXService_ship_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 interface VendorProductQueryServiceIf{
 	
 	
@@ -37,14 +37,14 @@ class _VendorProductQueryServiceClient extends \Osp\Base\OspStub implements \vip
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\product\VendorProductQueryService_healthCheck_args();
+		$args = new \Voop\vipapis\product\VendorProductQueryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\product\VendorProductQueryService_healthCheck_result();
+		$result = new \Voop\vipapis\product\VendorProductQueryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,7 +63,7 @@ class _VendorProductQueryServiceClient extends \Osp\Base\OspStub implements \vip
 	public function send_queryByBarcode( $vendor_id, $barcode, $source){
 		
 		$this->initInvocation("queryByBarcode");
-		$args = new \vipapis\product\VendorProductQueryService_queryByBarcode_args();
+		$args = new \Voop\vipapis\product\VendorProductQueryService_queryByBarcode_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -76,7 +76,7 @@ class _VendorProductQueryServiceClient extends \Osp\Base\OspStub implements \vip
 	
 	public function recv_queryByBarcode(){
 		
-		$result = new \vipapis\product\VendorProductQueryService_queryByBarcode_result();
+		$result = new \Voop\vipapis\product\VendorProductQueryService_queryByBarcode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -95,7 +95,7 @@ class _VendorProductQueryServiceClient extends \Osp\Base\OspStub implements \vip
 	public function send_queryByBrandAndSn( $vendor_id, $brand_id, $sn, $source){
 		
 		$this->initInvocation("queryByBrandAndSn");
-		$args = new \vipapis\product\VendorProductQueryService_queryByBrandAndSn_args();
+		$args = new \Voop\vipapis\product\VendorProductQueryService_queryByBrandAndSn_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -110,7 +110,7 @@ class _VendorProductQueryServiceClient extends \Osp\Base\OspStub implements \vip
 	
 	public function recv_queryByBrandAndSn(){
 		
-		$result = new \vipapis\product\VendorProductQueryService_queryByBrandAndSn_result();
+		$result = new \Voop\vipapis\product\VendorProductQueryService_queryByBrandAndSn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -479,7 +479,7 @@ class VendorProductQueryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -502,7 +502,7 @@ class VendorProductQueryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -570,7 +570,7 @@ class VendorProductQueryService_queryByBarcode_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\product\SpuWithSkusBaseInfo();
+					$elem0 = new \Voop\vipapis\product\SpuWithSkusBaseInfo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -603,7 +603,7 @@ class VendorProductQueryService_queryByBarcode_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -612,7 +612,7 @@ class VendorProductQueryService_queryByBarcode_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -684,7 +684,7 @@ class VendorProductQueryService_queryByBrandAndSn_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\product\SpuWithSkusBaseInfo();
+					$elem1 = new \Voop\vipapis\product\SpuWithSkusBaseInfo();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -717,7 +717,7 @@ class VendorProductQueryService_queryByBrandAndSn_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -726,7 +726,7 @@ class VendorProductQueryService_queryByBrandAndSn_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

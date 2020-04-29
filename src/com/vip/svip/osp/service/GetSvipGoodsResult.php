@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\svip\osp\service;
+namespace Voop\com\vip\svip\osp\service;
 
 class GetSvipGoodsResult {
 	
@@ -101,7 +101,7 @@ class GetSvipGoodsResult {
 				
 				$needSkip = false;
 				
-				$this->data = new \com\vip\svip\osp\service\SvipGoodsBPInfo();
+				$this->data = new \Voop\com\vip\svip\osp\service\SvipGoodsBPInfo();
 				$this->data->read($input);
 				
 			}
@@ -147,7 +147,7 @@ class GetSvipGoodsResult {
 			
 			if (!is_object($this->data)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->data->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\ezr;
+namespace Voop\vipapis\ezr;
 interface ChannelEzrServiceIf{
 	
 	
@@ -37,7 +37,7 @@ class _ChannelEzrServiceClient extends \Osp\Base\OspStub implements \vipapis\ezr
 	public function send_closePCStore( $phoneNo, $vendorCode){
 		
 		$this->initInvocation("closePCStore");
-		$args = new \vipapis\ezr\ChannelEzrService_closePCStore_args();
+		$args = new \Voop\vipapis\ezr\ChannelEzrService_closePCStore_args();
 		
 		$args->phoneNo = $phoneNo;
 		
@@ -48,7 +48,7 @@ class _ChannelEzrServiceClient extends \Osp\Base\OspStub implements \vipapis\ezr
 	
 	public function recv_closePCStore(){
 		
-		$result = new \vipapis\ezr\ChannelEzrService_closePCStore_result();
+		$result = new \Voop\vipapis\ezr\ChannelEzrService_closePCStore_result();
 		$this->receive_base($result);
 		
 	}
@@ -63,7 +63,7 @@ class _ChannelEzrServiceClient extends \Osp\Base\OspStub implements \vipapis\ezr
 	public function send_createPCStore( $phoneNo, $vendorCode, $storeName){
 		
 		$this->initInvocation("createPCStore");
-		$args = new \vipapis\ezr\ChannelEzrService_createPCStore_args();
+		$args = new \Voop\vipapis\ezr\ChannelEzrService_createPCStore_args();
 		
 		$args->phoneNo = $phoneNo;
 		
@@ -76,7 +76,7 @@ class _ChannelEzrServiceClient extends \Osp\Base\OspStub implements \vipapis\ezr
 	
 	public function recv_createPCStore(){
 		
-		$result = new \vipapis\ezr\ChannelEzrService_createPCStore_result();
+		$result = new \Voop\vipapis\ezr\ChannelEzrService_createPCStore_result();
 		$this->receive_base($result);
 		
 	}
@@ -91,14 +91,14 @@ class _ChannelEzrServiceClient extends \Osp\Base\OspStub implements \vipapis\ezr
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\ezr\ChannelEzrService_healthCheck_args();
+		$args = new \Voop\vipapis\ezr\ChannelEzrService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\ezr\ChannelEzrService_healthCheck_result();
+		$result = new \Voop\vipapis\ezr\ChannelEzrService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -509,7 +509,7 @@ class ChannelEzrService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -532,7 +532,7 @@ class ChannelEzrService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\response;
+namespace Voop\com\vip\xstore\order\ofc\api\response;
 
 class TrackPushResult {
 	

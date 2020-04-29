@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 
 class DeliveryTraceInfoResponse {
 	
@@ -70,7 +70,7 @@ class DeliveryTraceInfoResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\delivery\DeliveryTraceInfo();
+						$elem1 = new \Voop\vipapis\delivery\DeliveryTraceInfo();
 						$elem1->read($input);
 						
 						$this->delivery_trace_infoes[$_size1++] = $elem1;
@@ -89,7 +89,7 @@ class DeliveryTraceInfoResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -112,7 +112,7 @@ class DeliveryTraceInfoResponse {
 			
 			if (!is_array($this->delivery_trace_infoes)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -121,7 +121,7 @@ class DeliveryTraceInfoResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

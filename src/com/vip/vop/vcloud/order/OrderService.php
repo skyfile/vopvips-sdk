@@ -8,33 +8,33 @@
 *
 */
 
-namespace com\vip\vop\vcloud\order;
+namespace Voop\com\vip\vop\vcloud\order;
 interface OrderServiceIf{
 	
 	
-	public function acceptOrder(\com\vip\vop\vcloud\order\OrderStoreReq $req);
+	public function acceptOrder(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req);
 	
-	public function appointOrderStore(\com\vip\vop\vcloud\order\OrderStoreReq $req);
+	public function appointOrderStore(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req);
 	
 	public function cancelShipment( $partnerId, $orderSn, $channelId, $account, $storeId);
 	
 	public function checkMultiParcel( $partnerId, $orderSn, $subOrderSn, $channelId);
 	
-	public function confirmDelivery(\com\vip\vop\vcloud\order\OrderStoreReq $req);
+	public function confirmDelivery(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req);
 	
-	public function confirmDeliveryPartly(\com\vip\vop\vcloud\order\ConfirmDeliveryPartlyReq $req);
+	public function confirmDeliveryPartly(\Voop\com\vip\vop\vcloud\order\ConfirmDeliveryPartlyReq $req);
 	
-	public function confirmNoStock(\com\vip\vop\vcloud\order\OrderStoreReq $req);
+	public function confirmNoStock(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req);
 	
 	public function confirmShipment( $partnerId, $orderSn, $channelId, $account, $storeId);
 	
-	public function confirmUserRefuse(\com\vip\vop\vcloud\order\OrderStoreReq $req);
+	public function confirmUserRefuse(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req);
 	
 	public function getChannelOrderAndDetail( $partnerId, $channelId, $orderType,\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses);
 	
 	public function getChannelOrderByOrderSn( $partnerId, $orderSn, $subOrderSn, $channelId, $storeId);
 	
-	public function getChannelOrderItems(\com\vip\vop\vcloud\order\OrderQueryRequest $orderQueryRequest);
+	public function getChannelOrderItems(\Voop\com\vip\vop\vcloud\order\OrderQueryRequest $orderQueryRequest);
 	
 	public function getOfficialMemberByOrderSn( $partnerId, $orderSn, $channelId);
 	
@@ -56,7 +56,7 @@ interface OrderServiceIf{
 	
 	public function pullOrders( $channelId, $partnerId, $orderSn, $beginTime, $endTime);
 	
-	public function refuseOrder(\com\vip\vop\vcloud\order\OrderStoreReq $req);
+	public function refuseOrder(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req);
 	
 	public function storeConfirmed( $channelId, $subOrderSn, $isConfirmed);
 	
@@ -76,16 +76,16 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	}
 	
 	
-	public function acceptOrder(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function acceptOrder(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->send_acceptOrder( $req);
 		return $this->recv_acceptOrder();
 	}
 	
-	public function send_acceptOrder(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function send_acceptOrder(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->initInvocation("acceptOrder");
-		$args = new \com\vip\vop\vcloud\order\OrderService_acceptOrder_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_acceptOrder_args();
 		
 		$args->req = $req;
 		
@@ -94,22 +94,22 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_acceptOrder(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_acceptOrder_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_acceptOrder_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function appointOrderStore(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function appointOrderStore(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->send_appointOrderStore( $req);
 		return $this->recv_appointOrderStore();
 	}
 	
-	public function send_appointOrderStore(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function send_appointOrderStore(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->initInvocation("appointOrderStore");
-		$args = new \com\vip\vop\vcloud\order\OrderService_appointOrderStore_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_appointOrderStore_args();
 		
 		$args->req = $req;
 		
@@ -118,7 +118,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_appointOrderStore(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_appointOrderStore_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_appointOrderStore_result();
 		$this->receive_base($result);
 		
 	}
@@ -133,7 +133,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_cancelShipment( $partnerId, $orderSn, $channelId, $account, $storeId){
 		
 		$this->initInvocation("cancelShipment");
-		$args = new \com\vip\vop\vcloud\order\OrderService_cancelShipment_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_cancelShipment_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -150,7 +150,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_cancelShipment(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_cancelShipment_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_cancelShipment_result();
 		$this->receive_base($result);
 		
 	}
@@ -165,7 +165,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_checkMultiParcel( $partnerId, $orderSn, $subOrderSn, $channelId){
 		
 		$this->initInvocation("checkMultiParcel");
-		$args = new \com\vip\vop\vcloud\order\OrderService_checkMultiParcel_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_checkMultiParcel_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -180,7 +180,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_checkMultiParcel(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_checkMultiParcel_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_checkMultiParcel_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -190,16 +190,16 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	}
 	
 	
-	public function confirmDelivery(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function confirmDelivery(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->send_confirmDelivery( $req);
 		return $this->recv_confirmDelivery();
 	}
 	
-	public function send_confirmDelivery(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function send_confirmDelivery(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->initInvocation("confirmDelivery");
-		$args = new \com\vip\vop\vcloud\order\OrderService_confirmDelivery_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_confirmDelivery_args();
 		
 		$args->req = $req;
 		
@@ -208,7 +208,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_confirmDelivery(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_confirmDelivery_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_confirmDelivery_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -218,16 +218,16 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	}
 	
 	
-	public function confirmDeliveryPartly(\com\vip\vop\vcloud\order\ConfirmDeliveryPartlyReq $req){
+	public function confirmDeliveryPartly(\Voop\com\vip\vop\vcloud\order\ConfirmDeliveryPartlyReq $req){
 		
 		$this->send_confirmDeliveryPartly( $req);
 		return $this->recv_confirmDeliveryPartly();
 	}
 	
-	public function send_confirmDeliveryPartly(\com\vip\vop\vcloud\order\ConfirmDeliveryPartlyReq $req){
+	public function send_confirmDeliveryPartly(\Voop\com\vip\vop\vcloud\order\ConfirmDeliveryPartlyReq $req){
 		
 		$this->initInvocation("confirmDeliveryPartly");
-		$args = new \com\vip\vop\vcloud\order\OrderService_confirmDeliveryPartly_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_confirmDeliveryPartly_args();
 		
 		$args->req = $req;
 		
@@ -236,22 +236,22 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_confirmDeliveryPartly(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_confirmDeliveryPartly_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_confirmDeliveryPartly_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function confirmNoStock(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function confirmNoStock(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->send_confirmNoStock( $req);
 		return $this->recv_confirmNoStock();
 	}
 	
-	public function send_confirmNoStock(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function send_confirmNoStock(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->initInvocation("confirmNoStock");
-		$args = new \com\vip\vop\vcloud\order\OrderService_confirmNoStock_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_confirmNoStock_args();
 		
 		$args->req = $req;
 		
@@ -260,7 +260,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_confirmNoStock(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_confirmNoStock_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_confirmNoStock_result();
 		$this->receive_base($result);
 		
 	}
@@ -275,7 +275,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_confirmShipment( $partnerId, $orderSn, $channelId, $account, $storeId){
 		
 		$this->initInvocation("confirmShipment");
-		$args = new \com\vip\vop\vcloud\order\OrderService_confirmShipment_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_confirmShipment_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -292,7 +292,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_confirmShipment(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_confirmShipment_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_confirmShipment_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -302,16 +302,16 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	}
 	
 	
-	public function confirmUserRefuse(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function confirmUserRefuse(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->send_confirmUserRefuse( $req);
 		return $this->recv_confirmUserRefuse();
 	}
 	
-	public function send_confirmUserRefuse(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function send_confirmUserRefuse(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->initInvocation("confirmUserRefuse");
-		$args = new \com\vip\vop\vcloud\order\OrderService_confirmUserRefuse_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_confirmUserRefuse_args();
 		
 		$args->req = $req;
 		
@@ -320,7 +320,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_confirmUserRefuse(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_confirmUserRefuse_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_confirmUserRefuse_result();
 		$this->receive_base($result);
 		
 	}
@@ -335,7 +335,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_getChannelOrderAndDetail( $partnerId, $channelId, $orderType,\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses){
 		
 		$this->initInvocation("getChannelOrderAndDetail");
-		$args = new \com\vip\vop\vcloud\order\OrderService_getChannelOrderAndDetail_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_getChannelOrderAndDetail_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -352,7 +352,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_getChannelOrderAndDetail(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_getChannelOrderAndDetail_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_getChannelOrderAndDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -371,7 +371,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_getChannelOrderByOrderSn( $partnerId, $orderSn, $subOrderSn, $channelId, $storeId){
 		
 		$this->initInvocation("getChannelOrderByOrderSn");
-		$args = new \com\vip\vop\vcloud\order\OrderService_getChannelOrderByOrderSn_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_getChannelOrderByOrderSn_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -388,7 +388,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_getChannelOrderByOrderSn(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_getChannelOrderByOrderSn_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_getChannelOrderByOrderSn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -398,16 +398,16 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	}
 	
 	
-	public function getChannelOrderItems(\com\vip\vop\vcloud\order\OrderQueryRequest $orderQueryRequest){
+	public function getChannelOrderItems(\Voop\com\vip\vop\vcloud\order\OrderQueryRequest $orderQueryRequest){
 		
 		$this->send_getChannelOrderItems( $orderQueryRequest);
 		return $this->recv_getChannelOrderItems();
 	}
 	
-	public function send_getChannelOrderItems(\com\vip\vop\vcloud\order\OrderQueryRequest $orderQueryRequest){
+	public function send_getChannelOrderItems(\Voop\com\vip\vop\vcloud\order\OrderQueryRequest $orderQueryRequest){
 		
 		$this->initInvocation("getChannelOrderItems");
-		$args = new \com\vip\vop\vcloud\order\OrderService_getChannelOrderItems_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_getChannelOrderItems_args();
 		
 		$args->orderQueryRequest = $orderQueryRequest;
 		
@@ -416,7 +416,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_getChannelOrderItems(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_getChannelOrderItems_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_getChannelOrderItems_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -435,7 +435,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_getOfficialMemberByOrderSn( $partnerId, $orderSn, $channelId){
 		
 		$this->initInvocation("getOfficialMemberByOrderSn");
-		$args = new \com\vip\vop\vcloud\order\OrderService_getOfficialMemberByOrderSn_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_getOfficialMemberByOrderSn_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -448,7 +448,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_getOfficialMemberByOrderSn(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_getOfficialMemberByOrderSn_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_getOfficialMemberByOrderSn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -467,7 +467,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_getOrderByChannelIdAndOrderSn( $channelId, $orderSn){
 		
 		$this->initInvocation("getOrderByChannelIdAndOrderSn");
-		$args = new \com\vip\vop\vcloud\order\OrderService_getOrderByChannelIdAndOrderSn_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_getOrderByChannelIdAndOrderSn_args();
 		
 		$args->channelId = $channelId;
 		
@@ -478,7 +478,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_getOrderByChannelIdAndOrderSn(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_getOrderByChannelIdAndOrderSn_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_getOrderByChannelIdAndOrderSn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -497,7 +497,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_getOrderByExpressNo( $partnerId, $orderSn, $subOrderSn, $channelId, $expressNo){
 		
 		$this->initInvocation("getOrderByExpressNo");
-		$args = new \com\vip\vop\vcloud\order\OrderService_getOrderByExpressNo_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_getOrderByExpressNo_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -514,7 +514,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_getOrderByExpressNo(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_getOrderByExpressNo_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_getOrderByExpressNo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -533,7 +533,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_getOrderLogisticsByOrderSn( $partnerId, $orderSn, $channelId, $storeId, $subOrderSn){
 		
 		$this->initInvocation("getOrderLogisticsByOrderSn");
-		$args = new \com\vip\vop\vcloud\order\OrderService_getOrderLogisticsByOrderSn_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_getOrderLogisticsByOrderSn_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -550,7 +550,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_getOrderLogisticsByOrderSn(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_getOrderLogisticsByOrderSn_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_getOrderLogisticsByOrderSn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -569,7 +569,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_getOrderOptLog( $partnerId, $orderSn, $channelId, $storeId, $subOrderSn){
 		
 		$this->initInvocation("getOrderOptLog");
-		$args = new \com\vip\vop\vcloud\order\OrderService_getOrderOptLog_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_getOrderOptLog_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -586,7 +586,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_getOrderOptLog(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_getOrderOptLog_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_getOrderOptLog_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -605,7 +605,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_getWaybillDetails( $partnerId, $channelId, $startTime, $endTime,\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses, $orderType){
 		
 		$this->initInvocation("getWaybillDetails");
-		$args = new \com\vip\vop\vcloud\order\OrderService_getWaybillDetails_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_getWaybillDetails_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -626,7 +626,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_getWaybillDetails(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_getWaybillDetails_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_getWaybillDetails_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -645,14 +645,14 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\vcloud\order\OrderService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -671,7 +671,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_listSubOrder( $partnerId, $orderSn, $channelId, $subOrderSn){
 		
 		$this->initInvocation("listSubOrder");
-		$args = new \com\vip\vop\vcloud\order\OrderService_listSubOrder_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_listSubOrder_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -686,7 +686,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_listSubOrder(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_listSubOrder_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_listSubOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -705,7 +705,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_listWarehouseByOrderSn( $partnerId, $channelId, $orderSn){
 		
 		$this->initInvocation("listWarehouseByOrderSn");
-		$args = new \com\vip\vop\vcloud\order\OrderService_listWarehouseByOrderSn_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_listWarehouseByOrderSn_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -718,7 +718,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_listWarehouseByOrderSn(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_listWarehouseByOrderSn_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_listWarehouseByOrderSn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -737,7 +737,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_pullOrders( $channelId, $partnerId, $orderSn, $beginTime, $endTime){
 		
 		$this->initInvocation("pullOrders");
-		$args = new \com\vip\vop\vcloud\order\OrderService_pullOrders_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_pullOrders_args();
 		
 		$args->channelId = $channelId;
 		
@@ -754,22 +754,22 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_pullOrders(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_pullOrders_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_pullOrders_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function refuseOrder(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function refuseOrder(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->send_refuseOrder( $req);
 		return $this->recv_refuseOrder();
 	}
 	
-	public function send_refuseOrder(\com\vip\vop\vcloud\order\OrderStoreReq $req){
+	public function send_refuseOrder(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req){
 		
 		$this->initInvocation("refuseOrder");
-		$args = new \com\vip\vop\vcloud\order\OrderService_refuseOrder_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_refuseOrder_args();
 		
 		$args->req = $req;
 		
@@ -778,7 +778,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_refuseOrder(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_refuseOrder_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_refuseOrder_result();
 		$this->receive_base($result);
 		
 	}
@@ -793,7 +793,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_storeConfirmed( $channelId, $subOrderSn, $isConfirmed){
 		
 		$this->initInvocation("storeConfirmed");
-		$args = new \com\vip\vop\vcloud\order\OrderService_storeConfirmed_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_storeConfirmed_args();
 		
 		$args->channelId = $channelId;
 		
@@ -806,7 +806,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_storeConfirmed(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_storeConfirmed_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_storeConfirmed_result();
 		$this->receive_base($result);
 		
 	}
@@ -821,7 +821,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_updateDeliveryStatus( $partnerId, $orderSn, $deliveryNo, $acceptTime, $acceptAddress, $remark, $opCode, $opId){
 		
 		$this->initInvocation("updateDeliveryStatus");
-		$args = new \com\vip\vop\vcloud\order\OrderService_updateDeliveryStatus_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_updateDeliveryStatus_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -844,7 +844,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_updateDeliveryStatus(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_updateDeliveryStatus_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_updateDeliveryStatus_result();
 		$this->receive_base($result);
 		
 	}
@@ -859,7 +859,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_updateOrderLogisticsBySubOrderSn( $partnerId, $channelId, $subOrderSn, $expressCompany, $expressNo){
 		
 		$this->initInvocation("updateOrderLogisticsBySubOrderSn");
-		$args = new \com\vip\vop\vcloud\order\OrderService_updateOrderLogisticsBySubOrderSn_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_updateOrderLogisticsBySubOrderSn_args();
 		
 		$args->partnerId = $partnerId;
 		
@@ -876,7 +876,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_updateOrderLogisticsBySubOrderSn(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_updateOrderLogisticsBySubOrderSn_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_updateOrderLogisticsBySubOrderSn_result();
 		$this->receive_base($result);
 		
 	}
@@ -891,7 +891,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	public function send_updateRemark( $channelId, $subOrderSn, $remark){
 		
 		$this->initInvocation("updateRemark");
-		$args = new \com\vip\vop\vcloud\order\OrderService_updateRemark_args();
+		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_updateRemark_args();
 		
 		$args->channelId = $channelId;
 		
@@ -904,7 +904,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	
 	public function recv_updateRemark(){
 		
-		$result = new \com\vip\vop\vcloud\order\OrderService_updateRemark_result();
+		$result = new \Voop\com\vip\vop\vcloud\order\OrderService_updateRemark_result();
 		$this->receive_base($result);
 		
 	}
@@ -955,7 +955,7 @@ class OrderService_acceptOrder_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\vop\vcloud\order\OrderStoreReq();
+			$this->req = new \Voop\com\vip\vop\vcloud\order\OrderStoreReq();
 			$this->req->read($input);
 			
 		}
@@ -978,7 +978,7 @@ class OrderService_acceptOrder_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1037,7 +1037,7 @@ class OrderService_appointOrderStore_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\vop\vcloud\order\OrderStoreReq();
+			$this->req = new \Voop\com\vip\vop\vcloud\order\OrderStoreReq();
 			$this->req->read($input);
 			
 		}
@@ -1060,7 +1060,7 @@ class OrderService_appointOrderStore_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1455,7 +1455,7 @@ class OrderService_confirmDelivery_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\vop\vcloud\order\OrderStoreReq();
+			$this->req = new \Voop\com\vip\vop\vcloud\order\OrderStoreReq();
 			$this->req->read($input);
 			
 		}
@@ -1478,7 +1478,7 @@ class OrderService_confirmDelivery_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1537,7 +1537,7 @@ class OrderService_confirmDeliveryPartly_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\vop\vcloud\order\ConfirmDeliveryPartlyReq();
+			$this->req = new \Voop\com\vip\vop\vcloud\order\ConfirmDeliveryPartlyReq();
 			$this->req->read($input);
 			
 		}
@@ -1560,7 +1560,7 @@ class OrderService_confirmDeliveryPartly_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1619,7 +1619,7 @@ class OrderService_confirmNoStock_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\vop\vcloud\order\OrderStoreReq();
+			$this->req = new \Voop\com\vip\vop\vcloud\order\OrderStoreReq();
 			$this->req->read($input);
 			
 		}
@@ -1642,7 +1642,7 @@ class OrderService_confirmNoStock_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1871,7 +1871,7 @@ class OrderService_confirmUserRefuse_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\vop\vcloud\order\OrderStoreReq();
+			$this->req = new \Voop\com\vip\vop\vcloud\order\OrderStoreReq();
 			$this->req->read($input);
 			
 		}
@@ -1894,7 +1894,7 @@ class OrderService_confirmUserRefuse_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -2020,7 +2020,7 @@ class OrderService_getChannelOrderAndDetail_args {
 		if(true) {
 			
 			
-			$this->pagination = new \com\vip\vop\vcloud\common\api\Pagination();
+			$this->pagination = new \Voop\com\vip\vop\vcloud\common\api\Pagination();
 			$this->pagination->read($input);
 			
 		}
@@ -2098,7 +2098,7 @@ class OrderService_getChannelOrderAndDetail_args {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -2113,7 +2113,7 @@ class OrderService_getChannelOrderAndDetail_args {
 			
 			if (!is_array($this->warehouses)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2365,7 +2365,7 @@ class OrderService_getChannelOrderItems_args {
 		if(true) {
 			
 			
-			$this->orderQueryRequest = new \com\vip\vop\vcloud\order\OrderQueryRequest();
+			$this->orderQueryRequest = new \Voop\com\vip\vop\vcloud\order\OrderQueryRequest();
 			$this->orderQueryRequest->read($input);
 			
 		}
@@ -2388,7 +2388,7 @@ class OrderService_getChannelOrderItems_args {
 			
 			if (!is_object($this->orderQueryRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->orderQueryRequest->write($output);
@@ -3329,7 +3329,7 @@ class OrderService_getWaybillDetails_args {
 		if(true) {
 			
 			
-			$this->pagination = new \com\vip\vop\vcloud\common\api\Pagination();
+			$this->pagination = new \Voop\com\vip\vop\vcloud\common\api\Pagination();
 			$this->pagination->read($input);
 			
 		}
@@ -3425,7 +3425,7 @@ class OrderService_getWaybillDetails_args {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -3440,7 +3440,7 @@ class OrderService_getWaybillDetails_args {
 			
 			if (!is_array($this->warehouses)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4027,7 +4027,7 @@ class OrderService_refuseOrder_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\vop\vcloud\order\OrderStoreReq();
+			$this->req = new \Voop\com\vip\vop\vcloud\order\OrderStoreReq();
 			$this->req->read($input);
 			
 		}
@@ -4050,7 +4050,7 @@ class OrderService_refuseOrder_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -5035,7 +5035,7 @@ class OrderService_confirmDelivery_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\order\Express();
+					$elem0 = new \Voop\com\vip\vop\vcloud\order\Express();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -5068,7 +5068,7 @@ class OrderService_confirmDelivery_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5077,7 +5077,7 @@ class OrderService_confirmDelivery_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5247,7 +5247,7 @@ class OrderService_confirmShipment_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\vcloud\order\Express();
+					$elem1 = new \Voop\com\vip\vop\vcloud\order\Express();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -5280,7 +5280,7 @@ class OrderService_confirmShipment_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5289,7 +5289,7 @@ class OrderService_confirmShipment_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5401,7 +5401,7 @@ class OrderService_getChannelOrderAndDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\order\WayBillResponse();
+			$this->success = new \Voop\com\vip\vop\vcloud\order\WayBillResponse();
 			$this->success->read($input);
 			
 		}
@@ -5424,7 +5424,7 @@ class OrderService_getChannelOrderAndDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5483,7 +5483,7 @@ class OrderService_getChannelOrderByOrderSn_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\order\OrderItem();
+			$this->success = new \Voop\com\vip\vop\vcloud\order\OrderItem();
 			$this->success->read($input);
 			
 		}
@@ -5506,7 +5506,7 @@ class OrderService_getChannelOrderByOrderSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5565,7 +5565,7 @@ class OrderService_getChannelOrderItems_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\order\OrderResponse();
+			$this->success = new \Voop\com\vip\vop\vcloud\order\OrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -5588,7 +5588,7 @@ class OrderService_getChannelOrderItems_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5647,7 +5647,7 @@ class OrderService_getOfficialMemberByOrderSn_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\order\OfficialMember();
+			$this->success = new \Voop\com\vip\vop\vcloud\order\OfficialMember();
 			$this->success->read($input);
 			
 		}
@@ -5670,7 +5670,7 @@ class OrderService_getOfficialMemberByOrderSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5729,7 +5729,7 @@ class OrderService_getOrderByChannelIdAndOrderSn_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\order\OrderItem();
+			$this->success = new \Voop\com\vip\vop\vcloud\order\OrderItem();
 			$this->success->read($input);
 			
 		}
@@ -5752,7 +5752,7 @@ class OrderService_getOrderByChannelIdAndOrderSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5811,7 +5811,7 @@ class OrderService_getOrderByExpressNo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\order\OrderItem();
+			$this->success = new \Voop\com\vip\vop\vcloud\order\OrderItem();
 			$this->success->read($input);
 			
 		}
@@ -5834,7 +5834,7 @@ class OrderService_getOrderByExpressNo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5902,7 +5902,7 @@ class OrderService_getOrderLogisticsByOrderSn_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\order\OrderLogistics();
+					$elem0 = new \Voop\com\vip\vop\vcloud\order\OrderLogistics();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -5935,7 +5935,7 @@ class OrderService_getOrderLogisticsByOrderSn_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5944,7 +5944,7 @@ class OrderService_getOrderLogisticsByOrderSn_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6016,7 +6016,7 @@ class OrderService_getOrderOptLog_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\vcloud\order\OrderOptLog();
+					$elem1 = new \Voop\com\vip\vop\vcloud\order\OrderOptLog();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -6049,7 +6049,7 @@ class OrderService_getOrderOptLog_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6058,7 +6058,7 @@ class OrderService_getOrderOptLog_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6121,7 +6121,7 @@ class OrderService_getWaybillDetails_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\vcloud\order\WayBillResponse();
+			$this->success = new \Voop\com\vip\vop\vcloud\order\WayBillResponse();
 			$this->success->read($input);
 			
 		}
@@ -6144,7 +6144,7 @@ class OrderService_getWaybillDetails_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6203,7 +6203,7 @@ class OrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -6226,7 +6226,7 @@ class OrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6294,7 +6294,7 @@ class OrderService_listSubOrder_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\vcloud\order\SubOrder();
+					$elem0 = new \Voop\com\vip\vop\vcloud\order\SubOrder();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -6327,7 +6327,7 @@ class OrderService_listSubOrder_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6336,7 +6336,7 @@ class OrderService_listSubOrder_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6408,7 +6408,7 @@ class OrderService_listWarehouseByOrderSn_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\vcloud\warehouse\api\Warehouse();
+					$elem1 = new \Voop\com\vip\vop\vcloud\warehouse\api\Warehouse();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -6441,7 +6441,7 @@ class OrderService_listWarehouseByOrderSn_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6450,7 +6450,7 @@ class OrderService_listWarehouseByOrderSn_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vsizetable;
+namespace Voop\vipapis\vsizetable;
 require_once dirname(__FILE__).'/VendorSizeTableService.php';
 class VendorSizeTableServiceHelper extends _VendorSizeTableServiceClient{
 	

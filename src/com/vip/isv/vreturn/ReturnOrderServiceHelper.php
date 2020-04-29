@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\vreturn;
+namespace Voop\com\vip\isv\vreturn;
 require_once dirname(__FILE__).'/ReturnOrderService.php';
 class ReturnOrderServiceHelper extends _ReturnOrderServiceClient{
 	

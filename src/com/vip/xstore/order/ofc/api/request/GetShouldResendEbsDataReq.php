@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\request;
+namespace Voop\com\vip\xstore\order\ofc\api\request;
 
 class GetShouldResendEbsDataReq {
 	
@@ -121,7 +121,7 @@ class GetShouldResendEbsDataReq {
 				
 				$needSkip = false;
 				
-				$this->lastSyncTimeRange = new \com\vip\xstore\order\common\pojo\vo\RangeParam();
+				$this->lastSyncTimeRange = new \Voop\com\vip\xstore\order\common\pojo\vo\RangeParam();
 				$this->lastSyncTimeRange->read($input);
 				
 			}
@@ -210,7 +210,7 @@ class GetShouldResendEbsDataReq {
 			
 			if (!is_object($this->lastSyncTimeRange)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->lastSyncTimeRange->write($output);
@@ -234,7 +234,7 @@ class GetShouldResendEbsDataReq {
 			
 			if (!is_array($this->scenarioCodes)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying\service;
+namespace Voop\com\vip\xstore\cc\bulkbuying\service;
 require_once dirname(__FILE__).'/PurchaseOrderService.php';
 class PurchaseOrderServiceHelper extends _PurchaseOrderServiceClient{
 	

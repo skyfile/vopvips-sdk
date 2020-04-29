@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\wo;
+namespace Voop\com\vip\vop\logistics\wo;
 
 class RecheckResult {
 	

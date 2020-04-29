@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\venus\closePo\service;
+namespace Voop\com\vip\venus\closePo\service;
 
 class PoCloseForWmsReturn {
 	

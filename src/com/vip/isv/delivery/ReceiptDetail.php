@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\delivery;
+namespace Voop\com\vip\isv\delivery;
 
 class ReceiptDetail {
 	

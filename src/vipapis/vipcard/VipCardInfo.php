@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipcard;
+namespace Voop\vipapis\vipcard;
 
 class VipCardInfo {
 	
@@ -268,7 +268,7 @@ class VipCardInfo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

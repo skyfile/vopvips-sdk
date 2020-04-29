@@ -8,13 +8,13 @@
 *
 */
 
-namespace vipapis\oauth;
+namespace Voop\vipapis\oauth;
 interface OauthServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function refreshToken(\vipapis\oauth\RefreshTokenRequest $request);
+	public function refreshToken(\Voop\vipapis\oauth\RefreshTokenRequest $request);
 	
 }
 
@@ -35,14 +35,14 @@ class _OauthServiceClient extends \Osp\Base\OspStub implements \vipapis\oauth\Oa
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\oauth\OauthService_healthCheck_args();
+		$args = new \Voop\vipapis\oauth\OauthService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\oauth\OauthService_healthCheck_result();
+		$result = new \Voop\vipapis\oauth\OauthService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -52,16 +52,16 @@ class _OauthServiceClient extends \Osp\Base\OspStub implements \vipapis\oauth\Oa
 	}
 	
 	
-	public function refreshToken(\vipapis\oauth\RefreshTokenRequest $request){
+	public function refreshToken(\Voop\vipapis\oauth\RefreshTokenRequest $request){
 		
 		$this->send_refreshToken( $request);
 		return $this->recv_refreshToken();
 	}
 	
-	public function send_refreshToken(\vipapis\oauth\RefreshTokenRequest $request){
+	public function send_refreshToken(\Voop\vipapis\oauth\RefreshTokenRequest $request){
 		
 		$this->initInvocation("refreshToken");
-		$args = new \vipapis\oauth\OauthService_refreshToken_args();
+		$args = new \Voop\vipapis\oauth\OauthService_refreshToken_args();
 		
 		$args->request = $request;
 		
@@ -70,7 +70,7 @@ class _OauthServiceClient extends \Osp\Base\OspStub implements \vipapis\oauth\Oa
 	
 	public function recv_refreshToken(){
 		
-		$result = new \vipapis\oauth\OauthService_refreshToken_result();
+		$result = new \Voop\vipapis\oauth\OauthService_refreshToken_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -171,7 +171,7 @@ class OauthService_refreshToken_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\oauth\RefreshTokenRequest();
+			$this->request = new \Voop\vipapis\oauth\RefreshTokenRequest();
 			$this->request->read($input);
 			
 		}
@@ -192,7 +192,7 @@ class OauthService_refreshToken_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -249,7 +249,7 @@ class OauthService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -272,7 +272,7 @@ class OauthService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -331,7 +331,7 @@ class OauthService_refreshToken_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\oauth\RefreshTokenResponse();
+			$this->success = new \Voop\vipapis\oauth\RefreshTokenResponse();
 			$this->success->read($input);
 			
 		}
@@ -354,7 +354,7 @@ class OauthService_refreshToken_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

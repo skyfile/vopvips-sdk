@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\comment\api\admin\service;
+namespace Voop\com\vip\comment\api\admin\service;
 final class StarScore{
 	
 	

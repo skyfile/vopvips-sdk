@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\vreturn;
+namespace Voop\com\vip\isv\vreturn;
 
 class GetReturnDeliveryGoodsRequest {
 	

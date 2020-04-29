@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class ActivityRequestModel {
 	
@@ -81,7 +81,7 @@ class ActivityRequestModel {
 				
 				$needSkip = false;
 				
-				$this->actCoreModel = new \com\vip\pms\data\service\PmsActCoreModel();
+				$this->actCoreModel = new \Voop\com\vip\pms\data\service\PmsActCoreModel();
 				$this->actCoreModel->read($input);
 				
 			}
@@ -93,7 +93,7 @@ class ActivityRequestModel {
 				
 				$needSkip = false;
 				
-				$this->actConditionModel = new \com\vip\pms\data\service\PmsActConditionModel();
+				$this->actConditionModel = new \Voop\com\vip\pms\data\service\PmsActConditionModel();
 				$this->actConditionModel->read($input);
 				
 			}
@@ -114,7 +114,7 @@ class ActivityRequestModel {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\pms\data\service\PmsActSiteModel();
+						$elem1 = new \Voop\com\vip\pms\data\service\PmsActSiteModel();
 						$elem1->read($input);
 						
 						$this->actSiteList[$_size1++] = $elem1;
@@ -154,7 +154,7 @@ class ActivityRequestModel {
 		
 		if (!is_object($this->actCoreModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->actCoreModel->write($output);
@@ -165,7 +165,7 @@ class ActivityRequestModel {
 		
 		if (!is_object($this->actConditionModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->actConditionModel->write($output);
@@ -176,7 +176,7 @@ class ActivityRequestModel {
 		
 		if (!is_array($this->actSiteList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -185,7 +185,7 @@ class ActivityRequestModel {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

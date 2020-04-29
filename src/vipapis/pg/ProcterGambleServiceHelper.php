@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\pg;
+namespace Voop\vipapis\pg;
 require_once dirname(__FILE__).'/ProcterGambleService.php';
 class ProcterGambleServiceHelper extends _ProcterGambleServiceClient{
 	

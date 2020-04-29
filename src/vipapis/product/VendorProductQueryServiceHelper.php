@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 require_once dirname(__FILE__).'/VendorProductQueryService.php';
 class VendorProductQueryServiceHelper extends _VendorProductQueryServiceClient{
 	

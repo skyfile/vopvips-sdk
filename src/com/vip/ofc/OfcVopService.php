@@ -8,13 +8,13 @@
 *
 */
 
-namespace com\vip\ofc;
+namespace Voop\com\vip\ofc;
 interface OfcVopServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function wmsUpdateOrderStatus(\com\vip\ofc\vo\VopRequestHeader $header,\com\vip\ofc\request\vop\WmsUpdateOrderStatusReq $req);
+	public function wmsUpdateOrderStatus(\Voop\com\vip\ofc\vo\VopRequestHeader $header,\com\vip\ofc\request\vop\WmsUpdateOrderStatusReq $req);
 	
 }
 
@@ -35,14 +35,14 @@ class _OfcVopServiceClient extends \Osp\Base\OspStub implements \com\vip\ofc\Ofc
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\ofc\OfcVopService_healthCheck_args();
+		$args = new \Voop\com\vip\ofc\OfcVopService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\ofc\OfcVopService_healthCheck_result();
+		$result = new \Voop\com\vip\ofc\OfcVopService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -52,16 +52,16 @@ class _OfcVopServiceClient extends \Osp\Base\OspStub implements \com\vip\ofc\Ofc
 	}
 	
 	
-	public function wmsUpdateOrderStatus(\com\vip\ofc\vo\VopRequestHeader $header,\com\vip\ofc\request\vop\WmsUpdateOrderStatusReq $req){
+	public function wmsUpdateOrderStatus(\Voop\com\vip\ofc\vo\VopRequestHeader $header,\com\vip\ofc\request\vop\WmsUpdateOrderStatusReq $req){
 		
 		$this->send_wmsUpdateOrderStatus( $header, $req);
 		return $this->recv_wmsUpdateOrderStatus();
 	}
 	
-	public function send_wmsUpdateOrderStatus(\com\vip\ofc\vo\VopRequestHeader $header,\com\vip\ofc\request\vop\WmsUpdateOrderStatusReq $req){
+	public function send_wmsUpdateOrderStatus(\Voop\com\vip\ofc\vo\VopRequestHeader $header,\com\vip\ofc\request\vop\WmsUpdateOrderStatusReq $req){
 		
 		$this->initInvocation("wmsUpdateOrderStatus");
-		$args = new \com\vip\ofc\OfcVopService_wmsUpdateOrderStatus_args();
+		$args = new \Voop\com\vip\ofc\OfcVopService_wmsUpdateOrderStatus_args();
 		
 		$args->header = $header;
 		
@@ -72,7 +72,7 @@ class _OfcVopServiceClient extends \Osp\Base\OspStub implements \com\vip\ofc\Ofc
 	
 	public function recv_wmsUpdateOrderStatus(){
 		
-		$result = new \com\vip\ofc\OfcVopService_wmsUpdateOrderStatus_result();
+		$result = new \Voop\com\vip\ofc\OfcVopService_wmsUpdateOrderStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -183,7 +183,7 @@ class OfcVopService_wmsUpdateOrderStatus_args {
 		if(true) {
 			
 			
-			$this->header = new \com\vip\ofc\vo\VopRequestHeader();
+			$this->header = new \Voop\com\vip\ofc\vo\VopRequestHeader();
 			$this->header->read($input);
 			
 		}
@@ -194,7 +194,7 @@ class OfcVopService_wmsUpdateOrderStatus_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\ofc\request\vop\WmsUpdateOrderStatusReq();
+			$this->req = new \Voop\com\vip\ofc\request\vop\WmsUpdateOrderStatusReq();
 			$this->req->read($input);
 			
 		}
@@ -215,7 +215,7 @@ class OfcVopService_wmsUpdateOrderStatus_args {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -226,7 +226,7 @@ class OfcVopService_wmsUpdateOrderStatus_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -283,7 +283,7 @@ class OfcVopService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -306,7 +306,7 @@ class OfcVopService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -365,7 +365,7 @@ class OfcVopService_wmsUpdateOrderStatus_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\ofc\response\vop\WmsUpdateOrderStatusResp();
+			$this->success = new \Voop\com\vip\ofc\response\vop\WmsUpdateOrderStatusResp();
 			$this->success->read($input);
 			
 		}
@@ -388,7 +388,7 @@ class OfcVopService_wmsUpdateOrderStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Osp\Exception;
+namespace Voop\Osp\Exception;
 
 /**
  * OSP异常信息封装类

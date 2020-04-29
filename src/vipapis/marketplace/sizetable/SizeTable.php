@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\sizetable;
+namespace Voop\vipapis\marketplace\sizetable;
 
 class SizeTable {
 	
@@ -148,7 +148,7 @@ class SizeTable {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

@@ -8,17 +8,17 @@
 *
 */
 
-namespace vipapis\fcs;
+namespace Voop\vipapis\fcs;
 interface TrusteeshipInfoServiceIf{
 	
 	
-	public function createTrusteeshipInfo(\com\vip\fcs\vei\service\CreateTrusteeshipInfoRequestModel $createTrusteeshipInfoRequestModel);
+	public function createTrusteeshipInfo(\Voop\com\vip\fcs\vei\service\CreateTrusteeshipInfoRequestModel $createTrusteeshipInfoRequestModel);
 	
-	public function getTrusteeshipInfo(\com\vip\fcs\vei\service\GetTrusteeshipInfoRequestModel $getTrusteeshipInfoRequestModel);
+	public function getTrusteeshipInfo(\Voop\com\vip\fcs\vei\service\GetTrusteeshipInfoRequestModel $getTrusteeshipInfoRequestModel);
 	
 	public function healthCheck();
 	
-	public function updateTrusteeshipInfo(\com\vip\fcs\vei\service\UpdateTrusteeshipInfoRequestModel $updateTrusteeshipInfoRequestModel);
+	public function updateTrusteeshipInfo(\Voop\com\vip\fcs\vei\service\UpdateTrusteeshipInfoRequestModel $updateTrusteeshipInfoRequestModel);
 	
 }
 
@@ -30,16 +30,16 @@ class _TrusteeshipInfoServiceClient extends \Osp\Base\OspStub implements \vipapi
 	}
 	
 	
-	public function createTrusteeshipInfo(\com\vip\fcs\vei\service\CreateTrusteeshipInfoRequestModel $createTrusteeshipInfoRequestModel){
+	public function createTrusteeshipInfo(\Voop\com\vip\fcs\vei\service\CreateTrusteeshipInfoRequestModel $createTrusteeshipInfoRequestModel){
 		
 		$this->send_createTrusteeshipInfo( $createTrusteeshipInfoRequestModel);
 		return $this->recv_createTrusteeshipInfo();
 	}
 	
-	public function send_createTrusteeshipInfo(\com\vip\fcs\vei\service\CreateTrusteeshipInfoRequestModel $createTrusteeshipInfoRequestModel){
+	public function send_createTrusteeshipInfo(\Voop\com\vip\fcs\vei\service\CreateTrusteeshipInfoRequestModel $createTrusteeshipInfoRequestModel){
 		
 		$this->initInvocation("createTrusteeshipInfo");
-		$args = new \vipapis\fcs\TrusteeshipInfoService_createTrusteeshipInfo_args();
+		$args = new \Voop\vipapis\fcs\TrusteeshipInfoService_createTrusteeshipInfo_args();
 		
 		$args->createTrusteeshipInfoRequestModel = $createTrusteeshipInfoRequestModel;
 		
@@ -48,7 +48,7 @@ class _TrusteeshipInfoServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_createTrusteeshipInfo(){
 		
-		$result = new \vipapis\fcs\TrusteeshipInfoService_createTrusteeshipInfo_result();
+		$result = new \Voop\vipapis\fcs\TrusteeshipInfoService_createTrusteeshipInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -58,16 +58,16 @@ class _TrusteeshipInfoServiceClient extends \Osp\Base\OspStub implements \vipapi
 	}
 	
 	
-	public function getTrusteeshipInfo(\com\vip\fcs\vei\service\GetTrusteeshipInfoRequestModel $getTrusteeshipInfoRequestModel){
+	public function getTrusteeshipInfo(\Voop\com\vip\fcs\vei\service\GetTrusteeshipInfoRequestModel $getTrusteeshipInfoRequestModel){
 		
 		$this->send_getTrusteeshipInfo( $getTrusteeshipInfoRequestModel);
 		return $this->recv_getTrusteeshipInfo();
 	}
 	
-	public function send_getTrusteeshipInfo(\com\vip\fcs\vei\service\GetTrusteeshipInfoRequestModel $getTrusteeshipInfoRequestModel){
+	public function send_getTrusteeshipInfo(\Voop\com\vip\fcs\vei\service\GetTrusteeshipInfoRequestModel $getTrusteeshipInfoRequestModel){
 		
 		$this->initInvocation("getTrusteeshipInfo");
-		$args = new \vipapis\fcs\TrusteeshipInfoService_getTrusteeshipInfo_args();
+		$args = new \Voop\vipapis\fcs\TrusteeshipInfoService_getTrusteeshipInfo_args();
 		
 		$args->getTrusteeshipInfoRequestModel = $getTrusteeshipInfoRequestModel;
 		
@@ -76,7 +76,7 @@ class _TrusteeshipInfoServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_getTrusteeshipInfo(){
 		
-		$result = new \vipapis\fcs\TrusteeshipInfoService_getTrusteeshipInfo_result();
+		$result = new \Voop\vipapis\fcs\TrusteeshipInfoService_getTrusteeshipInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -95,14 +95,14 @@ class _TrusteeshipInfoServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\fcs\TrusteeshipInfoService_healthCheck_args();
+		$args = new \Voop\vipapis\fcs\TrusteeshipInfoService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\fcs\TrusteeshipInfoService_healthCheck_result();
+		$result = new \Voop\vipapis\fcs\TrusteeshipInfoService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -112,16 +112,16 @@ class _TrusteeshipInfoServiceClient extends \Osp\Base\OspStub implements \vipapi
 	}
 	
 	
-	public function updateTrusteeshipInfo(\com\vip\fcs\vei\service\UpdateTrusteeshipInfoRequestModel $updateTrusteeshipInfoRequestModel){
+	public function updateTrusteeshipInfo(\Voop\com\vip\fcs\vei\service\UpdateTrusteeshipInfoRequestModel $updateTrusteeshipInfoRequestModel){
 		
 		$this->send_updateTrusteeshipInfo( $updateTrusteeshipInfoRequestModel);
 		return $this->recv_updateTrusteeshipInfo();
 	}
 	
-	public function send_updateTrusteeshipInfo(\com\vip\fcs\vei\service\UpdateTrusteeshipInfoRequestModel $updateTrusteeshipInfoRequestModel){
+	public function send_updateTrusteeshipInfo(\Voop\com\vip\fcs\vei\service\UpdateTrusteeshipInfoRequestModel $updateTrusteeshipInfoRequestModel){
 		
 		$this->initInvocation("updateTrusteeshipInfo");
-		$args = new \vipapis\fcs\TrusteeshipInfoService_updateTrusteeshipInfo_args();
+		$args = new \Voop\vipapis\fcs\TrusteeshipInfoService_updateTrusteeshipInfo_args();
 		
 		$args->updateTrusteeshipInfoRequestModel = $updateTrusteeshipInfoRequestModel;
 		
@@ -130,7 +130,7 @@ class _TrusteeshipInfoServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_updateTrusteeshipInfo(){
 		
-		$result = new \vipapis\fcs\TrusteeshipInfoService_updateTrusteeshipInfo_result();
+		$result = new \Voop\vipapis\fcs\TrusteeshipInfoService_updateTrusteeshipInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -185,7 +185,7 @@ class TrusteeshipInfoService_createTrusteeshipInfo_args {
 		if(true) {
 			
 			
-			$this->createTrusteeshipInfoRequestModel = new \com\vip\fcs\vei\service\CreateTrusteeshipInfoRequestModel();
+			$this->createTrusteeshipInfoRequestModel = new \Voop\com\vip\fcs\vei\service\CreateTrusteeshipInfoRequestModel();
 			$this->createTrusteeshipInfoRequestModel->read($input);
 			
 		}
@@ -208,7 +208,7 @@ class TrusteeshipInfoService_createTrusteeshipInfo_args {
 			
 			if (!is_object($this->createTrusteeshipInfoRequestModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->createTrusteeshipInfoRequestModel->write($output);
@@ -267,7 +267,7 @@ class TrusteeshipInfoService_getTrusteeshipInfo_args {
 		if(true) {
 			
 			
-			$this->getTrusteeshipInfoRequestModel = new \com\vip\fcs\vei\service\GetTrusteeshipInfoRequestModel();
+			$this->getTrusteeshipInfoRequestModel = new \Voop\com\vip\fcs\vei\service\GetTrusteeshipInfoRequestModel();
 			$this->getTrusteeshipInfoRequestModel->read($input);
 			
 		}
@@ -290,7 +290,7 @@ class TrusteeshipInfoService_getTrusteeshipInfo_args {
 			
 			if (!is_object($this->getTrusteeshipInfoRequestModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->getTrusteeshipInfoRequestModel->write($output);
@@ -395,7 +395,7 @@ class TrusteeshipInfoService_updateTrusteeshipInfo_args {
 		if(true) {
 			
 			
-			$this->updateTrusteeshipInfoRequestModel = new \com\vip\fcs\vei\service\UpdateTrusteeshipInfoRequestModel();
+			$this->updateTrusteeshipInfoRequestModel = new \Voop\com\vip\fcs\vei\service\UpdateTrusteeshipInfoRequestModel();
 			$this->updateTrusteeshipInfoRequestModel->read($input);
 			
 		}
@@ -418,7 +418,7 @@ class TrusteeshipInfoService_updateTrusteeshipInfo_args {
 			
 			if (!is_object($this->updateTrusteeshipInfoRequestModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->updateTrusteeshipInfoRequestModel->write($output);
@@ -477,7 +477,7 @@ class TrusteeshipInfoService_createTrusteeshipInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\CreateTrusteeshipInfoResponseModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\CreateTrusteeshipInfoResponseModel();
 			$this->success->read($input);
 			
 		}
@@ -500,7 +500,7 @@ class TrusteeshipInfoService_createTrusteeshipInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -559,7 +559,7 @@ class TrusteeshipInfoService_getTrusteeshipInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\GetTrusteeshipInfoResponseModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\GetTrusteeshipInfoResponseModel();
 			$this->success->read($input);
 			
 		}
@@ -582,7 +582,7 @@ class TrusteeshipInfoService_getTrusteeshipInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -641,7 +641,7 @@ class TrusteeshipInfoService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -664,7 +664,7 @@ class TrusteeshipInfoService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -723,7 +723,7 @@ class TrusteeshipInfoService_updateTrusteeshipInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vei\service\UpdateTrusteeshipInfoResponseModel();
+			$this->success = new \Voop\com\vip\fcs\vei\service\UpdateTrusteeshipInfoResponseModel();
 			$this->success->read($input);
 			
 		}
@@ -746,7 +746,7 @@ class TrusteeshipInfoService_updateTrusteeshipInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\report;
+namespace Voop\vipapis\report;
 
 class CountOfServiceInvoke {
 	
@@ -228,7 +228,7 @@ class CountOfServiceInvoke {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

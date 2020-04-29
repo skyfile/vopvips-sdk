@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\product;
+namespace Voop\com\vip\vop\cup\api\product;
 
 class ItemImage {
 	
@@ -296,7 +296,7 @@ class ItemImage {
 			
 			$xfer += $output->writeFieldBegin('operation_mode');
 			
-			$em = new \com\vip\vop\cup\api\product\OperationMode; 
+			$em = new \Voop\com\vip\vop\cup\api\product\OperationMode; 
 			$output->writeString($em::$__names[$this->operation_mode]);  
 			
 			$xfer += $output->writeFieldEnd();

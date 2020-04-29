@@ -1,6 +1,6 @@
 <?php
 
-namespace Osp\Protocol;
+namespace Voop\Osp\Protocol;
 
 $base_path = dirname(__FILE__).'/../../';
 

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\pda\order\receiving;
+namespace Voop\com\vip\xstore\pda\order\receiving;
 
 class PDAReceivingOrderRequest {
 	
@@ -181,7 +181,7 @@ class PDAReceivingOrderRequest {
 				
 				$needSkip = false;
 				
-				$this->create_time_range = new \com\vip\xstore\pda\common\TimeRange();
+				$this->create_time_range = new \Voop\com\vip\xstore\pda\common\TimeRange();
 				$this->create_time_range->read($input);
 				
 			}
@@ -319,7 +319,7 @@ class PDAReceivingOrderRequest {
 			
 			if (!is_object($this->create_time_range)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->create_time_range->write($output);
@@ -334,7 +334,7 @@ class PDAReceivingOrderRequest {
 			
 			if (!is_array($this->order_nos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -356,7 +356,7 @@ class PDAReceivingOrderRequest {
 			
 			if (!is_array($this->action_types)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\brand;
+namespace Voop\vipapis\brand;
 interface BrandServiceIf{
 	
 	
@@ -41,7 +41,7 @@ class _BrandServiceClient extends \Osp\Base\OspStub implements \vipapis\brand\Br
 	public function send_getBrandInfo( $brand_id){
 		
 		$this->initInvocation("getBrandInfo");
-		$args = new \vipapis\brand\BrandService_getBrandInfo_args();
+		$args = new \Voop\vipapis\brand\BrandService_getBrandInfo_args();
 		
 		$args->brand_id = $brand_id;
 		
@@ -50,7 +50,7 @@ class _BrandServiceClient extends \Osp\Base\OspStub implements \vipapis\brand\Br
 	
 	public function recv_getBrandInfo(){
 		
-		$result = new \vipapis\brand\BrandService_getBrandInfo_result();
+		$result = new \Voop\vipapis\brand\BrandService_getBrandInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -69,7 +69,7 @@ class _BrandServiceClient extends \Osp\Base\OspStub implements \vipapis\brand\Br
 	public function send_getBrandStories( $brand_ids){
 		
 		$this->initInvocation("getBrandStories");
-		$args = new \vipapis\brand\BrandService_getBrandStories_args();
+		$args = new \Voop\vipapis\brand\BrandService_getBrandStories_args();
 		
 		$args->brand_ids = $brand_ids;
 		
@@ -78,7 +78,7 @@ class _BrandServiceClient extends \Osp\Base\OspStub implements \vipapis\brand\Br
 	
 	public function recv_getBrandStories(){
 		
-		$result = new \vipapis\brand\BrandService_getBrandStories_result();
+		$result = new \Voop\vipapis\brand\BrandService_getBrandStories_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -97,7 +97,7 @@ class _BrandServiceClient extends \Osp\Base\OspStub implements \vipapis\brand\Br
 	public function send_getVendorBrandRelationshipByVendorId( $vendor_id){
 		
 		$this->initInvocation("getVendorBrandRelationshipByVendorId");
-		$args = new \vipapis\brand\BrandService_getVendorBrandRelationshipByVendorId_args();
+		$args = new \Voop\vipapis\brand\BrandService_getVendorBrandRelationshipByVendorId_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -106,7 +106,7 @@ class _BrandServiceClient extends \Osp\Base\OspStub implements \vipapis\brand\Br
 	
 	public function recv_getVendorBrandRelationshipByVendorId(){
 		
-		$result = new \vipapis\brand\BrandService_getVendorBrandRelationshipByVendorId_result();
+		$result = new \Voop\vipapis\brand\BrandService_getVendorBrandRelationshipByVendorId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -125,14 +125,14 @@ class _BrandServiceClient extends \Osp\Base\OspStub implements \vipapis\brand\Br
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\brand\BrandService_healthCheck_args();
+		$args = new \Voop\vipapis\brand\BrandService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\brand\BrandService_healthCheck_result();
+		$result = new \Voop\vipapis\brand\BrandService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -151,7 +151,7 @@ class _BrandServiceClient extends \Osp\Base\OspStub implements \vipapis\brand\Br
 	public function send_multiGetBrand( $search_type, $word, $page, $limit){
 		
 		$this->initInvocation("multiGetBrand");
-		$args = new \vipapis\brand\BrandService_multiGetBrand_args();
+		$args = new \Voop\vipapis\brand\BrandService_multiGetBrand_args();
 		
 		$args->search_type = $search_type;
 		
@@ -166,7 +166,7 @@ class _BrandServiceClient extends \Osp\Base\OspStub implements \vipapis\brand\Br
 	
 	public function recv_multiGetBrand(){
 		
-		$result = new \vipapis\brand\BrandService_multiGetBrand_result();
+		$result = new \Voop\vipapis\brand\BrandService_multiGetBrand_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -329,7 +329,7 @@ class BrandService_getBrandStories_args {
 		
 		if (!is_array($this->brand_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -596,7 +596,7 @@ class BrandService_multiGetBrand_args {
 		
 		$xfer += $output->writeFieldBegin('search_type');
 		
-		$em = new \vipapis\brand\BrandSearchType; 
+		$em = new \Voop\vipapis\brand\BrandSearchType; 
 		$output->writeString($em::$__names[$this->search_type]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -674,7 +674,7 @@ class BrandService_getBrandInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\brand\BrandInfo();
+			$this->success = new \Voop\vipapis\brand\BrandInfo();
 			$this->success->read($input);
 			
 		}
@@ -697,7 +697,7 @@ class BrandService_getBrandInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -765,7 +765,7 @@ class BrandService_getBrandStories_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\brand\BrandStory();
+					$elem0 = new \Voop\vipapis\brand\BrandStory();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -798,7 +798,7 @@ class BrandService_getBrandStories_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -807,7 +807,7 @@ class BrandService_getBrandStories_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -879,7 +879,7 @@ class BrandService_getVendorBrandRelationshipByVendorId_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\brand\VendorBrandRelationShip();
+					$elem1 = new \Voop\vipapis\brand\VendorBrandRelationShip();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -912,7 +912,7 @@ class BrandService_getVendorBrandRelationshipByVendorId_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -921,7 +921,7 @@ class BrandService_getVendorBrandRelationshipByVendorId_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -984,7 +984,7 @@ class BrandService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1007,7 +1007,7 @@ class BrandService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1066,7 +1066,7 @@ class BrandService_multiGetBrand_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\brand\MultiGetBrandResponse();
+			$this->success = new \Voop\vipapis\brand\MultiGetBrandResponse();
 			$this->success->read($input);
 			
 		}
@@ -1089,7 +1089,7 @@ class BrandService_multiGetBrand_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\category;
+namespace Voop\vipapis\category;
 
 class Option {
 	
@@ -287,7 +287,7 @@ class Option {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -374,7 +374,7 @@ class Option {
 			
 			if (!is_array($this->realOptions)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

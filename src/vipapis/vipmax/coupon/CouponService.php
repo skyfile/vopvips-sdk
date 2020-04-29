@@ -8,19 +8,19 @@
 *
 */
 
-namespace vipapis\vipmax\coupon;
+namespace Voop\vipapis\vipmax\coupon;
 interface CouponServiceIf{
 	
 	
-	public function checkCouponInfo(\vipapis\vipmax\coupon\CheckCouponInfoRequest $request);
+	public function checkCouponInfo(\Voop\vipapis\vipmax\coupon\CheckCouponInfoRequest $request);
 	
 	public function healthCheck();
 	
-	public function returnCoupon(\vipapis\vipmax\coupon\ReturnCouponRequest $request);
+	public function returnCoupon(\Voop\vipapis\vipmax\coupon\ReturnCouponRequest $request);
 	
-	public function rollbackUseCoupon(\vipapis\vipmax\coupon\RollbackCouponRequest $request);
+	public function rollbackUseCoupon(\Voop\vipapis\vipmax\coupon\RollbackCouponRequest $request);
 	
-	public function submitCouponInfo(\vipapis\vipmax\coupon\SubmitCouponInfoRequest $request);
+	public function submitCouponInfo(\Voop\vipapis\vipmax\coupon\SubmitCouponInfoRequest $request);
 	
 }
 
@@ -32,16 +32,16 @@ class _CouponServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\
 	}
 	
 	
-	public function checkCouponInfo(\vipapis\vipmax\coupon\CheckCouponInfoRequest $request){
+	public function checkCouponInfo(\Voop\vipapis\vipmax\coupon\CheckCouponInfoRequest $request){
 		
 		$this->send_checkCouponInfo( $request);
 		return $this->recv_checkCouponInfo();
 	}
 	
-	public function send_checkCouponInfo(\vipapis\vipmax\coupon\CheckCouponInfoRequest $request){
+	public function send_checkCouponInfo(\Voop\vipapis\vipmax\coupon\CheckCouponInfoRequest $request){
 		
 		$this->initInvocation("checkCouponInfo");
-		$args = new \vipapis\vipmax\coupon\CouponService_checkCouponInfo_args();
+		$args = new \Voop\vipapis\vipmax\coupon\CouponService_checkCouponInfo_args();
 		
 		$args->request = $request;
 		
@@ -50,7 +50,7 @@ class _CouponServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\
 	
 	public function recv_checkCouponInfo(){
 		
-		$result = new \vipapis\vipmax\coupon\CouponService_checkCouponInfo_result();
+		$result = new \Voop\vipapis\vipmax\coupon\CouponService_checkCouponInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -69,14 +69,14 @@ class _CouponServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\vipmax\coupon\CouponService_healthCheck_args();
+		$args = new \Voop\vipapis\vipmax\coupon\CouponService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\vipmax\coupon\CouponService_healthCheck_result();
+		$result = new \Voop\vipapis\vipmax\coupon\CouponService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -86,16 +86,16 @@ class _CouponServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\
 	}
 	
 	
-	public function returnCoupon(\vipapis\vipmax\coupon\ReturnCouponRequest $request){
+	public function returnCoupon(\Voop\vipapis\vipmax\coupon\ReturnCouponRequest $request){
 		
 		$this->send_returnCoupon( $request);
 		return $this->recv_returnCoupon();
 	}
 	
-	public function send_returnCoupon(\vipapis\vipmax\coupon\ReturnCouponRequest $request){
+	public function send_returnCoupon(\Voop\vipapis\vipmax\coupon\ReturnCouponRequest $request){
 		
 		$this->initInvocation("returnCoupon");
-		$args = new \vipapis\vipmax\coupon\CouponService_returnCoupon_args();
+		$args = new \Voop\vipapis\vipmax\coupon\CouponService_returnCoupon_args();
 		
 		$args->request = $request;
 		
@@ -104,7 +104,7 @@ class _CouponServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\
 	
 	public function recv_returnCoupon(){
 		
-		$result = new \vipapis\vipmax\coupon\CouponService_returnCoupon_result();
+		$result = new \Voop\vipapis\vipmax\coupon\CouponService_returnCoupon_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -114,16 +114,16 @@ class _CouponServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\
 	}
 	
 	
-	public function rollbackUseCoupon(\vipapis\vipmax\coupon\RollbackCouponRequest $request){
+	public function rollbackUseCoupon(\Voop\vipapis\vipmax\coupon\RollbackCouponRequest $request){
 		
 		$this->send_rollbackUseCoupon( $request);
 		return $this->recv_rollbackUseCoupon();
 	}
 	
-	public function send_rollbackUseCoupon(\vipapis\vipmax\coupon\RollbackCouponRequest $request){
+	public function send_rollbackUseCoupon(\Voop\vipapis\vipmax\coupon\RollbackCouponRequest $request){
 		
 		$this->initInvocation("rollbackUseCoupon");
-		$args = new \vipapis\vipmax\coupon\CouponService_rollbackUseCoupon_args();
+		$args = new \Voop\vipapis\vipmax\coupon\CouponService_rollbackUseCoupon_args();
 		
 		$args->request = $request;
 		
@@ -132,22 +132,22 @@ class _CouponServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\
 	
 	public function recv_rollbackUseCoupon(){
 		
-		$result = new \vipapis\vipmax\coupon\CouponService_rollbackUseCoupon_result();
+		$result = new \Voop\vipapis\vipmax\coupon\CouponService_rollbackUseCoupon_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function submitCouponInfo(\vipapis\vipmax\coupon\SubmitCouponInfoRequest $request){
+	public function submitCouponInfo(\Voop\vipapis\vipmax\coupon\SubmitCouponInfoRequest $request){
 		
 		$this->send_submitCouponInfo( $request);
 		return $this->recv_submitCouponInfo();
 	}
 	
-	public function send_submitCouponInfo(\vipapis\vipmax\coupon\SubmitCouponInfoRequest $request){
+	public function send_submitCouponInfo(\Voop\vipapis\vipmax\coupon\SubmitCouponInfoRequest $request){
 		
 		$this->initInvocation("submitCouponInfo");
-		$args = new \vipapis\vipmax\coupon\CouponService_submitCouponInfo_args();
+		$args = new \Voop\vipapis\vipmax\coupon\CouponService_submitCouponInfo_args();
 		
 		$args->request = $request;
 		
@@ -156,7 +156,7 @@ class _CouponServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\
 	
 	public function recv_submitCouponInfo(){
 		
-		$result = new \vipapis\vipmax\coupon\CouponService_submitCouponInfo_result();
+		$result = new \Voop\vipapis\vipmax\coupon\CouponService_submitCouponInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -211,7 +211,7 @@ class CouponService_checkCouponInfo_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\vipmax\coupon\CheckCouponInfoRequest();
+			$this->request = new \Voop\vipapis\vipmax\coupon\CheckCouponInfoRequest();
 			$this->request->read($input);
 			
 		}
@@ -232,7 +232,7 @@ class CouponService_checkCouponInfo_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -335,7 +335,7 @@ class CouponService_returnCoupon_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\vipmax\coupon\ReturnCouponRequest();
+			$this->request = new \Voop\vipapis\vipmax\coupon\ReturnCouponRequest();
 			$this->request->read($input);
 			
 		}
@@ -356,7 +356,7 @@ class CouponService_returnCoupon_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -413,7 +413,7 @@ class CouponService_rollbackUseCoupon_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\vipmax\coupon\RollbackCouponRequest();
+			$this->request = new \Voop\vipapis\vipmax\coupon\RollbackCouponRequest();
 			$this->request->read($input);
 			
 		}
@@ -434,7 +434,7 @@ class CouponService_rollbackUseCoupon_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -491,7 +491,7 @@ class CouponService_submitCouponInfo_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\vipmax\coupon\SubmitCouponInfoRequest();
+			$this->request = new \Voop\vipapis\vipmax\coupon\SubmitCouponInfoRequest();
 			$this->request->read($input);
 			
 		}
@@ -512,7 +512,7 @@ class CouponService_submitCouponInfo_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -569,7 +569,7 @@ class CouponService_checkCouponInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipmax\coupon\CheckCouponInfoResponse();
+			$this->success = new \Voop\vipapis\vipmax\coupon\CheckCouponInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -592,7 +592,7 @@ class CouponService_checkCouponInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -651,7 +651,7 @@ class CouponService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -674,7 +674,7 @@ class CouponService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -733,7 +733,7 @@ class CouponService_returnCoupon_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipmax\coupon\ReturnCouponResponse();
+			$this->success = new \Voop\vipapis\vipmax\coupon\ReturnCouponResponse();
 			$this->success->read($input);
 			
 		}
@@ -756,7 +756,7 @@ class CouponService_returnCoupon_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -864,7 +864,7 @@ class CouponService_submitCouponInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipmax\coupon\SubmitCouponInfoResponse();
+			$this->success = new \Voop\vipapis\vipmax\coupon\SubmitCouponInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -887,7 +887,7 @@ class CouponService_submitCouponInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

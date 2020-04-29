@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vsizetable;
+namespace Voop\vipapis\vsizetable;
 interface VendorSizeTableServiceIf{
 	
 	
@@ -16,7 +16,7 @@ interface VendorSizeTableServiceIf{
 	
 	public function addSizeTableInfo( $vendor_id,\vipapis\vsizetable\SizeTableInfoRequest $sizetable);
 	
-	public function addSizeTableTemplate(\vipapis\vsizetable\AddSizeTableTemplateRequest $request);
+	public function addSizeTableTemplate(\Voop\vipapis\vsizetable\AddSizeTableTemplateRequest $request);
 	
 	public function deleteSizeDetailByIds( $vendor_id, $sizedetail_ids);
 	
@@ -61,7 +61,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_addSizeDetail( $vendor_id,\vipapis\vsizetable\SizeDetailRequest $sizedetail){
 		
 		$this->initInvocation("addSizeDetail");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_addSizeDetail_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_addSizeDetail_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -72,7 +72,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_addSizeDetail(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_addSizeDetail_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_addSizeDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -91,7 +91,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_addSizeTableInfo( $vendor_id,\vipapis\vsizetable\SizeTableInfoRequest $sizetable){
 		
 		$this->initInvocation("addSizeTableInfo");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_addSizeTableInfo_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_addSizeTableInfo_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -102,7 +102,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_addSizeTableInfo(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_addSizeTableInfo_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_addSizeTableInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -112,16 +112,16 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	}
 	
 	
-	public function addSizeTableTemplate(\vipapis\vsizetable\AddSizeTableTemplateRequest $request){
+	public function addSizeTableTemplate(\Voop\vipapis\vsizetable\AddSizeTableTemplateRequest $request){
 		
 		$this->send_addSizeTableTemplate( $request);
 		return $this->recv_addSizeTableTemplate();
 	}
 	
-	public function send_addSizeTableTemplate(\vipapis\vsizetable\AddSizeTableTemplateRequest $request){
+	public function send_addSizeTableTemplate(\Voop\vipapis\vsizetable\AddSizeTableTemplateRequest $request){
 		
 		$this->initInvocation("addSizeTableTemplate");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_addSizeTableTemplate_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_addSizeTableTemplate_args();
 		
 		$args->request = $request;
 		
@@ -130,7 +130,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_addSizeTableTemplate(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_addSizeTableTemplate_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_addSizeTableTemplate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -149,7 +149,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_deleteSizeDetailByIds( $vendor_id, $sizedetail_ids){
 		
 		$this->initInvocation("deleteSizeDetailByIds");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_deleteSizeDetailByIds_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_deleteSizeDetailByIds_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -160,7 +160,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_deleteSizeDetailByIds(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_deleteSizeDetailByIds_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_deleteSizeDetailByIds_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -179,7 +179,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_deleteSizeTable( $vendor_id, $sizetable_id){
 		
 		$this->initInvocation("deleteSizeTable");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_deleteSizeTable_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_deleteSizeTable_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -190,7 +190,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_deleteSizeTable(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_deleteSizeTable_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_deleteSizeTable_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -209,7 +209,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_deleteSizeTableTemplate( $vendor_id, $template_id){
 		
 		$this->initInvocation("deleteSizeTableTemplate");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_deleteSizeTableTemplate_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_deleteSizeTableTemplate_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -220,7 +220,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_deleteSizeTableTemplate(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_deleteSizeTableTemplate_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_deleteSizeTableTemplate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -239,7 +239,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_getCategorySizeTableConfigs( $third_category_ids){
 		
 		$this->initInvocation("getCategorySizeTableConfigs");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_getCategorySizeTableConfigs_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_getCategorySizeTableConfigs_args();
 		
 		$args->third_category_ids = $third_category_ids;
 		
@@ -248,7 +248,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_getCategorySizeTableConfigs(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_getCategorySizeTableConfigs_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_getCategorySizeTableConfigs_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -267,7 +267,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_getDimensionInfos( $template_types){
 		
 		$this->initInvocation("getDimensionInfos");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_getDimensionInfos_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_getDimensionInfos_args();
 		
 		$args->template_types = $template_types;
 		
@@ -276,7 +276,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_getDimensionInfos(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_getDimensionInfos_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_getDimensionInfos_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -295,7 +295,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_getSizeDetailList( $vendor_id, $sizetable_id){
 		
 		$this->initInvocation("getSizeDetailList");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_getSizeDetailList_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_getSizeDetailList_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -306,7 +306,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_getSizeDetailList(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_getSizeDetailList_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_getSizeDetailList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -325,7 +325,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_getSizeDetailListByIds( $vendor_id, $sizedetail_ids){
 		
 		$this->initInvocation("getSizeDetailListByIds");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_getSizeDetailListByIds_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_getSizeDetailListByIds_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -336,7 +336,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_getSizeDetailListByIds(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_getSizeDetailListByIds_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_getSizeDetailListByIds_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -355,7 +355,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_getSizeTableInfo( $vendor_id, $sizetable_id){
 		
 		$this->initInvocation("getSizeTableInfo");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_getSizeTableInfo_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_getSizeTableInfo_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -366,7 +366,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_getSizeTableInfo(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_getSizeTableInfo_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_getSizeTableInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -385,14 +385,14 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_healthCheck_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_healthCheck_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -411,7 +411,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_querySizeTableTemplate( $vendor_id, $page, $limit, $sizetable_template_id, $sizetable_template_name){
 		
 		$this->initInvocation("querySizeTableTemplate");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_querySizeTableTemplate_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_querySizeTableTemplate_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -428,7 +428,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_querySizeTableTemplate(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_querySizeTableTemplate_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_querySizeTableTemplate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -447,7 +447,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_updateSizeDetail( $vendor_id,\vipapis\vsizetable\SizeDetailRequest $sizedetail){
 		
 		$this->initInvocation("updateSizeDetail");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_updateSizeDetail_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_updateSizeDetail_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -458,7 +458,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_updateSizeDetail(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_updateSizeDetail_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_updateSizeDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -477,7 +477,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	public function send_updateSizeTableInfo( $vendor_id,\vipapis\vsizetable\SizeTableInfoRequest $sizetable){
 		
 		$this->initInvocation("updateSizeTableInfo");
-		$args = new \vipapis\vsizetable\VendorSizeTableService_updateSizeTableInfo_args();
+		$args = new \Voop\vipapis\vsizetable\VendorSizeTableService_updateSizeTableInfo_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -488,7 +488,7 @@ class _VendorSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapi
 	
 	public function recv_updateSizeTableInfo(){
 		
-		$result = new \vipapis\vsizetable\VendorSizeTableService_updateSizeTableInfo_result();
+		$result = new \Voop\vipapis\vsizetable\VendorSizeTableService_updateSizeTableInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -562,7 +562,7 @@ class VendorSizeTableService_addSizeDetail_args {
 		if(true) {
 			
 			
-			$this->sizedetail = new \vipapis\vsizetable\SizeDetailRequest();
+			$this->sizedetail = new \Voop\vipapis\vsizetable\SizeDetailRequest();
 			$this->sizedetail->read($input);
 			
 		}
@@ -588,7 +588,7 @@ class VendorSizeTableService_addSizeDetail_args {
 		
 		if (!is_object($this->sizedetail)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->sizedetail->write($output);
@@ -664,7 +664,7 @@ class VendorSizeTableService_addSizeTableInfo_args {
 		if(true) {
 			
 			
-			$this->sizetable = new \vipapis\vsizetable\SizeTableInfoRequest();
+			$this->sizetable = new \Voop\vipapis\vsizetable\SizeTableInfoRequest();
 			$this->sizetable->read($input);
 			
 		}
@@ -690,7 +690,7 @@ class VendorSizeTableService_addSizeTableInfo_args {
 		
 		if (!is_object($this->sizetable)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->sizetable->write($output);
@@ -747,7 +747,7 @@ class VendorSizeTableService_addSizeTableTemplate_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\vsizetable\AddSizeTableTemplateRequest();
+			$this->request = new \Voop\vipapis\vsizetable\AddSizeTableTemplateRequest();
 			$this->request->read($input);
 			
 		}
@@ -768,7 +768,7 @@ class VendorSizeTableService_addSizeTableTemplate_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -887,7 +887,7 @@ class VendorSizeTableService_deleteSizeDetailByIds_args {
 		
 		if (!is_array($this->sizedetail_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1179,7 +1179,7 @@ class VendorSizeTableService_getCategorySizeTableConfigs_args {
 			
 			if (!is_array($this->third_category_ids)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -1285,7 +1285,7 @@ class VendorSizeTableService_getDimensionInfos_args {
 			
 			if (!is_array($this->template_types)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1507,7 +1507,7 @@ class VendorSizeTableService_getSizeDetailListByIds_args {
 		
 		if (!is_array($this->sizedetail_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1912,7 +1912,7 @@ class VendorSizeTableService_updateSizeDetail_args {
 		if(true) {
 			
 			
-			$this->sizedetail = new \vipapis\vsizetable\SizeDetailRequest();
+			$this->sizedetail = new \Voop\vipapis\vsizetable\SizeDetailRequest();
 			$this->sizedetail->read($input);
 			
 		}
@@ -1938,7 +1938,7 @@ class VendorSizeTableService_updateSizeDetail_args {
 		
 		if (!is_object($this->sizedetail)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->sizedetail->write($output);
@@ -2014,7 +2014,7 @@ class VendorSizeTableService_updateSizeTableInfo_args {
 		if(true) {
 			
 			
-			$this->sizetable = new \vipapis\vsizetable\SizeTableInfoRequest();
+			$this->sizetable = new \Voop\vipapis\vsizetable\SizeTableInfoRequest();
 			$this->sizetable->read($input);
 			
 		}
@@ -2040,7 +2040,7 @@ class VendorSizeTableService_updateSizeTableInfo_args {
 		
 		if (!is_object($this->sizetable)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->sizetable->write($output);
@@ -2097,7 +2097,7 @@ class VendorSizeTableService_addSizeDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vsizetable\SizeDetail();
+			$this->success = new \Voop\vipapis\vsizetable\SizeDetail();
 			$this->success->read($input);
 			
 		}
@@ -2120,7 +2120,7 @@ class VendorSizeTableService_addSizeDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2179,7 +2179,7 @@ class VendorSizeTableService_addSizeTableInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vsizetable\SizeTableInfo();
+			$this->success = new \Voop\vipapis\vsizetable\SizeTableInfo();
 			$this->success->read($input);
 			
 		}
@@ -2202,7 +2202,7 @@ class VendorSizeTableService_addSizeTableInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2261,7 +2261,7 @@ class VendorSizeTableService_addSizeTableTemplate_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vsizetable\AddSizeTableTemplateResponse();
+			$this->success = new \Voop\vipapis\vsizetable\AddSizeTableTemplateResponse();
 			$this->success->read($input);
 			
 		}
@@ -2284,7 +2284,7 @@ class VendorSizeTableService_addSizeTableTemplate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2383,7 +2383,7 @@ class VendorSizeTableService_deleteSizeDetailByIds_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2606,7 +2606,7 @@ class VendorSizeTableService_getCategorySizeTableConfigs_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\vsizetable\CategorySizetableConfig();
+					$elem0 = new \Voop\vipapis\vsizetable\CategorySizetableConfig();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2639,7 +2639,7 @@ class VendorSizeTableService_getCategorySizeTableConfigs_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2648,7 +2648,7 @@ class VendorSizeTableService_getCategorySizeTableConfigs_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2711,7 +2711,7 @@ class VendorSizeTableService_getDimensionInfos_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vsizetable\GetDimensionInfoResponse();
+			$this->success = new \Voop\vipapis\vsizetable\GetDimensionInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -2734,7 +2734,7 @@ class VendorSizeTableService_getDimensionInfos_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2802,7 +2802,7 @@ class VendorSizeTableService_getSizeDetailList_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\vsizetable\SizeDetail();
+					$elem0 = new \Voop\vipapis\vsizetable\SizeDetail();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2835,7 +2835,7 @@ class VendorSizeTableService_getSizeDetailList_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2844,7 +2844,7 @@ class VendorSizeTableService_getSizeDetailList_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2916,7 +2916,7 @@ class VendorSizeTableService_getSizeDetailListByIds_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\vsizetable\SizeDetail();
+					$elem1 = new \Voop\vipapis\vsizetable\SizeDetail();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -2949,7 +2949,7 @@ class VendorSizeTableService_getSizeDetailListByIds_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2958,7 +2958,7 @@ class VendorSizeTableService_getSizeDetailListByIds_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3021,7 +3021,7 @@ class VendorSizeTableService_getSizeTableInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vsizetable\SizeTableInfo();
+			$this->success = new \Voop\vipapis\vsizetable\SizeTableInfo();
 			$this->success->read($input);
 			
 		}
@@ -3044,7 +3044,7 @@ class VendorSizeTableService_getSizeTableInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3103,7 +3103,7 @@ class VendorSizeTableService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -3126,7 +3126,7 @@ class VendorSizeTableService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3185,7 +3185,7 @@ class VendorSizeTableService_querySizeTableTemplate_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vsizetable\QuerySizeTableTemplateResponse();
+			$this->success = new \Voop\vipapis\vsizetable\QuerySizeTableTemplateResponse();
 			$this->success->read($input);
 			
 		}
@@ -3208,7 +3208,7 @@ class VendorSizeTableService_querySizeTableTemplate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

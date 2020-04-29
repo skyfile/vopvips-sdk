@@ -8,43 +8,43 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 interface PmsDataServiceIf{
 	
 	
-	public function addActivityUserLog(\com\vip\pms\data\service\ActivityUserLogRequestModel $request);
+	public function addActivityUserLog(\Voop\com\vip\pms\data\service\ActivityUserLogRequestModel $request);
 	
 	public function addCommandPersonalCode( $commandId, $personalCode);
 	
-	public function addCommandUserLog(\com\vip\pms\data\service\CommandUserLogRequestModel $request);
+	public function addCommandUserLog(\Voop\com\vip\pms\data\service\CommandUserLogRequestModel $request);
 	
-	public function addCouponUserLog(\com\vip\pms\data\service\CouponOrderRequestModel $request);
+	public function addCouponUserLog(\Voop\com\vip\pms\data\service\CouponOrderRequestModel $request);
 	
-	public function addOldPmsOrderInfo(\com\vip\pms\data\service\OldPmsOrderRequestModel $request);
+	public function addOldPmsOrderInfo(\Voop\com\vip\pms\data\service\OldPmsOrderRequestModel $request);
 	
-	public function addOrUpdateActivitySync(\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel);
+	public function addOrUpdateActivitySync(\Voop\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel);
 	
-	public function addOrUpdateCommandSync(\com\vip\pms\data\service\CommandRequestModel $commandRequestModel);
+	public function addOrUpdateCommandSync(\Voop\com\vip\pms\data\service\CommandRequestModel $commandRequestModel);
 	
-	public function addOrUpdateConfig(\com\vip\pms\data\service\AdminConfigModel $config);
+	public function addOrUpdateConfig(\Voop\com\vip\pms\data\service\AdminConfigModel $config);
 	
-	public function addOrUpdateCouponGroupSync(\com\vip\pms\data\service\CouponRequestModel $couponRequestModel);
+	public function addOrUpdateCouponGroupSync(\Voop\com\vip\pms\data\service\CouponRequestModel $couponRequestModel);
 	
-	public function addOrUpdateCouponRuleSync(\com\vip\pms\data\service\CouponRuleRequestModel $couponRuleRequestModel);
+	public function addOrUpdateCouponRuleSync(\Voop\com\vip\pms\data\service\CouponRuleRequestModel $couponRuleRequestModel);
 	
-	public function addOrUpdateCouponSync(\com\vip\pms\data\service\CouponRequestModel $couponRequestModel);
+	public function addOrUpdateCouponSync(\Voop\com\vip\pms\data\service\CouponRequestModel $couponRequestModel);
 	
-	public function addOrUpdatePaySync(\com\vip\pms\data\service\PayRequestModel $payRequestModel);
+	public function addOrUpdatePaySync(\Voop\com\vip\pms\data\service\PayRequestModel $payRequestModel);
 	
-	public function addOrUpdatePrepayInfoSync(\com\vip\pms\data\service\PrepayInfoRequestModel $prepayInfoRequestModel);
+	public function addOrUpdatePrepayInfoSync(\Voop\com\vip\pms\data\service\PrepayInfoRequestModel $prepayInfoRequestModel);
 	
-	public function addOrUpdateSpecialSync(\com\vip\pms\data\service\SpecialRequestModel $specialRequestModel);
+	public function addOrUpdateSpecialSync(\Voop\com\vip\pms\data\service\SpecialRequestModel $specialRequestModel);
 	
-	public function addOrUpdateSurprisePriceActivitySync(\com\vip\pms\data\service\SurprisePriceActivityRequestModel $activityRequestModel);
+	public function addOrUpdateSurprisePriceActivitySync(\Voop\com\vip\pms\data\service\SurprisePriceActivityRequestModel $activityRequestModel);
 	
-	public function addPayUserLog(\com\vip\pms\data\service\PayUserLogRequestModel $request);
+	public function addPayUserLog(\Voop\com\vip\pms\data\service\PayUserLogRequestModel $request);
 	
-	public function addSpecialUserLog(\com\vip\pms\data\service\SpecialUserLogRequestModel $request);
+	public function addSpecialUserLog(\Voop\com\vip\pms\data\service\SpecialUserLogRequestModel $request);
 	
 	public function batchModifyCouponTime( $modifyList, $taskId);
 	
@@ -68,15 +68,15 @@ interface PmsDataServiceIf{
 	
 	public function cancelSurprisePriceActivitySync( $actNoList);
 	
-	public function check(\com\vip\pms\data\service\CheckRequest $checkRequest);
+	public function check(\Voop\com\vip\pms\data\service\CheckRequest $checkRequest);
 	
-	public function couponActivate(\com\vip\pms\data\service\CouponInstanceModel $instanceModel);
+	public function couponActivate(\Voop\com\vip\pms\data\service\CouponInstanceModel $instanceModel);
 	
-	public function couponBind(\com\vip\pms\data\service\CouponInstanceModel $instanceModel);
+	public function couponBind(\Voop\com\vip\pms\data\service\CouponInstanceModel $instanceModel);
 	
-	public function couponGroupActivate(\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList);
+	public function couponGroupActivate(\Voop\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList);
 	
-	public function couponGroupBind(\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList);
+	public function couponGroupBind(\Voop\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList);
 	
 	public function delGoodsOriginalPrice( $spuIdList);
 	
@@ -92,9 +92,9 @@ interface PmsDataServiceIf{
 	
 	public function exportCouponGroup( $groupNo, $offset);
 	
-	public function fetchCommandOrderNos(\com\vip\pms\data\service\FetchCommandOrderNosRequestModel $fetchCommandOrderNosRequestModel);
+	public function fetchCommandOrderNos(\Voop\com\vip\pms\data\service\FetchCommandOrderNosRequestModel $fetchCommandOrderNosRequestModel);
 	
-	public function fetchOrder(\com\vip\pms\data\service\FetchOrderRequestModel $fetchOrderRequestModel);
+	public function fetchOrder(\Voop\com\vip\pms\data\service\FetchOrderRequestModel $fetchOrderRequestModel);
 	
 	public function flushCouponRuleIndexSync();
 	
@@ -114,9 +114,9 @@ interface PmsDataServiceIf{
 	
 	public function modifyCouponTimeByUserIds( $couponId, $beginTime, $endTime, $userIds);
 	
-	public function multiBind(\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest);
+	public function multiBind(\Voop\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest);
 	
-	public function multiBindSyncMode(\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest);
+	public function multiBindSyncMode(\Voop\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest);
 	
 	public function offlineActivityCallback( $actNoList);
 	
@@ -126,19 +126,19 @@ interface PmsDataServiceIf{
 	
 	public function offlinePaySync( $payNoList);
 	
-	public function offlinePrepayInfoSync(\com\vip\pms\data\service\DeletePrepayInfoModel $requestModel);
+	public function offlinePrepayInfoSync(\Voop\com\vip\pms\data\service\DeletePrepayInfoModel $requestModel);
 	
 	public function offlineSpecialSync( $specialNoList);
 	
 	public function offlineSurprisePriceActivitySync( $actNoList);
 	
-	public function prepareActivity(\com\vip\pms\data\model\sync\PrepareActivityRequest $request);
+	public function prepareActivity(\Voop\com\vip\pms\data\model\sync\PrepareActivityRequest $request);
 	
-	public function prepareSpecial(\com\vip\pms\data\model\sync\PrepareActivityRequest $request);
+	public function prepareSpecial(\Voop\com\vip\pms\data\model\sync\PrepareActivityRequest $request);
 	
-	public function publishRollbackUseCouponMsg(\com\vip\pms\data\service\RollbackCouponReqModel $reqModel);
+	public function publishRollbackUseCouponMsg(\Voop\com\vip\pms\data\service\RollbackCouponReqModel $reqModel);
 	
-	public function pushOfflineActivities(\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel, $subActivityStatus);
+	public function pushOfflineActivities(\Voop\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel, $subActivityStatus);
 	
 	public function queryConfirmationNo( $confirmationRequests);
 	
@@ -150,15 +150,15 @@ interface PmsDataServiceIf{
 	
 	public function returnCoupon( $userId, $couponSns);
 	
-	public function saveActPromotionObject(\com\vip\pms\data\model\sync\ActObjectRequest $request);
+	public function saveActPromotionObject(\Voop\com\vip\pms\data\model\sync\ActObjectRequest $request);
 	
-	public function saveActivity(\com\vip\pms\data\service\ActivityRequestModel $request);
+	public function saveActivity(\Voop\com\vip\pms\data\service\ActivityRequestModel $request);
 	
-	public function saveSpecial(\com\vip\pms\data\service\SpecialRequestModel $request);
+	public function saveSpecial(\Voop\com\vip\pms\data\service\SpecialRequestModel $request);
 	
-	public function saveSpecialPromotionObject(\com\vip\pms\data\model\sync\SpecialObjectRequest $request);
+	public function saveSpecialPromotionObject(\Voop\com\vip\pms\data\model\sync\SpecialObjectRequest $request);
 	
-	public function submitSMSendingRequest(\com\vip\pms\data\service\SMSRequestModel $smsRequestModel);
+	public function submitSMSendingRequest(\Voop\com\vip\pms\data\service\SMSRequestModel $smsRequestModel);
 	
 	public function syncAllActivityIndex( $indexType);
 	
@@ -176,13 +176,13 @@ interface PmsDataServiceIf{
 	
 	public function syncPayBlackList( $blackIds);
 	
-	public function updateActPromotionObject(\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request);
+	public function updateActPromotionObject(\Voop\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request);
 	
-	public function updateActivityBaseInfo(\com\vip\pms\data\service\ActivityRequestModel $request);
+	public function updateActivityBaseInfo(\Voop\com\vip\pms\data\service\ActivityRequestModel $request);
 	
-	public function updateSpecialBaseInfo(\com\vip\pms\data\service\SpecialRequestModel $request);
+	public function updateSpecialBaseInfo(\Voop\com\vip\pms\data\service\SpecialRequestModel $request);
 	
-	public function updateSpecialPromotionObject(\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request);
+	public function updateSpecialPromotionObject(\Voop\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request);
 	
 }
 
@@ -194,16 +194,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addActivityUserLog(\com\vip\pms\data\service\ActivityUserLogRequestModel $request){
+	public function addActivityUserLog(\Voop\com\vip\pms\data\service\ActivityUserLogRequestModel $request){
 		
 		$this->send_addActivityUserLog( $request);
 		return $this->recv_addActivityUserLog();
 	}
 	
-	public function send_addActivityUserLog(\com\vip\pms\data\service\ActivityUserLogRequestModel $request){
+	public function send_addActivityUserLog(\Voop\com\vip\pms\data\service\ActivityUserLogRequestModel $request){
 		
 		$this->initInvocation("addActivityUserLog");
-		$args = new \com\vip\pms\data\service\PmsDataService_addActivityUserLog_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addActivityUserLog_args();
 		
 		$args->request = $request;
 		
@@ -212,7 +212,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addActivityUserLog(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addActivityUserLog_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addActivityUserLog_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -231,7 +231,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_addCommandPersonalCode( $commandId, $personalCode){
 		
 		$this->initInvocation("addCommandPersonalCode");
-		$args = new \com\vip\pms\data\service\PmsDataService_addCommandPersonalCode_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addCommandPersonalCode_args();
 		
 		$args->commandId = $commandId;
 		
@@ -242,7 +242,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addCommandPersonalCode(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addCommandPersonalCode_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addCommandPersonalCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -252,16 +252,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addCommandUserLog(\com\vip\pms\data\service\CommandUserLogRequestModel $request){
+	public function addCommandUserLog(\Voop\com\vip\pms\data\service\CommandUserLogRequestModel $request){
 		
 		$this->send_addCommandUserLog( $request);
 		return $this->recv_addCommandUserLog();
 	}
 	
-	public function send_addCommandUserLog(\com\vip\pms\data\service\CommandUserLogRequestModel $request){
+	public function send_addCommandUserLog(\Voop\com\vip\pms\data\service\CommandUserLogRequestModel $request){
 		
 		$this->initInvocation("addCommandUserLog");
-		$args = new \com\vip\pms\data\service\PmsDataService_addCommandUserLog_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addCommandUserLog_args();
 		
 		$args->request = $request;
 		
@@ -270,7 +270,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addCommandUserLog(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addCommandUserLog_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addCommandUserLog_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -280,16 +280,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addCouponUserLog(\com\vip\pms\data\service\CouponOrderRequestModel $request){
+	public function addCouponUserLog(\Voop\com\vip\pms\data\service\CouponOrderRequestModel $request){
 		
 		$this->send_addCouponUserLog( $request);
 		return $this->recv_addCouponUserLog();
 	}
 	
-	public function send_addCouponUserLog(\com\vip\pms\data\service\CouponOrderRequestModel $request){
+	public function send_addCouponUserLog(\Voop\com\vip\pms\data\service\CouponOrderRequestModel $request){
 		
 		$this->initInvocation("addCouponUserLog");
-		$args = new \com\vip\pms\data\service\PmsDataService_addCouponUserLog_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addCouponUserLog_args();
 		
 		$args->request = $request;
 		
@@ -298,7 +298,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addCouponUserLog(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addCouponUserLog_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addCouponUserLog_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -308,16 +308,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addOldPmsOrderInfo(\com\vip\pms\data\service\OldPmsOrderRequestModel $request){
+	public function addOldPmsOrderInfo(\Voop\com\vip\pms\data\service\OldPmsOrderRequestModel $request){
 		
 		$this->send_addOldPmsOrderInfo( $request);
 		return $this->recv_addOldPmsOrderInfo();
 	}
 	
-	public function send_addOldPmsOrderInfo(\com\vip\pms\data\service\OldPmsOrderRequestModel $request){
+	public function send_addOldPmsOrderInfo(\Voop\com\vip\pms\data\service\OldPmsOrderRequestModel $request){
 		
 		$this->initInvocation("addOldPmsOrderInfo");
-		$args = new \com\vip\pms\data\service\PmsDataService_addOldPmsOrderInfo_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addOldPmsOrderInfo_args();
 		
 		$args->request = $request;
 		
@@ -326,7 +326,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addOldPmsOrderInfo(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addOldPmsOrderInfo_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addOldPmsOrderInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -336,16 +336,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addOrUpdateActivitySync(\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel){
+	public function addOrUpdateActivitySync(\Voop\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel){
 		
 		$this->send_addOrUpdateActivitySync( $activityRequestModel);
 		return $this->recv_addOrUpdateActivitySync();
 	}
 	
-	public function send_addOrUpdateActivitySync(\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel){
+	public function send_addOrUpdateActivitySync(\Voop\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel){
 		
 		$this->initInvocation("addOrUpdateActivitySync");
-		$args = new \com\vip\pms\data\service\PmsDataService_addOrUpdateActivitySync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateActivitySync_args();
 		
 		$args->activityRequestModel = $activityRequestModel;
 		
@@ -354,7 +354,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addOrUpdateActivitySync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addOrUpdateActivitySync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateActivitySync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -364,16 +364,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addOrUpdateCommandSync(\com\vip\pms\data\service\CommandRequestModel $commandRequestModel){
+	public function addOrUpdateCommandSync(\Voop\com\vip\pms\data\service\CommandRequestModel $commandRequestModel){
 		
 		$this->send_addOrUpdateCommandSync( $commandRequestModel);
 		return $this->recv_addOrUpdateCommandSync();
 	}
 	
-	public function send_addOrUpdateCommandSync(\com\vip\pms\data\service\CommandRequestModel $commandRequestModel){
+	public function send_addOrUpdateCommandSync(\Voop\com\vip\pms\data\service\CommandRequestModel $commandRequestModel){
 		
 		$this->initInvocation("addOrUpdateCommandSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_addOrUpdateCommandSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateCommandSync_args();
 		
 		$args->commandRequestModel = $commandRequestModel;
 		
@@ -382,7 +382,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addOrUpdateCommandSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addOrUpdateCommandSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateCommandSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -392,16 +392,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addOrUpdateConfig(\com\vip\pms\data\service\AdminConfigModel $config){
+	public function addOrUpdateConfig(\Voop\com\vip\pms\data\service\AdminConfigModel $config){
 		
 		$this->send_addOrUpdateConfig( $config);
 		return $this->recv_addOrUpdateConfig();
 	}
 	
-	public function send_addOrUpdateConfig(\com\vip\pms\data\service\AdminConfigModel $config){
+	public function send_addOrUpdateConfig(\Voop\com\vip\pms\data\service\AdminConfigModel $config){
 		
 		$this->initInvocation("addOrUpdateConfig");
-		$args = new \com\vip\pms\data\service\PmsDataService_addOrUpdateConfig_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateConfig_args();
 		
 		$args->config = $config;
 		
@@ -410,7 +410,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addOrUpdateConfig(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addOrUpdateConfig_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateConfig_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -420,16 +420,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addOrUpdateCouponGroupSync(\com\vip\pms\data\service\CouponRequestModel $couponRequestModel){
+	public function addOrUpdateCouponGroupSync(\Voop\com\vip\pms\data\service\CouponRequestModel $couponRequestModel){
 		
 		$this->send_addOrUpdateCouponGroupSync( $couponRequestModel);
 		return $this->recv_addOrUpdateCouponGroupSync();
 	}
 	
-	public function send_addOrUpdateCouponGroupSync(\com\vip\pms\data\service\CouponRequestModel $couponRequestModel){
+	public function send_addOrUpdateCouponGroupSync(\Voop\com\vip\pms\data\service\CouponRequestModel $couponRequestModel){
 		
 		$this->initInvocation("addOrUpdateCouponGroupSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_addOrUpdateCouponGroupSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateCouponGroupSync_args();
 		
 		$args->couponRequestModel = $couponRequestModel;
 		
@@ -438,7 +438,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addOrUpdateCouponGroupSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addOrUpdateCouponGroupSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateCouponGroupSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -448,16 +448,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addOrUpdateCouponRuleSync(\com\vip\pms\data\service\CouponRuleRequestModel $couponRuleRequestModel){
+	public function addOrUpdateCouponRuleSync(\Voop\com\vip\pms\data\service\CouponRuleRequestModel $couponRuleRequestModel){
 		
 		$this->send_addOrUpdateCouponRuleSync( $couponRuleRequestModel);
 		return $this->recv_addOrUpdateCouponRuleSync();
 	}
 	
-	public function send_addOrUpdateCouponRuleSync(\com\vip\pms\data\service\CouponRuleRequestModel $couponRuleRequestModel){
+	public function send_addOrUpdateCouponRuleSync(\Voop\com\vip\pms\data\service\CouponRuleRequestModel $couponRuleRequestModel){
 		
 		$this->initInvocation("addOrUpdateCouponRuleSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_addOrUpdateCouponRuleSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateCouponRuleSync_args();
 		
 		$args->couponRuleRequestModel = $couponRuleRequestModel;
 		
@@ -466,7 +466,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addOrUpdateCouponRuleSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addOrUpdateCouponRuleSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateCouponRuleSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -476,16 +476,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addOrUpdateCouponSync(\com\vip\pms\data\service\CouponRequestModel $couponRequestModel){
+	public function addOrUpdateCouponSync(\Voop\com\vip\pms\data\service\CouponRequestModel $couponRequestModel){
 		
 		$this->send_addOrUpdateCouponSync( $couponRequestModel);
 		return $this->recv_addOrUpdateCouponSync();
 	}
 	
-	public function send_addOrUpdateCouponSync(\com\vip\pms\data\service\CouponRequestModel $couponRequestModel){
+	public function send_addOrUpdateCouponSync(\Voop\com\vip\pms\data\service\CouponRequestModel $couponRequestModel){
 		
 		$this->initInvocation("addOrUpdateCouponSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_addOrUpdateCouponSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateCouponSync_args();
 		
 		$args->couponRequestModel = $couponRequestModel;
 		
@@ -494,7 +494,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addOrUpdateCouponSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addOrUpdateCouponSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateCouponSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -504,16 +504,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addOrUpdatePaySync(\com\vip\pms\data\service\PayRequestModel $payRequestModel){
+	public function addOrUpdatePaySync(\Voop\com\vip\pms\data\service\PayRequestModel $payRequestModel){
 		
 		$this->send_addOrUpdatePaySync( $payRequestModel);
 		return $this->recv_addOrUpdatePaySync();
 	}
 	
-	public function send_addOrUpdatePaySync(\com\vip\pms\data\service\PayRequestModel $payRequestModel){
+	public function send_addOrUpdatePaySync(\Voop\com\vip\pms\data\service\PayRequestModel $payRequestModel){
 		
 		$this->initInvocation("addOrUpdatePaySync");
-		$args = new \com\vip\pms\data\service\PmsDataService_addOrUpdatePaySync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdatePaySync_args();
 		
 		$args->payRequestModel = $payRequestModel;
 		
@@ -522,7 +522,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addOrUpdatePaySync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addOrUpdatePaySync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdatePaySync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -532,16 +532,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addOrUpdatePrepayInfoSync(\com\vip\pms\data\service\PrepayInfoRequestModel $prepayInfoRequestModel){
+	public function addOrUpdatePrepayInfoSync(\Voop\com\vip\pms\data\service\PrepayInfoRequestModel $prepayInfoRequestModel){
 		
 		$this->send_addOrUpdatePrepayInfoSync( $prepayInfoRequestModel);
 		return $this->recv_addOrUpdatePrepayInfoSync();
 	}
 	
-	public function send_addOrUpdatePrepayInfoSync(\com\vip\pms\data\service\PrepayInfoRequestModel $prepayInfoRequestModel){
+	public function send_addOrUpdatePrepayInfoSync(\Voop\com\vip\pms\data\service\PrepayInfoRequestModel $prepayInfoRequestModel){
 		
 		$this->initInvocation("addOrUpdatePrepayInfoSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_addOrUpdatePrepayInfoSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdatePrepayInfoSync_args();
 		
 		$args->prepayInfoRequestModel = $prepayInfoRequestModel;
 		
@@ -550,7 +550,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addOrUpdatePrepayInfoSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addOrUpdatePrepayInfoSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdatePrepayInfoSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -560,16 +560,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addOrUpdateSpecialSync(\com\vip\pms\data\service\SpecialRequestModel $specialRequestModel){
+	public function addOrUpdateSpecialSync(\Voop\com\vip\pms\data\service\SpecialRequestModel $specialRequestModel){
 		
 		$this->send_addOrUpdateSpecialSync( $specialRequestModel);
 		return $this->recv_addOrUpdateSpecialSync();
 	}
 	
-	public function send_addOrUpdateSpecialSync(\com\vip\pms\data\service\SpecialRequestModel $specialRequestModel){
+	public function send_addOrUpdateSpecialSync(\Voop\com\vip\pms\data\service\SpecialRequestModel $specialRequestModel){
 		
 		$this->initInvocation("addOrUpdateSpecialSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_addOrUpdateSpecialSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateSpecialSync_args();
 		
 		$args->specialRequestModel = $specialRequestModel;
 		
@@ -578,7 +578,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addOrUpdateSpecialSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addOrUpdateSpecialSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateSpecialSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -588,16 +588,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addOrUpdateSurprisePriceActivitySync(\com\vip\pms\data\service\SurprisePriceActivityRequestModel $activityRequestModel){
+	public function addOrUpdateSurprisePriceActivitySync(\Voop\com\vip\pms\data\service\SurprisePriceActivityRequestModel $activityRequestModel){
 		
 		$this->send_addOrUpdateSurprisePriceActivitySync( $activityRequestModel);
 		return $this->recv_addOrUpdateSurprisePriceActivitySync();
 	}
 	
-	public function send_addOrUpdateSurprisePriceActivitySync(\com\vip\pms\data\service\SurprisePriceActivityRequestModel $activityRequestModel){
+	public function send_addOrUpdateSurprisePriceActivitySync(\Voop\com\vip\pms\data\service\SurprisePriceActivityRequestModel $activityRequestModel){
 		
 		$this->initInvocation("addOrUpdateSurprisePriceActivitySync");
-		$args = new \com\vip\pms\data\service\PmsDataService_addOrUpdateSurprisePriceActivitySync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateSurprisePriceActivitySync_args();
 		
 		$args->activityRequestModel = $activityRequestModel;
 		
@@ -606,22 +606,22 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addOrUpdateSurprisePriceActivitySync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addOrUpdateSurprisePriceActivitySync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addOrUpdateSurprisePriceActivitySync_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function addPayUserLog(\com\vip\pms\data\service\PayUserLogRequestModel $request){
+	public function addPayUserLog(\Voop\com\vip\pms\data\service\PayUserLogRequestModel $request){
 		
 		$this->send_addPayUserLog( $request);
 		return $this->recv_addPayUserLog();
 	}
 	
-	public function send_addPayUserLog(\com\vip\pms\data\service\PayUserLogRequestModel $request){
+	public function send_addPayUserLog(\Voop\com\vip\pms\data\service\PayUserLogRequestModel $request){
 		
 		$this->initInvocation("addPayUserLog");
-		$args = new \com\vip\pms\data\service\PmsDataService_addPayUserLog_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addPayUserLog_args();
 		
 		$args->request = $request;
 		
@@ -630,7 +630,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addPayUserLog(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addPayUserLog_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addPayUserLog_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -640,16 +640,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function addSpecialUserLog(\com\vip\pms\data\service\SpecialUserLogRequestModel $request){
+	public function addSpecialUserLog(\Voop\com\vip\pms\data\service\SpecialUserLogRequestModel $request){
 		
 		$this->send_addSpecialUserLog( $request);
 		return $this->recv_addSpecialUserLog();
 	}
 	
-	public function send_addSpecialUserLog(\com\vip\pms\data\service\SpecialUserLogRequestModel $request){
+	public function send_addSpecialUserLog(\Voop\com\vip\pms\data\service\SpecialUserLogRequestModel $request){
 		
 		$this->initInvocation("addSpecialUserLog");
-		$args = new \com\vip\pms\data\service\PmsDataService_addSpecialUserLog_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_addSpecialUserLog_args();
 		
 		$args->request = $request;
 		
@@ -658,7 +658,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_addSpecialUserLog(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_addSpecialUserLog_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_addSpecialUserLog_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -677,7 +677,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_batchModifyCouponTime( $modifyList, $taskId){
 		
 		$this->initInvocation("batchModifyCouponTime");
-		$args = new \com\vip\pms\data\service\PmsDataService_batchModifyCouponTime_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_batchModifyCouponTime_args();
 		
 		$args->modifyList = $modifyList;
 		
@@ -688,7 +688,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_batchModifyCouponTime(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_batchModifyCouponTime_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_batchModifyCouponTime_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -707,7 +707,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_buildAllActivityIndex( $indexType){
 		
 		$this->initInvocation("buildAllActivityIndex");
-		$args = new \com\vip\pms\data\service\PmsDataService_buildAllActivityIndex_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_buildAllActivityIndex_args();
 		
 		$args->indexType = $indexType;
 		
@@ -716,7 +716,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_buildAllActivityIndex(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_buildAllActivityIndex_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_buildAllActivityIndex_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -735,7 +735,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_cancelActivitySync( $actNoList, $channelId){
 		
 		$this->initInvocation("cancelActivitySync");
-		$args = new \com\vip\pms\data\service\PmsDataService_cancelActivitySync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_cancelActivitySync_args();
 		
 		$args->actNoList = $actNoList;
 		
@@ -746,7 +746,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_cancelActivitySync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_cancelActivitySync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_cancelActivitySync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -765,7 +765,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_cancelCommandSync( $commandNoList){
 		
 		$this->initInvocation("cancelCommandSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_cancelCommandSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_cancelCommandSync_args();
 		
 		$args->commandNoList = $commandNoList;
 		
@@ -774,7 +774,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_cancelCommandSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_cancelCommandSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_cancelCommandSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -793,7 +793,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_cancelOrOfflineCouponGroupSync( $noList, $isCancel){
 		
 		$this->initInvocation("cancelOrOfflineCouponGroupSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponGroupSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponGroupSync_args();
 		
 		$args->noList = $noList;
 		
@@ -804,7 +804,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_cancelOrOfflineCouponGroupSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponGroupSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponGroupSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -823,7 +823,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_cancelOrOfflineCouponRuleSync( $noList, $isCancel){
 		
 		$this->initInvocation("cancelOrOfflineCouponRuleSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponRuleSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponRuleSync_args();
 		
 		$args->noList = $noList;
 		
@@ -834,7 +834,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_cancelOrOfflineCouponRuleSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponRuleSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponRuleSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -853,7 +853,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_cancelOrOfflineCouponSync( $noList, $isCancel){
 		
 		$this->initInvocation("cancelOrOfflineCouponSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponSync_args();
 		
 		$args->noList = $noList;
 		
@@ -864,7 +864,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_cancelOrOfflineCouponSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_cancelOrOfflineCouponSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -883,7 +883,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_cancelOrder( $orderNo, $refIdType, $refIdList, $userId){
 		
 		$this->initInvocation("cancelOrder");
-		$args = new \com\vip\pms\data\service\PmsDataService_cancelOrder_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_cancelOrder_args();
 		
 		$args->orderNo = $orderNo;
 		
@@ -898,7 +898,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_cancelOrder(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_cancelOrder_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_cancelOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -917,7 +917,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_cancelPaySync( $payNoList){
 		
 		$this->initInvocation("cancelPaySync");
-		$args = new \com\vip\pms\data\service\PmsDataService_cancelPaySync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_cancelPaySync_args();
 		
 		$args->payNoList = $payNoList;
 		
@@ -926,7 +926,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_cancelPaySync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_cancelPaySync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_cancelPaySync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -945,7 +945,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_cancelSpecialSync( $specialNoList){
 		
 		$this->initInvocation("cancelSpecialSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_cancelSpecialSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_cancelSpecialSync_args();
 		
 		$args->specialNoList = $specialNoList;
 		
@@ -954,7 +954,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_cancelSpecialSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_cancelSpecialSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_cancelSpecialSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -973,7 +973,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_cancelSurprisePriceActivitySync( $actNoList){
 		
 		$this->initInvocation("cancelSurprisePriceActivitySync");
-		$args = new \com\vip\pms\data\service\PmsDataService_cancelSurprisePriceActivitySync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_cancelSurprisePriceActivitySync_args();
 		
 		$args->actNoList = $actNoList;
 		
@@ -982,22 +982,22 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_cancelSurprisePriceActivitySync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_cancelSurprisePriceActivitySync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_cancelSurprisePriceActivitySync_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function check(\com\vip\pms\data\service\CheckRequest $checkRequest){
+	public function check(\Voop\com\vip\pms\data\service\CheckRequest $checkRequest){
 		
 		$this->send_check( $checkRequest);
 		return $this->recv_check();
 	}
 	
-	public function send_check(\com\vip\pms\data\service\CheckRequest $checkRequest){
+	public function send_check(\Voop\com\vip\pms\data\service\CheckRequest $checkRequest){
 		
 		$this->initInvocation("check");
-		$args = new \com\vip\pms\data\service\PmsDataService_check_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_check_args();
 		
 		$args->checkRequest = $checkRequest;
 		
@@ -1006,7 +1006,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_check(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_check_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_check_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1016,16 +1016,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function couponActivate(\com\vip\pms\data\service\CouponInstanceModel $instanceModel){
+	public function couponActivate(\Voop\com\vip\pms\data\service\CouponInstanceModel $instanceModel){
 		
 		$this->send_couponActivate( $instanceModel);
 		return $this->recv_couponActivate();
 	}
 	
-	public function send_couponActivate(\com\vip\pms\data\service\CouponInstanceModel $instanceModel){
+	public function send_couponActivate(\Voop\com\vip\pms\data\service\CouponInstanceModel $instanceModel){
 		
 		$this->initInvocation("couponActivate");
-		$args = new \com\vip\pms\data\service\PmsDataService_couponActivate_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_couponActivate_args();
 		
 		$args->instanceModel = $instanceModel;
 		
@@ -1034,7 +1034,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_couponActivate(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_couponActivate_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_couponActivate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1044,16 +1044,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function couponBind(\com\vip\pms\data\service\CouponInstanceModel $instanceModel){
+	public function couponBind(\Voop\com\vip\pms\data\service\CouponInstanceModel $instanceModel){
 		
 		$this->send_couponBind( $instanceModel);
 		return $this->recv_couponBind();
 	}
 	
-	public function send_couponBind(\com\vip\pms\data\service\CouponInstanceModel $instanceModel){
+	public function send_couponBind(\Voop\com\vip\pms\data\service\CouponInstanceModel $instanceModel){
 		
 		$this->initInvocation("couponBind");
-		$args = new \com\vip\pms\data\service\PmsDataService_couponBind_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_couponBind_args();
 		
 		$args->instanceModel = $instanceModel;
 		
@@ -1062,7 +1062,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_couponBind(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_couponBind_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_couponBind_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1072,16 +1072,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function couponGroupActivate(\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList){
+	public function couponGroupActivate(\Voop\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList){
 		
 		$this->send_couponGroupActivate( $groupInstanceModel, $couponInstanceList);
 		return $this->recv_couponGroupActivate();
 	}
 	
-	public function send_couponGroupActivate(\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList){
+	public function send_couponGroupActivate(\Voop\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList){
 		
 		$this->initInvocation("couponGroupActivate");
-		$args = new \com\vip\pms\data\service\PmsDataService_couponGroupActivate_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_couponGroupActivate_args();
 		
 		$args->groupInstanceModel = $groupInstanceModel;
 		
@@ -1092,7 +1092,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_couponGroupActivate(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_couponGroupActivate_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_couponGroupActivate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1102,16 +1102,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function couponGroupBind(\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList){
+	public function couponGroupBind(\Voop\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList){
 		
 		$this->send_couponGroupBind( $groupInstanceModel, $couponInstanceList);
 		return $this->recv_couponGroupBind();
 	}
 	
-	public function send_couponGroupBind(\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList){
+	public function send_couponGroupBind(\Voop\com\vip\pms\data\service\CouponInstanceModel $groupInstanceModel, $couponInstanceList){
 		
 		$this->initInvocation("couponGroupBind");
-		$args = new \com\vip\pms\data\service\PmsDataService_couponGroupBind_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_couponGroupBind_args();
 		
 		$args->groupInstanceModel = $groupInstanceModel;
 		
@@ -1122,7 +1122,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_couponGroupBind(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_couponGroupBind_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_couponGroupBind_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1141,7 +1141,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_delGoodsOriginalPrice( $spuIdList){
 		
 		$this->initInvocation("delGoodsOriginalPrice");
-		$args = new \com\vip\pms\data\service\PmsDataService_delGoodsOriginalPrice_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_delGoodsOriginalPrice_args();
 		
 		$args->spuIdList = $spuIdList;
 		
@@ -1150,7 +1150,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_delGoodsOriginalPrice(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_delGoodsOriginalPrice_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_delGoodsOriginalPrice_result();
 		$this->receive_base($result);
 		
 	}
@@ -1165,7 +1165,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_delGoodsSurprisePrice( $modelList){
 		
 		$this->initInvocation("delGoodsSurprisePrice");
-		$args = new \com\vip\pms\data\service\PmsDataService_delGoodsSurprisePrice_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_delGoodsSurprisePrice_args();
 		
 		$args->modelList = $modelList;
 		
@@ -1174,7 +1174,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_delGoodsSurprisePrice(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_delGoodsSurprisePrice_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_delGoodsSurprisePrice_result();
 		$this->receive_base($result);
 		
 	}
@@ -1189,7 +1189,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_deleteConfig( $type, $key){
 		
 		$this->initInvocation("deleteConfig");
-		$args = new \com\vip\pms\data\service\PmsDataService_deleteConfig_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_deleteConfig_args();
 		
 		$args->type = $type;
 		
@@ -1200,7 +1200,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_deleteConfig(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_deleteConfig_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_deleteConfig_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1219,7 +1219,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_deletePrepayInfoByMidSync( $prepayMainNo, $merchandiseNos){
 		
 		$this->initInvocation("deletePrepayInfoByMidSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_deletePrepayInfoByMidSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_deletePrepayInfoByMidSync_args();
 		
 		$args->prepayMainNo = $prepayMainNo;
 		
@@ -1230,7 +1230,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_deletePrepayInfoByMidSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_deletePrepayInfoByMidSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_deletePrepayInfoByMidSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1249,7 +1249,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_deletePrepayInfoSync( $prepayMainNos){
 		
 		$this->initInvocation("deletePrepayInfoSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_deletePrepayInfoSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_deletePrepayInfoSync_args();
 		
 		$args->prepayMainNos = $prepayMainNos;
 		
@@ -1258,7 +1258,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_deletePrepayInfoSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_deletePrepayInfoSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_deletePrepayInfoSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1277,7 +1277,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_exportCoupon( $couponNo, $offset){
 		
 		$this->initInvocation("exportCoupon");
-		$args = new \com\vip\pms\data\service\PmsDataService_exportCoupon_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_exportCoupon_args();
 		
 		$args->couponNo = $couponNo;
 		
@@ -1288,7 +1288,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_exportCoupon(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_exportCoupon_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_exportCoupon_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1307,7 +1307,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_exportCouponGroup( $groupNo, $offset){
 		
 		$this->initInvocation("exportCouponGroup");
-		$args = new \com\vip\pms\data\service\PmsDataService_exportCouponGroup_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_exportCouponGroup_args();
 		
 		$args->groupNo = $groupNo;
 		
@@ -1318,7 +1318,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_exportCouponGroup(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_exportCouponGroup_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_exportCouponGroup_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1328,16 +1328,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function fetchCommandOrderNos(\com\vip\pms\data\service\FetchCommandOrderNosRequestModel $fetchCommandOrderNosRequestModel){
+	public function fetchCommandOrderNos(\Voop\com\vip\pms\data\service\FetchCommandOrderNosRequestModel $fetchCommandOrderNosRequestModel){
 		
 		$this->send_fetchCommandOrderNos( $fetchCommandOrderNosRequestModel);
 		return $this->recv_fetchCommandOrderNos();
 	}
 	
-	public function send_fetchCommandOrderNos(\com\vip\pms\data\service\FetchCommandOrderNosRequestModel $fetchCommandOrderNosRequestModel){
+	public function send_fetchCommandOrderNos(\Voop\com\vip\pms\data\service\FetchCommandOrderNosRequestModel $fetchCommandOrderNosRequestModel){
 		
 		$this->initInvocation("fetchCommandOrderNos");
-		$args = new \com\vip\pms\data\service\PmsDataService_fetchCommandOrderNos_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_fetchCommandOrderNos_args();
 		
 		$args->fetchCommandOrderNosRequestModel = $fetchCommandOrderNosRequestModel;
 		
@@ -1346,7 +1346,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_fetchCommandOrderNos(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_fetchCommandOrderNos_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_fetchCommandOrderNos_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1356,16 +1356,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function fetchOrder(\com\vip\pms\data\service\FetchOrderRequestModel $fetchOrderRequestModel){
+	public function fetchOrder(\Voop\com\vip\pms\data\service\FetchOrderRequestModel $fetchOrderRequestModel){
 		
 		$this->send_fetchOrder( $fetchOrderRequestModel);
 		return $this->recv_fetchOrder();
 	}
 	
-	public function send_fetchOrder(\com\vip\pms\data\service\FetchOrderRequestModel $fetchOrderRequestModel){
+	public function send_fetchOrder(\Voop\com\vip\pms\data\service\FetchOrderRequestModel $fetchOrderRequestModel){
 		
 		$this->initInvocation("fetchOrder");
-		$args = new \com\vip\pms\data\service\PmsDataService_fetchOrder_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_fetchOrder_args();
 		
 		$args->fetchOrderRequestModel = $fetchOrderRequestModel;
 		
@@ -1374,7 +1374,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_fetchOrder(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_fetchOrder_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_fetchOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1393,14 +1393,14 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_flushCouponRuleIndexSync(){
 		
 		$this->initInvocation("flushCouponRuleIndexSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_flushCouponRuleIndexSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_flushCouponRuleIndexSync_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_flushCouponRuleIndexSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_flushCouponRuleIndexSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_flushCouponRuleIndexSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1419,7 +1419,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_flushGoodsOriginalPrice( $modelList){
 		
 		$this->initInvocation("flushGoodsOriginalPrice");
-		$args = new \com\vip\pms\data\service\PmsDataService_flushGoodsOriginalPrice_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_flushGoodsOriginalPrice_args();
 		
 		$args->modelList = $modelList;
 		
@@ -1428,7 +1428,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_flushGoodsOriginalPrice(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_flushGoodsOriginalPrice_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_flushGoodsOriginalPrice_result();
 		$this->receive_base($result);
 		
 	}
@@ -1443,7 +1443,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_flushGoodsSurprisePrice( $modelList){
 		
 		$this->initInvocation("flushGoodsSurprisePrice");
-		$args = new \com\vip\pms\data\service\PmsDataService_flushGoodsSurprisePrice_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_flushGoodsSurprisePrice_args();
 		
 		$args->modelList = $modelList;
 		
@@ -1452,7 +1452,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_flushGoodsSurprisePrice(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_flushGoodsSurprisePrice_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_flushGoodsSurprisePrice_result();
 		$this->receive_base($result);
 		
 	}
@@ -1467,7 +1467,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_getConfig( $type, $key){
 		
 		$this->initInvocation("getConfig");
-		$args = new \com\vip\pms\data\service\PmsDataService_getConfig_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_getConfig_args();
 		
 		$args->type = $type;
 		
@@ -1478,7 +1478,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_getConfig(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_getConfig_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_getConfig_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1497,7 +1497,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_getTypeConfig( $type){
 		
 		$this->initInvocation("getTypeConfig");
-		$args = new \com\vip\pms\data\service\PmsDataService_getTypeConfig_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_getTypeConfig_args();
 		
 		$args->type = $type;
 		
@@ -1506,7 +1506,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_getTypeConfig(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_getTypeConfig_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_getTypeConfig_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1525,14 +1525,14 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\pms\data\service\PmsDataService_healthCheck_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_healthCheck_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1551,7 +1551,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_modifyCacheSwitchStatus( $switchStatus){
 		
 		$this->initInvocation("modifyCacheSwitchStatus");
-		$args = new \com\vip\pms\data\service\PmsDataService_modifyCacheSwitchStatus_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_modifyCacheSwitchStatus_args();
 		
 		$args->switchStatus = $switchStatus;
 		
@@ -1560,7 +1560,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_modifyCacheSwitchStatus(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_modifyCacheSwitchStatus_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_modifyCacheSwitchStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1579,7 +1579,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_modifyCouponTime( $couponId, $beginTime, $endTime, $taskId){
 		
 		$this->initInvocation("modifyCouponTime");
-		$args = new \com\vip\pms\data\service\PmsDataService_modifyCouponTime_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_modifyCouponTime_args();
 		
 		$args->couponId = $couponId;
 		
@@ -1594,7 +1594,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_modifyCouponTime(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_modifyCouponTime_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_modifyCouponTime_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1613,7 +1613,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_modifyCouponTimeByUserIds( $couponId, $beginTime, $endTime, $userIds){
 		
 		$this->initInvocation("modifyCouponTimeByUserIds");
-		$args = new \com\vip\pms\data\service\PmsDataService_modifyCouponTimeByUserIds_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_modifyCouponTimeByUserIds_args();
 		
 		$args->couponId = $couponId;
 		
@@ -1628,7 +1628,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_modifyCouponTimeByUserIds(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_modifyCouponTimeByUserIds_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_modifyCouponTimeByUserIds_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1638,16 +1638,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function multiBind(\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest){
+	public function multiBind(\Voop\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest){
 		
 		$this->send_multiBind( $multiBindRequest);
 		return $this->recv_multiBind();
 	}
 	
-	public function send_multiBind(\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest){
+	public function send_multiBind(\Voop\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest){
 		
 		$this->initInvocation("multiBind");
-		$args = new \com\vip\pms\data\service\PmsDataService_multiBind_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_multiBind_args();
 		
 		$args->multiBindRequest = $multiBindRequest;
 		
@@ -1656,7 +1656,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_multiBind(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_multiBind_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_multiBind_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1666,16 +1666,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function multiBindSyncMode(\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest){
+	public function multiBindSyncMode(\Voop\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest){
 		
 		$this->send_multiBindSyncMode( $multiBindRequest);
 		return $this->recv_multiBindSyncMode();
 	}
 	
-	public function send_multiBindSyncMode(\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest){
+	public function send_multiBindSyncMode(\Voop\com\vip\pms\data\coupon\model\CouponMultiBindRequest $multiBindRequest){
 		
 		$this->initInvocation("multiBindSyncMode");
-		$args = new \com\vip\pms\data\service\PmsDataService_multiBindSyncMode_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_multiBindSyncMode_args();
 		
 		$args->multiBindRequest = $multiBindRequest;
 		
@@ -1684,7 +1684,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_multiBindSyncMode(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_multiBindSyncMode_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_multiBindSyncMode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1703,7 +1703,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_offlineActivityCallback( $actNoList){
 		
 		$this->initInvocation("offlineActivityCallback");
-		$args = new \com\vip\pms\data\service\PmsDataService_offlineActivityCallback_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_offlineActivityCallback_args();
 		
 		$args->actNoList = $actNoList;
 		
@@ -1712,7 +1712,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_offlineActivityCallback(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_offlineActivityCallback_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_offlineActivityCallback_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1731,7 +1731,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_offlineActivitySync( $actNoList, $channelId){
 		
 		$this->initInvocation("offlineActivitySync");
-		$args = new \com\vip\pms\data\service\PmsDataService_offlineActivitySync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_offlineActivitySync_args();
 		
 		$args->actNoList = $actNoList;
 		
@@ -1742,7 +1742,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_offlineActivitySync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_offlineActivitySync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_offlineActivitySync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1761,7 +1761,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_offlineCommandSync( $commandNoList){
 		
 		$this->initInvocation("offlineCommandSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_offlineCommandSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_offlineCommandSync_args();
 		
 		$args->commandNoList = $commandNoList;
 		
@@ -1770,7 +1770,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_offlineCommandSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_offlineCommandSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_offlineCommandSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1789,7 +1789,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_offlinePaySync( $payNoList){
 		
 		$this->initInvocation("offlinePaySync");
-		$args = new \com\vip\pms\data\service\PmsDataService_offlinePaySync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_offlinePaySync_args();
 		
 		$args->payNoList = $payNoList;
 		
@@ -1798,7 +1798,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_offlinePaySync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_offlinePaySync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_offlinePaySync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1808,16 +1808,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function offlinePrepayInfoSync(\com\vip\pms\data\service\DeletePrepayInfoModel $requestModel){
+	public function offlinePrepayInfoSync(\Voop\com\vip\pms\data\service\DeletePrepayInfoModel $requestModel){
 		
 		$this->send_offlinePrepayInfoSync( $requestModel);
 		return $this->recv_offlinePrepayInfoSync();
 	}
 	
-	public function send_offlinePrepayInfoSync(\com\vip\pms\data\service\DeletePrepayInfoModel $requestModel){
+	public function send_offlinePrepayInfoSync(\Voop\com\vip\pms\data\service\DeletePrepayInfoModel $requestModel){
 		
 		$this->initInvocation("offlinePrepayInfoSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_offlinePrepayInfoSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_offlinePrepayInfoSync_args();
 		
 		$args->requestModel = $requestModel;
 		
@@ -1826,7 +1826,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_offlinePrepayInfoSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_offlinePrepayInfoSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_offlinePrepayInfoSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1845,7 +1845,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_offlineSpecialSync( $specialNoList){
 		
 		$this->initInvocation("offlineSpecialSync");
-		$args = new \com\vip\pms\data\service\PmsDataService_offlineSpecialSync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_offlineSpecialSync_args();
 		
 		$args->specialNoList = $specialNoList;
 		
@@ -1854,7 +1854,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_offlineSpecialSync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_offlineSpecialSync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_offlineSpecialSync_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1873,7 +1873,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_offlineSurprisePriceActivitySync( $actNoList){
 		
 		$this->initInvocation("offlineSurprisePriceActivitySync");
-		$args = new \com\vip\pms\data\service\PmsDataService_offlineSurprisePriceActivitySync_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_offlineSurprisePriceActivitySync_args();
 		
 		$args->actNoList = $actNoList;
 		
@@ -1882,22 +1882,22 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_offlineSurprisePriceActivitySync(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_offlineSurprisePriceActivitySync_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_offlineSurprisePriceActivitySync_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function prepareActivity(\com\vip\pms\data\model\sync\PrepareActivityRequest $request){
+	public function prepareActivity(\Voop\com\vip\pms\data\model\sync\PrepareActivityRequest $request){
 		
 		$this->send_prepareActivity( $request);
 		return $this->recv_prepareActivity();
 	}
 	
-	public function send_prepareActivity(\com\vip\pms\data\model\sync\PrepareActivityRequest $request){
+	public function send_prepareActivity(\Voop\com\vip\pms\data\model\sync\PrepareActivityRequest $request){
 		
 		$this->initInvocation("prepareActivity");
-		$args = new \com\vip\pms\data\service\PmsDataService_prepareActivity_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_prepareActivity_args();
 		
 		$args->request = $request;
 		
@@ -1906,7 +1906,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_prepareActivity(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_prepareActivity_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_prepareActivity_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1916,16 +1916,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function prepareSpecial(\com\vip\pms\data\model\sync\PrepareActivityRequest $request){
+	public function prepareSpecial(\Voop\com\vip\pms\data\model\sync\PrepareActivityRequest $request){
 		
 		$this->send_prepareSpecial( $request);
 		return $this->recv_prepareSpecial();
 	}
 	
-	public function send_prepareSpecial(\com\vip\pms\data\model\sync\PrepareActivityRequest $request){
+	public function send_prepareSpecial(\Voop\com\vip\pms\data\model\sync\PrepareActivityRequest $request){
 		
 		$this->initInvocation("prepareSpecial");
-		$args = new \com\vip\pms\data\service\PmsDataService_prepareSpecial_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_prepareSpecial_args();
 		
 		$args->request = $request;
 		
@@ -1934,7 +1934,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_prepareSpecial(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_prepareSpecial_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_prepareSpecial_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1944,16 +1944,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function publishRollbackUseCouponMsg(\com\vip\pms\data\service\RollbackCouponReqModel $reqModel){
+	public function publishRollbackUseCouponMsg(\Voop\com\vip\pms\data\service\RollbackCouponReqModel $reqModel){
 		
 		$this->send_publishRollbackUseCouponMsg( $reqModel);
 		return $this->recv_publishRollbackUseCouponMsg();
 	}
 	
-	public function send_publishRollbackUseCouponMsg(\com\vip\pms\data\service\RollbackCouponReqModel $reqModel){
+	public function send_publishRollbackUseCouponMsg(\Voop\com\vip\pms\data\service\RollbackCouponReqModel $reqModel){
 		
 		$this->initInvocation("publishRollbackUseCouponMsg");
-		$args = new \com\vip\pms\data\service\PmsDataService_publishRollbackUseCouponMsg_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_publishRollbackUseCouponMsg_args();
 		
 		$args->reqModel = $reqModel;
 		
@@ -1962,7 +1962,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_publishRollbackUseCouponMsg(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_publishRollbackUseCouponMsg_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_publishRollbackUseCouponMsg_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1972,16 +1972,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function pushOfflineActivities(\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel, $subActivityStatus){
+	public function pushOfflineActivities(\Voop\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel, $subActivityStatus){
 		
 		$this->send_pushOfflineActivities( $activityRequestModel, $subActivityStatus);
 		return $this->recv_pushOfflineActivities();
 	}
 	
-	public function send_pushOfflineActivities(\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel, $subActivityStatus){
+	public function send_pushOfflineActivities(\Voop\com\vip\pms\data\service\ActivityRequestModel $activityRequestModel, $subActivityStatus){
 		
 		$this->initInvocation("pushOfflineActivities");
-		$args = new \com\vip\pms\data\service\PmsDataService_pushOfflineActivities_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_pushOfflineActivities_args();
 		
 		$args->activityRequestModel = $activityRequestModel;
 		
@@ -1992,7 +1992,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_pushOfflineActivities(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_pushOfflineActivities_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_pushOfflineActivities_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2011,7 +2011,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_queryConfirmationNo( $confirmationRequests){
 		
 		$this->initInvocation("queryConfirmationNo");
-		$args = new \com\vip\pms\data\service\PmsDataService_queryConfirmationNo_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_queryConfirmationNo_args();
 		
 		$args->confirmationRequests = $confirmationRequests;
 		
@@ -2020,7 +2020,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_queryConfirmationNo(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_queryConfirmationNo_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_queryConfirmationNo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2039,7 +2039,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_queryCouponInstanceStat( $couponNos){
 		
 		$this->initInvocation("queryCouponInstanceStat");
-		$args = new \com\vip\pms\data\service\PmsDataService_queryCouponInstanceStat_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_queryCouponInstanceStat_args();
 		
 		$args->couponNos = $couponNos;
 		
@@ -2048,7 +2048,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_queryCouponInstanceStat(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_queryCouponInstanceStat_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_queryCouponInstanceStat_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2067,7 +2067,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_queryGoodsFavAmount( $orderCouponRequests){
 		
 		$this->initInvocation("queryGoodsFavAmount");
-		$args = new \com\vip\pms\data\service\PmsDataService_queryGoodsFavAmount_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_queryGoodsFavAmount_args();
 		
 		$args->orderCouponRequests = $orderCouponRequests;
 		
@@ -2076,7 +2076,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_queryGoodsFavAmount(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_queryGoodsFavAmount_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_queryGoodsFavAmount_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2095,7 +2095,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_refreshOrder( $orderNo, $hashValue, $refIdType, $userId){
 		
 		$this->initInvocation("refreshOrder");
-		$args = new \com\vip\pms\data\service\PmsDataService_refreshOrder_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_refreshOrder_args();
 		
 		$args->orderNo = $orderNo;
 		
@@ -2110,7 +2110,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_refreshOrder(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_refreshOrder_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_refreshOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2129,7 +2129,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_returnCoupon( $userId, $couponSns){
 		
 		$this->initInvocation("returnCoupon");
-		$args = new \com\vip\pms\data\service\PmsDataService_returnCoupon_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_returnCoupon_args();
 		
 		$args->userId = $userId;
 		
@@ -2140,7 +2140,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_returnCoupon(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_returnCoupon_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_returnCoupon_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2150,16 +2150,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function saveActPromotionObject(\com\vip\pms\data\model\sync\ActObjectRequest $request){
+	public function saveActPromotionObject(\Voop\com\vip\pms\data\model\sync\ActObjectRequest $request){
 		
 		$this->send_saveActPromotionObject( $request);
 		return $this->recv_saveActPromotionObject();
 	}
 	
-	public function send_saveActPromotionObject(\com\vip\pms\data\model\sync\ActObjectRequest $request){
+	public function send_saveActPromotionObject(\Voop\com\vip\pms\data\model\sync\ActObjectRequest $request){
 		
 		$this->initInvocation("saveActPromotionObject");
-		$args = new \com\vip\pms\data\service\PmsDataService_saveActPromotionObject_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_saveActPromotionObject_args();
 		
 		$args->request = $request;
 		
@@ -2168,22 +2168,22 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_saveActPromotionObject(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_saveActPromotionObject_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_saveActPromotionObject_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function saveActivity(\com\vip\pms\data\service\ActivityRequestModel $request){
+	public function saveActivity(\Voop\com\vip\pms\data\service\ActivityRequestModel $request){
 		
 		$this->send_saveActivity( $request);
 		return $this->recv_saveActivity();
 	}
 	
-	public function send_saveActivity(\com\vip\pms\data\service\ActivityRequestModel $request){
+	public function send_saveActivity(\Voop\com\vip\pms\data\service\ActivityRequestModel $request){
 		
 		$this->initInvocation("saveActivity");
-		$args = new \com\vip\pms\data\service\PmsDataService_saveActivity_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_saveActivity_args();
 		
 		$args->request = $request;
 		
@@ -2192,22 +2192,22 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_saveActivity(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_saveActivity_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_saveActivity_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function saveSpecial(\com\vip\pms\data\service\SpecialRequestModel $request){
+	public function saveSpecial(\Voop\com\vip\pms\data\service\SpecialRequestModel $request){
 		
 		$this->send_saveSpecial( $request);
 		return $this->recv_saveSpecial();
 	}
 	
-	public function send_saveSpecial(\com\vip\pms\data\service\SpecialRequestModel $request){
+	public function send_saveSpecial(\Voop\com\vip\pms\data\service\SpecialRequestModel $request){
 		
 		$this->initInvocation("saveSpecial");
-		$args = new \com\vip\pms\data\service\PmsDataService_saveSpecial_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_saveSpecial_args();
 		
 		$args->request = $request;
 		
@@ -2216,22 +2216,22 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_saveSpecial(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_saveSpecial_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_saveSpecial_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function saveSpecialPromotionObject(\com\vip\pms\data\model\sync\SpecialObjectRequest $request){
+	public function saveSpecialPromotionObject(\Voop\com\vip\pms\data\model\sync\SpecialObjectRequest $request){
 		
 		$this->send_saveSpecialPromotionObject( $request);
 		return $this->recv_saveSpecialPromotionObject();
 	}
 	
-	public function send_saveSpecialPromotionObject(\com\vip\pms\data\model\sync\SpecialObjectRequest $request){
+	public function send_saveSpecialPromotionObject(\Voop\com\vip\pms\data\model\sync\SpecialObjectRequest $request){
 		
 		$this->initInvocation("saveSpecialPromotionObject");
-		$args = new \com\vip\pms\data\service\PmsDataService_saveSpecialPromotionObject_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_saveSpecialPromotionObject_args();
 		
 		$args->request = $request;
 		
@@ -2240,22 +2240,22 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_saveSpecialPromotionObject(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_saveSpecialPromotionObject_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_saveSpecialPromotionObject_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function submitSMSendingRequest(\com\vip\pms\data\service\SMSRequestModel $smsRequestModel){
+	public function submitSMSendingRequest(\Voop\com\vip\pms\data\service\SMSRequestModel $smsRequestModel){
 		
 		$this->send_submitSMSendingRequest( $smsRequestModel);
 		return $this->recv_submitSMSendingRequest();
 	}
 	
-	public function send_submitSMSendingRequest(\com\vip\pms\data\service\SMSRequestModel $smsRequestModel){
+	public function send_submitSMSendingRequest(\Voop\com\vip\pms\data\service\SMSRequestModel $smsRequestModel){
 		
 		$this->initInvocation("submitSMSendingRequest");
-		$args = new \com\vip\pms\data\service\PmsDataService_submitSMSendingRequest_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_submitSMSendingRequest_args();
 		
 		$args->smsRequestModel = $smsRequestModel;
 		
@@ -2264,7 +2264,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_submitSMSendingRequest(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_submitSMSendingRequest_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_submitSMSendingRequest_result();
 		$this->receive_base($result);
 		
 	}
@@ -2279,7 +2279,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_syncAllActivityIndex( $indexType){
 		
 		$this->initInvocation("syncAllActivityIndex");
-		$args = new \com\vip\pms\data\service\PmsDataService_syncAllActivityIndex_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_syncAllActivityIndex_args();
 		
 		$args->indexType = $indexType;
 		
@@ -2288,7 +2288,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_syncAllActivityIndex(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_syncAllActivityIndex_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_syncAllActivityIndex_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2307,7 +2307,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_syncAllCacheByCacheType( $cacheType, $scope){
 		
 		$this->initInvocation("syncAllCacheByCacheType");
-		$args = new \com\vip\pms\data\service\PmsDataService_syncAllCacheByCacheType_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_syncAllCacheByCacheType_args();
 		
 		$args->cacheType = $cacheType;
 		
@@ -2318,7 +2318,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_syncAllCacheByCacheType(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_syncAllCacheByCacheType_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_syncAllCacheByCacheType_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2337,14 +2337,14 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_syncAllGoodsOriginalPrice(){
 		
 		$this->initInvocation("syncAllGoodsOriginalPrice");
-		$args = new \com\vip\pms\data\service\PmsDataService_syncAllGoodsOriginalPrice_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_syncAllGoodsOriginalPrice_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_syncAllGoodsOriginalPrice(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_syncAllGoodsOriginalPrice_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_syncAllGoodsOriginalPrice_result();
 		$this->receive_base($result);
 		
 	}
@@ -2359,14 +2359,14 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_syncAllGoodsSurprisePrice(){
 		
 		$this->initInvocation("syncAllGoodsSurprisePrice");
-		$args = new \com\vip\pms\data\service\PmsDataService_syncAllGoodsSurprisePrice_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_syncAllGoodsSurprisePrice_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_syncAllGoodsSurprisePrice(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_syncAllGoodsSurprisePrice_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_syncAllGoodsSurprisePrice_result();
 		$this->receive_base($result);
 		
 	}
@@ -2381,7 +2381,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_syncBiPush( $biPushType){
 		
 		$this->initInvocation("syncBiPush");
-		$args = new \com\vip\pms\data\service\PmsDataService_syncBiPush_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_syncBiPush_args();
 		
 		$args->biPushType = $biPushType;
 		
@@ -2390,7 +2390,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_syncBiPush(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_syncBiPush_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_syncBiPush_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2409,7 +2409,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_syncBlacklistNew( $blacklist){
 		
 		$this->initInvocation("syncBlacklistNew");
-		$args = new \com\vip\pms\data\service\PmsDataService_syncBlacklistNew_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_syncBlacklistNew_args();
 		
 		$args->blacklist = $blacklist;
 		
@@ -2418,7 +2418,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_syncBlacklistNew(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_syncBlacklistNew_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_syncBlacklistNew_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2437,7 +2437,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_syncCacheByActivityNosAndCacheType( $activityNos, $cacheType, $scopes){
 		
 		$this->initInvocation("syncCacheByActivityNosAndCacheType");
-		$args = new \com\vip\pms\data\service\PmsDataService_syncCacheByActivityNosAndCacheType_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_syncCacheByActivityNosAndCacheType_args();
 		
 		$args->activityNos = $activityNos;
 		
@@ -2450,7 +2450,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_syncCacheByActivityNosAndCacheType(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_syncCacheByActivityNosAndCacheType_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_syncCacheByActivityNosAndCacheType_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2469,7 +2469,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	public function send_syncPayBlackList( $blackIds){
 		
 		$this->initInvocation("syncPayBlackList");
-		$args = new \com\vip\pms\data\service\PmsDataService_syncPayBlackList_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_syncPayBlackList_args();
 		
 		$args->blackIds = $blackIds;
 		
@@ -2478,7 +2478,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_syncPayBlackList(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_syncPayBlackList_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_syncPayBlackList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -2488,16 +2488,16 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	}
 	
 	
-	public function updateActPromotionObject(\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request){
+	public function updateActPromotionObject(\Voop\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request){
 		
 		$this->send_updateActPromotionObject( $request);
 		return $this->recv_updateActPromotionObject();
 	}
 	
-	public function send_updateActPromotionObject(\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request){
+	public function send_updateActPromotionObject(\Voop\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request){
 		
 		$this->initInvocation("updateActPromotionObject");
-		$args = new \com\vip\pms\data\service\PmsDataService_updateActPromotionObject_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_updateActPromotionObject_args();
 		
 		$args->request = $request;
 		
@@ -2506,22 +2506,22 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_updateActPromotionObject(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_updateActPromotionObject_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_updateActPromotionObject_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function updateActivityBaseInfo(\com\vip\pms\data\service\ActivityRequestModel $request){
+	public function updateActivityBaseInfo(\Voop\com\vip\pms\data\service\ActivityRequestModel $request){
 		
 		$this->send_updateActivityBaseInfo( $request);
 		return $this->recv_updateActivityBaseInfo();
 	}
 	
-	public function send_updateActivityBaseInfo(\com\vip\pms\data\service\ActivityRequestModel $request){
+	public function send_updateActivityBaseInfo(\Voop\com\vip\pms\data\service\ActivityRequestModel $request){
 		
 		$this->initInvocation("updateActivityBaseInfo");
-		$args = new \com\vip\pms\data\service\PmsDataService_updateActivityBaseInfo_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_updateActivityBaseInfo_args();
 		
 		$args->request = $request;
 		
@@ -2530,22 +2530,22 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_updateActivityBaseInfo(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_updateActivityBaseInfo_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_updateActivityBaseInfo_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function updateSpecialBaseInfo(\com\vip\pms\data\service\SpecialRequestModel $request){
+	public function updateSpecialBaseInfo(\Voop\com\vip\pms\data\service\SpecialRequestModel $request){
 		
 		$this->send_updateSpecialBaseInfo( $request);
 		return $this->recv_updateSpecialBaseInfo();
 	}
 	
-	public function send_updateSpecialBaseInfo(\com\vip\pms\data\service\SpecialRequestModel $request){
+	public function send_updateSpecialBaseInfo(\Voop\com\vip\pms\data\service\SpecialRequestModel $request){
 		
 		$this->initInvocation("updateSpecialBaseInfo");
-		$args = new \com\vip\pms\data\service\PmsDataService_updateSpecialBaseInfo_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_updateSpecialBaseInfo_args();
 		
 		$args->request = $request;
 		
@@ -2554,22 +2554,22 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_updateSpecialBaseInfo(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_updateSpecialBaseInfo_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_updateSpecialBaseInfo_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function updateSpecialPromotionObject(\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request){
+	public function updateSpecialPromotionObject(\Voop\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request){
 		
 		$this->send_updateSpecialPromotionObject( $request);
 		return $this->recv_updateSpecialPromotionObject();
 	}
 	
-	public function send_updateSpecialPromotionObject(\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request){
+	public function send_updateSpecialPromotionObject(\Voop\com\vip\pms\data\model\sync\ActObjectUpdateRequest $request){
 		
 		$this->initInvocation("updateSpecialPromotionObject");
-		$args = new \com\vip\pms\data\service\PmsDataService_updateSpecialPromotionObject_args();
+		$args = new \Voop\com\vip\pms\data\service\PmsDataService_updateSpecialPromotionObject_args();
 		
 		$args->request = $request;
 		
@@ -2578,7 +2578,7 @@ class _PmsDataServiceClient extends \Osp\Base\OspStub implements \com\vip\pms\da
 	
 	public function recv_updateSpecialPromotionObject(){
 		
-		$result = new \com\vip\pms\data\service\PmsDataService_updateSpecialPromotionObject_result();
+		$result = new \Voop\com\vip\pms\data\service\PmsDataService_updateSpecialPromotionObject_result();
 		$this->receive_base($result);
 		
 	}
@@ -2629,7 +2629,7 @@ class PmsDataService_addActivityUserLog_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\service\ActivityUserLogRequestModel();
+			$this->request = new \Voop\com\vip\pms\data\service\ActivityUserLogRequestModel();
 			$this->request->read($input);
 			
 		}
@@ -2652,7 +2652,7 @@ class PmsDataService_addActivityUserLog_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2805,7 +2805,7 @@ class PmsDataService_addCommandUserLog_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\service\CommandUserLogRequestModel();
+			$this->request = new \Voop\com\vip\pms\data\service\CommandUserLogRequestModel();
 			$this->request->read($input);
 			
 		}
@@ -2828,7 +2828,7 @@ class PmsDataService_addCommandUserLog_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2887,7 +2887,7 @@ class PmsDataService_addCouponUserLog_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\service\CouponOrderRequestModel();
+			$this->request = new \Voop\com\vip\pms\data\service\CouponOrderRequestModel();
 			$this->request->read($input);
 			
 		}
@@ -2910,7 +2910,7 @@ class PmsDataService_addCouponUserLog_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2969,7 +2969,7 @@ class PmsDataService_addOldPmsOrderInfo_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\service\OldPmsOrderRequestModel();
+			$this->request = new \Voop\com\vip\pms\data\service\OldPmsOrderRequestModel();
 			$this->request->read($input);
 			
 		}
@@ -2990,7 +2990,7 @@ class PmsDataService_addOldPmsOrderInfo_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -3047,7 +3047,7 @@ class PmsDataService_addOrUpdateActivitySync_args {
 		if(true) {
 			
 			
-			$this->activityRequestModel = new \com\vip\pms\data\service\ActivityRequestModel();
+			$this->activityRequestModel = new \Voop\com\vip\pms\data\service\ActivityRequestModel();
 			$this->activityRequestModel->read($input);
 			
 		}
@@ -3068,7 +3068,7 @@ class PmsDataService_addOrUpdateActivitySync_args {
 		
 		if (!is_object($this->activityRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->activityRequestModel->write($output);
@@ -3125,7 +3125,7 @@ class PmsDataService_addOrUpdateCommandSync_args {
 		if(true) {
 			
 			
-			$this->commandRequestModel = new \com\vip\pms\data\service\CommandRequestModel();
+			$this->commandRequestModel = new \Voop\com\vip\pms\data\service\CommandRequestModel();
 			$this->commandRequestModel->read($input);
 			
 		}
@@ -3146,7 +3146,7 @@ class PmsDataService_addOrUpdateCommandSync_args {
 		
 		if (!is_object($this->commandRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commandRequestModel->write($output);
@@ -3203,7 +3203,7 @@ class PmsDataService_addOrUpdateConfig_args {
 		if(true) {
 			
 			
-			$this->config = new \com\vip\pms\data\service\AdminConfigModel();
+			$this->config = new \Voop\com\vip\pms\data\service\AdminConfigModel();
 			$this->config->read($input);
 			
 		}
@@ -3224,7 +3224,7 @@ class PmsDataService_addOrUpdateConfig_args {
 		
 		if (!is_object($this->config)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->config->write($output);
@@ -3281,7 +3281,7 @@ class PmsDataService_addOrUpdateCouponGroupSync_args {
 		if(true) {
 			
 			
-			$this->couponRequestModel = new \com\vip\pms\data\service\CouponRequestModel();
+			$this->couponRequestModel = new \Voop\com\vip\pms\data\service\CouponRequestModel();
 			$this->couponRequestModel->read($input);
 			
 		}
@@ -3302,7 +3302,7 @@ class PmsDataService_addOrUpdateCouponGroupSync_args {
 		
 		if (!is_object($this->couponRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->couponRequestModel->write($output);
@@ -3359,7 +3359,7 @@ class PmsDataService_addOrUpdateCouponRuleSync_args {
 		if(true) {
 			
 			
-			$this->couponRuleRequestModel = new \com\vip\pms\data\service\CouponRuleRequestModel();
+			$this->couponRuleRequestModel = new \Voop\com\vip\pms\data\service\CouponRuleRequestModel();
 			$this->couponRuleRequestModel->read($input);
 			
 		}
@@ -3380,7 +3380,7 @@ class PmsDataService_addOrUpdateCouponRuleSync_args {
 		
 		if (!is_object($this->couponRuleRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->couponRuleRequestModel->write($output);
@@ -3437,7 +3437,7 @@ class PmsDataService_addOrUpdateCouponSync_args {
 		if(true) {
 			
 			
-			$this->couponRequestModel = new \com\vip\pms\data\service\CouponRequestModel();
+			$this->couponRequestModel = new \Voop\com\vip\pms\data\service\CouponRequestModel();
 			$this->couponRequestModel->read($input);
 			
 		}
@@ -3458,7 +3458,7 @@ class PmsDataService_addOrUpdateCouponSync_args {
 		
 		if (!is_object($this->couponRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->couponRequestModel->write($output);
@@ -3515,7 +3515,7 @@ class PmsDataService_addOrUpdatePaySync_args {
 		if(true) {
 			
 			
-			$this->payRequestModel = new \com\vip\pms\data\service\PayRequestModel();
+			$this->payRequestModel = new \Voop\com\vip\pms\data\service\PayRequestModel();
 			$this->payRequestModel->read($input);
 			
 		}
@@ -3536,7 +3536,7 @@ class PmsDataService_addOrUpdatePaySync_args {
 		
 		if (!is_object($this->payRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->payRequestModel->write($output);
@@ -3593,7 +3593,7 @@ class PmsDataService_addOrUpdatePrepayInfoSync_args {
 		if(true) {
 			
 			
-			$this->prepayInfoRequestModel = new \com\vip\pms\data\service\PrepayInfoRequestModel();
+			$this->prepayInfoRequestModel = new \Voop\com\vip\pms\data\service\PrepayInfoRequestModel();
 			$this->prepayInfoRequestModel->read($input);
 			
 		}
@@ -3614,7 +3614,7 @@ class PmsDataService_addOrUpdatePrepayInfoSync_args {
 		
 		if (!is_object($this->prepayInfoRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->prepayInfoRequestModel->write($output);
@@ -3671,7 +3671,7 @@ class PmsDataService_addOrUpdateSpecialSync_args {
 		if(true) {
 			
 			
-			$this->specialRequestModel = new \com\vip\pms\data\service\SpecialRequestModel();
+			$this->specialRequestModel = new \Voop\com\vip\pms\data\service\SpecialRequestModel();
 			$this->specialRequestModel->read($input);
 			
 		}
@@ -3692,7 +3692,7 @@ class PmsDataService_addOrUpdateSpecialSync_args {
 		
 		if (!is_object($this->specialRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->specialRequestModel->write($output);
@@ -3749,7 +3749,7 @@ class PmsDataService_addOrUpdateSurprisePriceActivitySync_args {
 		if(true) {
 			
 			
-			$this->activityRequestModel = new \com\vip\pms\data\service\SurprisePriceActivityRequestModel();
+			$this->activityRequestModel = new \Voop\com\vip\pms\data\service\SurprisePriceActivityRequestModel();
 			$this->activityRequestModel->read($input);
 			
 		}
@@ -3770,7 +3770,7 @@ class PmsDataService_addOrUpdateSurprisePriceActivitySync_args {
 		
 		if (!is_object($this->activityRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->activityRequestModel->write($output);
@@ -3827,7 +3827,7 @@ class PmsDataService_addPayUserLog_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\service\PayUserLogRequestModel();
+			$this->request = new \Voop\com\vip\pms\data\service\PayUserLogRequestModel();
 			$this->request->read($input);
 			
 		}
@@ -3850,7 +3850,7 @@ class PmsDataService_addPayUserLog_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3909,7 +3909,7 @@ class PmsDataService_addSpecialUserLog_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\service\SpecialUserLogRequestModel();
+			$this->request = new \Voop\com\vip\pms\data\service\SpecialUserLogRequestModel();
 			$this->request->read($input);
 			
 		}
@@ -3932,7 +3932,7 @@ class PmsDataService_addSpecialUserLog_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4010,7 +4010,7 @@ class PmsDataService_batchModifyCouponTime_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\pms\data\service\ModifyInfoRequestModel();
+					$elem0 = new \Voop\com\vip\pms\data\service\ModifyInfoRequestModel();
 					$elem0->read($input);
 					
 					$this->modifyList[$_size0++] = $elem0;
@@ -4050,7 +4050,7 @@ class PmsDataService_batchModifyCouponTime_args {
 		
 		if (!is_array($this->modifyList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4059,7 +4059,7 @@ class PmsDataService_batchModifyCouponTime_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4252,7 +4252,7 @@ class PmsDataService_cancelActivitySync_args {
 		
 		if (!is_array($this->actNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4363,7 +4363,7 @@ class PmsDataService_cancelCommandSync_args {
 		
 		if (!is_array($this->commandNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4484,7 +4484,7 @@ class PmsDataService_cancelOrOfflineCouponGroupSync_args {
 		
 		if (!is_array($this->noList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4610,7 +4610,7 @@ class PmsDataService_cancelOrOfflineCouponRuleSync_args {
 		
 		if (!is_array($this->noList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4736,7 +4736,7 @@ class PmsDataService_cancelOrOfflineCouponSync_args {
 		
 		if (!is_array($this->noList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4912,7 +4912,7 @@ class PmsDataService_cancelOrder_args {
 			
 			if (!is_array($this->refIdList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5025,7 +5025,7 @@ class PmsDataService_cancelPaySync_args {
 		
 		if (!is_array($this->payNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -5127,7 +5127,7 @@ class PmsDataService_cancelSpecialSync_args {
 		
 		if (!is_array($this->specialNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -5229,7 +5229,7 @@ class PmsDataService_cancelSurprisePriceActivitySync_args {
 		
 		if (!is_array($this->actNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -5293,7 +5293,7 @@ class PmsDataService_check_args {
 		if(true) {
 			
 			
-			$this->checkRequest = new \com\vip\pms\data\service\CheckRequest();
+			$this->checkRequest = new \Voop\com\vip\pms\data\service\CheckRequest();
 			$this->checkRequest->read($input);
 			
 		}
@@ -5316,7 +5316,7 @@ class PmsDataService_check_args {
 			
 			if (!is_object($this->checkRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->checkRequest->write($output);
@@ -5375,7 +5375,7 @@ class PmsDataService_couponActivate_args {
 		if(true) {
 			
 			
-			$this->instanceModel = new \com\vip\pms\data\service\CouponInstanceModel();
+			$this->instanceModel = new \Voop\com\vip\pms\data\service\CouponInstanceModel();
 			$this->instanceModel->read($input);
 			
 		}
@@ -5396,7 +5396,7 @@ class PmsDataService_couponActivate_args {
 		
 		if (!is_object($this->instanceModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->instanceModel->write($output);
@@ -5453,7 +5453,7 @@ class PmsDataService_couponBind_args {
 		if(true) {
 			
 			
-			$this->instanceModel = new \com\vip\pms\data\service\CouponInstanceModel();
+			$this->instanceModel = new \Voop\com\vip\pms\data\service\CouponInstanceModel();
 			$this->instanceModel->read($input);
 			
 		}
@@ -5474,7 +5474,7 @@ class PmsDataService_couponBind_args {
 		
 		if (!is_object($this->instanceModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->instanceModel->write($output);
@@ -5541,7 +5541,7 @@ class PmsDataService_couponGroupActivate_args {
 		if(true) {
 			
 			
-			$this->groupInstanceModel = new \com\vip\pms\data\service\CouponInstanceModel();
+			$this->groupInstanceModel = new \Voop\com\vip\pms\data\service\CouponInstanceModel();
 			$this->groupInstanceModel->read($input);
 			
 		}
@@ -5561,7 +5561,7 @@ class PmsDataService_couponGroupActivate_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\pms\data\service\CouponInstanceModel();
+					$elem0 = new \Voop\com\vip\pms\data\service\CouponInstanceModel();
 					$elem0->read($input);
 					
 					$this->couponInstanceList[$_size0++] = $elem0;
@@ -5592,7 +5592,7 @@ class PmsDataService_couponGroupActivate_args {
 		
 		if (!is_object($this->groupInstanceModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->groupInstanceModel->write($output);
@@ -5603,7 +5603,7 @@ class PmsDataService_couponGroupActivate_args {
 		
 		if (!is_array($this->couponInstanceList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -5612,7 +5612,7 @@ class PmsDataService_couponGroupActivate_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -5683,7 +5683,7 @@ class PmsDataService_couponGroupBind_args {
 		if(true) {
 			
 			
-			$this->groupInstanceModel = new \com\vip\pms\data\service\CouponInstanceModel();
+			$this->groupInstanceModel = new \Voop\com\vip\pms\data\service\CouponInstanceModel();
 			$this->groupInstanceModel->read($input);
 			
 		}
@@ -5703,7 +5703,7 @@ class PmsDataService_couponGroupBind_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\pms\data\service\CouponInstanceModel();
+					$elem1 = new \Voop\com\vip\pms\data\service\CouponInstanceModel();
 					$elem1->read($input);
 					
 					$this->couponInstanceList[$_size1++] = $elem1;
@@ -5734,7 +5734,7 @@ class PmsDataService_couponGroupBind_args {
 		
 		if (!is_object($this->groupInstanceModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->groupInstanceModel->write($output);
@@ -5745,7 +5745,7 @@ class PmsDataService_couponGroupBind_args {
 		
 		if (!is_array($this->couponInstanceList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -5754,7 +5754,7 @@ class PmsDataService_couponGroupBind_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -5853,7 +5853,7 @@ class PmsDataService_delGoodsOriginalPrice_args {
 		
 		if (!is_array($this->spuIdList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -5926,7 +5926,7 @@ class PmsDataService_delGoodsSurprisePrice_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\pms\data\service\FlushGoodsSurprisePriceModel();
+					$elem1 = new \Voop\com\vip\pms\data\service\FlushGoodsSurprisePriceModel();
 					$elem1->read($input);
 					
 					$this->modelList[$_size1++] = $elem1;
@@ -5957,7 +5957,7 @@ class PmsDataService_delGoodsSurprisePrice_args {
 		
 		if (!is_array($this->modelList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -5966,7 +5966,7 @@ class PmsDataService_delGoodsSurprisePrice_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -6189,7 +6189,7 @@ class PmsDataService_deletePrepayInfoByMidSync_args {
 			
 			if (!is_array($this->merchandiseNos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -6293,7 +6293,7 @@ class PmsDataService_deletePrepayInfoSync_args {
 		
 		if (!is_array($this->prepayMainNos)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeSetBegin();
@@ -6545,7 +6545,7 @@ class PmsDataService_fetchCommandOrderNos_args {
 		if(true) {
 			
 			
-			$this->fetchCommandOrderNosRequestModel = new \com\vip\pms\data\service\FetchCommandOrderNosRequestModel();
+			$this->fetchCommandOrderNosRequestModel = new \Voop\com\vip\pms\data\service\FetchCommandOrderNosRequestModel();
 			$this->fetchCommandOrderNosRequestModel->read($input);
 			
 		}
@@ -6566,7 +6566,7 @@ class PmsDataService_fetchCommandOrderNos_args {
 		
 		if (!is_object($this->fetchCommandOrderNosRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->fetchCommandOrderNosRequestModel->write($output);
@@ -6623,7 +6623,7 @@ class PmsDataService_fetchOrder_args {
 		if(true) {
 			
 			
-			$this->fetchOrderRequestModel = new \com\vip\pms\data\service\FetchOrderRequestModel();
+			$this->fetchOrderRequestModel = new \Voop\com\vip\pms\data\service\FetchOrderRequestModel();
 			$this->fetchOrderRequestModel->read($input);
 			
 		}
@@ -6644,7 +6644,7 @@ class PmsDataService_fetchOrder_args {
 		
 		if (!is_object($this->fetchOrderRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->fetchOrderRequestModel->write($output);
@@ -6756,7 +6756,7 @@ class PmsDataService_flushGoodsOriginalPrice_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\pms\data\service\FlushGoodsOriginalPriceModel();
+					$elem0 = new \Voop\com\vip\pms\data\service\FlushGoodsOriginalPriceModel();
 					$elem0->read($input);
 					
 					$this->modelList[$_size0++] = $elem0;
@@ -6787,7 +6787,7 @@ class PmsDataService_flushGoodsOriginalPrice_args {
 		
 		if (!is_array($this->modelList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -6796,7 +6796,7 @@ class PmsDataService_flushGoodsOriginalPrice_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -6866,7 +6866,7 @@ class PmsDataService_flushGoodsSurprisePrice_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\pms\data\service\FlushGoodsSurprisePriceModel();
+					$elem1 = new \Voop\com\vip\pms\data\service\FlushGoodsSurprisePriceModel();
 					$elem1->read($input);
 					
 					$this->modelList[$_size1++] = $elem1;
@@ -6897,7 +6897,7 @@ class PmsDataService_flushGoodsSurprisePrice_args {
 		
 		if (!is_array($this->modelList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -6906,7 +6906,7 @@ class PmsDataService_flushGoodsSurprisePrice_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -7207,7 +7207,7 @@ class PmsDataService_modifyCacheSwitchStatus_args {
 		
 		$xfer += $output->writeFieldBegin('switchStatus');
 		
-		$em = new \com\vip\pms\data\enums\SwitchStatus; 
+		$em = new \Voop\com\vip\pms\data\enums\SwitchStatus; 
 		$output->writeString($em::$__names[$this->switchStatus]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -7514,7 +7514,7 @@ class PmsDataService_modifyCouponTimeByUserIds_args {
 		
 		if (!is_array($this->userIds)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -7578,7 +7578,7 @@ class PmsDataService_multiBind_args {
 		if(true) {
 			
 			
-			$this->multiBindRequest = new \com\vip\pms\data\coupon\model\CouponMultiBindRequest();
+			$this->multiBindRequest = new \Voop\com\vip\pms\data\coupon\model\CouponMultiBindRequest();
 			$this->multiBindRequest->read($input);
 			
 		}
@@ -7599,7 +7599,7 @@ class PmsDataService_multiBind_args {
 		
 		if (!is_object($this->multiBindRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->multiBindRequest->write($output);
@@ -7656,7 +7656,7 @@ class PmsDataService_multiBindSyncMode_args {
 		if(true) {
 			
 			
-			$this->multiBindRequest = new \com\vip\pms\data\coupon\model\CouponMultiBindRequest();
+			$this->multiBindRequest = new \Voop\com\vip\pms\data\coupon\model\CouponMultiBindRequest();
 			$this->multiBindRequest->read($input);
 			
 		}
@@ -7677,7 +7677,7 @@ class PmsDataService_multiBindSyncMode_args {
 		
 		if (!is_object($this->multiBindRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->multiBindRequest->write($output);
@@ -7772,7 +7772,7 @@ class PmsDataService_offlineActivityCallback_args {
 		
 		if (!is_array($this->actNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -7893,7 +7893,7 @@ class PmsDataService_offlineActivitySync_args {
 		
 		if (!is_array($this->actNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -8004,7 +8004,7 @@ class PmsDataService_offlineCommandSync_args {
 		
 		if (!is_array($this->commandNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -8106,7 +8106,7 @@ class PmsDataService_offlinePaySync_args {
 		
 		if (!is_array($this->payNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -8170,7 +8170,7 @@ class PmsDataService_offlinePrepayInfoSync_args {
 		if(true) {
 			
 			
-			$this->requestModel = new \com\vip\pms\data\service\DeletePrepayInfoModel();
+			$this->requestModel = new \Voop\com\vip\pms\data\service\DeletePrepayInfoModel();
 			$this->requestModel->read($input);
 			
 		}
@@ -8191,7 +8191,7 @@ class PmsDataService_offlinePrepayInfoSync_args {
 		
 		if (!is_object($this->requestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->requestModel->write($output);
@@ -8286,7 +8286,7 @@ class PmsDataService_offlineSpecialSync_args {
 		
 		if (!is_array($this->specialNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -8388,7 +8388,7 @@ class PmsDataService_offlineSurprisePriceActivitySync_args {
 		
 		if (!is_array($this->actNoList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -8452,7 +8452,7 @@ class PmsDataService_prepareActivity_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\model\sync\PrepareActivityRequest();
+			$this->request = new \Voop\com\vip\pms\data\model\sync\PrepareActivityRequest();
 			$this->request->read($input);
 			
 		}
@@ -8475,7 +8475,7 @@ class PmsDataService_prepareActivity_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -8534,7 +8534,7 @@ class PmsDataService_prepareSpecial_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\model\sync\PrepareActivityRequest();
+			$this->request = new \Voop\com\vip\pms\data\model\sync\PrepareActivityRequest();
 			$this->request->read($input);
 			
 		}
@@ -8557,7 +8557,7 @@ class PmsDataService_prepareSpecial_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -8616,7 +8616,7 @@ class PmsDataService_publishRollbackUseCouponMsg_args {
 		if(true) {
 			
 			
-			$this->reqModel = new \com\vip\pms\data\service\RollbackCouponReqModel();
+			$this->reqModel = new \Voop\com\vip\pms\data\service\RollbackCouponReqModel();
 			$this->reqModel->read($input);
 			
 		}
@@ -8639,7 +8639,7 @@ class PmsDataService_publishRollbackUseCouponMsg_args {
 			
 			if (!is_object($this->reqModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqModel->write($output);
@@ -8708,7 +8708,7 @@ class PmsDataService_pushOfflineActivities_args {
 		if(true) {
 			
 			
-			$this->activityRequestModel = new \com\vip\pms\data\service\ActivityRequestModel();
+			$this->activityRequestModel = new \Voop\com\vip\pms\data\service\ActivityRequestModel();
 			$this->activityRequestModel->read($input);
 			
 		}
@@ -8759,7 +8759,7 @@ class PmsDataService_pushOfflineActivities_args {
 		
 		if (!is_object($this->activityRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->activityRequestModel->write($output);
@@ -8770,7 +8770,7 @@ class PmsDataService_pushOfflineActivities_args {
 		
 		if (!is_array($this->subActivityStatus)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeMapBegin();
@@ -8845,7 +8845,7 @@ class PmsDataService_queryConfirmationNo_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\pms\data\service\ConfirmationRequest();
+					$elem1 = new \Voop\com\vip\pms\data\service\ConfirmationRequest();
 					$elem1->read($input);
 					
 					$this->confirmationRequests[$_size1++] = $elem1;
@@ -8876,7 +8876,7 @@ class PmsDataService_queryConfirmationNo_args {
 		
 		if (!is_array($this->confirmationRequests)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -8885,7 +8885,7 @@ class PmsDataService_queryConfirmationNo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -8984,7 +8984,7 @@ class PmsDataService_queryCouponInstanceStat_args {
 		
 		if (!is_array($this->couponNos)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeSetBegin();
@@ -9057,7 +9057,7 @@ class PmsDataService_queryGoodsFavAmount_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\pms\data\service\OrderCouponRequest();
+					$elem1 = new \Voop\com\vip\pms\data\service\OrderCouponRequest();
 					$elem1->read($input);
 					
 					$this->orderCouponRequests[$_size1++] = $elem1;
@@ -9088,7 +9088,7 @@ class PmsDataService_queryGoodsFavAmount_args {
 		
 		if (!is_array($this->orderCouponRequests)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -9097,7 +9097,7 @@ class PmsDataService_queryGoodsFavAmount_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -9372,7 +9372,7 @@ class PmsDataService_returnCoupon_args {
 			
 			if (!is_array($this->couponSns)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -9438,7 +9438,7 @@ class PmsDataService_saveActPromotionObject_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\model\sync\ActObjectRequest();
+			$this->request = new \Voop\com\vip\pms\data\model\sync\ActObjectRequest();
 			$this->request->read($input);
 			
 		}
@@ -9461,7 +9461,7 @@ class PmsDataService_saveActPromotionObject_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -9520,7 +9520,7 @@ class PmsDataService_saveActivity_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\service\ActivityRequestModel();
+			$this->request = new \Voop\com\vip\pms\data\service\ActivityRequestModel();
 			$this->request->read($input);
 			
 		}
@@ -9543,7 +9543,7 @@ class PmsDataService_saveActivity_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -9602,7 +9602,7 @@ class PmsDataService_saveSpecial_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\service\SpecialRequestModel();
+			$this->request = new \Voop\com\vip\pms\data\service\SpecialRequestModel();
 			$this->request->read($input);
 			
 		}
@@ -9625,7 +9625,7 @@ class PmsDataService_saveSpecial_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -9684,7 +9684,7 @@ class PmsDataService_saveSpecialPromotionObject_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\model\sync\SpecialObjectRequest();
+			$this->request = new \Voop\com\vip\pms\data\model\sync\SpecialObjectRequest();
 			$this->request->read($input);
 			
 		}
@@ -9707,7 +9707,7 @@ class PmsDataService_saveSpecialPromotionObject_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -9766,7 +9766,7 @@ class PmsDataService_submitSMSendingRequest_args {
 		if(true) {
 			
 			
-			$this->smsRequestModel = new \com\vip\pms\data\service\SMSRequestModel();
+			$this->smsRequestModel = new \Voop\com\vip\pms\data\service\SMSRequestModel();
 			$this->smsRequestModel->read($input);
 			
 		}
@@ -9787,7 +9787,7 @@ class PmsDataService_submitSMSendingRequest_args {
 		
 		if (!is_object($this->smsRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->smsRequestModel->write($output);
@@ -10140,7 +10140,7 @@ class PmsDataService_syncBiPush_args {
 			
 			$xfer += $output->writeFieldBegin('biPushType');
 			
-			$em = new \com\vip\pms\data\service\BiPushTypeEnum; 
+			$em = new \Voop\com\vip\pms\data\service\BiPushTypeEnum; 
 			$output->writeString($em::$__names[$this->biPushType]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -10206,7 +10206,7 @@ class PmsDataService_syncBlacklistNew_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\pms\data\service\BlacklistModel();
+					$elem0 = new \Voop\com\vip\pms\data\service\BlacklistModel();
 					$elem0->read($input);
 					
 					$this->blacklist[$_size0++] = $elem0;
@@ -10237,7 +10237,7 @@ class PmsDataService_syncBlacklistNew_args {
 		
 		if (!is_array($this->blacklist)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -10246,7 +10246,7 @@ class PmsDataService_syncBlacklistNew_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -10404,7 +10404,7 @@ class PmsDataService_syncCacheByActivityNosAndCacheType_args {
 			
 			if (!is_array($this->activityNos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -10435,7 +10435,7 @@ class PmsDataService_syncCacheByActivityNosAndCacheType_args {
 			
 			if (!is_array($this->scopes)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -10539,7 +10539,7 @@ class PmsDataService_syncPayBlackList_args {
 		
 		if (!is_array($this->blackIds)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeSetBegin();
@@ -10603,7 +10603,7 @@ class PmsDataService_updateActPromotionObject_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\model\sync\ActObjectUpdateRequest();
+			$this->request = new \Voop\com\vip\pms\data\model\sync\ActObjectUpdateRequest();
 			$this->request->read($input);
 			
 		}
@@ -10626,7 +10626,7 @@ class PmsDataService_updateActPromotionObject_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -10685,7 +10685,7 @@ class PmsDataService_updateActivityBaseInfo_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\service\ActivityRequestModel();
+			$this->request = new \Voop\com\vip\pms\data\service\ActivityRequestModel();
 			$this->request->read($input);
 			
 		}
@@ -10708,7 +10708,7 @@ class PmsDataService_updateActivityBaseInfo_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -10767,7 +10767,7 @@ class PmsDataService_updateSpecialBaseInfo_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\service\SpecialRequestModel();
+			$this->request = new \Voop\com\vip\pms\data\service\SpecialRequestModel();
 			$this->request->read($input);
 			
 		}
@@ -10790,7 +10790,7 @@ class PmsDataService_updateSpecialBaseInfo_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -10849,7 +10849,7 @@ class PmsDataService_updateSpecialPromotionObject_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\pms\data\model\sync\ActObjectUpdateRequest();
+			$this->request = new \Voop\com\vip\pms\data\model\sync\ActObjectUpdateRequest();
 			$this->request->read($input);
 			
 		}
@@ -10872,7 +10872,7 @@ class PmsDataService_updateSpecialPromotionObject_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -11281,7 +11281,7 @@ class PmsDataService_addOrUpdateActivitySync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -11304,7 +11304,7 @@ class PmsDataService_addOrUpdateActivitySync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11363,7 +11363,7 @@ class PmsDataService_addOrUpdateCommandSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -11386,7 +11386,7 @@ class PmsDataService_addOrUpdateCommandSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11515,7 +11515,7 @@ class PmsDataService_addOrUpdateCouponGroupSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -11538,7 +11538,7 @@ class PmsDataService_addOrUpdateCouponGroupSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11597,7 +11597,7 @@ class PmsDataService_addOrUpdateCouponRuleSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -11620,7 +11620,7 @@ class PmsDataService_addOrUpdateCouponRuleSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11679,7 +11679,7 @@ class PmsDataService_addOrUpdateCouponSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -11702,7 +11702,7 @@ class PmsDataService_addOrUpdateCouponSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11761,7 +11761,7 @@ class PmsDataService_addOrUpdatePaySync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -11784,7 +11784,7 @@ class PmsDataService_addOrUpdatePaySync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11843,7 +11843,7 @@ class PmsDataService_addOrUpdatePrepayInfoSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -11866,7 +11866,7 @@ class PmsDataService_addOrUpdatePrepayInfoSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11925,7 +11925,7 @@ class PmsDataService_addOrUpdateSpecialSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -11948,7 +11948,7 @@ class PmsDataService_addOrUpdateSpecialSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -12196,7 +12196,7 @@ class PmsDataService_batchModifyCouponTime_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -12219,7 +12219,7 @@ class PmsDataService_batchModifyCouponTime_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -12348,7 +12348,7 @@ class PmsDataService_cancelActivitySync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -12371,7 +12371,7 @@ class PmsDataService_cancelActivitySync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -12430,7 +12430,7 @@ class PmsDataService_cancelCommandSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -12453,7 +12453,7 @@ class PmsDataService_cancelCommandSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -12512,7 +12512,7 @@ class PmsDataService_cancelOrOfflineCouponGroupSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -12535,7 +12535,7 @@ class PmsDataService_cancelOrOfflineCouponGroupSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -12594,7 +12594,7 @@ class PmsDataService_cancelOrOfflineCouponRuleSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -12617,7 +12617,7 @@ class PmsDataService_cancelOrOfflineCouponRuleSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -12676,7 +12676,7 @@ class PmsDataService_cancelOrOfflineCouponSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -12699,7 +12699,7 @@ class PmsDataService_cancelOrOfflineCouponSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -12828,7 +12828,7 @@ class PmsDataService_cancelPaySync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -12851,7 +12851,7 @@ class PmsDataService_cancelPaySync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -12910,7 +12910,7 @@ class PmsDataService_cancelSpecialSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -12933,7 +12933,7 @@ class PmsDataService_cancelSpecialSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -13041,7 +13041,7 @@ class PmsDataService_check_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\CheckResult();
+			$this->success = new \Voop\com\vip\pms\data\service\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -13064,7 +13064,7 @@ class PmsDataService_check_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -13123,7 +13123,7 @@ class PmsDataService_couponActivate_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\CouponResResult();
+			$this->success = new \Voop\com\vip\pms\data\service\CouponResResult();
 			$this->success->read($input);
 			
 		}
@@ -13146,7 +13146,7 @@ class PmsDataService_couponActivate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -13205,7 +13205,7 @@ class PmsDataService_couponBind_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\CouponResResult();
+			$this->success = new \Voop\com\vip\pms\data\service\CouponResResult();
 			$this->success->read($input);
 			
 		}
@@ -13228,7 +13228,7 @@ class PmsDataService_couponBind_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -13287,7 +13287,7 @@ class PmsDataService_couponGroupActivate_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\CouponResResult();
+			$this->success = new \Voop\com\vip\pms\data\service\CouponResResult();
 			$this->success->read($input);
 			
 		}
@@ -13310,7 +13310,7 @@ class PmsDataService_couponGroupActivate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -13369,7 +13369,7 @@ class PmsDataService_couponGroupBind_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\CouponResResult();
+			$this->success = new \Voop\com\vip\pms\data\service\CouponResResult();
 			$this->success->read($input);
 			
 		}
@@ -13392,7 +13392,7 @@ class PmsDataService_couponGroupBind_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -13619,7 +13619,7 @@ class PmsDataService_deletePrepayInfoByMidSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -13642,7 +13642,7 @@ class PmsDataService_deletePrepayInfoByMidSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -13701,7 +13701,7 @@ class PmsDataService_deletePrepayInfoSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -13724,7 +13724,7 @@ class PmsDataService_deletePrepayInfoSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -13792,7 +13792,7 @@ class PmsDataService_exportCoupon_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\pms\data\service\ExportRespModel();
+					$elem0 = new \Voop\com\vip\pms\data\service\ExportRespModel();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -13825,7 +13825,7 @@ class PmsDataService_exportCoupon_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -13834,7 +13834,7 @@ class PmsDataService_exportCoupon_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -13906,7 +13906,7 @@ class PmsDataService_exportCouponGroup_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\pms\data\service\ExportRespModel();
+					$elem1 = new \Voop\com\vip\pms\data\service\ExportRespModel();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -13939,7 +13939,7 @@ class PmsDataService_exportCouponGroup_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -13948,7 +13948,7 @@ class PmsDataService_exportCouponGroup_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -14011,7 +14011,7 @@ class PmsDataService_fetchCommandOrderNos_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\OrderNosResult();
+			$this->success = new \Voop\com\vip\pms\data\service\OrderNosResult();
 			$this->success->read($input);
 			
 		}
@@ -14034,7 +14034,7 @@ class PmsDataService_fetchCommandOrderNos_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -14093,7 +14093,7 @@ class PmsDataService_fetchOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\OrderResult();
+			$this->success = new \Voop\com\vip\pms\data\service\OrderResult();
 			$this->success->read($input);
 			
 		}
@@ -14116,7 +14116,7 @@ class PmsDataService_fetchOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -14175,7 +14175,7 @@ class PmsDataService_flushCouponRuleIndexSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -14198,7 +14198,7 @@ class PmsDataService_flushCouponRuleIndexSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -14364,7 +14364,7 @@ class PmsDataService_getConfig_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\pms\data\service\AdminConfigModel();
+					$elem0 = new \Voop\com\vip\pms\data\service\AdminConfigModel();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -14397,7 +14397,7 @@ class PmsDataService_getConfig_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -14406,7 +14406,7 @@ class PmsDataService_getConfig_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -14478,7 +14478,7 @@ class PmsDataService_getTypeConfig_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\pms\data\service\AdminConfigModel();
+					$elem1 = new \Voop\com\vip\pms\data\service\AdminConfigModel();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -14511,7 +14511,7 @@ class PmsDataService_getTypeConfig_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -14520,7 +14520,7 @@ class PmsDataService_getTypeConfig_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -14583,7 +14583,7 @@ class PmsDataService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -14606,7 +14606,7 @@ class PmsDataService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -14735,7 +14735,7 @@ class PmsDataService_modifyCouponTime_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -14758,7 +14758,7 @@ class PmsDataService_modifyCouponTime_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -14817,7 +14817,7 @@ class PmsDataService_modifyCouponTimeByUserIds_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -14840,7 +14840,7 @@ class PmsDataService_modifyCouponTimeByUserIds_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -14908,7 +14908,7 @@ class PmsDataService_multiBind_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\pms\data\coupon\model\CouponMultiBindResponse();
+					$elem0 = new \Voop\com\vip\pms\data\coupon\model\CouponMultiBindResponse();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -14941,7 +14941,7 @@ class PmsDataService_multiBind_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -14950,7 +14950,7 @@ class PmsDataService_multiBind_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -15022,7 +15022,7 @@ class PmsDataService_multiBindSyncMode_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\pms\data\coupon\model\CouponMultiBindResponse();
+					$elem1 = new \Voop\com\vip\pms\data\coupon\model\CouponMultiBindResponse();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -15055,7 +15055,7 @@ class PmsDataService_multiBindSyncMode_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -15064,7 +15064,7 @@ class PmsDataService_multiBindSyncMode_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -15197,7 +15197,7 @@ class PmsDataService_offlineActivitySync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -15220,7 +15220,7 @@ class PmsDataService_offlineActivitySync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -15279,7 +15279,7 @@ class PmsDataService_offlineCommandSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -15302,7 +15302,7 @@ class PmsDataService_offlineCommandSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -15361,7 +15361,7 @@ class PmsDataService_offlinePaySync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -15384,7 +15384,7 @@ class PmsDataService_offlinePaySync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -15443,7 +15443,7 @@ class PmsDataService_offlinePrepayInfoSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -15466,7 +15466,7 @@ class PmsDataService_offlinePrepayInfoSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -15525,7 +15525,7 @@ class PmsDataService_offlineSpecialSync_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -15548,7 +15548,7 @@ class PmsDataService_offlineSpecialSync_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -15656,7 +15656,7 @@ class PmsDataService_prepareActivity_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\model\sync\PrepareActivityResult();
+			$this->success = new \Voop\com\vip\pms\data\model\sync\PrepareActivityResult();
 			$this->success->read($input);
 			
 		}
@@ -15679,7 +15679,7 @@ class PmsDataService_prepareActivity_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -15738,7 +15738,7 @@ class PmsDataService_prepareSpecial_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\model\sync\PrepareActivityResult();
+			$this->success = new \Voop\com\vip\pms\data\model\sync\PrepareActivityResult();
 			$this->success->read($input);
 			
 		}
@@ -15761,7 +15761,7 @@ class PmsDataService_prepareSpecial_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -15890,7 +15890,7 @@ class PmsDataService_pushOfflineActivities_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\pms\data\service\SyncResult();
+			$this->success = new \Voop\com\vip\pms\data\service\SyncResult();
 			$this->success->read($input);
 			
 		}
@@ -15913,7 +15913,7 @@ class PmsDataService_pushOfflineActivities_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -15981,7 +15981,7 @@ class PmsDataService_queryConfirmationNo_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\pms\data\service\ConfirmationResult();
+					$elem0 = new \Voop\com\vip\pms\data\service\ConfirmationResult();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -16014,7 +16014,7 @@ class PmsDataService_queryConfirmationNo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -16023,7 +16023,7 @@ class PmsDataService_queryConfirmationNo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -16095,7 +16095,7 @@ class PmsDataService_queryCouponInstanceStat_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\pms\data\service\CouponInstanceStatResponse();
+					$elem1 = new \Voop\com\vip\pms\data\service\CouponInstanceStatResponse();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -16128,7 +16128,7 @@ class PmsDataService_queryCouponInstanceStat_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -16137,7 +16137,7 @@ class PmsDataService_queryCouponInstanceStat_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -16209,7 +16209,7 @@ class PmsDataService_queryGoodsFavAmount_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\pms\data\service\OrderFavDetailResult();
+					$elem1 = new \Voop\com\vip\pms\data\service\OrderFavDetailResult();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -16242,7 +16242,7 @@ class PmsDataService_queryGoodsFavAmount_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -16251,7 +16251,7 @@ class PmsDataService_queryGoodsFavAmount_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\protcontract\service;
+namespace Voop\com\vip\api\promotion\vis\protcontract\service;
 
 class ExclusivePrice {
 	
@@ -160,7 +160,7 @@ class ExclusivePrice {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\api\promotion\vis\common\NameValueItem();
+						$elem0 = new \Voop\com\vip\api\promotion\vis\common\NameValueItem();
 						$elem0->read($input);
 						
 						$this->exclusivePriceDiscounts[$_size0++] = $elem0;
@@ -182,7 +182,7 @@ class ExclusivePrice {
 				
 				$needSkip = false;
 				
-				$this->vendorBearInfo = new \com\vip\api\promotion\vis\protcontract\service\VendorBearInfo();
+				$this->vendorBearInfo = new \Voop\com\vip\api\promotion\vis\protcontract\service\VendorBearInfo();
 				$this->vendorBearInfo->read($input);
 				
 			}
@@ -261,7 +261,7 @@ class ExclusivePrice {
 			
 			if (!is_array($this->exclusivePriceDiscounts)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -270,7 +270,7 @@ class ExclusivePrice {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -289,7 +289,7 @@ class ExclusivePrice {
 			
 			if (!is_object($this->vendorBearInfo)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->vendorBearInfo->write($output);

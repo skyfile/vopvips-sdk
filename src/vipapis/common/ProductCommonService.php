@@ -8,13 +8,13 @@
 *
 */
 
-namespace vipapis\common;
+namespace Voop\vipapis\common;
 interface ProductCommonServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function zoomImage(\vipapis\common\ZoomImageRequest $request);
+	public function zoomImage(\Voop\vipapis\common\ZoomImageRequest $request);
 	
 }
 
@@ -35,14 +35,14 @@ class _ProductCommonServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\common\ProductCommonService_healthCheck_args();
+		$args = new \Voop\vipapis\common\ProductCommonService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\common\ProductCommonService_healthCheck_result();
+		$result = new \Voop\vipapis\common\ProductCommonService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -52,16 +52,16 @@ class _ProductCommonServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	}
 	
 	
-	public function zoomImage(\vipapis\common\ZoomImageRequest $request){
+	public function zoomImage(\Voop\vipapis\common\ZoomImageRequest $request){
 		
 		$this->send_zoomImage( $request);
 		return $this->recv_zoomImage();
 	}
 	
-	public function send_zoomImage(\vipapis\common\ZoomImageRequest $request){
+	public function send_zoomImage(\Voop\vipapis\common\ZoomImageRequest $request){
 		
 		$this->initInvocation("zoomImage");
-		$args = new \vipapis\common\ProductCommonService_zoomImage_args();
+		$args = new \Voop\vipapis\common\ProductCommonService_zoomImage_args();
 		
 		$args->request = $request;
 		
@@ -70,7 +70,7 @@ class _ProductCommonServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	
 	public function recv_zoomImage(){
 		
-		$result = new \vipapis\common\ProductCommonService_zoomImage_result();
+		$result = new \Voop\vipapis\common\ProductCommonService_zoomImage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -171,7 +171,7 @@ class ProductCommonService_zoomImage_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\common\ZoomImageRequest();
+			$this->request = new \Voop\vipapis\common\ZoomImageRequest();
 			$this->request->read($input);
 			
 		}
@@ -194,7 +194,7 @@ class ProductCommonService_zoomImage_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -253,7 +253,7 @@ class ProductCommonService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -276,7 +276,7 @@ class ProductCommonService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

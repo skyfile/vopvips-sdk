@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying\service;
+namespace Voop\com\vip\xstore\cc\bulkbuying\service;
 
 class StatPoCommonReq {
 	
@@ -186,14 +186,14 @@ class StatPoCommonReq {
 		
 		if (!is_array($this->groupTypes)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
 		foreach ($this->groupTypes as $iter0){
 			
 			
-			$em = new \com\vip\xstore\cc\bulkbuying\service\StatPoGroupType; 
+			$em = new \Voop\com\vip\xstore\cc\bulkbuying\service\StatPoGroupType; 
 			$output->writeString($em::$__names[$iter0]);  
 			
 		}

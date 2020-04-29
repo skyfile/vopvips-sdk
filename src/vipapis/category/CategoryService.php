@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\category;
+namespace Voop\vipapis\category;
 interface CategoryServiceIf{
 	
 	
@@ -47,7 +47,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	public function send_getAttributes( $category_id, $attr_text){
 		
 		$this->initInvocation("getAttributes");
-		$args = new \vipapis\category\CategoryService_getAttributes_args();
+		$args = new \Voop\vipapis\category\CategoryService_getAttributes_args();
 		
 		$args->category_id = $category_id;
 		
@@ -58,7 +58,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	
 	public function recv_getAttributes(){
 		
-		$result = new \vipapis\category\CategoryService_getAttributes_result();
+		$result = new \Voop\vipapis\category\CategoryService_getAttributes_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -77,7 +77,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	public function send_getCategoryAttributeListById( $category_id, $is_include_children){
 		
 		$this->initInvocation("getCategoryAttributeListById");
-		$args = new \vipapis\category\CategoryService_getCategoryAttributeListById_args();
+		$args = new \Voop\vipapis\category\CategoryService_getCategoryAttributeListById_args();
 		
 		$args->category_id = $category_id;
 		
@@ -88,7 +88,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	
 	public function recv_getCategoryAttributeListById(){
 		
-		$result = new \vipapis\category\CategoryService_getCategoryAttributeListById_result();
+		$result = new \Voop\vipapis\category\CategoryService_getCategoryAttributeListById_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -107,7 +107,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	public function send_getCategoryById( $category_id){
 		
 		$this->initInvocation("getCategoryById");
-		$args = new \vipapis\category\CategoryService_getCategoryById_args();
+		$args = new \Voop\vipapis\category\CategoryService_getCategoryById_args();
 		
 		$args->category_id = $category_id;
 		
@@ -116,7 +116,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	
 	public function recv_getCategoryById(){
 		
-		$result = new \vipapis\category\CategoryService_getCategoryById_result();
+		$result = new \Voop\vipapis\category\CategoryService_getCategoryById_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -135,7 +135,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	public function send_getCategoryListByName( $category_name, $limit, $only_leaf){
 		
 		$this->initInvocation("getCategoryListByName");
-		$args = new \vipapis\category\CategoryService_getCategoryListByName_args();
+		$args = new \Voop\vipapis\category\CategoryService_getCategoryListByName_args();
 		
 		$args->category_name = $category_name;
 		
@@ -148,7 +148,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	
 	public function recv_getCategoryListByName(){
 		
-		$result = new \vipapis\category\CategoryService_getCategoryListByName_result();
+		$result = new \Voop\vipapis\category\CategoryService_getCategoryListByName_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -167,7 +167,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	public function send_getCategoryTreeById( $category_id){
 		
 		$this->initInvocation("getCategoryTreeById");
-		$args = new \vipapis\category\CategoryService_getCategoryTreeById_args();
+		$args = new \Voop\vipapis\category\CategoryService_getCategoryTreeById_args();
 		
 		$args->category_id = $category_id;
 		
@@ -176,7 +176,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	
 	public function recv_getCategoryTreeById(){
 		
-		$result = new \vipapis\category\CategoryService_getCategoryTreeById_result();
+		$result = new \Voop\vipapis\category\CategoryService_getCategoryTreeById_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -195,7 +195,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	public function send_getUpdatedCategoryList( $since_updatetime, $hierarchyId){
 		
 		$this->initInvocation("getUpdatedCategoryList");
-		$args = new \vipapis\category\CategoryService_getUpdatedCategoryList_args();
+		$args = new \Voop\vipapis\category\CategoryService_getUpdatedCategoryList_args();
 		
 		$args->since_updatetime = $since_updatetime;
 		
@@ -206,7 +206,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	
 	public function recv_getUpdatedCategoryList(){
 		
-		$result = new \vipapis\category\CategoryService_getUpdatedCategoryList_result();
+		$result = new \Voop\vipapis\category\CategoryService_getUpdatedCategoryList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -225,14 +225,14 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\category\CategoryService_healthCheck_args();
+		$args = new \Voop\vipapis\category\CategoryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\category\CategoryService_healthCheck_result();
+		$result = new \Voop\vipapis\category\CategoryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -251,7 +251,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	public function send_uploadVendorCategory( $vendor_id, $vendor_category_tree_name, $vendor_categories){
 		
 		$this->initInvocation("uploadVendorCategory");
-		$args = new \vipapis\category\CategoryService_uploadVendorCategory_args();
+		$args = new \Voop\vipapis\category\CategoryService_uploadVendorCategory_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -264,7 +264,7 @@ class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\categ
 	
 	public function recv_uploadVendorCategory(){
 		
-		$result = new \vipapis\category\CategoryService_uploadVendorCategory_result();
+		$result = new \Voop\vipapis\category\CategoryService_uploadVendorCategory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -960,7 +960,7 @@ class CategoryService_uploadVendorCategory_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\category\VendorCategory();
+					$elem0 = new \Voop\vipapis\category\VendorCategory();
 					$elem0->read($input);
 					
 					$this->vendor_categories[$_size0++] = $elem0;
@@ -1001,7 +1001,7 @@ class CategoryService_uploadVendorCategory_args {
 		
 		if (!is_array($this->vendor_categories)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1010,7 +1010,7 @@ class CategoryService_uploadVendorCategory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1080,7 +1080,7 @@ class CategoryService_getAttributes_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\category\Attribute();
+					$elem1 = new \Voop\vipapis\category\Attribute();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1113,7 +1113,7 @@ class CategoryService_getAttributes_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1122,7 +1122,7 @@ class CategoryService_getAttributes_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1194,7 +1194,7 @@ class CategoryService_getCategoryAttributeListById_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\category\Attribute();
+					$elem1 = new \Voop\vipapis\category\Attribute();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1227,7 +1227,7 @@ class CategoryService_getCategoryAttributeListById_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1236,7 +1236,7 @@ class CategoryService_getCategoryAttributeListById_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1299,7 +1299,7 @@ class CategoryService_getCategoryById_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\category\Category();
+			$this->success = new \Voop\vipapis\category\Category();
 			$this->success->read($input);
 			
 		}
@@ -1322,7 +1322,7 @@ class CategoryService_getCategoryById_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1390,7 +1390,7 @@ class CategoryService_getCategoryListByName_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\category\Category();
+					$elem0 = new \Voop\vipapis\category\Category();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1423,7 +1423,7 @@ class CategoryService_getCategoryListByName_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1432,7 +1432,7 @@ class CategoryService_getCategoryListByName_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1504,7 +1504,7 @@ class CategoryService_getCategoryTreeById_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\category\Category();
+					$elem1 = new \Voop\vipapis\category\Category();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1537,7 +1537,7 @@ class CategoryService_getCategoryTreeById_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1546,7 +1546,7 @@ class CategoryService_getCategoryTreeById_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1609,7 +1609,7 @@ class CategoryService_getUpdatedCategoryList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\category\CategoryUpdates();
+			$this->success = new \Voop\vipapis\category\CategoryUpdates();
 			$this->success->read($input);
 			
 		}
@@ -1632,7 +1632,7 @@ class CategoryService_getUpdatedCategoryList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1691,7 +1691,7 @@ class CategoryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1714,7 +1714,7 @@ class CategoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

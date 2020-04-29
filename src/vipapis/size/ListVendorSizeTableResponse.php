@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\size;
+namespace Voop\vipapis\size;
 
 class ListVendorSizeTableResponse {
 	
@@ -70,7 +70,7 @@ class ListVendorSizeTableResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\size\VendorSizeTableInfo();
+						$elem1 = new \Voop\vipapis\size\VendorSizeTableInfo();
 						$elem1->read($input);
 						
 						$this->sizetables[$_size1++] = $elem1;
@@ -89,7 +89,7 @@ class ListVendorSizeTableResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -112,7 +112,7 @@ class ListVendorSizeTableResponse {
 			
 			if (!is_array($this->sizetables)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -121,7 +121,7 @@ class ListVendorSizeTableResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

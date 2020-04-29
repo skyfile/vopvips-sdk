@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying\service;
+namespace Voop\com\vip\xstore\cc\bulkbuying\service;
 
 class PurchaseOrderModelResult {
 	
@@ -120,7 +120,7 @@ class PurchaseOrderModelResult {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderModel();
+						$elem0 = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderModel();
 						$elem0->read($input);
 						
 						$this->purchaseOrderModelList[$_size0++] = $elem0;
@@ -142,7 +142,7 @@ class PurchaseOrderModelResult {
 				
 				$needSkip = false;
 				
-				$this->pagination = new \com\vip\xstore\cc\bulkbuying\model\PaginationModel();
+				$this->pagination = new \Voop\com\vip\xstore\cc\bulkbuying\model\PaginationModel();
 				$this->pagination->read($input);
 				
 			}
@@ -192,7 +192,7 @@ class PurchaseOrderModelResult {
 			
 			if (!is_array($this->purchaseOrderModelList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -201,7 +201,7 @@ class PurchaseOrderModelResult {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -220,7 +220,7 @@ class PurchaseOrderModelResult {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);

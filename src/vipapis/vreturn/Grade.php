@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vreturn;
+namespace Voop\vipapis\vreturn;
 final class Grade{
 	
 	

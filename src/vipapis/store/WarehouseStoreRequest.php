@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\store;
+namespace Voop\vipapis\store;
 
 class WarehouseStoreRequest {
 	
@@ -107,7 +107,7 @@ class WarehouseStoreRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -133,7 +133,7 @@ class WarehouseStoreRequest {
 		
 		if (!is_array($this->warehouse_code)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

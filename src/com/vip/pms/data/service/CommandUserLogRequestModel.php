@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class CommandUserLogRequestModel {
 	
@@ -61,7 +61,7 @@ class CommandUserLogRequestModel {
 				
 				$needSkip = false;
 				
-				$this->baseRequestModel = new \com\vip\pms\data\service\UserLogRequestModel();
+				$this->baseRequestModel = new \Voop\com\vip\pms\data\service\UserLogRequestModel();
 				$this->baseRequestModel->read($input);
 				
 			}
@@ -91,7 +91,7 @@ class CommandUserLogRequestModel {
 		
 		if (!is_object($this->baseRequestModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->baseRequestModel->write($output);

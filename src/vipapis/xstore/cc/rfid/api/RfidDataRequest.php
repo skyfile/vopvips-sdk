@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\rfid\api;
+namespace Voop\vipapis\xstore\cc\rfid\api;
 
 class RfidDataRequest {
 	
@@ -108,7 +108,7 @@ class RfidDataRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

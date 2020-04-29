@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\ubc\facade\bankcard;
+namespace Voop\com\vip\api\ubc\facade\bankcard;
 
 class BankDataResponse {
 	
@@ -150,7 +150,7 @@ class BankDataResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\api\ubc\facade\bankcard\OperationResult();
+						$elem0 = new \Voop\com\vip\api\ubc\facade\bankcard\OperationResult();
 						$elem0->read($input);
 						
 						$this->result[$_size0++] = $elem0;
@@ -228,7 +228,7 @@ class BankDataResponse {
 			
 			if (!is_array($this->result)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -237,7 +237,7 @@ class BankDataResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

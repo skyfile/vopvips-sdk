@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\inventory\api;
+namespace Voop\com\vip\vop\vcloud\inventory\api;
 
 class WarehouseInventoryLogQueryResult {
 	
@@ -80,7 +80,7 @@ class WarehouseInventoryLogQueryResult {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\vcloud\inventory\api\WarehouseInventoryLog();
+						$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLog();
 						$elem0->read($input);
 						
 						$this->list[$_size0++] = $elem0;
@@ -102,7 +102,7 @@ class WarehouseInventoryLogQueryResult {
 				
 				$needSkip = false;
 				
-				$this->pagination = new \com\vip\vop\vcloud\common\api\Pagination();
+				$this->pagination = new \Voop\com\vip\vop\vcloud\common\api\Pagination();
 				$this->pagination->read($input);
 				
 			}
@@ -134,7 +134,7 @@ class WarehouseInventoryLogQueryResult {
 			
 			if (!is_array($this->list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -143,7 +143,7 @@ class WarehouseInventoryLogQueryResult {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -162,7 +162,7 @@ class WarehouseInventoryLogQueryResult {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);

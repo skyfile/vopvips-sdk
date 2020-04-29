@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipmax\coupon;
+namespace Voop\vipapis\vipmax\coupon;
 
 class OrderSku {
 	
@@ -108,7 +108,7 @@ class OrderSku {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

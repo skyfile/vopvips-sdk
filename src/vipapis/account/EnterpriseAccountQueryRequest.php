@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\account;
+namespace Voop\vipapis\account;
 
 class EnterpriseAccountQueryRequest {
 	
@@ -268,7 +268,7 @@ class EnterpriseAccountQueryRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

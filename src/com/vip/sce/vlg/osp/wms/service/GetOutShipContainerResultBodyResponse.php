@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\sce\vlg\osp\wms\service;
+namespace Voop\com\vip\sce\vlg\osp\wms\service;
 
 class GetOutShipContainerResultBodyResponse {
 	
@@ -70,7 +70,7 @@ class GetOutShipContainerResultBodyResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\sce\vlg\osp\wms\service\OutShipContainerResult();
+						$elem1 = new \Voop\com\vip\sce\vlg\osp\wms\service\OutShipContainerResult();
 						$elem1->read($input);
 						
 						$this->returnList[$_size1++] = $elem1;
@@ -110,7 +110,7 @@ class GetOutShipContainerResultBodyResponse {
 		
 		if (!is_array($this->returnList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -119,7 +119,7 @@ class GetOutShipContainerResultBodyResponse {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

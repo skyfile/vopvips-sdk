@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\protcontract\service;
+namespace Voop\com\vip\api\promotion\vis\protcontract\service;
 
 class ActivityModel {
 	
@@ -110,7 +110,7 @@ class ActivityModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\api\promotion\vis\protcontract\service\CommodityModel();
+						$elem0 = new \Voop\com\vip\api\promotion\vis\protcontract\service\CommodityModel();
 						$elem0->read($input);
 						
 						$this->commodityList[$_size0++] = $elem0;
@@ -170,7 +170,7 @@ class ActivityModel {
 			
 			if (!is_array($this->commodityList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -179,7 +179,7 @@ class ActivityModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

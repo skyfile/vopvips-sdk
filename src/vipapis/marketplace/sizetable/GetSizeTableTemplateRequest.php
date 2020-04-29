@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\sizetable;
+namespace Voop\vipapis\marketplace\sizetable;
 
 class GetSizeTableTemplateRequest {
 	
@@ -128,7 +128,7 @@ class GetSizeTableTemplateRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

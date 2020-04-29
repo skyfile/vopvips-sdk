@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\product;
+namespace Voop\com\vip\vop\cup\api\product;
 
 class SizeTable {
 	
@@ -202,7 +202,7 @@ class SizeTable {
 						
 						$val0 = null;
 						
-						$val0 = new \com\vip\vop\cup\api\product\SizeDetail();
+						$val0 = new \Voop\com\vip\vop\cup\api\product\SizeDetail();
 						$val0->read($input);
 						
 						$this->details[$key0] = $val0;
@@ -319,7 +319,7 @@ class SizeTable {
 			
 			if (!is_array($this->details)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -330,7 +330,7 @@ class SizeTable {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

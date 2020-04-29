@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\overseas;
+namespace Voop\vipapis\overseas;
 
 class GetPurchaseOrderBatchListResponse {
 	
@@ -90,7 +90,7 @@ class GetPurchaseOrderBatchListResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\overseas\PurchaseOrderBatchInfo();
+						$elem1 = new \Voop\vipapis\overseas\PurchaseOrderBatchInfo();
 						$elem1->read($input);
 						
 						$this->po_batch_list[$_size1++] = $elem1;
@@ -109,7 +109,7 @@ class GetPurchaseOrderBatchListResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -141,7 +141,7 @@ class GetPurchaseOrderBatchListResponse {
 			
 			if (!is_array($this->po_batch_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -150,7 +150,7 @@ class GetPurchaseOrderBatchListResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

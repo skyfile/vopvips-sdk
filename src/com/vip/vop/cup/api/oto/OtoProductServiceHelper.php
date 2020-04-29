@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\oto;
+namespace Voop\com\vip\vop\cup\api\oto;
 require_once dirname(__FILE__).'/OtoProductService.php';
 class OtoProductServiceHelper extends _OtoProductServiceClient{
 	

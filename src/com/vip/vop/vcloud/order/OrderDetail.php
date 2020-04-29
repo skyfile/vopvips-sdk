@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\order;
+namespace Voop\com\vip\vop\vcloud\order;
 
 class OrderDetail {
 	

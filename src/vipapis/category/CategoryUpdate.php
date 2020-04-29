@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\category;
+namespace Voop\vipapis\category;
 
 class CategoryUpdate {
 	
@@ -94,7 +94,7 @@ class CategoryUpdate {
 				
 				$needSkip = false;
 				
-				$this->category = new \vipapis\category\Category();
+				$this->category = new \Voop\vipapis\category\Category();
 				$this->category->read($input);
 				
 			}
@@ -103,7 +103,7 @@ class CategoryUpdate {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -122,7 +122,7 @@ class CategoryUpdate {
 		
 		$xfer += $output->writeFieldBegin('updateType');
 		
-		$em = new \vipapis\category\UpdateType; 
+		$em = new \Voop\vipapis\category\UpdateType; 
 		$output->writeString($em::$__names[$this->updateType]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -131,7 +131,7 @@ class CategoryUpdate {
 		
 		if (!is_object($this->category)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->category->write($output);

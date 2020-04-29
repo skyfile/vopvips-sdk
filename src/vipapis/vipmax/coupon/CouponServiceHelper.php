@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipmax\coupon;
+namespace Voop\vipapis\vipmax\coupon;
 require_once dirname(__FILE__).'/CouponService.php';
 class CouponServiceHelper extends _CouponServiceClient{
 	

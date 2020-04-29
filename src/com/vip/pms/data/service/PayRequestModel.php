@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class PayRequestModel {
 	
@@ -71,7 +71,7 @@ class PayRequestModel {
 				
 				$needSkip = false;
 				
-				$this->payCoreModel = new \com\vip\pms\data\service\PmsPayCoreModel();
+				$this->payCoreModel = new \Voop\com\vip\pms\data\service\PmsPayCoreModel();
 				$this->payCoreModel->read($input);
 				
 			}
@@ -111,7 +111,7 @@ class PayRequestModel {
 		
 		if (!is_object($this->payCoreModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->payCoreModel->write($output);

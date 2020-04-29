@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\address;
+namespace Voop\vipapis\address;
 
 class Address {
 	
@@ -528,7 +528,7 @@ class Address {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

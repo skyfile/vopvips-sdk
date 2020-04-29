@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\top\deliveryorder\service;
+namespace Voop\com\vip\top\deliveryorder\service;
 
 class TmsOrderTrackModel {
 	

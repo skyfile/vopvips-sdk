@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 
 class HtProductListResult {
 	
@@ -110,7 +110,7 @@ class HtProductListResult {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\product\HtProduct();
+						$elem0 = new \Voop\vipapis\product\HtProduct();
 						$elem0->read($input);
 						
 						$this->product_list[$_size0++] = $elem0;
@@ -129,7 +129,7 @@ class HtProductListResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -160,7 +160,7 @@ class HtProductListResult {
 		
 		if (!is_array($this->product_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -169,7 +169,7 @@ class HtProductListResult {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

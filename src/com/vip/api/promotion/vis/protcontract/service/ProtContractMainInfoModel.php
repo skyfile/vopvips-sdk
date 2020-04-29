@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\promotion\vis\protcontract\service;
+namespace Voop\com\vip\api\promotion\vis\protcontract\service;
 
 class ProtContractMainInfoModel {
 	
@@ -1060,7 +1060,7 @@ class ProtContractMainInfoModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\api\promotion\vis\protcontract\service\ProtContractDiscountInfoModel();
+						$elem0 = new \Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractDiscountInfoModel();
 						$elem0->read($input);
 						
 						$this->discountList[$_size0++] = $elem0;
@@ -1101,7 +1101,7 @@ class ProtContractMainInfoModel {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\api\promotion\vis\protcontract\service\SalesWarehouse();
+						$elem1 = new \Voop\com\vip\api\promotion\vis\protcontract\service\SalesWarehouse();
 						$elem1->read($input);
 						
 						$this->salesWarehouseList[$_size1++] = $elem1;
@@ -1618,7 +1618,7 @@ class ProtContractMainInfoModel {
 			
 			if (!is_array($this->discountList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1627,7 +1627,7 @@ class ProtContractMainInfoModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1655,7 +1655,7 @@ class ProtContractMainInfoModel {
 			
 			if (!is_array($this->salesWarehouseList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1664,7 +1664,7 @@ class ProtContractMainInfoModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

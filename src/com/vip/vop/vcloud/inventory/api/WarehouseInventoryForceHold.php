@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\inventory\api;
+namespace Voop\com\vip\vop\vcloud\inventory\api;
 
 class WarehouseInventoryForceHold {
 	
@@ -286,7 +286,7 @@ class WarehouseInventoryForceHold {
 		
 		if (!is_array($this->skuQuantityMap)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeMapBegin();

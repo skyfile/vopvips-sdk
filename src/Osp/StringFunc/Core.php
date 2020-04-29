@@ -19,7 +19,7 @@
  *
  */
 
-namespace Osp\StringFunc;
+namespace Voop\Osp\StringFunc;
 
 
 class Core implements StringFunc {

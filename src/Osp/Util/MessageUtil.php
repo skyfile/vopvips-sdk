@@ -1,6 +1,6 @@
 <?php
 
-namespace Osp\Util;
+namespace Voop\Osp\Util;
 
 /**
  * 输出信息工具类

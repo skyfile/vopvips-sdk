@@ -8,17 +8,17 @@
 *
 */
 
-namespace com\vip\vop\logistics\cabinet\service;
+namespace Voop\com\vip\vop\logistics\cabinet\service;
 interface ExpressCabinetServiceIf{
 	
 	
-	public function getShippingByLogisticsNos(\com\vip\vop\logistics\cabinet\GetShippingReq $shippingReq);
+	public function getShippingByLogisticsNos(\Voop\com\vip\vop\logistics\cabinet\GetShippingReq $shippingReq);
 	
 	public function healthCheck();
 	
 	public function reportLockerAction( $carrier_code, $locker_actions);
 	
-	public function reportTraces(\com\vip\vop\logistics\cabinet\ExpressCabinetTraceReq $traceReq);
+	public function reportTraces(\Voop\com\vip\vop\logistics\cabinet\ExpressCabinetTraceReq $traceReq);
 	
 }
 
@@ -30,16 +30,16 @@ class _ExpressCabinetServiceClient extends \Osp\Base\OspStub implements \com\vip
 	}
 	
 	
-	public function getShippingByLogisticsNos(\com\vip\vop\logistics\cabinet\GetShippingReq $shippingReq){
+	public function getShippingByLogisticsNos(\Voop\com\vip\vop\logistics\cabinet\GetShippingReq $shippingReq){
 		
 		$this->send_getShippingByLogisticsNos( $shippingReq);
 		return $this->recv_getShippingByLogisticsNos();
 	}
 	
-	public function send_getShippingByLogisticsNos(\com\vip\vop\logistics\cabinet\GetShippingReq $shippingReq){
+	public function send_getShippingByLogisticsNos(\Voop\com\vip\vop\logistics\cabinet\GetShippingReq $shippingReq){
 		
 		$this->initInvocation("getShippingByLogisticsNos");
-		$args = new \com\vip\vop\logistics\cabinet\service\ExpressCabinetService_getShippingByLogisticsNos_args();
+		$args = new \Voop\com\vip\vop\logistics\cabinet\service\ExpressCabinetService_getShippingByLogisticsNos_args();
 		
 		$args->shippingReq = $shippingReq;
 		
@@ -48,7 +48,7 @@ class _ExpressCabinetServiceClient extends \Osp\Base\OspStub implements \com\vip
 	
 	public function recv_getShippingByLogisticsNos(){
 		
-		$result = new \com\vip\vop\logistics\cabinet\service\ExpressCabinetService_getShippingByLogisticsNos_result();
+		$result = new \Voop\com\vip\vop\logistics\cabinet\service\ExpressCabinetService_getShippingByLogisticsNos_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -67,14 +67,14 @@ class _ExpressCabinetServiceClient extends \Osp\Base\OspStub implements \com\vip
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\logistics\cabinet\service\ExpressCabinetService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\logistics\cabinet\service\ExpressCabinetService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\logistics\cabinet\service\ExpressCabinetService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\logistics\cabinet\service\ExpressCabinetService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -93,7 +93,7 @@ class _ExpressCabinetServiceClient extends \Osp\Base\OspStub implements \com\vip
 	public function send_reportLockerAction( $carrier_code, $locker_actions){
 		
 		$this->initInvocation("reportLockerAction");
-		$args = new \com\vip\vop\logistics\cabinet\service\ExpressCabinetService_reportLockerAction_args();
+		$args = new \Voop\com\vip\vop\logistics\cabinet\service\ExpressCabinetService_reportLockerAction_args();
 		
 		$args->carrier_code = $carrier_code;
 		
@@ -104,7 +104,7 @@ class _ExpressCabinetServiceClient extends \Osp\Base\OspStub implements \com\vip
 	
 	public function recv_reportLockerAction(){
 		
-		$result = new \com\vip\vop\logistics\cabinet\service\ExpressCabinetService_reportLockerAction_result();
+		$result = new \Voop\com\vip\vop\logistics\cabinet\service\ExpressCabinetService_reportLockerAction_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -114,16 +114,16 @@ class _ExpressCabinetServiceClient extends \Osp\Base\OspStub implements \com\vip
 	}
 	
 	
-	public function reportTraces(\com\vip\vop\logistics\cabinet\ExpressCabinetTraceReq $traceReq){
+	public function reportTraces(\Voop\com\vip\vop\logistics\cabinet\ExpressCabinetTraceReq $traceReq){
 		
 		$this->send_reportTraces( $traceReq);
 		return $this->recv_reportTraces();
 	}
 	
-	public function send_reportTraces(\com\vip\vop\logistics\cabinet\ExpressCabinetTraceReq $traceReq){
+	public function send_reportTraces(\Voop\com\vip\vop\logistics\cabinet\ExpressCabinetTraceReq $traceReq){
 		
 		$this->initInvocation("reportTraces");
-		$args = new \com\vip\vop\logistics\cabinet\service\ExpressCabinetService_reportTraces_args();
+		$args = new \Voop\com\vip\vop\logistics\cabinet\service\ExpressCabinetService_reportTraces_args();
 		
 		$args->traceReq = $traceReq;
 		
@@ -132,7 +132,7 @@ class _ExpressCabinetServiceClient extends \Osp\Base\OspStub implements \com\vip
 	
 	public function recv_reportTraces(){
 		
-		$result = new \com\vip\vop\logistics\cabinet\service\ExpressCabinetService_reportTraces_result();
+		$result = new \Voop\com\vip\vop\logistics\cabinet\service\ExpressCabinetService_reportTraces_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -187,7 +187,7 @@ class ExpressCabinetService_getShippingByLogisticsNos_args {
 		if(true) {
 			
 			
-			$this->shippingReq = new \com\vip\vop\logistics\cabinet\GetShippingReq();
+			$this->shippingReq = new \Voop\com\vip\vop\logistics\cabinet\GetShippingReq();
 			$this->shippingReq->read($input);
 			
 		}
@@ -208,7 +208,7 @@ class ExpressCabinetService_getShippingByLogisticsNos_args {
 		
 		if (!is_object($this->shippingReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->shippingReq->write($output);
@@ -339,7 +339,7 @@ class ExpressCabinetService_reportLockerAction_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\logistics\cabinet\LockerAction();
+					$elem0 = new \Voop\com\vip\vop\logistics\cabinet\LockerAction();
 					$elem0->read($input);
 					
 					$this->locker_actions[$_size0++] = $elem0;
@@ -375,7 +375,7 @@ class ExpressCabinetService_reportLockerAction_args {
 		
 		if (!is_array($this->locker_actions)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -384,7 +384,7 @@ class ExpressCabinetService_reportLockerAction_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -445,7 +445,7 @@ class ExpressCabinetService_reportTraces_args {
 		if(true) {
 			
 			
-			$this->traceReq = new \com\vip\vop\logistics\cabinet\ExpressCabinetTraceReq();
+			$this->traceReq = new \Voop\com\vip\vop\logistics\cabinet\ExpressCabinetTraceReq();
 			$this->traceReq->read($input);
 			
 		}
@@ -466,7 +466,7 @@ class ExpressCabinetService_reportTraces_args {
 		
 		if (!is_object($this->traceReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->traceReq->write($output);
@@ -523,7 +523,7 @@ class ExpressCabinetService_getShippingByLogisticsNos_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\logistics\cabinet\GetShippingResp();
+			$this->success = new \Voop\com\vip\vop\logistics\cabinet\GetShippingResp();
 			$this->success->read($input);
 			
 		}
@@ -546,7 +546,7 @@ class ExpressCabinetService_getShippingByLogisticsNos_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -605,7 +605,7 @@ class ExpressCabinetService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -628,7 +628,7 @@ class ExpressCabinetService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -696,7 +696,7 @@ class ExpressCabinetService_reportLockerAction_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\logistics\cabinet\LockerActionResult();
+					$elem0 = new \Voop\com\vip\vop\logistics\cabinet\LockerActionResult();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -729,7 +729,7 @@ class ExpressCabinetService_reportLockerAction_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -738,7 +738,7 @@ class ExpressCabinetService_reportLockerAction_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -801,7 +801,7 @@ class ExpressCabinetService_reportTraces_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\logistics\cabinet\ShipmentTraceResp();
+			$this->success = new \Voop\com\vip\vop\logistics\cabinet\ShipmentTraceResp();
 			$this->success->read($input);
 			
 		}
@@ -824,7 +824,7 @@ class ExpressCabinetService_reportTraces_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

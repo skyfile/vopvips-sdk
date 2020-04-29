@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\oto;
+namespace Voop\com\vip\vop\cup\api\oto;
 interface OtoProductServiceIf{
 	
 	
@@ -43,7 +43,7 @@ class _OtoProductServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	public function send_batchGetSkuHealthCheck( $v_sku_ids){
 		
 		$this->initInvocation("batchGetSkuHealthCheck");
-		$args = new \com\vip\vop\cup\api\oto\OtoProductService_batchGetSkuHealthCheck_args();
+		$args = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_batchGetSkuHealthCheck_args();
 		
 		$args->v_sku_ids = $v_sku_ids;
 		
@@ -52,7 +52,7 @@ class _OtoProductServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	
 	public function recv_batchGetSkuHealthCheck(){
 		
-		$result = new \com\vip\vop\cup\api\oto\OtoProductService_batchGetSkuHealthCheck_result();
+		$result = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_batchGetSkuHealthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -71,7 +71,7 @@ class _OtoProductServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	public function send_batchGetSpuHealthCheck( $v_spu_ids){
 		
 		$this->initInvocation("batchGetSpuHealthCheck");
-		$args = new \com\vip\vop\cup\api\oto\OtoProductService_batchGetSpuHealthCheck_args();
+		$args = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_batchGetSpuHealthCheck_args();
 		
 		$args->v_spu_ids = $v_spu_ids;
 		
@@ -80,7 +80,7 @@ class _OtoProductServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	
 	public function recv_batchGetSpuHealthCheck(){
 		
-		$result = new \com\vip\vop\cup\api\oto\OtoProductService_batchGetSpuHealthCheck_result();
+		$result = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_batchGetSpuHealthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -99,7 +99,7 @@ class _OtoProductServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	public function send_getSkuDetail( $v_sku_id, $owner){
 		
 		$this->initInvocation("getSkuDetail");
-		$args = new \com\vip\vop\cup\api\oto\OtoProductService_getSkuDetail_args();
+		$args = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_getSkuDetail_args();
 		
 		$args->v_sku_id = $v_sku_id;
 		
@@ -110,7 +110,7 @@ class _OtoProductServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	
 	public function recv_getSkuDetail(){
 		
-		$result = new \com\vip\vop\cup\api\oto\OtoProductService_getSkuDetail_result();
+		$result = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_getSkuDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -129,7 +129,7 @@ class _OtoProductServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	public function send_getSpuDetail( $v_spu_id, $owner){
 		
 		$this->initInvocation("getSpuDetail");
-		$args = new \com\vip\vop\cup\api\oto\OtoProductService_getSpuDetail_args();
+		$args = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_getSpuDetail_args();
 		
 		$args->v_spu_id = $v_spu_id;
 		
@@ -140,7 +140,7 @@ class _OtoProductServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	
 	public function recv_getSpuDetail(){
 		
-		$result = new \com\vip\vop\cup\api\oto\OtoProductService_getSpuDetail_result();
+		$result = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_getSpuDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -159,7 +159,7 @@ class _OtoProductServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	public function send_getSpuIdAndSkuId( $list){
 		
 		$this->initInvocation("getSpuIdAndSkuId");
-		$args = new \com\vip\vop\cup\api\oto\OtoProductService_getSpuIdAndSkuId_args();
+		$args = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_getSpuIdAndSkuId_args();
 		
 		$args->list = $list;
 		
@@ -168,7 +168,7 @@ class _OtoProductServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	
 	public function recv_getSpuIdAndSkuId(){
 		
-		$result = new \com\vip\vop\cup\api\oto\OtoProductService_getSpuIdAndSkuId_result();
+		$result = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_getSpuIdAndSkuId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -187,14 +187,14 @@ class _OtoProductServiceClient extends \Osp\Base\OspStub implements \com\vip\vop
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\cup\api\oto\OtoProductService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\cup\api\oto\OtoProductService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\cup\api\oto\OtoProductService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -287,7 +287,7 @@ class OtoProductService_batchGetSkuHealthCheck_args {
 		
 		if (!is_array($this->v_sku_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -389,7 +389,7 @@ class OtoProductService_batchGetSpuHealthCheck_args {
 		
 		if (!is_array($this->v_spu_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -658,7 +658,7 @@ class OtoProductService_getSpuIdAndSkuId_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\cup\api\oto\VendorIdAndBarcode();
+					$elem0 = new \Voop\com\vip\vop\cup\api\oto\VendorIdAndBarcode();
 					$elem0->read($input);
 					
 					$this->list[$_size0++] = $elem0;
@@ -689,7 +689,7 @@ class OtoProductService_getSpuIdAndSkuId_args {
 		
 		if (!is_array($this->list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -698,7 +698,7 @@ class OtoProductService_getSpuIdAndSkuId_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -814,7 +814,7 @@ class OtoProductService_batchGetSkuHealthCheck_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\cup\api\oto\SkuHealthCheck();
+					$elem1 = new \Voop\com\vip\vop\cup\api\oto\SkuHealthCheck();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -847,7 +847,7 @@ class OtoProductService_batchGetSkuHealthCheck_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -856,7 +856,7 @@ class OtoProductService_batchGetSkuHealthCheck_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -928,7 +928,7 @@ class OtoProductService_batchGetSpuHealthCheck_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\cup\api\oto\SpuHealthCheck();
+					$elem1 = new \Voop\com\vip\vop\cup\api\oto\SpuHealthCheck();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -961,7 +961,7 @@ class OtoProductService_batchGetSpuHealthCheck_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -970,7 +970,7 @@ class OtoProductService_batchGetSpuHealthCheck_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1033,7 +1033,7 @@ class OtoProductService_getSkuDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\product\SkuDetail();
+			$this->success = new \Voop\com\vip\vop\cup\api\product\SkuDetail();
 			$this->success->read($input);
 			
 		}
@@ -1056,7 +1056,7 @@ class OtoProductService_getSkuDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1115,7 +1115,7 @@ class OtoProductService_getSpuDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\product\SpuDetail();
+			$this->success = new \Voop\com\vip\vop\cup\api\product\SpuDetail();
 			$this->success->read($input);
 			
 		}
@@ -1138,7 +1138,7 @@ class OtoProductService_getSpuDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1206,7 +1206,7 @@ class OtoProductService_getSpuIdAndSkuId_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\cup\api\oto\SpuIdAndSkuId();
+					$elem0 = new \Voop\com\vip\vop\cup\api\oto\SpuIdAndSkuId();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1239,7 +1239,7 @@ class OtoProductService_getSpuIdAndSkuId_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1248,7 +1248,7 @@ class OtoProductService_getSpuIdAndSkuId_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1311,7 +1311,7 @@ class OtoProductService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1334,7 +1334,7 @@ class OtoProductService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

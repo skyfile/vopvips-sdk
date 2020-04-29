@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\bill;
+namespace Voop\com\vip\vop\cup\api\bill;
 
 class BillDetailInfo {
 	

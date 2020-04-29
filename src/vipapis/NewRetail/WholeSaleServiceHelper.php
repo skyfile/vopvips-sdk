@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\NewRetail;
+namespace Voop\vipapis\NewRetail;
 require_once dirname(__FILE__).'/WholeSaleService.php';
 class WholeSaleServiceHelper extends _WholeSaleServiceClient{
 	

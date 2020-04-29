@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\puma;
+namespace Voop\vipapis\puma;
 interface ChannelProductSelectionServiceIf{
 	
 	
@@ -35,7 +35,7 @@ class _ChannelProductSelectionServiceClient extends \Osp\Base\OspStub implements
 	public function send_getProductSelection( $product_url){
 		
 		$this->initInvocation("getProductSelection");
-		$args = new \vipapis\puma\ChannelProductSelectionService_getProductSelection_args();
+		$args = new \Voop\vipapis\puma\ChannelProductSelectionService_getProductSelection_args();
 		
 		$args->product_url = $product_url;
 		
@@ -44,7 +44,7 @@ class _ChannelProductSelectionServiceClient extends \Osp\Base\OspStub implements
 	
 	public function recv_getProductSelection(){
 		
-		$result = new \vipapis\puma\ChannelProductSelectionService_getProductSelection_result();
+		$result = new \Voop\vipapis\puma\ChannelProductSelectionService_getProductSelection_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,14 +63,14 @@ class _ChannelProductSelectionServiceClient extends \Osp\Base\OspStub implements
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\puma\ChannelProductSelectionService_healthCheck_args();
+		$args = new \Voop\vipapis\puma\ChannelProductSelectionService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\puma\ChannelProductSelectionService_healthCheck_result();
+		$result = new \Voop\vipapis\puma\ChannelProductSelectionService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -241,7 +241,7 @@ class ChannelProductSelectionService_getProductSelection_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\puma\ChannelProductSelection();
+			$this->success = new \Voop\vipapis\puma\ChannelProductSelection();
 			$this->success->read($input);
 			
 		}
@@ -264,7 +264,7 @@ class ChannelProductSelectionService_getProductSelection_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -323,7 +323,7 @@ class ChannelProductSelectionService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -346,7 +346,7 @@ class ChannelProductSelectionService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

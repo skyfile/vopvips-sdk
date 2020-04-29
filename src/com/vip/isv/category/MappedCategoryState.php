@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\category;
+namespace Voop\com\vip\isv\category;
 final class MappedCategoryState{
 	
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\account;
+namespace Voop\vipapis\account;
 
 class EnterpriseEmployeeApplyFail {
 	
@@ -71,7 +71,7 @@ class EnterpriseEmployeeApplyFail {
 				
 				$needSkip = false;
 				
-				$this->apply_info = new \vipapis\account\EnterpriseEmployeeApplyInfo();
+				$this->apply_info = new \Voop\vipapis\account\EnterpriseEmployeeApplyInfo();
 				$this->apply_info->read($input);
 				
 			}
@@ -90,7 +90,7 @@ class EnterpriseEmployeeApplyFail {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -111,7 +111,7 @@ class EnterpriseEmployeeApplyFail {
 		
 		if (!is_object($this->apply_info)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->apply_info->write($output);

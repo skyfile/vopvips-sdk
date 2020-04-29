@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\tpc\service;
+namespace Voop\vipapis\tpc\service;
 
 class GoodsPack {
 	
@@ -148,7 +148,7 @@ class GoodsPack {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

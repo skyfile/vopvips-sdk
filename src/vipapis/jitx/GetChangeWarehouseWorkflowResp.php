@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\jitx;
+namespace Voop\vipapis\jitx;
 
 class GetChangeWarehouseWorkflowResp {
 	
@@ -90,7 +90,7 @@ class GetChangeWarehouseWorkflowResp {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\jitx\GetChangeWarehouseWorkflowResult();
+						$elem0 = new \Voop\vipapis\jitx\GetChangeWarehouseWorkflowResult();
 						$elem0->read($input);
 						
 						$this->results[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class GetChangeWarehouseWorkflowResp {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -137,7 +137,7 @@ class GetChangeWarehouseWorkflowResp {
 			
 			if (!is_array($this->results)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -146,7 +146,7 @@ class GetChangeWarehouseWorkflowResp {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

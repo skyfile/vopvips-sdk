@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\account;
+namespace Voop\vipapis\account;
 
 class EnterpriseOrderResponse {
 	
@@ -90,7 +90,7 @@ class EnterpriseOrderResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\account\EnterpriseOrderInfo();
+						$elem1 = new \Voop\vipapis\account\EnterpriseOrderInfo();
 						$elem1->read($input);
 						
 						$this->enterpriseOrders[$_size1++] = $elem1;
@@ -109,7 +109,7 @@ class EnterpriseOrderResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -135,7 +135,7 @@ class EnterpriseOrderResponse {
 		
 		if (!is_array($this->enterpriseOrders)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -144,7 +144,7 @@ class EnterpriseOrderResponse {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

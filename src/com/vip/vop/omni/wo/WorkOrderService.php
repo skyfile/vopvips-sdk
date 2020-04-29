@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\omni\wo;
+namespace Voop\com\vip\vop\omni\wo;
 interface WorkOrderServiceIf{
 	
 	
@@ -16,15 +16,15 @@ interface WorkOrderServiceIf{
 	
 	public function getOxoOrderCarrier( $orderSn);
 	
-	public function handleWorkOrder(\com\vip\vop\omni\wo\WorkOrder $workOrder);
+	public function handleWorkOrder(\Voop\com\vip\vop\omni\wo\WorkOrder $workOrder);
 	
-	public function handleWorkOrderAttachment(\com\vip\vop\omni\wo\WorkOrderAttach $workOrderAttach);
+	public function handleWorkOrderAttachment(\Voop\com\vip\vop\omni\wo\WorkOrderAttach $workOrderAttach);
 	
 	public function healthCheck();
 	
-	public function pushWorkOrder(\com\vip\vop\omni\wo\WorkOrder $workOrder);
+	public function pushWorkOrder(\Voop\com\vip\vop\omni\wo\WorkOrder $workOrder);
 	
-	public function workOrderReply(\com\vip\vop\omni\wo\WorkOrderReply $reply);
+	public function workOrderReply(\Voop\com\vip\vop\omni\wo\WorkOrderReply $reply);
 	
 }
 
@@ -45,7 +45,7 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_getNeedPushWorkOrders( $vendorId, $startTime, $lastId, $size){
 		
 		$this->initInvocation("getNeedPushWorkOrders");
-		$args = new \com\vip\vop\omni\wo\WorkOrderService_getNeedPushWorkOrders_args();
+		$args = new \Voop\com\vip\vop\omni\wo\WorkOrderService_getNeedPushWorkOrders_args();
 		
 		$args->vendorId = $vendorId;
 		
@@ -60,7 +60,7 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_getNeedPushWorkOrders(){
 		
-		$result = new \com\vip\vop\omni\wo\WorkOrderService_getNeedPushWorkOrders_result();
+		$result = new \Voop\com\vip\vop\omni\wo\WorkOrderService_getNeedPushWorkOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -79,7 +79,7 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_getOxoOrderCarrier( $orderSn){
 		
 		$this->initInvocation("getOxoOrderCarrier");
-		$args = new \com\vip\vop\omni\wo\WorkOrderService_getOxoOrderCarrier_args();
+		$args = new \Voop\com\vip\vop\omni\wo\WorkOrderService_getOxoOrderCarrier_args();
 		
 		$args->orderSn = $orderSn;
 		
@@ -88,7 +88,7 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_getOxoOrderCarrier(){
 		
-		$result = new \com\vip\vop\omni\wo\WorkOrderService_getOxoOrderCarrier_result();
+		$result = new \Voop\com\vip\vop\omni\wo\WorkOrderService_getOxoOrderCarrier_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -98,16 +98,16 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function handleWorkOrder(\com\vip\vop\omni\wo\WorkOrder $workOrder){
+	public function handleWorkOrder(\Voop\com\vip\vop\omni\wo\WorkOrder $workOrder){
 		
 		$this->send_handleWorkOrder( $workOrder);
 		return $this->recv_handleWorkOrder();
 	}
 	
-	public function send_handleWorkOrder(\com\vip\vop\omni\wo\WorkOrder $workOrder){
+	public function send_handleWorkOrder(\Voop\com\vip\vop\omni\wo\WorkOrder $workOrder){
 		
 		$this->initInvocation("handleWorkOrder");
-		$args = new \com\vip\vop\omni\wo\WorkOrderService_handleWorkOrder_args();
+		$args = new \Voop\com\vip\vop\omni\wo\WorkOrderService_handleWorkOrder_args();
 		
 		$args->workOrder = $workOrder;
 		
@@ -116,7 +116,7 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_handleWorkOrder(){
 		
-		$result = new \com\vip\vop\omni\wo\WorkOrderService_handleWorkOrder_result();
+		$result = new \Voop\com\vip\vop\omni\wo\WorkOrderService_handleWorkOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -126,16 +126,16 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function handleWorkOrderAttachment(\com\vip\vop\omni\wo\WorkOrderAttach $workOrderAttach){
+	public function handleWorkOrderAttachment(\Voop\com\vip\vop\omni\wo\WorkOrderAttach $workOrderAttach){
 		
 		$this->send_handleWorkOrderAttachment( $workOrderAttach);
 		return $this->recv_handleWorkOrderAttachment();
 	}
 	
-	public function send_handleWorkOrderAttachment(\com\vip\vop\omni\wo\WorkOrderAttach $workOrderAttach){
+	public function send_handleWorkOrderAttachment(\Voop\com\vip\vop\omni\wo\WorkOrderAttach $workOrderAttach){
 		
 		$this->initInvocation("handleWorkOrderAttachment");
-		$args = new \com\vip\vop\omni\wo\WorkOrderService_handleWorkOrderAttachment_args();
+		$args = new \Voop\com\vip\vop\omni\wo\WorkOrderService_handleWorkOrderAttachment_args();
 		
 		$args->workOrderAttach = $workOrderAttach;
 		
@@ -144,7 +144,7 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_handleWorkOrderAttachment(){
 		
-		$result = new \com\vip\vop\omni\wo\WorkOrderService_handleWorkOrderAttachment_result();
+		$result = new \Voop\com\vip\vop\omni\wo\WorkOrderService_handleWorkOrderAttachment_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -163,14 +163,14 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\omni\wo\WorkOrderService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\omni\wo\WorkOrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\omni\wo\WorkOrderService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\omni\wo\WorkOrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -180,16 +180,16 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function pushWorkOrder(\com\vip\vop\omni\wo\WorkOrder $workOrder){
+	public function pushWorkOrder(\Voop\com\vip\vop\omni\wo\WorkOrder $workOrder){
 		
 		$this->send_pushWorkOrder( $workOrder);
 		return $this->recv_pushWorkOrder();
 	}
 	
-	public function send_pushWorkOrder(\com\vip\vop\omni\wo\WorkOrder $workOrder){
+	public function send_pushWorkOrder(\Voop\com\vip\vop\omni\wo\WorkOrder $workOrder){
 		
 		$this->initInvocation("pushWorkOrder");
-		$args = new \com\vip\vop\omni\wo\WorkOrderService_pushWorkOrder_args();
+		$args = new \Voop\com\vip\vop\omni\wo\WorkOrderService_pushWorkOrder_args();
 		
 		$args->workOrder = $workOrder;
 		
@@ -198,7 +198,7 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_pushWorkOrder(){
 		
-		$result = new \com\vip\vop\omni\wo\WorkOrderService_pushWorkOrder_result();
+		$result = new \Voop\com\vip\vop\omni\wo\WorkOrderService_pushWorkOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -208,16 +208,16 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function workOrderReply(\com\vip\vop\omni\wo\WorkOrderReply $reply){
+	public function workOrderReply(\Voop\com\vip\vop\omni\wo\WorkOrderReply $reply){
 		
 		$this->send_workOrderReply( $reply);
 		return $this->recv_workOrderReply();
 	}
 	
-	public function send_workOrderReply(\com\vip\vop\omni\wo\WorkOrderReply $reply){
+	public function send_workOrderReply(\Voop\com\vip\vop\omni\wo\WorkOrderReply $reply){
 		
 		$this->initInvocation("workOrderReply");
-		$args = new \com\vip\vop\omni\wo\WorkOrderService_workOrderReply_args();
+		$args = new \Voop\com\vip\vop\omni\wo\WorkOrderService_workOrderReply_args();
 		
 		$args->reply = $reply;
 		
@@ -226,7 +226,7 @@ class _WorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	
 	public function recv_workOrderReply(){
 		
-		$result = new \com\vip\vop\omni\wo\WorkOrderService_workOrderReply_result();
+		$result = new \Voop\com\vip\vop\omni\wo\WorkOrderService_workOrderReply_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -509,7 +509,7 @@ class WorkOrderService_handleWorkOrder_args {
 		if(true) {
 			
 			
-			$this->workOrder = new \com\vip\vop\omni\wo\WorkOrder();
+			$this->workOrder = new \Voop\com\vip\vop\omni\wo\WorkOrder();
 			$this->workOrder->read($input);
 			
 		}
@@ -530,7 +530,7 @@ class WorkOrderService_handleWorkOrder_args {
 		
 		if (!is_object($this->workOrder)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->workOrder->write($output);
@@ -587,7 +587,7 @@ class WorkOrderService_handleWorkOrderAttachment_args {
 		if(true) {
 			
 			
-			$this->workOrderAttach = new \com\vip\vop\omni\wo\WorkOrderAttach();
+			$this->workOrderAttach = new \Voop\com\vip\vop\omni\wo\WorkOrderAttach();
 			$this->workOrderAttach->read($input);
 			
 		}
@@ -608,7 +608,7 @@ class WorkOrderService_handleWorkOrderAttachment_args {
 		
 		if (!is_object($this->workOrderAttach)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->workOrderAttach->write($output);
@@ -711,7 +711,7 @@ class WorkOrderService_pushWorkOrder_args {
 		if(true) {
 			
 			
-			$this->workOrder = new \com\vip\vop\omni\wo\WorkOrder();
+			$this->workOrder = new \Voop\com\vip\vop\omni\wo\WorkOrder();
 			$this->workOrder->read($input);
 			
 		}
@@ -732,7 +732,7 @@ class WorkOrderService_pushWorkOrder_args {
 		
 		if (!is_object($this->workOrder)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->workOrder->write($output);
@@ -789,7 +789,7 @@ class WorkOrderService_workOrderReply_args {
 		if(true) {
 			
 			
-			$this->reply = new \com\vip\vop\omni\wo\WorkOrderReply();
+			$this->reply = new \Voop\com\vip\vop\omni\wo\WorkOrderReply();
 			$this->reply->read($input);
 			
 		}
@@ -810,7 +810,7 @@ class WorkOrderService_workOrderReply_args {
 		
 		if (!is_object($this->reply)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reply->write($output);
@@ -876,7 +876,7 @@ class WorkOrderService_getNeedPushWorkOrders_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\omni\wo\WorkOrder();
+					$elem0 = new \Voop\com\vip\vop\omni\wo\WorkOrder();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -909,7 +909,7 @@ class WorkOrderService_getNeedPushWorkOrders_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -918,7 +918,7 @@ class WorkOrderService_getNeedPushWorkOrders_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -981,7 +981,7 @@ class WorkOrderService_getOxoOrderCarrier_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\omni\wo\OxoOrderCarrierInfo();
+			$this->success = new \Voop\com\vip\vop\omni\wo\OxoOrderCarrierInfo();
 			$this->success->read($input);
 			
 		}
@@ -1004,7 +1004,7 @@ class WorkOrderService_getOxoOrderCarrier_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1203,7 +1203,7 @@ class WorkOrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1226,7 +1226,7 @@ class WorkOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

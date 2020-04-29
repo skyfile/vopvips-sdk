@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\imp\otd\otdapi\service;
+namespace Voop\com\vip\imp\otd\otdapi\service;
 
 class VopPageModel {
 	

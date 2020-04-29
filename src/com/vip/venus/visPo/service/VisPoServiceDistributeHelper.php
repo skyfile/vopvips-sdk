@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\venus\visPo\service;
+namespace Voop\com\vip\venus\visPo\service;
 require_once dirname(__FILE__).'/VisPoServiceDistribute.php';
 class VisPoServiceDistributeHelper extends _VisPoServiceDistributeClient{
 	

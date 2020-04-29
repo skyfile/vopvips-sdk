@@ -8,35 +8,35 @@
 *
 */
 
-namespace vipapis\inventory;
+namespace Voop\vipapis\inventory;
 interface InventoryServiceIf{
 	
 	
 	public function getAdvisedSkuList( $vendor_id, $cooperation_no, $warehouse);
 	
-	public function getCooperationNoList(\vipapis\inventory\GetCooperationNoListRequest $getCooperationNoListRequest);
+	public function getCooperationNoList(\Voop\vipapis\inventory\GetCooperationNoListRequest $getCooperationNoListRequest);
 	
-	public function getDeductOrderDetail(\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest);
+	public function getDeductOrderDetail(\Voop\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest);
 	
-	public function getInventoryCancelledOrders(\vipapis\inventory\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest);
+	public function getInventoryCancelledOrders(\Voop\vipapis\inventory\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest);
 	
-	public function getInventoryDeductOrders(\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest);
+	public function getInventoryDeductOrders(\Voop\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest);
 	
-	public function getInventoryOccupiedOrders(\vipapis\inventory\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest);
+	public function getInventoryOccupiedOrders(\Voop\vipapis\inventory\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest);
 	
-	public function getMpSkuStock(\vipapis\inventory\GetMpSkuStockRequest $getSkuStockRequest);
+	public function getMpSkuStock(\Voop\vipapis\inventory\GetMpSkuStockRequest $getSkuStockRequest);
 	
-	public function getSkuInfo(\vipapis\inventory\GetSkuInfoRequest $request);
+	public function getSkuInfo(\Voop\vipapis\inventory\GetSkuInfoRequest $request);
 	
-	public function getSkuList(\vipapis\inventory\GetScheduleSkuListCriteria $criteria, $page, $limit);
+	public function getSkuList(\Voop\vipapis\inventory\GetScheduleSkuListCriteria $criteria, $page, $limit);
 	
 	public function getSkuStock( $vendor_id, $cooperation_no, $warehouse, $barcode, $area_warehouse_id);
 	
 	public function healthCheck();
 	
-	public function updateInventory(\vipapis\inventory\UpdateSkuInventoryRequest $request);
+	public function updateInventory(\Voop\vipapis\inventory\UpdateSkuInventoryRequest $request);
 	
-	public function updateMpSkuStock(\vipapis\inventory\UpdateMpSkuStockRequest $updateSkuStockRequest);
+	public function updateMpSkuStock(\Voop\vipapis\inventory\UpdateMpSkuStockRequest $updateSkuStockRequest);
 	
 }
 
@@ -57,7 +57,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	public function send_getAdvisedSkuList( $vendor_id, $cooperation_no, $warehouse){
 		
 		$this->initInvocation("getAdvisedSkuList");
-		$args = new \vipapis\inventory\InventoryService_getAdvisedSkuList_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_getAdvisedSkuList_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -70,7 +70,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_getAdvisedSkuList(){
 		
-		$result = new \vipapis\inventory\InventoryService_getAdvisedSkuList_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_getAdvisedSkuList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -80,16 +80,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	}
 	
 	
-	public function getCooperationNoList(\vipapis\inventory\GetCooperationNoListRequest $getCooperationNoListRequest){
+	public function getCooperationNoList(\Voop\vipapis\inventory\GetCooperationNoListRequest $getCooperationNoListRequest){
 		
 		$this->send_getCooperationNoList( $getCooperationNoListRequest);
 		return $this->recv_getCooperationNoList();
 	}
 	
-	public function send_getCooperationNoList(\vipapis\inventory\GetCooperationNoListRequest $getCooperationNoListRequest){
+	public function send_getCooperationNoList(\Voop\vipapis\inventory\GetCooperationNoListRequest $getCooperationNoListRequest){
 		
 		$this->initInvocation("getCooperationNoList");
-		$args = new \vipapis\inventory\InventoryService_getCooperationNoList_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_getCooperationNoList_args();
 		
 		$args->getCooperationNoListRequest = $getCooperationNoListRequest;
 		
@@ -98,7 +98,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_getCooperationNoList(){
 		
-		$result = new \vipapis\inventory\InventoryService_getCooperationNoList_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_getCooperationNoList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -108,16 +108,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	}
 	
 	
-	public function getDeductOrderDetail(\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
+	public function getDeductOrderDetail(\Voop\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
 		
 		$this->send_getDeductOrderDetail( $inventoryDeductOrdersRequest);
 		return $this->recv_getDeductOrderDetail();
 	}
 	
-	public function send_getDeductOrderDetail(\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
+	public function send_getDeductOrderDetail(\Voop\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
 		
 		$this->initInvocation("getDeductOrderDetail");
-		$args = new \vipapis\inventory\InventoryService_getDeductOrderDetail_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_getDeductOrderDetail_args();
 		
 		$args->inventoryDeductOrdersRequest = $inventoryDeductOrdersRequest;
 		
@@ -126,7 +126,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_getDeductOrderDetail(){
 		
-		$result = new \vipapis\inventory\InventoryService_getDeductOrderDetail_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_getDeductOrderDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -136,16 +136,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	}
 	
 	
-	public function getInventoryCancelledOrders(\vipapis\inventory\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest){
+	public function getInventoryCancelledOrders(\Voop\vipapis\inventory\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest){
 		
 		$this->send_getInventoryCancelledOrders( $inventoryCancelledOrdersRequest);
 		return $this->recv_getInventoryCancelledOrders();
 	}
 	
-	public function send_getInventoryCancelledOrders(\vipapis\inventory\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest){
+	public function send_getInventoryCancelledOrders(\Voop\vipapis\inventory\InventoryCancelledOrdersRequest $inventoryCancelledOrdersRequest){
 		
 		$this->initInvocation("getInventoryCancelledOrders");
-		$args = new \vipapis\inventory\InventoryService_getInventoryCancelledOrders_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_getInventoryCancelledOrders_args();
 		
 		$args->inventoryCancelledOrdersRequest = $inventoryCancelledOrdersRequest;
 		
@@ -154,7 +154,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_getInventoryCancelledOrders(){
 		
-		$result = new \vipapis\inventory\InventoryService_getInventoryCancelledOrders_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_getInventoryCancelledOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -164,16 +164,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	}
 	
 	
-	public function getInventoryDeductOrders(\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
+	public function getInventoryDeductOrders(\Voop\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
 		
 		$this->send_getInventoryDeductOrders( $inventoryDeductOrdersRequest);
 		return $this->recv_getInventoryDeductOrders();
 	}
 	
-	public function send_getInventoryDeductOrders(\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
+	public function send_getInventoryDeductOrders(\Voop\vipapis\inventory\InventoryDeductOrdersRequest $inventoryDeductOrdersRequest){
 		
 		$this->initInvocation("getInventoryDeductOrders");
-		$args = new \vipapis\inventory\InventoryService_getInventoryDeductOrders_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_getInventoryDeductOrders_args();
 		
 		$args->inventoryDeductOrdersRequest = $inventoryDeductOrdersRequest;
 		
@@ -182,7 +182,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_getInventoryDeductOrders(){
 		
-		$result = new \vipapis\inventory\InventoryService_getInventoryDeductOrders_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_getInventoryDeductOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -192,16 +192,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	}
 	
 	
-	public function getInventoryOccupiedOrders(\vipapis\inventory\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest){
+	public function getInventoryOccupiedOrders(\Voop\vipapis\inventory\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest){
 		
 		$this->send_getInventoryOccupiedOrders( $inventoryOccupiedOrdersRequest);
 		return $this->recv_getInventoryOccupiedOrders();
 	}
 	
-	public function send_getInventoryOccupiedOrders(\vipapis\inventory\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest){
+	public function send_getInventoryOccupiedOrders(\Voop\vipapis\inventory\InventoryOccupiedOrdersRequest $inventoryOccupiedOrdersRequest){
 		
 		$this->initInvocation("getInventoryOccupiedOrders");
-		$args = new \vipapis\inventory\InventoryService_getInventoryOccupiedOrders_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_getInventoryOccupiedOrders_args();
 		
 		$args->inventoryOccupiedOrdersRequest = $inventoryOccupiedOrdersRequest;
 		
@@ -210,7 +210,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_getInventoryOccupiedOrders(){
 		
-		$result = new \vipapis\inventory\InventoryService_getInventoryOccupiedOrders_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_getInventoryOccupiedOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -220,16 +220,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	}
 	
 	
-	public function getMpSkuStock(\vipapis\inventory\GetMpSkuStockRequest $getSkuStockRequest){
+	public function getMpSkuStock(\Voop\vipapis\inventory\GetMpSkuStockRequest $getSkuStockRequest){
 		
 		$this->send_getMpSkuStock( $getSkuStockRequest);
 		return $this->recv_getMpSkuStock();
 	}
 	
-	public function send_getMpSkuStock(\vipapis\inventory\GetMpSkuStockRequest $getSkuStockRequest){
+	public function send_getMpSkuStock(\Voop\vipapis\inventory\GetMpSkuStockRequest $getSkuStockRequest){
 		
 		$this->initInvocation("getMpSkuStock");
-		$args = new \vipapis\inventory\InventoryService_getMpSkuStock_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_getMpSkuStock_args();
 		
 		$args->getSkuStockRequest = $getSkuStockRequest;
 		
@@ -238,7 +238,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_getMpSkuStock(){
 		
-		$result = new \vipapis\inventory\InventoryService_getMpSkuStock_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_getMpSkuStock_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -248,16 +248,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	}
 	
 	
-	public function getSkuInfo(\vipapis\inventory\GetSkuInfoRequest $request){
+	public function getSkuInfo(\Voop\vipapis\inventory\GetSkuInfoRequest $request){
 		
 		$this->send_getSkuInfo( $request);
 		return $this->recv_getSkuInfo();
 	}
 	
-	public function send_getSkuInfo(\vipapis\inventory\GetSkuInfoRequest $request){
+	public function send_getSkuInfo(\Voop\vipapis\inventory\GetSkuInfoRequest $request){
 		
 		$this->initInvocation("getSkuInfo");
-		$args = new \vipapis\inventory\InventoryService_getSkuInfo_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_getSkuInfo_args();
 		
 		$args->request = $request;
 		
@@ -266,7 +266,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_getSkuInfo(){
 		
-		$result = new \vipapis\inventory\InventoryService_getSkuInfo_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_getSkuInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -276,16 +276,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	}
 	
 	
-	public function getSkuList(\vipapis\inventory\GetScheduleSkuListCriteria $criteria, $page, $limit){
+	public function getSkuList(\Voop\vipapis\inventory\GetScheduleSkuListCriteria $criteria, $page, $limit){
 		
 		$this->send_getSkuList( $criteria, $page, $limit);
 		return $this->recv_getSkuList();
 	}
 	
-	public function send_getSkuList(\vipapis\inventory\GetScheduleSkuListCriteria $criteria, $page, $limit){
+	public function send_getSkuList(\Voop\vipapis\inventory\GetScheduleSkuListCriteria $criteria, $page, $limit){
 		
 		$this->initInvocation("getSkuList");
-		$args = new \vipapis\inventory\InventoryService_getSkuList_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_getSkuList_args();
 		
 		$args->criteria = $criteria;
 		
@@ -298,7 +298,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_getSkuList(){
 		
-		$result = new \vipapis\inventory\InventoryService_getSkuList_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_getSkuList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -317,7 +317,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	public function send_getSkuStock( $vendor_id, $cooperation_no, $warehouse, $barcode, $area_warehouse_id){
 		
 		$this->initInvocation("getSkuStock");
-		$args = new \vipapis\inventory\InventoryService_getSkuStock_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_getSkuStock_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -334,7 +334,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_getSkuStock(){
 		
-		$result = new \vipapis\inventory\InventoryService_getSkuStock_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_getSkuStock_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -353,14 +353,14 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\inventory\InventoryService_healthCheck_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\inventory\InventoryService_healthCheck_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -370,16 +370,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	}
 	
 	
-	public function updateInventory(\vipapis\inventory\UpdateSkuInventoryRequest $request){
+	public function updateInventory(\Voop\vipapis\inventory\UpdateSkuInventoryRequest $request){
 		
 		$this->send_updateInventory( $request);
 		return $this->recv_updateInventory();
 	}
 	
-	public function send_updateInventory(\vipapis\inventory\UpdateSkuInventoryRequest $request){
+	public function send_updateInventory(\Voop\vipapis\inventory\UpdateSkuInventoryRequest $request){
 		
 		$this->initInvocation("updateInventory");
-		$args = new \vipapis\inventory\InventoryService_updateInventory_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_updateInventory_args();
 		
 		$args->request = $request;
 		
@@ -388,22 +388,22 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_updateInventory(){
 		
-		$result = new \vipapis\inventory\InventoryService_updateInventory_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_updateInventory_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function updateMpSkuStock(\vipapis\inventory\UpdateMpSkuStockRequest $updateSkuStockRequest){
+	public function updateMpSkuStock(\Voop\vipapis\inventory\UpdateMpSkuStockRequest $updateSkuStockRequest){
 		
 		$this->send_updateMpSkuStock( $updateSkuStockRequest);
 		return $this->recv_updateMpSkuStock();
 	}
 	
-	public function send_updateMpSkuStock(\vipapis\inventory\UpdateMpSkuStockRequest $updateSkuStockRequest){
+	public function send_updateMpSkuStock(\Voop\vipapis\inventory\UpdateMpSkuStockRequest $updateSkuStockRequest){
 		
 		$this->initInvocation("updateMpSkuStock");
-		$args = new \vipapis\inventory\InventoryService_updateMpSkuStock_args();
+		$args = new \Voop\vipapis\inventory\InventoryService_updateMpSkuStock_args();
 		
 		$args->updateSkuStockRequest = $updateSkuStockRequest;
 		
@@ -412,7 +412,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\inve
 	
 	public function recv_updateMpSkuStock(){
 		
-		$result = new \vipapis\inventory\InventoryService_updateMpSkuStock_result();
+		$result = new \Voop\vipapis\inventory\InventoryService_updateMpSkuStock_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -585,7 +585,7 @@ class InventoryService_getCooperationNoList_args {
 		if(true) {
 			
 			
-			$this->getCooperationNoListRequest = new \vipapis\inventory\GetCooperationNoListRequest();
+			$this->getCooperationNoListRequest = new \Voop\vipapis\inventory\GetCooperationNoListRequest();
 			$this->getCooperationNoListRequest->read($input);
 			
 		}
@@ -608,7 +608,7 @@ class InventoryService_getCooperationNoList_args {
 			
 			if (!is_object($this->getCooperationNoListRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->getCooperationNoListRequest->write($output);
@@ -667,7 +667,7 @@ class InventoryService_getDeductOrderDetail_args {
 		if(true) {
 			
 			
-			$this->inventoryDeductOrdersRequest = new \vipapis\inventory\InventoryDeductOrdersRequest();
+			$this->inventoryDeductOrdersRequest = new \Voop\vipapis\inventory\InventoryDeductOrdersRequest();
 			$this->inventoryDeductOrdersRequest->read($input);
 			
 		}
@@ -690,7 +690,7 @@ class InventoryService_getDeductOrderDetail_args {
 			
 			if (!is_object($this->inventoryDeductOrdersRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->inventoryDeductOrdersRequest->write($output);
@@ -749,7 +749,7 @@ class InventoryService_getInventoryCancelledOrders_args {
 		if(true) {
 			
 			
-			$this->inventoryCancelledOrdersRequest = new \vipapis\inventory\InventoryCancelledOrdersRequest();
+			$this->inventoryCancelledOrdersRequest = new \Voop\vipapis\inventory\InventoryCancelledOrdersRequest();
 			$this->inventoryCancelledOrdersRequest->read($input);
 			
 		}
@@ -772,7 +772,7 @@ class InventoryService_getInventoryCancelledOrders_args {
 			
 			if (!is_object($this->inventoryCancelledOrdersRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->inventoryCancelledOrdersRequest->write($output);
@@ -831,7 +831,7 @@ class InventoryService_getInventoryDeductOrders_args {
 		if(true) {
 			
 			
-			$this->inventoryDeductOrdersRequest = new \vipapis\inventory\InventoryDeductOrdersRequest();
+			$this->inventoryDeductOrdersRequest = new \Voop\vipapis\inventory\InventoryDeductOrdersRequest();
 			$this->inventoryDeductOrdersRequest->read($input);
 			
 		}
@@ -854,7 +854,7 @@ class InventoryService_getInventoryDeductOrders_args {
 			
 			if (!is_object($this->inventoryDeductOrdersRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->inventoryDeductOrdersRequest->write($output);
@@ -913,7 +913,7 @@ class InventoryService_getInventoryOccupiedOrders_args {
 		if(true) {
 			
 			
-			$this->inventoryOccupiedOrdersRequest = new \vipapis\inventory\InventoryOccupiedOrdersRequest();
+			$this->inventoryOccupiedOrdersRequest = new \Voop\vipapis\inventory\InventoryOccupiedOrdersRequest();
 			$this->inventoryOccupiedOrdersRequest->read($input);
 			
 		}
@@ -936,7 +936,7 @@ class InventoryService_getInventoryOccupiedOrders_args {
 			
 			if (!is_object($this->inventoryOccupiedOrdersRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->inventoryOccupiedOrdersRequest->write($output);
@@ -995,7 +995,7 @@ class InventoryService_getMpSkuStock_args {
 		if(true) {
 			
 			
-			$this->getSkuStockRequest = new \vipapis\inventory\GetMpSkuStockRequest();
+			$this->getSkuStockRequest = new \Voop\vipapis\inventory\GetMpSkuStockRequest();
 			$this->getSkuStockRequest->read($input);
 			
 		}
@@ -1018,7 +1018,7 @@ class InventoryService_getMpSkuStock_args {
 			
 			if (!is_object($this->getSkuStockRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->getSkuStockRequest->write($output);
@@ -1077,7 +1077,7 @@ class InventoryService_getSkuInfo_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\inventory\GetSkuInfoRequest();
+			$this->request = new \Voop\vipapis\inventory\GetSkuInfoRequest();
 			$this->request->read($input);
 			
 		}
@@ -1098,7 +1098,7 @@ class InventoryService_getSkuInfo_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1175,7 +1175,7 @@ class InventoryService_getSkuList_args {
 		if(true) {
 			
 			
-			$this->criteria = new \vipapis\inventory\GetScheduleSkuListCriteria();
+			$this->criteria = new \Voop\vipapis\inventory\GetScheduleSkuListCriteria();
 			$this->criteria->read($input);
 			
 		}
@@ -1214,7 +1214,7 @@ class InventoryService_getSkuList_args {
 		
 		if (!is_object($this->criteria)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->criteria->write($output);
@@ -1513,7 +1513,7 @@ class InventoryService_updateInventory_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\inventory\UpdateSkuInventoryRequest();
+			$this->request = new \Voop\vipapis\inventory\UpdateSkuInventoryRequest();
 			$this->request->read($input);
 			
 		}
@@ -1534,7 +1534,7 @@ class InventoryService_updateInventory_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1591,7 +1591,7 @@ class InventoryService_updateMpSkuStock_args {
 		if(true) {
 			
 			
-			$this->updateSkuStockRequest = new \vipapis\inventory\UpdateMpSkuStockRequest();
+			$this->updateSkuStockRequest = new \Voop\vipapis\inventory\UpdateMpSkuStockRequest();
 			$this->updateSkuStockRequest->read($input);
 			
 		}
@@ -1614,7 +1614,7 @@ class InventoryService_updateMpSkuStock_args {
 			
 			if (!is_object($this->updateSkuStockRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->updateSkuStockRequest->write($output);
@@ -1673,7 +1673,7 @@ class InventoryService_getAdvisedSkuList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\inventory\GetAdvisedSkuListResult();
+			$this->success = new \Voop\vipapis\inventory\GetAdvisedSkuListResult();
 			$this->success->read($input);
 			
 		}
@@ -1696,7 +1696,7 @@ class InventoryService_getAdvisedSkuList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1755,7 +1755,7 @@ class InventoryService_getCooperationNoList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\inventory\GetCooperationNoListResponse();
+			$this->success = new \Voop\vipapis\inventory\GetCooperationNoListResponse();
 			$this->success->read($input);
 			
 		}
@@ -1778,7 +1778,7 @@ class InventoryService_getCooperationNoList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1837,7 +1837,7 @@ class InventoryService_getDeductOrderDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\inventory\InventoryDeductOrderDetailResponse();
+			$this->success = new \Voop\vipapis\inventory\InventoryDeductOrderDetailResponse();
 			$this->success->read($input);
 			
 		}
@@ -1860,7 +1860,7 @@ class InventoryService_getDeductOrderDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1919,7 +1919,7 @@ class InventoryService_getInventoryCancelledOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\inventory\CancelledOrdersResponse();
+			$this->success = new \Voop\vipapis\inventory\CancelledOrdersResponse();
 			$this->success->read($input);
 			
 		}
@@ -1942,7 +1942,7 @@ class InventoryService_getInventoryCancelledOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2001,7 +2001,7 @@ class InventoryService_getInventoryDeductOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\inventory\InventoryDeductOrdersResponse();
+			$this->success = new \Voop\vipapis\inventory\InventoryDeductOrdersResponse();
 			$this->success->read($input);
 			
 		}
@@ -2024,7 +2024,7 @@ class InventoryService_getInventoryDeductOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2083,7 +2083,7 @@ class InventoryService_getInventoryOccupiedOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\inventory\OccupiedOrderResponse();
+			$this->success = new \Voop\vipapis\inventory\OccupiedOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -2106,7 +2106,7 @@ class InventoryService_getInventoryOccupiedOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2165,7 +2165,7 @@ class InventoryService_getMpSkuStock_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\inventory\GetMpSkuStockResponse();
+			$this->success = new \Voop\vipapis\inventory\GetMpSkuStockResponse();
 			$this->success->read($input);
 			
 		}
@@ -2188,7 +2188,7 @@ class InventoryService_getMpSkuStock_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2256,7 +2256,7 @@ class InventoryService_getSkuInfo_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\inventory\SkuInfo();
+					$elem0 = new \Voop\vipapis\inventory\SkuInfo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2289,7 +2289,7 @@ class InventoryService_getSkuInfo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2298,7 +2298,7 @@ class InventoryService_getSkuInfo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2361,7 +2361,7 @@ class InventoryService_getSkuList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\inventory\GetScheduleSkuListResult();
+			$this->success = new \Voop\vipapis\inventory\GetScheduleSkuListResult();
 			$this->success->read($input);
 			
 		}
@@ -2384,7 +2384,7 @@ class InventoryService_getSkuList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2452,7 +2452,7 @@ class InventoryService_getSkuStock_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\inventory\GetSkuInventoryResult();
+					$elem0 = new \Voop\vipapis\inventory\GetSkuInventoryResult();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2485,7 +2485,7 @@ class InventoryService_getSkuStock_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2494,7 +2494,7 @@ class InventoryService_getSkuStock_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2557,7 +2557,7 @@ class InventoryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -2580,7 +2580,7 @@ class InventoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2688,7 +2688,7 @@ class InventoryService_updateMpSkuStock_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\inventory\UpdateMpSkuStockResponse();
+			$this->success = new \Voop\vipapis\inventory\UpdateMpSkuStockResponse();
 			$this->success->read($input);
 			
 		}
@@ -2711,7 +2711,7 @@ class InventoryService_updateMpSkuStock_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

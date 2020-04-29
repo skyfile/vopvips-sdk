@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\common\pojo\vo;
+namespace Voop\com\vip\xstore\order\common\pojo\vo;
 
 class Result {
 	

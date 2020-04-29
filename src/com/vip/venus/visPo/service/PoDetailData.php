@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\venus\visPo\service;
+namespace Voop\com\vip\venus\visPo\service;
 
 class PoDetailData {
 	
@@ -71,7 +71,7 @@ class PoDetailData {
 				
 				$needSkip = false;
 				
-				$this->poHeaderInfo = new \com\vip\venus\visPo\service\PoHeaderInfo();
+				$this->poHeaderInfo = new \Voop\com\vip\venus\visPo\service\PoHeaderInfo();
 				$this->poHeaderInfo->read($input);
 				
 			}
@@ -92,7 +92,7 @@ class PoDetailData {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\venus\visPo\service\PoItem();
+						$elem0 = new \Voop\com\vip\venus\visPo\service\PoItem();
 						$elem0->read($input);
 						
 						$this->poItemList[$_size0++] = $elem0;
@@ -134,7 +134,7 @@ class PoDetailData {
 			
 			if (!is_object($this->poHeaderInfo)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->poHeaderInfo->write($output);
@@ -149,7 +149,7 @@ class PoDetailData {
 			
 			if (!is_array($this->poItemList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -158,7 +158,7 @@ class PoDetailData {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

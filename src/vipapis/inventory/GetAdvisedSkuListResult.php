@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\inventory;
+namespace Voop\vipapis\inventory;
 
 class GetAdvisedSkuListResult {
 	
@@ -130,7 +130,7 @@ class GetAdvisedSkuListResult {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\inventory\AdvisedSku();
+						$elem0 = new \Voop\vipapis\inventory\AdvisedSku();
 						$elem0->read($input);
 						
 						$this->list[$_size0++] = $elem0;
@@ -149,7 +149,7 @@ class GetAdvisedSkuListResult {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -199,7 +199,7 @@ class GetAdvisedSkuListResult {
 			
 			if (!is_array($this->list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -208,7 +208,7 @@ class GetAdvisedSkuListResult {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

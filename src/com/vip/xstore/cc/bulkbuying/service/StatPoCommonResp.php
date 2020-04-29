@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying\service;
+namespace Voop\com\vip\xstore\cc\bulkbuying\service;
 
 class StatPoCommonResp {
 	
@@ -61,7 +61,7 @@ class StatPoCommonResp {
 				
 				$needSkip = false;
 				
-				$this->pagination = new \com\vip\xstore\cc\bulkbuying\model\PaginationModel();
+				$this->pagination = new \Voop\com\vip\xstore\cc\bulkbuying\model\PaginationModel();
 				$this->pagination->read($input);
 				
 			}
@@ -93,7 +93,7 @@ class StatPoCommonResp {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);

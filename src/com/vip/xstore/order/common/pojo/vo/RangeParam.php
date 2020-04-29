@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\common\pojo\vo;
+namespace Voop\com\vip\xstore\order\common\pojo\vo;
 
 class RangeParam {
 	
@@ -229,7 +229,7 @@ class RangeParam {
 			
 			if (!is_array($this->inclusion)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -251,7 +251,7 @@ class RangeParam {
 			
 			if (!is_array($this->exclusion)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

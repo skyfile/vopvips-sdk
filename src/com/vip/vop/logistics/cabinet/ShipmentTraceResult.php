@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\cabinet;
+namespace Voop\com\vip\vop\logistics\cabinet;
 
 class ShipmentTraceResult {
 	

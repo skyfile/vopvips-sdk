@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\top\deliveryorder\bizservice;
+namespace Voop\com\vip\top\deliveryorder\bizservice;
 
 class TmsOrderModifyRequest {
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\lbs\track\waybill\service\entity;
+namespace Voop\com\vip\lbs\track\waybill\service\entity;
 
 class DetailTracks {
 	
@@ -649,7 +649,7 @@ class DetailTracks {
 			
 			if (!is_array($this->extendFields)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();

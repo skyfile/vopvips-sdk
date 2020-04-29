@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\inventory\api;
+namespace Voop\com\vip\vop\vcloud\inventory\api;
 
 class WarehouseInventoryHold {
 	
@@ -190,7 +190,7 @@ class WarehouseInventoryHold {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\vcloud\inventory\api\ChannelInventoryHold();
+						$elem0 = new \Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryHold();
 						$elem0->read($input);
 						
 						$this->skuList[$_size0++] = $elem0;
@@ -286,7 +286,7 @@ class WarehouseInventoryHold {
 			
 			if (!is_array($this->skuList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -295,7 +295,7 @@ class WarehouseInventoryHold {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

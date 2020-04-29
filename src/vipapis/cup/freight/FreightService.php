@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\cup\freight;
+namespace Voop\vipapis\cup\freight;
 interface FreightServiceIf{
 	
 	
@@ -35,7 +35,7 @@ class _FreightServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\fr
 	public function send_getOrderFreight( $get_order_freight_req_list){
 		
 		$this->initInvocation("getOrderFreight");
-		$args = new \vipapis\cup\freight\FreightService_getOrderFreight_args();
+		$args = new \Voop\vipapis\cup\freight\FreightService_getOrderFreight_args();
 		
 		$args->get_order_freight_req_list = $get_order_freight_req_list;
 		
@@ -44,7 +44,7 @@ class _FreightServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\fr
 	
 	public function recv_getOrderFreight(){
 		
-		$result = new \vipapis\cup\freight\FreightService_getOrderFreight_result();
+		$result = new \Voop\vipapis\cup\freight\FreightService_getOrderFreight_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,14 +63,14 @@ class _FreightServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\fr
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\cup\freight\FreightService_healthCheck_args();
+		$args = new \Voop\vipapis\cup\freight\FreightService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\cup\freight\FreightService_healthCheck_result();
+		$result = new \Voop\vipapis\cup\freight\FreightService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -134,7 +134,7 @@ class FreightService_getOrderFreight_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\vop\cup\api\freight\GetOrderFreightReq();
+					$elem1 = new \Voop\com\vip\vop\cup\api\freight\GetOrderFreightReq();
 					$elem1->read($input);
 					
 					$this->get_order_freight_req_list[$_size1++] = $elem1;
@@ -165,7 +165,7 @@ class FreightService_getOrderFreight_args {
 		
 		if (!is_array($this->get_order_freight_req_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -174,7 +174,7 @@ class FreightService_getOrderFreight_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -281,7 +281,7 @@ class FreightService_getOrderFreight_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\cup\api\freight\GetOrderFreightResult();
+			$this->success = new \Voop\com\vip\vop\cup\api\freight\GetOrderFreightResult();
 			$this->success->read($input);
 			
 		}
@@ -304,7 +304,7 @@ class FreightService_getOrderFreight_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -363,7 +363,7 @@ class FreightService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -386,7 +386,7 @@ class FreightService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

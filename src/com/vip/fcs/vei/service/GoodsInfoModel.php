@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vei\service;
+namespace Voop\com\vip\fcs\vei\service;
 
 class GoodsInfoModel {
 	
@@ -200,7 +200,7 @@ class GoodsInfoModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\fcs\vei\service\GoodsOptPropValue();
+						$elem0 = new \Voop\com\vip\fcs\vei\service\GoodsOptPropValue();
 						$elem0->read($input);
 						
 						$this->goodsOptPropValueList[$_size0++] = $elem0;
@@ -328,7 +328,7 @@ class GoodsInfoModel {
 			
 			if (!is_array($this->goodsOptPropValueList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -337,7 +337,7 @@ class GoodsInfoModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

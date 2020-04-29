@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipcard;
+namespace Voop\vipapis\vipcard;
 
 class CancelCardResponse {
 	
@@ -110,7 +110,7 @@ class CancelCardResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\vipcard\CancelCardFailMessage();
+						$elem0 = new \Voop\vipapis\vipcard\CancelCardFailMessage();
 						$elem0->read($input);
 						
 						$this->fail_message[$_size0++] = $elem0;
@@ -129,7 +129,7 @@ class CancelCardResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -162,7 +162,7 @@ class CancelCardResponse {
 			
 			if (!is_array($this->fail_message)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -171,7 +171,7 @@ class CancelCardResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

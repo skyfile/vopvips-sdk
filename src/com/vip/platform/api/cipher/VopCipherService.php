@@ -8,17 +8,17 @@
 *
 */
 
-namespace com\vip\platform\api\cipher;
+namespace Voop\com\vip\platform\api\cipher;
 interface VopCipherServiceIf{
 	
 	
-	public function batchDecrypt(\com\vip\platform\api\cipher\BatchDecryptReq $req);
+	public function batchDecrypt(\Voop\com\vip\platform\api\cipher\BatchDecryptReq $req);
 	
-	public function batchEncrypt(\com\vip\platform\api\cipher\BatchEncryptReq $req);
+	public function batchEncrypt(\Voop\com\vip\platform\api\cipher\BatchEncryptReq $req);
 	
 	public function createAllStoreKey();
 	
-	public function createKey(\com\vip\platform\api\cipher\CreateKeyReq $req);
+	public function createKey(\Voop\com\vip\platform\api\cipher\CreateKeyReq $req);
 	
 	public function healthCheck();
 	
@@ -32,16 +32,16 @@ class _VopCipherServiceClient extends \Osp\Base\OspStub implements \com\vip\plat
 	}
 	
 	
-	public function batchDecrypt(\com\vip\platform\api\cipher\BatchDecryptReq $req){
+	public function batchDecrypt(\Voop\com\vip\platform\api\cipher\BatchDecryptReq $req){
 		
 		$this->send_batchDecrypt( $req);
 		return $this->recv_batchDecrypt();
 	}
 	
-	public function send_batchDecrypt(\com\vip\platform\api\cipher\BatchDecryptReq $req){
+	public function send_batchDecrypt(\Voop\com\vip\platform\api\cipher\BatchDecryptReq $req){
 		
 		$this->initInvocation("batchDecrypt");
-		$args = new \com\vip\platform\api\cipher\VopCipherService_batchDecrypt_args();
+		$args = new \Voop\com\vip\platform\api\cipher\VopCipherService_batchDecrypt_args();
 		
 		$args->req = $req;
 		
@@ -50,7 +50,7 @@ class _VopCipherServiceClient extends \Osp\Base\OspStub implements \com\vip\plat
 	
 	public function recv_batchDecrypt(){
 		
-		$result = new \com\vip\platform\api\cipher\VopCipherService_batchDecrypt_result();
+		$result = new \Voop\com\vip\platform\api\cipher\VopCipherService_batchDecrypt_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -60,16 +60,16 @@ class _VopCipherServiceClient extends \Osp\Base\OspStub implements \com\vip\plat
 	}
 	
 	
-	public function batchEncrypt(\com\vip\platform\api\cipher\BatchEncryptReq $req){
+	public function batchEncrypt(\Voop\com\vip\platform\api\cipher\BatchEncryptReq $req){
 		
 		$this->send_batchEncrypt( $req);
 		return $this->recv_batchEncrypt();
 	}
 	
-	public function send_batchEncrypt(\com\vip\platform\api\cipher\BatchEncryptReq $req){
+	public function send_batchEncrypt(\Voop\com\vip\platform\api\cipher\BatchEncryptReq $req){
 		
 		$this->initInvocation("batchEncrypt");
-		$args = new \com\vip\platform\api\cipher\VopCipherService_batchEncrypt_args();
+		$args = new \Voop\com\vip\platform\api\cipher\VopCipherService_batchEncrypt_args();
 		
 		$args->req = $req;
 		
@@ -78,7 +78,7 @@ class _VopCipherServiceClient extends \Osp\Base\OspStub implements \com\vip\plat
 	
 	public function recv_batchEncrypt(){
 		
-		$result = new \com\vip\platform\api\cipher\VopCipherService_batchEncrypt_result();
+		$result = new \Voop\com\vip\platform\api\cipher\VopCipherService_batchEncrypt_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -97,29 +97,29 @@ class _VopCipherServiceClient extends \Osp\Base\OspStub implements \com\vip\plat
 	public function send_createAllStoreKey(){
 		
 		$this->initInvocation("createAllStoreKey");
-		$args = new \com\vip\platform\api\cipher\VopCipherService_createAllStoreKey_args();
+		$args = new \Voop\com\vip\platform\api\cipher\VopCipherService_createAllStoreKey_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_createAllStoreKey(){
 		
-		$result = new \com\vip\platform\api\cipher\VopCipherService_createAllStoreKey_result();
+		$result = new \Voop\com\vip\platform\api\cipher\VopCipherService_createAllStoreKey_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function createKey(\com\vip\platform\api\cipher\CreateKeyReq $req){
+	public function createKey(\Voop\com\vip\platform\api\cipher\CreateKeyReq $req){
 		
 		$this->send_createKey( $req);
 		return $this->recv_createKey();
 	}
 	
-	public function send_createKey(\com\vip\platform\api\cipher\CreateKeyReq $req){
+	public function send_createKey(\Voop\com\vip\platform\api\cipher\CreateKeyReq $req){
 		
 		$this->initInvocation("createKey");
-		$args = new \com\vip\platform\api\cipher\VopCipherService_createKey_args();
+		$args = new \Voop\com\vip\platform\api\cipher\VopCipherService_createKey_args();
 		
 		$args->req = $req;
 		
@@ -128,7 +128,7 @@ class _VopCipherServiceClient extends \Osp\Base\OspStub implements \com\vip\plat
 	
 	public function recv_createKey(){
 		
-		$result = new \com\vip\platform\api\cipher\VopCipherService_createKey_result();
+		$result = new \Voop\com\vip\platform\api\cipher\VopCipherService_createKey_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -147,14 +147,14 @@ class _VopCipherServiceClient extends \Osp\Base\OspStub implements \com\vip\plat
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\platform\api\cipher\VopCipherService_healthCheck_args();
+		$args = new \Voop\com\vip\platform\api\cipher\VopCipherService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\platform\api\cipher\VopCipherService_healthCheck_result();
+		$result = new \Voop\com\vip\platform\api\cipher\VopCipherService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -209,7 +209,7 @@ class VopCipherService_batchDecrypt_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\platform\api\cipher\BatchDecryptReq();
+			$this->req = new \Voop\com\vip\platform\api\cipher\BatchDecryptReq();
 			$this->req->read($input);
 			
 		}
@@ -230,7 +230,7 @@ class VopCipherService_batchDecrypt_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -287,7 +287,7 @@ class VopCipherService_batchEncrypt_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\platform\api\cipher\BatchEncryptReq();
+			$this->req = new \Voop\com\vip\platform\api\cipher\BatchEncryptReq();
 			$this->req->read($input);
 			
 		}
@@ -308,7 +308,7 @@ class VopCipherService_batchEncrypt_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -411,7 +411,7 @@ class VopCipherService_createKey_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\platform\api\cipher\CreateKeyReq();
+			$this->req = new \Voop\com\vip\platform\api\cipher\CreateKeyReq();
 			$this->req->read($input);
 			
 		}
@@ -432,7 +432,7 @@ class VopCipherService_createKey_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -535,7 +535,7 @@ class VopCipherService_batchDecrypt_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\platform\api\cipher\BatchCipherResp();
+			$this->success = new \Voop\com\vip\platform\api\cipher\BatchCipherResp();
 			$this->success->read($input);
 			
 		}
@@ -558,7 +558,7 @@ class VopCipherService_batchDecrypt_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -617,7 +617,7 @@ class VopCipherService_batchEncrypt_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\platform\api\cipher\BatchCipherResp();
+			$this->success = new \Voop\com\vip\platform\api\cipher\BatchCipherResp();
 			$this->success->read($input);
 			
 		}
@@ -640,7 +640,7 @@ class VopCipherService_batchEncrypt_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -748,7 +748,7 @@ class VopCipherService_createKey_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\platform\api\cipher\CreateKeyResp();
+			$this->success = new \Voop\com\vip\platform\api\cipher\CreateKeyResp();
 			$this->success->read($input);
 			
 		}
@@ -771,7 +771,7 @@ class VopCipherService_createKey_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -830,7 +830,7 @@ class VopCipherService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -853,7 +853,7 @@ class VopCipherService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

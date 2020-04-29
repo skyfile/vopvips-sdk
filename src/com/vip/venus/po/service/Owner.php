@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\venus\po\service;
+namespace Voop\com\vip\venus\po\service;
 final class Owner{
 	
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\isv\category;
+namespace Voop\vipapis\isv\category;
 interface VendorCategoryMappingServiceIf{
 	
 	
@@ -18,17 +18,17 @@ interface VendorCategoryMappingServiceIf{
 	
 	public function healthCheck();
 	
-	public function insertSelective(\com\vip\isv\category\VendorCategoryMappingDo $record);
+	public function insertSelective(\Voop\com\vip\isv\category\VendorCategoryMappingDo $record);
 	
 	public function multiUpdateByPrimaryKeySelective( $records);
 	
-	public function selectByCondition(\com\vip\isv\category\VendorCategoryMappingDo $condition);
+	public function selectByCondition(\Voop\com\vip\isv\category\VendorCategoryMappingDo $condition);
 	
 	public function selectByPrimaryKey( $id);
 	
 	public function selectByPrimaryKeys( $id);
 	
-	public function updateByPrimaryKeySelective(\com\vip\isv\category\VendorCategoryMappingDo $record);
+	public function updateByPrimaryKeySelective(\Voop\com\vip\isv\category\VendorCategoryMappingDo $record);
 	
 }
 
@@ -49,7 +49,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	public function send_findMatchedSuccessfullMapping( $id){
 		
 		$this->initInvocation("findMatchedSuccessfullMapping");
-		$args = new \vipapis\isv\category\VendorCategoryMappingService_findMatchedSuccessfullMapping_args();
+		$args = new \Voop\vipapis\isv\category\VendorCategoryMappingService_findMatchedSuccessfullMapping_args();
 		
 		$args->id = $id;
 		
@@ -58,7 +58,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_findMatchedSuccessfullMapping(){
 		
-		$result = new \vipapis\isv\category\VendorCategoryMappingService_findMatchedSuccessfullMapping_result();
+		$result = new \Voop\vipapis\isv\category\VendorCategoryMappingService_findMatchedSuccessfullMapping_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -77,7 +77,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	public function send_getVendorMappedCategories( $vendor_id, $vendor_category_id, $state){
 		
 		$this->initInvocation("getVendorMappedCategories");
-		$args = new \vipapis\isv\category\VendorCategoryMappingService_getVendorMappedCategories_args();
+		$args = new \Voop\vipapis\isv\category\VendorCategoryMappingService_getVendorMappedCategories_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -90,7 +90,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_getVendorMappedCategories(){
 		
-		$result = new \vipapis\isv\category\VendorCategoryMappingService_getVendorMappedCategories_result();
+		$result = new \Voop\vipapis\isv\category\VendorCategoryMappingService_getVendorMappedCategories_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -109,14 +109,14 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\isv\category\VendorCategoryMappingService_healthCheck_args();
+		$args = new \Voop\vipapis\isv\category\VendorCategoryMappingService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\isv\category\VendorCategoryMappingService_healthCheck_result();
+		$result = new \Voop\vipapis\isv\category\VendorCategoryMappingService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -126,16 +126,16 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	}
 	
 	
-	public function insertSelective(\com\vip\isv\category\VendorCategoryMappingDo $record){
+	public function insertSelective(\Voop\com\vip\isv\category\VendorCategoryMappingDo $record){
 		
 		$this->send_insertSelective( $record);
 		return $this->recv_insertSelective();
 	}
 	
-	public function send_insertSelective(\com\vip\isv\category\VendorCategoryMappingDo $record){
+	public function send_insertSelective(\Voop\com\vip\isv\category\VendorCategoryMappingDo $record){
 		
 		$this->initInvocation("insertSelective");
-		$args = new \vipapis\isv\category\VendorCategoryMappingService_insertSelective_args();
+		$args = new \Voop\vipapis\isv\category\VendorCategoryMappingService_insertSelective_args();
 		
 		$args->record = $record;
 		
@@ -144,7 +144,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_insertSelective(){
 		
-		$result = new \vipapis\isv\category\VendorCategoryMappingService_insertSelective_result();
+		$result = new \Voop\vipapis\isv\category\VendorCategoryMappingService_insertSelective_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -163,7 +163,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	public function send_multiUpdateByPrimaryKeySelective( $records){
 		
 		$this->initInvocation("multiUpdateByPrimaryKeySelective");
-		$args = new \vipapis\isv\category\VendorCategoryMappingService_multiUpdateByPrimaryKeySelective_args();
+		$args = new \Voop\vipapis\isv\category\VendorCategoryMappingService_multiUpdateByPrimaryKeySelective_args();
 		
 		$args->records = $records;
 		
@@ -172,7 +172,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_multiUpdateByPrimaryKeySelective(){
 		
-		$result = new \vipapis\isv\category\VendorCategoryMappingService_multiUpdateByPrimaryKeySelective_result();
+		$result = new \Voop\vipapis\isv\category\VendorCategoryMappingService_multiUpdateByPrimaryKeySelective_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -182,16 +182,16 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	}
 	
 	
-	public function selectByCondition(\com\vip\isv\category\VendorCategoryMappingDo $condition){
+	public function selectByCondition(\Voop\com\vip\isv\category\VendorCategoryMappingDo $condition){
 		
 		$this->send_selectByCondition( $condition);
 		return $this->recv_selectByCondition();
 	}
 	
-	public function send_selectByCondition(\com\vip\isv\category\VendorCategoryMappingDo $condition){
+	public function send_selectByCondition(\Voop\com\vip\isv\category\VendorCategoryMappingDo $condition){
 		
 		$this->initInvocation("selectByCondition");
-		$args = new \vipapis\isv\category\VendorCategoryMappingService_selectByCondition_args();
+		$args = new \Voop\vipapis\isv\category\VendorCategoryMappingService_selectByCondition_args();
 		
 		$args->condition = $condition;
 		
@@ -200,7 +200,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_selectByCondition(){
 		
-		$result = new \vipapis\isv\category\VendorCategoryMappingService_selectByCondition_result();
+		$result = new \Voop\vipapis\isv\category\VendorCategoryMappingService_selectByCondition_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -219,7 +219,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	public function send_selectByPrimaryKey( $id){
 		
 		$this->initInvocation("selectByPrimaryKey");
-		$args = new \vipapis\isv\category\VendorCategoryMappingService_selectByPrimaryKey_args();
+		$args = new \Voop\vipapis\isv\category\VendorCategoryMappingService_selectByPrimaryKey_args();
 		
 		$args->id = $id;
 		
@@ -228,7 +228,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_selectByPrimaryKey(){
 		
-		$result = new \vipapis\isv\category\VendorCategoryMappingService_selectByPrimaryKey_result();
+		$result = new \Voop\vipapis\isv\category\VendorCategoryMappingService_selectByPrimaryKey_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -247,7 +247,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	public function send_selectByPrimaryKeys( $id){
 		
 		$this->initInvocation("selectByPrimaryKeys");
-		$args = new \vipapis\isv\category\VendorCategoryMappingService_selectByPrimaryKeys_args();
+		$args = new \Voop\vipapis\isv\category\VendorCategoryMappingService_selectByPrimaryKeys_args();
 		
 		$args->id = $id;
 		
@@ -256,7 +256,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_selectByPrimaryKeys(){
 		
-		$result = new \vipapis\isv\category\VendorCategoryMappingService_selectByPrimaryKeys_result();
+		$result = new \Voop\vipapis\isv\category\VendorCategoryMappingService_selectByPrimaryKeys_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -266,16 +266,16 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	}
 	
 	
-	public function updateByPrimaryKeySelective(\com\vip\isv\category\VendorCategoryMappingDo $record){
+	public function updateByPrimaryKeySelective(\Voop\com\vip\isv\category\VendorCategoryMappingDo $record){
 		
 		$this->send_updateByPrimaryKeySelective( $record);
 		return $this->recv_updateByPrimaryKeySelective();
 	}
 	
-	public function send_updateByPrimaryKeySelective(\com\vip\isv\category\VendorCategoryMappingDo $record){
+	public function send_updateByPrimaryKeySelective(\Voop\com\vip\isv\category\VendorCategoryMappingDo $record){
 		
 		$this->initInvocation("updateByPrimaryKeySelective");
-		$args = new \vipapis\isv\category\VendorCategoryMappingService_updateByPrimaryKeySelective_args();
+		$args = new \Voop\vipapis\isv\category\VendorCategoryMappingService_updateByPrimaryKeySelective_args();
 		
 		$args->record = $record;
 		
@@ -284,7 +284,7 @@ class _VendorCategoryMappingServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_updateByPrimaryKeySelective(){
 		
-		$result = new \vipapis\isv\category\VendorCategoryMappingService_updateByPrimaryKeySelective_result();
+		$result = new \Voop\vipapis\isv\category\VendorCategoryMappingService_updateByPrimaryKeySelective_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -377,7 +377,7 @@ class VendorCategoryMappingService_findMatchedSuccessfullMapping_args {
 		
 		if (!is_array($this->id)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -521,7 +521,7 @@ class VendorCategoryMappingService_getVendorMappedCategories_args {
 			
 			$xfer += $output->writeFieldBegin('state');
 			
-			$em = new \com\vip\isv\category\MappedCategoryState; 
+			$em = new \Voop\com\vip\isv\category\MappedCategoryState; 
 			$output->writeString($em::$__names[$this->state]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -624,7 +624,7 @@ class VendorCategoryMappingService_insertSelective_args {
 		if(true) {
 			
 			
-			$this->record = new \com\vip\isv\category\VendorCategoryMappingDo();
+			$this->record = new \Voop\com\vip\isv\category\VendorCategoryMappingDo();
 			$this->record->read($input);
 			
 		}
@@ -645,7 +645,7 @@ class VendorCategoryMappingService_insertSelective_args {
 		
 		if (!is_object($this->record)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->record->write($output);
@@ -711,7 +711,7 @@ class VendorCategoryMappingService_multiUpdateByPrimaryKeySelective_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\isv\category\VendorCategoryMappingDo();
+					$elem0 = new \Voop\com\vip\isv\category\VendorCategoryMappingDo();
 					$elem0->read($input);
 					
 					$this->records[$_size0++] = $elem0;
@@ -742,7 +742,7 @@ class VendorCategoryMappingService_multiUpdateByPrimaryKeySelective_args {
 		
 		if (!is_array($this->records)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -751,7 +751,7 @@ class VendorCategoryMappingService_multiUpdateByPrimaryKeySelective_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -812,7 +812,7 @@ class VendorCategoryMappingService_selectByCondition_args {
 		if(true) {
 			
 			
-			$this->condition = new \com\vip\isv\category\VendorCategoryMappingDo();
+			$this->condition = new \Voop\com\vip\isv\category\VendorCategoryMappingDo();
 			$this->condition->read($input);
 			
 		}
@@ -833,7 +833,7 @@ class VendorCategoryMappingService_selectByCondition_args {
 		
 		if (!is_object($this->condition)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->condition->write($output);
@@ -998,7 +998,7 @@ class VendorCategoryMappingService_selectByPrimaryKeys_args {
 		
 		if (!is_array($this->id)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1062,7 +1062,7 @@ class VendorCategoryMappingService_updateByPrimaryKeySelective_args {
 		if(true) {
 			
 			
-			$this->record = new \com\vip\isv\category\VendorCategoryMappingDo();
+			$this->record = new \Voop\com\vip\isv\category\VendorCategoryMappingDo();
 			$this->record->read($input);
 			
 		}
@@ -1083,7 +1083,7 @@ class VendorCategoryMappingService_updateByPrimaryKeySelective_args {
 		
 		if (!is_object($this->record)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->record->write($output);
@@ -1149,7 +1149,7 @@ class VendorCategoryMappingService_findMatchedSuccessfullMapping_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\isv\category\VendorCategoryMappingDo();
+					$elem0 = new \Voop\com\vip\isv\category\VendorCategoryMappingDo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1182,7 +1182,7 @@ class VendorCategoryMappingService_findMatchedSuccessfullMapping_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1191,7 +1191,7 @@ class VendorCategoryMappingService_findMatchedSuccessfullMapping_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1263,7 +1263,7 @@ class VendorCategoryMappingService_getVendorMappedCategories_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\isv\category\MappedCategory();
+					$elem1 = new \Voop\com\vip\isv\category\MappedCategory();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1296,7 +1296,7 @@ class VendorCategoryMappingService_getVendorMappedCategories_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1305,7 +1305,7 @@ class VendorCategoryMappingService_getVendorMappedCategories_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1368,7 +1368,7 @@ class VendorCategoryMappingService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1391,7 +1391,7 @@ class VendorCategoryMappingService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1599,7 +1599,7 @@ class VendorCategoryMappingService_selectByCondition_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\isv\category\VendorCategoryMappingDo();
+					$elem0 = new \Voop\com\vip\isv\category\VendorCategoryMappingDo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1632,7 +1632,7 @@ class VendorCategoryMappingService_selectByCondition_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1641,7 +1641,7 @@ class VendorCategoryMappingService_selectByCondition_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1704,7 +1704,7 @@ class VendorCategoryMappingService_selectByPrimaryKey_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\isv\category\VendorCategoryMappingDo();
+			$this->success = new \Voop\com\vip\isv\category\VendorCategoryMappingDo();
 			$this->success->read($input);
 			
 		}
@@ -1727,7 +1727,7 @@ class VendorCategoryMappingService_selectByPrimaryKey_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1795,7 +1795,7 @@ class VendorCategoryMappingService_selectByPrimaryKeys_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\isv\category\VendorCategoryMappingDo();
+					$elem0 = new \Voop\com\vip\isv\category\VendorCategoryMappingDo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1828,7 +1828,7 @@ class VendorCategoryMappingService_selectByPrimaryKeys_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1837,7 +1837,7 @@ class VendorCategoryMappingService_selectByPrimaryKeys_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

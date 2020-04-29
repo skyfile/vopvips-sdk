@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\oauth;
+namespace Voop\vipapis\oauth;
 require_once dirname(__FILE__).'/OauthService.php';
 class OauthServiceHelper extends _OauthServiceClient{
 	

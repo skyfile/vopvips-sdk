@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\normal;
+namespace Voop\vipapis\normal;
 
 class InventoryDeductOrdersRequest {
 	
@@ -148,7 +148,7 @@ class InventoryDeductOrdersRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

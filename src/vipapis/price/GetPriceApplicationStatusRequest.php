@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\price;
+namespace Voop\vipapis\price;
 
 class GetPriceApplicationStatusRequest {
 	
@@ -107,7 +107,7 @@ class GetPriceApplicationStatusRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -133,7 +133,7 @@ class GetPriceApplicationStatusRequest {
 		
 		if (!is_array($this->application_id_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

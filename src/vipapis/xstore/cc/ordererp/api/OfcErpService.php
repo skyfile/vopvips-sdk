@@ -8,11 +8,11 @@
 *
 */
 
-namespace vipapis\xstore\cc\ordererp\api;
+namespace Voop\vipapis\xstore\cc\ordererp\api;
 interface OfcErpServiceIf{
 	
 	
-	public function addInfErpOrderInfo(\vipapis\xstore\cc\ordererp\api\request\AddInfErpOrderInfoReq $req);
+	public function addInfErpOrderInfo(\Voop\vipapis\xstore\cc\ordererp\api\request\AddInfErpOrderInfoReq $req);
 	
 	public function healthCheck();
 	
@@ -26,16 +26,16 @@ class _OfcErpServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\
 	}
 	
 	
-	public function addInfErpOrderInfo(\vipapis\xstore\cc\ordererp\api\request\AddInfErpOrderInfoReq $req){
+	public function addInfErpOrderInfo(\Voop\vipapis\xstore\cc\ordererp\api\request\AddInfErpOrderInfoReq $req){
 		
 		$this->send_addInfErpOrderInfo( $req);
 		return $this->recv_addInfErpOrderInfo();
 	}
 	
-	public function send_addInfErpOrderInfo(\vipapis\xstore\cc\ordererp\api\request\AddInfErpOrderInfoReq $req){
+	public function send_addInfErpOrderInfo(\Voop\vipapis\xstore\cc\ordererp\api\request\AddInfErpOrderInfoReq $req){
 		
 		$this->initInvocation("addInfErpOrderInfo");
-		$args = new \vipapis\xstore\cc\ordererp\api\OfcErpService_addInfErpOrderInfo_args();
+		$args = new \Voop\vipapis\xstore\cc\ordererp\api\OfcErpService_addInfErpOrderInfo_args();
 		
 		$args->req = $req;
 		
@@ -44,7 +44,7 @@ class _OfcErpServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\
 	
 	public function recv_addInfErpOrderInfo(){
 		
-		$result = new \vipapis\xstore\cc\ordererp\api\OfcErpService_addInfErpOrderInfo_result();
+		$result = new \Voop\vipapis\xstore\cc\ordererp\api\OfcErpService_addInfErpOrderInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,14 +63,14 @@ class _OfcErpServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\xstore\cc\ordererp\api\OfcErpService_healthCheck_args();
+		$args = new \Voop\vipapis\xstore\cc\ordererp\api\OfcErpService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\xstore\cc\ordererp\api\OfcErpService_healthCheck_result();
+		$result = new \Voop\vipapis\xstore\cc\ordererp\api\OfcErpService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -125,7 +125,7 @@ class OfcErpService_addInfErpOrderInfo_args {
 		if(true) {
 			
 			
-			$this->req = new \vipapis\xstore\cc\ordererp\api\request\AddInfErpOrderInfoReq();
+			$this->req = new \Voop\vipapis\xstore\cc\ordererp\api\request\AddInfErpOrderInfoReq();
 			$this->req->read($input);
 			
 		}
@@ -148,7 +148,7 @@ class OfcErpService_addInfErpOrderInfo_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -253,7 +253,7 @@ class OfcErpService_addInfErpOrderInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\ordererp\api\response\AddInfErpOrderInfoResp();
+			$this->success = new \Voop\vipapis\xstore\cc\ordererp\api\response\AddInfErpOrderInfoResp();
 			$this->success->read($input);
 			
 		}
@@ -276,7 +276,7 @@ class OfcErpService_addInfErpOrderInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -335,7 +335,7 @@ class OfcErpService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -358,7 +358,7 @@ class OfcErpService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

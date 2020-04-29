@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\freight;
+namespace Voop\com\vip\vop\cup\api\freight;
 
 class FreightInfo {
 	

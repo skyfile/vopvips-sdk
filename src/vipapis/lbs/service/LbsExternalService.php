@@ -8,11 +8,11 @@
 *
 */
 
-namespace vipapis\lbs\service;
+namespace Voop\vipapis\lbs\service;
 interface LbsExternalServiceIf{
 	
 	
-	public function getExplainedBarcodes(\com\vip\lbs\lpc\service\entity\GetExplainedBarcodesRequest $getExplainedBarcodesRequest);
+	public function getExplainedBarcodes(\Voop\com\vip\lbs\lpc\service\entity\GetExplainedBarcodesRequest $getExplainedBarcodesRequest);
 	
 	public function healthCheck();
 	
@@ -26,16 +26,16 @@ class _LbsExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\lb
 	}
 	
 	
-	public function getExplainedBarcodes(\com\vip\lbs\lpc\service\entity\GetExplainedBarcodesRequest $getExplainedBarcodesRequest){
+	public function getExplainedBarcodes(\Voop\com\vip\lbs\lpc\service\entity\GetExplainedBarcodesRequest $getExplainedBarcodesRequest){
 		
 		$this->send_getExplainedBarcodes( $getExplainedBarcodesRequest);
 		return $this->recv_getExplainedBarcodes();
 	}
 	
-	public function send_getExplainedBarcodes(\com\vip\lbs\lpc\service\entity\GetExplainedBarcodesRequest $getExplainedBarcodesRequest){
+	public function send_getExplainedBarcodes(\Voop\com\vip\lbs\lpc\service\entity\GetExplainedBarcodesRequest $getExplainedBarcodesRequest){
 		
 		$this->initInvocation("getExplainedBarcodes");
-		$args = new \vipapis\lbs\service\LbsExternalService_getExplainedBarcodes_args();
+		$args = new \Voop\vipapis\lbs\service\LbsExternalService_getExplainedBarcodes_args();
 		
 		$args->getExplainedBarcodesRequest = $getExplainedBarcodesRequest;
 		
@@ -44,7 +44,7 @@ class _LbsExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\lb
 	
 	public function recv_getExplainedBarcodes(){
 		
-		$result = new \vipapis\lbs\service\LbsExternalService_getExplainedBarcodes_result();
+		$result = new \Voop\vipapis\lbs\service\LbsExternalService_getExplainedBarcodes_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,14 +63,14 @@ class _LbsExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\lb
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\lbs\service\LbsExternalService_healthCheck_args();
+		$args = new \Voop\vipapis\lbs\service\LbsExternalService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\lbs\service\LbsExternalService_healthCheck_result();
+		$result = new \Voop\vipapis\lbs\service\LbsExternalService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -125,7 +125,7 @@ class LbsExternalService_getExplainedBarcodes_args {
 		if(true) {
 			
 			
-			$this->getExplainedBarcodesRequest = new \com\vip\lbs\lpc\service\entity\GetExplainedBarcodesRequest();
+			$this->getExplainedBarcodesRequest = new \Voop\com\vip\lbs\lpc\service\entity\GetExplainedBarcodesRequest();
 			$this->getExplainedBarcodesRequest->read($input);
 			
 		}
@@ -148,7 +148,7 @@ class LbsExternalService_getExplainedBarcodes_args {
 			
 			if (!is_object($this->getExplainedBarcodesRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->getExplainedBarcodesRequest->write($output);
@@ -253,7 +253,7 @@ class LbsExternalService_getExplainedBarcodes_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\lbs\lpc\service\entity\GetExplainedBarcodesResponse();
+			$this->success = new \Voop\com\vip\lbs\lpc\service\entity\GetExplainedBarcodesResponse();
 			$this->success->read($input);
 			
 		}
@@ -276,7 +276,7 @@ class LbsExternalService_getExplainedBarcodes_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -335,7 +335,7 @@ class LbsExternalService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -358,7 +358,7 @@ class LbsExternalService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

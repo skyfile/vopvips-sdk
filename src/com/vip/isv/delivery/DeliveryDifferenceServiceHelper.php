@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\delivery;
+namespace Voop\com\vip\isv\delivery;
 require_once dirname(__FILE__).'/DeliveryDifferenceService.php';
 class DeliveryDifferenceServiceHelper extends _DeliveryDifferenceServiceClient{
 	

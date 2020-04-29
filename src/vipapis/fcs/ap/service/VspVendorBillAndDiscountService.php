@@ -8,21 +8,21 @@
 *
 */
 
-namespace vipapis\fcs\ap\service;
+namespace Voop\vipapis\fcs\ap\service;
 interface VspVendorBillAndDiscountServiceIf{
 	
 	
-	public function getBillDiscountDetailPage(\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code);
+	public function getBillDiscountDetailPage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code);
 	
-	public function getBillDiscountSourcePage(\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code);
+	public function getBillDiscountSourcePage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code);
 	
-	public function getBillGoodsDetailPage(\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code);
+	public function getBillGoodsDetailPage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code);
 	
-	public function getBillGoodsSourcePage(\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code);
+	public function getBillGoodsSourcePage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code);
 	
-	public function getInvTransDetailPage(\com\vip\fcs\ap\service\InvTransDetailReqItem $reqItem, $vendor_code);
+	public function getInvTransDetailPage(\Voop\com\vip\fcs\ap\service\InvTransDetailReqItem $reqItem, $vendor_code);
 	
-	public function getItemSourcePage(\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code);
+	public function getItemSourcePage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code);
 	
 	public function healthCheck();
 	
@@ -36,16 +36,16 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	}
 	
 	
-	public function getBillDiscountDetailPage(\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
+	public function getBillDiscountDetailPage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
 		
 		$this->send_getBillDiscountDetailPage( $reqItem, $vendor_code);
 		return $this->recv_getBillDiscountDetailPage();
 	}
 	
-	public function send_getBillDiscountDetailPage(\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
+	public function send_getBillDiscountDetailPage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
 		
 		$this->initInvocation("getBillDiscountDetailPage");
-		$args = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillDiscountDetailPage_args();
+		$args = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillDiscountDetailPage_args();
 		
 		$args->reqItem = $reqItem;
 		
@@ -56,7 +56,7 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	
 	public function recv_getBillDiscountDetailPage(){
 		
-		$result = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillDiscountDetailPage_result();
+		$result = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillDiscountDetailPage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -66,16 +66,16 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	}
 	
 	
-	public function getBillDiscountSourcePage(\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code){
+	public function getBillDiscountSourcePage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code){
 		
 		$this->send_getBillDiscountSourcePage( $reqItem, $vendor_code);
 		return $this->recv_getBillDiscountSourcePage();
 	}
 	
-	public function send_getBillDiscountSourcePage(\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code){
+	public function send_getBillDiscountSourcePage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code){
 		
 		$this->initInvocation("getBillDiscountSourcePage");
-		$args = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillDiscountSourcePage_args();
+		$args = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillDiscountSourcePage_args();
 		
 		$args->reqItem = $reqItem;
 		
@@ -86,7 +86,7 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	
 	public function recv_getBillDiscountSourcePage(){
 		
-		$result = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillDiscountSourcePage_result();
+		$result = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillDiscountSourcePage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -96,16 +96,16 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	}
 	
 	
-	public function getBillGoodsDetailPage(\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
+	public function getBillGoodsDetailPage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
 		
 		$this->send_getBillGoodsDetailPage( $reqItem, $vendor_code);
 		return $this->recv_getBillGoodsDetailPage();
 	}
 	
-	public function send_getBillGoodsDetailPage(\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
+	public function send_getBillGoodsDetailPage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
 		
 		$this->initInvocation("getBillGoodsDetailPage");
-		$args = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillGoodsDetailPage_args();
+		$args = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillGoodsDetailPage_args();
 		
 		$args->reqItem = $reqItem;
 		
@@ -116,7 +116,7 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	
 	public function recv_getBillGoodsDetailPage(){
 		
-		$result = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillGoodsDetailPage_result();
+		$result = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillGoodsDetailPage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -126,16 +126,16 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	}
 	
 	
-	public function getBillGoodsSourcePage(\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code){
+	public function getBillGoodsSourcePage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code){
 		
 		$this->send_getBillGoodsSourcePage( $reqItem, $vendor_code);
 		return $this->recv_getBillGoodsSourcePage();
 	}
 	
-	public function send_getBillGoodsSourcePage(\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code){
+	public function send_getBillGoodsSourcePage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem $reqItem, $vendor_code){
 		
 		$this->initInvocation("getBillGoodsSourcePage");
-		$args = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillGoodsSourcePage_args();
+		$args = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillGoodsSourcePage_args();
 		
 		$args->reqItem = $reqItem;
 		
@@ -146,7 +146,7 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	
 	public function recv_getBillGoodsSourcePage(){
 		
-		$result = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillGoodsSourcePage_result();
+		$result = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getBillGoodsSourcePage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -156,16 +156,16 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	}
 	
 	
-	public function getInvTransDetailPage(\com\vip\fcs\ap\service\InvTransDetailReqItem $reqItem, $vendor_code){
+	public function getInvTransDetailPage(\Voop\com\vip\fcs\ap\service\InvTransDetailReqItem $reqItem, $vendor_code){
 		
 		$this->send_getInvTransDetailPage( $reqItem, $vendor_code);
 		return $this->recv_getInvTransDetailPage();
 	}
 	
-	public function send_getInvTransDetailPage(\com\vip\fcs\ap\service\InvTransDetailReqItem $reqItem, $vendor_code){
+	public function send_getInvTransDetailPage(\Voop\com\vip\fcs\ap\service\InvTransDetailReqItem $reqItem, $vendor_code){
 		
 		$this->initInvocation("getInvTransDetailPage");
-		$args = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getInvTransDetailPage_args();
+		$args = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getInvTransDetailPage_args();
 		
 		$args->reqItem = $reqItem;
 		
@@ -176,7 +176,7 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	
 	public function recv_getInvTransDetailPage(){
 		
-		$result = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getInvTransDetailPage_result();
+		$result = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getInvTransDetailPage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -186,16 +186,16 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	}
 	
 	
-	public function getItemSourcePage(\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
+	public function getItemSourcePage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
 		
 		$this->send_getItemSourcePage( $reqItem, $vendor_code);
 		return $this->recv_getItemSourcePage();
 	}
 	
-	public function send_getItemSourcePage(\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
+	public function send_getItemSourcePage(\Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem $reqItem, $vendor_code){
 		
 		$this->initInvocation("getItemSourcePage");
-		$args = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getItemSourcePage_args();
+		$args = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getItemSourcePage_args();
 		
 		$args->reqItem = $reqItem;
 		
@@ -206,7 +206,7 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	
 	public function recv_getItemSourcePage(){
 		
-		$result = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getItemSourcePage_result();
+		$result = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_getItemSourcePage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -225,14 +225,14 @@ class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implement
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_healthCheck_args();
+		$args = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\fcs\ap\service\VspVendorBillAndDiscountService_healthCheck_result();
+		$result = new \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -297,7 +297,7 @@ class VspVendorBillAndDiscountService_getBillDiscountDetailPage_args {
 		if(true) {
 			
 			
-			$this->reqItem = new \com\vip\fcs\ap\service\BillAndDiscountDetailReqItem();
+			$this->reqItem = new \Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem();
 			$this->reqItem->read($input);
 			
 		}
@@ -329,7 +329,7 @@ class VspVendorBillAndDiscountService_getBillDiscountDetailPage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -403,7 +403,7 @@ class VspVendorBillAndDiscountService_getBillDiscountSourcePage_args {
 		if(true) {
 			
 			
-			$this->reqItem = new \com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem();
+			$this->reqItem = new \Voop\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem();
 			$this->reqItem->read($input);
 			
 		}
@@ -435,7 +435,7 @@ class VspVendorBillAndDiscountService_getBillDiscountSourcePage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -509,7 +509,7 @@ class VspVendorBillAndDiscountService_getBillGoodsDetailPage_args {
 		if(true) {
 			
 			
-			$this->reqItem = new \com\vip\fcs\ap\service\BillAndDiscountDetailReqItem();
+			$this->reqItem = new \Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem();
 			$this->reqItem->read($input);
 			
 		}
@@ -541,7 +541,7 @@ class VspVendorBillAndDiscountService_getBillGoodsDetailPage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -615,7 +615,7 @@ class VspVendorBillAndDiscountService_getBillGoodsSourcePage_args {
 		if(true) {
 			
 			
-			$this->reqItem = new \com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem();
+			$this->reqItem = new \Voop\com\vip\fcs\ap\service\BillAndDiscountDetailRealTimeReqItem();
 			$this->reqItem->read($input);
 			
 		}
@@ -647,7 +647,7 @@ class VspVendorBillAndDiscountService_getBillGoodsSourcePage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -721,7 +721,7 @@ class VspVendorBillAndDiscountService_getInvTransDetailPage_args {
 		if(true) {
 			
 			
-			$this->reqItem = new \com\vip\fcs\ap\service\InvTransDetailReqItem();
+			$this->reqItem = new \Voop\com\vip\fcs\ap\service\InvTransDetailReqItem();
 			$this->reqItem->read($input);
 			
 		}
@@ -753,7 +753,7 @@ class VspVendorBillAndDiscountService_getInvTransDetailPage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -827,7 +827,7 @@ class VspVendorBillAndDiscountService_getItemSourcePage_args {
 		if(true) {
 			
 			
-			$this->reqItem = new \com\vip\fcs\ap\service\BillAndDiscountDetailReqItem();
+			$this->reqItem = new \Voop\com\vip\fcs\ap\service\BillAndDiscountDetailReqItem();
 			$this->reqItem->read($input);
 			
 		}
@@ -859,7 +859,7 @@ class VspVendorBillAndDiscountService_getItemSourcePage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -969,7 +969,7 @@ class VspVendorBillAndDiscountService_getBillDiscountDetailPage_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\ap\service\VendorDiscountDetailRespItem();
+			$this->success = new \Voop\com\vip\fcs\ap\service\VendorDiscountDetailRespItem();
 			$this->success->read($input);
 			
 		}
@@ -992,7 +992,7 @@ class VspVendorBillAndDiscountService_getBillDiscountDetailPage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1051,7 +1051,7 @@ class VspVendorBillAndDiscountService_getBillDiscountSourcePage_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\ap\service\VendorDiscountSourceRespItem();
+			$this->success = new \Voop\com\vip\fcs\ap\service\VendorDiscountSourceRespItem();
 			$this->success->read($input);
 			
 		}
@@ -1074,7 +1074,7 @@ class VspVendorBillAndDiscountService_getBillDiscountSourcePage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1133,7 +1133,7 @@ class VspVendorBillAndDiscountService_getBillGoodsDetailPage_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\ap\service\VendorBillDetailRespItem();
+			$this->success = new \Voop\com\vip\fcs\ap\service\VendorBillDetailRespItem();
 			$this->success->read($input);
 			
 		}
@@ -1156,7 +1156,7 @@ class VspVendorBillAndDiscountService_getBillGoodsDetailPage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1215,7 +1215,7 @@ class VspVendorBillAndDiscountService_getBillGoodsSourcePage_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\ap\service\VendorBillSourceRespItem();
+			$this->success = new \Voop\com\vip\fcs\ap\service\VendorBillSourceRespItem();
 			$this->success->read($input);
 			
 		}
@@ -1238,7 +1238,7 @@ class VspVendorBillAndDiscountService_getBillGoodsSourcePage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1297,7 +1297,7 @@ class VspVendorBillAndDiscountService_getInvTransDetailPage_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\ap\service\InvTransDetailRespItem();
+			$this->success = new \Voop\com\vip\fcs\ap\service\InvTransDetailRespItem();
 			$this->success->read($input);
 			
 		}
@@ -1320,7 +1320,7 @@ class VspVendorBillAndDiscountService_getInvTransDetailPage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1379,7 +1379,7 @@ class VspVendorBillAndDiscountService_getItemSourcePage_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\ap\service\VendorItemSourceRespItem();
+			$this->success = new \Voop\com\vip\fcs\ap\service\VendorItemSourceRespItem();
 			$this->success->read($input);
 			
 		}
@@ -1402,7 +1402,7 @@ class VspVendorBillAndDiscountService_getItemSourcePage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1461,7 +1461,7 @@ class VspVendorBillAndDiscountService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1484,7 +1484,7 @@ class VspVendorBillAndDiscountService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

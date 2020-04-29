@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\svip\osp\service;
+namespace Voop\com\vip\svip\osp\service;
 
 class BatchCancelRequest {
 	
@@ -90,7 +90,7 @@ class BatchCancelRequest {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\svip\osp\service\CancelUser();
+						$elem0 = new \Voop\com\vip\svip\osp\service\CancelUser();
 						$elem0->read($input);
 						
 						$this->userList[$_size0++] = $elem0;
@@ -141,7 +141,7 @@ class BatchCancelRequest {
 			
 			if (!is_array($this->userList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -150,7 +150,7 @@ class BatchCancelRequest {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

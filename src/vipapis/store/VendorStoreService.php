@@ -8,15 +8,15 @@
 *
 */
 
-namespace vipapis\store;
+namespace Voop\vipapis\store;
 interface VendorStoreServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function queryAreaWarehouseStores(\vipapis\store\WarehouseStoreRequest $warehouseStoreRequest);
+	public function queryAreaWarehouseStores(\Voop\vipapis\store\WarehouseStoreRequest $warehouseStoreRequest);
 	
-	public function queryStores(\vipapis\store\StoreQueryRequest $storeQueryRequest);
+	public function queryStores(\Voop\vipapis\store\StoreQueryRequest $storeQueryRequest);
 	
 }
 
@@ -37,14 +37,14 @@ class _VendorStoreServiceClient extends \Osp\Base\OspStub implements \vipapis\st
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\store\VendorStoreService_healthCheck_args();
+		$args = new \Voop\vipapis\store\VendorStoreService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\store\VendorStoreService_healthCheck_result();
+		$result = new \Voop\vipapis\store\VendorStoreService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -54,16 +54,16 @@ class _VendorStoreServiceClient extends \Osp\Base\OspStub implements \vipapis\st
 	}
 	
 	
-	public function queryAreaWarehouseStores(\vipapis\store\WarehouseStoreRequest $warehouseStoreRequest){
+	public function queryAreaWarehouseStores(\Voop\vipapis\store\WarehouseStoreRequest $warehouseStoreRequest){
 		
 		$this->send_queryAreaWarehouseStores( $warehouseStoreRequest);
 		return $this->recv_queryAreaWarehouseStores();
 	}
 	
-	public function send_queryAreaWarehouseStores(\vipapis\store\WarehouseStoreRequest $warehouseStoreRequest){
+	public function send_queryAreaWarehouseStores(\Voop\vipapis\store\WarehouseStoreRequest $warehouseStoreRequest){
 		
 		$this->initInvocation("queryAreaWarehouseStores");
-		$args = new \vipapis\store\VendorStoreService_queryAreaWarehouseStores_args();
+		$args = new \Voop\vipapis\store\VendorStoreService_queryAreaWarehouseStores_args();
 		
 		$args->warehouseStoreRequest = $warehouseStoreRequest;
 		
@@ -72,7 +72,7 @@ class _VendorStoreServiceClient extends \Osp\Base\OspStub implements \vipapis\st
 	
 	public function recv_queryAreaWarehouseStores(){
 		
-		$result = new \vipapis\store\VendorStoreService_queryAreaWarehouseStores_result();
+		$result = new \Voop\vipapis\store\VendorStoreService_queryAreaWarehouseStores_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -82,16 +82,16 @@ class _VendorStoreServiceClient extends \Osp\Base\OspStub implements \vipapis\st
 	}
 	
 	
-	public function queryStores(\vipapis\store\StoreQueryRequest $storeQueryRequest){
+	public function queryStores(\Voop\vipapis\store\StoreQueryRequest $storeQueryRequest){
 		
 		$this->send_queryStores( $storeQueryRequest);
 		return $this->recv_queryStores();
 	}
 	
-	public function send_queryStores(\vipapis\store\StoreQueryRequest $storeQueryRequest){
+	public function send_queryStores(\Voop\vipapis\store\StoreQueryRequest $storeQueryRequest){
 		
 		$this->initInvocation("queryStores");
-		$args = new \vipapis\store\VendorStoreService_queryStores_args();
+		$args = new \Voop\vipapis\store\VendorStoreService_queryStores_args();
 		
 		$args->storeQueryRequest = $storeQueryRequest;
 		
@@ -100,7 +100,7 @@ class _VendorStoreServiceClient extends \Osp\Base\OspStub implements \vipapis\st
 	
 	public function recv_queryStores(){
 		
-		$result = new \vipapis\store\VendorStoreService_queryStores_result();
+		$result = new \Voop\vipapis\store\VendorStoreService_queryStores_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -201,7 +201,7 @@ class VendorStoreService_queryAreaWarehouseStores_args {
 		if(true) {
 			
 			
-			$this->warehouseStoreRequest = new \vipapis\store\WarehouseStoreRequest();
+			$this->warehouseStoreRequest = new \Voop\vipapis\store\WarehouseStoreRequest();
 			$this->warehouseStoreRequest->read($input);
 			
 		}
@@ -222,7 +222,7 @@ class VendorStoreService_queryAreaWarehouseStores_args {
 		
 		if (!is_object($this->warehouseStoreRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->warehouseStoreRequest->write($output);
@@ -279,7 +279,7 @@ class VendorStoreService_queryStores_args {
 		if(true) {
 			
 			
-			$this->storeQueryRequest = new \vipapis\store\StoreQueryRequest();
+			$this->storeQueryRequest = new \Voop\vipapis\store\StoreQueryRequest();
 			$this->storeQueryRequest->read($input);
 			
 		}
@@ -300,7 +300,7 @@ class VendorStoreService_queryStores_args {
 		
 		if (!is_object($this->storeQueryRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->storeQueryRequest->write($output);
@@ -357,7 +357,7 @@ class VendorStoreService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -380,7 +380,7 @@ class VendorStoreService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -439,7 +439,7 @@ class VendorStoreService_queryAreaWarehouseStores_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\store\WarehouseStoreResponse();
+			$this->success = new \Voop\vipapis\store\WarehouseStoreResponse();
 			$this->success->read($input);
 			
 		}
@@ -462,7 +462,7 @@ class VendorStoreService_queryAreaWarehouseStores_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -521,7 +521,7 @@ class VendorStoreService_queryStores_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\store\StoreQueryResponse();
+			$this->success = new \Voop\vipapis\store\StoreQueryResponse();
 			$this->success->read($input);
 			
 		}
@@ -544,7 +544,7 @@ class VendorStoreService_queryStores_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

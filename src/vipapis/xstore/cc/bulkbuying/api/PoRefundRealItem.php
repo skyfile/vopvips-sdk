@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\bulkbuying\api;
+namespace Voop\vipapis\xstore\cc\bulkbuying\api;
 
 class PoRefundRealItem {
 	
@@ -188,7 +188,7 @@ class PoRefundRealItem {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\domain\order;
+namespace Voop\com\vip\domain\order;
 
 class OrderInfo {
 	
@@ -735,7 +735,7 @@ class OrderInfo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\domain\order\OrderItemInfo();
+						$elem0 = new \Voop\com\vip\domain\order\OrderItemInfo();
 						$elem0->read($input);
 						
 						$this->itemList[$_size0++] = $elem0;
@@ -804,7 +804,7 @@ class OrderInfo {
 			
 			$xfer += $output->writeFieldBegin('warehouse');
 			
-			$em = new \com\vip\domain\inventory\WarehouseCode; 
+			$em = new \Voop\com\vip\domain\inventory\WarehouseCode; 
 			$output->writeString($em::$__names[$this->warehouse]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -883,14 +883,14 @@ class OrderInfo {
 		
 		$xfer += $output->writeFieldBegin('pay_type');
 		
-		$em = new \com\vip\domain\order\OrderPayType; 
+		$em = new \Voop\com\vip\domain\order\OrderPayType; 
 		$output->writeString($em::$__names[$this->pay_type]);  
 		
 		$xfer += $output->writeFieldEnd();
 		
 		$xfer += $output->writeFieldBegin('transport_day');
 		
-		$em = new \com\vip\domain\order\OrderTransportDay; 
+		$em = new \Voop\com\vip\domain\order\OrderTransportDay; 
 		$output->writeString($em::$__names[$this->transport_day]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -921,7 +921,7 @@ class OrderInfo {
 		
 		$xfer += $output->writeFieldBegin('ext_pay_type');
 		
-		$em = new \com\vip\domain\order\OrderExtPayType; 
+		$em = new \Voop\com\vip\domain\order\OrderExtPayType; 
 		$output->writeString($em::$__names[$this->ext_pay_type]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -970,7 +970,7 @@ class OrderInfo {
 		
 		$xfer += $output->writeFieldBegin('is_printing_price');
 		
-		$em = new \com\vip\domain\order\OrderIsPrintingPrice; 
+		$em = new \Voop\com\vip\domain\order\OrderIsPrintingPrice; 
 		$output->writeString($em::$__names[$this->is_printing_price]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -981,7 +981,7 @@ class OrderInfo {
 			
 			if (!is_array($this->itemList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -990,7 +990,7 @@ class OrderInfo {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

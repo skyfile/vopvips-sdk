@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\delivery;
+namespace Voop\com\vip\isv\delivery;
 interface DeliveryDifferenceServiceIf{
 	
 	
@@ -45,7 +45,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	public function send_countByVisReceiptContainerId( $id){
 		
 		$this->initInvocation("countByVisReceiptContainerId");
-		$args = new \com\vip\isv\delivery\DeliveryDifferenceService_countByVisReceiptContainerId_args();
+		$args = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_countByVisReceiptContainerId_args();
 		
 		$args->id = $id;
 		
@@ -54,7 +54,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	
 	public function recv_countByVisReceiptContainerId(){
 		
-		$result = new \com\vip\isv\delivery\DeliveryDifferenceService_countByVisReceiptContainerId_result();
+		$result = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_countByVisReceiptContainerId_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -73,7 +73,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	public function send_getDefectiveGoodByReceiptNo( $receiptNo){
 		
 		$this->initInvocation("getDefectiveGoodByReceiptNo");
-		$args = new \com\vip\isv\delivery\DeliveryDifferenceService_getDefectiveGoodByReceiptNo_args();
+		$args = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_getDefectiveGoodByReceiptNo_args();
 		
 		$args->receiptNo = $receiptNo;
 		
@@ -82,7 +82,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	
 	public function recv_getDefectiveGoodByReceiptNo(){
 		
-		$result = new \com\vip\isv\delivery\DeliveryDifferenceService_getDefectiveGoodByReceiptNo_result();
+		$result = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_getDefectiveGoodByReceiptNo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -101,7 +101,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	public function send_getDetailList( $visReceiptContainerId, $size){
 		
 		$this->initInvocation("getDetailList");
-		$args = new \com\vip\isv\delivery\DeliveryDifferenceService_getDetailList_args();
+		$args = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_getDetailList_args();
 		
 		$args->visReceiptContainerId = $visReceiptContainerId;
 		
@@ -112,7 +112,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	
 	public function recv_getDetailList(){
 		
-		$result = new \com\vip\isv\delivery\DeliveryDifferenceService_getDetailList_result();
+		$result = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_getDetailList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -131,7 +131,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	public function send_getList( $vendorId, $time, $size){
 		
 		$this->initInvocation("getList");
-		$args = new \com\vip\isv\delivery\DeliveryDifferenceService_getList_args();
+		$args = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_getList_args();
 		
 		$args->vendorId = $vendorId;
 		
@@ -144,7 +144,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	
 	public function recv_getList(){
 		
-		$result = new \com\vip\isv\delivery\DeliveryDifferenceService_getList_result();
+		$result = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_getList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -163,14 +163,14 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\isv\delivery\DeliveryDifferenceService_healthCheck_args();
+		$args = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\isv\delivery\DeliveryDifferenceService_healthCheck_result();
+		$result = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -189,7 +189,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	public function send_updateReceiptContainer( $id){
 		
 		$this->initInvocation("updateReceiptContainer");
-		$args = new \com\vip\isv\delivery\DeliveryDifferenceService_updateReceiptContainer_args();
+		$args = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_updateReceiptContainer_args();
 		
 		$args->id = $id;
 		
@@ -198,7 +198,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	
 	public function recv_updateReceiptContainer(){
 		
-		$result = new \com\vip\isv\delivery\DeliveryDifferenceService_updateReceiptContainer_result();
+		$result = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_updateReceiptContainer_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -217,7 +217,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	public function send_updateReceiptContainerDetail( $id){
 		
 		$this->initInvocation("updateReceiptContainerDetail");
-		$args = new \com\vip\isv\delivery\DeliveryDifferenceService_updateReceiptContainerDetail_args();
+		$args = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_updateReceiptContainerDetail_args();
 		
 		$args->id = $id;
 		
@@ -226,7 +226,7 @@ class _DeliveryDifferenceServiceClient extends \Osp\Base\OspStub implements \com
 	
 	public function recv_updateReceiptContainerDetail(){
 		
-		$result = new \com\vip\isv\delivery\DeliveryDifferenceService_updateReceiptContainerDetail_result();
+		$result = new \Voop\com\vip\isv\delivery\DeliveryDifferenceService_updateReceiptContainerDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -813,7 +813,7 @@ class DeliveryDifferenceService_updateReceiptContainerDetail_args {
 			
 			if (!is_array($this->id)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -958,7 +958,7 @@ class DeliveryDifferenceService_getDefectiveGoodByReceiptNo_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\isv\delivery\DefectiveGood();
+					$elem0 = new \Voop\com\vip\isv\delivery\DefectiveGood();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -991,7 +991,7 @@ class DeliveryDifferenceService_getDefectiveGoodByReceiptNo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1000,7 +1000,7 @@ class DeliveryDifferenceService_getDefectiveGoodByReceiptNo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1072,7 +1072,7 @@ class DeliveryDifferenceService_getDetailList_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\isv\delivery\ReceiptDetail();
+					$elem1 = new \Voop\com\vip\isv\delivery\ReceiptDetail();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1105,7 +1105,7 @@ class DeliveryDifferenceService_getDetailList_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1114,7 +1114,7 @@ class DeliveryDifferenceService_getDetailList_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1186,7 +1186,7 @@ class DeliveryDifferenceService_getList_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\isv\delivery\ReceiptInfo();
+					$elem1 = new \Voop\com\vip\isv\delivery\ReceiptInfo();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1219,7 +1219,7 @@ class DeliveryDifferenceService_getList_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1228,7 +1228,7 @@ class DeliveryDifferenceService_getList_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1291,7 +1291,7 @@ class DeliveryDifferenceService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1314,7 +1314,7 @@ class DeliveryDifferenceService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

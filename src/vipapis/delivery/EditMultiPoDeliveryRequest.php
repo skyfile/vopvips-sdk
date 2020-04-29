@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 
 class EditMultiPoDeliveryRequest {
 	
@@ -241,7 +241,7 @@ class EditMultiPoDeliveryRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -281,7 +281,7 @@ class EditMultiPoDeliveryRequest {
 			
 			$xfer += $output->writeFieldBegin('warehouse');
 			
-			$em = new \vipapis\common\Warehouse; 
+			$em = new \Voop\vipapis\common\Warehouse; 
 			$output->writeString($em::$__names[$this->warehouse]);  
 			
 			$xfer += $output->writeFieldEnd();

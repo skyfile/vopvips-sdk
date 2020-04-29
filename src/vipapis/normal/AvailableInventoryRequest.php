@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\normal;
+namespace Voop\vipapis\normal;
 
 class AvailableInventoryRequest {
 	
@@ -140,7 +140,7 @@ class AvailableInventoryRequest {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\normal\AvailableInventory();
+						$elem0 = new \Voop\vipapis\normal\AvailableInventory();
 						$elem0->read($input);
 						
 						$this->availableInventoryList[$_size0++] = $elem0;
@@ -169,7 +169,7 @@ class AvailableInventoryRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -209,7 +209,7 @@ class AvailableInventoryRequest {
 		
 		if (!is_array($this->availableInventoryList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -218,7 +218,7 @@ class AvailableInventoryRequest {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

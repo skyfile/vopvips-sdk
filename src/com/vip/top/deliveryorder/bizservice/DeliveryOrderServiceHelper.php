@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\top\deliveryorder\bizservice;
+namespace Voop\com\vip\top\deliveryorder\bizservice;
 require_once dirname(__FILE__).'/DeliveryOrderService.php';
 class DeliveryOrderServiceHelper extends _DeliveryOrderServiceClient{
 	

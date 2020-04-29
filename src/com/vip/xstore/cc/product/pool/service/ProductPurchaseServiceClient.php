@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\product\pool\service;
+namespace Voop\com\vip\xstore\cc\product\pool\service;
 $base_path = dirname(__FILE__).'/../../../../../../../';
 require_once $base_path.'/Osp/Util/PathUtil.php';
 require_once $base_path.'/Osp/ClassLoader/ClassLoader.php';
@@ -21,7 +21,7 @@ class ProductPurchaseServiceClient{
 	private static function regis(){
 		
 		$path = \Osp\Util\PathUtil::getRootPath ();
-		$nsLoader = new \Osp\ClassLoader\ClassLoader ();
+		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
 		$nsLoader->registerNamespace ( 'com', $path );
@@ -70,7 +70,7 @@ class ProductPurchaseServiceClient{
 		
 		//$ctx->setProtocol ( \Osp\Protocol\OspProtocol::$Binary );
 		
-		return new \com\vip\xstore\cc\product\pool\service\ProductPurchaseServiceHelper();
+		return new \Voop\com\vip\xstore\cc\product\pool\service\ProductPurchaseServiceHelper();
 	}
 	
 }

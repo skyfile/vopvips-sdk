@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\size;
+namespace Voop\vipapis\size;
 require_once dirname(__FILE__).'/VendorSizeMappingService.php';
 class VendorSizeMappingServiceHelper extends _VendorSizeMappingServiceClient{
 	

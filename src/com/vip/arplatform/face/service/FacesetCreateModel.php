@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\arplatform\face\service;
+namespace Voop\com\vip\arplatform\face\service;
 
 class FacesetCreateModel {
 	
@@ -217,7 +217,7 @@ class FacesetCreateModel {
 			
 			if (!is_array($this->failed)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -239,7 +239,7 @@ class FacesetCreateModel {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -261,7 +261,7 @@ class FacesetCreateModel {
 			
 			if (!is_array($this->processing)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\brand;
+namespace Voop\vipapis\brand;
 
 class VendorBrandRelationShip {
 	
@@ -148,7 +148,7 @@ class VendorBrandRelationShip {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

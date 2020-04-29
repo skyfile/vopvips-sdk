@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\cup\freight;
+namespace Voop\vipapis\cup\freight;
 require_once dirname(__FILE__).'/FreightService.php';
 class FreightServiceHelper extends _FreightServiceClient{
 	

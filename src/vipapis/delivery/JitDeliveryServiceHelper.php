@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 require_once dirname(__FILE__).'/JitDeliveryService.php';
 class JitDeliveryServiceHelper extends _JitDeliveryServiceClient{
 	

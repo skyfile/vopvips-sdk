@@ -8,11 +8,11 @@
 *
 */
 
-namespace vipapis\puma;
+namespace Voop\vipapis\puma;
 interface ChannelPumaServiceIf{
 	
 	
-	public function getPumaProducts(\vipapis\puma\ProductQueryRequest $request);
+	public function getPumaProducts(\Voop\vipapis\puma\ProductQueryRequest $request);
 	
 	public function healthCheck();
 	
@@ -26,16 +26,16 @@ class _ChannelPumaServiceClient extends \Osp\Base\OspStub implements \vipapis\pu
 	}
 	
 	
-	public function getPumaProducts(\vipapis\puma\ProductQueryRequest $request){
+	public function getPumaProducts(\Voop\vipapis\puma\ProductQueryRequest $request){
 		
 		$this->send_getPumaProducts( $request);
 		return $this->recv_getPumaProducts();
 	}
 	
-	public function send_getPumaProducts(\vipapis\puma\ProductQueryRequest $request){
+	public function send_getPumaProducts(\Voop\vipapis\puma\ProductQueryRequest $request){
 		
 		$this->initInvocation("getPumaProducts");
-		$args = new \vipapis\puma\ChannelPumaService_getPumaProducts_args();
+		$args = new \Voop\vipapis\puma\ChannelPumaService_getPumaProducts_args();
 		
 		$args->request = $request;
 		
@@ -44,7 +44,7 @@ class _ChannelPumaServiceClient extends \Osp\Base\OspStub implements \vipapis\pu
 	
 	public function recv_getPumaProducts(){
 		
-		$result = new \vipapis\puma\ChannelPumaService_getPumaProducts_result();
+		$result = new \Voop\vipapis\puma\ChannelPumaService_getPumaProducts_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,14 +63,14 @@ class _ChannelPumaServiceClient extends \Osp\Base\OspStub implements \vipapis\pu
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\puma\ChannelPumaService_healthCheck_args();
+		$args = new \Voop\vipapis\puma\ChannelPumaService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\puma\ChannelPumaService_healthCheck_result();
+		$result = new \Voop\vipapis\puma\ChannelPumaService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -125,7 +125,7 @@ class ChannelPumaService_getPumaProducts_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\puma\ProductQueryRequest();
+			$this->request = new \Voop\vipapis\puma\ProductQueryRequest();
 			$this->request->read($input);
 			
 		}
@@ -146,7 +146,7 @@ class ChannelPumaService_getPumaProducts_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -249,7 +249,7 @@ class ChannelPumaService_getPumaProducts_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\puma\ProductQueryResponse();
+			$this->success = new \Voop\vipapis\puma\ProductQueryResponse();
 			$this->success->read($input);
 			
 		}
@@ -272,7 +272,7 @@ class ChannelPumaService_getPumaProducts_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -331,7 +331,7 @@ class ChannelPumaService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -354,7 +354,7 @@ class ChannelPumaService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

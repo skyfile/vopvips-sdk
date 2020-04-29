@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\newretail;
+namespace Voop\com\vip\vop\cup\api\newretail;
 
 class GetAfterSaleApplyIdsResponse {
 	
@@ -130,7 +130,7 @@ class GetAfterSaleApplyIdsResponse {
 			
 			if (!is_array($this->apply_ids)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\order;
+namespace Voop\com\vip\vop\cup\api\order;
 
 class CreateOrderReq {
 	
@@ -81,7 +81,7 @@ class CreateOrderReq {
 				
 				$needSkip = false;
 				
-				$this->order_basic_info = new \com\vip\vop\cup\api\order\OrderBasicInfo();
+				$this->order_basic_info = new \Voop\com\vip\vop\cup\api\order\OrderBasicInfo();
 				$this->order_basic_info->read($input);
 				
 			}
@@ -102,7 +102,7 @@ class CreateOrderReq {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\cup\api\order\OrderGoodsInfo();
+						$elem0 = new \Voop\com\vip\vop\cup\api\order\OrderGoodsInfo();
 						$elem0->read($input);
 						
 						$this->order_goods_list[$_size0++] = $elem0;
@@ -124,7 +124,7 @@ class CreateOrderReq {
 				
 				$needSkip = false;
 				
-				$this->order_consignee_info = new \com\vip\vop\cup\api\order\OrderConsigneeInfo();
+				$this->order_consignee_info = new \Voop\com\vip\vop\cup\api\order\OrderConsigneeInfo();
 				$this->order_consignee_info->read($input);
 				
 			}
@@ -154,7 +154,7 @@ class CreateOrderReq {
 		
 		if (!is_object($this->order_basic_info)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->order_basic_info->write($output);
@@ -165,7 +165,7 @@ class CreateOrderReq {
 		
 		if (!is_array($this->order_goods_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -174,7 +174,7 @@ class CreateOrderReq {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -189,7 +189,7 @@ class CreateOrderReq {
 		
 		if (!is_object($this->order_consignee_info)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->order_consignee_info->write($output);

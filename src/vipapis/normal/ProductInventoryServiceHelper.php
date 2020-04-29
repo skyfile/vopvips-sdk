@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\normal;
+namespace Voop\vipapis\normal;
 require_once dirname(__FILE__).'/ProductInventoryService.php';
 class ProductInventoryServiceHelper extends _ProductInventoryServiceClient{
 	

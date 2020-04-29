@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\transferring\api;
+namespace Voop\vipapis\xstore\cc\transferring\api;
 require_once dirname(__FILE__).'/TransferringOrderApiService.php';
 class TransferringOrderApiServiceHelper extends _TransferringOrderApiServiceClient{
 	

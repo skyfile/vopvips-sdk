@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\store;
+namespace Voop\vipapis\store;
 
 class StoreQueryRequest {
 	
@@ -246,7 +246,7 @@ class StoreQueryRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -274,7 +274,7 @@ class StoreQueryRequest {
 			
 			if (!is_array($this->store_sn)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -296,7 +296,7 @@ class StoreQueryRequest {
 			
 			if (!is_array($this->store_names)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

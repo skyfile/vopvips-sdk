@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class PrepayInfoRequestModel {
 	
@@ -179,7 +179,7 @@ class PrepayInfoRequestModel {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\pms\data\service\PrepayMerchandiseModel();
+						$elem1 = new \Voop\com\vip\pms\data\service\PrepayMerchandiseModel();
 						$elem1->read($input);
 						
 						$this->merchandiseModelList[$_size1++] = $elem1;
@@ -236,7 +236,7 @@ class PrepayInfoRequestModel {
 			
 			if (!is_array($this->merchandiseIdList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -276,7 +276,7 @@ class PrepayInfoRequestModel {
 			
 			if (!is_array($this->merchandiseModelList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -285,7 +285,7 @@ class PrepayInfoRequestModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

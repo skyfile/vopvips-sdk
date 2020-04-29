@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\sce\vlg\osp\wms\service;
+namespace Voop\com\vip\sce\vlg\osp\wms\service;
 
 class OspOutWmsPoBatchFModel {
 	
@@ -310,7 +310,7 @@ class OspOutWmsPoBatchFModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\sce\vlg\osp\wms\service\OspOutWmsPoBatchDxFModel();
+						$elem0 = new \Voop\com\vip\sce\vlg\osp\wms\service\OspOutWmsPoBatchDxFModel();
 						$elem0->read($input);
 						
 						$this->product_List[$_size0++] = $elem0;
@@ -454,7 +454,7 @@ class OspOutWmsPoBatchFModel {
 		
 		if (!is_array($this->product_List)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -463,7 +463,7 @@ class OspOutWmsPoBatchFModel {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

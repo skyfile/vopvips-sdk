@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\jitx;
+namespace Voop\vipapis\jitx;
 
 class BelleDeliveryOrder {
 	
@@ -259,7 +259,7 @@ class BelleDeliveryOrder {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\jitx\WarehousingOrderDetail();
+						$elem1 = new \Voop\vipapis\jitx\WarehousingOrderDetail();
 						$elem1->read($input);
 						
 						$this->warehousing_order_details[$_size1++] = $elem1;
@@ -328,7 +328,7 @@ class BelleDeliveryOrder {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -360,7 +360,7 @@ class BelleDeliveryOrder {
 			
 			if (!is_array($this->available_warehouses)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -418,7 +418,7 @@ class BelleDeliveryOrder {
 			
 			if (!is_array($this->warehousing_order_details)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -427,7 +427,7 @@ class BelleDeliveryOrder {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipmax\order;
+namespace Voop\vipapis\vipmax\order;
 
 class VipmaxRefundOrder {
 	
@@ -110,7 +110,7 @@ class VipmaxRefundOrder {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\vipmax\order\VipmaxRefundOrderDetail();
+						$elem0 = new \Voop\vipapis\vipmax\order\VipmaxRefundOrderDetail();
 						$elem0->read($input);
 						
 						$this->refund_order_detail[$_size0++] = $elem0;
@@ -129,7 +129,7 @@ class VipmaxRefundOrder {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -160,7 +160,7 @@ class VipmaxRefundOrder {
 		
 		if (!is_array($this->refund_order_detail)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -169,7 +169,7 @@ class VipmaxRefundOrder {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

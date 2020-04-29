@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\order;
+namespace Voop\com\vip\vop\vcloud\order;
 
 class WayBillResponse {
 	
@@ -71,7 +71,7 @@ class WayBillResponse {
 				
 				$needSkip = false;
 				
-				$this->pagination = new \com\vip\vop\vcloud\common\api\Pagination();
+				$this->pagination = new \Voop\com\vip\vop\vcloud\common\api\Pagination();
 				$this->pagination->read($input);
 				
 			}
@@ -92,7 +92,7 @@ class WayBillResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\vcloud\order\WayBill();
+						$elem0 = new \Voop\com\vip\vop\vcloud\order\WayBill();
 						$elem0->read($input);
 						
 						$this->wayBills[$_size0++] = $elem0;
@@ -134,7 +134,7 @@ class WayBillResponse {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -149,7 +149,7 @@ class WayBillResponse {
 			
 			if (!is_array($this->wayBills)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -158,7 +158,7 @@ class WayBillResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\bill;
+namespace Voop\com\vip\vop\cup\api\bill;
 
 class BillHeaderInfo {
 	
@@ -190,7 +190,7 @@ class BillHeaderInfo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\cup\api\bill\BillDetailInfo();
+						$elem0 = new \Voop\com\vip\vop\cup\api\bill\BillDetailInfo();
 						$elem0->read($input);
 						
 						$this->bill_detail_info_list[$_size0++] = $elem0;
@@ -260,7 +260,7 @@ class BillHeaderInfo {
 		
 		if (!is_array($this->bill_detail_info_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -269,7 +269,7 @@ class BillHeaderInfo {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

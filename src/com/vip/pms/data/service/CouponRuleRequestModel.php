@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class CouponRuleRequestModel {
 	
@@ -61,7 +61,7 @@ class CouponRuleRequestModel {
 				
 				$needSkip = false;
 				
-				$this->couponRuleCoreModel = new \com\vip\pms\data\service\CouponRuleCoreModel();
+				$this->couponRuleCoreModel = new \Voop\com\vip\pms\data\service\CouponRuleCoreModel();
 				$this->couponRuleCoreModel->read($input);
 				
 			}
@@ -91,7 +91,7 @@ class CouponRuleRequestModel {
 		
 		if (!is_object($this->couponRuleCoreModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->couponRuleCoreModel->write($output);

@@ -8,15 +8,15 @@
 *
 */
 
-namespace vip\vop\omni\inventory;
+namespace Voop\vip\vop\omni\inventory;
 interface OmniInventoryServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function updateStoreInventory(\com\vip\vop\omni\inventory\InventoryUpdateRequest $request);
+	public function updateStoreInventory(\Voop\com\vip\vop\omni\inventory\InventoryUpdateRequest $request);
 	
-	public function updateStoreInventory4Inner(\com\vip\vop\omni\inventory\InventoryUpdateRequest $request);
+	public function updateStoreInventory4Inner(\Voop\com\vip\vop\omni\inventory\InventoryUpdateRequest $request);
 	
 }
 
@@ -37,14 +37,14 @@ class _OmniInventoryServiceClient extends \Osp\Base\OspStub implements \vip\vop\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vip\vop\omni\inventory\OmniInventoryService_healthCheck_args();
+		$args = new \Voop\vip\vop\omni\inventory\OmniInventoryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vip\vop\omni\inventory\OmniInventoryService_healthCheck_result();
+		$result = new \Voop\vip\vop\omni\inventory\OmniInventoryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -54,16 +54,16 @@ class _OmniInventoryServiceClient extends \Osp\Base\OspStub implements \vip\vop\
 	}
 	
 	
-	public function updateStoreInventory(\com\vip\vop\omni\inventory\InventoryUpdateRequest $request){
+	public function updateStoreInventory(\Voop\com\vip\vop\omni\inventory\InventoryUpdateRequest $request){
 		
 		$this->send_updateStoreInventory( $request);
 		return $this->recv_updateStoreInventory();
 	}
 	
-	public function send_updateStoreInventory(\com\vip\vop\omni\inventory\InventoryUpdateRequest $request){
+	public function send_updateStoreInventory(\Voop\com\vip\vop\omni\inventory\InventoryUpdateRequest $request){
 		
 		$this->initInvocation("updateStoreInventory");
-		$args = new \vip\vop\omni\inventory\OmniInventoryService_updateStoreInventory_args();
+		$args = new \Voop\vip\vop\omni\inventory\OmniInventoryService_updateStoreInventory_args();
 		
 		$args->request = $request;
 		
@@ -72,22 +72,22 @@ class _OmniInventoryServiceClient extends \Osp\Base\OspStub implements \vip\vop\
 	
 	public function recv_updateStoreInventory(){
 		
-		$result = new \vip\vop\omni\inventory\OmniInventoryService_updateStoreInventory_result();
+		$result = new \Voop\vip\vop\omni\inventory\OmniInventoryService_updateStoreInventory_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function updateStoreInventory4Inner(\com\vip\vop\omni\inventory\InventoryUpdateRequest $request){
+	public function updateStoreInventory4Inner(\Voop\com\vip\vop\omni\inventory\InventoryUpdateRequest $request){
 		
 		$this->send_updateStoreInventory4Inner( $request);
 		return $this->recv_updateStoreInventory4Inner();
 	}
 	
-	public function send_updateStoreInventory4Inner(\com\vip\vop\omni\inventory\InventoryUpdateRequest $request){
+	public function send_updateStoreInventory4Inner(\Voop\com\vip\vop\omni\inventory\InventoryUpdateRequest $request){
 		
 		$this->initInvocation("updateStoreInventory4Inner");
-		$args = new \vip\vop\omni\inventory\OmniInventoryService_updateStoreInventory4Inner_args();
+		$args = new \Voop\vip\vop\omni\inventory\OmniInventoryService_updateStoreInventory4Inner_args();
 		
 		$args->request = $request;
 		
@@ -96,7 +96,7 @@ class _OmniInventoryServiceClient extends \Osp\Base\OspStub implements \vip\vop\
 	
 	public function recv_updateStoreInventory4Inner(){
 		
-		$result = new \vip\vop\omni\inventory\OmniInventoryService_updateStoreInventory4Inner_result();
+		$result = new \Voop\vip\vop\omni\inventory\OmniInventoryService_updateStoreInventory4Inner_result();
 		$this->receive_base($result);
 		
 	}
@@ -193,7 +193,7 @@ class OmniInventoryService_updateStoreInventory_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\vop\omni\inventory\InventoryUpdateRequest();
+			$this->request = new \Voop\com\vip\vop\omni\inventory\InventoryUpdateRequest();
 			$this->request->read($input);
 			
 		}
@@ -214,7 +214,7 @@ class OmniInventoryService_updateStoreInventory_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -271,7 +271,7 @@ class OmniInventoryService_updateStoreInventory4Inner_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\vop\omni\inventory\InventoryUpdateRequest();
+			$this->request = new \Voop\com\vip\vop\omni\inventory\InventoryUpdateRequest();
 			$this->request->read($input);
 			
 		}
@@ -292,7 +292,7 @@ class OmniInventoryService_updateStoreInventory4Inner_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -349,7 +349,7 @@ class OmniInventoryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -372,7 +372,7 @@ class OmniInventoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

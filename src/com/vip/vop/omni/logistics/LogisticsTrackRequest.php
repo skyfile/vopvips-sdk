@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\omni\logistics;
+namespace Voop\com\vip\vop\omni\logistics;
 
 class LogisticsTrackRequest {
 	
@@ -133,7 +133,7 @@ class LogisticsTrackRequest {
 		
 		if (!is_array($this->order_id)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

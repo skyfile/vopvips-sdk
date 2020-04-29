@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\pg;
+namespace Voop\vipapis\pg;
 
 class Order {
 	
@@ -308,7 +308,7 @@ class Order {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\pda\order\receiving;
+namespace Voop\com\vip\xstore\pda\order\receiving;
 require_once dirname(__FILE__).'/ReceivingService.php';
 class ReceivingServiceHelper extends _ReceivingServiceClient{
 	

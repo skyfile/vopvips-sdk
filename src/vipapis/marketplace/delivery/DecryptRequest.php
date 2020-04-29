@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\delivery;
+namespace Voop\vipapis\marketplace\delivery;
 
 class DecryptRequest {
 	
@@ -80,7 +80,7 @@ class DecryptRequest {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\marketplace\delivery\EncryptData();
+						$elem1 = new \Voop\vipapis\marketplace\delivery\EncryptData();
 						$elem1->read($input);
 						
 						$this->encrypt_datas[$_size1++] = $elem1;
@@ -143,7 +143,7 @@ class DecryptRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -164,7 +164,7 @@ class DecryptRequest {
 		
 		if (!is_array($this->encrypt_datas)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -173,7 +173,7 @@ class DecryptRequest {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -190,14 +190,14 @@ class DecryptRequest {
 			
 			if (!is_array($this->extend_infos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
 			foreach ($this->extend_infos as $kiter0 => $viter0){
 				
 				
-				$em = new \vipapis\marketplace\delivery\DecryptExtendKey; 
+				$em = new \Voop\vipapis\marketplace\delivery\DecryptExtendKey; 
 				$output->writeString($em::$__names[$kiter0]);  
 				
 				$xfer += $output->writeString($viter0);

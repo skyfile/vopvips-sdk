@@ -8,11 +8,11 @@
 *
 */
 
-namespace vipapis\marketplace\jingdong;
+namespace Voop\vipapis\marketplace\jingdong;
 interface JDProductServiceIf{
 	
 	
-	public function getOrderActive(\vipapis\marketplace\jingdong\GetOrderActiveRequest $request);
+	public function getOrderActive(\Voop\vipapis\marketplace\jingdong\GetOrderActiveRequest $request);
 	
 	public function getSkuCommission( $sku_ids);
 	
@@ -32,16 +32,16 @@ class _JDProductServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	}
 	
 	
-	public function getOrderActive(\vipapis\marketplace\jingdong\GetOrderActiveRequest $request){
+	public function getOrderActive(\Voop\vipapis\marketplace\jingdong\GetOrderActiveRequest $request){
 		
 		$this->send_getOrderActive( $request);
 		return $this->recv_getOrderActive();
 	}
 	
-	public function send_getOrderActive(\vipapis\marketplace\jingdong\GetOrderActiveRequest $request){
+	public function send_getOrderActive(\Voop\vipapis\marketplace\jingdong\GetOrderActiveRequest $request){
 		
 		$this->initInvocation("getOrderActive");
-		$args = new \vipapis\marketplace\jingdong\JDProductService_getOrderActive_args();
+		$args = new \Voop\vipapis\marketplace\jingdong\JDProductService_getOrderActive_args();
 		
 		$args->request = $request;
 		
@@ -50,7 +50,7 @@ class _JDProductServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	
 	public function recv_getOrderActive(){
 		
-		$result = new \vipapis\marketplace\jingdong\JDProductService_getOrderActive_result();
+		$result = new \Voop\vipapis\marketplace\jingdong\JDProductService_getOrderActive_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -69,7 +69,7 @@ class _JDProductServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	public function send_getSkuCommission( $sku_ids){
 		
 		$this->initInvocation("getSkuCommission");
-		$args = new \vipapis\marketplace\jingdong\JDProductService_getSkuCommission_args();
+		$args = new \Voop\vipapis\marketplace\jingdong\JDProductService_getSkuCommission_args();
 		
 		$args->sku_ids = $sku_ids;
 		
@@ -78,7 +78,7 @@ class _JDProductServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	
 	public function recv_getSkuCommission(){
 		
-		$result = new \vipapis\marketplace\jingdong\JDProductService_getSkuCommission_result();
+		$result = new \Voop\vipapis\marketplace\jingdong\JDProductService_getSkuCommission_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -97,14 +97,14 @@ class _JDProductServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\marketplace\jingdong\JDProductService_healthCheck_args();
+		$args = new \Voop\vipapis\marketplace\jingdong\JDProductService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\marketplace\jingdong\JDProductService_healthCheck_result();
+		$result = new \Voop\vipapis\marketplace\jingdong\JDProductService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -123,7 +123,7 @@ class _JDProductServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	public function send_skuOffShelf( $sku_id){
 		
 		$this->initInvocation("skuOffShelf");
-		$args = new \vipapis\marketplace\jingdong\JDProductService_skuOffShelf_args();
+		$args = new \Voop\vipapis\marketplace\jingdong\JDProductService_skuOffShelf_args();
 		
 		$args->sku_id = $sku_id;
 		
@@ -132,7 +132,7 @@ class _JDProductServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	
 	public function recv_skuOffShelf(){
 		
-		$result = new \vipapis\marketplace\jingdong\JDProductService_skuOffShelf_result();
+		$result = new \Voop\vipapis\marketplace\jingdong\JDProductService_skuOffShelf_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -151,7 +151,7 @@ class _JDProductServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	public function send_skuOnShelf( $sku_id){
 		
 		$this->initInvocation("skuOnShelf");
-		$args = new \vipapis\marketplace\jingdong\JDProductService_skuOnShelf_args();
+		$args = new \Voop\vipapis\marketplace\jingdong\JDProductService_skuOnShelf_args();
 		
 		$args->sku_id = $sku_id;
 		
@@ -160,7 +160,7 @@ class _JDProductServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	
 	public function recv_skuOnShelf(){
 		
-		$result = new \vipapis\marketplace\jingdong\JDProductService_skuOnShelf_result();
+		$result = new \Voop\vipapis\marketplace\jingdong\JDProductService_skuOnShelf_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -215,7 +215,7 @@ class JDProductService_getOrderActive_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\jingdong\GetOrderActiveRequest();
+			$this->request = new \Voop\vipapis\marketplace\jingdong\GetOrderActiveRequest();
 			$this->request->read($input);
 			
 		}
@@ -236,7 +236,7 @@ class JDProductService_getOrderActive_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -331,7 +331,7 @@ class JDProductService_getSkuCommission_args {
 		
 		if (!is_array($this->sku_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeSetBegin();
@@ -590,7 +590,7 @@ class JDProductService_getOrderActive_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\marketplace\jingdong\OrderActive();
+					$elem0 = new \Voop\vipapis\marketplace\jingdong\OrderActive();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -623,7 +623,7 @@ class JDProductService_getOrderActive_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -632,7 +632,7 @@ class JDProductService_getOrderActive_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -704,7 +704,7 @@ class JDProductService_getSkuCommission_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\marketplace\jingdong\SkuCommission();
+					$elem1 = new \Voop\vipapis\marketplace\jingdong\SkuCommission();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -737,7 +737,7 @@ class JDProductService_getSkuCommission_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -746,7 +746,7 @@ class JDProductService_getSkuCommission_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -809,7 +809,7 @@ class JDProductService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -832,7 +832,7 @@ class JDProductService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -891,7 +891,7 @@ class JDProductService_skuOffShelf_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\jingdong\SkuOffShelfResponse();
+			$this->success = new \Voop\vipapis\marketplace\jingdong\SkuOffShelfResponse();
 			$this->success->read($input);
 			
 		}
@@ -914,7 +914,7 @@ class JDProductService_skuOffShelf_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -973,7 +973,7 @@ class JDProductService_skuOnShelf_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\jingdong\SkuOnShelfResponse();
+			$this->success = new \Voop\vipapis\marketplace\jingdong\SkuOnShelfResponse();
 			$this->success->read($input);
 			
 		}
@@ -996,7 +996,7 @@ class JDProductService_skuOnShelf_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

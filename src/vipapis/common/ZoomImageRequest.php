@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\common;
+namespace Voop\vipapis\common;
 
 class ZoomImageRequest {
 	
@@ -108,7 +108,7 @@ class ZoomImageRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

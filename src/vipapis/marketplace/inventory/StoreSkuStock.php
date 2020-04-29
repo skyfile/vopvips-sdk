@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\inventory;
+namespace Voop\vipapis\marketplace\inventory;
 
 class StoreSkuStock {
 	
@@ -128,7 +128,7 @@ class StoreSkuStock {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

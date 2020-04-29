@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service;
+namespace Voop\com\vip\xstore\user\face\service;
 
 class XstoreCameraStateLogParam {
 	
@@ -160,7 +160,7 @@ class XstoreCameraStateLogParam {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\xstore\user\face\service\XstoreCameraStateLogModel();
+						$elem0 = new \Voop\com\vip\xstore\user\face\service\XstoreCameraStateLogModel();
 						$elem0->read($input);
 						
 						$this->cameraStateLogs[$_size0++] = $elem0;
@@ -248,7 +248,7 @@ class XstoreCameraStateLogParam {
 			
 			if (!is_array($this->cameraStateLogs)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -257,7 +257,7 @@ class XstoreCameraStateLogParam {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

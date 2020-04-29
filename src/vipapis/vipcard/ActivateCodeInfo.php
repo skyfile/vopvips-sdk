@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipcard;
+namespace Voop\vipapis\vipcard;
 
 class ActivateCodeInfo {
 	
@@ -88,7 +88,7 @@ class ActivateCodeInfo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

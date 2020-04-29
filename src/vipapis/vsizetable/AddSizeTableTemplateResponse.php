@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vsizetable;
+namespace Voop\vipapis\vsizetable;
 
 class AddSizeTableTemplateResponse {
 	
@@ -68,7 +68,7 @@ class AddSizeTableTemplateResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

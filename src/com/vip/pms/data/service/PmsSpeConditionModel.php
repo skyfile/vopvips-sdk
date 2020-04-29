@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class PmsSpeConditionModel {
 	
@@ -100,7 +100,7 @@ class PmsSpeConditionModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\pms\data\service\PmsSpeConfigModel();
+						$elem0 = new \Voop\com\vip\pms\data\service\PmsSpeConfigModel();
 						$elem0->read($input);
 						
 						$this->customerTagList[$_size0++] = $elem0;
@@ -131,7 +131,7 @@ class PmsSpeConditionModel {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\pms\data\service\PmsSpeConfigModel();
+						$elem1 = new \Voop\com\vip\pms\data\service\PmsSpeConfigModel();
 						$elem1->read($input);
 						
 						$this->customerSrcList[$_size1++] = $elem1;
@@ -162,7 +162,7 @@ class PmsSpeConditionModel {
 						
 						$elem2 = null;
 						
-						$elem2 = new \com\vip\pms\data\service\PmsCustomerPageConfigModel();
+						$elem2 = new \Voop\com\vip\pms\data\service\PmsCustomerPageConfigModel();
 						$elem2->read($input);
 						
 						$this->customerPageConfigList[$_size2++] = $elem2;
@@ -193,7 +193,7 @@ class PmsSpeConditionModel {
 						
 						$elem3 = null;
 						
-						$elem3 = new \com\vip\pms\data\service\PmsActAudienceConfigModel();
+						$elem3 = new \Voop\com\vip\pms\data\service\PmsActAudienceConfigModel();
 						$elem3->read($input);
 						
 						$this->audienceConfigList[$_size3++] = $elem3;
@@ -235,7 +235,7 @@ class PmsSpeConditionModel {
 			
 			if (!is_array($this->customerTagList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -244,7 +244,7 @@ class PmsSpeConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -263,7 +263,7 @@ class PmsSpeConditionModel {
 			
 			if (!is_array($this->customerSrcList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -272,7 +272,7 @@ class PmsSpeConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -291,7 +291,7 @@ class PmsSpeConditionModel {
 			
 			if (!is_array($this->customerPageConfigList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -300,7 +300,7 @@ class PmsSpeConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -319,7 +319,7 @@ class PmsSpeConditionModel {
 			
 			if (!is_array($this->audienceConfigList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -328,7 +328,7 @@ class PmsSpeConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

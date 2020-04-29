@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\jingdong;
+namespace Voop\vipapis\marketplace\jingdong;
 require_once dirname(__FILE__).'/JDProductService.php';
 class JDProductServiceHelper extends _JDProductServiceClient{
 	

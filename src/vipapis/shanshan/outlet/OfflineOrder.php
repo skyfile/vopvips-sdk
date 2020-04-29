@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\shanshan\outlet;
+namespace Voop\vipapis\shanshan\outlet;
 
 class OfflineOrder {
 	
@@ -81,7 +81,7 @@ class OfflineOrder {
 				
 				$needSkip = false;
 				
-				$this->order_info = new \vipapis\shanshan\outlet\OrderInfo();
+				$this->order_info = new \Voop\vipapis\shanshan\outlet\OrderInfo();
 				$this->order_info->read($input);
 				
 			}
@@ -102,7 +102,7 @@ class OfflineOrder {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\shanshan\outlet\OrderProdItem();
+						$elem1 = new \Voop\vipapis\shanshan\outlet\OrderProdItem();
 						$elem1->read($input);
 						
 						$this->order_prod_items[$_size1++] = $elem1;
@@ -133,7 +133,7 @@ class OfflineOrder {
 						
 						$elem2 = null;
 						
-						$elem2 = new \vipapis\shanshan\outlet\OrderPayInfo();
+						$elem2 = new \Voop\vipapis\shanshan\outlet\OrderPayInfo();
 						$elem2->read($input);
 						
 						$this->order_pay_infos[$_size2++] = $elem2;
@@ -152,7 +152,7 @@ class OfflineOrder {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -173,7 +173,7 @@ class OfflineOrder {
 		
 		if (!is_object($this->order_info)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->order_info->write($output);
@@ -184,7 +184,7 @@ class OfflineOrder {
 		
 		if (!is_array($this->order_prod_items)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -193,7 +193,7 @@ class OfflineOrder {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -208,7 +208,7 @@ class OfflineOrder {
 		
 		if (!is_array($this->order_pay_infos)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -217,7 +217,7 @@ class OfflineOrder {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

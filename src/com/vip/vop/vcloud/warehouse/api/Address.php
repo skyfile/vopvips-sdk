@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\warehouse\api;
+namespace Voop\com\vip\vop\vcloud\warehouse\api;
 
 class Address {
 	

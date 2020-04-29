@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 
 class ConfirmRefuseResultRequest {
 	
@@ -190,7 +190,7 @@ class ConfirmRefuseResultRequest {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\delivery\RefuseGoods();
+						$elem1 = new \Voop\vipapis\delivery\RefuseGoods();
 						$elem1->read($input);
 						
 						$this->goods_list[$_size1++] = $elem1;
@@ -209,7 +209,7 @@ class ConfirmRefuseResultRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -264,7 +264,7 @@ class ConfirmRefuseResultRequest {
 		
 		if (!is_array($this->goods_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -273,7 +273,7 @@ class ConfirmRefuseResultRequest {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

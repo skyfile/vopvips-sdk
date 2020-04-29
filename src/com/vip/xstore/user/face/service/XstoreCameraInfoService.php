@@ -8,25 +8,25 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service;
+namespace Voop\com\vip\xstore\user\face\service;
 interface XstoreCameraInfoServiceIf{
 	
 	
-	public function batchDeleteCamera(\com\vip\xstore\user\face\service\XstoreCameraBatchDelParam $delParam);
+	public function batchDeleteCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraBatchDelParam $delParam);
 	
-	public function createCamera(\com\vip\xstore\user\face\service\XstoreCameraInfoModel $xstoreCameraInfoModel);
+	public function createCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraInfoModel $xstoreCameraInfoModel);
 	
-	public function deleteCamera(\com\vip\xstore\user\face\service\XstoreCameraDelParam $delParam);
+	public function deleteCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraDelParam $delParam);
 	
 	public function healthCheck();
 	
-	public function queryCameraList(\com\vip\xstore\user\face\service\XstoreCameraPageReqParam $pageReqParam);
+	public function queryCameraList(\Voop\com\vip\xstore\user\face\service\XstoreCameraPageReqParam $pageReqParam);
 	
-	public function selectCameraStateLog(\com\vip\xstore\user\face\service\XstoreCameraStateLogReqParam $pageReqParam);
+	public function selectCameraStateLog(\Voop\com\vip\xstore\user\face\service\XstoreCameraStateLogReqParam $pageReqParam);
 	
-	public function updateCamera(\com\vip\xstore\user\face\service\XstoreCameraUpdateParam $updateParam);
+	public function updateCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraUpdateParam $updateParam);
 	
-	public function uploadCameraStateLog(\com\vip\xstore\user\face\service\XstoreCameraStateLogParam $xstoreCameraStateLogParam);
+	public function uploadCameraStateLog(\Voop\com\vip\xstore\user\face\service\XstoreCameraStateLogParam $xstoreCameraStateLogParam);
 	
 }
 
@@ -38,16 +38,16 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	}
 	
 	
-	public function batchDeleteCamera(\com\vip\xstore\user\face\service\XstoreCameraBatchDelParam $delParam){
+	public function batchDeleteCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraBatchDelParam $delParam){
 		
 		$this->send_batchDeleteCamera( $delParam);
 		return $this->recv_batchDeleteCamera();
 	}
 	
-	public function send_batchDeleteCamera(\com\vip\xstore\user\face\service\XstoreCameraBatchDelParam $delParam){
+	public function send_batchDeleteCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraBatchDelParam $delParam){
 		
 		$this->initInvocation("batchDeleteCamera");
-		$args = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_batchDeleteCamera_args();
+		$args = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_batchDeleteCamera_args();
 		
 		$args->delParam = $delParam;
 		
@@ -56,7 +56,7 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_batchDeleteCamera(){
 		
-		$result = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_batchDeleteCamera_result();
+		$result = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_batchDeleteCamera_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -66,16 +66,16 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	}
 	
 	
-	public function createCamera(\com\vip\xstore\user\face\service\XstoreCameraInfoModel $xstoreCameraInfoModel){
+	public function createCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraInfoModel $xstoreCameraInfoModel){
 		
 		$this->send_createCamera( $xstoreCameraInfoModel);
 		return $this->recv_createCamera();
 	}
 	
-	public function send_createCamera(\com\vip\xstore\user\face\service\XstoreCameraInfoModel $xstoreCameraInfoModel){
+	public function send_createCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraInfoModel $xstoreCameraInfoModel){
 		
 		$this->initInvocation("createCamera");
-		$args = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_createCamera_args();
+		$args = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_createCamera_args();
 		
 		$args->xstoreCameraInfoModel = $xstoreCameraInfoModel;
 		
@@ -84,7 +84,7 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_createCamera(){
 		
-		$result = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_createCamera_result();
+		$result = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_createCamera_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -94,16 +94,16 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	}
 	
 	
-	public function deleteCamera(\com\vip\xstore\user\face\service\XstoreCameraDelParam $delParam){
+	public function deleteCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraDelParam $delParam){
 		
 		$this->send_deleteCamera( $delParam);
 		return $this->recv_deleteCamera();
 	}
 	
-	public function send_deleteCamera(\com\vip\xstore\user\face\service\XstoreCameraDelParam $delParam){
+	public function send_deleteCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraDelParam $delParam){
 		
 		$this->initInvocation("deleteCamera");
-		$args = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_deleteCamera_args();
+		$args = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_deleteCamera_args();
 		
 		$args->delParam = $delParam;
 		
@@ -112,7 +112,7 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_deleteCamera(){
 		
-		$result = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_deleteCamera_result();
+		$result = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_deleteCamera_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -131,14 +131,14 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_healthCheck_args();
+		$args = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_healthCheck_result();
+		$result = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -148,16 +148,16 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	}
 	
 	
-	public function queryCameraList(\com\vip\xstore\user\face\service\XstoreCameraPageReqParam $pageReqParam){
+	public function queryCameraList(\Voop\com\vip\xstore\user\face\service\XstoreCameraPageReqParam $pageReqParam){
 		
 		$this->send_queryCameraList( $pageReqParam);
 		return $this->recv_queryCameraList();
 	}
 	
-	public function send_queryCameraList(\com\vip\xstore\user\face\service\XstoreCameraPageReqParam $pageReqParam){
+	public function send_queryCameraList(\Voop\com\vip\xstore\user\face\service\XstoreCameraPageReqParam $pageReqParam){
 		
 		$this->initInvocation("queryCameraList");
-		$args = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_queryCameraList_args();
+		$args = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_queryCameraList_args();
 		
 		$args->pageReqParam = $pageReqParam;
 		
@@ -166,7 +166,7 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_queryCameraList(){
 		
-		$result = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_queryCameraList_result();
+		$result = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_queryCameraList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -176,16 +176,16 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	}
 	
 	
-	public function selectCameraStateLog(\com\vip\xstore\user\face\service\XstoreCameraStateLogReqParam $pageReqParam){
+	public function selectCameraStateLog(\Voop\com\vip\xstore\user\face\service\XstoreCameraStateLogReqParam $pageReqParam){
 		
 		$this->send_selectCameraStateLog( $pageReqParam);
 		return $this->recv_selectCameraStateLog();
 	}
 	
-	public function send_selectCameraStateLog(\com\vip\xstore\user\face\service\XstoreCameraStateLogReqParam $pageReqParam){
+	public function send_selectCameraStateLog(\Voop\com\vip\xstore\user\face\service\XstoreCameraStateLogReqParam $pageReqParam){
 		
 		$this->initInvocation("selectCameraStateLog");
-		$args = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_selectCameraStateLog_args();
+		$args = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_selectCameraStateLog_args();
 		
 		$args->pageReqParam = $pageReqParam;
 		
@@ -194,7 +194,7 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_selectCameraStateLog(){
 		
-		$result = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_selectCameraStateLog_result();
+		$result = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_selectCameraStateLog_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -204,16 +204,16 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	}
 	
 	
-	public function updateCamera(\com\vip\xstore\user\face\service\XstoreCameraUpdateParam $updateParam){
+	public function updateCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraUpdateParam $updateParam){
 		
 		$this->send_updateCamera( $updateParam);
 		return $this->recv_updateCamera();
 	}
 	
-	public function send_updateCamera(\com\vip\xstore\user\face\service\XstoreCameraUpdateParam $updateParam){
+	public function send_updateCamera(\Voop\com\vip\xstore\user\face\service\XstoreCameraUpdateParam $updateParam){
 		
 		$this->initInvocation("updateCamera");
-		$args = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_updateCamera_args();
+		$args = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_updateCamera_args();
 		
 		$args->updateParam = $updateParam;
 		
@@ -222,7 +222,7 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_updateCamera(){
 		
-		$result = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_updateCamera_result();
+		$result = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_updateCamera_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -232,16 +232,16 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	}
 	
 	
-	public function uploadCameraStateLog(\com\vip\xstore\user\face\service\XstoreCameraStateLogParam $xstoreCameraStateLogParam){
+	public function uploadCameraStateLog(\Voop\com\vip\xstore\user\face\service\XstoreCameraStateLogParam $xstoreCameraStateLogParam){
 		
 		$this->send_uploadCameraStateLog( $xstoreCameraStateLogParam);
 		return $this->recv_uploadCameraStateLog();
 	}
 	
-	public function send_uploadCameraStateLog(\com\vip\xstore\user\face\service\XstoreCameraStateLogParam $xstoreCameraStateLogParam){
+	public function send_uploadCameraStateLog(\Voop\com\vip\xstore\user\face\service\XstoreCameraStateLogParam $xstoreCameraStateLogParam){
 		
 		$this->initInvocation("uploadCameraStateLog");
-		$args = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_uploadCameraStateLog_args();
+		$args = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_uploadCameraStateLog_args();
 		
 		$args->xstoreCameraStateLogParam = $xstoreCameraStateLogParam;
 		
@@ -250,7 +250,7 @@ class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\v
 	
 	public function recv_uploadCameraStateLog(){
 		
-		$result = new \com\vip\xstore\user\face\service\XstoreCameraInfoService_uploadCameraStateLog_result();
+		$result = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoService_uploadCameraStateLog_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -305,7 +305,7 @@ class XstoreCameraInfoService_batchDeleteCamera_args {
 		if(true) {
 			
 			
-			$this->delParam = new \com\vip\xstore\user\face\service\XstoreCameraBatchDelParam();
+			$this->delParam = new \Voop\com\vip\xstore\user\face\service\XstoreCameraBatchDelParam();
 			$this->delParam->read($input);
 			
 		}
@@ -326,7 +326,7 @@ class XstoreCameraInfoService_batchDeleteCamera_args {
 		
 		if (!is_object($this->delParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->delParam->write($output);
@@ -383,7 +383,7 @@ class XstoreCameraInfoService_createCamera_args {
 		if(true) {
 			
 			
-			$this->xstoreCameraInfoModel = new \com\vip\xstore\user\face\service\XstoreCameraInfoModel();
+			$this->xstoreCameraInfoModel = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoModel();
 			$this->xstoreCameraInfoModel->read($input);
 			
 		}
@@ -404,7 +404,7 @@ class XstoreCameraInfoService_createCamera_args {
 		
 		if (!is_object($this->xstoreCameraInfoModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->xstoreCameraInfoModel->write($output);
@@ -461,7 +461,7 @@ class XstoreCameraInfoService_deleteCamera_args {
 		if(true) {
 			
 			
-			$this->delParam = new \com\vip\xstore\user\face\service\XstoreCameraDelParam();
+			$this->delParam = new \Voop\com\vip\xstore\user\face\service\XstoreCameraDelParam();
 			$this->delParam->read($input);
 			
 		}
@@ -482,7 +482,7 @@ class XstoreCameraInfoService_deleteCamera_args {
 		
 		if (!is_object($this->delParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->delParam->write($output);
@@ -585,7 +585,7 @@ class XstoreCameraInfoService_queryCameraList_args {
 		if(true) {
 			
 			
-			$this->pageReqParam = new \com\vip\xstore\user\face\service\XstoreCameraPageReqParam();
+			$this->pageReqParam = new \Voop\com\vip\xstore\user\face\service\XstoreCameraPageReqParam();
 			$this->pageReqParam->read($input);
 			
 		}
@@ -606,7 +606,7 @@ class XstoreCameraInfoService_queryCameraList_args {
 		
 		if (!is_object($this->pageReqParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->pageReqParam->write($output);
@@ -663,7 +663,7 @@ class XstoreCameraInfoService_selectCameraStateLog_args {
 		if(true) {
 			
 			
-			$this->pageReqParam = new \com\vip\xstore\user\face\service\XstoreCameraStateLogReqParam();
+			$this->pageReqParam = new \Voop\com\vip\xstore\user\face\service\XstoreCameraStateLogReqParam();
 			$this->pageReqParam->read($input);
 			
 		}
@@ -684,7 +684,7 @@ class XstoreCameraInfoService_selectCameraStateLog_args {
 		
 		if (!is_object($this->pageReqParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->pageReqParam->write($output);
@@ -741,7 +741,7 @@ class XstoreCameraInfoService_updateCamera_args {
 		if(true) {
 			
 			
-			$this->updateParam = new \com\vip\xstore\user\face\service\XstoreCameraUpdateParam();
+			$this->updateParam = new \Voop\com\vip\xstore\user\face\service\XstoreCameraUpdateParam();
 			$this->updateParam->read($input);
 			
 		}
@@ -762,7 +762,7 @@ class XstoreCameraInfoService_updateCamera_args {
 		
 		if (!is_object($this->updateParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->updateParam->write($output);
@@ -819,7 +819,7 @@ class XstoreCameraInfoService_uploadCameraStateLog_args {
 		if(true) {
 			
 			
-			$this->xstoreCameraStateLogParam = new \com\vip\xstore\user\face\service\XstoreCameraStateLogParam();
+			$this->xstoreCameraStateLogParam = new \Voop\com\vip\xstore\user\face\service\XstoreCameraStateLogParam();
 			$this->xstoreCameraStateLogParam->read($input);
 			
 		}
@@ -840,7 +840,7 @@ class XstoreCameraInfoService_uploadCameraStateLog_args {
 		
 		if (!is_object($this->xstoreCameraStateLogParam)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->xstoreCameraStateLogParam->write($output);
@@ -1107,7 +1107,7 @@ class XstoreCameraInfoService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1130,7 +1130,7 @@ class XstoreCameraInfoService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1189,7 +1189,7 @@ class XstoreCameraInfoService_queryCameraList_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\user\face\service\XstoreCameraInfoListResult();
+			$this->success = new \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoListResult();
 			$this->success->read($input);
 			
 		}
@@ -1212,7 +1212,7 @@ class XstoreCameraInfoService_queryCameraList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1271,7 +1271,7 @@ class XstoreCameraInfoService_selectCameraStateLog_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\user\face\service\XstoreCameraStateLogListResult();
+			$this->success = new \Voop\com\vip\xstore\user\face\service\XstoreCameraStateLogListResult();
 			$this->success->read($input);
 			
 		}
@@ -1294,7 +1294,7 @@ class XstoreCameraInfoService_selectCameraStateLog_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1423,7 +1423,7 @@ class XstoreCameraInfoService_uploadCameraStateLog_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\user\face\service\XstoreCameraStateLogUploadResult();
+			$this->success = new \Voop\com\vip\xstore\user\face\service\XstoreCameraStateLogUploadResult();
 			$this->success->read($input);
 			
 		}
@@ -1446,7 +1446,7 @@ class XstoreCameraInfoService_uploadCameraStateLog_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

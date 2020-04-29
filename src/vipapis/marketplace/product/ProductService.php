@@ -8,43 +8,43 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 interface ProductServiceIf{
 	
 	
-	public function addProduct(\vipapis\marketplace\product\AddProductRequest $request);
+	public function addProduct(\Voop\vipapis\marketplace\product\AddProductRequest $request);
 	
-	public function appendSkus(\vipapis\marketplace\product\AppendSkusRequest $request);
+	public function appendSkus(\Voop\vipapis\marketplace\product\AppendSkusRequest $request);
 	
-	public function autoBindProductSizeTable(\vipapis\marketplace\product\AutoBindProductSizeTableRequest $autoBindProductSizeTableRequest);
+	public function autoBindProductSizeTable(\Voop\vipapis\marketplace\product\AutoBindProductSizeTableRequest $autoBindProductSizeTableRequest);
 	
-	public function bindProductColorImage(\vipapis\marketplace\product\ProductColorImageBindModel $bindModel);
+	public function bindProductColorImage(\Voop\vipapis\marketplace\product\ProductColorImageBindModel $bindModel);
 	
-	public function bindProductImage(\vipapis\marketplace\product\ProductImageBindModel $bindModel);
+	public function bindProductImage(\Voop\vipapis\marketplace\product\ProductImageBindModel $bindModel);
 	
 	public function deleteSku( $sku_id);
 	
 	public function deleteSpu( $spu_id);
 	
-	public function editProduct(\vipapis\marketplace\product\EditProductRequest $request);
+	public function editProduct(\Voop\vipapis\marketplace\product\EditProductRequest $request);
 	
 	public function getProductById( $spu_id);
 	
 	public function getProductPreviewUrl( $spu_id, $sku_id);
 	
-	public function getProducts(\vipapis\marketplace\product\GetProductRequest $request);
+	public function getProducts(\Voop\vipapis\marketplace\product\GetProductRequest $request);
 	
 	public function getSkuById( $sku_id);
 	
 	public function healthCheck();
 	
-	public function offShelf(\vipapis\marketplace\product\OffShelfProduct $offShelfProduct);
+	public function offShelf(\Voop\vipapis\marketplace\product\OffShelfProduct $offShelfProduct);
 	
-	public function onShelf(\vipapis\marketplace\product\OnShelfProduct $onShelfProduct);
+	public function onShelf(\Voop\vipapis\marketplace\product\OnShelfProduct $onShelfProduct);
 	
 	public function submitProducts( $spu_ids);
 	
-	public function unbindProductImage(\vipapis\marketplace\product\UnbindProductImageRequest $unbindProductImageRequest);
+	public function unbindProductImage(\Voop\vipapis\marketplace\product\UnbindProductImageRequest $unbindProductImageRequest);
 	
 	public function uploadImage( $file_name, $is_override, $img_content);
 	
@@ -58,16 +58,16 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	}
 	
 	
-	public function addProduct(\vipapis\marketplace\product\AddProductRequest $request){
+	public function addProduct(\Voop\vipapis\marketplace\product\AddProductRequest $request){
 		
 		$this->send_addProduct( $request);
 		return $this->recv_addProduct();
 	}
 	
-	public function send_addProduct(\vipapis\marketplace\product\AddProductRequest $request){
+	public function send_addProduct(\Voop\vipapis\marketplace\product\AddProductRequest $request){
 		
 		$this->initInvocation("addProduct");
-		$args = new \vipapis\marketplace\product\ProductService_addProduct_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_addProduct_args();
 		
 		$args->request = $request;
 		
@@ -76,7 +76,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_addProduct(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_addProduct_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_addProduct_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -86,16 +86,16 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	}
 	
 	
-	public function appendSkus(\vipapis\marketplace\product\AppendSkusRequest $request){
+	public function appendSkus(\Voop\vipapis\marketplace\product\AppendSkusRequest $request){
 		
 		$this->send_appendSkus( $request);
 		return $this->recv_appendSkus();
 	}
 	
-	public function send_appendSkus(\vipapis\marketplace\product\AppendSkusRequest $request){
+	public function send_appendSkus(\Voop\vipapis\marketplace\product\AppendSkusRequest $request){
 		
 		$this->initInvocation("appendSkus");
-		$args = new \vipapis\marketplace\product\ProductService_appendSkus_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_appendSkus_args();
 		
 		$args->request = $request;
 		
@@ -104,7 +104,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_appendSkus(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_appendSkus_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_appendSkus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -114,16 +114,16 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	}
 	
 	
-	public function autoBindProductSizeTable(\vipapis\marketplace\product\AutoBindProductSizeTableRequest $autoBindProductSizeTableRequest){
+	public function autoBindProductSizeTable(\Voop\vipapis\marketplace\product\AutoBindProductSizeTableRequest $autoBindProductSizeTableRequest){
 		
 		$this->send_autoBindProductSizeTable( $autoBindProductSizeTableRequest);
 		return $this->recv_autoBindProductSizeTable();
 	}
 	
-	public function send_autoBindProductSizeTable(\vipapis\marketplace\product\AutoBindProductSizeTableRequest $autoBindProductSizeTableRequest){
+	public function send_autoBindProductSizeTable(\Voop\vipapis\marketplace\product\AutoBindProductSizeTableRequest $autoBindProductSizeTableRequest){
 		
 		$this->initInvocation("autoBindProductSizeTable");
-		$args = new \vipapis\marketplace\product\ProductService_autoBindProductSizeTable_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_autoBindProductSizeTable_args();
 		
 		$args->autoBindProductSizeTableRequest = $autoBindProductSizeTableRequest;
 		
@@ -132,7 +132,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_autoBindProductSizeTable(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_autoBindProductSizeTable_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_autoBindProductSizeTable_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -142,16 +142,16 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	}
 	
 	
-	public function bindProductColorImage(\vipapis\marketplace\product\ProductColorImageBindModel $bindModel){
+	public function bindProductColorImage(\Voop\vipapis\marketplace\product\ProductColorImageBindModel $bindModel){
 		
 		$this->send_bindProductColorImage( $bindModel);
 		return $this->recv_bindProductColorImage();
 	}
 	
-	public function send_bindProductColorImage(\vipapis\marketplace\product\ProductColorImageBindModel $bindModel){
+	public function send_bindProductColorImage(\Voop\vipapis\marketplace\product\ProductColorImageBindModel $bindModel){
 		
 		$this->initInvocation("bindProductColorImage");
-		$args = new \vipapis\marketplace\product\ProductService_bindProductColorImage_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_bindProductColorImage_args();
 		
 		$args->bindModel = $bindModel;
 		
@@ -160,22 +160,22 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_bindProductColorImage(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_bindProductColorImage_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_bindProductColorImage_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function bindProductImage(\vipapis\marketplace\product\ProductImageBindModel $bindModel){
+	public function bindProductImage(\Voop\vipapis\marketplace\product\ProductImageBindModel $bindModel){
 		
 		$this->send_bindProductImage( $bindModel);
 		return $this->recv_bindProductImage();
 	}
 	
-	public function send_bindProductImage(\vipapis\marketplace\product\ProductImageBindModel $bindModel){
+	public function send_bindProductImage(\Voop\vipapis\marketplace\product\ProductImageBindModel $bindModel){
 		
 		$this->initInvocation("bindProductImage");
-		$args = new \vipapis\marketplace\product\ProductService_bindProductImage_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_bindProductImage_args();
 		
 		$args->bindModel = $bindModel;
 		
@@ -184,7 +184,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_bindProductImage(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_bindProductImage_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_bindProductImage_result();
 		$this->receive_base($result);
 		
 	}
@@ -199,7 +199,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	public function send_deleteSku( $sku_id){
 		
 		$this->initInvocation("deleteSku");
-		$args = new \vipapis\marketplace\product\ProductService_deleteSku_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_deleteSku_args();
 		
 		$args->sku_id = $sku_id;
 		
@@ -208,7 +208,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_deleteSku(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_deleteSku_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_deleteSku_result();
 		$this->receive_base($result);
 		
 	}
@@ -223,7 +223,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	public function send_deleteSpu( $spu_id){
 		
 		$this->initInvocation("deleteSpu");
-		$args = new \vipapis\marketplace\product\ProductService_deleteSpu_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_deleteSpu_args();
 		
 		$args->spu_id = $spu_id;
 		
@@ -232,22 +232,22 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_deleteSpu(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_deleteSpu_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_deleteSpu_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function editProduct(\vipapis\marketplace\product\EditProductRequest $request){
+	public function editProduct(\Voop\vipapis\marketplace\product\EditProductRequest $request){
 		
 		$this->send_editProduct( $request);
 		return $this->recv_editProduct();
 	}
 	
-	public function send_editProduct(\vipapis\marketplace\product\EditProductRequest $request){
+	public function send_editProduct(\Voop\vipapis\marketplace\product\EditProductRequest $request){
 		
 		$this->initInvocation("editProduct");
-		$args = new \vipapis\marketplace\product\ProductService_editProduct_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_editProduct_args();
 		
 		$args->request = $request;
 		
@@ -256,7 +256,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_editProduct(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_editProduct_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_editProduct_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -275,7 +275,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	public function send_getProductById( $spu_id){
 		
 		$this->initInvocation("getProductById");
-		$args = new \vipapis\marketplace\product\ProductService_getProductById_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_getProductById_args();
 		
 		$args->spu_id = $spu_id;
 		
@@ -284,7 +284,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_getProductById(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_getProductById_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_getProductById_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -303,7 +303,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	public function send_getProductPreviewUrl( $spu_id, $sku_id){
 		
 		$this->initInvocation("getProductPreviewUrl");
-		$args = new \vipapis\marketplace\product\ProductService_getProductPreviewUrl_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_getProductPreviewUrl_args();
 		
 		$args->spu_id = $spu_id;
 		
@@ -314,7 +314,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_getProductPreviewUrl(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_getProductPreviewUrl_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_getProductPreviewUrl_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -324,16 +324,16 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	}
 	
 	
-	public function getProducts(\vipapis\marketplace\product\GetProductRequest $request){
+	public function getProducts(\Voop\vipapis\marketplace\product\GetProductRequest $request){
 		
 		$this->send_getProducts( $request);
 		return $this->recv_getProducts();
 	}
 	
-	public function send_getProducts(\vipapis\marketplace\product\GetProductRequest $request){
+	public function send_getProducts(\Voop\vipapis\marketplace\product\GetProductRequest $request){
 		
 		$this->initInvocation("getProducts");
-		$args = new \vipapis\marketplace\product\ProductService_getProducts_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_getProducts_args();
 		
 		$args->request = $request;
 		
@@ -342,7 +342,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_getProducts(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_getProducts_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_getProducts_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -361,7 +361,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	public function send_getSkuById( $sku_id){
 		
 		$this->initInvocation("getSkuById");
-		$args = new \vipapis\marketplace\product\ProductService_getSkuById_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_getSkuById_args();
 		
 		$args->sku_id = $sku_id;
 		
@@ -370,7 +370,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_getSkuById(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_getSkuById_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_getSkuById_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -389,14 +389,14 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\marketplace\product\ProductService_healthCheck_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_healthCheck_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -406,16 +406,16 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	}
 	
 	
-	public function offShelf(\vipapis\marketplace\product\OffShelfProduct $offShelfProduct){
+	public function offShelf(\Voop\vipapis\marketplace\product\OffShelfProduct $offShelfProduct){
 		
 		$this->send_offShelf( $offShelfProduct);
 		return $this->recv_offShelf();
 	}
 	
-	public function send_offShelf(\vipapis\marketplace\product\OffShelfProduct $offShelfProduct){
+	public function send_offShelf(\Voop\vipapis\marketplace\product\OffShelfProduct $offShelfProduct){
 		
 		$this->initInvocation("offShelf");
-		$args = new \vipapis\marketplace\product\ProductService_offShelf_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_offShelf_args();
 		
 		$args->offShelfProduct = $offShelfProduct;
 		
@@ -424,7 +424,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_offShelf(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_offShelf_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_offShelf_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -434,16 +434,16 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	}
 	
 	
-	public function onShelf(\vipapis\marketplace\product\OnShelfProduct $onShelfProduct){
+	public function onShelf(\Voop\vipapis\marketplace\product\OnShelfProduct $onShelfProduct){
 		
 		$this->send_onShelf( $onShelfProduct);
 		return $this->recv_onShelf();
 	}
 	
-	public function send_onShelf(\vipapis\marketplace\product\OnShelfProduct $onShelfProduct){
+	public function send_onShelf(\Voop\vipapis\marketplace\product\OnShelfProduct $onShelfProduct){
 		
 		$this->initInvocation("onShelf");
-		$args = new \vipapis\marketplace\product\ProductService_onShelf_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_onShelf_args();
 		
 		$args->onShelfProduct = $onShelfProduct;
 		
@@ -452,7 +452,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_onShelf(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_onShelf_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_onShelf_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -471,7 +471,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	public function send_submitProducts( $spu_ids){
 		
 		$this->initInvocation("submitProducts");
-		$args = new \vipapis\marketplace\product\ProductService_submitProducts_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_submitProducts_args();
 		
 		$args->spu_ids = $spu_ids;
 		
@@ -480,7 +480,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_submitProducts(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_submitProducts_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_submitProducts_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -490,16 +490,16 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	}
 	
 	
-	public function unbindProductImage(\vipapis\marketplace\product\UnbindProductImageRequest $unbindProductImageRequest){
+	public function unbindProductImage(\Voop\vipapis\marketplace\product\UnbindProductImageRequest $unbindProductImageRequest){
 		
 		$this->send_unbindProductImage( $unbindProductImageRequest);
 		return $this->recv_unbindProductImage();
 	}
 	
-	public function send_unbindProductImage(\vipapis\marketplace\product\UnbindProductImageRequest $unbindProductImageRequest){
+	public function send_unbindProductImage(\Voop\vipapis\marketplace\product\UnbindProductImageRequest $unbindProductImageRequest){
 		
 		$this->initInvocation("unbindProductImage");
-		$args = new \vipapis\marketplace\product\ProductService_unbindProductImage_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_unbindProductImage_args();
 		
 		$args->unbindProductImageRequest = $unbindProductImageRequest;
 		
@@ -508,7 +508,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_unbindProductImage(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_unbindProductImage_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_unbindProductImage_result();
 		$this->receive_base($result);
 		
 	}
@@ -523,7 +523,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	public function send_uploadImage( $file_name, $is_override, $img_content){
 		
 		$this->initInvocation("uploadImage");
-		$args = new \vipapis\marketplace\product\ProductService_uploadImage_args();
+		$args = new \Voop\vipapis\marketplace\product\ProductService_uploadImage_args();
 		
 		$args->file_name = $file_name;
 		
@@ -536,7 +536,7 @@ class _ProductServiceClient extends \Osp\Base\OspStub implements \vipapis\market
 	
 	public function recv_uploadImage(){
 		
-		$result = new \vipapis\marketplace\product\ProductService_uploadImage_result();
+		$result = new \Voop\vipapis\marketplace\product\ProductService_uploadImage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -591,7 +591,7 @@ class ProductService_addProduct_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\product\AddProductRequest();
+			$this->request = new \Voop\vipapis\marketplace\product\AddProductRequest();
 			$this->request->read($input);
 			
 		}
@@ -612,7 +612,7 @@ class ProductService_addProduct_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -669,7 +669,7 @@ class ProductService_appendSkus_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\product\AppendSkusRequest();
+			$this->request = new \Voop\vipapis\marketplace\product\AppendSkusRequest();
 			$this->request->read($input);
 			
 		}
@@ -690,7 +690,7 @@ class ProductService_appendSkus_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -747,7 +747,7 @@ class ProductService_autoBindProductSizeTable_args {
 		if(true) {
 			
 			
-			$this->autoBindProductSizeTableRequest = new \vipapis\marketplace\product\AutoBindProductSizeTableRequest();
+			$this->autoBindProductSizeTableRequest = new \Voop\vipapis\marketplace\product\AutoBindProductSizeTableRequest();
 			$this->autoBindProductSizeTableRequest->read($input);
 			
 		}
@@ -768,7 +768,7 @@ class ProductService_autoBindProductSizeTable_args {
 		
 		if (!is_object($this->autoBindProductSizeTableRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->autoBindProductSizeTableRequest->write($output);
@@ -825,7 +825,7 @@ class ProductService_bindProductColorImage_args {
 		if(true) {
 			
 			
-			$this->bindModel = new \vipapis\marketplace\product\ProductColorImageBindModel();
+			$this->bindModel = new \Voop\vipapis\marketplace\product\ProductColorImageBindModel();
 			$this->bindModel->read($input);
 			
 		}
@@ -846,7 +846,7 @@ class ProductService_bindProductColorImage_args {
 		
 		if (!is_object($this->bindModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->bindModel->write($output);
@@ -903,7 +903,7 @@ class ProductService_bindProductImage_args {
 		if(true) {
 			
 			
-			$this->bindModel = new \vipapis\marketplace\product\ProductImageBindModel();
+			$this->bindModel = new \Voop\vipapis\marketplace\product\ProductImageBindModel();
 			$this->bindModel->read($input);
 			
 		}
@@ -924,7 +924,7 @@ class ProductService_bindProductImage_args {
 		
 		if (!is_object($this->bindModel)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->bindModel->write($output);
@@ -1121,7 +1121,7 @@ class ProductService_editProduct_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\product\EditProductRequest();
+			$this->request = new \Voop\vipapis\marketplace\product\EditProductRequest();
 			$this->request->read($input);
 			
 		}
@@ -1142,7 +1142,7 @@ class ProductService_editProduct_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1367,7 +1367,7 @@ class ProductService_getProducts_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\product\GetProductRequest();
+			$this->request = new \Voop\vipapis\marketplace\product\GetProductRequest();
 			$this->request->read($input);
 			
 		}
@@ -1388,7 +1388,7 @@ class ProductService_getProducts_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1561,7 +1561,7 @@ class ProductService_offShelf_args {
 		if(true) {
 			
 			
-			$this->offShelfProduct = new \vipapis\marketplace\product\OffShelfProduct();
+			$this->offShelfProduct = new \Voop\vipapis\marketplace\product\OffShelfProduct();
 			$this->offShelfProduct->read($input);
 			
 		}
@@ -1582,7 +1582,7 @@ class ProductService_offShelf_args {
 		
 		if (!is_object($this->offShelfProduct)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->offShelfProduct->write($output);
@@ -1639,7 +1639,7 @@ class ProductService_onShelf_args {
 		if(true) {
 			
 			
-			$this->onShelfProduct = new \vipapis\marketplace\product\OnShelfProduct();
+			$this->onShelfProduct = new \Voop\vipapis\marketplace\product\OnShelfProduct();
 			$this->onShelfProduct->read($input);
 			
 		}
@@ -1660,7 +1660,7 @@ class ProductService_onShelf_args {
 		
 		if (!is_object($this->onShelfProduct)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->onShelfProduct->write($output);
@@ -1755,7 +1755,7 @@ class ProductService_submitProducts_args {
 		
 		if (!is_array($this->spu_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1819,7 +1819,7 @@ class ProductService_unbindProductImage_args {
 		if(true) {
 			
 			
-			$this->unbindProductImageRequest = new \vipapis\marketplace\product\UnbindProductImageRequest();
+			$this->unbindProductImageRequest = new \Voop\vipapis\marketplace\product\UnbindProductImageRequest();
 			$this->unbindProductImageRequest->read($input);
 			
 		}
@@ -1840,7 +1840,7 @@ class ProductService_unbindProductImage_args {
 		
 		if (!is_object($this->unbindProductImageRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->unbindProductImageRequest->write($output);
@@ -2015,7 +2015,7 @@ class ProductService_addProduct_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\product\AddProductResponse();
+			$this->success = new \Voop\vipapis\marketplace\product\AddProductResponse();
 			$this->success->read($input);
 			
 		}
@@ -2038,7 +2038,7 @@ class ProductService_addProduct_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2097,7 +2097,7 @@ class ProductService_appendSkus_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\product\AppendSkusResponse();
+			$this->success = new \Voop\vipapis\marketplace\product\AppendSkusResponse();
 			$this->success->read($input);
 			
 		}
@@ -2120,7 +2120,7 @@ class ProductService_appendSkus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2179,7 +2179,7 @@ class ProductService_autoBindProductSizeTable_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\product\AutoBindProductSizeTableResponse();
+			$this->success = new \Voop\vipapis\marketplace\product\AutoBindProductSizeTableResponse();
 			$this->success->read($input);
 			
 		}
@@ -2202,7 +2202,7 @@ class ProductService_autoBindProductSizeTable_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2457,7 +2457,7 @@ class ProductService_editProduct_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\product\EditProductResponse();
+			$this->success = new \Voop\vipapis\marketplace\product\EditProductResponse();
 			$this->success->read($input);
 			
 		}
@@ -2480,7 +2480,7 @@ class ProductService_editProduct_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2539,7 +2539,7 @@ class ProductService_getProductById_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\product\ProductDetail();
+			$this->success = new \Voop\vipapis\marketplace\product\ProductDetail();
 			$this->success->read($input);
 			
 		}
@@ -2562,7 +2562,7 @@ class ProductService_getProductById_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2695,7 +2695,7 @@ class ProductService_getProducts_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\product\GetProductsResponse();
+			$this->success = new \Voop\vipapis\marketplace\product\GetProductsResponse();
 			$this->success->read($input);
 			
 		}
@@ -2718,7 +2718,7 @@ class ProductService_getProducts_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2777,7 +2777,7 @@ class ProductService_getSkuById_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\product\SkuDetail();
+			$this->success = new \Voop\vipapis\marketplace\product\SkuDetail();
 			$this->success->read($input);
 			
 		}
@@ -2800,7 +2800,7 @@ class ProductService_getSkuById_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2859,7 +2859,7 @@ class ProductService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -2882,7 +2882,7 @@ class ProductService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2941,7 +2941,7 @@ class ProductService_offShelf_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\product\OffShelfResponse();
+			$this->success = new \Voop\vipapis\marketplace\product\OffShelfResponse();
 			$this->success->read($input);
 			
 		}
@@ -2964,7 +2964,7 @@ class ProductService_offShelf_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3023,7 +3023,7 @@ class ProductService_onShelf_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\product\OnShelfResponse();
+			$this->success = new \Voop\vipapis\marketplace\product\OnShelfResponse();
 			$this->success->read($input);
 			
 		}
@@ -3046,7 +3046,7 @@ class ProductService_onShelf_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3105,7 +3105,7 @@ class ProductService_submitProducts_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\product\SubmitProductsResponse();
+			$this->success = new \Voop\vipapis\marketplace\product\SubmitProductsResponse();
 			$this->success->read($input);
 			
 		}
@@ -3128,7 +3128,7 @@ class ProductService_submitProducts_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3236,7 +3236,7 @@ class ProductService_uploadImage_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\product\ImageInfo();
+			$this->success = new \Voop\vipapis\marketplace\product\ImageInfo();
 			$this->success->read($input);
 			
 		}
@@ -3259,7 +3259,7 @@ class ProductService_uploadImage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

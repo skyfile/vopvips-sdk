@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\platform\api\cipher;
+namespace Voop\com\vip\platform\api\cipher;
 
 class BatchDecryptReq {
 	
@@ -108,7 +108,7 @@ class BatchDecryptReq {
 		
 		if (!is_array($this->contents)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\ofc\response\vop;
+namespace Voop\com\vip\ofc\response\vop;
 
 class WmsUpdateOrderStatusResp {
 	
@@ -71,7 +71,7 @@ class WmsUpdateOrderStatusResp {
 				
 				$needSkip = false;
 				
-				$this->result = new \com\vip\order\common\pojo\order\result\Result();
+				$this->result = new \Voop\com\vip\order\common\pojo\order\result\Result();
 				$this->result->read($input);
 				
 			}
@@ -132,7 +132,7 @@ class WmsUpdateOrderStatusResp {
 			
 			if (!is_object($this->result)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->result->write($output);
@@ -147,7 +147,7 @@ class WmsUpdateOrderStatusResp {
 			
 			if (!is_array($this->wmsIdList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

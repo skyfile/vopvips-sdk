@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\order;
+namespace Voop\vipapis\order;
 
 class OmniOrder {
 	
@@ -190,7 +190,7 @@ class OmniOrder {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\order\OrderSku();
+						$elem1 = new \Voop\vipapis\order\OrderSku();
 						$elem1->read($input);
 						
 						$this->order_skus[$_size1++] = $elem1;
@@ -249,7 +249,7 @@ class OmniOrder {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -290,7 +290,7 @@ class OmniOrder {
 		
 		if (!is_array($this->order_skus)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -299,7 +299,7 @@ class OmniOrder {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

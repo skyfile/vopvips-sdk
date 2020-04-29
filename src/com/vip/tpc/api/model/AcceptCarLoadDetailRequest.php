@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\tpc\api\model;
+namespace Voop\com\vip\tpc\api\model;
 
 class AcceptCarLoadDetailRequest {
 	
@@ -71,7 +71,7 @@ class AcceptCarLoadDetailRequest {
 				
 				$needSkip = false;
 				
-				$this->header = new \com\vip\tpc\api\model\common\TpcRequestHeader();
+				$this->header = new \Voop\com\vip\tpc\api\model\common\TpcRequestHeader();
 				$this->header->read($input);
 				
 			}
@@ -83,7 +83,7 @@ class AcceptCarLoadDetailRequest {
 				
 				$needSkip = false;
 				
-				$this->loadOrderRequest = new \com\vip\tpc\api\model\LoadOrderRequest();
+				$this->loadOrderRequest = new \Voop\com\vip\tpc\api\model\LoadOrderRequest();
 				$this->loadOrderRequest->read($input);
 				
 			}
@@ -113,7 +113,7 @@ class AcceptCarLoadDetailRequest {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -124,7 +124,7 @@ class AcceptCarLoadDetailRequest {
 		
 		if (!is_object($this->loadOrderRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->loadOrderRequest->write($output);

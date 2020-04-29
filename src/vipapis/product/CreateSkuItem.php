@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 
 class CreateSkuItem {
 	
@@ -211,7 +211,7 @@ class CreateSkuItem {
 						
 						$elem2 = null;
 						
-						$elem2 = new \vipapis\product\SimpleProperty();
+						$elem2 = new \Voop\vipapis\product\SimpleProperty();
 						$elem2->read($input);
 						
 						$this->simple_sale_props[$_size2++] = $elem2;
@@ -230,7 +230,7 @@ class CreateSkuItem {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -267,7 +267,7 @@ class CreateSkuItem {
 			
 			if (!is_array($this->flat_sale_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -314,7 +314,7 @@ class CreateSkuItem {
 			
 			if (!is_array($this->simple_sale_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -323,7 +323,7 @@ class CreateSkuItem {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

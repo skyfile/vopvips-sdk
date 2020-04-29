@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\isv\schema;
+namespace Voop\com\vip\isv\schema;
 
 class UpdateProductBySchemaRequest {
 	

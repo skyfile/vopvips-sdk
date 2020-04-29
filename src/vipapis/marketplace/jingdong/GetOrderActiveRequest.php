@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\jingdong;
+namespace Voop\vipapis\marketplace\jingdong;
 
 class GetOrderActiveRequest {
 	
@@ -87,7 +87,7 @@ class GetOrderActiveRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -108,7 +108,7 @@ class GetOrderActiveRequest {
 		
 		if (!is_array($this->order_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

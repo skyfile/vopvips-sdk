@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\tpc\api\model;
+namespace Voop\com\vip\tpc\api\model;
 
 class GetReturnAddressResponse {
 	
@@ -71,7 +71,7 @@ class GetReturnAddressResponse {
 				
 				$needSkip = false;
 				
-				$this->header = new \com\vip\tpc\api\model\common\TpcResponseHeader();
+				$this->header = new \Voop\com\vip\tpc\api\model\common\TpcResponseHeader();
 				$this->header->read($input);
 				
 			}
@@ -94,7 +94,7 @@ class GetReturnAddressResponse {
 						
 						$val1 = null;
 						
-						$val1 = new \com\vip\tpc\api\model\ReturnInfo();
+						$val1 = new \Voop\com\vip\tpc\api\model\ReturnInfo();
 						$val1->read($input);
 						
 						$this->returnAddressMap[$key1] = $val1;
@@ -134,7 +134,7 @@ class GetReturnAddressResponse {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -147,7 +147,7 @@ class GetReturnAddressResponse {
 			
 			if (!is_array($this->returnAddressMap)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -158,7 +158,7 @@ class GetReturnAddressResponse {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

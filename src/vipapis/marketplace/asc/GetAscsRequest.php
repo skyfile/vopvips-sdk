@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\asc;
+namespace Voop\vipapis\marketplace\asc;
 
 class GetAscsRequest {
 	
@@ -228,7 +228,7 @@ class GetAscsRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

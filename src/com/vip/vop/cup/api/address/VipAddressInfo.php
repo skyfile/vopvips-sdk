@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\address;
+namespace Voop\com\vip\vop\cup\api\address;
 
 class VipAddressInfo {
 	

@@ -8,19 +8,19 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 interface UnionOrderServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function orderList(\com\vip\adp\api\open\service\OrderQueryModel $queryModel);
+	public function orderList(\Voop\com\vip\adp\api\open\service\OrderQueryModel $queryModel);
 	
-	public function orderListWithOauth(\com\vip\adp\api\open\service\OrderQueryModel $queryModel);
+	public function orderListWithOauth(\Voop\com\vip\adp\api\open\service\OrderQueryModel $queryModel);
 	
-	public function refundOrderList(\com\vip\adp\api\open\service\RefundOrderRequest $request);
+	public function refundOrderList(\Voop\com\vip\adp\api\open\service\RefundOrderRequest $request);
 	
-	public function refundOrderListWithOauth(\com\vip\adp\api\open\service\RefundOrderRequest $request);
+	public function refundOrderListWithOauth(\Voop\com\vip\adp\api\open\service\RefundOrderRequest $request);
 	
 }
 
@@ -41,14 +41,14 @@ class _UnionOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\adp\api\open\service\UnionOrderService_healthCheck_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionOrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionOrderService_healthCheck_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionOrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -58,16 +58,16 @@ class _UnionOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function orderList(\com\vip\adp\api\open\service\OrderQueryModel $queryModel){
+	public function orderList(\Voop\com\vip\adp\api\open\service\OrderQueryModel $queryModel){
 		
 		$this->send_orderList( $queryModel);
 		return $this->recv_orderList();
 	}
 	
-	public function send_orderList(\com\vip\adp\api\open\service\OrderQueryModel $queryModel){
+	public function send_orderList(\Voop\com\vip\adp\api\open\service\OrderQueryModel $queryModel){
 		
 		$this->initInvocation("orderList");
-		$args = new \com\vip\adp\api\open\service\UnionOrderService_orderList_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionOrderService_orderList_args();
 		
 		$args->queryModel = $queryModel;
 		
@@ -76,7 +76,7 @@ class _UnionOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_orderList(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionOrderService_orderList_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionOrderService_orderList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -86,16 +86,16 @@ class _UnionOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function orderListWithOauth(\com\vip\adp\api\open\service\OrderQueryModel $queryModel){
+	public function orderListWithOauth(\Voop\com\vip\adp\api\open\service\OrderQueryModel $queryModel){
 		
 		$this->send_orderListWithOauth( $queryModel);
 		return $this->recv_orderListWithOauth();
 	}
 	
-	public function send_orderListWithOauth(\com\vip\adp\api\open\service\OrderQueryModel $queryModel){
+	public function send_orderListWithOauth(\Voop\com\vip\adp\api\open\service\OrderQueryModel $queryModel){
 		
 		$this->initInvocation("orderListWithOauth");
-		$args = new \com\vip\adp\api\open\service\UnionOrderService_orderListWithOauth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionOrderService_orderListWithOauth_args();
 		
 		$args->queryModel = $queryModel;
 		
@@ -104,7 +104,7 @@ class _UnionOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_orderListWithOauth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionOrderService_orderListWithOauth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionOrderService_orderListWithOauth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -114,16 +114,16 @@ class _UnionOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function refundOrderList(\com\vip\adp\api\open\service\RefundOrderRequest $request){
+	public function refundOrderList(\Voop\com\vip\adp\api\open\service\RefundOrderRequest $request){
 		
 		$this->send_refundOrderList( $request);
 		return $this->recv_refundOrderList();
 	}
 	
-	public function send_refundOrderList(\com\vip\adp\api\open\service\RefundOrderRequest $request){
+	public function send_refundOrderList(\Voop\com\vip\adp\api\open\service\RefundOrderRequest $request){
 		
 		$this->initInvocation("refundOrderList");
-		$args = new \com\vip\adp\api\open\service\UnionOrderService_refundOrderList_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionOrderService_refundOrderList_args();
 		
 		$args->request = $request;
 		
@@ -132,7 +132,7 @@ class _UnionOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_refundOrderList(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionOrderService_refundOrderList_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionOrderService_refundOrderList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -142,16 +142,16 @@ class _UnionOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	}
 	
 	
-	public function refundOrderListWithOauth(\com\vip\adp\api\open\service\RefundOrderRequest $request){
+	public function refundOrderListWithOauth(\Voop\com\vip\adp\api\open\service\RefundOrderRequest $request){
 		
 		$this->send_refundOrderListWithOauth( $request);
 		return $this->recv_refundOrderListWithOauth();
 	}
 	
-	public function send_refundOrderListWithOauth(\com\vip\adp\api\open\service\RefundOrderRequest $request){
+	public function send_refundOrderListWithOauth(\Voop\com\vip\adp\api\open\service\RefundOrderRequest $request){
 		
 		$this->initInvocation("refundOrderListWithOauth");
-		$args = new \com\vip\adp\api\open\service\UnionOrderService_refundOrderListWithOauth_args();
+		$args = new \Voop\com\vip\adp\api\open\service\UnionOrderService_refundOrderListWithOauth_args();
 		
 		$args->request = $request;
 		
@@ -160,7 +160,7 @@ class _UnionOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\adp
 	
 	public function recv_refundOrderListWithOauth(){
 		
-		$result = new \com\vip\adp\api\open\service\UnionOrderService_refundOrderListWithOauth_result();
+		$result = new \Voop\com\vip\adp\api\open\service\UnionOrderService_refundOrderListWithOauth_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -261,7 +261,7 @@ class UnionOrderService_orderList_args {
 		if(true) {
 			
 			
-			$this->queryModel = new \com\vip\adp\api\open\service\OrderQueryModel();
+			$this->queryModel = new \Voop\com\vip\adp\api\open\service\OrderQueryModel();
 			$this->queryModel->read($input);
 			
 		}
@@ -284,7 +284,7 @@ class UnionOrderService_orderList_args {
 			
 			if (!is_object($this->queryModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->queryModel->write($output);
@@ -343,7 +343,7 @@ class UnionOrderService_orderListWithOauth_args {
 		if(true) {
 			
 			
-			$this->queryModel = new \com\vip\adp\api\open\service\OrderQueryModel();
+			$this->queryModel = new \Voop\com\vip\adp\api\open\service\OrderQueryModel();
 			$this->queryModel->read($input);
 			
 		}
@@ -366,7 +366,7 @@ class UnionOrderService_orderListWithOauth_args {
 			
 			if (!is_object($this->queryModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->queryModel->write($output);
@@ -425,7 +425,7 @@ class UnionOrderService_refundOrderList_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\adp\api\open\service\RefundOrderRequest();
+			$this->request = new \Voop\com\vip\adp\api\open\service\RefundOrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -448,7 +448,7 @@ class UnionOrderService_refundOrderList_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -507,7 +507,7 @@ class UnionOrderService_refundOrderListWithOauth_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\adp\api\open\service\RefundOrderRequest();
+			$this->request = new \Voop\com\vip\adp\api\open\service\RefundOrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -530,7 +530,7 @@ class UnionOrderService_refundOrderListWithOauth_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -589,7 +589,7 @@ class UnionOrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -612,7 +612,7 @@ class UnionOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -671,7 +671,7 @@ class UnionOrderService_orderList_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\OrderResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\OrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -694,7 +694,7 @@ class UnionOrderService_orderList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -753,7 +753,7 @@ class UnionOrderService_orderListWithOauth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\OrderResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\OrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -776,7 +776,7 @@ class UnionOrderService_orderListWithOauth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -835,7 +835,7 @@ class UnionOrderService_refundOrderList_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\RefundOrderResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\RefundOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -858,7 +858,7 @@ class UnionOrderService_refundOrderList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -917,7 +917,7 @@ class UnionOrderService_refundOrderListWithOauth_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\adp\api\open\service\RefundOrderResponse();
+			$this->success = new \Voop\com\vip\adp\api\open\service\RefundOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -940,7 +940,7 @@ class UnionOrderService_refundOrderListWithOauth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

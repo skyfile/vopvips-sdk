@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 
 class GetOrderListByCreateTimeResponse {
 	
@@ -80,7 +80,7 @@ class GetOrderListByCreateTimeResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\delivery\OrderListByCreateTime();
+						$elem0 = new \Voop\vipapis\delivery\OrderListByCreateTime();
 						$elem0->read($input);
 						
 						$this->order_list_by_create_time[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class GetOrderListByCreateTimeResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -132,7 +132,7 @@ class GetOrderListByCreateTimeResponse {
 			
 			if (!is_array($this->order_list_by_create_time)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -141,7 +141,7 @@ class GetOrderListByCreateTimeResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

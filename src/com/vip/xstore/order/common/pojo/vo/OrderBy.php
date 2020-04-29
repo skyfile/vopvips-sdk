@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\common\pojo\vo;
+namespace Voop\com\vip\xstore\order\common\pojo\vo;
 
 class OrderBy {
 	
@@ -131,7 +131,7 @@ class OrderBy {
 			
 			$xfer += $output->writeFieldBegin('direction');
 			
-			$em = new \com\vip\xstore\order\common\pojo\vo\OrderByDirection; 
+			$em = new \Voop\com\vip\xstore\order\common\pojo\vo\OrderByDirection; 
 			$output->writeString($em::$__names[$this->direction]);  
 			
 			$xfer += $output->writeFieldEnd();

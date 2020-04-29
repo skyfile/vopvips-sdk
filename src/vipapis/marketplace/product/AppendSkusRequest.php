@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 
 class AppendSkusRequest {
 	
@@ -100,7 +100,7 @@ class AppendSkusRequest {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\marketplace\product\AddSkuItem();
+						$elem1 = new \Voop\vipapis\marketplace\product\AddSkuItem();
 						$elem1->read($input);
 						
 						$this->skus[$_size1++] = $elem1;
@@ -131,7 +131,7 @@ class AppendSkusRequest {
 						
 						$elem2 = null;
 						
-						$elem2 = new \vipapis\marketplace\product\ColorImage();
+						$elem2 = new \Voop\vipapis\marketplace\product\ColorImage();
 						$elem2->read($input);
 						
 						$this->color_images[$_size2++] = $elem2;
@@ -150,7 +150,7 @@ class AppendSkusRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -178,7 +178,7 @@ class AppendSkusRequest {
 			
 			if (!is_array($this->skus)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -187,7 +187,7 @@ class AppendSkusRequest {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -206,7 +206,7 @@ class AppendSkusRequest {
 			
 			if (!is_array($this->color_images)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -215,7 +215,7 @@ class AppendSkusRequest {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

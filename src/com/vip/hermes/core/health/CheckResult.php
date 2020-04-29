@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\hermes\core\health;
+namespace Voop\com\vip\hermes\core\health;
 
 class CheckResult {
 	
@@ -71,7 +71,7 @@ class CheckResult {
 				
 				$needSkip = false;
 				
-				$this->status = new \com\vip\hermes\core\health\Status();
+				$this->status = new \Voop\com\vip\hermes\core\health\Status();
 				$this->status->read($input);
 				
 			}
@@ -134,7 +134,7 @@ class CheckResult {
 			
 			if (!is_object($this->status)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->status->write($output);
@@ -149,7 +149,7 @@ class CheckResult {
 			
 			if (!is_array($this->details)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();

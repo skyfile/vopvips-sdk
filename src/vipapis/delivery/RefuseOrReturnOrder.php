@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 
 class RefuseOrReturnOrder {
 	
@@ -130,7 +130,7 @@ class RefuseOrReturnOrder {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\delivery\RefuseOrReturnProduct();
+						$elem1 = new \Voop\vipapis\delivery\RefuseOrReturnProduct();
 						$elem1->read($input);
 						
 						$this->refuse_or_return_product_list[$_size1++] = $elem1;
@@ -149,7 +149,7 @@ class RefuseOrReturnOrder {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -185,7 +185,7 @@ class RefuseOrReturnOrder {
 		
 		if (!is_array($this->refuse_or_return_product_list)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -194,7 +194,7 @@ class RefuseOrReturnOrder {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

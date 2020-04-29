@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\brand;
+namespace Voop\vipapis\marketplace\brand;
 
 class StoreBrand {
 	
@@ -108,7 +108,7 @@ class StoreBrand {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

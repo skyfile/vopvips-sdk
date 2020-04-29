@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\lbs\service;
+namespace Voop\vipapis\lbs\service;
 require_once dirname(__FILE__).'/LbsExternalService.php';
 class LbsExternalServiceHelper extends _LbsExternalServiceClient{
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 interface ImprovedVendorProductServiceIf{
 	
 	
@@ -43,7 +43,7 @@ class _ImprovedVendorProductServiceClient extends \Osp\Base\OspStub implements \
 	public function send_createBaseProducts( $vendor_id, $vendor_products){
 		
 		$this->initInvocation("createBaseProducts");
-		$args = new \vipapis\product\ImprovedVendorProductService_createBaseProducts_args();
+		$args = new \Voop\vipapis\product\ImprovedVendorProductService_createBaseProducts_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -54,7 +54,7 @@ class _ImprovedVendorProductServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_createBaseProducts(){
 		
-		$result = new \vipapis\product\ImprovedVendorProductService_createBaseProducts_result();
+		$result = new \Voop\vipapis\product\ImprovedVendorProductService_createBaseProducts_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -73,7 +73,7 @@ class _ImprovedVendorProductServiceClient extends \Osp\Base\OspStub implements \
 	public function send_createProductWithProdInfoMapping( $vendor_id, $vendor_category_tree_id, $vendor_products){
 		
 		$this->initInvocation("createProductWithProdInfoMapping");
-		$args = new \vipapis\product\ImprovedVendorProductService_createProductWithProdInfoMapping_args();
+		$args = new \Voop\vipapis\product\ImprovedVendorProductService_createProductWithProdInfoMapping_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -86,7 +86,7 @@ class _ImprovedVendorProductServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_createProductWithProdInfoMapping(){
 		
-		$result = new \vipapis\product\ImprovedVendorProductService_createProductWithProdInfoMapping_result();
+		$result = new \Voop\vipapis\product\ImprovedVendorProductService_createProductWithProdInfoMapping_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -105,7 +105,7 @@ class _ImprovedVendorProductServiceClient extends \Osp\Base\OspStub implements \
 	public function send_editProductWithProdInfoMapping( $vendor_id, $vendor_category_tree_id, $vendor_products){
 		
 		$this->initInvocation("editProductWithProdInfoMapping");
-		$args = new \vipapis\product\ImprovedVendorProductService_editProductWithProdInfoMapping_args();
+		$args = new \Voop\vipapis\product\ImprovedVendorProductService_editProductWithProdInfoMapping_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -118,7 +118,7 @@ class _ImprovedVendorProductServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_editProductWithProdInfoMapping(){
 		
-		$result = new \vipapis\product\ImprovedVendorProductService_editProductWithProdInfoMapping_result();
+		$result = new \Voop\vipapis\product\ImprovedVendorProductService_editProductWithProdInfoMapping_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -137,14 +137,14 @@ class _ImprovedVendorProductServiceClient extends \Osp\Base\OspStub implements \
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\product\ImprovedVendorProductService_healthCheck_args();
+		$args = new \Voop\vipapis\product\ImprovedVendorProductService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\product\ImprovedVendorProductService_healthCheck_result();
+		$result = new \Voop\vipapis\product\ImprovedVendorProductService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -163,7 +163,7 @@ class _ImprovedVendorProductServiceClient extends \Osp\Base\OspStub implements \
 	public function send_uploadVendorCategory( $vendor_id, $vendor_category_tree_name, $vendor_categories){
 		
 		$this->initInvocation("uploadVendorCategory");
-		$args = new \vipapis\product\ImprovedVendorProductService_uploadVendorCategory_args();
+		$args = new \Voop\vipapis\product\ImprovedVendorProductService_uploadVendorCategory_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -176,7 +176,7 @@ class _ImprovedVendorProductServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_uploadVendorCategory(){
 		
-		$result = new \vipapis\product\ImprovedVendorProductService_uploadVendorCategory_result();
+		$result = new \Voop\vipapis\product\ImprovedVendorProductService_uploadVendorCategory_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -195,7 +195,7 @@ class _ImprovedVendorProductServiceClient extends \Osp\Base\OspStub implements \
 	public function send_uploadVendorFullScaleProductImage( $vendor_id, $brand_id, $sn, $product_image_map){
 		
 		$this->initInvocation("uploadVendorFullScaleProductImage");
-		$args = new \vipapis\product\ImprovedVendorProductService_uploadVendorFullScaleProductImage_args();
+		$args = new \Voop\vipapis\product\ImprovedVendorProductService_uploadVendorFullScaleProductImage_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -210,7 +210,7 @@ class _ImprovedVendorProductServiceClient extends \Osp\Base\OspStub implements \
 	
 	public function recv_uploadVendorFullScaleProductImage(){
 		
-		$result = new \vipapis\product\ImprovedVendorProductService_uploadVendorFullScaleProductImage_result();
+		$result = new \Voop\vipapis\product\ImprovedVendorProductService_uploadVendorFullScaleProductImage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -293,7 +293,7 @@ class ImprovedVendorProductService_createBaseProducts_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\product\CreateBaseProductItem();
+					$elem0 = new \Voop\vipapis\product\CreateBaseProductItem();
 					$elem0->read($input);
 					
 					$this->vendor_products[$_size0++] = $elem0;
@@ -329,7 +329,7 @@ class ImprovedVendorProductService_createBaseProducts_args {
 		
 		if (!is_array($this->vendor_products)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -338,7 +338,7 @@ class ImprovedVendorProductService_createBaseProducts_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -446,7 +446,7 @@ class ImprovedVendorProductService_createProductWithProdInfoMapping_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\product\CreateVendorProductItem();
+					$elem1 = new \Voop\vipapis\product\CreateVendorProductItem();
 					$elem1->read($input);
 					
 					$this->vendor_products[$_size1++] = $elem1;
@@ -487,7 +487,7 @@ class ImprovedVendorProductService_createProductWithProdInfoMapping_args {
 		
 		if (!is_array($this->vendor_products)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -496,7 +496,7 @@ class ImprovedVendorProductService_createProductWithProdInfoMapping_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -604,7 +604,7 @@ class ImprovedVendorProductService_editProductWithProdInfoMapping_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\product\EditVendorProductItem();
+					$elem1 = new \Voop\vipapis\product\EditVendorProductItem();
 					$elem1->read($input);
 					
 					$this->vendor_products[$_size1++] = $elem1;
@@ -645,7 +645,7 @@ class ImprovedVendorProductService_editProductWithProdInfoMapping_args {
 		
 		if (!is_array($this->vendor_products)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -654,7 +654,7 @@ class ImprovedVendorProductService_editProductWithProdInfoMapping_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -808,7 +808,7 @@ class ImprovedVendorProductService_uploadVendorCategory_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\product\VendorCategory();
+					$elem1 = new \Voop\vipapis\product\VendorCategory();
 					$elem1->read($input);
 					
 					$this->vendor_categories[$_size1++] = $elem1;
@@ -849,7 +849,7 @@ class ImprovedVendorProductService_uploadVendorCategory_args {
 		
 		if (!is_array($this->vendor_categories)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -858,7 +858,7 @@ class ImprovedVendorProductService_uploadVendorCategory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -987,7 +987,7 @@ class ImprovedVendorProductService_uploadVendorFullScaleProductImage_args {
 					
 					$val1 = null;
 					
-					$val1 = new \vipapis\product\UploadImageInfo();
+					$val1 = new \Voop\vipapis\product\UploadImageInfo();
 					$val1->read($input);
 					
 					$this->product_image_map[$key1] = $val1;
@@ -1033,7 +1033,7 @@ class ImprovedVendorProductService_uploadVendorFullScaleProductImage_args {
 		
 		if (!is_array($this->product_image_map)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeMapBegin();
@@ -1044,7 +1044,7 @@ class ImprovedVendorProductService_uploadVendorFullScaleProductImage_args {
 			
 			if (!is_object($viter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $viter0->write($output);
@@ -1105,7 +1105,7 @@ class ImprovedVendorProductService_createBaseProducts_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\product\CreateBaseProductResponse();
+			$this->success = new \Voop\vipapis\product\CreateBaseProductResponse();
 			$this->success->read($input);
 			
 		}
@@ -1128,7 +1128,7 @@ class ImprovedVendorProductService_createBaseProducts_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1187,7 +1187,7 @@ class ImprovedVendorProductService_createProductWithProdInfoMapping_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\product\ImprovedVendorProductResponse();
+			$this->success = new \Voop\vipapis\product\ImprovedVendorProductResponse();
 			$this->success->read($input);
 			
 		}
@@ -1210,7 +1210,7 @@ class ImprovedVendorProductService_createProductWithProdInfoMapping_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1269,7 +1269,7 @@ class ImprovedVendorProductService_editProductWithProdInfoMapping_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\product\ImprovedVendorProductResponse();
+			$this->success = new \Voop\vipapis\product\ImprovedVendorProductResponse();
 			$this->success->read($input);
 			
 		}
@@ -1292,7 +1292,7 @@ class ImprovedVendorProductService_editProductWithProdInfoMapping_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1351,7 +1351,7 @@ class ImprovedVendorProductService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1374,7 +1374,7 @@ class ImprovedVendorProductService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1518,7 +1518,7 @@ class ImprovedVendorProductService_uploadVendorFullScaleProductImage_result {
 					
 					$val0 = null;
 					
-					$val0 = new \vipapis\product\UploadImageResult();
+					$val0 = new \Voop\vipapis\product\UploadImageResult();
 					$val0->read($input);
 					
 					$this->success[$key0] = $val0;
@@ -1551,7 +1551,7 @@ class ImprovedVendorProductService_uploadVendorFullScaleProductImage_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -1562,7 +1562,7 @@ class ImprovedVendorProductService_uploadVendorFullScaleProductImage_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

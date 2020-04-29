@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\puma;
+namespace Voop\vipapis\puma;
 
 class ProductQueryResponse {
 	
@@ -71,7 +71,7 @@ class ProductQueryResponse {
 				
 				$needSkip = false;
 				
-				$this->pagination = new \vipapis\puma\Pagination();
+				$this->pagination = new \Voop\vipapis\puma\Pagination();
 				$this->pagination->read($input);
 				
 			}
@@ -92,7 +92,7 @@ class ProductQueryResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\puma\Product();
+						$elem0 = new \Voop\vipapis\puma\Product();
 						$elem0->read($input);
 						
 						$this->marketing_products[$_size0++] = $elem0;
@@ -111,7 +111,7 @@ class ProductQueryResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -134,7 +134,7 @@ class ProductQueryResponse {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -149,7 +149,7 @@ class ProductQueryResponse {
 			
 			if (!is_array($this->marketing_products)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -158,7 +158,7 @@ class ProductQueryResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

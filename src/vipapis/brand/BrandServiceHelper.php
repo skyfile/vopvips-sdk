@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\brand;
+namespace Voop\vipapis\brand;
 require_once dirname(__FILE__).'/BrandService.php';
 class BrandServiceHelper extends _BrandServiceClient{
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\asc;
+namespace Voop\vipapis\marketplace\asc;
 
 class GetAscInfoResponse {
 	
@@ -141,7 +141,7 @@ class GetAscInfoResponse {
 				
 				$needSkip = false;
 				
-				$this->asc_brief = new \vipapis\marketplace\asc\AscBrief();
+				$this->asc_brief = new \Voop\vipapis\marketplace\asc\AscBrief();
 				$this->asc_brief->read($input);
 				
 			}
@@ -173,7 +173,7 @@ class GetAscInfoResponse {
 				
 				$needSkip = false;
 				
-				$this->transport_info = new \vipapis\marketplace\asc\TransportInfo();
+				$this->transport_info = new \Voop\vipapis\marketplace\asc\TransportInfo();
 				$this->transport_info->read($input);
 				
 			}
@@ -185,7 +185,7 @@ class GetAscInfoResponse {
 				
 				$needSkip = false;
 				
-				$this->refund_info = new \vipapis\marketplace\asc\RefundInfo();
+				$this->refund_info = new \Voop\vipapis\marketplace\asc\RefundInfo();
 				$this->refund_info->read($input);
 				
 			}
@@ -206,7 +206,7 @@ class GetAscInfoResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\marketplace\asc\AscProduct();
+						$elem0 = new \Voop\vipapis\marketplace\asc\AscProduct();
 						$elem0->read($input);
 						
 						$this->asc_products[$_size0++] = $elem0;
@@ -266,7 +266,7 @@ class GetAscInfoResponse {
 						
 						$elem2 = null;
 						
-						$elem2 = new \vipapis\marketplace\asc\ProblemOrder();
+						$elem2 = new \Voop\vipapis\marketplace\asc\ProblemOrder();
 						$elem2->read($input);
 						
 						$this->problem_orders[$_size2++] = $elem2;
@@ -295,7 +295,7 @@ class GetAscInfoResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -316,7 +316,7 @@ class GetAscInfoResponse {
 		
 		if (!is_object($this->asc_brief)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->asc_brief->write($output);
@@ -347,7 +347,7 @@ class GetAscInfoResponse {
 			
 			if (!is_object($this->transport_info)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->transport_info->write($output);
@@ -362,7 +362,7 @@ class GetAscInfoResponse {
 			
 			if (!is_object($this->refund_info)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->refund_info->write($output);
@@ -377,7 +377,7 @@ class GetAscInfoResponse {
 			
 			if (!is_array($this->asc_products)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -386,7 +386,7 @@ class GetAscInfoResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -405,7 +405,7 @@ class GetAscInfoResponse {
 			
 			if (!is_array($this->package_tabs)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -427,7 +427,7 @@ class GetAscInfoResponse {
 			
 			if (!is_array($this->problem_orders)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -436,7 +436,7 @@ class GetAscInfoResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

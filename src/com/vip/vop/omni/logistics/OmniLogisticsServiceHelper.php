@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\omni\logistics;
+namespace Voop\com\vip\vop\omni\logistics;
 require_once dirname(__FILE__).'/OmniLogisticsService.php';
 class OmniLogisticsServiceHelper extends _OmniLogisticsServiceClient{
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipmax\user;
+namespace Voop\vipapis\vipmax\user;
 require_once dirname(__FILE__).'/UserService.php';
 class UserServiceHelper extends _UserServiceClient{
 	

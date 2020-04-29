@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\product;
+namespace Voop\vipapis\marketplace\product;
 
 class AppendSkusResponse {
 	
@@ -130,7 +130,7 @@ class AppendSkusResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\marketplace\product\SuccessSku();
+						$elem1 = new \Voop\vipapis\marketplace\product\SuccessSku();
 						$elem1->read($input);
 						
 						$this->success_skus[$_size1++] = $elem1;
@@ -149,7 +149,7 @@ class AppendSkusResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -195,7 +195,7 @@ class AppendSkusResponse {
 			
 			if (!is_array($this->success_skus)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -204,7 +204,7 @@ class AppendSkusResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

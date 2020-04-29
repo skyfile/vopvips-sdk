@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service;
+namespace Voop\com\vip\xstore\user\face\service;
 
 class XstoreCameraPageReqParam {
 	
@@ -161,7 +161,7 @@ class XstoreCameraPageReqParam {
 				
 				$needSkip = false;
 				
-				$this->pageInfo = new \com\vip\xstore\user\face\service\common\PageInfo();
+				$this->pageInfo = new \Voop\com\vip\xstore\user\face\service\common\PageInfo();
 				$this->pageInfo->read($input);
 				
 			}
@@ -269,7 +269,7 @@ class XstoreCameraPageReqParam {
 		
 		if (!is_object($this->pageInfo)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->pageInfo->write($output);

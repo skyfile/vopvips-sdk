@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\product;
+namespace Voop\vipapis\product;
 
 class EditProductItem {
 	
@@ -850,7 +850,7 @@ class EditProductItem {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -914,7 +914,7 @@ class EditProductItem {
 			
 			if (!is_array($this->product_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -938,7 +938,7 @@ class EditProductItem {
 			
 			if (!is_array($this->flat_sale_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -987,7 +987,7 @@ class EditProductItem {
 			
 			$xfer += $output->writeFieldBegin('unit');
 			
-			$em = new \vipapis\product\Unit; 
+			$em = new \Voop\vipapis\product\Unit; 
 			$output->writeString($em::$__names[$this->unit]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -1151,7 +1151,7 @@ class EditProductItem {
 			
 			$xfer += $output->writeFieldBegin('currency');
 			
-			$em = new \vipapis\common\Currency; 
+			$em = new \Voop\vipapis\common\Currency; 
 			$output->writeString($em::$__names[$this->currency]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -1180,7 +1180,7 @@ class EditProductItem {
 			
 			$xfer += $output->writeFieldBegin('product_type');
 			
-			$em = new \vipapis\product\ProductType; 
+			$em = new \Voop\vipapis\product\ProductType; 
 			$output->writeString($em::$__names[$this->product_type]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -1211,7 +1211,7 @@ class EditProductItem {
 			
 			if (!is_array($this->vendor_product_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();

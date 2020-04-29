@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\request;
+namespace Voop\com\vip\xstore\order\ofc\api\request;
 
 class UpdateInfOnlineInPreSaleReq {
 	
@@ -61,7 +61,7 @@ class UpdateInfOnlineInPreSaleReq {
 				
 				$needSkip = false;
 				
-				$this->infOnlineInPreSaleVO = new \com\vip\xstore\order\common\pojo\vo\InfOnlineInPreSaleVO();
+				$this->infOnlineInPreSaleVO = new \Voop\com\vip\xstore\order\common\pojo\vo\InfOnlineInPreSaleVO();
 				$this->infOnlineInPreSaleVO->read($input);
 				
 			}
@@ -93,7 +93,7 @@ class UpdateInfOnlineInPreSaleReq {
 			
 			if (!is_object($this->infOnlineInPreSaleVO)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->infOnlineInPreSaleVO->write($output);

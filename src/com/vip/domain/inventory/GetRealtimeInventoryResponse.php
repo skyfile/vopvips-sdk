@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\domain\inventory;
+namespace Voop\com\vip\domain\inventory;
 
 class GetRealtimeInventoryResponse {
 	
@@ -90,7 +90,7 @@ class GetRealtimeInventoryResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\domain\inventory\RealtimeInventoryItemInfo();
+						$elem1 = new \Voop\com\vip\domain\inventory\RealtimeInventoryItemInfo();
 						$elem1->read($input);
 						
 						$this->items[$_size1++] = $elem1;
@@ -135,7 +135,7 @@ class GetRealtimeInventoryResponse {
 		
 		if (!is_array($this->items)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -144,7 +144,7 @@ class GetRealtimeInventoryResponse {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

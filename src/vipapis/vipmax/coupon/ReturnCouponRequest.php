@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipmax\coupon;
+namespace Voop\vipapis\vipmax\coupon;
 
 class ReturnCouponRequest {
 	
@@ -120,7 +120,7 @@ class ReturnCouponRequest {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\vipmax\coupon\CancelledSkus();
+						$elem1 = new \Voop\vipapis\vipmax\coupon\CancelledSkus();
 						$elem1->read($input);
 						
 						$this->cancelled_skus[$_size1++] = $elem1;
@@ -168,7 +168,7 @@ class ReturnCouponRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -199,7 +199,7 @@ class ReturnCouponRequest {
 		
 		if (!is_array($this->cancelled_skus)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -208,7 +208,7 @@ class ReturnCouponRequest {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -223,7 +223,7 @@ class ReturnCouponRequest {
 		
 		if (!is_array($this->coupon_sns)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

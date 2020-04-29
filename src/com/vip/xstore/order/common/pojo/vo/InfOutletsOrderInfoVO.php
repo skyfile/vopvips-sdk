@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\common\pojo\vo;
+namespace Voop\com\vip\xstore\order\common\pojo\vo;
 
 class InfOutletsOrderInfoVO {
 	
@@ -81,7 +81,7 @@ class InfOutletsOrderInfoVO {
 				
 				$needSkip = false;
 				
-				$this->infOutletsOrdersVO = new \com\vip\xstore\order\common\pojo\vo\InfOutletsOrdersVO();
+				$this->infOutletsOrdersVO = new \Voop\com\vip\xstore\order\common\pojo\vo\InfOutletsOrdersVO();
 				$this->infOutletsOrdersVO->read($input);
 				
 			}
@@ -102,7 +102,7 @@ class InfOutletsOrderInfoVO {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\xstore\order\common\pojo\vo\InfOutletsOrderGoodsVO();
+						$elem1 = new \Voop\com\vip\xstore\order\common\pojo\vo\InfOutletsOrderGoodsVO();
 						$elem1->read($input);
 						
 						$this->infOutletsOrderGoodsVOList[$_size1++] = $elem1;
@@ -133,7 +133,7 @@ class InfOutletsOrderInfoVO {
 						
 						$elem2 = null;
 						
-						$elem2 = new \com\vip\xstore\order\common\pojo\vo\InfOutletsOrderPayVO();
+						$elem2 = new \Voop\com\vip\xstore\order\common\pojo\vo\InfOutletsOrderPayVO();
 						$elem2->read($input);
 						
 						$this->infOutletsOrderPayVOList[$_size2++] = $elem2;
@@ -175,7 +175,7 @@ class InfOutletsOrderInfoVO {
 			
 			if (!is_object($this->infOutletsOrdersVO)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->infOutletsOrdersVO->write($output);
@@ -190,7 +190,7 @@ class InfOutletsOrderInfoVO {
 			
 			if (!is_array($this->infOutletsOrderGoodsVOList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -199,7 +199,7 @@ class InfOutletsOrderInfoVO {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -218,7 +218,7 @@ class InfOutletsOrderInfoVO {
 			
 			if (!is_array($this->infOutletsOrderPayVOList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -227,7 +227,7 @@ class InfOutletsOrderInfoVO {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\shanshan\outlet;
+namespace Voop\vipapis\shanshan\outlet;
 
 class OnlineOrderQueryResp {
 	
@@ -80,7 +80,7 @@ class OnlineOrderQueryResp {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\shanshan\outlet\OnlineOrderResult();
+						$elem1 = new \Voop\vipapis\shanshan\outlet\OnlineOrderResult();
 						$elem1->read($input);
 						
 						$this->order_results[$_size1++] = $elem1;
@@ -109,7 +109,7 @@ class OnlineOrderQueryResp {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -132,7 +132,7 @@ class OnlineOrderQueryResp {
 			
 			if (!is_array($this->order_results)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -141,7 +141,7 @@ class OnlineOrderQueryResp {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

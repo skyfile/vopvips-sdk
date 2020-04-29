@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\overseas;
+namespace Voop\vipapis\overseas;
 require_once dirname(__FILE__).'/OWarehouseService.php';
 class OWarehouseServiceHelper extends _OWarehouseServiceClient{
 	

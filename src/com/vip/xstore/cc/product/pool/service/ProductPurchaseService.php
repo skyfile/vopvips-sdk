@@ -8,15 +8,15 @@
 *
 */
 
-namespace com\vip\xstore\cc\product\pool\service;
+namespace Voop\com\vip\xstore\cc\product\pool\service;
 interface ProductPurchaseServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function prodQuery(\com\vip\xstore\cc\product\pool\service\ProdQueryReqDTO $prodQueryReqDTO);
+	public function prodQuery(\Voop\com\vip\xstore\cc\product\pool\service\ProdQueryReqDTO $prodQueryReqDTO);
 	
-	public function prodValidate(\com\vip\xstore\cc\product\pool\service\ProdValidateReqDTO $prodValidateReqDTO);
+	public function prodValidate(\Voop\com\vip\xstore\cc\product\pool\service\ProdValidateReqDTO $prodValidateReqDTO);
 	
 }
 
@@ -37,14 +37,14 @@ class _ProductPurchaseServiceClient extends \Osp\Base\OspStub implements \com\vi
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\xstore\cc\product\pool\service\ProductPurchaseService_healthCheck_args();
+		$args = new \Voop\com\vip\xstore\cc\product\pool\service\ProductPurchaseService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\xstore\cc\product\pool\service\ProductPurchaseService_healthCheck_result();
+		$result = new \Voop\com\vip\xstore\cc\product\pool\service\ProductPurchaseService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -54,16 +54,16 @@ class _ProductPurchaseServiceClient extends \Osp\Base\OspStub implements \com\vi
 	}
 	
 	
-	public function prodQuery(\com\vip\xstore\cc\product\pool\service\ProdQueryReqDTO $prodQueryReqDTO){
+	public function prodQuery(\Voop\com\vip\xstore\cc\product\pool\service\ProdQueryReqDTO $prodQueryReqDTO){
 		
 		$this->send_prodQuery( $prodQueryReqDTO);
 		return $this->recv_prodQuery();
 	}
 	
-	public function send_prodQuery(\com\vip\xstore\cc\product\pool\service\ProdQueryReqDTO $prodQueryReqDTO){
+	public function send_prodQuery(\Voop\com\vip\xstore\cc\product\pool\service\ProdQueryReqDTO $prodQueryReqDTO){
 		
 		$this->initInvocation("prodQuery");
-		$args = new \com\vip\xstore\cc\product\pool\service\ProductPurchaseService_prodQuery_args();
+		$args = new \Voop\com\vip\xstore\cc\product\pool\service\ProductPurchaseService_prodQuery_args();
 		
 		$args->prodQueryReqDTO = $prodQueryReqDTO;
 		
@@ -72,7 +72,7 @@ class _ProductPurchaseServiceClient extends \Osp\Base\OspStub implements \com\vi
 	
 	public function recv_prodQuery(){
 		
-		$result = new \com\vip\xstore\cc\product\pool\service\ProductPurchaseService_prodQuery_result();
+		$result = new \Voop\com\vip\xstore\cc\product\pool\service\ProductPurchaseService_prodQuery_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -82,16 +82,16 @@ class _ProductPurchaseServiceClient extends \Osp\Base\OspStub implements \com\vi
 	}
 	
 	
-	public function prodValidate(\com\vip\xstore\cc\product\pool\service\ProdValidateReqDTO $prodValidateReqDTO){
+	public function prodValidate(\Voop\com\vip\xstore\cc\product\pool\service\ProdValidateReqDTO $prodValidateReqDTO){
 		
 		$this->send_prodValidate( $prodValidateReqDTO);
 		return $this->recv_prodValidate();
 	}
 	
-	public function send_prodValidate(\com\vip\xstore\cc\product\pool\service\ProdValidateReqDTO $prodValidateReqDTO){
+	public function send_prodValidate(\Voop\com\vip\xstore\cc\product\pool\service\ProdValidateReqDTO $prodValidateReqDTO){
 		
 		$this->initInvocation("prodValidate");
-		$args = new \com\vip\xstore\cc\product\pool\service\ProductPurchaseService_prodValidate_args();
+		$args = new \Voop\com\vip\xstore\cc\product\pool\service\ProductPurchaseService_prodValidate_args();
 		
 		$args->prodValidateReqDTO = $prodValidateReqDTO;
 		
@@ -100,7 +100,7 @@ class _ProductPurchaseServiceClient extends \Osp\Base\OspStub implements \com\vi
 	
 	public function recv_prodValidate(){
 		
-		$result = new \com\vip\xstore\cc\product\pool\service\ProductPurchaseService_prodValidate_result();
+		$result = new \Voop\com\vip\xstore\cc\product\pool\service\ProductPurchaseService_prodValidate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -201,7 +201,7 @@ class ProductPurchaseService_prodQuery_args {
 		if(true) {
 			
 			
-			$this->prodQueryReqDTO = new \com\vip\xstore\cc\product\pool\service\ProdQueryReqDTO();
+			$this->prodQueryReqDTO = new \Voop\com\vip\xstore\cc\product\pool\service\ProdQueryReqDTO();
 			$this->prodQueryReqDTO->read($input);
 			
 		}
@@ -222,7 +222,7 @@ class ProductPurchaseService_prodQuery_args {
 		
 		if (!is_object($this->prodQueryReqDTO)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->prodQueryReqDTO->write($output);
@@ -279,7 +279,7 @@ class ProductPurchaseService_prodValidate_args {
 		if(true) {
 			
 			
-			$this->prodValidateReqDTO = new \com\vip\xstore\cc\product\pool\service\ProdValidateReqDTO();
+			$this->prodValidateReqDTO = new \Voop\com\vip\xstore\cc\product\pool\service\ProdValidateReqDTO();
 			$this->prodValidateReqDTO->read($input);
 			
 		}
@@ -300,7 +300,7 @@ class ProductPurchaseService_prodValidate_args {
 		
 		if (!is_object($this->prodValidateReqDTO)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->prodValidateReqDTO->write($output);
@@ -357,7 +357,7 @@ class ProductPurchaseService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -380,7 +380,7 @@ class ProductPurchaseService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -439,7 +439,7 @@ class ProductPurchaseService_prodQuery_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\product\pool\service\ProdQueryRespDTO();
+			$this->success = new \Voop\com\vip\xstore\cc\product\pool\service\ProdQueryRespDTO();
 			$this->success->read($input);
 			
 		}
@@ -462,7 +462,7 @@ class ProductPurchaseService_prodQuery_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -521,7 +521,7 @@ class ProductPurchaseService_prodValidate_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\product\pool\service\ProdValidateRespDTO();
+			$this->success = new \Voop\com\vip\xstore\cc\product\pool\service\ProdValidateRespDTO();
 			$this->success->read($input);
 			
 		}
@@ -544,7 +544,7 @@ class ProductPurchaseService_prodValidate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

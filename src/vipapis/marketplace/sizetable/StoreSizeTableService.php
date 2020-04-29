@@ -8,15 +8,15 @@
 *
 */
 
-namespace vipapis\marketplace\sizetable;
+namespace Voop\vipapis\marketplace\sizetable;
 interface StoreSizeTableServiceIf{
 	
 	
-	public function addSizeDetail(\vipapis\marketplace\sizetable\AddSizeDetailRequest $request);
+	public function addSizeDetail(\Voop\vipapis\marketplace\sizetable\AddSizeDetailRequest $request);
 	
-	public function addSizeTable(\vipapis\marketplace\sizetable\AddSizeTableRequest $request);
+	public function addSizeTable(\Voop\vipapis\marketplace\sizetable\AddSizeTableRequest $request);
 	
-	public function addSizeTableTemplate(\vipapis\marketplace\sizetable\AddSizeTableTemplateRequest $request);
+	public function addSizeTableTemplate(\Voop\vipapis\marketplace\sizetable\AddSizeTableTemplateRequest $request);
 	
 	public function batchGetSizeDetails( $size_detail_ids);
 	
@@ -24,15 +24,15 @@ interface StoreSizeTableServiceIf{
 	
 	public function getSizeTable( $size_table_id);
 	
-	public function getSizeTableTemplate(\vipapis\marketplace\sizetable\GetSizeTableTemplateRequest $request);
+	public function getSizeTableTemplate(\Voop\vipapis\marketplace\sizetable\GetSizeTableTemplateRequest $request);
 	
 	public function getTemplateTypes( $template_types);
 	
 	public function healthCheck();
 	
-	public function updateSizeDetail(\vipapis\marketplace\sizetable\UpdateSizeDetailRequest $request);
+	public function updateSizeDetail(\Voop\vipapis\marketplace\sizetable\UpdateSizeDetailRequest $request);
 	
-	public function updateSizeTable(\vipapis\marketplace\sizetable\UpdateSizeTableRequest $request);
+	public function updateSizeTable(\Voop\vipapis\marketplace\sizetable\UpdateSizeTableRequest $request);
 	
 }
 
@@ -44,16 +44,16 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function addSizeDetail(\vipapis\marketplace\sizetable\AddSizeDetailRequest $request){
+	public function addSizeDetail(\Voop\vipapis\marketplace\sizetable\AddSizeDetailRequest $request){
 		
 		$this->send_addSizeDetail( $request);
 		return $this->recv_addSizeDetail();
 	}
 	
-	public function send_addSizeDetail(\vipapis\marketplace\sizetable\AddSizeDetailRequest $request){
+	public function send_addSizeDetail(\Voop\vipapis\marketplace\sizetable\AddSizeDetailRequest $request){
 		
 		$this->initInvocation("addSizeDetail");
-		$args = new \vipapis\marketplace\sizetable\StoreSizeTableService_addSizeDetail_args();
+		$args = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_addSizeDetail_args();
 		
 		$args->request = $request;
 		
@@ -62,7 +62,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_addSizeDetail(){
 		
-		$result = new \vipapis\marketplace\sizetable\StoreSizeTableService_addSizeDetail_result();
+		$result = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_addSizeDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -72,16 +72,16 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function addSizeTable(\vipapis\marketplace\sizetable\AddSizeTableRequest $request){
+	public function addSizeTable(\Voop\vipapis\marketplace\sizetable\AddSizeTableRequest $request){
 		
 		$this->send_addSizeTable( $request);
 		return $this->recv_addSizeTable();
 	}
 	
-	public function send_addSizeTable(\vipapis\marketplace\sizetable\AddSizeTableRequest $request){
+	public function send_addSizeTable(\Voop\vipapis\marketplace\sizetable\AddSizeTableRequest $request){
 		
 		$this->initInvocation("addSizeTable");
-		$args = new \vipapis\marketplace\sizetable\StoreSizeTableService_addSizeTable_args();
+		$args = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_addSizeTable_args();
 		
 		$args->request = $request;
 		
@@ -90,7 +90,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_addSizeTable(){
 		
-		$result = new \vipapis\marketplace\sizetable\StoreSizeTableService_addSizeTable_result();
+		$result = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_addSizeTable_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -100,16 +100,16 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function addSizeTableTemplate(\vipapis\marketplace\sizetable\AddSizeTableTemplateRequest $request){
+	public function addSizeTableTemplate(\Voop\vipapis\marketplace\sizetable\AddSizeTableTemplateRequest $request){
 		
 		$this->send_addSizeTableTemplate( $request);
 		return $this->recv_addSizeTableTemplate();
 	}
 	
-	public function send_addSizeTableTemplate(\vipapis\marketplace\sizetable\AddSizeTableTemplateRequest $request){
+	public function send_addSizeTableTemplate(\Voop\vipapis\marketplace\sizetable\AddSizeTableTemplateRequest $request){
 		
 		$this->initInvocation("addSizeTableTemplate");
-		$args = new \vipapis\marketplace\sizetable\StoreSizeTableService_addSizeTableTemplate_args();
+		$args = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_addSizeTableTemplate_args();
 		
 		$args->request = $request;
 		
@@ -118,7 +118,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_addSizeTableTemplate(){
 		
-		$result = new \vipapis\marketplace\sizetable\StoreSizeTableService_addSizeTableTemplate_result();
+		$result = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_addSizeTableTemplate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -137,7 +137,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_batchGetSizeDetails( $size_detail_ids){
 		
 		$this->initInvocation("batchGetSizeDetails");
-		$args = new \vipapis\marketplace\sizetable\StoreSizeTableService_batchGetSizeDetails_args();
+		$args = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_batchGetSizeDetails_args();
 		
 		$args->size_detail_ids = $size_detail_ids;
 		
@@ -146,7 +146,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_batchGetSizeDetails(){
 		
-		$result = new \vipapis\marketplace\sizetable\StoreSizeTableService_batchGetSizeDetails_result();
+		$result = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_batchGetSizeDetails_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -165,7 +165,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_deleteSizeTableTemplate( $size_table_template_id){
 		
 		$this->initInvocation("deleteSizeTableTemplate");
-		$args = new \vipapis\marketplace\sizetable\StoreSizeTableService_deleteSizeTableTemplate_args();
+		$args = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_deleteSizeTableTemplate_args();
 		
 		$args->size_table_template_id = $size_table_template_id;
 		
@@ -174,7 +174,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_deleteSizeTableTemplate(){
 		
-		$result = new \vipapis\marketplace\sizetable\StoreSizeTableService_deleteSizeTableTemplate_result();
+		$result = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_deleteSizeTableTemplate_result();
 		$this->receive_base($result);
 		
 	}
@@ -189,7 +189,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_getSizeTable( $size_table_id){
 		
 		$this->initInvocation("getSizeTable");
-		$args = new \vipapis\marketplace\sizetable\StoreSizeTableService_getSizeTable_args();
+		$args = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_getSizeTable_args();
 		
 		$args->size_table_id = $size_table_id;
 		
@@ -198,7 +198,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getSizeTable(){
 		
-		$result = new \vipapis\marketplace\sizetable\StoreSizeTableService_getSizeTable_result();
+		$result = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_getSizeTable_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -208,16 +208,16 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function getSizeTableTemplate(\vipapis\marketplace\sizetable\GetSizeTableTemplateRequest $request){
+	public function getSizeTableTemplate(\Voop\vipapis\marketplace\sizetable\GetSizeTableTemplateRequest $request){
 		
 		$this->send_getSizeTableTemplate( $request);
 		return $this->recv_getSizeTableTemplate();
 	}
 	
-	public function send_getSizeTableTemplate(\vipapis\marketplace\sizetable\GetSizeTableTemplateRequest $request){
+	public function send_getSizeTableTemplate(\Voop\vipapis\marketplace\sizetable\GetSizeTableTemplateRequest $request){
 		
 		$this->initInvocation("getSizeTableTemplate");
-		$args = new \vipapis\marketplace\sizetable\StoreSizeTableService_getSizeTableTemplate_args();
+		$args = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_getSizeTableTemplate_args();
 		
 		$args->request = $request;
 		
@@ -226,7 +226,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getSizeTableTemplate(){
 		
-		$result = new \vipapis\marketplace\sizetable\StoreSizeTableService_getSizeTableTemplate_result();
+		$result = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_getSizeTableTemplate_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -245,7 +245,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_getTemplateTypes( $template_types){
 		
 		$this->initInvocation("getTemplateTypes");
-		$args = new \vipapis\marketplace\sizetable\StoreSizeTableService_getTemplateTypes_args();
+		$args = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_getTemplateTypes_args();
 		
 		$args->template_types = $template_types;
 		
@@ -254,7 +254,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_getTemplateTypes(){
 		
-		$result = new \vipapis\marketplace\sizetable\StoreSizeTableService_getTemplateTypes_result();
+		$result = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_getTemplateTypes_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -273,14 +273,14 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\marketplace\sizetable\StoreSizeTableService_healthCheck_args();
+		$args = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\marketplace\sizetable\StoreSizeTableService_healthCheck_result();
+		$result = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -290,16 +290,16 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	}
 	
 	
-	public function updateSizeDetail(\vipapis\marketplace\sizetable\UpdateSizeDetailRequest $request){
+	public function updateSizeDetail(\Voop\vipapis\marketplace\sizetable\UpdateSizeDetailRequest $request){
 		
 		$this->send_updateSizeDetail( $request);
 		return $this->recv_updateSizeDetail();
 	}
 	
-	public function send_updateSizeDetail(\vipapis\marketplace\sizetable\UpdateSizeDetailRequest $request){
+	public function send_updateSizeDetail(\Voop\vipapis\marketplace\sizetable\UpdateSizeDetailRequest $request){
 		
 		$this->initInvocation("updateSizeDetail");
-		$args = new \vipapis\marketplace\sizetable\StoreSizeTableService_updateSizeDetail_args();
+		$args = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_updateSizeDetail_args();
 		
 		$args->request = $request;
 		
@@ -308,22 +308,22 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_updateSizeDetail(){
 		
-		$result = new \vipapis\marketplace\sizetable\StoreSizeTableService_updateSizeDetail_result();
+		$result = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_updateSizeDetail_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function updateSizeTable(\vipapis\marketplace\sizetable\UpdateSizeTableRequest $request){
+	public function updateSizeTable(\Voop\vipapis\marketplace\sizetable\UpdateSizeTableRequest $request){
 		
 		$this->send_updateSizeTable( $request);
 		return $this->recv_updateSizeTable();
 	}
 	
-	public function send_updateSizeTable(\vipapis\marketplace\sizetable\UpdateSizeTableRequest $request){
+	public function send_updateSizeTable(\Voop\vipapis\marketplace\sizetable\UpdateSizeTableRequest $request){
 		
 		$this->initInvocation("updateSizeTable");
-		$args = new \vipapis\marketplace\sizetable\StoreSizeTableService_updateSizeTable_args();
+		$args = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_updateSizeTable_args();
 		
 		$args->request = $request;
 		
@@ -332,7 +332,7 @@ class _StoreSizeTableServiceClient extends \Osp\Base\OspStub implements \vipapis
 	
 	public function recv_updateSizeTable(){
 		
-		$result = new \vipapis\marketplace\sizetable\StoreSizeTableService_updateSizeTable_result();
+		$result = new \Voop\vipapis\marketplace\sizetable\StoreSizeTableService_updateSizeTable_result();
 		$this->receive_base($result);
 		
 	}
@@ -383,7 +383,7 @@ class StoreSizeTableService_addSizeDetail_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\sizetable\AddSizeDetailRequest();
+			$this->request = new \Voop\vipapis\marketplace\sizetable\AddSizeDetailRequest();
 			$this->request->read($input);
 			
 		}
@@ -404,7 +404,7 @@ class StoreSizeTableService_addSizeDetail_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -461,7 +461,7 @@ class StoreSizeTableService_addSizeTable_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\sizetable\AddSizeTableRequest();
+			$this->request = new \Voop\vipapis\marketplace\sizetable\AddSizeTableRequest();
 			$this->request->read($input);
 			
 		}
@@ -482,7 +482,7 @@ class StoreSizeTableService_addSizeTable_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -539,7 +539,7 @@ class StoreSizeTableService_addSizeTableTemplate_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\sizetable\AddSizeTableTemplateRequest();
+			$this->request = new \Voop\vipapis\marketplace\sizetable\AddSizeTableTemplateRequest();
 			$this->request->read($input);
 			
 		}
@@ -560,7 +560,7 @@ class StoreSizeTableService_addSizeTableTemplate_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -655,7 +655,7 @@ class StoreSizeTableService_batchGetSizeDetails_args {
 		
 		if (!is_array($this->size_detail_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -859,7 +859,7 @@ class StoreSizeTableService_getSizeTableTemplate_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\sizetable\GetSizeTableTemplateRequest();
+			$this->request = new \Voop\vipapis\marketplace\sizetable\GetSizeTableTemplateRequest();
 			$this->request->read($input);
 			
 		}
@@ -880,7 +880,7 @@ class StoreSizeTableService_getSizeTableTemplate_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -977,7 +977,7 @@ class StoreSizeTableService_getTemplateTypes_args {
 			
 			if (!is_array($this->template_types)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1089,7 +1089,7 @@ class StoreSizeTableService_updateSizeDetail_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\sizetable\UpdateSizeDetailRequest();
+			$this->request = new \Voop\vipapis\marketplace\sizetable\UpdateSizeDetailRequest();
 			$this->request->read($input);
 			
 		}
@@ -1110,7 +1110,7 @@ class StoreSizeTableService_updateSizeDetail_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1167,7 +1167,7 @@ class StoreSizeTableService_updateSizeTable_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\marketplace\sizetable\UpdateSizeTableRequest();
+			$this->request = new \Voop\vipapis\marketplace\sizetable\UpdateSizeTableRequest();
 			$this->request->read($input);
 			
 		}
@@ -1188,7 +1188,7 @@ class StoreSizeTableService_updateSizeTable_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1245,7 +1245,7 @@ class StoreSizeTableService_addSizeDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\sizetable\AddSizeDetailResponse();
+			$this->success = new \Voop\vipapis\marketplace\sizetable\AddSizeDetailResponse();
 			$this->success->read($input);
 			
 		}
@@ -1268,7 +1268,7 @@ class StoreSizeTableService_addSizeDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1327,7 +1327,7 @@ class StoreSizeTableService_addSizeTable_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\sizetable\AddSizeTableResponse();
+			$this->success = new \Voop\vipapis\marketplace\sizetable\AddSizeTableResponse();
 			$this->success->read($input);
 			
 		}
@@ -1350,7 +1350,7 @@ class StoreSizeTableService_addSizeTable_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1409,7 +1409,7 @@ class StoreSizeTableService_addSizeTableTemplate_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\sizetable\AddSizeTableTemplateResponse();
+			$this->success = new \Voop\vipapis\marketplace\sizetable\AddSizeTableTemplateResponse();
 			$this->success->read($input);
 			
 		}
@@ -1432,7 +1432,7 @@ class StoreSizeTableService_addSizeTableTemplate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1500,7 +1500,7 @@ class StoreSizeTableService_batchGetSizeDetails_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\marketplace\sizetable\SizeDetail();
+					$elem0 = new \Voop\vipapis\marketplace\sizetable\SizeDetail();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1533,7 +1533,7 @@ class StoreSizeTableService_batchGetSizeDetails_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1542,7 +1542,7 @@ class StoreSizeTableService_batchGetSizeDetails_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1654,7 +1654,7 @@ class StoreSizeTableService_getSizeTable_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\sizetable\SizeTable();
+			$this->success = new \Voop\vipapis\marketplace\sizetable\SizeTable();
 			$this->success->read($input);
 			
 		}
@@ -1677,7 +1677,7 @@ class StoreSizeTableService_getSizeTable_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1736,7 +1736,7 @@ class StoreSizeTableService_getSizeTableTemplate_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\sizetable\GetSizeTableTemplateResponse();
+			$this->success = new \Voop\vipapis\marketplace\sizetable\GetSizeTableTemplateResponse();
 			$this->success->read($input);
 			
 		}
@@ -1759,7 +1759,7 @@ class StoreSizeTableService_getSizeTableTemplate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1818,7 +1818,7 @@ class StoreSizeTableService_getTemplateTypes_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\sizetable\GetTemplateTypeResponse();
+			$this->success = new \Voop\vipapis\marketplace\sizetable\GetTemplateTypeResponse();
 			$this->success->read($input);
 			
 		}
@@ -1841,7 +1841,7 @@ class StoreSizeTableService_getTemplateTypes_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1900,7 +1900,7 @@ class StoreSizeTableService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1923,7 +1923,7 @@ class StoreSizeTableService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

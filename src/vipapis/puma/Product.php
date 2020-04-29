@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\puma;
+namespace Voop\vipapis\puma;
 
 class Product {
 	
@@ -101,7 +101,7 @@ class Product {
 				
 				$needSkip = false;
 				
-				$this->stock = new \vipapis\puma\Stock();
+				$this->stock = new \Voop\vipapis\puma\Stock();
 				$this->stock->read($input);
 				
 			}
@@ -113,7 +113,7 @@ class Product {
 				
 				$needSkip = false;
 				
-				$this->cps = new \vipapis\puma\Cps();
+				$this->cps = new \Voop\vipapis\puma\Cps();
 				$this->cps->read($input);
 				
 			}
@@ -125,7 +125,7 @@ class Product {
 				
 				$needSkip = false;
 				
-				$this->price = new \vipapis\puma\Price();
+				$this->price = new \Voop\vipapis\puma\Price();
 				$this->price->read($input);
 				
 			}
@@ -137,7 +137,7 @@ class Product {
 				
 				$needSkip = false;
 				
-				$this->merchandise = new \vipapis\puma\Merchandise();
+				$this->merchandise = new \Voop\vipapis\puma\Merchandise();
 				$this->merchandise->read($input);
 				
 			}
@@ -149,7 +149,7 @@ class Product {
 				
 				$needSkip = false;
 				
-				$this->vendor_product = new \vipapis\puma\VendorProduct();
+				$this->vendor_product = new \Voop\vipapis\puma\VendorProduct();
 				$this->vendor_product->read($input);
 				
 			}
@@ -158,7 +158,7 @@ class Product {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -181,7 +181,7 @@ class Product {
 			
 			if (!is_object($this->stock)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->stock->write($output);
@@ -196,7 +196,7 @@ class Product {
 			
 			if (!is_object($this->cps)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->cps->write($output);
@@ -211,7 +211,7 @@ class Product {
 			
 			if (!is_object($this->price)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->price->write($output);
@@ -226,7 +226,7 @@ class Product {
 			
 			if (!is_object($this->merchandise)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->merchandise->write($output);
@@ -241,7 +241,7 @@ class Product {
 			
 			if (!is_object($this->vendor_product)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->vendor_product->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\request;
+namespace Voop\com\vip\xstore\order\ofc\api\request;
 
 class GetOfcSyncAfterSaleDataListReq {
 	
@@ -256,7 +256,7 @@ class GetOfcSyncAfterSaleDataListReq {
 				
 				$needSkip = false;
 				
-				$this->nextTimeRange = new \com\vip\xstore\order\common\pojo\vo\RangeParam();
+				$this->nextTimeRange = new \Voop\com\vip\xstore\order\common\pojo\vo\RangeParam();
 				$this->nextTimeRange->read($input);
 				
 			}
@@ -288,7 +288,7 @@ class GetOfcSyncAfterSaleDataListReq {
 			
 			if (!is_array($this->orderIds)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -310,7 +310,7 @@ class GetOfcSyncAfterSaleDataListReq {
 			
 			if (!is_array($this->flags)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -332,7 +332,7 @@ class GetOfcSyncAfterSaleDataListReq {
 			
 			if (!is_array($this->wmsFlags)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -354,7 +354,7 @@ class GetOfcSyncAfterSaleDataListReq {
 			
 			if (!is_array($this->syncDataIds)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -376,7 +376,7 @@ class GetOfcSyncAfterSaleDataListReq {
 			
 			if (!is_array($this->applyIds)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -398,7 +398,7 @@ class GetOfcSyncAfterSaleDataListReq {
 			
 			if (!is_object($this->nextTimeRange)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->nextTimeRange->write($output);

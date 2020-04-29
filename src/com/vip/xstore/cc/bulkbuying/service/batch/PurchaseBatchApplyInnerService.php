@@ -8,15 +8,15 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying\service\batch;
+namespace Voop\com\vip\xstore\cc\bulkbuying\service\batch;
 interface PurchaseBatchApplyInnerServiceIf{
 	
 	
-	public function createPurchaseOrdersByApply(\com\vip\xstore\cc\bulkbuying\service\batch\CreatePurchaseOrdersByApplyReq $req);
+	public function createPurchaseOrdersByApply(\Voop\com\vip\xstore\cc\bulkbuying\service\batch\CreatePurchaseOrdersByApplyReq $req);
 	
 	public function healthCheck();
 	
-	public function queryPurchaseBatchesToHandle(\com\vip\xstore\cc\bulkbuying\service\batch\QueryPurchaseBatchesToHandleReq $req);
+	public function queryPurchaseBatchesToHandle(\Voop\com\vip\xstore\cc\bulkbuying\service\batch\QueryPurchaseBatchesToHandleReq $req);
 	
 }
 
@@ -28,16 +28,16 @@ class _PurchaseBatchApplyInnerServiceClient extends \Osp\Base\OspStub implements
 	}
 	
 	
-	public function createPurchaseOrdersByApply(\com\vip\xstore\cc\bulkbuying\service\batch\CreatePurchaseOrdersByApplyReq $req){
+	public function createPurchaseOrdersByApply(\Voop\com\vip\xstore\cc\bulkbuying\service\batch\CreatePurchaseOrdersByApplyReq $req){
 		
 		$this->send_createPurchaseOrdersByApply( $req);
 		return $this->recv_createPurchaseOrdersByApply();
 	}
 	
-	public function send_createPurchaseOrdersByApply(\com\vip\xstore\cc\bulkbuying\service\batch\CreatePurchaseOrdersByApplyReq $req){
+	public function send_createPurchaseOrdersByApply(\Voop\com\vip\xstore\cc\bulkbuying\service\batch\CreatePurchaseOrdersByApplyReq $req){
 		
 		$this->initInvocation("createPurchaseOrdersByApply");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_createPurchaseOrdersByApply_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_createPurchaseOrdersByApply_args();
 		
 		$args->req = $req;
 		
@@ -46,7 +46,7 @@ class _PurchaseBatchApplyInnerServiceClient extends \Osp\Base\OspStub implements
 	
 	public function recv_createPurchaseOrdersByApply(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_createPurchaseOrdersByApply_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_createPurchaseOrdersByApply_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -65,14 +65,14 @@ class _PurchaseBatchApplyInnerServiceClient extends \Osp\Base\OspStub implements
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_healthCheck_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_healthCheck_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -82,16 +82,16 @@ class _PurchaseBatchApplyInnerServiceClient extends \Osp\Base\OspStub implements
 	}
 	
 	
-	public function queryPurchaseBatchesToHandle(\com\vip\xstore\cc\bulkbuying\service\batch\QueryPurchaseBatchesToHandleReq $req){
+	public function queryPurchaseBatchesToHandle(\Voop\com\vip\xstore\cc\bulkbuying\service\batch\QueryPurchaseBatchesToHandleReq $req){
 		
 		$this->send_queryPurchaseBatchesToHandle( $req);
 		return $this->recv_queryPurchaseBatchesToHandle();
 	}
 	
-	public function send_queryPurchaseBatchesToHandle(\com\vip\xstore\cc\bulkbuying\service\batch\QueryPurchaseBatchesToHandleReq $req){
+	public function send_queryPurchaseBatchesToHandle(\Voop\com\vip\xstore\cc\bulkbuying\service\batch\QueryPurchaseBatchesToHandleReq $req){
 		
 		$this->initInvocation("queryPurchaseBatchesToHandle");
-		$args = new \com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_queryPurchaseBatchesToHandle_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_queryPurchaseBatchesToHandle_args();
 		
 		$args->req = $req;
 		
@@ -100,7 +100,7 @@ class _PurchaseBatchApplyInnerServiceClient extends \Osp\Base\OspStub implements
 	
 	public function recv_queryPurchaseBatchesToHandle(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_queryPurchaseBatchesToHandle_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerService_queryPurchaseBatchesToHandle_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -155,7 +155,7 @@ class PurchaseBatchApplyInnerService_createPurchaseOrdersByApply_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\cc\bulkbuying\service\batch\CreatePurchaseOrdersByApplyReq();
+			$this->req = new \Voop\com\vip\xstore\cc\bulkbuying\service\batch\CreatePurchaseOrdersByApplyReq();
 			$this->req->read($input);
 			
 		}
@@ -178,7 +178,7 @@ class PurchaseBatchApplyInnerService_createPurchaseOrdersByApply_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -283,7 +283,7 @@ class PurchaseBatchApplyInnerService_queryPurchaseBatchesToHandle_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\cc\bulkbuying\service\batch\QueryPurchaseBatchesToHandleReq();
+			$this->req = new \Voop\com\vip\xstore\cc\bulkbuying\service\batch\QueryPurchaseBatchesToHandleReq();
 			$this->req->read($input);
 			
 		}
@@ -306,7 +306,7 @@ class PurchaseBatchApplyInnerService_queryPurchaseBatchesToHandle_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -365,7 +365,7 @@ class PurchaseBatchApplyInnerService_createPurchaseOrdersByApply_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\bulkbuying\service\batch\CreatePurchaseOrdersByApplyResp();
+			$this->success = new \Voop\com\vip\xstore\cc\bulkbuying\service\batch\CreatePurchaseOrdersByApplyResp();
 			$this->success->read($input);
 			
 		}
@@ -388,7 +388,7 @@ class PurchaseBatchApplyInnerService_createPurchaseOrdersByApply_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -447,7 +447,7 @@ class PurchaseBatchApplyInnerService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -470,7 +470,7 @@ class PurchaseBatchApplyInnerService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -529,7 +529,7 @@ class PurchaseBatchApplyInnerService_queryPurchaseBatchesToHandle_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\bulkbuying\service\batch\QueryPurchaseBatchesToHandleResp();
+			$this->success = new \Voop\com\vip\xstore\cc\bulkbuying\service\batch\QueryPurchaseBatchesToHandleResp();
 			$this->success->read($input);
 			
 		}
@@ -552,7 +552,7 @@ class PurchaseBatchApplyInnerService_queryPurchaseBatchesToHandle_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

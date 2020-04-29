@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\svip\osp\service;
+namespace Voop\com\vip\svip\osp\service;
 require_once dirname(__FILE__).'/SvipOspServiceV2.php';
 class SvipOspServiceV2Helper extends _SvipOspServiceV2Client{
 	

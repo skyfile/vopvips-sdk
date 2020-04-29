@@ -8,19 +8,19 @@
 *
 */
 
-namespace com\vip\venus\closePo\service;
+namespace Voop\com\vip\venus\closePo\service;
 interface PoServiceShutDownIf{
 	
 	
-	public function getGoodReceiveInfoByPo(\com\vip\venus\closePo\service\PoGoodReceiveInfoParam $param);
+	public function getGoodReceiveInfoByPo(\Voop\com\vip\venus\closePo\service\PoGoodReceiveInfoParam $param);
 	
-	public function getPoCloseForWms(\com\vip\venus\closePo\service\PoCloseForWmsParam $param);
+	public function getPoCloseForWms(\Voop\com\vip\venus\closePo\service\PoCloseForWmsParam $param);
 	
 	public function getPoCloseListByWarehouseCode( $maxId, $count, $warehouseCode);
 	
 	public function healthCheck();
 	
-	public function shutDownPo(\com\vip\venus\closePo\service\ShutDownPoParam $param);
+	public function shutDownPo(\Voop\com\vip\venus\closePo\service\ShutDownPoParam $param);
 	
 	public function timedTasks();
 	
@@ -34,16 +34,16 @@ class _PoServiceShutDownClient extends \Osp\Base\OspStub implements \com\vip\ven
 	}
 	
 	
-	public function getGoodReceiveInfoByPo(\com\vip\venus\closePo\service\PoGoodReceiveInfoParam $param){
+	public function getGoodReceiveInfoByPo(\Voop\com\vip\venus\closePo\service\PoGoodReceiveInfoParam $param){
 		
 		$this->send_getGoodReceiveInfoByPo( $param);
 		return $this->recv_getGoodReceiveInfoByPo();
 	}
 	
-	public function send_getGoodReceiveInfoByPo(\com\vip\venus\closePo\service\PoGoodReceiveInfoParam $param){
+	public function send_getGoodReceiveInfoByPo(\Voop\com\vip\venus\closePo\service\PoGoodReceiveInfoParam $param){
 		
 		$this->initInvocation("getGoodReceiveInfoByPo");
-		$args = new \com\vip\venus\closePo\service\PoServiceShutDown_getGoodReceiveInfoByPo_args();
+		$args = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_getGoodReceiveInfoByPo_args();
 		
 		$args->param = $param;
 		
@@ -52,7 +52,7 @@ class _PoServiceShutDownClient extends \Osp\Base\OspStub implements \com\vip\ven
 	
 	public function recv_getGoodReceiveInfoByPo(){
 		
-		$result = new \com\vip\venus\closePo\service\PoServiceShutDown_getGoodReceiveInfoByPo_result();
+		$result = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_getGoodReceiveInfoByPo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -62,16 +62,16 @@ class _PoServiceShutDownClient extends \Osp\Base\OspStub implements \com\vip\ven
 	}
 	
 	
-	public function getPoCloseForWms(\com\vip\venus\closePo\service\PoCloseForWmsParam $param){
+	public function getPoCloseForWms(\Voop\com\vip\venus\closePo\service\PoCloseForWmsParam $param){
 		
 		$this->send_getPoCloseForWms( $param);
 		return $this->recv_getPoCloseForWms();
 	}
 	
-	public function send_getPoCloseForWms(\com\vip\venus\closePo\service\PoCloseForWmsParam $param){
+	public function send_getPoCloseForWms(\Voop\com\vip\venus\closePo\service\PoCloseForWmsParam $param){
 		
 		$this->initInvocation("getPoCloseForWms");
-		$args = new \com\vip\venus\closePo\service\PoServiceShutDown_getPoCloseForWms_args();
+		$args = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_getPoCloseForWms_args();
 		
 		$args->param = $param;
 		
@@ -80,7 +80,7 @@ class _PoServiceShutDownClient extends \Osp\Base\OspStub implements \com\vip\ven
 	
 	public function recv_getPoCloseForWms(){
 		
-		$result = new \com\vip\venus\closePo\service\PoServiceShutDown_getPoCloseForWms_result();
+		$result = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_getPoCloseForWms_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -99,7 +99,7 @@ class _PoServiceShutDownClient extends \Osp\Base\OspStub implements \com\vip\ven
 	public function send_getPoCloseListByWarehouseCode( $maxId, $count, $warehouseCode){
 		
 		$this->initInvocation("getPoCloseListByWarehouseCode");
-		$args = new \com\vip\venus\closePo\service\PoServiceShutDown_getPoCloseListByWarehouseCode_args();
+		$args = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_getPoCloseListByWarehouseCode_args();
 		
 		$args->maxId = $maxId;
 		
@@ -112,7 +112,7 @@ class _PoServiceShutDownClient extends \Osp\Base\OspStub implements \com\vip\ven
 	
 	public function recv_getPoCloseListByWarehouseCode(){
 		
-		$result = new \com\vip\venus\closePo\service\PoServiceShutDown_getPoCloseListByWarehouseCode_result();
+		$result = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_getPoCloseListByWarehouseCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -131,14 +131,14 @@ class _PoServiceShutDownClient extends \Osp\Base\OspStub implements \com\vip\ven
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\venus\closePo\service\PoServiceShutDown_healthCheck_args();
+		$args = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\venus\closePo\service\PoServiceShutDown_healthCheck_result();
+		$result = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -148,16 +148,16 @@ class _PoServiceShutDownClient extends \Osp\Base\OspStub implements \com\vip\ven
 	}
 	
 	
-	public function shutDownPo(\com\vip\venus\closePo\service\ShutDownPoParam $param){
+	public function shutDownPo(\Voop\com\vip\venus\closePo\service\ShutDownPoParam $param){
 		
 		$this->send_shutDownPo( $param);
 		return $this->recv_shutDownPo();
 	}
 	
-	public function send_shutDownPo(\com\vip\venus\closePo\service\ShutDownPoParam $param){
+	public function send_shutDownPo(\Voop\com\vip\venus\closePo\service\ShutDownPoParam $param){
 		
 		$this->initInvocation("shutDownPo");
-		$args = new \com\vip\venus\closePo\service\PoServiceShutDown_shutDownPo_args();
+		$args = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_shutDownPo_args();
 		
 		$args->param = $param;
 		
@@ -166,7 +166,7 @@ class _PoServiceShutDownClient extends \Osp\Base\OspStub implements \com\vip\ven
 	
 	public function recv_shutDownPo(){
 		
-		$result = new \com\vip\venus\closePo\service\PoServiceShutDown_shutDownPo_result();
+		$result = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_shutDownPo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -185,14 +185,14 @@ class _PoServiceShutDownClient extends \Osp\Base\OspStub implements \com\vip\ven
 	public function send_timedTasks(){
 		
 		$this->initInvocation("timedTasks");
-		$args = new \com\vip\venus\closePo\service\PoServiceShutDown_timedTasks_args();
+		$args = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_timedTasks_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_timedTasks(){
 		
-		$result = new \com\vip\venus\closePo\service\PoServiceShutDown_timedTasks_result();
+		$result = new \Voop\com\vip\venus\closePo\service\PoServiceShutDown_timedTasks_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -247,7 +247,7 @@ class PoServiceShutDown_getGoodReceiveInfoByPo_args {
 		if(true) {
 			
 			
-			$this->param = new \com\vip\venus\closePo\service\PoGoodReceiveInfoParam();
+			$this->param = new \Voop\com\vip\venus\closePo\service\PoGoodReceiveInfoParam();
 			$this->param->read($input);
 			
 		}
@@ -268,7 +268,7 @@ class PoServiceShutDown_getGoodReceiveInfoByPo_args {
 		
 		if (!is_object($this->param)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->param->write($output);
@@ -325,7 +325,7 @@ class PoServiceShutDown_getPoCloseForWms_args {
 		if(true) {
 			
 			
-			$this->param = new \com\vip\venus\closePo\service\PoCloseForWmsParam();
+			$this->param = new \Voop\com\vip\venus\closePo\service\PoCloseForWmsParam();
 			$this->param->read($input);
 			
 		}
@@ -346,7 +346,7 @@ class PoServiceShutDown_getPoCloseForWms_args {
 		
 		if (!is_object($this->param)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->param->write($output);
@@ -567,7 +567,7 @@ class PoServiceShutDown_shutDownPo_args {
 		if(true) {
 			
 			
-			$this->param = new \com\vip\venus\closePo\service\ShutDownPoParam();
+			$this->param = new \Voop\com\vip\venus\closePo\service\ShutDownPoParam();
 			$this->param->read($input);
 			
 		}
@@ -588,7 +588,7 @@ class PoServiceShutDown_shutDownPo_args {
 		
 		if (!is_object($this->param)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->param->write($output);
@@ -691,7 +691,7 @@ class PoServiceShutDown_getGoodReceiveInfoByPo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\venus\closePo\service\PoGoodReceiveInfoResult();
+			$this->success = new \Voop\com\vip\venus\closePo\service\PoGoodReceiveInfoResult();
 			$this->success->read($input);
 			
 		}
@@ -714,7 +714,7 @@ class PoServiceShutDown_getGoodReceiveInfoByPo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -782,7 +782,7 @@ class PoServiceShutDown_getPoCloseForWms_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\venus\closePo\service\PoCloseForWmsReturn();
+					$elem0 = new \Voop\com\vip\venus\closePo\service\PoCloseForWmsReturn();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -815,7 +815,7 @@ class PoServiceShutDown_getPoCloseForWms_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -824,7 +824,7 @@ class PoServiceShutDown_getPoCloseForWms_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -896,7 +896,7 @@ class PoServiceShutDown_getPoCloseListByWarehouseCode_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\venus\closePo\service\PoCloseMsg();
+					$elem1 = new \Voop\com\vip\venus\closePo\service\PoCloseMsg();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -929,7 +929,7 @@ class PoServiceShutDown_getPoCloseListByWarehouseCode_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -938,7 +938,7 @@ class PoServiceShutDown_getPoCloseListByWarehouseCode_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1001,7 +1001,7 @@ class PoServiceShutDown_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1024,7 +1024,7 @@ class PoServiceShutDown_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

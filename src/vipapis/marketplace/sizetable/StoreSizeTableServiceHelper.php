@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\sizetable;
+namespace Voop\vipapis\marketplace\sizetable;
 require_once dirname(__FILE__).'/StoreSizeTableService.php';
 class StoreSizeTableServiceHelper extends _StoreSizeTableServiceClient{
 	

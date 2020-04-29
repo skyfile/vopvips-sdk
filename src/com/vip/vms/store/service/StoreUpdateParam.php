@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vms\store\service;
+namespace Voop\com\vip\vms\store\service;
 
 class StoreUpdateParam {
 	

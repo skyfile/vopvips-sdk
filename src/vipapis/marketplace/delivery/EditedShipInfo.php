@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\delivery;
+namespace Voop\vipapis\marketplace\delivery;
 
 class EditedShipInfo {
 	
@@ -170,7 +170,7 @@ class EditedShipInfo {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\marketplace\delivery\EditedPackage();
+						$elem0 = new \Voop\vipapis\marketplace\delivery\EditedPackage();
 						$elem0->read($input);
 						
 						$this->edited_packages[$_size0++] = $elem0;
@@ -189,7 +189,7 @@ class EditedShipInfo {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -239,7 +239,7 @@ class EditedShipInfo {
 		
 		if (!is_array($this->edited_packages)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -248,7 +248,7 @@ class EditedShipInfo {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

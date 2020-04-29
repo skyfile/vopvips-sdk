@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\inventory;
+namespace Voop\vipapis\xstore\inventory;
 require_once dirname(__FILE__).'/InventoryFlowService.php';
 class InventoryFlowServiceHelper extends _InventoryFlowServiceClient{
 	

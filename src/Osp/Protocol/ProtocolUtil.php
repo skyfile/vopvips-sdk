@@ -1,6 +1,6 @@
 <?php
 
-namespace Osp\Protocol;
+namespace Voop\Osp\Protocol;
 
 class ProtocolUtil {
 	static $NUMBER = 1;
@@ -44,7 +44,7 @@ class ProtocolUtil {
 				$prot->readBool ( $temp );
 				break;
 			default :
-				throw new \Osp\Exception\OspException ( "unknow Type" );
+				throw new \Voop\Osp\Exception\OspException ( "unknow Type" );
 		}
 	}
 }

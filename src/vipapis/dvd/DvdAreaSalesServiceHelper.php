@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\dvd;
+namespace Voop\vipapis\dvd;
 require_once dirname(__FILE__).'/DvdAreaSalesService.php';
 class DvdAreaSalesServiceHelper extends _DvdAreaSalesServiceClient{
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\jingdong;
+namespace Voop\vipapis\marketplace\jingdong;
 
 class OrderActive {
 	
@@ -180,7 +180,7 @@ class OrderActive {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\marketplace\jingdong\GoodsDiscountDetail();
+						$elem0 = new \Voop\vipapis\marketplace\jingdong\GoodsDiscountDetail();
 						$elem0->read($input);
 						
 						$this->goods_discount_details[$_size0++] = $elem0;
@@ -211,7 +211,7 @@ class OrderActive {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\marketplace\jingdong\PromCouponInfo();
+						$elem1 = new \Voop\vipapis\marketplace\jingdong\PromCouponInfo();
 						$elem1->read($input);
 						
 						$this->prom_coupons[$_size1++] = $elem1;
@@ -230,7 +230,7 @@ class OrderActive {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -298,7 +298,7 @@ class OrderActive {
 			
 			if (!is_array($this->goods_discount_details)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -307,7 +307,7 @@ class OrderActive {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -326,7 +326,7 @@ class OrderActive {
 			
 			if (!is_array($this->prom_coupons)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -335,7 +335,7 @@ class OrderActive {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

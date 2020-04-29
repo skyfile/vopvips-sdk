@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\pda\order\receiving;
+namespace Voop\com\vip\xstore\pda\order\receiving;
 
 class ReceivingOrder {
 	
@@ -530,7 +530,7 @@ class ReceivingOrder {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\xstore\pda\order\receiving\ReceivingBox();
+						$elem0 = new \Voop\com\vip\xstore\pda\order\receiving\ReceivingBox();
 						$elem0->read($input);
 						
 						$this->boxes[$_size0++] = $elem0;
@@ -719,7 +719,7 @@ class ReceivingOrder {
 			
 			if (!is_array($this->boxes)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -728,7 +728,7 @@ class ReceivingOrder {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

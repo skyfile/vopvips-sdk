@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\overseas;
+namespace Voop\vipapis\overseas;
 
 class Ht3plPoListRequest {
 	
@@ -161,7 +161,7 @@ class Ht3plPoListRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -200,7 +200,7 @@ class Ht3plPoListRequest {
 		
 		$xfer += $output->writeFieldBegin('sale_area');
 		
-		$em = new \vipapis\common\SaleArea; 
+		$em = new \Voop\vipapis\common\SaleArea; 
 		$output->writeString($em::$__names[$this->sale_area]);  
 		
 		$xfer += $output->writeFieldEnd();

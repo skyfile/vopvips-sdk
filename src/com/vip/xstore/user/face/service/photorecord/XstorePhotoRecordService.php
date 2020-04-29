@@ -8,13 +8,13 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service\photorecord;
+namespace Voop\com\vip\xstore\user\face\service\photorecord;
 interface XstorePhotoRecordServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function uploadPhotos(\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordRequest $request);
+	public function uploadPhotos(\Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordRequest $request);
 	
 }
 
@@ -35,14 +35,14 @@ class _XstorePhotoRecordServiceClient extends \Osp\Base\OspStub implements \com\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordService_healthCheck_args();
+		$args = new \Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordService_healthCheck_result();
+		$result = new \Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -52,16 +52,16 @@ class _XstorePhotoRecordServiceClient extends \Osp\Base\OspStub implements \com\
 	}
 	
 	
-	public function uploadPhotos(\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordRequest $request){
+	public function uploadPhotos(\Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordRequest $request){
 		
 		$this->send_uploadPhotos( $request);
 		return $this->recv_uploadPhotos();
 	}
 	
-	public function send_uploadPhotos(\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordRequest $request){
+	public function send_uploadPhotos(\Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordRequest $request){
 		
 		$this->initInvocation("uploadPhotos");
-		$args = new \com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordService_uploadPhotos_args();
+		$args = new \Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordService_uploadPhotos_args();
 		
 		$args->request = $request;
 		
@@ -70,7 +70,7 @@ class _XstorePhotoRecordServiceClient extends \Osp\Base\OspStub implements \com\
 	
 	public function recv_uploadPhotos(){
 		
-		$result = new \com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordService_uploadPhotos_result();
+		$result = new \Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordService_uploadPhotos_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -171,7 +171,7 @@ class XstorePhotoRecordService_uploadPhotos_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordRequest();
+			$this->request = new \Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordRequest();
 			$this->request->read($input);
 			
 		}
@@ -192,7 +192,7 @@ class XstorePhotoRecordService_uploadPhotos_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -249,7 +249,7 @@ class XstorePhotoRecordService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -272,7 +272,7 @@ class XstorePhotoRecordService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -331,7 +331,7 @@ class XstorePhotoRecordService_uploadPhotos_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordResponse();
+			$this->success = new \Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordResponse();
 			$this->success->read($input);
 			
 		}
@@ -354,7 +354,7 @@ class XstorePhotoRecordService_uploadPhotos_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

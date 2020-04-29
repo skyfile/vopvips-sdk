@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 
 class RefuseOrReturnProductResponse {
 	
@@ -110,7 +110,7 @@ class RefuseOrReturnProductResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\delivery\RefuseOrReturnProductResultInfo();
+						$elem0 = new \Voop\vipapis\delivery\RefuseOrReturnProductResultInfo();
 						$elem0->read($input);
 						
 						$this->success_data[$_size0++] = $elem0;
@@ -151,7 +151,7 @@ class RefuseOrReturnProductResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\delivery\RefuseOrReturnProductResultInfo();
+						$elem1 = new \Voop\vipapis\delivery\RefuseOrReturnProductResultInfo();
 						$elem1->read($input);
 						
 						$this->fail_data[$_size1++] = $elem1;
@@ -170,7 +170,7 @@ class RefuseOrReturnProductResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -202,7 +202,7 @@ class RefuseOrReturnProductResponse {
 			
 			if (!is_array($this->success_data)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -211,7 +211,7 @@ class RefuseOrReturnProductResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -239,7 +239,7 @@ class RefuseOrReturnProductResponse {
 			
 			if (!is_array($this->fail_data)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -248,7 +248,7 @@ class RefuseOrReturnProductResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

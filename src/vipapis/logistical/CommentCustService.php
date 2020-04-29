@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\logistical;
+namespace Voop\vipapis\logistical;
 interface CommentCustServiceIf{
 	
 	
@@ -39,7 +39,7 @@ class _CommentCustServiceClient extends \Osp\Base\OspStub implements \vipapis\lo
 	public function send_countOrderCommentsByCondition( $custNo, $ordersn, $startPostime, $endPostime){
 		
 		$this->initInvocation("countOrderCommentsByCondition");
-		$args = new \vipapis\logistical\CommentCustService_countOrderCommentsByCondition_args();
+		$args = new \Voop\vipapis\logistical\CommentCustService_countOrderCommentsByCondition_args();
 		
 		$args->custNo = $custNo;
 		
@@ -54,7 +54,7 @@ class _CommentCustServiceClient extends \Osp\Base\OspStub implements \vipapis\lo
 	
 	public function recv_countOrderCommentsByCondition(){
 		
-		$result = new \vipapis\logistical\CommentCustService_countOrderCommentsByCondition_result();
+		$result = new \Voop\vipapis\logistical\CommentCustService_countOrderCommentsByCondition_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -73,7 +73,7 @@ class _CommentCustServiceClient extends \Osp\Base\OspStub implements \vipapis\lo
 	public function send_getCommentsByCustNo( $custNo, $curPage, $pageSize, $startPostime, $endPostime){
 		
 		$this->initInvocation("getCommentsByCustNo");
-		$args = new \vipapis\logistical\CommentCustService_getCommentsByCustNo_args();
+		$args = new \Voop\vipapis\logistical\CommentCustService_getCommentsByCustNo_args();
 		
 		$args->custNo = $custNo;
 		
@@ -90,7 +90,7 @@ class _CommentCustServiceClient extends \Osp\Base\OspStub implements \vipapis\lo
 	
 	public function recv_getCommentsByCustNo(){
 		
-		$result = new \vipapis\logistical\CommentCustService_getCommentsByCustNo_result();
+		$result = new \Voop\vipapis\logistical\CommentCustService_getCommentsByCustNo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -109,7 +109,7 @@ class _CommentCustServiceClient extends \Osp\Base\OspStub implements \vipapis\lo
 	public function send_getOrderCommentsByCondition( $custNo, $ordersn, $curPage, $pageSize, $startPostime, $endPostime, $order){
 		
 		$this->initInvocation("getOrderCommentsByCondition");
-		$args = new \vipapis\logistical\CommentCustService_getOrderCommentsByCondition_args();
+		$args = new \Voop\vipapis\logistical\CommentCustService_getOrderCommentsByCondition_args();
 		
 		$args->custNo = $custNo;
 		
@@ -130,7 +130,7 @@ class _CommentCustServiceClient extends \Osp\Base\OspStub implements \vipapis\lo
 	
 	public function recv_getOrderCommentsByCondition(){
 		
-		$result = new \vipapis\logistical\CommentCustService_getOrderCommentsByCondition_result();
+		$result = new \Voop\vipapis\logistical\CommentCustService_getOrderCommentsByCondition_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -149,14 +149,14 @@ class _CommentCustServiceClient extends \Osp\Base\OspStub implements \vipapis\lo
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\logistical\CommentCustService_healthCheck_args();
+		$args = new \Voop\vipapis\logistical\CommentCustService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\logistical\CommentCustService_healthCheck_result();
+		$result = new \Voop\vipapis\logistical\CommentCustService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -902,7 +902,7 @@ class CommentCustService_getCommentsByCustNo_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\comment\api\admin\service\OrderCommentRecord();
+					$elem0 = new \Voop\com\vip\comment\api\admin\service\OrderCommentRecord();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -935,7 +935,7 @@ class CommentCustService_getCommentsByCustNo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -944,7 +944,7 @@ class CommentCustService_getCommentsByCustNo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1016,7 +1016,7 @@ class CommentCustService_getOrderCommentsByCondition_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\comment\api\admin\service\OrderCommentRecord();
+					$elem1 = new \Voop\com\vip\comment\api\admin\service\OrderCommentRecord();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1049,7 +1049,7 @@ class CommentCustService_getOrderCommentsByCondition_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1058,7 +1058,7 @@ class CommentCustService_getOrderCommentsByCondition_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1121,7 +1121,7 @@ class CommentCustService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1144,7 +1144,7 @@ class CommentCustService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

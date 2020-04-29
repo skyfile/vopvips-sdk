@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\user\face\service\photorecord;
+namespace Voop\com\vip\xstore\user\face\service\photorecord;
 require_once dirname(__FILE__).'/XstorePhotoRecordService.php';
 class XstorePhotoRecordServiceHelper extends _XstorePhotoRecordServiceClient{
 	

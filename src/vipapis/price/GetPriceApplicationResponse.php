@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\price;
+namespace Voop\vipapis\price;
 
 class GetPriceApplicationResponse {
 	
@@ -210,7 +210,7 @@ class GetPriceApplicationResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\price\PriceApplicationDetail();
+						$elem1 = new \Voop\vipapis\price\PriceApplicationDetail();
 						$elem1->read($input);
 						
 						$this->price_details[$_size1++] = $elem1;
@@ -229,7 +229,7 @@ class GetPriceApplicationResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -311,7 +311,7 @@ class GetPriceApplicationResponse {
 			
 			if (!is_array($this->price_details)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -320,7 +320,7 @@ class GetPriceApplicationResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\inventory;
+namespace Voop\vipapis\marketplace\inventory;
 require_once dirname(__FILE__).'/InventoryService.php';
 class InventoryServiceHelper extends _InventoryServiceClient{
 	

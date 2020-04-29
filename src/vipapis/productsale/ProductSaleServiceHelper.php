@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\productsale;
+namespace Voop\vipapis\productsale;
 require_once dirname(__FILE__).'/ProductSaleService.php';
 class ProductSaleServiceHelper extends _ProductSaleServiceClient{
 	

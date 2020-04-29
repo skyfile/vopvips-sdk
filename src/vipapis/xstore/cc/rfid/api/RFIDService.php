@@ -8,11 +8,11 @@
 *
 */
 
-namespace vipapis\xstore\cc\rfid\api;
+namespace Voop\vipapis\xstore\cc\rfid\api;
 interface RFIDServiceIf{
 	
 	
-	public function addRfid2BarcodeMapping(\vipapis\xstore\cc\rfid\api\RfidDataRequest $request);
+	public function addRfid2BarcodeMapping(\Voop\vipapis\xstore\cc\rfid\api\RfidDataRequest $request);
 	
 	public function batchAddRfid2BarcodeMapping( $requests);
 	
@@ -28,7 +28,7 @@ interface RFIDServiceIf{
 	
 	public function queryRfidSyncResult( $barcodes, $owner);
 	
-	public function uploadEpc(\vipapis\xstore\cc\rfid\api\RfidEpcParamModel $epc);
+	public function uploadEpc(\Voop\vipapis\xstore\cc\rfid\api\RfidEpcParamModel $epc);
 	
 }
 
@@ -40,16 +40,16 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	}
 	
 	
-	public function addRfid2BarcodeMapping(\vipapis\xstore\cc\rfid\api\RfidDataRequest $request){
+	public function addRfid2BarcodeMapping(\Voop\vipapis\xstore\cc\rfid\api\RfidDataRequest $request){
 		
 		$this->send_addRfid2BarcodeMapping( $request);
 		return $this->recv_addRfid2BarcodeMapping();
 	}
 	
-	public function send_addRfid2BarcodeMapping(\vipapis\xstore\cc\rfid\api\RfidDataRequest $request){
+	public function send_addRfid2BarcodeMapping(\Voop\vipapis\xstore\cc\rfid\api\RfidDataRequest $request){
 		
 		$this->initInvocation("addRfid2BarcodeMapping");
-		$args = new \vipapis\xstore\cc\rfid\api\RFIDService_addRfid2BarcodeMapping_args();
+		$args = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_addRfid2BarcodeMapping_args();
 		
 		$args->request = $request;
 		
@@ -58,7 +58,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	
 	public function recv_addRfid2BarcodeMapping(){
 		
-		$result = new \vipapis\xstore\cc\rfid\api\RFIDService_addRfid2BarcodeMapping_result();
+		$result = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_addRfid2BarcodeMapping_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -77,7 +77,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	public function send_batchAddRfid2BarcodeMapping( $requests){
 		
 		$this->initInvocation("batchAddRfid2BarcodeMapping");
-		$args = new \vipapis\xstore\cc\rfid\api\RFIDService_batchAddRfid2BarcodeMapping_args();
+		$args = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_batchAddRfid2BarcodeMapping_args();
 		
 		$args->requests = $requests;
 		
@@ -86,7 +86,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	
 	public function recv_batchAddRfid2BarcodeMapping(){
 		
-		$result = new \vipapis\xstore\cc\rfid\api\RFIDService_batchAddRfid2BarcodeMapping_result();
+		$result = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_batchAddRfid2BarcodeMapping_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -105,7 +105,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	public function send_generateExternalCode( $barcode, $owner, $oldBarcode){
 		
 		$this->initInvocation("generateExternalCode");
-		$args = new \vipapis\xstore\cc\rfid\api\RFIDService_generateExternalCode_args();
+		$args = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_generateExternalCode_args();
 		
 		$args->barcode = $barcode;
 		
@@ -118,7 +118,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	
 	public function recv_generateExternalCode(){
 		
-		$result = new \vipapis\xstore\cc\rfid\api\RFIDService_generateExternalCode_result();
+		$result = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_generateExternalCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -137,14 +137,14 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\xstore\cc\rfid\api\RFIDService_healthCheck_args();
+		$args = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\xstore\cc\rfid\api\RFIDService_healthCheck_result();
+		$result = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -163,7 +163,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	public function send_queryBarcodeByExternalCode( $externalCode, $owner){
 		
 		$this->initInvocation("queryBarcodeByExternalCode");
-		$args = new \vipapis\xstore\cc\rfid\api\RFIDService_queryBarcodeByExternalCode_args();
+		$args = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_queryBarcodeByExternalCode_args();
 		
 		$args->externalCode = $externalCode;
 		
@@ -174,7 +174,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	
 	public function recv_queryBarcodeByExternalCode(){
 		
-		$result = new \vipapis\xstore\cc\rfid\api\RFIDService_queryBarcodeByExternalCode_result();
+		$result = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_queryBarcodeByExternalCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -193,7 +193,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	public function send_queryBarcodeByRfid( $rfid, $owner){
 		
 		$this->initInvocation("queryBarcodeByRfid");
-		$args = new \vipapis\xstore\cc\rfid\api\RFIDService_queryBarcodeByRfid_args();
+		$args = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_queryBarcodeByRfid_args();
 		
 		$args->rfid = $rfid;
 		
@@ -204,7 +204,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	
 	public function recv_queryBarcodeByRfid(){
 		
-		$result = new \vipapis\xstore\cc\rfid\api\RFIDService_queryBarcodeByRfid_result();
+		$result = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_queryBarcodeByRfid_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -223,7 +223,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	public function send_queryEpcStatus( $epc, $owner){
 		
 		$this->initInvocation("queryEpcStatus");
-		$args = new \vipapis\xstore\cc\rfid\api\RFIDService_queryEpcStatus_args();
+		$args = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_queryEpcStatus_args();
 		
 		$args->epc = $epc;
 		
@@ -234,7 +234,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	
 	public function recv_queryEpcStatus(){
 		
-		$result = new \vipapis\xstore\cc\rfid\api\RFIDService_queryEpcStatus_result();
+		$result = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_queryEpcStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -253,7 +253,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	public function send_queryRfidSyncResult( $barcodes, $owner){
 		
 		$this->initInvocation("queryRfidSyncResult");
-		$args = new \vipapis\xstore\cc\rfid\api\RFIDService_queryRfidSyncResult_args();
+		$args = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_queryRfidSyncResult_args();
 		
 		$args->barcodes = $barcodes;
 		
@@ -264,7 +264,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	
 	public function recv_queryRfidSyncResult(){
 		
-		$result = new \vipapis\xstore\cc\rfid\api\RFIDService_queryRfidSyncResult_result();
+		$result = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_queryRfidSyncResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -274,16 +274,16 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	}
 	
 	
-	public function uploadEpc(\vipapis\xstore\cc\rfid\api\RfidEpcParamModel $epc){
+	public function uploadEpc(\Voop\vipapis\xstore\cc\rfid\api\RfidEpcParamModel $epc){
 		
 		$this->send_uploadEpc( $epc);
 		return $this->recv_uploadEpc();
 	}
 	
-	public function send_uploadEpc(\vipapis\xstore\cc\rfid\api\RfidEpcParamModel $epc){
+	public function send_uploadEpc(\Voop\vipapis\xstore\cc\rfid\api\RfidEpcParamModel $epc){
 		
 		$this->initInvocation("uploadEpc");
-		$args = new \vipapis\xstore\cc\rfid\api\RFIDService_uploadEpc_args();
+		$args = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_uploadEpc_args();
 		
 		$args->epc = $epc;
 		
@@ -292,7 +292,7 @@ class _RFIDServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc
 	
 	public function recv_uploadEpc(){
 		
-		$result = new \vipapis\xstore\cc\rfid\api\RFIDService_uploadEpc_result();
+		$result = new \Voop\vipapis\xstore\cc\rfid\api\RFIDService_uploadEpc_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -347,7 +347,7 @@ class RFIDService_addRfid2BarcodeMapping_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\xstore\cc\rfid\api\RfidDataRequest();
+			$this->request = new \Voop\vipapis\xstore\cc\rfid\api\RfidDataRequest();
 			$this->request->read($input);
 			
 		}
@@ -368,7 +368,7 @@ class RFIDService_addRfid2BarcodeMapping_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -434,7 +434,7 @@ class RFIDService_batchAddRfid2BarcodeMapping_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\xstore\cc\rfid\api\RfidDataRequest();
+					$elem0 = new \Voop\vipapis\xstore\cc\rfid\api\RfidDataRequest();
 					$elem0->read($input);
 					
 					$this->requests[$_size0++] = $elem0;
@@ -465,7 +465,7 @@ class RFIDService_batchAddRfid2BarcodeMapping_args {
 		
 		if (!is_array($this->requests)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -474,7 +474,7 @@ class RFIDService_batchAddRfid2BarcodeMapping_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1042,7 +1042,7 @@ class RFIDService_queryRfidSyncResult_args {
 		
 		if (!is_array($this->barcodes)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1111,7 +1111,7 @@ class RFIDService_uploadEpc_args {
 		if(true) {
 			
 			
-			$this->epc = new \vipapis\xstore\cc\rfid\api\RfidEpcParamModel();
+			$this->epc = new \Voop\vipapis\xstore\cc\rfid\api\RfidEpcParamModel();
 			$this->epc->read($input);
 			
 		}
@@ -1132,7 +1132,7 @@ class RFIDService_uploadEpc_args {
 		
 		if (!is_object($this->epc)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->epc->write($output);
@@ -1189,7 +1189,7 @@ class RFIDService_addRfid2BarcodeMapping_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\rfid\api\RfidDataResponse();
+			$this->success = new \Voop\vipapis\xstore\cc\rfid\api\RfidDataResponse();
 			$this->success->read($input);
 			
 		}
@@ -1212,7 +1212,7 @@ class RFIDService_addRfid2BarcodeMapping_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1280,7 +1280,7 @@ class RFIDService_batchAddRfid2BarcodeMapping_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\xstore\cc\rfid\api\RfidDataResponse();
+					$elem0 = new \Voop\vipapis\xstore\cc\rfid\api\RfidDataResponse();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1313,7 +1313,7 @@ class RFIDService_batchAddRfid2BarcodeMapping_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1322,7 +1322,7 @@ class RFIDService_batchAddRfid2BarcodeMapping_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1459,7 +1459,7 @@ class RFIDService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1482,7 +1482,7 @@ class RFIDService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1689,7 +1689,7 @@ class RFIDService_queryEpcStatus_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\xstore\cc\rfid\api\RfidEpcStatusResponse();
+			$this->success = new \Voop\vipapis\xstore\cc\rfid\api\RfidEpcStatusResponse();
 			$this->success->read($input);
 			
 		}
@@ -1712,7 +1712,7 @@ class RFIDService_queryEpcStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1780,7 +1780,7 @@ class RFIDService_queryRfidSyncResult_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\xstore\cc\rfid\api\RfidSyncResultResponse();
+					$elem0 = new \Voop\vipapis\xstore\cc\rfid\api\RfidSyncResultResponse();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -1813,7 +1813,7 @@ class RFIDService_queryRfidSyncResult_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1822,7 +1822,7 @@ class RFIDService_queryRfidSyncResult_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

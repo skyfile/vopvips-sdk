@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\stock;
+namespace Voop\vipapis\stock;
 require_once dirname(__FILE__).'/StockService.php';
 class StockServiceHelper extends _StockServiceClient{
 	

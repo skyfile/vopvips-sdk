@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\request;
+namespace Voop\com\vip\xstore\order\ofc\api\request;
 
 class GetUnprocInfErpOrderListReq {
 	
@@ -101,7 +101,7 @@ class GetUnprocInfErpOrderListReq {
 				
 				$needSkip = false;
 				
-				$this->procTimeRange = new \com\vip\xstore\order\common\pojo\vo\RangeParam();
+				$this->procTimeRange = new \Voop\com\vip\xstore\order\common\pojo\vo\RangeParam();
 				$this->procTimeRange->read($input);
 				
 			}
@@ -162,7 +162,7 @@ class GetUnprocInfErpOrderListReq {
 			
 			if (!is_object($this->procTimeRange)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->procTimeRange->write($output);

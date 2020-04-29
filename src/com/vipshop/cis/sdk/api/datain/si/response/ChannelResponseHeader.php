@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vipshop\cis\sdk\api\datain\si\response;
+namespace Voop\com\vipshop\cis\sdk\api\datain\si\response;
 
 class ChannelResponseHeader {
 	
@@ -215,7 +215,7 @@ class ChannelResponseHeader {
 			
 			if (!is_array($this->local_area)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();

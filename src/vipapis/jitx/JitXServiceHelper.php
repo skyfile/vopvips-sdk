@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\jitx;
+namespace Voop\vipapis\jitx;
 require_once dirname(__FILE__).'/JitXService.php';
 class JitXServiceHelper extends _JitXServiceClient{
 	

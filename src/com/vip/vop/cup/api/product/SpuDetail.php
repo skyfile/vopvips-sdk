@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\product;
+namespace Voop\com\vip\vop\cup\api\product;
 
 class SpuDetail {
 	
@@ -611,7 +611,7 @@ class SpuDetail {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\vop\cup\api\product\ItemProperty();
+						$elem1 = new \Voop\com\vip\vop\cup\api\product\ItemProperty();
 						$elem1->read($input);
 						
 						$this->item_properties[$_size1++] = $elem1;
@@ -633,7 +633,7 @@ class SpuDetail {
 				
 				$needSkip = false;
 				
-				$this->size_table = new \com\vip\vop\cup\api\product\SizeTable();
+				$this->size_table = new \Voop\com\vip\vop\cup\api\product\SizeTable();
 				$this->size_table->read($input);
 				
 			}
@@ -834,7 +834,7 @@ class SpuDetail {
 						
 						$elem2 = null;
 						
-						$elem2 = new \com\vip\vop\cup\api\product\Attribute();
+						$elem2 = new \Voop\com\vip\vop\cup\api\product\Attribute();
 						$elem2->read($input);
 						
 						$this->attr_spec_props[$_size2++] = $elem2;
@@ -865,7 +865,7 @@ class SpuDetail {
 						
 						$elem3 = null;
 						
-						$elem3 = new \com\vip\vop\cup\api\product\ItemImage();
+						$elem3 = new \Voop\com\vip\vop\cup\api\product\ItemImage();
 						$elem3->read($input);
 						
 						$this->item_images[$_size3++] = $elem3;
@@ -896,7 +896,7 @@ class SpuDetail {
 						
 						$elem4 = null;
 						
-						$elem4 = new \com\vip\vop\cup\api\product\ItemImage();
+						$elem4 = new \Voop\com\vip\vop\cup\api\product\ItemImage();
 						$elem4->read($input);
 						
 						$this->square_images[$_size4++] = $elem4;
@@ -1086,7 +1086,7 @@ class SpuDetail {
 			
 			if (!is_array($this->flat_spec_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -1110,7 +1110,7 @@ class SpuDetail {
 			
 			if (!is_array($this->item_properties)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1119,7 +1119,7 @@ class SpuDetail {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1138,7 +1138,7 @@ class SpuDetail {
 			
 			if (!is_object($this->size_table)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->size_table->write($output);
@@ -1315,7 +1315,7 @@ class SpuDetail {
 			
 			if (!is_array($this->attr_spec_props)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1324,7 +1324,7 @@ class SpuDetail {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1343,7 +1343,7 @@ class SpuDetail {
 			
 			if (!is_array($this->item_images)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1352,7 +1352,7 @@ class SpuDetail {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1371,7 +1371,7 @@ class SpuDetail {
 			
 			if (!is_array($this->square_images)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1380,7 +1380,7 @@ class SpuDetail {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\pg;
+namespace Voop\vipapis\pg;
 
 class Product {
 	
@@ -408,7 +408,7 @@ class Product {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

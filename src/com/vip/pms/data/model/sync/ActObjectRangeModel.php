@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\model\sync;
+namespace Voop\com\vip\pms\data\model\sync;
 
 class ActObjectRangeModel {
 	

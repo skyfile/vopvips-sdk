@@ -8,11 +8,11 @@
 *
 */
 
-namespace vipapis\track\service;
+namespace Voop\vipapis\track\service;
 interface CarrierLogisticTrackServiceIf{
 	
 	
-	public function acceptLogisticsTrack(\com\vip\lbs\track\waybill\service\entity\LbsAcceptLogisticsTrackRequest $request);
+	public function acceptLogisticsTrack(\Voop\com\vip\lbs\track\waybill\service\entity\LbsAcceptLogisticsTrackRequest $request);
 	
 	public function healthCheck();
 	
@@ -26,16 +26,16 @@ class _CarrierLogisticTrackServiceClient extends \Osp\Base\OspStub implements \v
 	}
 	
 	
-	public function acceptLogisticsTrack(\com\vip\lbs\track\waybill\service\entity\LbsAcceptLogisticsTrackRequest $request){
+	public function acceptLogisticsTrack(\Voop\com\vip\lbs\track\waybill\service\entity\LbsAcceptLogisticsTrackRequest $request){
 		
 		$this->send_acceptLogisticsTrack( $request);
 		return $this->recv_acceptLogisticsTrack();
 	}
 	
-	public function send_acceptLogisticsTrack(\com\vip\lbs\track\waybill\service\entity\LbsAcceptLogisticsTrackRequest $request){
+	public function send_acceptLogisticsTrack(\Voop\com\vip\lbs\track\waybill\service\entity\LbsAcceptLogisticsTrackRequest $request){
 		
 		$this->initInvocation("acceptLogisticsTrack");
-		$args = new \vipapis\track\service\CarrierLogisticTrackService_acceptLogisticsTrack_args();
+		$args = new \Voop\vipapis\track\service\CarrierLogisticTrackService_acceptLogisticsTrack_args();
 		
 		$args->request = $request;
 		
@@ -44,7 +44,7 @@ class _CarrierLogisticTrackServiceClient extends \Osp\Base\OspStub implements \v
 	
 	public function recv_acceptLogisticsTrack(){
 		
-		$result = new \vipapis\track\service\CarrierLogisticTrackService_acceptLogisticsTrack_result();
+		$result = new \Voop\vipapis\track\service\CarrierLogisticTrackService_acceptLogisticsTrack_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -63,14 +63,14 @@ class _CarrierLogisticTrackServiceClient extends \Osp\Base\OspStub implements \v
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\track\service\CarrierLogisticTrackService_healthCheck_args();
+		$args = new \Voop\vipapis\track\service\CarrierLogisticTrackService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\track\service\CarrierLogisticTrackService_healthCheck_result();
+		$result = new \Voop\vipapis\track\service\CarrierLogisticTrackService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -125,7 +125,7 @@ class CarrierLogisticTrackService_acceptLogisticsTrack_args {
 		if(true) {
 			
 			
-			$this->request = new \com\vip\lbs\track\waybill\service\entity\LbsAcceptLogisticsTrackRequest();
+			$this->request = new \Voop\com\vip\lbs\track\waybill\service\entity\LbsAcceptLogisticsTrackRequest();
 			$this->request->read($input);
 			
 		}
@@ -148,7 +148,7 @@ class CarrierLogisticTrackService_acceptLogisticsTrack_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -253,7 +253,7 @@ class CarrierLogisticTrackService_acceptLogisticsTrack_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\lbs\track\waybill\service\entity\LbsAcceptLogisticsTrackResponse();
+			$this->success = new \Voop\com\vip\lbs\track\waybill\service\entity\LbsAcceptLogisticsTrackResponse();
 			$this->success->read($input);
 			
 		}
@@ -276,7 +276,7 @@ class CarrierLogisticTrackService_acceptLogisticsTrack_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -335,7 +335,7 @@ class CarrierLogisticTrackService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -358,7 +358,7 @@ class CarrierLogisticTrackService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

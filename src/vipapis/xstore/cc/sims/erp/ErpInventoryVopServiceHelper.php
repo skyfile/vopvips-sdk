@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\sims\erp;
+namespace Voop\vipapis\xstore\cc\sims\erp;
 require_once dirname(__FILE__).'/ErpInventoryVopService.php';
 class ErpInventoryVopServiceHelper extends _ErpInventoryVopServiceClient{
 	

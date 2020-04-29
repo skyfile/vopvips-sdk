@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\tpc\api\model\common;
+namespace Voop\com\vip\tpc\api\model\common;
 
 class TpcResponseHeader {
 	

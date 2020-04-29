@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\marketplace\asc;
+namespace Voop\vipapis\marketplace\asc;
 
 class RejectApplyRefundRequest {
 	
@@ -108,7 +108,7 @@ class RejectApplyRefundRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

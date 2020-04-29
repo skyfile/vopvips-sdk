@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vei\service;
+namespace Voop\com\vip\fcs\vei\service;
 
 class InvoiceOrderDataResModel {
 	
@@ -81,7 +81,7 @@ class InvoiceOrderDataResModel {
 				
 				$needSkip = false;
 				
-				$this->resultMesg = new \com\vip\fcs\vei\service\BaseRetMsg();
+				$this->resultMesg = new \Voop\com\vip\fcs\vei\service\BaseRetMsg();
 				$this->resultMesg->read($input);
 				
 			}
@@ -122,7 +122,7 @@ class InvoiceOrderDataResModel {
 			
 			if (!is_object($this->resultMesg)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->resultMesg->write($output);

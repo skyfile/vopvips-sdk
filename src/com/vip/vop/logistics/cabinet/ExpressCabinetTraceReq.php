@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\logistics\cabinet;
+namespace Voop\com\vip\vop\logistics\cabinet;
 
 class ExpressCabinetTraceReq {
 	
@@ -70,7 +70,7 @@ class ExpressCabinetTraceReq {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\logistics\cabinet\ShipmentTraceList();
+						$elem0 = new \Voop\com\vip\vop\logistics\cabinet\ShipmentTraceList();
 						$elem0->read($input);
 						
 						$this->shipment_traces[$_size0++] = $elem0;
@@ -110,7 +110,7 @@ class ExpressCabinetTraceReq {
 		
 		if (!is_array($this->shipment_traces)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -119,7 +119,7 @@ class ExpressCabinetTraceReq {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

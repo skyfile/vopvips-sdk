@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 
 class VipLinkCheckVO {
 	
@@ -162,7 +162,7 @@ class VipLinkCheckVO {
 			
 			$xfer += $output->writeFieldBegin('linkType');
 			
-			$em = new \com\vip\adp\api\open\service\VipLinkTypeEnum; 
+			$em = new \Voop\com\vip\adp\api\open\service\VipLinkTypeEnum; 
 			$output->writeString($em::$__names[$this->linkType]);  
 			
 			$xfer += $output->writeFieldEnd();

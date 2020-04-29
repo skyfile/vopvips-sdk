@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\request;
+namespace Voop\com\vip\xstore\order\ofc\api\request;
 
 class UpdateOrInsertAsynCmdRetryReq {
 	
@@ -61,7 +61,7 @@ class UpdateOrInsertAsynCmdRetryReq {
 				
 				$needSkip = false;
 				
-				$this->asynCmdVO = new \com\vip\xstore\order\common\pojo\vo\AsynCmdVO();
+				$this->asynCmdVO = new \Voop\com\vip\xstore\order\common\pojo\vo\AsynCmdVO();
 				$this->asynCmdVO->read($input);
 				
 			}
@@ -93,7 +93,7 @@ class UpdateOrInsertAsynCmdRetryReq {
 			
 			if (!is_object($this->asynCmdVO)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->asynCmdVO->write($output);

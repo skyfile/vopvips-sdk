@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\pda\order\common;
+namespace Voop\com\vip\xstore\pda\order\common;
 
 class UpdateRemarkRequest {
 	

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\stock;
+namespace Voop\vipapis\stock;
 
 class ConfirmFrozenInventoryResponse {
 	
@@ -80,7 +80,7 @@ class ConfirmFrozenInventoryResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\stock\ConfirmFrozenInventoryResult();
+						$elem1 = new \Voop\vipapis\stock\ConfirmFrozenInventoryResult();
 						$elem1->read($input);
 						
 						$this->success_data[$_size1++] = $elem1;
@@ -111,7 +111,7 @@ class ConfirmFrozenInventoryResponse {
 						
 						$elem2 = null;
 						
-						$elem2 = new \vipapis\stock\ConfirmFrozenInventoryResult();
+						$elem2 = new \Voop\vipapis\stock\ConfirmFrozenInventoryResult();
 						$elem2->read($input);
 						
 						$this->fail_data[$_size2++] = $elem2;
@@ -130,7 +130,7 @@ class ConfirmFrozenInventoryResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -153,7 +153,7 @@ class ConfirmFrozenInventoryResponse {
 			
 			if (!is_array($this->success_data)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -162,7 +162,7 @@ class ConfirmFrozenInventoryResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -181,7 +181,7 @@ class ConfirmFrozenInventoryResponse {
 			
 			if (!is_array($this->fail_data)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -190,7 +190,7 @@ class ConfirmFrozenInventoryResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

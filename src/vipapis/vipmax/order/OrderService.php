@@ -8,17 +8,17 @@
 *
 */
 
-namespace vipapis\vipmax\order;
+namespace Voop\vipapis\vipmax\order;
 interface OrderServiceIf{
 	
 	
-	public function getVipmaxOders(\vipapis\vipmax\order\GetVipmaxOrdersRequest $request);
+	public function getVipmaxOders(\Voop\vipapis\vipmax\order\GetVipmaxOrdersRequest $request);
 	
 	public function healthCheck();
 	
-	public function syncOrder(\vipapis\vipmax\order\SyncOrderRequest $request);
+	public function syncOrder(\Voop\vipapis\vipmax\order\SyncOrderRequest $request);
 	
-	public function syncRefundOrder(\vipapis\vipmax\order\SyncRefundOrderRequest $request);
+	public function syncRefundOrder(\Voop\vipapis\vipmax\order\SyncRefundOrderRequest $request);
 	
 }
 
@@ -30,16 +30,16 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\o
 	}
 	
 	
-	public function getVipmaxOders(\vipapis\vipmax\order\GetVipmaxOrdersRequest $request){
+	public function getVipmaxOders(\Voop\vipapis\vipmax\order\GetVipmaxOrdersRequest $request){
 		
 		$this->send_getVipmaxOders( $request);
 		return $this->recv_getVipmaxOders();
 	}
 	
-	public function send_getVipmaxOders(\vipapis\vipmax\order\GetVipmaxOrdersRequest $request){
+	public function send_getVipmaxOders(\Voop\vipapis\vipmax\order\GetVipmaxOrdersRequest $request){
 		
 		$this->initInvocation("getVipmaxOders");
-		$args = new \vipapis\vipmax\order\OrderService_getVipmaxOders_args();
+		$args = new \Voop\vipapis\vipmax\order\OrderService_getVipmaxOders_args();
 		
 		$args->request = $request;
 		
@@ -48,7 +48,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\o
 	
 	public function recv_getVipmaxOders(){
 		
-		$result = new \vipapis\vipmax\order\OrderService_getVipmaxOders_result();
+		$result = new \Voop\vipapis\vipmax\order\OrderService_getVipmaxOders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -67,14 +67,14 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\o
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\vipmax\order\OrderService_healthCheck_args();
+		$args = new \Voop\vipapis\vipmax\order\OrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\vipmax\order\OrderService_healthCheck_result();
+		$result = new \Voop\vipapis\vipmax\order\OrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -84,16 +84,16 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\o
 	}
 	
 	
-	public function syncOrder(\vipapis\vipmax\order\SyncOrderRequest $request){
+	public function syncOrder(\Voop\vipapis\vipmax\order\SyncOrderRequest $request){
 		
 		$this->send_syncOrder( $request);
 		return $this->recv_syncOrder();
 	}
 	
-	public function send_syncOrder(\vipapis\vipmax\order\SyncOrderRequest $request){
+	public function send_syncOrder(\Voop\vipapis\vipmax\order\SyncOrderRequest $request){
 		
 		$this->initInvocation("syncOrder");
-		$args = new \vipapis\vipmax\order\OrderService_syncOrder_args();
+		$args = new \Voop\vipapis\vipmax\order\OrderService_syncOrder_args();
 		
 		$args->request = $request;
 		
@@ -102,7 +102,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\o
 	
 	public function recv_syncOrder(){
 		
-		$result = new \vipapis\vipmax\order\OrderService_syncOrder_result();
+		$result = new \Voop\vipapis\vipmax\order\OrderService_syncOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -112,16 +112,16 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\o
 	}
 	
 	
-	public function syncRefundOrder(\vipapis\vipmax\order\SyncRefundOrderRequest $request){
+	public function syncRefundOrder(\Voop\vipapis\vipmax\order\SyncRefundOrderRequest $request){
 		
 		$this->send_syncRefundOrder( $request);
 		return $this->recv_syncRefundOrder();
 	}
 	
-	public function send_syncRefundOrder(\vipapis\vipmax\order\SyncRefundOrderRequest $request){
+	public function send_syncRefundOrder(\Voop\vipapis\vipmax\order\SyncRefundOrderRequest $request){
 		
 		$this->initInvocation("syncRefundOrder");
-		$args = new \vipapis\vipmax\order\OrderService_syncRefundOrder_args();
+		$args = new \Voop\vipapis\vipmax\order\OrderService_syncRefundOrder_args();
 		
 		$args->request = $request;
 		
@@ -130,7 +130,7 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\o
 	
 	public function recv_syncRefundOrder(){
 		
-		$result = new \vipapis\vipmax\order\OrderService_syncRefundOrder_result();
+		$result = new \Voop\vipapis\vipmax\order\OrderService_syncRefundOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -185,7 +185,7 @@ class OrderService_getVipmaxOders_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\vipmax\order\GetVipmaxOrdersRequest();
+			$this->request = new \Voop\vipapis\vipmax\order\GetVipmaxOrdersRequest();
 			$this->request->read($input);
 			
 		}
@@ -208,7 +208,7 @@ class OrderService_getVipmaxOders_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -313,7 +313,7 @@ class OrderService_syncOrder_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\vipmax\order\SyncOrderRequest();
+			$this->request = new \Voop\vipapis\vipmax\order\SyncOrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -336,7 +336,7 @@ class OrderService_syncOrder_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -395,7 +395,7 @@ class OrderService_syncRefundOrder_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\vipmax\order\SyncRefundOrderRequest();
+			$this->request = new \Voop\vipapis\vipmax\order\SyncRefundOrderRequest();
 			$this->request->read($input);
 			
 		}
@@ -418,7 +418,7 @@ class OrderService_syncRefundOrder_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -477,7 +477,7 @@ class OrderService_getVipmaxOders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipmax\order\GetVipmaxOrdersResponse();
+			$this->success = new \Voop\vipapis\vipmax\order\GetVipmaxOrdersResponse();
 			$this->success->read($input);
 			
 		}
@@ -500,7 +500,7 @@ class OrderService_getVipmaxOders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -559,7 +559,7 @@ class OrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -582,7 +582,7 @@ class OrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -641,7 +641,7 @@ class OrderService_syncOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipmax\order\SyncOrderResponse();
+			$this->success = new \Voop\vipapis\vipmax\order\SyncOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -664,7 +664,7 @@ class OrderService_syncOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -723,7 +723,7 @@ class OrderService_syncRefundOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipmax\order\SyncRefundOrderResponse();
+			$this->success = new \Voop\vipapis\vipmax\order\SyncRefundOrderResponse();
 			$this->success->read($input);
 			
 		}
@@ -746,7 +746,7 @@ class OrderService_syncRefundOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

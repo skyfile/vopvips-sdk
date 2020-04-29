@@ -8,17 +8,17 @@
 *
 */
 
-namespace vipapis\marketplace\inventory;
+namespace Voop\vipapis\marketplace\inventory;
 interface InventoryServiceIf{
 	
 	
-	public function getSkuStock(\vipapis\marketplace\inventory\GetSkuStockRequest $getSkuStockRequest);
+	public function getSkuStock(\Voop\vipapis\marketplace\inventory\GetSkuStockRequest $getSkuStockRequest);
 	
 	public function healthCheck();
 	
-	public function increaseSkuStock(\vipapis\marketplace\inventory\IncreaseSkuStockRequest $increaseSkuStockRequest);
+	public function increaseSkuStock(\Voop\vipapis\marketplace\inventory\IncreaseSkuStockRequest $increaseSkuStockRequest);
 	
-	public function updateSkuStock(\vipapis\marketplace\inventory\UpdateSkuStockRequest $updateSkuStockRequest);
+	public function updateSkuStock(\Voop\vipapis\marketplace\inventory\UpdateSkuStockRequest $updateSkuStockRequest);
 	
 }
 
@@ -30,16 +30,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	}
 	
 	
-	public function getSkuStock(\vipapis\marketplace\inventory\GetSkuStockRequest $getSkuStockRequest){
+	public function getSkuStock(\Voop\vipapis\marketplace\inventory\GetSkuStockRequest $getSkuStockRequest){
 		
 		$this->send_getSkuStock( $getSkuStockRequest);
 		return $this->recv_getSkuStock();
 	}
 	
-	public function send_getSkuStock(\vipapis\marketplace\inventory\GetSkuStockRequest $getSkuStockRequest){
+	public function send_getSkuStock(\Voop\vipapis\marketplace\inventory\GetSkuStockRequest $getSkuStockRequest){
 		
 		$this->initInvocation("getSkuStock");
-		$args = new \vipapis\marketplace\inventory\InventoryService_getSkuStock_args();
+		$args = new \Voop\vipapis\marketplace\inventory\InventoryService_getSkuStock_args();
 		
 		$args->getSkuStockRequest = $getSkuStockRequest;
 		
@@ -48,7 +48,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	
 	public function recv_getSkuStock(){
 		
-		$result = new \vipapis\marketplace\inventory\InventoryService_getSkuStock_result();
+		$result = new \Voop\vipapis\marketplace\inventory\InventoryService_getSkuStock_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -67,14 +67,14 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\marketplace\inventory\InventoryService_healthCheck_args();
+		$args = new \Voop\vipapis\marketplace\inventory\InventoryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\marketplace\inventory\InventoryService_healthCheck_result();
+		$result = new \Voop\vipapis\marketplace\inventory\InventoryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -84,16 +84,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	}
 	
 	
-	public function increaseSkuStock(\vipapis\marketplace\inventory\IncreaseSkuStockRequest $increaseSkuStockRequest){
+	public function increaseSkuStock(\Voop\vipapis\marketplace\inventory\IncreaseSkuStockRequest $increaseSkuStockRequest){
 		
 		$this->send_increaseSkuStock( $increaseSkuStockRequest);
 		return $this->recv_increaseSkuStock();
 	}
 	
-	public function send_increaseSkuStock(\vipapis\marketplace\inventory\IncreaseSkuStockRequest $increaseSkuStockRequest){
+	public function send_increaseSkuStock(\Voop\vipapis\marketplace\inventory\IncreaseSkuStockRequest $increaseSkuStockRequest){
 		
 		$this->initInvocation("increaseSkuStock");
-		$args = new \vipapis\marketplace\inventory\InventoryService_increaseSkuStock_args();
+		$args = new \Voop\vipapis\marketplace\inventory\InventoryService_increaseSkuStock_args();
 		
 		$args->increaseSkuStockRequest = $increaseSkuStockRequest;
 		
@@ -102,7 +102,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	
 	public function recv_increaseSkuStock(){
 		
-		$result = new \vipapis\marketplace\inventory\InventoryService_increaseSkuStock_result();
+		$result = new \Voop\vipapis\marketplace\inventory\InventoryService_increaseSkuStock_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -112,16 +112,16 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	}
 	
 	
-	public function updateSkuStock(\vipapis\marketplace\inventory\UpdateSkuStockRequest $updateSkuStockRequest){
+	public function updateSkuStock(\Voop\vipapis\marketplace\inventory\UpdateSkuStockRequest $updateSkuStockRequest){
 		
 		$this->send_updateSkuStock( $updateSkuStockRequest);
 		return $this->recv_updateSkuStock();
 	}
 	
-	public function send_updateSkuStock(\vipapis\marketplace\inventory\UpdateSkuStockRequest $updateSkuStockRequest){
+	public function send_updateSkuStock(\Voop\vipapis\marketplace\inventory\UpdateSkuStockRequest $updateSkuStockRequest){
 		
 		$this->initInvocation("updateSkuStock");
-		$args = new \vipapis\marketplace\inventory\InventoryService_updateSkuStock_args();
+		$args = new \Voop\vipapis\marketplace\inventory\InventoryService_updateSkuStock_args();
 		
 		$args->updateSkuStockRequest = $updateSkuStockRequest;
 		
@@ -130,7 +130,7 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\mark
 	
 	public function recv_updateSkuStock(){
 		
-		$result = new \vipapis\marketplace\inventory\InventoryService_updateSkuStock_result();
+		$result = new \Voop\vipapis\marketplace\inventory\InventoryService_updateSkuStock_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -185,7 +185,7 @@ class InventoryService_getSkuStock_args {
 		if(true) {
 			
 			
-			$this->getSkuStockRequest = new \vipapis\marketplace\inventory\GetSkuStockRequest();
+			$this->getSkuStockRequest = new \Voop\vipapis\marketplace\inventory\GetSkuStockRequest();
 			$this->getSkuStockRequest->read($input);
 			
 		}
@@ -208,7 +208,7 @@ class InventoryService_getSkuStock_args {
 			
 			if (!is_object($this->getSkuStockRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->getSkuStockRequest->write($output);
@@ -313,7 +313,7 @@ class InventoryService_increaseSkuStock_args {
 		if(true) {
 			
 			
-			$this->increaseSkuStockRequest = new \vipapis\marketplace\inventory\IncreaseSkuStockRequest();
+			$this->increaseSkuStockRequest = new \Voop\vipapis\marketplace\inventory\IncreaseSkuStockRequest();
 			$this->increaseSkuStockRequest->read($input);
 			
 		}
@@ -334,7 +334,7 @@ class InventoryService_increaseSkuStock_args {
 		
 		if (!is_object($this->increaseSkuStockRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->increaseSkuStockRequest->write($output);
@@ -391,7 +391,7 @@ class InventoryService_updateSkuStock_args {
 		if(true) {
 			
 			
-			$this->updateSkuStockRequest = new \vipapis\marketplace\inventory\UpdateSkuStockRequest();
+			$this->updateSkuStockRequest = new \Voop\vipapis\marketplace\inventory\UpdateSkuStockRequest();
 			$this->updateSkuStockRequest->read($input);
 			
 		}
@@ -414,7 +414,7 @@ class InventoryService_updateSkuStock_args {
 			
 			if (!is_object($this->updateSkuStockRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->updateSkuStockRequest->write($output);
@@ -473,7 +473,7 @@ class InventoryService_getSkuStock_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\inventory\GetSkuStockResponse();
+			$this->success = new \Voop\vipapis\marketplace\inventory\GetSkuStockResponse();
 			$this->success->read($input);
 			
 		}
@@ -496,7 +496,7 @@ class InventoryService_getSkuStock_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -555,7 +555,7 @@ class InventoryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -578,7 +578,7 @@ class InventoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -637,7 +637,7 @@ class InventoryService_increaseSkuStock_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\inventory\IncreaseSkuStockResponse();
+			$this->success = new \Voop\vipapis\marketplace\inventory\IncreaseSkuStockResponse();
 			$this->success->read($input);
 			
 		}
@@ -660,7 +660,7 @@ class InventoryService_increaseSkuStock_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -719,7 +719,7 @@ class InventoryService_updateSkuStock_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\marketplace\inventory\UpdateSkuStockResponse();
+			$this->success = new \Voop\vipapis\marketplace\inventory\UpdateSkuStockResponse();
 			$this->success->read($input);
 			
 		}
@@ -742,7 +742,7 @@ class InventoryService_updateSkuStock_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

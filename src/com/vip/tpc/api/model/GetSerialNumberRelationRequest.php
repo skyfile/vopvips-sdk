@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\tpc\api\model;
+namespace Voop\com\vip\tpc\api\model;
 
 class GetSerialNumberRelationRequest {
 	
@@ -91,7 +91,7 @@ class GetSerialNumberRelationRequest {
 				
 				$needSkip = false;
 				
-				$this->header = new \com\vip\tpc\api\model\common\TpcRequestHeader();
+				$this->header = new \Voop\com\vip\tpc\api\model\common\TpcRequestHeader();
 				$this->header->read($input);
 				
 			}
@@ -151,7 +151,7 @@ class GetSerialNumberRelationRequest {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\category;
+namespace Voop\vipapis\category;
 require_once dirname(__FILE__).'/CategoryService.php';
 class CategoryServiceHelper extends _CategoryServiceClient{
 	

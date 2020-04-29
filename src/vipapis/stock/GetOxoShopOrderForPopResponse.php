@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\stock;
+namespace Voop\vipapis\stock;
 
 class GetOxoShopOrderForPopResponse {
 	
@@ -70,7 +70,7 @@ class GetOxoShopOrderForPopResponse {
 						
 						$elem1 = null;
 						
-						$elem1 = new \vipapis\stock\OxoShopOrderForPopList();
+						$elem1 = new \Voop\vipapis\stock\OxoShopOrderForPopList();
 						$elem1->read($input);
 						
 						$this->oxo_shop_order_for_pop_list[$_size1++] = $elem1;
@@ -89,7 +89,7 @@ class GetOxoShopOrderForPopResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -112,7 +112,7 @@ class GetOxoShopOrderForPopResponse {
 			
 			if (!is_array($this->oxo_shop_order_for_pop_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -121,7 +121,7 @@ class GetOxoShopOrderForPopResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

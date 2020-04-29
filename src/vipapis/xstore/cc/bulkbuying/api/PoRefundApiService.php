@@ -8,13 +8,13 @@
 *
 */
 
-namespace vipapis\xstore\cc\bulkbuying\api;
+namespace Voop\vipapis\xstore\cc\bulkbuying\api;
 interface PoRefundApiServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function updatePoRefundRealQty(\vipapis\xstore\cc\bulkbuying\api\UpdatePoRefundRealQtyReq $req);
+	public function updatePoRefundRealQty(\Voop\vipapis\xstore\cc\bulkbuying\api\UpdatePoRefundRealQtyReq $req);
 	
 }
 
@@ -35,14 +35,14 @@ class _PoRefundApiServiceClient extends \Osp\Base\OspStub implements \vipapis\xs
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\xstore\cc\bulkbuying\api\PoRefundApiService_healthCheck_args();
+		$args = new \Voop\vipapis\xstore\cc\bulkbuying\api\PoRefundApiService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\xstore\cc\bulkbuying\api\PoRefundApiService_healthCheck_result();
+		$result = new \Voop\vipapis\xstore\cc\bulkbuying\api\PoRefundApiService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -52,16 +52,16 @@ class _PoRefundApiServiceClient extends \Osp\Base\OspStub implements \vipapis\xs
 	}
 	
 	
-	public function updatePoRefundRealQty(\vipapis\xstore\cc\bulkbuying\api\UpdatePoRefundRealQtyReq $req){
+	public function updatePoRefundRealQty(\Voop\vipapis\xstore\cc\bulkbuying\api\UpdatePoRefundRealQtyReq $req){
 		
 		$this->send_updatePoRefundRealQty( $req);
 		return $this->recv_updatePoRefundRealQty();
 	}
 	
-	public function send_updatePoRefundRealQty(\vipapis\xstore\cc\bulkbuying\api\UpdatePoRefundRealQtyReq $req){
+	public function send_updatePoRefundRealQty(\Voop\vipapis\xstore\cc\bulkbuying\api\UpdatePoRefundRealQtyReq $req){
 		
 		$this->initInvocation("updatePoRefundRealQty");
-		$args = new \vipapis\xstore\cc\bulkbuying\api\PoRefundApiService_updatePoRefundRealQty_args();
+		$args = new \Voop\vipapis\xstore\cc\bulkbuying\api\PoRefundApiService_updatePoRefundRealQty_args();
 		
 		$args->req = $req;
 		
@@ -70,7 +70,7 @@ class _PoRefundApiServiceClient extends \Osp\Base\OspStub implements \vipapis\xs
 	
 	public function recv_updatePoRefundRealQty(){
 		
-		$result = new \vipapis\xstore\cc\bulkbuying\api\PoRefundApiService_updatePoRefundRealQty_result();
+		$result = new \Voop\vipapis\xstore\cc\bulkbuying\api\PoRefundApiService_updatePoRefundRealQty_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -171,7 +171,7 @@ class PoRefundApiService_updatePoRefundRealQty_args {
 		if(true) {
 			
 			
-			$this->req = new \vipapis\xstore\cc\bulkbuying\api\UpdatePoRefundRealQtyReq();
+			$this->req = new \Voop\vipapis\xstore\cc\bulkbuying\api\UpdatePoRefundRealQtyReq();
 			$this->req->read($input);
 			
 		}
@@ -192,7 +192,7 @@ class PoRefundApiService_updatePoRefundRealQty_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -249,7 +249,7 @@ class PoRefundApiService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -272,7 +272,7 @@ class PoRefundApiService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -342,7 +342,7 @@ class PoRefundApiService_updatePoRefundRealQty_result {
 					
 					$val0 = null;
 					
-					$val0 = new \vipapis\xstore\cc\bulkbuying\api\UpdatePoRefundRealQtyResult();
+					$val0 = new \Voop\vipapis\xstore\cc\bulkbuying\api\UpdatePoRefundRealQtyResult();
 					$val0->read($input);
 					
 					$this->success[$key0] = $val0;
@@ -375,7 +375,7 @@ class PoRefundApiService_updatePoRefundRealQty_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -386,7 +386,7 @@ class PoRefundApiService_updatePoRefundRealQty_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

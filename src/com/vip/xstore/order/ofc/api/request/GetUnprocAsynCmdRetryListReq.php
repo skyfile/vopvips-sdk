@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\request;
+namespace Voop\com\vip\xstore\order\ofc\api\request;
 
 class GetUnprocAsynCmdRetryListReq {
 	
@@ -121,7 +121,7 @@ class GetUnprocAsynCmdRetryListReq {
 				
 				$needSkip = false;
 				
-				$this->procTimeRange = new \com\vip\xstore\order\common\pojo\vo\RangeParam();
+				$this->procTimeRange = new \Voop\com\vip\xstore\order\common\pojo\vo\RangeParam();
 				$this->procTimeRange->read($input);
 				
 			}
@@ -192,7 +192,7 @@ class GetUnprocAsynCmdRetryListReq {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\xstore\order\common\pojo\vo\OrderBy();
+						$elem1 = new \Voop\com\vip\xstore\order\common\pojo\vo\OrderBy();
 						$elem1->read($input);
 						
 						$this->orderByList[$_size1++] = $elem1;
@@ -234,7 +234,7 @@ class GetUnprocAsynCmdRetryListReq {
 			
 			if (!is_object($this->procTimeRange)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->procTimeRange->write($output);
@@ -294,7 +294,7 @@ class GetUnprocAsynCmdRetryListReq {
 			
 			if (!is_array($this->orderByList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -303,7 +303,7 @@ class GetUnprocAsynCmdRetryListReq {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

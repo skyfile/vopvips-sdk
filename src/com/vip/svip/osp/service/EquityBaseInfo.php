@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\svip\osp\service;
+namespace Voop\com\vip\svip\osp\service;
 
 class EquityBaseInfo {
 	
@@ -321,7 +321,7 @@ class EquityBaseInfo {
 				
 				$needSkip = false;
 				
-				$this->saveMoneyInformation = new \com\vip\svip\osp\service\SaveMoneyInformation();
+				$this->saveMoneyInformation = new \Voop\com\vip\svip\osp\service\SaveMoneyInformation();
 				$this->saveMoneyInformation->read($input);
 				
 			}
@@ -413,7 +413,7 @@ class EquityBaseInfo {
 				
 				$needSkip = false;
 				
-				$this->birthGiftInfo = new \com\vip\svip\osp\service\BirthGiftInfo();
+				$this->birthGiftInfo = new \Voop\com\vip\svip\osp\service\BirthGiftInfo();
 				$this->birthGiftInfo->read($input);
 				
 			}
@@ -507,7 +507,7 @@ class EquityBaseInfo {
 			
 			if (!is_object($this->saveMoneyInformation)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->saveMoneyInformation->write($output);
@@ -578,7 +578,7 @@ class EquityBaseInfo {
 			
 			if (!is_object($this->birthGiftInfo)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->birthGiftInfo->write($output);

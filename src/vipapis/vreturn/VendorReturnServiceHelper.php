@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vreturn;
+namespace Voop\vipapis\vreturn;
 require_once dirname(__FILE__).'/VendorReturnService.php';
 class VendorReturnServiceHelper extends _VendorReturnServiceClient{
 	

@@ -8,15 +8,15 @@
 *
 */
 
-namespace vipapis\pg;
+namespace Voop\vipapis\pg;
 interface ProcterGambleServiceIf{
 	
 	
-	public function getGoods(\vipapis\pg\GetProductListRequest $request);
+	public function getGoods(\Voop\vipapis\pg\GetProductListRequest $request);
 	
-	public function getGoodsStock(\vipapis\pg\GetProductInventoryListRequest $request);
+	public function getGoodsStock(\Voop\vipapis\pg\GetProductInventoryListRequest $request);
 	
-	public function getOrders(\vipapis\pg\GetOrderListRequest $request);
+	public function getOrders(\Voop\vipapis\pg\GetOrderListRequest $request);
 	
 	public function healthCheck();
 	
@@ -30,16 +30,16 @@ class _ProcterGambleServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	}
 	
 	
-	public function getGoods(\vipapis\pg\GetProductListRequest $request){
+	public function getGoods(\Voop\vipapis\pg\GetProductListRequest $request){
 		
 		$this->send_getGoods( $request);
 		return $this->recv_getGoods();
 	}
 	
-	public function send_getGoods(\vipapis\pg\GetProductListRequest $request){
+	public function send_getGoods(\Voop\vipapis\pg\GetProductListRequest $request){
 		
 		$this->initInvocation("getGoods");
-		$args = new \vipapis\pg\ProcterGambleService_getGoods_args();
+		$args = new \Voop\vipapis\pg\ProcterGambleService_getGoods_args();
 		
 		$args->request = $request;
 		
@@ -48,7 +48,7 @@ class _ProcterGambleServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	
 	public function recv_getGoods(){
 		
-		$result = new \vipapis\pg\ProcterGambleService_getGoods_result();
+		$result = new \Voop\vipapis\pg\ProcterGambleService_getGoods_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -58,16 +58,16 @@ class _ProcterGambleServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	}
 	
 	
-	public function getGoodsStock(\vipapis\pg\GetProductInventoryListRequest $request){
+	public function getGoodsStock(\Voop\vipapis\pg\GetProductInventoryListRequest $request){
 		
 		$this->send_getGoodsStock( $request);
 		return $this->recv_getGoodsStock();
 	}
 	
-	public function send_getGoodsStock(\vipapis\pg\GetProductInventoryListRequest $request){
+	public function send_getGoodsStock(\Voop\vipapis\pg\GetProductInventoryListRequest $request){
 		
 		$this->initInvocation("getGoodsStock");
-		$args = new \vipapis\pg\ProcterGambleService_getGoodsStock_args();
+		$args = new \Voop\vipapis\pg\ProcterGambleService_getGoodsStock_args();
 		
 		$args->request = $request;
 		
@@ -76,7 +76,7 @@ class _ProcterGambleServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	
 	public function recv_getGoodsStock(){
 		
-		$result = new \vipapis\pg\ProcterGambleService_getGoodsStock_result();
+		$result = new \Voop\vipapis\pg\ProcterGambleService_getGoodsStock_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -86,16 +86,16 @@ class _ProcterGambleServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	}
 	
 	
-	public function getOrders(\vipapis\pg\GetOrderListRequest $request){
+	public function getOrders(\Voop\vipapis\pg\GetOrderListRequest $request){
 		
 		$this->send_getOrders( $request);
 		return $this->recv_getOrders();
 	}
 	
-	public function send_getOrders(\vipapis\pg\GetOrderListRequest $request){
+	public function send_getOrders(\Voop\vipapis\pg\GetOrderListRequest $request){
 		
 		$this->initInvocation("getOrders");
-		$args = new \vipapis\pg\ProcterGambleService_getOrders_args();
+		$args = new \Voop\vipapis\pg\ProcterGambleService_getOrders_args();
 		
 		$args->request = $request;
 		
@@ -104,7 +104,7 @@ class _ProcterGambleServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	
 	public function recv_getOrders(){
 		
-		$result = new \vipapis\pg\ProcterGambleService_getOrders_result();
+		$result = new \Voop\vipapis\pg\ProcterGambleService_getOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -123,14 +123,14 @@ class _ProcterGambleServiceClient extends \Osp\Base\OspStub implements \vipapis\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\pg\ProcterGambleService_healthCheck_args();
+		$args = new \Voop\vipapis\pg\ProcterGambleService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\pg\ProcterGambleService_healthCheck_result();
+		$result = new \Voop\vipapis\pg\ProcterGambleService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -185,7 +185,7 @@ class ProcterGambleService_getGoods_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\pg\GetProductListRequest();
+			$this->request = new \Voop\vipapis\pg\GetProductListRequest();
 			$this->request->read($input);
 			
 		}
@@ -206,7 +206,7 @@ class ProcterGambleService_getGoods_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -263,7 +263,7 @@ class ProcterGambleService_getGoodsStock_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\pg\GetProductInventoryListRequest();
+			$this->request = new \Voop\vipapis\pg\GetProductInventoryListRequest();
 			$this->request->read($input);
 			
 		}
@@ -284,7 +284,7 @@ class ProcterGambleService_getGoodsStock_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -341,7 +341,7 @@ class ProcterGambleService_getOrders_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\pg\GetOrderListRequest();
+			$this->request = new \Voop\vipapis\pg\GetOrderListRequest();
 			$this->request->read($input);
 			
 		}
@@ -362,7 +362,7 @@ class ProcterGambleService_getOrders_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -465,7 +465,7 @@ class ProcterGambleService_getGoods_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\pg\GetProductListResponse();
+			$this->success = new \Voop\vipapis\pg\GetProductListResponse();
 			$this->success->read($input);
 			
 		}
@@ -488,7 +488,7 @@ class ProcterGambleService_getGoods_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -547,7 +547,7 @@ class ProcterGambleService_getGoodsStock_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\pg\GetProductInventoryListResponse();
+			$this->success = new \Voop\vipapis\pg\GetProductInventoryListResponse();
 			$this->success->read($input);
 			
 		}
@@ -570,7 +570,7 @@ class ProcterGambleService_getGoodsStock_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -629,7 +629,7 @@ class ProcterGambleService_getOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\pg\GetOrderListResponse();
+			$this->success = new \Voop\vipapis\pg\GetOrderListResponse();
 			$this->success->read($input);
 			
 		}
@@ -652,7 +652,7 @@ class ProcterGambleService_getOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -711,7 +711,7 @@ class ProcterGambleService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -734,7 +734,7 @@ class ProcterGambleService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Osp\Log;
+namespace Voop\Osp\Log;
 
 /**
  * 日志处理类

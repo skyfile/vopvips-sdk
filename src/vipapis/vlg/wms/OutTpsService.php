@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vlg\wms;
+namespace Voop\vipapis\vlg\wms;
 interface OutTpsServiceIf{
 	
 	
@@ -22,9 +22,9 @@ interface OutTpsServiceIf{
 	
 	public function healthCheck();
 	
-	public function pushOutDistributionStoreRecord(\com\vip\sce\vlg\osp\wms\service\OutDistributionStoreRecord $outDistributionStoreRecord);
+	public function pushOutDistributionStoreRecord(\Voop\com\vip\sce\vlg\osp\wms\service\OutDistributionStoreRecord $outDistributionStoreRecord);
 	
-	public function pushOutReturnOrderPackage(\com\vip\sce\vlg\osp\wms\service\OutReturnOrderPackage $outReturnOrderPackage);
+	public function pushOutReturnOrderPackage(\Voop\com\vip\sce\vlg\osp\wms\service\OutReturnOrderPackage $outReturnOrderPackage);
 	
 	public function pushOutShipContainer( $sysKey, $warehouse, $outShipContainers);
 	
@@ -49,7 +49,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	public function send_callbackOutShipContainerAllResult( $sysKey, $warehouse, $successMsgIds, $failureMsgIds){
 		
 		$this->initInvocation("callbackOutShipContainerAllResult");
-		$args = new \vipapis\vlg\wms\OutTpsService_callbackOutShipContainerAllResult_args();
+		$args = new \Voop\vipapis\vlg\wms\OutTpsService_callbackOutShipContainerAllResult_args();
 		
 		$args->sysKey = $sysKey;
 		
@@ -64,7 +64,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	
 	public function recv_callbackOutShipContainerAllResult(){
 		
-		$result = new \vipapis\vlg\wms\OutTpsService_callbackOutShipContainerAllResult_result();
+		$result = new \Voop\vipapis\vlg\wms\OutTpsService_callbackOutShipContainerAllResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -83,7 +83,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	public function send_callbackOutShipContainerResult( $sysKey, $warehouse, $msgIds){
 		
 		$this->initInvocation("callbackOutShipContainerResult");
-		$args = new \vipapis\vlg\wms\OutTpsService_callbackOutShipContainerResult_args();
+		$args = new \Voop\vipapis\vlg\wms\OutTpsService_callbackOutShipContainerResult_args();
 		
 		$args->sysKey = $sysKey;
 		
@@ -96,7 +96,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	
 	public function recv_callbackOutShipContainerResult(){
 		
-		$result = new \vipapis\vlg\wms\OutTpsService_callbackOutShipContainerResult_result();
+		$result = new \Voop\vipapis\vlg\wms\OutTpsService_callbackOutShipContainerResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -115,7 +115,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	public function send_getOutReturnOrderPackageResult( $appName, $maxId, $maxSize){
 		
 		$this->initInvocation("getOutReturnOrderPackageResult");
-		$args = new \vipapis\vlg\wms\OutTpsService_getOutReturnOrderPackageResult_args();
+		$args = new \Voop\vipapis\vlg\wms\OutTpsService_getOutReturnOrderPackageResult_args();
 		
 		$args->appName = $appName;
 		
@@ -128,7 +128,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	
 	public function recv_getOutReturnOrderPackageResult(){
 		
-		$result = new \vipapis\vlg\wms\OutTpsService_getOutReturnOrderPackageResult_result();
+		$result = new \Voop\vipapis\vlg\wms\OutTpsService_getOutReturnOrderPackageResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -147,7 +147,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	public function send_getOutShipContainerResult( $sysKey, $warehouse, $pageSize){
 		
 		$this->initInvocation("getOutShipContainerResult");
-		$args = new \vipapis\vlg\wms\OutTpsService_getOutShipContainerResult_args();
+		$args = new \Voop\vipapis\vlg\wms\OutTpsService_getOutShipContainerResult_args();
 		
 		$args->sysKey = $sysKey;
 		
@@ -160,7 +160,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	
 	public function recv_getOutShipContainerResult(){
 		
-		$result = new \vipapis\vlg\wms\OutTpsService_getOutShipContainerResult_result();
+		$result = new \Voop\vipapis\vlg\wms\OutTpsService_getOutShipContainerResult_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -179,14 +179,14 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\vlg\wms\OutTpsService_healthCheck_args();
+		$args = new \Voop\vipapis\vlg\wms\OutTpsService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\vlg\wms\OutTpsService_healthCheck_result();
+		$result = new \Voop\vipapis\vlg\wms\OutTpsService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -196,16 +196,16 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	}
 	
 	
-	public function pushOutDistributionStoreRecord(\com\vip\sce\vlg\osp\wms\service\OutDistributionStoreRecord $outDistributionStoreRecord){
+	public function pushOutDistributionStoreRecord(\Voop\com\vip\sce\vlg\osp\wms\service\OutDistributionStoreRecord $outDistributionStoreRecord){
 		
 		$this->send_pushOutDistributionStoreRecord( $outDistributionStoreRecord);
 		return $this->recv_pushOutDistributionStoreRecord();
 	}
 	
-	public function send_pushOutDistributionStoreRecord(\com\vip\sce\vlg\osp\wms\service\OutDistributionStoreRecord $outDistributionStoreRecord){
+	public function send_pushOutDistributionStoreRecord(\Voop\com\vip\sce\vlg\osp\wms\service\OutDistributionStoreRecord $outDistributionStoreRecord){
 		
 		$this->initInvocation("pushOutDistributionStoreRecord");
-		$args = new \vipapis\vlg\wms\OutTpsService_pushOutDistributionStoreRecord_args();
+		$args = new \Voop\vipapis\vlg\wms\OutTpsService_pushOutDistributionStoreRecord_args();
 		
 		$args->outDistributionStoreRecord = $outDistributionStoreRecord;
 		
@@ -214,7 +214,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	
 	public function recv_pushOutDistributionStoreRecord(){
 		
-		$result = new \vipapis\vlg\wms\OutTpsService_pushOutDistributionStoreRecord_result();
+		$result = new \Voop\vipapis\vlg\wms\OutTpsService_pushOutDistributionStoreRecord_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -224,16 +224,16 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	}
 	
 	
-	public function pushOutReturnOrderPackage(\com\vip\sce\vlg\osp\wms\service\OutReturnOrderPackage $outReturnOrderPackage){
+	public function pushOutReturnOrderPackage(\Voop\com\vip\sce\vlg\osp\wms\service\OutReturnOrderPackage $outReturnOrderPackage){
 		
 		$this->send_pushOutReturnOrderPackage( $outReturnOrderPackage);
 		return $this->recv_pushOutReturnOrderPackage();
 	}
 	
-	public function send_pushOutReturnOrderPackage(\com\vip\sce\vlg\osp\wms\service\OutReturnOrderPackage $outReturnOrderPackage){
+	public function send_pushOutReturnOrderPackage(\Voop\com\vip\sce\vlg\osp\wms\service\OutReturnOrderPackage $outReturnOrderPackage){
 		
 		$this->initInvocation("pushOutReturnOrderPackage");
-		$args = new \vipapis\vlg\wms\OutTpsService_pushOutReturnOrderPackage_args();
+		$args = new \Voop\vipapis\vlg\wms\OutTpsService_pushOutReturnOrderPackage_args();
 		
 		$args->outReturnOrderPackage = $outReturnOrderPackage;
 		
@@ -242,7 +242,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	
 	public function recv_pushOutReturnOrderPackage(){
 		
-		$result = new \vipapis\vlg\wms\OutTpsService_pushOutReturnOrderPackage_result();
+		$result = new \Voop\vipapis\vlg\wms\OutTpsService_pushOutReturnOrderPackage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -261,7 +261,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	public function send_pushOutShipContainer( $sysKey, $warehouse, $outShipContainers){
 		
 		$this->initInvocation("pushOutShipContainer");
-		$args = new \vipapis\vlg\wms\OutTpsService_pushOutShipContainer_args();
+		$args = new \Voop\vipapis\vlg\wms\OutTpsService_pushOutShipContainer_args();
 		
 		$args->sysKey = $sysKey;
 		
@@ -274,7 +274,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	
 	public function recv_pushOutShipContainer(){
 		
-		$result = new \vipapis\vlg\wms\OutTpsService_pushOutShipContainer_result();
+		$result = new \Voop\vipapis\vlg\wms\OutTpsService_pushOutShipContainer_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -293,7 +293,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	public function send_pushSortingCode( $warehouse, $sortingCodes){
 		
 		$this->initInvocation("pushSortingCode");
-		$args = new \vipapis\vlg\wms\OutTpsService_pushSortingCode_args();
+		$args = new \Voop\vipapis\vlg\wms\OutTpsService_pushSortingCode_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -304,7 +304,7 @@ class _OutTpsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	
 	public function recv_pushSortingCode(){
 		
-		$result = new \vipapis\vlg\wms\OutTpsService_pushSortingCode_result();
+		$result = new \Voop\vipapis\vlg\wms\OutTpsService_pushSortingCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -483,7 +483,7 @@ class OutTpsService_callbackOutShipContainerAllResult_args {
 		
 		if (!is_array($this->successMsgIds)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -501,7 +501,7 @@ class OutTpsService_callbackOutShipContainerAllResult_args {
 		
 		if (!is_array($this->failureMsgIds)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -651,7 +651,7 @@ class OutTpsService_callbackOutShipContainerResult_args {
 		
 		if (!is_array($this->msgIds)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -997,7 +997,7 @@ class OutTpsService_pushOutDistributionStoreRecord_args {
 		if(true) {
 			
 			
-			$this->outDistributionStoreRecord = new \com\vip\sce\vlg\osp\wms\service\OutDistributionStoreRecord();
+			$this->outDistributionStoreRecord = new \Voop\com\vip\sce\vlg\osp\wms\service\OutDistributionStoreRecord();
 			$this->outDistributionStoreRecord->read($input);
 			
 		}
@@ -1018,7 +1018,7 @@ class OutTpsService_pushOutDistributionStoreRecord_args {
 		
 		if (!is_object($this->outDistributionStoreRecord)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->outDistributionStoreRecord->write($output);
@@ -1075,7 +1075,7 @@ class OutTpsService_pushOutReturnOrderPackage_args {
 		if(true) {
 			
 			
-			$this->outReturnOrderPackage = new \com\vip\sce\vlg\osp\wms\service\OutReturnOrderPackage();
+			$this->outReturnOrderPackage = new \Voop\com\vip\sce\vlg\osp\wms\service\OutReturnOrderPackage();
 			$this->outReturnOrderPackage->read($input);
 			
 		}
@@ -1096,7 +1096,7 @@ class OutTpsService_pushOutReturnOrderPackage_args {
 		
 		if (!is_object($this->outReturnOrderPackage)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->outReturnOrderPackage->write($output);
@@ -1200,7 +1200,7 @@ class OutTpsService_pushOutShipContainer_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\sce\vlg\osp\wms\service\OutShipContainer();
+					$elem0 = new \Voop\com\vip\sce\vlg\osp\wms\service\OutShipContainer();
 					$elem0->read($input);
 					
 					$this->outShipContainers[$_size0++] = $elem0;
@@ -1241,7 +1241,7 @@ class OutTpsService_pushOutShipContainer_args {
 		
 		if (!is_array($this->outShipContainers)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1250,7 +1250,7 @@ class OutTpsService_pushOutShipContainer_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1339,7 +1339,7 @@ class OutTpsService_pushSortingCode_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\sce\vlg\osp\wms\service\OutSortingCode();
+					$elem1 = new \Voop\com\vip\sce\vlg\osp\wms\service\OutSortingCode();
 					$elem1->read($input);
 					
 					$this->sortingCodes[$_size1++] = $elem1;
@@ -1375,7 +1375,7 @@ class OutTpsService_pushSortingCode_args {
 		
 		if (!is_array($this->sortingCodes)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1384,7 +1384,7 @@ class OutTpsService_pushSortingCode_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1445,7 +1445,7 @@ class OutTpsService_callbackOutShipContainerAllResult_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\sce\vlg\osp\wms\service\PostResponse();
+			$this->success = new \Voop\com\vip\sce\vlg\osp\wms\service\PostResponse();
 			$this->success->read($input);
 			
 		}
@@ -1468,7 +1468,7 @@ class OutTpsService_callbackOutShipContainerAllResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1527,7 +1527,7 @@ class OutTpsService_callbackOutShipContainerResult_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\sce\vlg\osp\wms\service\PostResponse();
+			$this->success = new \Voop\com\vip\sce\vlg\osp\wms\service\PostResponse();
 			$this->success->read($input);
 			
 		}
@@ -1550,7 +1550,7 @@ class OutTpsService_callbackOutShipContainerResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1609,7 +1609,7 @@ class OutTpsService_getOutReturnOrderPackageResult_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\sce\vlg\osp\wms\service\GetOutReturnOrderPackageResultResponse();
+			$this->success = new \Voop\com\vip\sce\vlg\osp\wms\service\GetOutReturnOrderPackageResultResponse();
 			$this->success->read($input);
 			
 		}
@@ -1632,7 +1632,7 @@ class OutTpsService_getOutReturnOrderPackageResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1691,7 +1691,7 @@ class OutTpsService_getOutShipContainerResult_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\sce\vlg\osp\wms\service\GetOutShipContainerResultResponse();
+			$this->success = new \Voop\com\vip\sce\vlg\osp\wms\service\GetOutShipContainerResultResponse();
 			$this->success->read($input);
 			
 		}
@@ -1714,7 +1714,7 @@ class OutTpsService_getOutShipContainerResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1773,7 +1773,7 @@ class OutTpsService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1796,7 +1796,7 @@ class OutTpsService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1855,7 +1855,7 @@ class OutTpsService_pushOutDistributionStoreRecord_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\sce\vlg\osp\wms\service\OutTpsResponse();
+			$this->success = new \Voop\com\vip\sce\vlg\osp\wms\service\OutTpsResponse();
 			$this->success->read($input);
 			
 		}
@@ -1878,7 +1878,7 @@ class OutTpsService_pushOutDistributionStoreRecord_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1937,7 +1937,7 @@ class OutTpsService_pushOutReturnOrderPackage_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\sce\vlg\osp\wms\service\PostResponse();
+			$this->success = new \Voop\com\vip\sce\vlg\osp\wms\service\PostResponse();
 			$this->success->read($input);
 			
 		}
@@ -1960,7 +1960,7 @@ class OutTpsService_pushOutReturnOrderPackage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2019,7 +2019,7 @@ class OutTpsService_pushOutShipContainer_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\sce\vlg\osp\wms\service\PostResponse();
+			$this->success = new \Voop\com\vip\sce\vlg\osp\wms\service\PostResponse();
 			$this->success->read($input);
 			
 		}
@@ -2042,7 +2042,7 @@ class OutTpsService_pushOutShipContainer_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2101,7 +2101,7 @@ class OutTpsService_pushSortingCode_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\sce\vlg\osp\wms\service\PostResponse();
+			$this->success = new \Voop\com\vip\sce\vlg\osp\wms\service\PostResponse();
 			$this->success->read($input);
 			
 		}
@@ -2124,7 +2124,7 @@ class OutTpsService_pushSortingCode_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

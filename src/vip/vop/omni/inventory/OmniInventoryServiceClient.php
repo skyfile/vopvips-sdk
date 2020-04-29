@@ -8,7 +8,7 @@
 *
 */
 
-namespace vip\vop\omni\inventory;
+namespace Voop\vip\vop\omni\inventory;
 $base_path = dirname(__FILE__).'/../../../../';
 require_once $base_path.'/Osp/Util/PathUtil.php';
 require_once $base_path.'/Osp/ClassLoader/ClassLoader.php';
@@ -21,7 +21,7 @@ class OmniInventoryServiceClient{
 	private static function regis(){
 		
 		$path = \Osp\Util\PathUtil::getRootPath ();
-		$nsLoader = new \Osp\ClassLoader\ClassLoader ();
+		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
 		$nsLoader->registerNamespace ( 'vip', $path );
@@ -70,7 +70,7 @@ class OmniInventoryServiceClient{
 		
 		//$ctx->setProtocol ( \Osp\Protocol\OspProtocol::$Binary );
 		
-		return new \vip\vop\omni\inventory\OmniInventoryServiceHelper();
+		return new \Voop\vip\vop\omni\inventory\OmniInventoryServiceHelper();
 	}
 	
 }

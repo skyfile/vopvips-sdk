@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vipshop\cis\sdk\api\datain\si\request;
+namespace Voop\com\vipshop\cis\sdk\api\datain\si\request;
 
 class SyncVrwIncrInvRequestPayloadItem {
 	

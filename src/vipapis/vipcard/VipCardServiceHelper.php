@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vipcard;
+namespace Voop\vipapis\vipcard;
 require_once dirname(__FILE__).'/VipCardService.php';
 class VipCardServiceHelper extends _VipCardServiceClient{
 	

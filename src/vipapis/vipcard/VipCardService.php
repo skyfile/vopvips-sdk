@@ -8,11 +8,11 @@
 *
 */
 
-namespace vipapis\vipcard;
+namespace Voop\vipapis\vipcard;
 interface VipCardServiceIf{
 	
 	
-	public function applyGroup(\vipapis\vipcard\ApplyGroupRequest $applyGroupRequest);
+	public function applyGroup(\Voop\vipapis\vipcard\ApplyGroupRequest $applyGroupRequest);
 	
 	public function cancelCard( $client_id, $type, $card_code, $trans_id, $merchant_code);
 	
@@ -44,16 +44,16 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	}
 	
 	
-	public function applyGroup(\vipapis\vipcard\ApplyGroupRequest $applyGroupRequest){
+	public function applyGroup(\Voop\vipapis\vipcard\ApplyGroupRequest $applyGroupRequest){
 		
 		$this->send_applyGroup( $applyGroupRequest);
 		return $this->recv_applyGroup();
 	}
 	
-	public function send_applyGroup(\vipapis\vipcard\ApplyGroupRequest $applyGroupRequest){
+	public function send_applyGroup(\Voop\vipapis\vipcard\ApplyGroupRequest $applyGroupRequest){
 		
 		$this->initInvocation("applyGroup");
-		$args = new \vipapis\vipcard\VipCardService_applyGroup_args();
+		$args = new \Voop\vipapis\vipcard\VipCardService_applyGroup_args();
 		
 		$args->applyGroupRequest = $applyGroupRequest;
 		
@@ -62,7 +62,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	
 	public function recv_applyGroup(){
 		
-		$result = new \vipapis\vipcard\VipCardService_applyGroup_result();
+		$result = new \Voop\vipapis\vipcard\VipCardService_applyGroup_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -81,7 +81,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	public function send_cancelCard( $client_id, $type, $card_code, $trans_id, $merchant_code){
 		
 		$this->initInvocation("cancelCard");
-		$args = new \vipapis\vipcard\VipCardService_cancelCard_args();
+		$args = new \Voop\vipapis\vipcard\VipCardService_cancelCard_args();
 		
 		$args->client_id = $client_id;
 		
@@ -98,7 +98,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	
 	public function recv_cancelCard(){
 		
-		$result = new \vipapis\vipcard\VipCardService_cancelCard_result();
+		$result = new \Voop\vipapis\vipcard\VipCardService_cancelCard_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -117,7 +117,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	public function send_cancelSoldCard( $shop_name, $shop_area, $client_id, $type, $card_code, $trans_id, $sale_trans_id, $merchant_code){
 		
 		$this->initInvocation("cancelSoldCard");
-		$args = new \vipapis\vipcard\VipCardService_cancelSoldCard_args();
+		$args = new \Voop\vipapis\vipcard\VipCardService_cancelSoldCard_args();
 		
 		$args->shop_name = $shop_name;
 		
@@ -140,7 +140,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	
 	public function recv_cancelSoldCard(){
 		
-		$result = new \vipapis\vipcard\VipCardService_cancelSoldCard_result();
+		$result = new \Voop\vipapis\vipcard\VipCardService_cancelSoldCard_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -159,7 +159,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	public function send_getActivateCode( $card_code, $merchant_code){
 		
 		$this->initInvocation("getActivateCode");
-		$args = new \vipapis\vipcard\VipCardService_getActivateCode_args();
+		$args = new \Voop\vipapis\vipcard\VipCardService_getActivateCode_args();
 		
 		$args->card_code = $card_code;
 		
@@ -170,7 +170,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	
 	public function recv_getActivateCode(){
 		
-		$result = new \vipapis\vipcard\VipCardService_getActivateCode_result();
+		$result = new \Voop\vipapis\vipcard\VipCardService_getActivateCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -189,7 +189,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	public function send_getCardNumberList( $merchant_code, $group_id, $status_filter, $page, $limit){
 		
 		$this->initInvocation("getCardNumberList");
-		$args = new \vipapis\vipcard\VipCardService_getCardNumberList_args();
+		$args = new \Voop\vipapis\vipcard\VipCardService_getCardNumberList_args();
 		
 		$args->merchant_code = $merchant_code;
 		
@@ -206,7 +206,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	
 	public function recv_getCardNumberList(){
 		
-		$result = new \vipapis\vipcard\VipCardService_getCardNumberList_result();
+		$result = new \Voop\vipapis\vipcard\VipCardService_getCardNumberList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -225,7 +225,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	public function send_getCardStatus( $shop_name, $shop_area, $client_id, $type, $card_code, $merchant_code){
 		
 		$this->initInvocation("getCardStatus");
-		$args = new \vipapis\vipcard\VipCardService_getCardStatus_args();
+		$args = new \Voop\vipapis\vipcard\VipCardService_getCardStatus_args();
 		
 		$args->shop_name = $shop_name;
 		
@@ -244,7 +244,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	
 	public function recv_getCardStatus(){
 		
-		$result = new \vipapis\vipcard\VipCardService_getCardStatus_result();
+		$result = new \Voop\vipapis\vipcard\VipCardService_getCardStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -263,7 +263,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	public function send_getGroupInfo( $merchant_code, $group_id){
 		
 		$this->initInvocation("getGroupInfo");
-		$args = new \vipapis\vipcard\VipCardService_getGroupInfo_args();
+		$args = new \Voop\vipapis\vipcard\VipCardService_getGroupInfo_args();
 		
 		$args->merchant_code = $merchant_code;
 		
@@ -274,7 +274,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	
 	public function recv_getGroupInfo(){
 		
-		$result = new \vipapis\vipcard\VipCardService_getGroupInfo_result();
+		$result = new \Voop\vipapis\vipcard\VipCardService_getGroupInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -293,7 +293,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	public function send_getUserVipCardInfo( $client_id, $type, $card_code, $merchant_code){
 		
 		$this->initInvocation("getUserVipCardInfo");
-		$args = new \vipapis\vipcard\VipCardService_getUserVipCardInfo_args();
+		$args = new \Voop\vipapis\vipcard\VipCardService_getUserVipCardInfo_args();
 		
 		$args->client_id = $client_id;
 		
@@ -308,7 +308,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	
 	public function recv_getUserVipCardInfo(){
 		
-		$result = new \vipapis\vipcard\VipCardService_getUserVipCardInfo_result();
+		$result = new \Voop\vipapis\vipcard\VipCardService_getUserVipCardInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -327,14 +327,14 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\vipcard\VipCardService_healthCheck_args();
+		$args = new \Voop\vipapis\vipcard\VipCardService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\vipcard\VipCardService_healthCheck_result();
+		$result = new \Voop\vipapis\vipcard\VipCardService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -353,7 +353,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	public function send_sellCard( $shop_name, $shop_area, $client_id, $type, $card_code, $trans_id, $merchant_code){
 		
 		$this->initInvocation("sellCard");
-		$args = new \vipapis\vipcard\VipCardService_sellCard_args();
+		$args = new \Voop\vipapis\vipcard\VipCardService_sellCard_args();
 		
 		$args->shop_name = $shop_name;
 		
@@ -374,7 +374,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	
 	public function recv_sellCard(){
 		
-		$result = new \vipapis\vipcard\VipCardService_sellCard_result();
+		$result = new \Voop\vipapis\vipcard\VipCardService_sellCard_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -393,7 +393,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	public function send_sellVipCard( $client_id, $type, $card_code, $trans_id, $merchant_code, $is_return_act){
 		
 		$this->initInvocation("sellVipCard");
-		$args = new \vipapis\vipcard\VipCardService_sellVipCard_args();
+		$args = new \Voop\vipapis\vipcard\VipCardService_sellVipCard_args();
 		
 		$args->client_id = $client_id;
 		
@@ -412,7 +412,7 @@ class _VipCardServiceClient extends \Osp\Base\OspStub implements \vipapis\vipcar
 	
 	public function recv_sellVipCard(){
 		
-		$result = new \vipapis\vipcard\VipCardService_sellVipCard_result();
+		$result = new \Voop\vipapis\vipcard\VipCardService_sellVipCard_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -467,7 +467,7 @@ class VipCardService_applyGroup_args {
 		if(true) {
 			
 			
-			$this->applyGroupRequest = new \vipapis\vipcard\ApplyGroupRequest();
+			$this->applyGroupRequest = new \Voop\vipapis\vipcard\ApplyGroupRequest();
 			$this->applyGroupRequest->read($input);
 			
 		}
@@ -488,7 +488,7 @@ class VipCardService_applyGroup_args {
 		
 		if (!is_object($this->applyGroupRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->applyGroupRequest->write($output);
@@ -669,7 +669,7 @@ class VipCardService_cancelCard_args {
 		
 		if (!is_array($this->card_code)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1046,7 +1046,7 @@ class VipCardService_getActivateCode_args {
 		
 		if (!is_array($this->card_code)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1450,7 +1450,7 @@ class VipCardService_getCardStatus_args {
 		
 		if (!is_array($this->card_code)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1722,7 +1722,7 @@ class VipCardService_getUserVipCardInfo_args {
 		
 		if (!is_array($this->card_code)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2261,7 +2261,7 @@ class VipCardService_applyGroup_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipcard\ApplyGroupResponse();
+			$this->success = new \Voop\vipapis\vipcard\ApplyGroupResponse();
 			$this->success->read($input);
 			
 		}
@@ -2284,7 +2284,7 @@ class VipCardService_applyGroup_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2343,7 +2343,7 @@ class VipCardService_cancelCard_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipcard\CancelCardResponse();
+			$this->success = new \Voop\vipapis\vipcard\CancelCardResponse();
 			$this->success->read($input);
 			
 		}
@@ -2366,7 +2366,7 @@ class VipCardService_cancelCard_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2508,7 +2508,7 @@ class VipCardService_getActivateCode_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\vipcard\ActivateCodeInfo();
+					$elem0 = new \Voop\vipapis\vipcard\ActivateCodeInfo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2541,7 +2541,7 @@ class VipCardService_getActivateCode_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2550,7 +2550,7 @@ class VipCardService_getActivateCode_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2613,7 +2613,7 @@ class VipCardService_getCardNumberList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipcard\CardNumberList();
+			$this->success = new \Voop\vipapis\vipcard\CardNumberList();
 			$this->success->read($input);
 			
 		}
@@ -2636,7 +2636,7 @@ class VipCardService_getCardNumberList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2704,7 +2704,7 @@ class VipCardService_getCardStatus_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\vipcard\VipCard();
+					$elem0 = new \Voop\vipapis\vipcard\VipCard();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2737,7 +2737,7 @@ class VipCardService_getCardStatus_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2746,7 +2746,7 @@ class VipCardService_getCardStatus_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2809,7 +2809,7 @@ class VipCardService_getGroupInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipcard\GroupInfo();
+			$this->success = new \Voop\vipapis\vipcard\GroupInfo();
 			$this->success->read($input);
 			
 		}
@@ -2832,7 +2832,7 @@ class VipCardService_getGroupInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2900,7 +2900,7 @@ class VipCardService_getUserVipCardInfo_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\vipcard\VipCardInfo();
+					$elem0 = new \Voop\vipapis\vipcard\VipCardInfo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -2933,7 +2933,7 @@ class VipCardService_getUserVipCardInfo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2942,7 +2942,7 @@ class VipCardService_getUserVipCardInfo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3005,7 +3005,7 @@ class VipCardService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -3028,7 +3028,7 @@ class VipCardService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3161,7 +3161,7 @@ class VipCardService_sellVipCard_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vipcard\SellCardResponse();
+			$this->success = new \Voop\vipapis\vipcard\SellCardResponse();
 			$this->success->read($input);
 			
 		}
@@ -3184,7 +3184,7 @@ class VipCardService_sellVipCard_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

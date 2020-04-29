@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\logistical;
+namespace Voop\vipapis\logistical;
 require_once dirname(__FILE__).'/CommentCustService.php';
 class CommentCustServiceHelper extends _CommentCustServiceClient{
 	

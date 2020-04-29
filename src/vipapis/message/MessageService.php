@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\message;
+namespace Voop\vipapis\message;
 interface MessageServiceIf{
 	
 	
@@ -35,14 +35,14 @@ class _MessageServiceClient extends \Osp\Base\OspStub implements \vipapis\messag
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\message\MessageService_healthCheck_args();
+		$args = new \Voop\vipapis\message\MessageService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\message\MessageService_healthCheck_result();
+		$result = new \Voop\vipapis\message\MessageService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -61,7 +61,7 @@ class _MessageServiceClient extends \Osp\Base\OspStub implements \vipapis\messag
 	public function send_publishMessage( $vendor_id, $vendor_code, $subject, $message_content){
 		
 		$this->initInvocation("publishMessage");
-		$args = new \vipapis\message\MessageService_publishMessage_args();
+		$args = new \Voop\vipapis\message\MessageService_publishMessage_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -76,7 +76,7 @@ class _MessageServiceClient extends \Osp\Base\OspStub implements \vipapis\messag
 	
 	public function recv_publishMessage(){
 		
-		$result = new \vipapis\message\MessageService_publishMessage_result();
+		$result = new \Voop\vipapis\message\MessageService_publishMessage_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -327,7 +327,7 @@ class MessageService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -350,7 +350,7 @@ class MessageService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

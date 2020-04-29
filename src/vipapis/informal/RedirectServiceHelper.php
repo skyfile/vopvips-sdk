@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\informal;
+namespace Voop\vipapis\informal;
 require_once dirname(__FILE__).'/RedirectService.php';
 class RedirectServiceHelper extends _RedirectServiceClient{
 	

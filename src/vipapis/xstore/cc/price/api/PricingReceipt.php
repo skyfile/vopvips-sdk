@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\price\api;
+namespace Voop\vipapis\xstore\cc\price\api;
 
 class PricingReceipt {
 	
@@ -108,7 +108,7 @@ class PricingReceipt {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

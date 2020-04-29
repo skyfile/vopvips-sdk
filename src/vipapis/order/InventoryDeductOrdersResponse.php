@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\order;
+namespace Voop\vipapis\order;
 
 class InventoryDeductOrdersResponse {
 	
@@ -110,7 +110,7 @@ class InventoryDeductOrdersResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\order\DeductOrder();
+						$elem0 = new \Voop\vipapis\order\DeductOrder();
 						$elem0->read($input);
 						
 						$this->deductOrders[$_size0++] = $elem0;
@@ -129,7 +129,7 @@ class InventoryDeductOrdersResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -166,7 +166,7 @@ class InventoryDeductOrdersResponse {
 			
 			if (!is_array($this->deductOrders)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -175,7 +175,7 @@ class InventoryDeductOrdersResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

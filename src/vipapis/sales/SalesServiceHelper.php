@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\sales;
+namespace Voop\vipapis\sales;
 require_once dirname(__FILE__).'/SalesService.php';
 class SalesServiceHelper extends _SalesServiceClient{
 	

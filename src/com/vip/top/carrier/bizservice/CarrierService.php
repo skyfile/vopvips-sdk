@@ -8,11 +8,11 @@
 *
 */
 
-namespace com\vip\top\carrier\bizservice;
+namespace Voop\com\vip\top\carrier\bizservice;
 interface CarrierServiceIf{
 	
 	
-	public function fetchTransportNos(\com\vip\top\carrier\bizservice\FetchTransportNosRequestModel $requestModel);
+	public function fetchTransportNos(\Voop\com\vip\top\carrier\bizservice\FetchTransportNosRequestModel $requestModel);
 	
 	public function getAllExpressCo();
 	
@@ -32,15 +32,15 @@ interface CarrierServiceIf{
 	
 	public function getOrderDeliveryInfo( $orderSn, $warehouse);
 	
-	public function getPickInfo(\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse, $limit, $offset);
+	public function getPickInfo(\Voop\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse, $limit, $offset);
 	
-	public function getPickInfoTotalNum(\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse);
+	public function getPickInfoTotalNum(\Voop\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse);
 	
-	public function getPickingInfoByAddress(\com\vip\top\carrier\bizservice\PickingInfoRequest $pickingInfoRequest);
+	public function getPickingInfoByAddress(\Voop\com\vip\top\carrier\bizservice\PickingInfoRequest $pickingInfoRequest);
 	
 	public function getReturnOrderInfo( $orderSn, $warehouse);
 	
-	public function getSortingInfoByAddress(\com\vip\top\carrier\bizservice\SortingInfoRequestHead $sortingInfoRequestHead, $sortingInfoRequestItems);
+	public function getSortingInfoByAddress(\Voop\com\vip\top\carrier\bizservice\SortingInfoRequestHead $sortingInfoRequestHead, $sortingInfoRequestItems);
 	
 	public function getTransportNosByOrderDetail( $sysKey, $vendorCode, $thirdCustCode, $size,\com\vip\top\carrier\bizservice\TmsOrderDetailModel $tmsOrderDetailModel);
 	
@@ -70,7 +70,7 @@ interface CarrierServiceIf{
 	
 	public function refreshCustPointInfo( $crmCustPointId, $warehouse);
 	
-	public function refreshCustRelevantCache(\com\vip\top\carrier\cache\RefreshCacheParam $param, $warehouse);
+	public function refreshCustRelevantCache(\Voop\com\vip\top\carrier\cache\RefreshCacheParam $param, $warehouse);
 	
 	public function refreshInfConfiguration( $pkKey, $warehouse);
 	
@@ -92,16 +92,16 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	}
 	
 	
-	public function fetchTransportNos(\com\vip\top\carrier\bizservice\FetchTransportNosRequestModel $requestModel){
+	public function fetchTransportNos(\Voop\com\vip\top\carrier\bizservice\FetchTransportNosRequestModel $requestModel){
 		
 		$this->send_fetchTransportNos( $requestModel);
 		return $this->recv_fetchTransportNos();
 	}
 	
-	public function send_fetchTransportNos(\com\vip\top\carrier\bizservice\FetchTransportNosRequestModel $requestModel){
+	public function send_fetchTransportNos(\Voop\com\vip\top\carrier\bizservice\FetchTransportNosRequestModel $requestModel){
 		
 		$this->initInvocation("fetchTransportNos");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_fetchTransportNos_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_fetchTransportNos_args();
 		
 		$args->requestModel = $requestModel;
 		
@@ -110,7 +110,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_fetchTransportNos(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_fetchTransportNos_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_fetchTransportNos_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -129,14 +129,14 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getAllExpressCo(){
 		
 		$this->initInvocation("getAllExpressCo");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getAllExpressCo_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getAllExpressCo_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_getAllExpressCo(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getAllExpressCo_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getAllExpressCo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -155,7 +155,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getCarrier( $custNo){
 		
 		$this->initInvocation("getCarrier");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getCarrier_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getCarrier_args();
 		
 		$args->custNo = $custNo;
 		
@@ -164,7 +164,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getCarrier(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getCarrier_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getCarrier_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -183,7 +183,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getCarrierByCustNo( $custNo){
 		
 		$this->initInvocation("getCarrierByCustNo");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getCarrierByCustNo_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getCarrierByCustNo_args();
 		
 		$args->custNo = $custNo;
 		
@@ -192,7 +192,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getCarrierByCustNo(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getCarrierByCustNo_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getCarrierByCustNo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -211,7 +211,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getCarrierByName( $custName){
 		
 		$this->initInvocation("getCarrierByName");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getCarrierByName_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getCarrierByName_args();
 		
 		$args->custName = $custName;
 		
@@ -220,7 +220,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getCarrierByName(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getCarrierByName_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getCarrierByName_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -239,7 +239,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getCarrierListByWareHouse( $warehouse){
 		
 		$this->initInvocation("getCarrierListByWareHouse");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getCarrierListByWareHouse_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getCarrierListByWareHouse_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -248,7 +248,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getCarrierListByWareHouse(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getCarrierListByWareHouse_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getCarrierListByWareHouse_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -267,7 +267,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getCarriers( $custNos){
 		
 		$this->initInvocation("getCarriers");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getCarriers_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getCarriers_args();
 		
 		$args->custNos = $custNos;
 		
@@ -276,7 +276,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getCarriers(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getCarriers_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getCarriers_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -295,7 +295,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getForwarderCompanyVO( $orderSn, $warehouse){
 		
 		$this->initInvocation("getForwarderCompanyVO");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getForwarderCompanyVO_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getForwarderCompanyVO_args();
 		
 		$args->orderSn = $orderSn;
 		
@@ -306,7 +306,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getForwarderCompanyVO(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getForwarderCompanyVO_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getForwarderCompanyVO_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -325,7 +325,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getLefengOrderDeliveryInfo( $orderSn, $warehouse){
 		
 		$this->initInvocation("getLefengOrderDeliveryInfo");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getLefengOrderDeliveryInfo_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getLefengOrderDeliveryInfo_args();
 		
 		$args->orderSn = $orderSn;
 		
@@ -336,7 +336,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getLefengOrderDeliveryInfo(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getLefengOrderDeliveryInfo_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getLefengOrderDeliveryInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -355,7 +355,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getOrderDeliveryInfo( $orderSn, $warehouse){
 		
 		$this->initInvocation("getOrderDeliveryInfo");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getOrderDeliveryInfo_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getOrderDeliveryInfo_args();
 		
 		$args->orderSn = $orderSn;
 		
@@ -366,7 +366,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getOrderDeliveryInfo(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getOrderDeliveryInfo_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getOrderDeliveryInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -376,16 +376,16 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	}
 	
 	
-	public function getPickInfo(\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse, $limit, $offset){
+	public function getPickInfo(\Voop\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse, $limit, $offset){
 		
 		$this->send_getPickInfo( $info, $warehouse, $limit, $offset);
 		return $this->recv_getPickInfo();
 	}
 	
-	public function send_getPickInfo(\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse, $limit, $offset){
+	public function send_getPickInfo(\Voop\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse, $limit, $offset){
 		
 		$this->initInvocation("getPickInfo");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getPickInfo_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getPickInfo_args();
 		
 		$args->info = $info;
 		
@@ -400,7 +400,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getPickInfo(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getPickInfo_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getPickInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -410,16 +410,16 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	}
 	
 	
-	public function getPickInfoTotalNum(\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse){
+	public function getPickInfoTotalNum(\Voop\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse){
 		
 		$this->send_getPickInfoTotalNum( $info, $warehouse);
 		return $this->recv_getPickInfoTotalNum();
 	}
 	
-	public function send_getPickInfoTotalNum(\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse){
+	public function send_getPickInfoTotalNum(\Voop\com\vip\top\carrier\bizservice\PickupQueryInfo $info, $warehouse){
 		
 		$this->initInvocation("getPickInfoTotalNum");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getPickInfoTotalNum_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getPickInfoTotalNum_args();
 		
 		$args->info = $info;
 		
@@ -430,7 +430,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getPickInfoTotalNum(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getPickInfoTotalNum_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getPickInfoTotalNum_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -440,16 +440,16 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	}
 	
 	
-	public function getPickingInfoByAddress(\com\vip\top\carrier\bizservice\PickingInfoRequest $pickingInfoRequest){
+	public function getPickingInfoByAddress(\Voop\com\vip\top\carrier\bizservice\PickingInfoRequest $pickingInfoRequest){
 		
 		$this->send_getPickingInfoByAddress( $pickingInfoRequest);
 		return $this->recv_getPickingInfoByAddress();
 	}
 	
-	public function send_getPickingInfoByAddress(\com\vip\top\carrier\bizservice\PickingInfoRequest $pickingInfoRequest){
+	public function send_getPickingInfoByAddress(\Voop\com\vip\top\carrier\bizservice\PickingInfoRequest $pickingInfoRequest){
 		
 		$this->initInvocation("getPickingInfoByAddress");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getPickingInfoByAddress_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getPickingInfoByAddress_args();
 		
 		$args->pickingInfoRequest = $pickingInfoRequest;
 		
@@ -458,7 +458,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getPickingInfoByAddress(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getPickingInfoByAddress_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getPickingInfoByAddress_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -477,7 +477,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getReturnOrderInfo( $orderSn, $warehouse){
 		
 		$this->initInvocation("getReturnOrderInfo");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getReturnOrderInfo_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getReturnOrderInfo_args();
 		
 		$args->orderSn = $orderSn;
 		
@@ -488,7 +488,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getReturnOrderInfo(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getReturnOrderInfo_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getReturnOrderInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -498,16 +498,16 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	}
 	
 	
-	public function getSortingInfoByAddress(\com\vip\top\carrier\bizservice\SortingInfoRequestHead $sortingInfoRequestHead, $sortingInfoRequestItems){
+	public function getSortingInfoByAddress(\Voop\com\vip\top\carrier\bizservice\SortingInfoRequestHead $sortingInfoRequestHead, $sortingInfoRequestItems){
 		
 		$this->send_getSortingInfoByAddress( $sortingInfoRequestHead, $sortingInfoRequestItems);
 		return $this->recv_getSortingInfoByAddress();
 	}
 	
-	public function send_getSortingInfoByAddress(\com\vip\top\carrier\bizservice\SortingInfoRequestHead $sortingInfoRequestHead, $sortingInfoRequestItems){
+	public function send_getSortingInfoByAddress(\Voop\com\vip\top\carrier\bizservice\SortingInfoRequestHead $sortingInfoRequestHead, $sortingInfoRequestItems){
 		
 		$this->initInvocation("getSortingInfoByAddress");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getSortingInfoByAddress_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getSortingInfoByAddress_args();
 		
 		$args->sortingInfoRequestHead = $sortingInfoRequestHead;
 		
@@ -518,7 +518,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getSortingInfoByAddress(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getSortingInfoByAddress_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getSortingInfoByAddress_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -537,7 +537,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getTransportNosByOrderDetail( $sysKey, $vendorCode, $thirdCustCode, $size,\com\vip\top\carrier\bizservice\TmsOrderDetailModel $tmsOrderDetailModel){
 		
 		$this->initInvocation("getTransportNosByOrderDetail");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getTransportNosByOrderDetail_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getTransportNosByOrderDetail_args();
 		
 		$args->sysKey = $sysKey;
 		
@@ -554,7 +554,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getTransportNosByOrderDetail(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getTransportNosByOrderDetail_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getTransportNosByOrderDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -573,7 +573,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getTransportNosByThirdCustCode( $sysKey, $vendorCode, $thirdCustCode, $size, $orderSn){
 		
 		$this->initInvocation("getTransportNosByThirdCustCode");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getTransportNosByThirdCustCode_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getTransportNosByThirdCustCode_args();
 		
 		$args->sysKey = $sysKey;
 		
@@ -590,7 +590,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getTransportNosByThirdCustCode(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getTransportNosByThirdCustCode_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getTransportNosByThirdCustCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -609,7 +609,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getVisitHourOption( $returnApplyTime, $lastAddressCode){
 		
 		$this->initInvocation("getVisitHourOption");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getVisitHourOption_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getVisitHourOption_args();
 		
 		$args->returnApplyTime = $returnApplyTime;
 		
@@ -620,7 +620,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getVisitHourOption(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getVisitHourOption_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getVisitHourOption_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -639,7 +639,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_getVisitTimeOption( $returnApplyTime, $lastAddressCode){
 		
 		$this->initInvocation("getVisitTimeOption");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_getVisitTimeOption_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getVisitTimeOption_args();
 		
 		$args->returnApplyTime = $returnApplyTime;
 		
@@ -650,7 +650,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_getVisitTimeOption(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_getVisitTimeOption_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_getVisitTimeOption_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -669,14 +669,14 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_healthCheck_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_healthCheck_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -695,7 +695,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_listCarriers( $type, $showAll){
 		
 		$this->initInvocation("listCarriers");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_listCarriers_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_listCarriers_args();
 		
 		$args->type = $type;
 		
@@ -706,7 +706,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_listCarriers(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_listCarriers_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_listCarriers_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -725,7 +725,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_matchCarrier( $tmsOrderInfoModels, $warehouse){
 		
 		$this->initInvocation("matchCarrier");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_matchCarrier_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_matchCarrier_args();
 		
 		$args->tmsOrderInfoModels = $tmsOrderInfoModels;
 		
@@ -736,7 +736,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_matchCarrier(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_matchCarrier_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_matchCarrier_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -755,7 +755,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_matchCarrierById( $tmsOrderIds, $warehouse){
 		
 		$this->initInvocation("matchCarrierById");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_matchCarrierById_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_matchCarrierById_args();
 		
 		$args->tmsOrderIds = $tmsOrderIds;
 		
@@ -766,7 +766,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_matchCarrierById(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_matchCarrierById_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_matchCarrierById_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -785,7 +785,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_matchCarrierByIdWithPriority( $tmsOrderIds, $warehouse){
 		
 		$this->initInvocation("matchCarrierByIdWithPriority");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_matchCarrierByIdWithPriority_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_matchCarrierByIdWithPriority_args();
 		
 		$args->tmsOrderIds = $tmsOrderIds;
 		
@@ -796,7 +796,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_matchCarrierByIdWithPriority(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_matchCarrierByIdWithPriority_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_matchCarrierByIdWithPriority_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -815,7 +815,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_queryCustStandardNameByUncode( $custUncode){
 		
 		$this->initInvocation("queryCustStandardNameByUncode");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_queryCustStandardNameByUncode_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_queryCustStandardNameByUncode_args();
 		
 		$args->custUncode = $custUncode;
 		
@@ -824,7 +824,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_queryCustStandardNameByUncode(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_queryCustStandardNameByUncode_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_queryCustStandardNameByUncode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -843,7 +843,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_queryTransportNosByOrderSn( $orderSns){
 		
 		$this->initInvocation("queryTransportNosByOrderSn");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_queryTransportNosByOrderSn_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_queryTransportNosByOrderSn_args();
 		
 		$args->orderSns = $orderSns;
 		
@@ -852,7 +852,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_queryTransportNosByOrderSn(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_queryTransportNosByOrderSn_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_queryTransportNosByOrderSn_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -871,7 +871,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_refreshCrmCustRuleAllocationByCreatedOffice( $createdOffice, $warehouse){
 		
 		$this->initInvocation("refreshCrmCustRuleAllocationByCreatedOffice");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_refreshCrmCustRuleAllocationByCreatedOffice_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshCrmCustRuleAllocationByCreatedOffice_args();
 		
 		$args->createdOffice = $createdOffice;
 		
@@ -882,7 +882,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_refreshCrmCustRuleAllocationByCreatedOffice(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_refreshCrmCustRuleAllocationByCreatedOffice_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshCrmCustRuleAllocationByCreatedOffice_result();
 		$this->receive_base($result);
 		
 	}
@@ -897,7 +897,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_refreshCustPickupGoodsTime( $crmCustId, $warehouse){
 		
 		$this->initInvocation("refreshCustPickupGoodsTime");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_refreshCustPickupGoodsTime_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshCustPickupGoodsTime_args();
 		
 		$args->crmCustId = $crmCustId;
 		
@@ -908,7 +908,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_refreshCustPickupGoodsTime(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_refreshCustPickupGoodsTime_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshCustPickupGoodsTime_result();
 		$this->receive_base($result);
 		
 	}
@@ -923,7 +923,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_refreshCustPointInfo( $crmCustPointId, $warehouse){
 		
 		$this->initInvocation("refreshCustPointInfo");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_refreshCustPointInfo_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshCustPointInfo_args();
 		
 		$args->crmCustPointId = $crmCustPointId;
 		
@@ -934,22 +934,22 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_refreshCustPointInfo(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_refreshCustPointInfo_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshCustPointInfo_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function refreshCustRelevantCache(\com\vip\top\carrier\cache\RefreshCacheParam $param, $warehouse){
+	public function refreshCustRelevantCache(\Voop\com\vip\top\carrier\cache\RefreshCacheParam $param, $warehouse){
 		
 		$this->send_refreshCustRelevantCache( $param, $warehouse);
 		return $this->recv_refreshCustRelevantCache();
 	}
 	
-	public function send_refreshCustRelevantCache(\com\vip\top\carrier\cache\RefreshCacheParam $param, $warehouse){
+	public function send_refreshCustRelevantCache(\Voop\com\vip\top\carrier\cache\RefreshCacheParam $param, $warehouse){
 		
 		$this->initInvocation("refreshCustRelevantCache");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_refreshCustRelevantCache_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshCustRelevantCache_args();
 		
 		$args->param = $param;
 		
@@ -960,7 +960,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_refreshCustRelevantCache(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_refreshCustRelevantCache_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshCustRelevantCache_result();
 		$this->receive_base($result);
 		
 	}
@@ -975,7 +975,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_refreshInfConfiguration( $pkKey, $warehouse){
 		
 		$this->initInvocation("refreshInfConfiguration");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_refreshInfConfiguration_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshInfConfiguration_args();
 		
 		$args->pkKey = $pkKey;
 		
@@ -986,7 +986,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_refreshInfConfiguration(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_refreshInfConfiguration_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshInfConfiguration_result();
 		$this->receive_base($result);
 		
 	}
@@ -1001,7 +1001,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_refreshPickingInfo( $crmCustId, $warehouse){
 		
 		$this->initInvocation("refreshPickingInfo");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_refreshPickingInfo_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshPickingInfo_args();
 		
 		$args->crmCustId = $crmCustId;
 		
@@ -1012,7 +1012,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_refreshPickingInfo(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_refreshPickingInfo_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshPickingInfo_result();
 		$this->receive_base($result);
 		
 	}
@@ -1027,7 +1027,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_refreshSbDeliverPointByRegion( $createdOffice, $regionCode, $warehouse){
 		
 		$this->initInvocation("refreshSbDeliverPointByRegion");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_refreshSbDeliverPointByRegion_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshSbDeliverPointByRegion_args();
 		
 		$args->createdOffice = $createdOffice;
 		
@@ -1040,7 +1040,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_refreshSbDeliverPointByRegion(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_refreshSbDeliverPointByRegion_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshSbDeliverPointByRegion_result();
 		$this->receive_base($result);
 		
 	}
@@ -1055,7 +1055,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_refreshTmsSysParamByParamKey( $paramKey, $warehouse){
 		
 		$this->initInvocation("refreshTmsSysParamByParamKey");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_refreshTmsSysParamByParamKey_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshTmsSysParamByParamKey_args();
 		
 		$args->paramKey = $paramKey;
 		
@@ -1066,7 +1066,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_refreshTmsSysParamByParamKey(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_refreshTmsSysParamByParamKey_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_refreshTmsSysParamByParamKey_result();
 		$this->receive_base($result);
 		
 	}
@@ -1081,7 +1081,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	public function send_syncCarrierById( $tmsOrderIds, $warehouse){
 		
 		$this->initInvocation("syncCarrierById");
-		$args = new \com\vip\top\carrier\bizservice\CarrierService_syncCarrierById_args();
+		$args = new \Voop\com\vip\top\carrier\bizservice\CarrierService_syncCarrierById_args();
 		
 		$args->tmsOrderIds = $tmsOrderIds;
 		
@@ -1092,7 +1092,7 @@ class _CarrierServiceClient extends \Osp\Base\OspStub implements \com\vip\top\ca
 	
 	public function recv_syncCarrierById(){
 		
-		$result = new \com\vip\top\carrier\bizservice\CarrierService_syncCarrierById_result();
+		$result = new \Voop\com\vip\top\carrier\bizservice\CarrierService_syncCarrierById_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -1147,7 +1147,7 @@ class CarrierService_fetchTransportNos_args {
 		if(true) {
 			
 			
-			$this->requestModel = new \com\vip\top\carrier\bizservice\FetchTransportNosRequestModel();
+			$this->requestModel = new \Voop\com\vip\top\carrier\bizservice\FetchTransportNosRequestModel();
 			$this->requestModel->read($input);
 			
 		}
@@ -1170,7 +1170,7 @@ class CarrierService_fetchTransportNos_args {
 			
 			if (!is_object($this->requestModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->requestModel->write($output);
@@ -1611,7 +1611,7 @@ class CarrierService_getCarriers_args {
 			
 			if (!is_array($this->custNos)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2013,7 +2013,7 @@ class CarrierService_getPickInfo_args {
 		if(true) {
 			
 			
-			$this->info = new \com\vip\top\carrier\bizservice\PickupQueryInfo();
+			$this->info = new \Voop\com\vip\top\carrier\bizservice\PickupQueryInfo();
 			$this->info->read($input);
 			
 		}
@@ -2063,7 +2063,7 @@ class CarrierService_getPickInfo_args {
 			
 			if (!is_object($this->info)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->info->write($output);
@@ -2159,7 +2159,7 @@ class CarrierService_getPickInfoTotalNum_args {
 		if(true) {
 			
 			
-			$this->info = new \com\vip\top\carrier\bizservice\PickupQueryInfo();
+			$this->info = new \Voop\com\vip\top\carrier\bizservice\PickupQueryInfo();
 			$this->info->read($input);
 			
 		}
@@ -2191,7 +2191,7 @@ class CarrierService_getPickInfoTotalNum_args {
 			
 			if (!is_object($this->info)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->info->write($output);
@@ -2259,7 +2259,7 @@ class CarrierService_getPickingInfoByAddress_args {
 		if(true) {
 			
 			
-			$this->pickingInfoRequest = new \com\vip\top\carrier\bizservice\PickingInfoRequest();
+			$this->pickingInfoRequest = new \Voop\com\vip\top\carrier\bizservice\PickingInfoRequest();
 			$this->pickingInfoRequest->read($input);
 			
 		}
@@ -2282,7 +2282,7 @@ class CarrierService_getPickingInfoByAddress_args {
 			
 			if (!is_object($this->pickingInfoRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pickingInfoRequest->write($output);
@@ -2453,7 +2453,7 @@ class CarrierService_getSortingInfoByAddress_args {
 		if(true) {
 			
 			
-			$this->sortingInfoRequestHead = new \com\vip\top\carrier\bizservice\SortingInfoRequestHead();
+			$this->sortingInfoRequestHead = new \Voop\com\vip\top\carrier\bizservice\SortingInfoRequestHead();
 			$this->sortingInfoRequestHead->read($input);
 			
 		}
@@ -2473,7 +2473,7 @@ class CarrierService_getSortingInfoByAddress_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\top\carrier\bizservice\SortingInfoRequestItem();
+					$elem0 = new \Voop\com\vip\top\carrier\bizservice\SortingInfoRequestItem();
 					$elem0->read($input);
 					
 					$this->sortingInfoRequestItems[$_size0++] = $elem0;
@@ -2506,7 +2506,7 @@ class CarrierService_getSortingInfoByAddress_args {
 			
 			if (!is_object($this->sortingInfoRequestHead)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->sortingInfoRequestHead->write($output);
@@ -2521,7 +2521,7 @@ class CarrierService_getSortingInfoByAddress_args {
 			
 			if (!is_array($this->sortingInfoRequestItems)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2530,7 +2530,7 @@ class CarrierService_getSortingInfoByAddress_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2669,7 +2669,7 @@ class CarrierService_getTransportNosByOrderDetail_args {
 		if(true) {
 			
 			
-			$this->tmsOrderDetailModel = new \com\vip\top\carrier\bizservice\TmsOrderDetailModel();
+			$this->tmsOrderDetailModel = new \Voop\com\vip\top\carrier\bizservice\TmsOrderDetailModel();
 			$this->tmsOrderDetailModel->read($input);
 			
 		}
@@ -2724,7 +2724,7 @@ class CarrierService_getTransportNosByOrderDetail_args {
 			
 			if (!is_object($this->tmsOrderDetailModel)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->tmsOrderDetailModel->write($output);
@@ -3336,7 +3336,7 @@ class CarrierService_matchCarrier_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\top\carrier\bizservice\TmsOrderInfoModel();
+					$elem0 = new \Voop\com\vip\top\carrier\bizservice\TmsOrderInfoModel();
 					$elem0->read($input);
 					
 					$this->tmsOrderInfoModels[$_size0++] = $elem0;
@@ -3378,7 +3378,7 @@ class CarrierService_matchCarrier_args {
 			
 			if (!is_array($this->tmsOrderInfoModels)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3387,7 +3387,7 @@ class CarrierService_matchCarrier_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3518,7 +3518,7 @@ class CarrierService_matchCarrierById_args {
 			
 			if (!is_array($this->tmsOrderIds)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3652,7 +3652,7 @@ class CarrierService_matchCarrierByIdWithPriority_args {
 			
 			if (!is_array($this->tmsOrderIds)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3841,7 +3841,7 @@ class CarrierService_queryTransportNosByOrderSn_args {
 			
 			if (!is_array($this->orderSns)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -4223,7 +4223,7 @@ class CarrierService_refreshCustRelevantCache_args {
 		if(true) {
 			
 			
-			$this->param = new \com\vip\top\carrier\cache\RefreshCacheParam();
+			$this->param = new \Voop\com\vip\top\carrier\cache\RefreshCacheParam();
 			$this->param->read($input);
 			
 		}
@@ -4255,7 +4255,7 @@ class CarrierService_refreshCustRelevantCache_args {
 			
 			if (!is_object($this->param)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->param->write($output);
@@ -4818,7 +4818,7 @@ class CarrierService_syncCarrierById_args {
 			
 			if (!is_array($this->tmsOrderIds)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4893,7 +4893,7 @@ class CarrierService_fetchTransportNos_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\TransportNosResponseModel();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\TransportNosResponseModel();
 			$this->success->read($input);
 			
 		}
@@ -4916,7 +4916,7 @@ class CarrierService_fetchTransportNos_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4984,7 +4984,7 @@ class CarrierService_getAllExpressCo_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\top\carrier\bizservice\ExpressCo();
+					$elem0 = new \Voop\com\vip\top\carrier\bizservice\ExpressCo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -5017,7 +5017,7 @@ class CarrierService_getAllExpressCo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5026,7 +5026,7 @@ class CarrierService_getAllExpressCo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5089,7 +5089,7 @@ class CarrierService_getCarrier_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
 			$this->success->read($input);
 			
 		}
@@ -5112,7 +5112,7 @@ class CarrierService_getCarrier_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5171,7 +5171,7 @@ class CarrierService_getCarrierByCustNo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
 			$this->success->read($input);
 			
 		}
@@ -5194,7 +5194,7 @@ class CarrierService_getCarrierByCustNo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5253,7 +5253,7 @@ class CarrierService_getCarrierByName_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
 			$this->success->read($input);
 			
 		}
@@ -5276,7 +5276,7 @@ class CarrierService_getCarrierByName_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5344,7 +5344,7 @@ class CarrierService_getCarrierListByWareHouse_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
+					$elem0 = new \Voop\com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -5377,7 +5377,7 @@ class CarrierService_getCarrierListByWareHouse_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5386,7 +5386,7 @@ class CarrierService_getCarrierListByWareHouse_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5460,7 +5460,7 @@ class CarrierService_getCarriers_result {
 					
 					$val1 = null;
 					
-					$val1 = new \com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
+					$val1 = new \Voop\com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
 					$val1->read($input);
 					
 					$this->success[$key1] = $val1;
@@ -5493,7 +5493,7 @@ class CarrierService_getCarriers_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -5504,7 +5504,7 @@ class CarrierService_getCarriers_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);
@@ -5567,7 +5567,7 @@ class CarrierService_getForwarderCompanyVO_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\ForwarderCompanyVO();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\ForwarderCompanyVO();
 			$this->success->read($input);
 			
 		}
@@ -5590,7 +5590,7 @@ class CarrierService_getForwarderCompanyVO_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5649,7 +5649,7 @@ class CarrierService_getLefengOrderDeliveryInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\OrderDeliveryInfo();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\OrderDeliveryInfo();
 			$this->success->read($input);
 			
 		}
@@ -5672,7 +5672,7 @@ class CarrierService_getLefengOrderDeliveryInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5731,7 +5731,7 @@ class CarrierService_getOrderDeliveryInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\OrderDeliveryInfo();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\OrderDeliveryInfo();
 			$this->success->read($input);
 			
 		}
@@ -5754,7 +5754,7 @@ class CarrierService_getOrderDeliveryInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5822,7 +5822,7 @@ class CarrierService_getPickInfo_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\top\carrier\bizservice\PickupQueryResult();
+					$elem0 = new \Voop\com\vip\top\carrier\bizservice\PickupQueryResult();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -5855,7 +5855,7 @@ class CarrierService_getPickInfo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5864,7 +5864,7 @@ class CarrierService_getPickInfo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6001,7 +6001,7 @@ class CarrierService_getPickingInfoByAddress_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\PickingInfoResult();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\PickingInfoResult();
 			$this->success->read($input);
 			
 		}
@@ -6024,7 +6024,7 @@ class CarrierService_getPickingInfoByAddress_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6083,7 +6083,7 @@ class CarrierService_getReturnOrderInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\ReturnOrderInfo();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\ReturnOrderInfo();
 			$this->success->read($input);
 			
 		}
@@ -6106,7 +6106,7 @@ class CarrierService_getReturnOrderInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6165,7 +6165,7 @@ class CarrierService_getSortingInfoByAddress_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\SortingInfoResult();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\SortingInfoResult();
 			$this->success->read($input);
 			
 		}
@@ -6188,7 +6188,7 @@ class CarrierService_getSortingInfoByAddress_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6247,7 +6247,7 @@ class CarrierService_getTransportNosByOrderDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\TransportNoInfosResponseModel();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\TransportNoInfosResponseModel();
 			$this->success->read($input);
 			
 		}
@@ -6270,7 +6270,7 @@ class CarrierService_getTransportNosByOrderDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6329,7 +6329,7 @@ class CarrierService_getTransportNosByThirdCustCode_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\TransportNosResponseModel();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\TransportNosResponseModel();
 			$this->success->read($input);
 			
 		}
@@ -6352,7 +6352,7 @@ class CarrierService_getTransportNosByThirdCustCode_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6420,7 +6420,7 @@ class CarrierService_getVisitHourOption_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\top\carrier\service\GetPackageTimeVo();
+					$elem0 = new \Voop\com\vip\top\carrier\service\GetPackageTimeVo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -6453,7 +6453,7 @@ class CarrierService_getVisitHourOption_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6462,7 +6462,7 @@ class CarrierService_getVisitHourOption_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6599,7 +6599,7 @@ class CarrierService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -6622,7 +6622,7 @@ class CarrierService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6690,7 +6690,7 @@ class CarrierService_listCarriers_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
+					$elem0 = new \Voop\com\vip\top\carrier\bizservice\RegisteredCarrierModelModel();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -6723,7 +6723,7 @@ class CarrierService_listCarriers_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6732,7 +6732,7 @@ class CarrierService_listCarriers_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6806,7 +6806,7 @@ class CarrierService_matchCarrier_result {
 					
 					$val1 = null;
 					
-					$val1 = new \com\vip\top\carrier\bizservice\MatchResultInfo();
+					$val1 = new \Voop\com\vip\top\carrier\bizservice\MatchResultInfo();
 					$val1->read($input);
 					
 					$this->success[$key1] = $val1;
@@ -6839,7 +6839,7 @@ class CarrierService_matchCarrier_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -6850,7 +6850,7 @@ class CarrierService_matchCarrier_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);
@@ -6924,7 +6924,7 @@ class CarrierService_matchCarrierById_result {
 					
 					$val1 = null;
 					
-					$val1 = new \com\vip\top\carrier\bizservice\MatchResultInfo();
+					$val1 = new \Voop\com\vip\top\carrier\bizservice\MatchResultInfo();
 					$val1->read($input);
 					
 					$this->success[$key1] = $val1;
@@ -6957,7 +6957,7 @@ class CarrierService_matchCarrierById_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -6968,7 +6968,7 @@ class CarrierService_matchCarrierById_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);
@@ -7051,7 +7051,7 @@ class CarrierService_matchCarrierByIdWithPriority_result {
 							
 							$elem2 = null;
 							
-							$elem2 = new \com\vip\top\carrier\bizservice\MatchProcessResultInfo();
+							$elem2 = new \Voop\com\vip\top\carrier\bizservice\MatchProcessResultInfo();
 							$elem2->read($input);
 							
 							$val1[$_size2++] = $elem2;
@@ -7094,7 +7094,7 @@ class CarrierService_matchCarrierByIdWithPriority_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -7105,7 +7105,7 @@ class CarrierService_matchCarrierByIdWithPriority_result {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();
@@ -7114,7 +7114,7 @@ class CarrierService_matchCarrierByIdWithPriority_result {
 					
 					if (!is_object($iter1)) {
 						
-						throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 					}
 					
 					$xfer += $iter1->write($output);
@@ -7255,7 +7255,7 @@ class CarrierService_queryTransportNosByOrderSn_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\top\carrier\bizservice\TransportNoInfosMapResponseModel();
+			$this->success = new \Voop\com\vip\top\carrier\bizservice\TransportNoInfosMapResponseModel();
 			$this->success->read($input);
 			
 		}
@@ -7278,7 +7278,7 @@ class CarrierService_queryTransportNosByOrderSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7740,7 +7740,7 @@ class CarrierService_syncCarrierById_result {
 					
 					$val0 = null;
 					
-					$val0 = new \com\vip\top\carrier\bizservice\SyncResultInfo();
+					$val0 = new \Voop\com\vip\top\carrier\bizservice\SyncResultInfo();
 					$val0->read($input);
 					
 					$this->success[$key0] = $val0;
@@ -7773,7 +7773,7 @@ class CarrierService_syncCarrierById_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -7784,7 +7784,7 @@ class CarrierService_syncCarrierById_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

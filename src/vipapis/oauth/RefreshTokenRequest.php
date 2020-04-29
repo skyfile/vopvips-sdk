@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\oauth;
+namespace Voop\vipapis\oauth;
 
 class RefreshTokenRequest {
 	
@@ -128,7 +128,7 @@ class RefreshTokenRequest {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();

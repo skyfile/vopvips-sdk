@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\ap\service;
+namespace Voop\com\vip\fcs\ap\service;
 
 class InvTransDetailReqItem {
 	
@@ -131,7 +131,7 @@ class InvTransDetailReqItem {
 				
 				$needSkip = false;
 				
-				$this->pager = new \com\vip\fcs\ap\service\Pager();
+				$this->pager = new \Voop\com\vip\fcs\ap\service\Pager();
 				$this->pager->read($input);
 				
 			}
@@ -233,7 +233,7 @@ class InvTransDetailReqItem {
 			
 			if (!is_object($this->pager)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pager->write($output);

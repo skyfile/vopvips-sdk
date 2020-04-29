@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vis;
+namespace Voop\vipapis\vis;
 require_once dirname(__FILE__).'/VendorStoreApiService.php';
 class VendorStoreApiServiceHelper extends _VendorStoreApiServiceClient{
 	

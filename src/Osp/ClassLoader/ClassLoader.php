@@ -23,7 +23,7 @@
  * @package thrift.classloader
  */
 
-namespace Osp\ClassLoader;
+namespace Voop\Osp\ClassLoader;
 
 class ClassLoader
 {

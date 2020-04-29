@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\address;
+namespace Voop\vipapis\address;
 require_once dirname(__FILE__).'/AddressService.php';
 class AddressServiceHelper extends _AddressServiceClient{
 	

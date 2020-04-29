@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\bulkbuying\api;
+namespace Voop\vipapis\xstore\cc\bulkbuying\api;
 
 class PurchaseOrder {
 	
@@ -331,7 +331,7 @@ class PurchaseOrder {
 				
 				$needSkip = false;
 				
-				$this->return_address = new \vipapis\xstore\cc\bulkbuying\api\Address();
+				$this->return_address = new \Voop\vipapis\xstore\cc\bulkbuying\api\Address();
 				$this->return_address->read($input);
 				
 			}
@@ -430,7 +430,7 @@ class PurchaseOrder {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -534,7 +534,7 @@ class PurchaseOrder {
 			
 			if (!is_object($this->return_address)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->return_address->write($output);

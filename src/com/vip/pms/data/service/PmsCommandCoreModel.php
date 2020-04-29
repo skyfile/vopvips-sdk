@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class PmsCommandCoreModel {
 	
@@ -450,7 +450,7 @@ class PmsCommandCoreModel {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem1 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem1->read($input);
 						
 						$this->customerLevelList[$_size1++] = $elem1;
@@ -481,7 +481,7 @@ class PmsCommandCoreModel {
 						
 						$elem2 = null;
 						
-						$elem2 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem2 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem2->read($input);
 						
 						$this->saleModelList[$_size2++] = $elem2;
@@ -522,7 +522,7 @@ class PmsCommandCoreModel {
 						
 						$elem3 = null;
 						
-						$elem3 = new \com\vip\pms\data\service\PmsCommandFavModel();
+						$elem3 = new \Voop\com\vip\pms\data\service\PmsCommandFavModel();
 						$elem3->read($input);
 						
 						$this->commandFavList[$_size3++] = $elem3;
@@ -582,7 +582,7 @@ class PmsCommandCoreModel {
 						
 						$elem5 = null;
 						
-						$elem5 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem5 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem5->read($input);
 						
 						$this->customerSrcList[$_size5++] = $elem5;
@@ -633,7 +633,7 @@ class PmsCommandCoreModel {
 						
 						$elem6 = null;
 						
-						$elem6 = new \com\vip\pms\data\service\PmsActAudienceConfigModel();
+						$elem6 = new \Voop\com\vip\pms\data\service\PmsActAudienceConfigModel();
 						$elem6->read($input);
 						
 						$this->audienceConfigList[$_size6++] = $elem6;
@@ -750,7 +750,7 @@ class PmsCommandCoreModel {
 			
 			if (!is_array($this->customerLevelList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -759,7 +759,7 @@ class PmsCommandCoreModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -778,7 +778,7 @@ class PmsCommandCoreModel {
 			
 			if (!is_array($this->saleModelList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -787,7 +787,7 @@ class PmsCommandCoreModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -809,7 +809,7 @@ class PmsCommandCoreModel {
 		
 		if (!is_array($this->commandFavList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -818,7 +818,7 @@ class PmsCommandCoreModel {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -833,7 +833,7 @@ class PmsCommandCoreModel {
 		
 		if (!is_array($this->commandScopeList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -853,7 +853,7 @@ class PmsCommandCoreModel {
 			
 			if (!is_array($this->customerSrcList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -862,7 +862,7 @@ class PmsCommandCoreModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -899,7 +899,7 @@ class PmsCommandCoreModel {
 			
 			if (!is_array($this->audienceConfigList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -908,7 +908,7 @@ class PmsCommandCoreModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

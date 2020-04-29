@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\cup\product;
+namespace Voop\vipapis\cup\product;
 require_once dirname(__FILE__).'/ProductService.php';
 class ProductServiceHelper extends _ProductServiceClient{
 	

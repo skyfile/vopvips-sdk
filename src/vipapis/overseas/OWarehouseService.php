@@ -8,19 +8,19 @@
 *
 */
 
-namespace vipapis\overseas;
+namespace Voop\vipapis\overseas;
 interface OWarehouseServiceIf{
 	
 	
-	public function createBatchRs(\vipapis\overseas\BatchRsInfo $batchRsInfo);
+	public function createBatchRs(\Voop\vipapis\overseas\BatchRsInfo $batchRsInfo);
 	
-	public function createPatch(\vipapis\overseas\BatchInfo $batchInfo);
+	public function createPatch(\Voop\vipapis\overseas\BatchInfo $batchInfo);
 	
 	public function deliverOrderStatus( $warehouse, $order_status_items);
 	
 	public function deliverSaleOrder( $warehouse, $sale_orders);
 	
-	public function get3PLPoList(\vipapis\overseas\Ht3plPoListRequest $request);
+	public function get3PLPoList(\Voop\vipapis\overseas\Ht3plPoListRequest $request);
 	
 	public function getPoBatchList( $warehouse, $start_batch_id, $num, $po_no, $batch_no_list, $vendor_code, $total);
 	
@@ -64,16 +64,16 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	}
 	
 	
-	public function createBatchRs(\vipapis\overseas\BatchRsInfo $batchRsInfo){
+	public function createBatchRs(\Voop\vipapis\overseas\BatchRsInfo $batchRsInfo){
 		
 		$this->send_createBatchRs( $batchRsInfo);
 		return $this->recv_createBatchRs();
 	}
 	
-	public function send_createBatchRs(\vipapis\overseas\BatchRsInfo $batchRsInfo){
+	public function send_createBatchRs(\Voop\vipapis\overseas\BatchRsInfo $batchRsInfo){
 		
 		$this->initInvocation("createBatchRs");
-		$args = new \vipapis\overseas\OWarehouseService_createBatchRs_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_createBatchRs_args();
 		
 		$args->batchRsInfo = $batchRsInfo;
 		
@@ -82,7 +82,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_createBatchRs(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_createBatchRs_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_createBatchRs_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -92,16 +92,16 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	}
 	
 	
-	public function createPatch(\vipapis\overseas\BatchInfo $batchInfo){
+	public function createPatch(\Voop\vipapis\overseas\BatchInfo $batchInfo){
 		
 		$this->send_createPatch( $batchInfo);
 		return $this->recv_createPatch();
 	}
 	
-	public function send_createPatch(\vipapis\overseas\BatchInfo $batchInfo){
+	public function send_createPatch(\Voop\vipapis\overseas\BatchInfo $batchInfo){
 		
 		$this->initInvocation("createPatch");
-		$args = new \vipapis\overseas\OWarehouseService_createPatch_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_createPatch_args();
 		
 		$args->batchInfo = $batchInfo;
 		
@@ -110,7 +110,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_createPatch(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_createPatch_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_createPatch_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -129,7 +129,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_deliverOrderStatus( $warehouse, $order_status_items){
 		
 		$this->initInvocation("deliverOrderStatus");
-		$args = new \vipapis\overseas\OWarehouseService_deliverOrderStatus_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_deliverOrderStatus_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -140,7 +140,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_deliverOrderStatus(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_deliverOrderStatus_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_deliverOrderStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -159,7 +159,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_deliverSaleOrder( $warehouse, $sale_orders){
 		
 		$this->initInvocation("deliverSaleOrder");
-		$args = new \vipapis\overseas\OWarehouseService_deliverSaleOrder_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_deliverSaleOrder_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -170,7 +170,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_deliverSaleOrder(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_deliverSaleOrder_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_deliverSaleOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -180,16 +180,16 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	}
 	
 	
-	public function get3PLPoList(\vipapis\overseas\Ht3plPoListRequest $request){
+	public function get3PLPoList(\Voop\vipapis\overseas\Ht3plPoListRequest $request){
 		
 		$this->send_get3PLPoList( $request);
 		return $this->recv_get3PLPoList();
 	}
 	
-	public function send_get3PLPoList(\vipapis\overseas\Ht3plPoListRequest $request){
+	public function send_get3PLPoList(\Voop\vipapis\overseas\Ht3plPoListRequest $request){
 		
 		$this->initInvocation("get3PLPoList");
-		$args = new \vipapis\overseas\OWarehouseService_get3PLPoList_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_get3PLPoList_args();
 		
 		$args->request = $request;
 		
@@ -198,7 +198,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_get3PLPoList(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_get3PLPoList_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_get3PLPoList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -217,7 +217,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_getPoBatchList( $warehouse, $start_batch_id, $num, $po_no, $batch_no_list, $vendor_code, $total){
 		
 		$this->initInvocation("getPoBatchList");
-		$args = new \vipapis\overseas\OWarehouseService_getPoBatchList_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_getPoBatchList_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -238,7 +238,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_getPoBatchList(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_getPoBatchList_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_getPoBatchList_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -257,7 +257,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_getRdcTransferForms( $warehouse, $num){
 		
 		$this->initInvocation("getRdcTransferForms");
-		$args = new \vipapis\overseas\OWarehouseService_getRdcTransferForms_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_getRdcTransferForms_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -268,7 +268,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_getRdcTransferForms(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_getRdcTransferForms_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_getRdcTransferForms_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -287,7 +287,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_getRdcTransferFormsAck( $warehouse, $rdc_ids){
 		
 		$this->initInvocation("getRdcTransferFormsAck");
-		$args = new \vipapis\overseas\OWarehouseService_getRdcTransferFormsAck_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_getRdcTransferFormsAck_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -298,7 +298,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_getRdcTransferFormsAck(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_getRdcTransferFormsAck_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_getRdcTransferFormsAck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -317,7 +317,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_getReturnOrders( $warehouse, $num){
 		
 		$this->initInvocation("getReturnOrders");
-		$args = new \vipapis\overseas\OWarehouseService_getReturnOrders_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_getReturnOrders_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -328,7 +328,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_getReturnOrders(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_getReturnOrders_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_getReturnOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -347,7 +347,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_getReturnOrdersAck( $warehouse, $transaction_ids){
 		
 		$this->initInvocation("getReturnOrdersAck");
-		$args = new \vipapis\overseas\OWarehouseService_getReturnOrdersAck_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_getReturnOrdersAck_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -358,7 +358,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_getReturnOrdersAck(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_getReturnOrdersAck_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_getReturnOrdersAck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -377,7 +377,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_getSaleOrders( $warehouse, $num){
 		
 		$this->initInvocation("getSaleOrders");
-		$args = new \vipapis\overseas\OWarehouseService_getSaleOrders_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_getSaleOrders_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -388,7 +388,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_getSaleOrders(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_getSaleOrders_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_getSaleOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -407,7 +407,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_getTransferForms( $warehouse, $num){
 		
 		$this->initInvocation("getTransferForms");
-		$args = new \vipapis\overseas\OWarehouseService_getTransferForms_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_getTransferForms_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -418,7 +418,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_getTransferForms(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_getTransferForms_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_getTransferForms_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -437,7 +437,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_getTransferFormsAck( $warehouse, $transaction_ids){
 		
 		$this->initInvocation("getTransferFormsAck");
-		$args = new \vipapis\overseas\OWarehouseService_getTransferFormsAck_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_getTransferFormsAck_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -448,7 +448,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_getTransferFormsAck(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_getTransferFormsAck_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_getTransferFormsAck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -467,14 +467,14 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\overseas\OWarehouseService_healthCheck_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_healthCheck_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -493,7 +493,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_updateCarrierStatus( $warehouse,\vipapis\overseas\CarrierInfoRequest $carrierInfoRequest){
 		
 		$this->initInvocation("updateCarrierStatus");
-		$args = new \vipapis\overseas\OWarehouseService_updateCarrierStatus_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_updateCarrierStatus_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -504,7 +504,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_updateCarrierStatus(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_updateCarrierStatus_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_updateCarrierStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -523,7 +523,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_updatePoBatchStatus( $warehouse, $batch_nos){
 		
 		$this->initInvocation("updatePoBatchStatus");
-		$args = new \vipapis\overseas\OWarehouseService_updatePoBatchStatus_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_updatePoBatchStatus_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -534,7 +534,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_updatePoBatchStatus(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_updatePoBatchStatus_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_updatePoBatchStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -553,7 +553,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_uploadOrderOutInfo( $warehouse,\vipapis\overseas\OrderOutGoodsInfo $order_out_goods_info){
 		
 		$this->initInvocation("uploadOrderOutInfo");
-		$args = new \vipapis\overseas\OWarehouseService_uploadOrderOutInfo_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_uploadOrderOutInfo_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -564,7 +564,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_uploadOrderOutInfo(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_uploadOrderOutInfo_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_uploadOrderOutInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -583,7 +583,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_uploadRdcDeliverDetail( $warehouse, $details){
 		
 		$this->initInvocation("uploadRdcDeliverDetail");
-		$args = new \vipapis\overseas\OWarehouseService_uploadRdcDeliverDetail_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_uploadRdcDeliverDetail_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -594,7 +594,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_uploadRdcDeliverDetail(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_uploadRdcDeliverDetail_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_uploadRdcDeliverDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -613,7 +613,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_uploadReturnOrderStatus( $warehouse, $details){
 		
 		$this->initInvocation("uploadReturnOrderStatus");
-		$args = new \vipapis\overseas\OWarehouseService_uploadReturnOrderStatus_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_uploadReturnOrderStatus_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -624,7 +624,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_uploadReturnOrderStatus(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_uploadReturnOrderStatus_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_uploadReturnOrderStatus_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -643,7 +643,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_uploadReturnOutDetail( $warehouse, $details){
 		
 		$this->initInvocation("uploadReturnOutDetail");
-		$args = new \vipapis\overseas\OWarehouseService_uploadReturnOutDetail_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_uploadReturnOutDetail_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -654,7 +654,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_uploadReturnOutDetail(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_uploadReturnOutDetail_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_uploadReturnOutDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -673,7 +673,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	public function send_uploadTransactionDetail( $warehouse, $details){
 		
 		$this->initInvocation("uploadTransactionDetail");
-		$args = new \vipapis\overseas\OWarehouseService_uploadTransactionDetail_args();
+		$args = new \Voop\vipapis\overseas\OWarehouseService_uploadTransactionDetail_args();
 		
 		$args->warehouse = $warehouse;
 		
@@ -684,7 +684,7 @@ class _OWarehouseServiceClient extends \Osp\Base\OspStub implements \vipapis\ove
 	
 	public function recv_uploadTransactionDetail(){
 		
-		$result = new \vipapis\overseas\OWarehouseService_uploadTransactionDetail_result();
+		$result = new \Voop\vipapis\overseas\OWarehouseService_uploadTransactionDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -739,7 +739,7 @@ class OWarehouseService_createBatchRs_args {
 		if(true) {
 			
 			
-			$this->batchRsInfo = new \vipapis\overseas\BatchRsInfo();
+			$this->batchRsInfo = new \Voop\vipapis\overseas\BatchRsInfo();
 			$this->batchRsInfo->read($input);
 			
 		}
@@ -760,7 +760,7 @@ class OWarehouseService_createBatchRs_args {
 		
 		if (!is_object($this->batchRsInfo)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->batchRsInfo->write($output);
@@ -817,7 +817,7 @@ class OWarehouseService_createPatch_args {
 		if(true) {
 			
 			
-			$this->batchInfo = new \vipapis\overseas\BatchInfo();
+			$this->batchInfo = new \Voop\vipapis\overseas\BatchInfo();
 			$this->batchInfo->read($input);
 			
 		}
@@ -838,7 +838,7 @@ class OWarehouseService_createPatch_args {
 		
 		if (!is_object($this->batchInfo)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->batchInfo->write($output);
@@ -923,7 +923,7 @@ class OWarehouseService_deliverOrderStatus_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\overseas\OrderStatusItem();
+					$elem0 = new \Voop\vipapis\overseas\OrderStatusItem();
 					$elem0->read($input);
 					
 					$this->order_status_items[$_size0++] = $elem0;
@@ -959,7 +959,7 @@ class OWarehouseService_deliverOrderStatus_args {
 		
 		if (!is_array($this->order_status_items)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -968,7 +968,7 @@ class OWarehouseService_deliverOrderStatus_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1057,7 +1057,7 @@ class OWarehouseService_deliverSaleOrder_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\overseas\SaleOrders();
+					$elem1 = new \Voop\vipapis\overseas\SaleOrders();
 					$elem1->read($input);
 					
 					$this->sale_orders[$_size1++] = $elem1;
@@ -1093,7 +1093,7 @@ class OWarehouseService_deliverSaleOrder_args {
 		
 		if (!is_array($this->sale_orders)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1102,7 +1102,7 @@ class OWarehouseService_deliverSaleOrder_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1163,7 +1163,7 @@ class OWarehouseService_get3PLPoList_args {
 		if(true) {
 			
 			
-			$this->request = new \vipapis\overseas\Ht3plPoListRequest();
+			$this->request = new \Voop\vipapis\overseas\Ht3plPoListRequest();
 			$this->request->read($input);
 			
 		}
@@ -1184,7 +1184,7 @@ class OWarehouseService_get3PLPoList_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1427,7 +1427,7 @@ class OWarehouseService_getPoBatchList_args {
 			
 			if (!is_array($this->batch_no_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1667,7 +1667,7 @@ class OWarehouseService_getRdcTransferFormsAck_args {
 		
 		if (!is_array($this->rdc_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1887,7 +1887,7 @@ class OWarehouseService_getReturnOrdersAck_args {
 		
 		if (!is_array($this->transaction_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2201,7 +2201,7 @@ class OWarehouseService_getTransferFormsAck_args {
 		
 		if (!is_array($this->transaction_ids)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2330,7 +2330,7 @@ class OWarehouseService_updateCarrierStatus_args {
 		if(true) {
 			
 			
-			$this->carrierInfoRequest = new \vipapis\overseas\CarrierInfoRequest();
+			$this->carrierInfoRequest = new \Voop\vipapis\overseas\CarrierInfoRequest();
 			$this->carrierInfoRequest->read($input);
 			
 		}
@@ -2356,7 +2356,7 @@ class OWarehouseService_updateCarrierStatus_args {
 		
 		if (!is_object($this->carrierInfoRequest)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->carrierInfoRequest->write($output);
@@ -2475,7 +2475,7 @@ class OWarehouseService_updatePoBatchStatus_args {
 		
 		if (!is_array($this->batch_nos)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2558,7 +2558,7 @@ class OWarehouseService_uploadOrderOutInfo_args {
 		if(true) {
 			
 			
-			$this->order_out_goods_info = new \vipapis\overseas\OrderOutGoodsInfo();
+			$this->order_out_goods_info = new \Voop\vipapis\overseas\OrderOutGoodsInfo();
 			$this->order_out_goods_info->read($input);
 			
 		}
@@ -2584,7 +2584,7 @@ class OWarehouseService_uploadOrderOutInfo_args {
 		
 		if (!is_object($this->order_out_goods_info)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->order_out_goods_info->write($output);
@@ -2669,7 +2669,7 @@ class OWarehouseService_uploadRdcDeliverDetail_args {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\overseas\RdcDeliverDetail();
+					$elem0 = new \Voop\vipapis\overseas\RdcDeliverDetail();
 					$elem0->read($input);
 					
 					$this->details[$_size0++] = $elem0;
@@ -2705,7 +2705,7 @@ class OWarehouseService_uploadRdcDeliverDetail_args {
 		
 		if (!is_array($this->details)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2714,7 +2714,7 @@ class OWarehouseService_uploadRdcDeliverDetail_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2803,7 +2803,7 @@ class OWarehouseService_uploadReturnOrderStatus_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\overseas\ReturnOrderStatus();
+					$elem1 = new \Voop\vipapis\overseas\ReturnOrderStatus();
 					$elem1->read($input);
 					
 					$this->details[$_size1++] = $elem1;
@@ -2839,7 +2839,7 @@ class OWarehouseService_uploadReturnOrderStatus_args {
 		
 		if (!is_array($this->details)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2848,7 +2848,7 @@ class OWarehouseService_uploadReturnOrderStatus_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2937,7 +2937,7 @@ class OWarehouseService_uploadReturnOutDetail_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\overseas\ReturnOutInfo();
+					$elem1 = new \Voop\vipapis\overseas\ReturnOutInfo();
 					$elem1->read($input);
 					
 					$this->details[$_size1++] = $elem1;
@@ -2973,7 +2973,7 @@ class OWarehouseService_uploadReturnOutDetail_args {
 		
 		if (!is_array($this->details)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2982,7 +2982,7 @@ class OWarehouseService_uploadReturnOutDetail_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3071,7 +3071,7 @@ class OWarehouseService_uploadTransactionDetail_args {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\overseas\Transaction();
+					$elem1 = new \Voop\vipapis\overseas\Transaction();
 					$elem1->read($input);
 					
 					$this->details[$_size1++] = $elem1;
@@ -3107,7 +3107,7 @@ class OWarehouseService_uploadTransactionDetail_args {
 		
 		if (!is_array($this->details)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3116,7 +3116,7 @@ class OWarehouseService_uploadTransactionDetail_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3177,7 +3177,7 @@ class OWarehouseService_createBatchRs_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\overseas\CreateBatchRsResponse();
+			$this->success = new \Voop\vipapis\overseas\CreateBatchRsResponse();
 			$this->success->read($input);
 			
 		}
@@ -3200,7 +3200,7 @@ class OWarehouseService_createBatchRs_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3259,7 +3259,7 @@ class OWarehouseService_createPatch_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\overseas\CreateBatchResponse();
+			$this->success = new \Voop\vipapis\overseas\CreateBatchResponse();
 			$this->success->read($input);
 			
 		}
@@ -3282,7 +3282,7 @@ class OWarehouseService_createPatch_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3381,7 +3381,7 @@ class OWarehouseService_deliverOrderStatus_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3487,7 +3487,7 @@ class OWarehouseService_deliverSaleOrder_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3553,7 +3553,7 @@ class OWarehouseService_get3PLPoList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\overseas\Ht3plPoListResponse();
+			$this->success = new \Voop\vipapis\overseas\Ht3plPoListResponse();
 			$this->success->read($input);
 			
 		}
@@ -3576,7 +3576,7 @@ class OWarehouseService_get3PLPoList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3635,7 +3635,7 @@ class OWarehouseService_getPoBatchList_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\overseas\GetPurchaseOrderBatchListResponse();
+			$this->success = new \Voop\vipapis\overseas\GetPurchaseOrderBatchListResponse();
 			$this->success->read($input);
 			
 		}
@@ -3658,7 +3658,7 @@ class OWarehouseService_getPoBatchList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3726,7 +3726,7 @@ class OWarehouseService_getRdcTransferForms_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\overseas\RdcTransferForm();
+					$elem0 = new \Voop\vipapis\overseas\RdcTransferForm();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -3759,7 +3759,7 @@ class OWarehouseService_getRdcTransferForms_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3768,7 +3768,7 @@ class OWarehouseService_getRdcTransferForms_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3871,7 +3871,7 @@ class OWarehouseService_getRdcTransferFormsAck_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3946,7 +3946,7 @@ class OWarehouseService_getReturnOrders_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \vipapis\overseas\ReturnOrder();
+					$elem1 = new \Voop\vipapis\overseas\ReturnOrder();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -3979,7 +3979,7 @@ class OWarehouseService_getReturnOrders_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3988,7 +3988,7 @@ class OWarehouseService_getReturnOrders_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4091,7 +4091,7 @@ class OWarehouseService_getReturnOrdersAck_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4157,7 +4157,7 @@ class OWarehouseService_getSaleOrders_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\overseas\SaleOrderResult();
+			$this->success = new \Voop\vipapis\overseas\SaleOrderResult();
 			$this->success->read($input);
 			
 		}
@@ -4180,7 +4180,7 @@ class OWarehouseService_getSaleOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4248,7 +4248,7 @@ class OWarehouseService_getTransferForms_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\overseas\TransferForm();
+					$elem0 = new \Voop\vipapis\overseas\TransferForm();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -4281,7 +4281,7 @@ class OWarehouseService_getTransferForms_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4290,7 +4290,7 @@ class OWarehouseService_getTransferForms_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4393,7 +4393,7 @@ class OWarehouseService_getTransferFormsAck_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4459,7 +4459,7 @@ class OWarehouseService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -4482,7 +4482,7 @@ class OWarehouseService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4550,7 +4550,7 @@ class OWarehouseService_updateCarrierStatus_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \vipapis\overseas\ResultTuple();
+					$elem0 = new \Voop\vipapis\overseas\ResultTuple();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -4583,7 +4583,7 @@ class OWarehouseService_updateCarrierStatus_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4592,7 +4592,7 @@ class OWarehouseService_updateCarrierStatus_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4769,7 +4769,7 @@ class OWarehouseService_uploadOrderOutInfo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4875,7 +4875,7 @@ class OWarehouseService_uploadRdcDeliverDetail_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4981,7 +4981,7 @@ class OWarehouseService_uploadReturnOrderStatus_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5087,7 +5087,7 @@ class OWarehouseService_uploadReturnOutDetail_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5193,7 +5193,7 @@ class OWarehouseService_uploadTransactionDetail_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\activity;
+namespace Voop\vipapis\activity;
 require_once dirname(__FILE__).'/ActivityService.php';
 class ActivityServiceHelper extends _ActivityServiceClient{
 	

@@ -1,6 +1,6 @@
 <?php
 
-namespace Osp\Base;
+namespace Voop\Osp\Base;
 
 //use Thrift\Transport\TFramedTransport;
 //use Thrift\Type\TMessageType;
@@ -98,7 +98,7 @@ class OspStub {
 	 * @return multitype:number string
 	 */
 	public function getCallURLInfo($restAddr){
-		if(!$restAddr) throw new \Osp\Exception\OspException("The openapi appURL is null, please set the appURL value");
+		if(!$restAddr) throw new \Voop\Osp\Exception\OspException("The openapi appURL is null, please set the appURL value");
 		$url = parse_url($restAddr);
 		//无指定协议，默认为http协议
 		if(empty($url["scheme"])){
@@ -118,7 +118,7 @@ class OspStub {
 	 */
 	public function send_base($args) {
 		$ctx = InvocationContextFactory::getInstance ();
-		$oprot = new \Osp\Protocol\JSONProtocol(new \Osp\Buffer\MemoryBuffer());
+		$oprot = new \Voop\Osp\Protocol\JSONProtocol(new \Voop\Osp\Buffer\MemoryBuffer());
 		$args->write ( $oprot );
 		
 		$requestBuffer = $oprot->getTransport()->getBuffer();
@@ -127,21 +127,21 @@ class OspStub {
     $scheme = isset($url["scheme"]) ? $url["scheme"] : null;
 		$host = isset($url["host"]) ? $url["host"] : null;
 		$port = isset($url["port"]) ? $url["port"] : null;
-		$client = new \Osp\Http\HttpClient($scheme, $host, $port);
+		$client = new \Voop\Osp\Http\HttpClient($scheme, $host, $port);
 		$request = array();
 		
 		$appKey = $ctx->getAppKey();
-		if($appKey == null) throw new \Osp\Exception\OspException("The openapi appKey is null, please set the appKey value");
+		if($appKey == null) throw new \Voop\Osp\Exception\OspException("The openapi appKey is null, please set the appKey value");
 		
 		$appSecret = $ctx->getAppSecret();
-		if($appSecret == null) throw new \Osp\Exception\OspException("The openapi appSecret is null, please set the appSecret value");
+		if($appSecret == null) throw new \Voop\Osp\Exception\OspException("The openapi appSecret is null, please set the appSecret value");
 		
 		$accessToken = $ctx->getAccessToken();
 		$language = $ctx->getLanguage();
 		$format = "JSON"; 
 		$method = $ctx->getMethod();
 		$service = $ctx->getServiceName();
-		$timestamp = round(\Osp\Util\TimeUtil::currentTimeMillis()/1000);
+		$timestamp = round(\Voop\Osp\Util\TimeUtil::currentTimeMillis()/1000);
 		$version = $ctx->getCallerVersion();
 		$sign = $this->createRequestSign($accessToken, $appKey, $format, $language, $method, $service, $timestamp, $version, $requestBuffer, $appSecret);
 		$ctx->setSign($sign);
@@ -163,7 +163,7 @@ class OspStub {
 		try {
 			$result = $client->post($url["path"].'?'.$this->getQueryString($request), $requestBuffer);
 		} catch (Exception $e) {
-			throw new \Osp\Exception\OspException(\Osp\Util\MessageUtil::getInvocationMsg($ctx, $e->getMessage()) , $e);
+			throw new \Voop\Osp\Exception\OspException(\Voop\Osp\Util\MessageUtil::getInvocationMsg($ctx, $e->getMessage()) , $e);
 		}
 		
 		
@@ -182,8 +182,8 @@ class OspStub {
 		
 		$response = $ctx->getResponse();
 		
-		if(\Osp\Base\OspStub::$RETURN_NULL != $response){
-			$iprot = new \Osp\Protocol\JSONProtocol(new \Osp\Buffer\MemoryBuffer());
+		if(\Voop\Osp\Base\OspStub::$RETURN_NULL != $response){
+			$iprot = new \Voop\Osp\Protocol\JSONProtocol(new \Voop\Osp\Buffer\MemoryBuffer());
 			$iprot->getTransport()->write($response);
 			
 			$iprot->readStructBegin();
@@ -197,7 +197,7 @@ class OspStub {
 				$iprot->readFieldBegin();
 				$returnMessage = null;
 				$iprot->readString($returnMessage);
-				throw new \Osp\Exception\OspException($returnMessage, $returnCode);
+				throw new \Voop\Osp\Exception\OspException($returnMessage, $returnCode);
 			}
 			
 			$iprot->readFieldEnd();

@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\ordererp\api;
+namespace Voop\vipapis\xstore\cc\ordererp\api;
 require_once dirname(__FILE__).'/OfcErpService.php';
 class OfcErpServiceHelper extends _OfcErpServiceClient{
 	

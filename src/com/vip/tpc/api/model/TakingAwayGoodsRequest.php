@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\tpc\api\model;
+namespace Voop\com\vip\tpc\api\model;
 
 class TakingAwayGoodsRequest {
 	
@@ -270,7 +270,7 @@ class TakingAwayGoodsRequest {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\tpc\service\GoodsPack();
+						$elem0 = new \Voop\vipapis\tpc\service\GoodsPack();
 						$elem0->read($input);
 						
 						$this->packs[$_size0++] = $elem0;
@@ -390,7 +390,7 @@ class TakingAwayGoodsRequest {
 			
 			if (!is_array($this->packs)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -399,7 +399,7 @@ class TakingAwayGoodsRequest {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

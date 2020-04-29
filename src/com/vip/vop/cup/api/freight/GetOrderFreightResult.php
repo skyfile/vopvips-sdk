@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\freight;
+namespace Voop\com\vip\vop\cup\api\freight;
 
 class GetOrderFreightResult {
 	
@@ -110,7 +110,7 @@ class GetOrderFreightResult {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\vop\cup\api\freight\FreightInfo();
+						$elem0 = new \Voop\com\vip\vop\cup\api\freight\FreightInfo();
 						$elem0->read($input);
 						
 						$this->freight_info_list[$_size0++] = $elem0;
@@ -170,7 +170,7 @@ class GetOrderFreightResult {
 			
 			if (!is_array($this->freight_info_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -179,7 +179,7 @@ class GetOrderFreightResult {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\venus\closePo\service;
+namespace Voop\com\vip\venus\closePo\service;
 require_once dirname(__FILE__).'/PoServiceShutDown.php';
 class PoServiceShutDownHelper extends _PoServiceShutDownClient{
 	

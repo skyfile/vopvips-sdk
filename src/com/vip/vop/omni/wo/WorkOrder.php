@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\omni\wo;
+namespace Voop\com\vip\vop\omni\wo;
 
 class WorkOrder {
 	

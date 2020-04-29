@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\api\ubc\facade\bankcard;
+namespace Voop\com\vip\api\ubc\facade\bankcard;
 require_once dirname(__FILE__).'/BankFileFacade.php';
 class BankFileFacadeHelper extends _BankFileFacadeClient{
 	

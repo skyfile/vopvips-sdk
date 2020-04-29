@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\xstore\cc\ordererp\api\request;
+namespace Voop\vipapis\xstore\cc\ordererp\api\request;
 
 class AddInfErpOrderInfoReq {
 	
@@ -70,7 +70,7 @@ class AddInfErpOrderInfoReq {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\xstore\order\common\pojo\vo\InfErpOrderInfoVO();
+						$elem0 = new \Voop\com\vip\xstore\order\common\pojo\vo\InfErpOrderInfoVO();
 						$elem0->read($input);
 						
 						$this->erpOrderList[$_size0++] = $elem0;
@@ -89,7 +89,7 @@ class AddInfErpOrderInfoReq {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -112,7 +112,7 @@ class AddInfErpOrderInfoReq {
 			
 			if (!is_array($this->erpOrderList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -121,7 +121,7 @@ class AddInfErpOrderInfoReq {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

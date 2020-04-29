@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\order\ofc\api\response;
+namespace Voop\com\vip\xstore\order\ofc\api\response;
 
 class GetShouldResendEbsDataResp {
 	
@@ -81,7 +81,7 @@ class GetShouldResendEbsDataResp {
 				
 				$needSkip = false;
 				
-				$this->result = new \com\vip\xstore\order\common\pojo\vo\Result();
+				$this->result = new \Voop\com\vip\xstore\order\common\pojo\vo\Result();
 				$this->result->read($input);
 				
 			}
@@ -102,7 +102,7 @@ class GetShouldResendEbsDataResp {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\xstore\order\common\pojo\vo\OfcEbsOrderVO();
+						$elem1 = new \Voop\com\vip\xstore\order\common\pojo\vo\OfcEbsOrderVO();
 						$elem1->read($input);
 						
 						$this->ofcEbsOrder[$_size1++] = $elem1;
@@ -133,7 +133,7 @@ class GetShouldResendEbsDataResp {
 						
 						$elem2 = null;
 						
-						$elem2 = new \com\vip\xstore\order\common\pojo\vo\OfcEbsOrderReturnVO();
+						$elem2 = new \Voop\com\vip\xstore\order\common\pojo\vo\OfcEbsOrderReturnVO();
 						$elem2->read($input);
 						
 						$this->ofcEbsOrderReturn[$_size2++] = $elem2;
@@ -175,7 +175,7 @@ class GetShouldResendEbsDataResp {
 			
 			if (!is_object($this->result)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->result->write($output);
@@ -190,7 +190,7 @@ class GetShouldResendEbsDataResp {
 			
 			if (!is_array($this->ofcEbsOrder)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -199,7 +199,7 @@ class GetShouldResendEbsDataResp {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -218,7 +218,7 @@ class GetShouldResendEbsDataResp {
 			
 			if (!is_array($this->ofcEbsOrderReturn)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -227,7 +227,7 @@ class GetShouldResendEbsDataResp {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

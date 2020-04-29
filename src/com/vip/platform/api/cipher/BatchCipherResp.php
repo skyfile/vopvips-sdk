@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\platform\api\cipher;
+namespace Voop\com\vip\platform\api\cipher;
 
 class BatchCipherResp {
 	
@@ -72,7 +72,7 @@ class BatchCipherResp {
 						
 						$val0 = null;
 						
-						$val0 = new \com\vip\platform\api\cipher\CipherResult();
+						$val0 = new \Voop\com\vip\platform\api\cipher\CipherResult();
 						$val0->read($input);
 						
 						$this->resultMap[$key0] = $val0;
@@ -114,7 +114,7 @@ class BatchCipherResp {
 			
 			if (!is_array($this->resultMap)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -125,7 +125,7 @@ class BatchCipherResp {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

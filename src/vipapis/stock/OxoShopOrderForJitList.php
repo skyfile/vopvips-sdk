@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\stock;
+namespace Voop\vipapis\stock;
 
 class OxoShopOrderForJitList {
 	
@@ -90,7 +90,7 @@ class OxoShopOrderForJitList {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\stock\OxoOrderGoodsJitList();
+						$elem0 = new \Voop\vipapis\stock\OxoOrderGoodsJitList();
 						$elem0->read($input);
 						
 						$this->oxo_order_goods_jit_list[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class OxoShopOrderForJitList {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -141,7 +141,7 @@ class OxoShopOrderForJitList {
 			
 			if (!is_array($this->oxo_order_goods_jit_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -150,7 +150,7 @@ class OxoShopOrderForJitList {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

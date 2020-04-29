@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\svip\osp\service;
+namespace Voop\com\vip\svip\osp\service;
 
 class GetSvipGoodsDetailResult {
 	
@@ -70,7 +70,7 @@ class GetSvipGoodsDetailResult {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\svip\osp\service\SvipGoodsDetailItem();
+						$elem0 = new \Voop\com\vip\svip\osp\service\SvipGoodsDetailItem();
 						$elem0->read($input);
 						
 						$this->goodsList[$_size0++] = $elem0;
@@ -112,7 +112,7 @@ class GetSvipGoodsDetailResult {
 			
 			if (!is_array($this->goodsList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -121,7 +121,7 @@ class GetSvipGoodsDetailResult {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

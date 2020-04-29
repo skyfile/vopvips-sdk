@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\fcs\vei\service;
+namespace Voop\com\vip\fcs\vei\service;
 
 class ExternalInvoiceHandleStateResModel {
 	
@@ -80,7 +80,7 @@ class ExternalInvoiceHandleStateResModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\fcs\vei\service\ExternalInvoiceHandleState();
+						$elem0 = new \Voop\com\vip\fcs\vei\service\ExternalInvoiceHandleState();
 						$elem0->read($input);
 						
 						$this->externalInvoiceHandleStateList[$_size0++] = $elem0;
@@ -102,7 +102,7 @@ class ExternalInvoiceHandleStateResModel {
 				
 				$needSkip = false;
 				
-				$this->retMsg = new \com\vip\fcs\vei\service\BaseRetMsg();
+				$this->retMsg = new \Voop\com\vip\fcs\vei\service\BaseRetMsg();
 				$this->retMsg->read($input);
 				
 			}
@@ -134,7 +134,7 @@ class ExternalInvoiceHandleStateResModel {
 			
 			if (!is_array($this->externalInvoiceHandleStateList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -143,7 +143,7 @@ class ExternalInvoiceHandleStateResModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -160,7 +160,7 @@ class ExternalInvoiceHandleStateResModel {
 		
 		if (!is_object($this->retMsg)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->retMsg->write($output);

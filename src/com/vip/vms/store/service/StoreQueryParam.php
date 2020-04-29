@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vms\store\service;
+namespace Voop\com\vip\vms\store\service;
 
 class StoreQueryParam {
 	
@@ -171,7 +171,7 @@ class StoreQueryParam {
 				
 				$needSkip = false;
 				
-				$this->pager = new \com\vip\vms\common\Pager();
+				$this->pager = new \Voop\com\vip\vms\common\Pager();
 				$this->pager->read($input);
 				
 			}
@@ -269,7 +269,7 @@ class StoreQueryParam {
 			
 			if (!is_object($this->pager)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pager->write($output);

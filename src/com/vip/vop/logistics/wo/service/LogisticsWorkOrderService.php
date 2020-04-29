@@ -8,19 +8,19 @@
 *
 */
 
-namespace com\vip\vop\logistics\wo\service;
+namespace Voop\com\vip\vop\logistics\wo\service;
 interface LogisticsWorkOrderServiceIf{
 	
 	
-	public function createWorkOrder(\com\vip\vop\logistics\wo\CreateWorkOrderReq $createWorkOrderReq);
+	public function createWorkOrder(\Voop\com\vip\vop\logistics\wo\CreateWorkOrderReq $createWorkOrderReq);
 	
-	public function getWorkOrders(\com\vip\vop\logistics\wo\WorkOrderQueryReq $workOrderQueryReq);
+	public function getWorkOrders(\Voop\com\vip\vop\logistics\wo\WorkOrderQueryReq $workOrderQueryReq);
 	
 	public function healthCheck();
 	
-	public function replyProcessResult(\com\vip\vop\logistics\wo\WorkOrderProcessResult $processResult);
+	public function replyProcessResult(\Voop\com\vip\vop\logistics\wo\WorkOrderProcessResult $processResult);
 	
-	public function replyRecheckResult(\com\vip\vop\logistics\wo\WorkOrderRecheckResult $rechekResult);
+	public function replyRecheckResult(\Voop\com\vip\vop\logistics\wo\WorkOrderRecheckResult $rechekResult);
 	
 }
 
@@ -32,16 +32,16 @@ class _LogisticsWorkOrderServiceClient extends \Osp\Base\OspStub implements \com
 	}
 	
 	
-	public function createWorkOrder(\com\vip\vop\logistics\wo\CreateWorkOrderReq $createWorkOrderReq){
+	public function createWorkOrder(\Voop\com\vip\vop\logistics\wo\CreateWorkOrderReq $createWorkOrderReq){
 		
 		$this->send_createWorkOrder( $createWorkOrderReq);
 		return $this->recv_createWorkOrder();
 	}
 	
-	public function send_createWorkOrder(\com\vip\vop\logistics\wo\CreateWorkOrderReq $createWorkOrderReq){
+	public function send_createWorkOrder(\Voop\com\vip\vop\logistics\wo\CreateWorkOrderReq $createWorkOrderReq){
 		
 		$this->initInvocation("createWorkOrder");
-		$args = new \com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_createWorkOrder_args();
+		$args = new \Voop\com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_createWorkOrder_args();
 		
 		$args->createWorkOrderReq = $createWorkOrderReq;
 		
@@ -50,7 +50,7 @@ class _LogisticsWorkOrderServiceClient extends \Osp\Base\OspStub implements \com
 	
 	public function recv_createWorkOrder(){
 		
-		$result = new \com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_createWorkOrder_result();
+		$result = new \Voop\com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_createWorkOrder_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -60,16 +60,16 @@ class _LogisticsWorkOrderServiceClient extends \Osp\Base\OspStub implements \com
 	}
 	
 	
-	public function getWorkOrders(\com\vip\vop\logistics\wo\WorkOrderQueryReq $workOrderQueryReq){
+	public function getWorkOrders(\Voop\com\vip\vop\logistics\wo\WorkOrderQueryReq $workOrderQueryReq){
 		
 		$this->send_getWorkOrders( $workOrderQueryReq);
 		return $this->recv_getWorkOrders();
 	}
 	
-	public function send_getWorkOrders(\com\vip\vop\logistics\wo\WorkOrderQueryReq $workOrderQueryReq){
+	public function send_getWorkOrders(\Voop\com\vip\vop\logistics\wo\WorkOrderQueryReq $workOrderQueryReq){
 		
 		$this->initInvocation("getWorkOrders");
-		$args = new \com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_getWorkOrders_args();
+		$args = new \Voop\com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_getWorkOrders_args();
 		
 		$args->workOrderQueryReq = $workOrderQueryReq;
 		
@@ -78,7 +78,7 @@ class _LogisticsWorkOrderServiceClient extends \Osp\Base\OspStub implements \com
 	
 	public function recv_getWorkOrders(){
 		
-		$result = new \com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_getWorkOrders_result();
+		$result = new \Voop\com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_getWorkOrders_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -97,14 +97,14 @@ class _LogisticsWorkOrderServiceClient extends \Osp\Base\OspStub implements \com
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_healthCheck_args();
+		$args = new \Voop\com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_healthCheck_result();
+		$result = new \Voop\com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -114,16 +114,16 @@ class _LogisticsWorkOrderServiceClient extends \Osp\Base\OspStub implements \com
 	}
 	
 	
-	public function replyProcessResult(\com\vip\vop\logistics\wo\WorkOrderProcessResult $processResult){
+	public function replyProcessResult(\Voop\com\vip\vop\logistics\wo\WorkOrderProcessResult $processResult){
 		
 		$this->send_replyProcessResult( $processResult);
 		return $this->recv_replyProcessResult();
 	}
 	
-	public function send_replyProcessResult(\com\vip\vop\logistics\wo\WorkOrderProcessResult $processResult){
+	public function send_replyProcessResult(\Voop\com\vip\vop\logistics\wo\WorkOrderProcessResult $processResult){
 		
 		$this->initInvocation("replyProcessResult");
-		$args = new \com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_replyProcessResult_args();
+		$args = new \Voop\com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_replyProcessResult_args();
 		
 		$args->processResult = $processResult;
 		
@@ -132,22 +132,22 @@ class _LogisticsWorkOrderServiceClient extends \Osp\Base\OspStub implements \com
 	
 	public function recv_replyProcessResult(){
 		
-		$result = new \com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_replyProcessResult_result();
+		$result = new \Voop\com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_replyProcessResult_result();
 		$this->receive_base($result);
 		
 	}
 	
 	
-	public function replyRecheckResult(\com\vip\vop\logistics\wo\WorkOrderRecheckResult $rechekResult){
+	public function replyRecheckResult(\Voop\com\vip\vop\logistics\wo\WorkOrderRecheckResult $rechekResult){
 		
 		$this->send_replyRecheckResult( $rechekResult);
 		return $this->recv_replyRecheckResult();
 	}
 	
-	public function send_replyRecheckResult(\com\vip\vop\logistics\wo\WorkOrderRecheckResult $rechekResult){
+	public function send_replyRecheckResult(\Voop\com\vip\vop\logistics\wo\WorkOrderRecheckResult $rechekResult){
 		
 		$this->initInvocation("replyRecheckResult");
-		$args = new \com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_replyRecheckResult_args();
+		$args = new \Voop\com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_replyRecheckResult_args();
 		
 		$args->rechekResult = $rechekResult;
 		
@@ -156,7 +156,7 @@ class _LogisticsWorkOrderServiceClient extends \Osp\Base\OspStub implements \com
 	
 	public function recv_replyRecheckResult(){
 		
-		$result = new \com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_replyRecheckResult_result();
+		$result = new \Voop\com\vip\vop\logistics\wo\service\LogisticsWorkOrderService_replyRecheckResult_result();
 		$this->receive_base($result);
 		
 	}
@@ -207,7 +207,7 @@ class LogisticsWorkOrderService_createWorkOrder_args {
 		if(true) {
 			
 			
-			$this->createWorkOrderReq = new \com\vip\vop\logistics\wo\CreateWorkOrderReq();
+			$this->createWorkOrderReq = new \Voop\com\vip\vop\logistics\wo\CreateWorkOrderReq();
 			$this->createWorkOrderReq->read($input);
 			
 		}
@@ -228,7 +228,7 @@ class LogisticsWorkOrderService_createWorkOrder_args {
 		
 		if (!is_object($this->createWorkOrderReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->createWorkOrderReq->write($output);
@@ -285,7 +285,7 @@ class LogisticsWorkOrderService_getWorkOrders_args {
 		if(true) {
 			
 			
-			$this->workOrderQueryReq = new \com\vip\vop\logistics\wo\WorkOrderQueryReq();
+			$this->workOrderQueryReq = new \Voop\com\vip\vop\logistics\wo\WorkOrderQueryReq();
 			$this->workOrderQueryReq->read($input);
 			
 		}
@@ -306,7 +306,7 @@ class LogisticsWorkOrderService_getWorkOrders_args {
 		
 		if (!is_object($this->workOrderQueryReq)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->workOrderQueryReq->write($output);
@@ -409,7 +409,7 @@ class LogisticsWorkOrderService_replyProcessResult_args {
 		if(true) {
 			
 			
-			$this->processResult = new \com\vip\vop\logistics\wo\WorkOrderProcessResult();
+			$this->processResult = new \Voop\com\vip\vop\logistics\wo\WorkOrderProcessResult();
 			$this->processResult->read($input);
 			
 		}
@@ -430,7 +430,7 @@ class LogisticsWorkOrderService_replyProcessResult_args {
 		
 		if (!is_object($this->processResult)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->processResult->write($output);
@@ -487,7 +487,7 @@ class LogisticsWorkOrderService_replyRecheckResult_args {
 		if(true) {
 			
 			
-			$this->rechekResult = new \com\vip\vop\logistics\wo\WorkOrderRecheckResult();
+			$this->rechekResult = new \Voop\com\vip\vop\logistics\wo\WorkOrderRecheckResult();
 			$this->rechekResult->read($input);
 			
 		}
@@ -508,7 +508,7 @@ class LogisticsWorkOrderService_replyRecheckResult_args {
 		
 		if (!is_object($this->rechekResult)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->rechekResult->write($output);
@@ -565,7 +565,7 @@ class LogisticsWorkOrderService_createWorkOrder_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\vop\logistics\wo\CreateWorkOrderResp();
+			$this->success = new \Voop\com\vip\vop\logistics\wo\CreateWorkOrderResp();
 			$this->success->read($input);
 			
 		}
@@ -588,7 +588,7 @@ class LogisticsWorkOrderService_createWorkOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -656,7 +656,7 @@ class LogisticsWorkOrderService_getWorkOrders_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\vop\logistics\wo\WorkOrder();
+					$elem0 = new \Voop\com\vip\vop\logistics\wo\WorkOrder();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -689,7 +689,7 @@ class LogisticsWorkOrderService_getWorkOrders_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -698,7 +698,7 @@ class LogisticsWorkOrderService_getWorkOrders_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -761,7 +761,7 @@ class LogisticsWorkOrderService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -784,7 +784,7 @@ class LogisticsWorkOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

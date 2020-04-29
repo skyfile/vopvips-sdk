@@ -19,7 +19,7 @@
  *
  */
 
-namespace Osp\StringFunc;
+namespace Voop\Osp\StringFunc;
 
 interface StringFunc {
     public function substr($str, $start, $length = null);

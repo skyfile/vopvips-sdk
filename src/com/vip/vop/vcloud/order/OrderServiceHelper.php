@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\vcloud\order;
+namespace Voop\com\vip\vop\vcloud\order;
 require_once dirname(__FILE__).'/OrderService.php';
 class OrderServiceHelper extends _OrderServiceClient{
 	

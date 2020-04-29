@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\delivery;
+namespace Voop\vipapis\delivery;
 
 class GetRestockStorageInfoResponse {
 	
@@ -90,7 +90,7 @@ class GetRestockStorageInfoResponse {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\delivery\RestockStorageInfo();
+						$elem0 = new \Voop\vipapis\delivery\RestockStorageInfo();
 						$elem0->read($input);
 						
 						$this->restock_storage_list[$_size0++] = $elem0;
@@ -109,7 +109,7 @@ class GetRestockStorageInfoResponse {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -141,7 +141,7 @@ class GetRestockStorageInfoResponse {
 			
 			if (!is_array($this->restock_storage_list)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -150,7 +150,7 @@ class GetRestockStorageInfoResponse {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

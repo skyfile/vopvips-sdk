@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\order;
+namespace Voop\vipapis\order;
 
 class OrderInvoiceReq {
 	
@@ -120,7 +120,7 @@ class OrderInvoiceReq {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\order\Einvoice();
+						$elem0 = new \Voop\vipapis\order\Einvoice();
 						$elem0->read($input);
 						
 						$this->e_invoice[$_size0++] = $elem0;
@@ -142,7 +142,7 @@ class OrderInvoiceReq {
 				
 				$needSkip = false;
 				
-				$this->paper_invoice = new \vipapis\order\PaperInvoice();
+				$this->paper_invoice = new \Voop\vipapis\order\PaperInvoice();
 				$this->paper_invoice->read($input);
 				
 			}
@@ -151,7 +151,7 @@ class OrderInvoiceReq {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -184,7 +184,7 @@ class OrderInvoiceReq {
 			
 			if (!is_array($this->e_invoice)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -193,7 +193,7 @@ class OrderInvoiceReq {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -212,7 +212,7 @@ class OrderInvoiceReq {
 			
 			if (!is_object($this->paper_invoice)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->paper_invoice->write($output);

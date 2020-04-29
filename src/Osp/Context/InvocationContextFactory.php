@@ -1,6 +1,6 @@
 <?php
 
-namespace Osp\Context;
+namespace Voop\Osp\Context;
 
 /**
  * 获取调用上下文环境工厂类

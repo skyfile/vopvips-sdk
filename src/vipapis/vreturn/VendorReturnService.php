@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\vreturn;
+namespace Voop\vipapis\vreturn;
 interface VendorReturnServiceIf{
 	
 	
@@ -16,7 +16,7 @@ interface VendorReturnServiceIf{
 	
 	public function getReturnInfo( $vendor_id, $warehouse, $return_sn, $st_create_time, $ed_create_time, $page, $limit);
 	
-	public function getReturnItem(\vipapis\vreturn\GetReturnItemRequest $req);
+	public function getReturnItem(\Voop\vipapis\vreturn\GetReturnItemRequest $req);
 	
 	public function healthCheck();
 	
@@ -39,7 +39,7 @@ class _VendorReturnServiceClient extends \Osp\Base\OspStub implements \vipapis\v
 	public function send_getReturnDetail( $vendor_id, $warehouse, $return_sn, $out_time_start, $out_time_end, $page, $limit){
 		
 		$this->initInvocation("getReturnDetail");
-		$args = new \vipapis\vreturn\VendorReturnService_getReturnDetail_args();
+		$args = new \Voop\vipapis\vreturn\VendorReturnService_getReturnDetail_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -60,7 +60,7 @@ class _VendorReturnServiceClient extends \Osp\Base\OspStub implements \vipapis\v
 	
 	public function recv_getReturnDetail(){
 		
-		$result = new \vipapis\vreturn\VendorReturnService_getReturnDetail_result();
+		$result = new \Voop\vipapis\vreturn\VendorReturnService_getReturnDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -79,7 +79,7 @@ class _VendorReturnServiceClient extends \Osp\Base\OspStub implements \vipapis\v
 	public function send_getReturnInfo( $vendor_id, $warehouse, $return_sn, $st_create_time, $ed_create_time, $page, $limit){
 		
 		$this->initInvocation("getReturnInfo");
-		$args = new \vipapis\vreturn\VendorReturnService_getReturnInfo_args();
+		$args = new \Voop\vipapis\vreturn\VendorReturnService_getReturnInfo_args();
 		
 		$args->vendor_id = $vendor_id;
 		
@@ -100,7 +100,7 @@ class _VendorReturnServiceClient extends \Osp\Base\OspStub implements \vipapis\v
 	
 	public function recv_getReturnInfo(){
 		
-		$result = new \vipapis\vreturn\VendorReturnService_getReturnInfo_result();
+		$result = new \Voop\vipapis\vreturn\VendorReturnService_getReturnInfo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -110,16 +110,16 @@ class _VendorReturnServiceClient extends \Osp\Base\OspStub implements \vipapis\v
 	}
 	
 	
-	public function getReturnItem(\vipapis\vreturn\GetReturnItemRequest $req){
+	public function getReturnItem(\Voop\vipapis\vreturn\GetReturnItemRequest $req){
 		
 		$this->send_getReturnItem( $req);
 		return $this->recv_getReturnItem();
 	}
 	
-	public function send_getReturnItem(\vipapis\vreturn\GetReturnItemRequest $req){
+	public function send_getReturnItem(\Voop\vipapis\vreturn\GetReturnItemRequest $req){
 		
 		$this->initInvocation("getReturnItem");
-		$args = new \vipapis\vreturn\VendorReturnService_getReturnItem_args();
+		$args = new \Voop\vipapis\vreturn\VendorReturnService_getReturnItem_args();
 		
 		$args->req = $req;
 		
@@ -128,7 +128,7 @@ class _VendorReturnServiceClient extends \Osp\Base\OspStub implements \vipapis\v
 	
 	public function recv_getReturnItem(){
 		
-		$result = new \vipapis\vreturn\VendorReturnService_getReturnItem_result();
+		$result = new \Voop\vipapis\vreturn\VendorReturnService_getReturnItem_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -147,14 +147,14 @@ class _VendorReturnServiceClient extends \Osp\Base\OspStub implements \vipapis\v
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\vreturn\VendorReturnService_healthCheck_args();
+		$args = new \Voop\vipapis\vreturn\VendorReturnService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\vreturn\VendorReturnService_healthCheck_result();
+		$result = new \Voop\vipapis\vreturn\VendorReturnService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -358,7 +358,7 @@ class VendorReturnService_getReturnDetail_args {
 		
 		$xfer += $output->writeFieldBegin('warehouse');
 		
-		$em = new \vipapis\common\Warehouse; 
+		$em = new \Voop\vipapis\common\Warehouse; 
 		$output->writeString($em::$__names[$this->warehouse]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -607,7 +607,7 @@ class VendorReturnService_getReturnInfo_args {
 		
 		$xfer += $output->writeFieldBegin('warehouse');
 		
-		$em = new \vipapis\common\Warehouse; 
+		$em = new \Voop\vipapis\common\Warehouse; 
 		$output->writeString($em::$__names[$this->warehouse]);  
 		
 		$xfer += $output->writeFieldEnd();
@@ -707,7 +707,7 @@ class VendorReturnService_getReturnItem_args {
 		if(true) {
 			
 			
-			$this->req = new \vipapis\vreturn\GetReturnItemRequest();
+			$this->req = new \Voop\vipapis\vreturn\GetReturnItemRequest();
 			$this->req->read($input);
 			
 		}
@@ -728,7 +728,7 @@ class VendorReturnService_getReturnItem_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -831,7 +831,7 @@ class VendorReturnService_getReturnDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vreturn\GetReturnDetailResponse();
+			$this->success = new \Voop\vipapis\vreturn\GetReturnDetailResponse();
 			$this->success->read($input);
 			
 		}
@@ -854,7 +854,7 @@ class VendorReturnService_getReturnDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -913,7 +913,7 @@ class VendorReturnService_getReturnInfo_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vreturn\GetReturnInfoResponse();
+			$this->success = new \Voop\vipapis\vreturn\GetReturnInfoResponse();
 			$this->success->read($input);
 			
 		}
@@ -936,7 +936,7 @@ class VendorReturnService_getReturnInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -995,7 +995,7 @@ class VendorReturnService_getReturnItem_result {
 		if(true) {
 			
 			
-			$this->success = new \vipapis\vreturn\GetReturnItemResponse();
+			$this->success = new \Voop\vipapis\vreturn\GetReturnItemResponse();
 			$this->success->read($input);
 			
 		}
@@ -1018,7 +1018,7 @@ class VendorReturnService_getReturnItem_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1077,7 +1077,7 @@ class VendorReturnService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1100,7 +1100,7 @@ class VendorReturnService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

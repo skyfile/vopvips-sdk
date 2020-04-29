@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\product\pool\service;
+namespace Voop\com\vip\xstore\cc\product\pool\service;
 require_once dirname(__FILE__).'/ProductPurchaseService.php';
 class ProductPurchaseServiceHelper extends _ProductPurchaseServiceClient{
 	

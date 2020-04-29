@@ -8,7 +8,7 @@
 *
 */
 
-namespace vipapis\shanshan\outlet;
+namespace Voop\vipapis\shanshan\outlet;
 
 class RendOrder {
 	
@@ -71,7 +71,7 @@ class RendOrder {
 				
 				$needSkip = false;
 				
-				$this->header = new \vipapis\shanshan\outlet\RentOrderHeader();
+				$this->header = new \Voop\vipapis\shanshan\outlet\RentOrderHeader();
 				$this->header->read($input);
 				
 			}
@@ -92,7 +92,7 @@ class RendOrder {
 						
 						$elem0 = null;
 						
-						$elem0 = new \vipapis\shanshan\outlet\RentOrderItem();
+						$elem0 = new \Voop\vipapis\shanshan\outlet\RentOrderItem();
 						$elem0->read($input);
 						
 						$this->items[$_size0++] = $elem0;
@@ -111,7 +111,7 @@ class RendOrder {
 			
 			if($needSkip){
 				
-				\Osp\Protocol\ProtocolUtil::skip($input);
+				\Voop\Osp\Protocol\ProtocolUtil::skip($input);
 			}
 			
 			$input->readFieldEnd();
@@ -132,7 +132,7 @@ class RendOrder {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -143,7 +143,7 @@ class RendOrder {
 		
 		if (!is_array($this->items)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -152,7 +152,7 @@ class RendOrder {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

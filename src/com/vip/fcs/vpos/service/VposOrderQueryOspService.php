@@ -8,13 +8,13 @@
 *
 */
 
-namespace com\vip\fcs\vpos\service;
+namespace Voop\com\vip\fcs\vpos\service;
 interface VposOrderQueryOspServiceIf{
 	
 	
 	public function healthCheck();
 	
-	public function queryOrderSummaryByStoreCode(\com\vip\fcs\vpos\service\OrderQueryRequest $queryRequest);
+	public function queryOrderSummaryByStoreCode(\Voop\com\vip\fcs\vpos\service\OrderQueryRequest $queryRequest);
 	
 }
 
@@ -35,14 +35,14 @@ class _VposOrderQueryOspServiceClient extends \Osp\Base\OspStub implements \com\
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\fcs\vpos\service\VposOrderQueryOspService_healthCheck_args();
+		$args = new \Voop\com\vip\fcs\vpos\service\VposOrderQueryOspService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\fcs\vpos\service\VposOrderQueryOspService_healthCheck_result();
+		$result = new \Voop\com\vip\fcs\vpos\service\VposOrderQueryOspService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -52,16 +52,16 @@ class _VposOrderQueryOspServiceClient extends \Osp\Base\OspStub implements \com\
 	}
 	
 	
-	public function queryOrderSummaryByStoreCode(\com\vip\fcs\vpos\service\OrderQueryRequest $queryRequest){
+	public function queryOrderSummaryByStoreCode(\Voop\com\vip\fcs\vpos\service\OrderQueryRequest $queryRequest){
 		
 		$this->send_queryOrderSummaryByStoreCode( $queryRequest);
 		return $this->recv_queryOrderSummaryByStoreCode();
 	}
 	
-	public function send_queryOrderSummaryByStoreCode(\com\vip\fcs\vpos\service\OrderQueryRequest $queryRequest){
+	public function send_queryOrderSummaryByStoreCode(\Voop\com\vip\fcs\vpos\service\OrderQueryRequest $queryRequest){
 		
 		$this->initInvocation("queryOrderSummaryByStoreCode");
-		$args = new \com\vip\fcs\vpos\service\VposOrderQueryOspService_queryOrderSummaryByStoreCode_args();
+		$args = new \Voop\com\vip\fcs\vpos\service\VposOrderQueryOspService_queryOrderSummaryByStoreCode_args();
 		
 		$args->queryRequest = $queryRequest;
 		
@@ -70,7 +70,7 @@ class _VposOrderQueryOspServiceClient extends \Osp\Base\OspStub implements \com\
 	
 	public function recv_queryOrderSummaryByStoreCode(){
 		
-		$result = new \com\vip\fcs\vpos\service\VposOrderQueryOspService_queryOrderSummaryByStoreCode_result();
+		$result = new \Voop\com\vip\fcs\vpos\service\VposOrderQueryOspService_queryOrderSummaryByStoreCode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -171,7 +171,7 @@ class VposOrderQueryOspService_queryOrderSummaryByStoreCode_args {
 		if(true) {
 			
 			
-			$this->queryRequest = new \com\vip\fcs\vpos\service\OrderQueryRequest();
+			$this->queryRequest = new \Voop\com\vip\fcs\vpos\service\OrderQueryRequest();
 			$this->queryRequest->read($input);
 			
 		}
@@ -194,7 +194,7 @@ class VposOrderQueryOspService_queryOrderSummaryByStoreCode_args {
 			
 			if (!is_object($this->queryRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->queryRequest->write($output);
@@ -253,7 +253,7 @@ class VposOrderQueryOspService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -276,7 +276,7 @@ class VposOrderQueryOspService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -335,7 +335,7 @@ class VposOrderQueryOspService_queryOrderSummaryByStoreCode_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\fcs\vpos\service\OrderQueryResponse();
+			$this->success = new \Voop\com\vip\fcs\vpos\service\OrderQueryResponse();
 			$this->success->read($input);
 			
 		}
@@ -358,7 +358,7 @@ class VposOrderQueryOspService_queryOrderSummaryByStoreCode_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

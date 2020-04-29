@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\omni\wo;
+namespace Voop\com\vip\vop\omni\wo;
 require_once dirname(__FILE__).'/WorkOrderService.php';
 class WorkOrderServiceHelper extends _WorkOrderServiceClient{
 	

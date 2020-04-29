@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\top\carrier\cache;
+namespace Voop\com\vip\top\carrier\cache;
 
 class RefreshCacheParam {
 	

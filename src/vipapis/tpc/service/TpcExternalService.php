@@ -8,31 +8,31 @@
 *
 */
 
-namespace vipapis\tpc\service;
+namespace Voop\vipapis\tpc\service;
 interface TpcExternalServiceIf{
 	
 	
-	public function acceptCarLoadDetail(\com\vip\tpc\api\model\AcceptCarLoadDetailRequest $acceptCarLoadDetailRequest);
+	public function acceptCarLoadDetail(\Voop\com\vip\tpc\api\model\AcceptCarLoadDetailRequest $acceptCarLoadDetailRequest);
 	
-	public function anormalExpress(\com\vip\tpc\api\model\AnormalExpressRequest $anormalExpressRequest);
+	public function anormalExpress(\Voop\com\vip\tpc\api\model\AnormalExpressRequest $anormalExpressRequest);
 	
-	public function carrierBillCheck(\com\vip\tpc\api\model\CarrierBillCheckRequest $carrierBillCheckRequest);
+	public function carrierBillCheck(\Voop\com\vip\tpc\api\model\CarrierBillCheckRequest $carrierBillCheckRequest);
 	
-	public function carrierTakingAway(\com\vip\tpc\api\model\CarrierTakingAwayRequest $carrierTakingAwayRequest);
+	public function carrierTakingAway(\Voop\com\vip\tpc\api\model\CarrierTakingAwayRequest $carrierTakingAwayRequest);
 	
-	public function carrierTakingAwayGoods(\com\vip\tpc\api\model\CarrierTakingAwayGoodsRequest $carrierTakingAwayGoodsRequest);
+	public function carrierTakingAwayGoods(\Voop\com\vip\tpc\api\model\CarrierTakingAwayGoodsRequest $carrierTakingAwayGoodsRequest);
 	
-	public function getReturnAddress(\com\vip\tpc\api\model\GetReturnAddressRequest $getReturnAddressRequest);
+	public function getReturnAddress(\Voop\com\vip\tpc\api\model\GetReturnAddressRequest $getReturnAddressRequest);
 	
-	public function getSerialNumberRelation(\com\vip\tpc\api\model\GetSerialNumberRelationRequest $getSerialNumberRelationRequest);
+	public function getSerialNumberRelation(\Voop\com\vip\tpc\api\model\GetSerialNumberRelationRequest $getSerialNumberRelationRequest);
 	
 	public function healthCheck();
 	
-	public function interceptReport(\com\vip\tpc\api\model\InterceptReportRequest $interceptReportRequest);
+	public function interceptReport(\Voop\com\vip\tpc\api\model\InterceptReportRequest $interceptReportRequest);
 	
-	public function packPhysicsAttribute(\com\vip\tpc\api\model\PackPhysicsAttributeRequest $packPhysicsAttributeRequest);
+	public function packPhysicsAttribute(\Voop\com\vip\tpc\api\model\PackPhysicsAttributeRequest $packPhysicsAttributeRequest);
 	
-	public function pushLockerAction(\com\vip\tpc\api\model\PushLockerActionRequest $pushLockerActionRequest);
+	public function pushLockerAction(\Voop\com\vip\tpc\api\model\PushLockerActionRequest $pushLockerActionRequest);
 	
 }
 
@@ -44,16 +44,16 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	}
 	
 	
-	public function acceptCarLoadDetail(\com\vip\tpc\api\model\AcceptCarLoadDetailRequest $acceptCarLoadDetailRequest){
+	public function acceptCarLoadDetail(\Voop\com\vip\tpc\api\model\AcceptCarLoadDetailRequest $acceptCarLoadDetailRequest){
 		
 		$this->send_acceptCarLoadDetail( $acceptCarLoadDetailRequest);
 		return $this->recv_acceptCarLoadDetail();
 	}
 	
-	public function send_acceptCarLoadDetail(\com\vip\tpc\api\model\AcceptCarLoadDetailRequest $acceptCarLoadDetailRequest){
+	public function send_acceptCarLoadDetail(\Voop\com\vip\tpc\api\model\AcceptCarLoadDetailRequest $acceptCarLoadDetailRequest){
 		
 		$this->initInvocation("acceptCarLoadDetail");
-		$args = new \vipapis\tpc\service\TpcExternalService_acceptCarLoadDetail_args();
+		$args = new \Voop\vipapis\tpc\service\TpcExternalService_acceptCarLoadDetail_args();
 		
 		$args->acceptCarLoadDetailRequest = $acceptCarLoadDetailRequest;
 		
@@ -62,7 +62,7 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	
 	public function recv_acceptCarLoadDetail(){
 		
-		$result = new \vipapis\tpc\service\TpcExternalService_acceptCarLoadDetail_result();
+		$result = new \Voop\vipapis\tpc\service\TpcExternalService_acceptCarLoadDetail_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -72,16 +72,16 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	}
 	
 	
-	public function anormalExpress(\com\vip\tpc\api\model\AnormalExpressRequest $anormalExpressRequest){
+	public function anormalExpress(\Voop\com\vip\tpc\api\model\AnormalExpressRequest $anormalExpressRequest){
 		
 		$this->send_anormalExpress( $anormalExpressRequest);
 		return $this->recv_anormalExpress();
 	}
 	
-	public function send_anormalExpress(\com\vip\tpc\api\model\AnormalExpressRequest $anormalExpressRequest){
+	public function send_anormalExpress(\Voop\com\vip\tpc\api\model\AnormalExpressRequest $anormalExpressRequest){
 		
 		$this->initInvocation("anormalExpress");
-		$args = new \vipapis\tpc\service\TpcExternalService_anormalExpress_args();
+		$args = new \Voop\vipapis\tpc\service\TpcExternalService_anormalExpress_args();
 		
 		$args->anormalExpressRequest = $anormalExpressRequest;
 		
@@ -90,7 +90,7 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	
 	public function recv_anormalExpress(){
 		
-		$result = new \vipapis\tpc\service\TpcExternalService_anormalExpress_result();
+		$result = new \Voop\vipapis\tpc\service\TpcExternalService_anormalExpress_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -100,16 +100,16 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	}
 	
 	
-	public function carrierBillCheck(\com\vip\tpc\api\model\CarrierBillCheckRequest $carrierBillCheckRequest){
+	public function carrierBillCheck(\Voop\com\vip\tpc\api\model\CarrierBillCheckRequest $carrierBillCheckRequest){
 		
 		$this->send_carrierBillCheck( $carrierBillCheckRequest);
 		return $this->recv_carrierBillCheck();
 	}
 	
-	public function send_carrierBillCheck(\com\vip\tpc\api\model\CarrierBillCheckRequest $carrierBillCheckRequest){
+	public function send_carrierBillCheck(\Voop\com\vip\tpc\api\model\CarrierBillCheckRequest $carrierBillCheckRequest){
 		
 		$this->initInvocation("carrierBillCheck");
-		$args = new \vipapis\tpc\service\TpcExternalService_carrierBillCheck_args();
+		$args = new \Voop\vipapis\tpc\service\TpcExternalService_carrierBillCheck_args();
 		
 		$args->carrierBillCheckRequest = $carrierBillCheckRequest;
 		
@@ -118,7 +118,7 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	
 	public function recv_carrierBillCheck(){
 		
-		$result = new \vipapis\tpc\service\TpcExternalService_carrierBillCheck_result();
+		$result = new \Voop\vipapis\tpc\service\TpcExternalService_carrierBillCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -128,16 +128,16 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	}
 	
 	
-	public function carrierTakingAway(\com\vip\tpc\api\model\CarrierTakingAwayRequest $carrierTakingAwayRequest){
+	public function carrierTakingAway(\Voop\com\vip\tpc\api\model\CarrierTakingAwayRequest $carrierTakingAwayRequest){
 		
 		$this->send_carrierTakingAway( $carrierTakingAwayRequest);
 		return $this->recv_carrierTakingAway();
 	}
 	
-	public function send_carrierTakingAway(\com\vip\tpc\api\model\CarrierTakingAwayRequest $carrierTakingAwayRequest){
+	public function send_carrierTakingAway(\Voop\com\vip\tpc\api\model\CarrierTakingAwayRequest $carrierTakingAwayRequest){
 		
 		$this->initInvocation("carrierTakingAway");
-		$args = new \vipapis\tpc\service\TpcExternalService_carrierTakingAway_args();
+		$args = new \Voop\vipapis\tpc\service\TpcExternalService_carrierTakingAway_args();
 		
 		$args->carrierTakingAwayRequest = $carrierTakingAwayRequest;
 		
@@ -146,7 +146,7 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	
 	public function recv_carrierTakingAway(){
 		
-		$result = new \vipapis\tpc\service\TpcExternalService_carrierTakingAway_result();
+		$result = new \Voop\vipapis\tpc\service\TpcExternalService_carrierTakingAway_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -156,16 +156,16 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	}
 	
 	
-	public function carrierTakingAwayGoods(\com\vip\tpc\api\model\CarrierTakingAwayGoodsRequest $carrierTakingAwayGoodsRequest){
+	public function carrierTakingAwayGoods(\Voop\com\vip\tpc\api\model\CarrierTakingAwayGoodsRequest $carrierTakingAwayGoodsRequest){
 		
 		$this->send_carrierTakingAwayGoods( $carrierTakingAwayGoodsRequest);
 		return $this->recv_carrierTakingAwayGoods();
 	}
 	
-	public function send_carrierTakingAwayGoods(\com\vip\tpc\api\model\CarrierTakingAwayGoodsRequest $carrierTakingAwayGoodsRequest){
+	public function send_carrierTakingAwayGoods(\Voop\com\vip\tpc\api\model\CarrierTakingAwayGoodsRequest $carrierTakingAwayGoodsRequest){
 		
 		$this->initInvocation("carrierTakingAwayGoods");
-		$args = new \vipapis\tpc\service\TpcExternalService_carrierTakingAwayGoods_args();
+		$args = new \Voop\vipapis\tpc\service\TpcExternalService_carrierTakingAwayGoods_args();
 		
 		$args->carrierTakingAwayGoodsRequest = $carrierTakingAwayGoodsRequest;
 		
@@ -174,7 +174,7 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	
 	public function recv_carrierTakingAwayGoods(){
 		
-		$result = new \vipapis\tpc\service\TpcExternalService_carrierTakingAwayGoods_result();
+		$result = new \Voop\vipapis\tpc\service\TpcExternalService_carrierTakingAwayGoods_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -184,16 +184,16 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	}
 	
 	
-	public function getReturnAddress(\com\vip\tpc\api\model\GetReturnAddressRequest $getReturnAddressRequest){
+	public function getReturnAddress(\Voop\com\vip\tpc\api\model\GetReturnAddressRequest $getReturnAddressRequest){
 		
 		$this->send_getReturnAddress( $getReturnAddressRequest);
 		return $this->recv_getReturnAddress();
 	}
 	
-	public function send_getReturnAddress(\com\vip\tpc\api\model\GetReturnAddressRequest $getReturnAddressRequest){
+	public function send_getReturnAddress(\Voop\com\vip\tpc\api\model\GetReturnAddressRequest $getReturnAddressRequest){
 		
 		$this->initInvocation("getReturnAddress");
-		$args = new \vipapis\tpc\service\TpcExternalService_getReturnAddress_args();
+		$args = new \Voop\vipapis\tpc\service\TpcExternalService_getReturnAddress_args();
 		
 		$args->getReturnAddressRequest = $getReturnAddressRequest;
 		
@@ -202,7 +202,7 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	
 	public function recv_getReturnAddress(){
 		
-		$result = new \vipapis\tpc\service\TpcExternalService_getReturnAddress_result();
+		$result = new \Voop\vipapis\tpc\service\TpcExternalService_getReturnAddress_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -212,16 +212,16 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	}
 	
 	
-	public function getSerialNumberRelation(\com\vip\tpc\api\model\GetSerialNumberRelationRequest $getSerialNumberRelationRequest){
+	public function getSerialNumberRelation(\Voop\com\vip\tpc\api\model\GetSerialNumberRelationRequest $getSerialNumberRelationRequest){
 		
 		$this->send_getSerialNumberRelation( $getSerialNumberRelationRequest);
 		return $this->recv_getSerialNumberRelation();
 	}
 	
-	public function send_getSerialNumberRelation(\com\vip\tpc\api\model\GetSerialNumberRelationRequest $getSerialNumberRelationRequest){
+	public function send_getSerialNumberRelation(\Voop\com\vip\tpc\api\model\GetSerialNumberRelationRequest $getSerialNumberRelationRequest){
 		
 		$this->initInvocation("getSerialNumberRelation");
-		$args = new \vipapis\tpc\service\TpcExternalService_getSerialNumberRelation_args();
+		$args = new \Voop\vipapis\tpc\service\TpcExternalService_getSerialNumberRelation_args();
 		
 		$args->getSerialNumberRelationRequest = $getSerialNumberRelationRequest;
 		
@@ -230,7 +230,7 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	
 	public function recv_getSerialNumberRelation(){
 		
-		$result = new \vipapis\tpc\service\TpcExternalService_getSerialNumberRelation_result();
+		$result = new \Voop\vipapis\tpc\service\TpcExternalService_getSerialNumberRelation_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -249,14 +249,14 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \vipapis\tpc\service\TpcExternalService_healthCheck_args();
+		$args = new \Voop\vipapis\tpc\service\TpcExternalService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \vipapis\tpc\service\TpcExternalService_healthCheck_result();
+		$result = new \Voop\vipapis\tpc\service\TpcExternalService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -266,16 +266,16 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	}
 	
 	
-	public function interceptReport(\com\vip\tpc\api\model\InterceptReportRequest $interceptReportRequest){
+	public function interceptReport(\Voop\com\vip\tpc\api\model\InterceptReportRequest $interceptReportRequest){
 		
 		$this->send_interceptReport( $interceptReportRequest);
 		return $this->recv_interceptReport();
 	}
 	
-	public function send_interceptReport(\com\vip\tpc\api\model\InterceptReportRequest $interceptReportRequest){
+	public function send_interceptReport(\Voop\com\vip\tpc\api\model\InterceptReportRequest $interceptReportRequest){
 		
 		$this->initInvocation("interceptReport");
-		$args = new \vipapis\tpc\service\TpcExternalService_interceptReport_args();
+		$args = new \Voop\vipapis\tpc\service\TpcExternalService_interceptReport_args();
 		
 		$args->interceptReportRequest = $interceptReportRequest;
 		
@@ -284,7 +284,7 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	
 	public function recv_interceptReport(){
 		
-		$result = new \vipapis\tpc\service\TpcExternalService_interceptReport_result();
+		$result = new \Voop\vipapis\tpc\service\TpcExternalService_interceptReport_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -294,16 +294,16 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	}
 	
 	
-	public function packPhysicsAttribute(\com\vip\tpc\api\model\PackPhysicsAttributeRequest $packPhysicsAttributeRequest){
+	public function packPhysicsAttribute(\Voop\com\vip\tpc\api\model\PackPhysicsAttributeRequest $packPhysicsAttributeRequest){
 		
 		$this->send_packPhysicsAttribute( $packPhysicsAttributeRequest);
 		return $this->recv_packPhysicsAttribute();
 	}
 	
-	public function send_packPhysicsAttribute(\com\vip\tpc\api\model\PackPhysicsAttributeRequest $packPhysicsAttributeRequest){
+	public function send_packPhysicsAttribute(\Voop\com\vip\tpc\api\model\PackPhysicsAttributeRequest $packPhysicsAttributeRequest){
 		
 		$this->initInvocation("packPhysicsAttribute");
-		$args = new \vipapis\tpc\service\TpcExternalService_packPhysicsAttribute_args();
+		$args = new \Voop\vipapis\tpc\service\TpcExternalService_packPhysicsAttribute_args();
 		
 		$args->packPhysicsAttributeRequest = $packPhysicsAttributeRequest;
 		
@@ -312,7 +312,7 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	
 	public function recv_packPhysicsAttribute(){
 		
-		$result = new \vipapis\tpc\service\TpcExternalService_packPhysicsAttribute_result();
+		$result = new \Voop\vipapis\tpc\service\TpcExternalService_packPhysicsAttribute_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -322,16 +322,16 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	}
 	
 	
-	public function pushLockerAction(\com\vip\tpc\api\model\PushLockerActionRequest $pushLockerActionRequest){
+	public function pushLockerAction(\Voop\com\vip\tpc\api\model\PushLockerActionRequest $pushLockerActionRequest){
 		
 		$this->send_pushLockerAction( $pushLockerActionRequest);
 		return $this->recv_pushLockerAction();
 	}
 	
-	public function send_pushLockerAction(\com\vip\tpc\api\model\PushLockerActionRequest $pushLockerActionRequest){
+	public function send_pushLockerAction(\Voop\com\vip\tpc\api\model\PushLockerActionRequest $pushLockerActionRequest){
 		
 		$this->initInvocation("pushLockerAction");
-		$args = new \vipapis\tpc\service\TpcExternalService_pushLockerAction_args();
+		$args = new \Voop\vipapis\tpc\service\TpcExternalService_pushLockerAction_args();
 		
 		$args->pushLockerActionRequest = $pushLockerActionRequest;
 		
@@ -340,7 +340,7 @@ class _TpcExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\tp
 	
 	public function recv_pushLockerAction(){
 		
-		$result = new \vipapis\tpc\service\TpcExternalService_pushLockerAction_result();
+		$result = new \Voop\vipapis\tpc\service\TpcExternalService_pushLockerAction_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -395,7 +395,7 @@ class TpcExternalService_acceptCarLoadDetail_args {
 		if(true) {
 			
 			
-			$this->acceptCarLoadDetailRequest = new \com\vip\tpc\api\model\AcceptCarLoadDetailRequest();
+			$this->acceptCarLoadDetailRequest = new \Voop\com\vip\tpc\api\model\AcceptCarLoadDetailRequest();
 			$this->acceptCarLoadDetailRequest->read($input);
 			
 		}
@@ -418,7 +418,7 @@ class TpcExternalService_acceptCarLoadDetail_args {
 			
 			if (!is_object($this->acceptCarLoadDetailRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->acceptCarLoadDetailRequest->write($output);
@@ -477,7 +477,7 @@ class TpcExternalService_anormalExpress_args {
 		if(true) {
 			
 			
-			$this->anormalExpressRequest = new \com\vip\tpc\api\model\AnormalExpressRequest();
+			$this->anormalExpressRequest = new \Voop\com\vip\tpc\api\model\AnormalExpressRequest();
 			$this->anormalExpressRequest->read($input);
 			
 		}
@@ -500,7 +500,7 @@ class TpcExternalService_anormalExpress_args {
 			
 			if (!is_object($this->anormalExpressRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->anormalExpressRequest->write($output);
@@ -559,7 +559,7 @@ class TpcExternalService_carrierBillCheck_args {
 		if(true) {
 			
 			
-			$this->carrierBillCheckRequest = new \com\vip\tpc\api\model\CarrierBillCheckRequest();
+			$this->carrierBillCheckRequest = new \Voop\com\vip\tpc\api\model\CarrierBillCheckRequest();
 			$this->carrierBillCheckRequest->read($input);
 			
 		}
@@ -582,7 +582,7 @@ class TpcExternalService_carrierBillCheck_args {
 			
 			if (!is_object($this->carrierBillCheckRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->carrierBillCheckRequest->write($output);
@@ -641,7 +641,7 @@ class TpcExternalService_carrierTakingAway_args {
 		if(true) {
 			
 			
-			$this->carrierTakingAwayRequest = new \com\vip\tpc\api\model\CarrierTakingAwayRequest();
+			$this->carrierTakingAwayRequest = new \Voop\com\vip\tpc\api\model\CarrierTakingAwayRequest();
 			$this->carrierTakingAwayRequest->read($input);
 			
 		}
@@ -664,7 +664,7 @@ class TpcExternalService_carrierTakingAway_args {
 			
 			if (!is_object($this->carrierTakingAwayRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->carrierTakingAwayRequest->write($output);
@@ -723,7 +723,7 @@ class TpcExternalService_carrierTakingAwayGoods_args {
 		if(true) {
 			
 			
-			$this->carrierTakingAwayGoodsRequest = new \com\vip\tpc\api\model\CarrierTakingAwayGoodsRequest();
+			$this->carrierTakingAwayGoodsRequest = new \Voop\com\vip\tpc\api\model\CarrierTakingAwayGoodsRequest();
 			$this->carrierTakingAwayGoodsRequest->read($input);
 			
 		}
@@ -746,7 +746,7 @@ class TpcExternalService_carrierTakingAwayGoods_args {
 			
 			if (!is_object($this->carrierTakingAwayGoodsRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->carrierTakingAwayGoodsRequest->write($output);
@@ -805,7 +805,7 @@ class TpcExternalService_getReturnAddress_args {
 		if(true) {
 			
 			
-			$this->getReturnAddressRequest = new \com\vip\tpc\api\model\GetReturnAddressRequest();
+			$this->getReturnAddressRequest = new \Voop\com\vip\tpc\api\model\GetReturnAddressRequest();
 			$this->getReturnAddressRequest->read($input);
 			
 		}
@@ -828,7 +828,7 @@ class TpcExternalService_getReturnAddress_args {
 			
 			if (!is_object($this->getReturnAddressRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->getReturnAddressRequest->write($output);
@@ -887,7 +887,7 @@ class TpcExternalService_getSerialNumberRelation_args {
 		if(true) {
 			
 			
-			$this->getSerialNumberRelationRequest = new \com\vip\tpc\api\model\GetSerialNumberRelationRequest();
+			$this->getSerialNumberRelationRequest = new \Voop\com\vip\tpc\api\model\GetSerialNumberRelationRequest();
 			$this->getSerialNumberRelationRequest->read($input);
 			
 		}
@@ -910,7 +910,7 @@ class TpcExternalService_getSerialNumberRelation_args {
 			
 			if (!is_object($this->getSerialNumberRelationRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->getSerialNumberRelationRequest->write($output);
@@ -1015,7 +1015,7 @@ class TpcExternalService_interceptReport_args {
 		if(true) {
 			
 			
-			$this->interceptReportRequest = new \com\vip\tpc\api\model\InterceptReportRequest();
+			$this->interceptReportRequest = new \Voop\com\vip\tpc\api\model\InterceptReportRequest();
 			$this->interceptReportRequest->read($input);
 			
 		}
@@ -1038,7 +1038,7 @@ class TpcExternalService_interceptReport_args {
 			
 			if (!is_object($this->interceptReportRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->interceptReportRequest->write($output);
@@ -1097,7 +1097,7 @@ class TpcExternalService_packPhysicsAttribute_args {
 		if(true) {
 			
 			
-			$this->packPhysicsAttributeRequest = new \com\vip\tpc\api\model\PackPhysicsAttributeRequest();
+			$this->packPhysicsAttributeRequest = new \Voop\com\vip\tpc\api\model\PackPhysicsAttributeRequest();
 			$this->packPhysicsAttributeRequest->read($input);
 			
 		}
@@ -1120,7 +1120,7 @@ class TpcExternalService_packPhysicsAttribute_args {
 			
 			if (!is_object($this->packPhysicsAttributeRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->packPhysicsAttributeRequest->write($output);
@@ -1179,7 +1179,7 @@ class TpcExternalService_pushLockerAction_args {
 		if(true) {
 			
 			
-			$this->pushLockerActionRequest = new \com\vip\tpc\api\model\PushLockerActionRequest();
+			$this->pushLockerActionRequest = new \Voop\com\vip\tpc\api\model\PushLockerActionRequest();
 			$this->pushLockerActionRequest->read($input);
 			
 		}
@@ -1202,7 +1202,7 @@ class TpcExternalService_pushLockerAction_args {
 			
 			if (!is_object($this->pushLockerActionRequest)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pushLockerActionRequest->write($output);
@@ -1261,7 +1261,7 @@ class TpcExternalService_acceptCarLoadDetail_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\tpc\api\model\AcceptCarLoadDetailResponse();
+			$this->success = new \Voop\com\vip\tpc\api\model\AcceptCarLoadDetailResponse();
 			$this->success->read($input);
 			
 		}
@@ -1284,7 +1284,7 @@ class TpcExternalService_acceptCarLoadDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1343,7 +1343,7 @@ class TpcExternalService_anormalExpress_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\tpc\api\model\AnormalExpressResponse();
+			$this->success = new \Voop\com\vip\tpc\api\model\AnormalExpressResponse();
 			$this->success->read($input);
 			
 		}
@@ -1366,7 +1366,7 @@ class TpcExternalService_anormalExpress_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1425,7 +1425,7 @@ class TpcExternalService_carrierBillCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\tpc\api\model\CarrierBillCheckResponse();
+			$this->success = new \Voop\com\vip\tpc\api\model\CarrierBillCheckResponse();
 			$this->success->read($input);
 			
 		}
@@ -1448,7 +1448,7 @@ class TpcExternalService_carrierBillCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1507,7 +1507,7 @@ class TpcExternalService_carrierTakingAway_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\tpc\api\model\CarrierTakingAwayResponse();
+			$this->success = new \Voop\com\vip\tpc\api\model\CarrierTakingAwayResponse();
 			$this->success->read($input);
 			
 		}
@@ -1530,7 +1530,7 @@ class TpcExternalService_carrierTakingAway_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1589,7 +1589,7 @@ class TpcExternalService_carrierTakingAwayGoods_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\tpc\api\model\CarrierTakingAwayGoodsResponse();
+			$this->success = new \Voop\com\vip\tpc\api\model\CarrierTakingAwayGoodsResponse();
 			$this->success->read($input);
 			
 		}
@@ -1612,7 +1612,7 @@ class TpcExternalService_carrierTakingAwayGoods_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1671,7 +1671,7 @@ class TpcExternalService_getReturnAddress_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\tpc\api\model\GetReturnAddressResponse();
+			$this->success = new \Voop\com\vip\tpc\api\model\GetReturnAddressResponse();
 			$this->success->read($input);
 			
 		}
@@ -1694,7 +1694,7 @@ class TpcExternalService_getReturnAddress_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1753,7 +1753,7 @@ class TpcExternalService_getSerialNumberRelation_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\tpc\api\model\GetSerialNumberRelationResponse();
+			$this->success = new \Voop\com\vip\tpc\api\model\GetSerialNumberRelationResponse();
 			$this->success->read($input);
 			
 		}
@@ -1776,7 +1776,7 @@ class TpcExternalService_getSerialNumberRelation_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1835,7 +1835,7 @@ class TpcExternalService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -1858,7 +1858,7 @@ class TpcExternalService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1917,7 +1917,7 @@ class TpcExternalService_interceptReport_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\tpc\api\model\InterceptReportResponse();
+			$this->success = new \Voop\com\vip\tpc\api\model\InterceptReportResponse();
 			$this->success->read($input);
 			
 		}
@@ -1940,7 +1940,7 @@ class TpcExternalService_interceptReport_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1999,7 +1999,7 @@ class TpcExternalService_packPhysicsAttribute_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\tpc\api\model\PackPhysicsAttributeResponse();
+			$this->success = new \Voop\com\vip\tpc\api\model\PackPhysicsAttributeResponse();
 			$this->success->read($input);
 			
 		}
@@ -2022,7 +2022,7 @@ class TpcExternalService_packPhysicsAttribute_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2081,7 +2081,7 @@ class TpcExternalService_pushLockerAction_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\tpc\api\model\PushLockerActionResponse();
+			$this->success = new \Voop\com\vip\tpc\api\model\PushLockerActionResponse();
 			$this->success->read($input);
 			
 		}
@@ -2104,7 +2104,7 @@ class TpcExternalService_pushLockerAction_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

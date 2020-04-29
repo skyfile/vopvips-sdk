@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\vop\cup\api\newretail;
+namespace Voop\com\vip\vop\cup\api\newretail;
 
 class GoodsInfo {
 	

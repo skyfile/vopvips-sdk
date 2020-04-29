@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\adp\api\open\service;
+namespace Voop\com\vip\adp\api\open\service;
 
 class GoodsInfoRequest {
 	
@@ -341,7 +341,7 @@ class GoodsInfoRequest {
 				
 				$needSkip = false;
 				
-				$this->commonParams = new \com\vip\adp\api\open\service\CommonParams();
+				$this->commonParams = new \Voop\com\vip\adp\api\open\service\CommonParams();
 				$this->commonParams->read($input);
 				
 			}
@@ -502,7 +502,7 @@ class GoodsInfoRequest {
 			
 			if (!is_object($this->commonParams)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->commonParams->write($output);

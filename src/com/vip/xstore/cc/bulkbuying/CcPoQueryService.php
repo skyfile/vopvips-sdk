@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\xstore\cc\bulkbuying;
+namespace Voop\com\vip\xstore\cc\bulkbuying;
 interface CcPoQueryServiceIf{
 	
 	
@@ -16,13 +16,13 @@ interface CcPoQueryServiceIf{
 	
 	public function queryCcPo( $purchaseNo);
 	
-	public function queryCcPoItem(\com\vip\xstore\cc\bulkbuying\QueryCcPoItemReq $req);
+	public function queryCcPoItem(\Voop\com\vip\xstore\cc\bulkbuying\QueryCcPoItemReq $req);
 	
 	public function queryCcPos( $purchaseNos);
 	
-	public function queryPoListByBizBatchNo(\com\vip\xstore\cc\bulkbuying\QueryPoListByBizBatchNoReq $req);
+	public function queryPoListByBizBatchNo(\Voop\com\vip\xstore\cc\bulkbuying\QueryPoListByBizBatchNoReq $req);
 	
-	public function queryPurchaseNoByBarcode(\com\vip\xstore\cc\bulkbuying\QueryPurchaseNoByBarcodeReq $req);
+	public function queryPurchaseNoByBarcode(\Voop\com\vip\xstore\cc\bulkbuying\QueryPurchaseNoByBarcodeReq $req);
 	
 }
 
@@ -43,14 +43,14 @@ class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	public function send_healthCheck(){
 		
 		$this->initInvocation("healthCheck");
-		$args = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_healthCheck_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_healthCheck_args();
 		
 		$this->send_base($args);
 	}
 	
 	public function recv_healthCheck(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_healthCheck_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_healthCheck_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -69,7 +69,7 @@ class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	public function send_queryCcPo( $purchaseNo){
 		
 		$this->initInvocation("queryCcPo");
-		$args = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPo_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPo_args();
 		
 		$args->purchaseNo = $purchaseNo;
 		
@@ -78,7 +78,7 @@ class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_queryCcPo(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPo_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -88,16 +88,16 @@ class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function queryCcPoItem(\com\vip\xstore\cc\bulkbuying\QueryCcPoItemReq $req){
+	public function queryCcPoItem(\Voop\com\vip\xstore\cc\bulkbuying\QueryCcPoItemReq $req){
 		
 		$this->send_queryCcPoItem( $req);
 		return $this->recv_queryCcPoItem();
 	}
 	
-	public function send_queryCcPoItem(\com\vip\xstore\cc\bulkbuying\QueryCcPoItemReq $req){
+	public function send_queryCcPoItem(\Voop\com\vip\xstore\cc\bulkbuying\QueryCcPoItemReq $req){
 		
 		$this->initInvocation("queryCcPoItem");
-		$args = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPoItem_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPoItem_args();
 		
 		$args->req = $req;
 		
@@ -106,7 +106,7 @@ class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_queryCcPoItem(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPoItem_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPoItem_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -125,7 +125,7 @@ class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	public function send_queryCcPos( $purchaseNos){
 		
 		$this->initInvocation("queryCcPos");
-		$args = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPos_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPos_args();
 		
 		$args->purchaseNos = $purchaseNos;
 		
@@ -134,7 +134,7 @@ class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_queryCcPos(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPos_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryCcPos_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -144,16 +144,16 @@ class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function queryPoListByBizBatchNo(\com\vip\xstore\cc\bulkbuying\QueryPoListByBizBatchNoReq $req){
+	public function queryPoListByBizBatchNo(\Voop\com\vip\xstore\cc\bulkbuying\QueryPoListByBizBatchNoReq $req){
 		
 		$this->send_queryPoListByBizBatchNo( $req);
 		return $this->recv_queryPoListByBizBatchNo();
 	}
 	
-	public function send_queryPoListByBizBatchNo(\com\vip\xstore\cc\bulkbuying\QueryPoListByBizBatchNoReq $req){
+	public function send_queryPoListByBizBatchNo(\Voop\com\vip\xstore\cc\bulkbuying\QueryPoListByBizBatchNoReq $req){
 		
 		$this->initInvocation("queryPoListByBizBatchNo");
-		$args = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryPoListByBizBatchNo_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryPoListByBizBatchNo_args();
 		
 		$args->req = $req;
 		
@@ -162,7 +162,7 @@ class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_queryPoListByBizBatchNo(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryPoListByBizBatchNo_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryPoListByBizBatchNo_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -172,16 +172,16 @@ class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	}
 	
 	
-	public function queryPurchaseNoByBarcode(\com\vip\xstore\cc\bulkbuying\QueryPurchaseNoByBarcodeReq $req){
+	public function queryPurchaseNoByBarcode(\Voop\com\vip\xstore\cc\bulkbuying\QueryPurchaseNoByBarcodeReq $req){
 		
 		$this->send_queryPurchaseNoByBarcode( $req);
 		return $this->recv_queryPurchaseNoByBarcode();
 	}
 	
-	public function send_queryPurchaseNoByBarcode(\com\vip\xstore\cc\bulkbuying\QueryPurchaseNoByBarcodeReq $req){
+	public function send_queryPurchaseNoByBarcode(\Voop\com\vip\xstore\cc\bulkbuying\QueryPurchaseNoByBarcodeReq $req){
 		
 		$this->initInvocation("queryPurchaseNoByBarcode");
-		$args = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryPurchaseNoByBarcode_args();
+		$args = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryPurchaseNoByBarcode_args();
 		
 		$args->req = $req;
 		
@@ -190,7 +190,7 @@ class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xsto
 	
 	public function recv_queryPurchaseNoByBarcode(){
 		
-		$result = new \com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryPurchaseNoByBarcode_result();
+		$result = new \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryService_queryPurchaseNoByBarcode_result();
 		$this->receive_base($result);
 		if ($result->success !== null){
 			
@@ -361,7 +361,7 @@ class CcPoQueryService_queryCcPoItem_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\cc\bulkbuying\QueryCcPoItemReq();
+			$this->req = new \Voop\com\vip\xstore\cc\bulkbuying\QueryCcPoItemReq();
 			$this->req->read($input);
 			
 		}
@@ -382,7 +382,7 @@ class CcPoQueryService_queryCcPoItem_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -477,7 +477,7 @@ class CcPoQueryService_queryCcPos_args {
 		
 		if (!is_array($this->purchaseNos)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeSetBegin();
@@ -541,7 +541,7 @@ class CcPoQueryService_queryPoListByBizBatchNo_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\cc\bulkbuying\QueryPoListByBizBatchNoReq();
+			$this->req = new \Voop\com\vip\xstore\cc\bulkbuying\QueryPoListByBizBatchNoReq();
 			$this->req->read($input);
 			
 		}
@@ -562,7 +562,7 @@ class CcPoQueryService_queryPoListByBizBatchNo_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -619,7 +619,7 @@ class CcPoQueryService_queryPurchaseNoByBarcode_args {
 		if(true) {
 			
 			
-			$this->req = new \com\vip\xstore\cc\bulkbuying\QueryPurchaseNoByBarcodeReq();
+			$this->req = new \Voop\com\vip\xstore\cc\bulkbuying\QueryPurchaseNoByBarcodeReq();
 			$this->req->read($input);
 			
 		}
@@ -640,7 +640,7 @@ class CcPoQueryService_queryPurchaseNoByBarcode_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -697,7 +697,7 @@ class CcPoQueryService_healthCheck_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\hermes\core\health\CheckResult();
+			$this->success = new \Voop\com\vip\hermes\core\health\CheckResult();
 			$this->success->read($input);
 			
 		}
@@ -720,7 +720,7 @@ class CcPoQueryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -779,7 +779,7 @@ class CcPoQueryService_queryCcPo_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\bulkbuying\CcPo();
+			$this->success = new \Voop\com\vip\xstore\cc\bulkbuying\CcPo();
 			$this->success->read($input);
 			
 		}
@@ -802,7 +802,7 @@ class CcPoQueryService_queryCcPo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -861,7 +861,7 @@ class CcPoQueryService_queryCcPoItem_result {
 		if(true) {
 			
 			
-			$this->success = new \com\vip\xstore\cc\bulkbuying\QueryCcPoItemResp();
+			$this->success = new \Voop\com\vip\xstore\cc\bulkbuying\QueryCcPoItemResp();
 			$this->success->read($input);
 			
 		}
@@ -884,7 +884,7 @@ class CcPoQueryService_queryCcPoItem_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -952,7 +952,7 @@ class CcPoQueryService_queryCcPos_result {
 					
 					$elem0 = null;
 					
-					$elem0 = new \com\vip\xstore\cc\bulkbuying\CcPo();
+					$elem0 = new \Voop\com\vip\xstore\cc\bulkbuying\CcPo();
 					$elem0->read($input);
 					
 					$this->success[$_size0++] = $elem0;
@@ -985,7 +985,7 @@ class CcPoQueryService_queryCcPos_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -994,7 +994,7 @@ class CcPoQueryService_queryCcPos_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1066,7 +1066,7 @@ class CcPoQueryService_queryPoListByBizBatchNo_result {
 					
 					$elem1 = null;
 					
-					$elem1 = new \com\vip\xstore\cc\bulkbuying\CcPo();
+					$elem1 = new \Voop\com\vip\xstore\cc\bulkbuying\CcPo();
 					$elem1->read($input);
 					
 					$this->success[$_size1++] = $elem1;
@@ -1099,7 +1099,7 @@ class CcPoQueryService_queryPoListByBizBatchNo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1108,7 +1108,7 @@ class CcPoQueryService_queryPoListByBizBatchNo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1232,7 +1232,7 @@ class CcPoQueryService_queryPurchaseNoByBarcode_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -1243,7 +1243,7 @@ class CcPoQueryService_queryPurchaseNoByBarcode_result {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();

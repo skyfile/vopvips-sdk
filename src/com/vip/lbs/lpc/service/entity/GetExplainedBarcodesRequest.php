@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\lbs\lpc\service\entity;
+namespace Voop\com\vip\lbs\lpc\service\entity;
 
 class GetExplainedBarcodesRequest {
 	
@@ -71,7 +71,7 @@ class GetExplainedBarcodesRequest {
 				
 				$needSkip = false;
 				
-				$this->header = new \com\vip\lbs\lpc\service\common\LbsRequestHeader();
+				$this->header = new \Voop\com\vip\lbs\lpc\service\common\LbsRequestHeader();
 				$this->header->read($input);
 				
 			}
@@ -92,7 +92,7 @@ class GetExplainedBarcodesRequest {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\lbs\lpc\service\entity\ExplainedBarcodesModel();
+						$elem0 = new \Voop\com\vip\lbs\lpc\service\entity\ExplainedBarcodesModel();
 						$elem0->read($input);
 						
 						$this->explainedBarcodesModelList[$_size0++] = $elem0;
@@ -132,7 +132,7 @@ class GetExplainedBarcodesRequest {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -143,7 +143,7 @@ class GetExplainedBarcodesRequest {
 		
 		if (!is_array($this->explainedBarcodesModelList)){
 			
-			throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -152,7 +152,7 @@ class GetExplainedBarcodesRequest {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);

@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\arplatform\face\service;
+namespace Voop\com\vip\arplatform\face\service;
 
 class CompareResult {
 	

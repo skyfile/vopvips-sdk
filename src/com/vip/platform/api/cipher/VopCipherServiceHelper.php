@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\platform\api\cipher;
+namespace Voop\com\vip\platform\api\cipher;
 require_once dirname(__FILE__).'/VopCipherService.php';
 class VopCipherServiceHelper extends _VopCipherServiceClient{
 	

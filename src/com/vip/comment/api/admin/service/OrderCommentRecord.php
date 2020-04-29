@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\comment\api\admin\service;
+namespace Voop\com\vip\comment\api\admin\service;
 
 class OrderCommentRecord {
 	
@@ -393,7 +393,7 @@ class OrderCommentRecord {
 			
 			$xfer += $output->writeFieldBegin('serviceStarScore');
 			
-			$em = new \com\vip\comment\api\admin\service\StarScore; 
+			$em = new \Voop\com\vip\comment\api\admin\service\StarScore; 
 			$output->writeString($em::$__names[$this->serviceStarScore]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -404,7 +404,7 @@ class OrderCommentRecord {
 			
 			$xfer += $output->writeFieldBegin('recetimeStarScore');
 			
-			$em = new \com\vip\comment\api\admin\service\StarScore; 
+			$em = new \Voop\com\vip\comment\api\admin\service\StarScore; 
 			$output->writeString($em::$__names[$this->recetimeStarScore]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -415,7 +415,7 @@ class OrderCommentRecord {
 			
 			$xfer += $output->writeFieldBegin('packageStarScore');
 			
-			$em = new \com\vip\comment\api\admin\service\StarScore; 
+			$em = new \Voop\com\vip\comment\api\admin\service\StarScore; 
 			$output->writeString($em::$__names[$this->packageStarScore]);  
 			
 			$xfer += $output->writeFieldEnd();
@@ -426,7 +426,7 @@ class OrderCommentRecord {
 			
 			$xfer += $output->writeFieldBegin('satisfaction');
 			
-			$em = new \com\vip\comment\api\admin\service\Satisfaction; 
+			$em = new \Voop\com\vip\comment\api\admin\service\Satisfaction; 
 			$output->writeString($em::$__names[$this->satisfaction]);  
 			
 			$xfer += $output->writeFieldEnd();

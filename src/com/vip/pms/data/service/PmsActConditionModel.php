@@ -8,7 +8,7 @@
 *
 */
 
-namespace com\vip\pms\data\service;
+namespace Voop\com\vip\pms\data\service;
 
 class PmsActConditionModel {
 	
@@ -310,7 +310,7 @@ class PmsActConditionModel {
 						
 						$elem0 = null;
 						
-						$elem0 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem0 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem0->read($input);
 						
 						$this->customerSrcList[$_size0++] = $elem0;
@@ -341,7 +341,7 @@ class PmsActConditionModel {
 						
 						$elem1 = null;
 						
-						$elem1 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem1 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem1->read($input);
 						
 						$this->customerLevelList[$_size1++] = $elem1;
@@ -392,7 +392,7 @@ class PmsActConditionModel {
 						
 						$elem2 = null;
 						
-						$elem2 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem2 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem2->read($input);
 						
 						$this->mcKinseyList[$_size2++] = $elem2;
@@ -423,7 +423,7 @@ class PmsActConditionModel {
 						
 						$elem3 = null;
 						
-						$elem3 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem3 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem3->read($input);
 						
 						$this->mcKinsey2List[$_size3++] = $elem3;
@@ -454,7 +454,7 @@ class PmsActConditionModel {
 						
 						$elem4 = null;
 						
-						$elem4 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem4 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem4->read($input);
 						
 						$this->customerTagList[$_size4++] = $elem4;
@@ -485,7 +485,7 @@ class PmsActConditionModel {
 						
 						$elem5 = null;
 						
-						$elem5 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem5 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem5->read($input);
 						
 						$this->enterpriseList[$_size5++] = $elem5;
@@ -516,7 +516,7 @@ class PmsActConditionModel {
 						
 						$elem6 = null;
 						
-						$elem6 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem6 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem6->read($input);
 						
 						$this->mobileChannelList[$_size6++] = $elem6;
@@ -557,7 +557,7 @@ class PmsActConditionModel {
 						
 						$elem7 = null;
 						
-						$elem7 = new \com\vip\pms\data\service\PmsActConfigModel();
+						$elem7 = new \Voop\com\vip\pms\data\service\PmsActConfigModel();
 						$elem7->read($input);
 						
 						$this->freeCarriageList[$_size7++] = $elem7;
@@ -588,7 +588,7 @@ class PmsActConditionModel {
 						
 						$elem8 = null;
 						
-						$elem8 = new \com\vip\pms\data\service\PmsActAudienceConfigModel();
+						$elem8 = new \Voop\com\vip\pms\data\service\PmsActAudienceConfigModel();
 						$elem8->read($input);
 						
 						$this->audienceConfigList[$_size8++] = $elem8;
@@ -670,7 +670,7 @@ class PmsActConditionModel {
 			
 			if (!is_array($this->customerSrcList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -679,7 +679,7 @@ class PmsActConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -698,7 +698,7 @@ class PmsActConditionModel {
 			
 			if (!is_array($this->customerLevelList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -707,7 +707,7 @@ class PmsActConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -740,7 +740,7 @@ class PmsActConditionModel {
 			
 			if (!is_array($this->mcKinseyList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -749,7 +749,7 @@ class PmsActConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -768,7 +768,7 @@ class PmsActConditionModel {
 			
 			if (!is_array($this->mcKinsey2List)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -777,7 +777,7 @@ class PmsActConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -796,7 +796,7 @@ class PmsActConditionModel {
 			
 			if (!is_array($this->customerTagList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -805,7 +805,7 @@ class PmsActConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -824,7 +824,7 @@ class PmsActConditionModel {
 			
 			if (!is_array($this->enterpriseList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -833,7 +833,7 @@ class PmsActConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -852,7 +852,7 @@ class PmsActConditionModel {
 			
 			if (!is_array($this->mobileChannelList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -861,7 +861,7 @@ class PmsActConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -889,7 +889,7 @@ class PmsActConditionModel {
 			
 			if (!is_array($this->freeCarriageList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -898,7 +898,7 @@ class PmsActConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -917,7 +917,7 @@ class PmsActConditionModel {
 			
 			if (!is_array($this->audienceConfigList)){
 				
-				throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -926,7 +926,7 @@ class PmsActConditionModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
