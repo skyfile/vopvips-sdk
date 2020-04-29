@@ -71,7 +71,7 @@ class OpPoResponse {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\PoResult::$__names;
+				$names = \Voop\com\vip\domain\inventory\PoResult::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

@@ -26,7 +26,7 @@ interface OmniLogisticsServiceIf{
 	
 }
 
-class _OmniLogisticsServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\omni\logistics\OmniLogisticsServiceIf{
+class _OmniLogisticsServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\omni\logistics\OmniLogisticsServiceIf{
 	
 	public function __construct(){
 		
@@ -250,7 +250,7 @@ class OmniLogisticsService_getOrderLogisticsTrack_args {
 		
 		if (!is_object($this->trackRequest)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->trackRequest->write($output);
@@ -374,7 +374,7 @@ class OmniLogisticsService_receiveMaxSpeedRouteInfo_args {
 		
 		if (!is_object($this->maxSpeedRouteInfo)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->maxSpeedRouteInfo->write($output);
@@ -452,7 +452,7 @@ class OmniLogisticsService_receiveRouteInfo_args {
 		
 		if (!is_object($this->waybillRoute)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->waybillRoute->write($output);
@@ -530,7 +530,7 @@ class OmniLogisticsService_receiveYtoRouteInfo_args {
 		
 		if (!is_object($this->ytoRouteInfo)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->ytoRouteInfo->write($output);
@@ -608,7 +608,7 @@ class OmniLogisticsService_receiveZtoRouteInfo_args {
 		
 		if (!is_object($this->ztoRouteInfo)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->ztoRouteInfo->write($output);
@@ -688,7 +688,7 @@ class OmniLogisticsService_getOrderLogisticsTrack_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -770,7 +770,7 @@ class OmniLogisticsService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

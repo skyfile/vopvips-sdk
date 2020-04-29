@@ -507,7 +507,7 @@ class EquityBaseInfo {
 			
 			if (!is_object($this->saveMoneyInformation)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->saveMoneyInformation->write($output);
@@ -578,7 +578,7 @@ class EquityBaseInfo {
 			
 			if (!is_object($this->birthGiftInfo)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->birthGiftInfo->write($output);

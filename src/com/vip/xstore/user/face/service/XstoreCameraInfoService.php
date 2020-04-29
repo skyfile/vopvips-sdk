@@ -30,7 +30,7 @@ interface XstoreCameraInfoServiceIf{
 	
 }
 
-class _XstoreCameraInfoServiceClient extends \Osp\Base\OspStub implements \com\vip\xstore\user\face\service\XstoreCameraInfoServiceIf{
+class _XstoreCameraInfoServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\user\face\service\XstoreCameraInfoServiceIf{
 	
 	public function __construct(){
 		
@@ -326,7 +326,7 @@ class XstoreCameraInfoService_batchDeleteCamera_args {
 		
 		if (!is_object($this->delParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->delParam->write($output);
@@ -404,7 +404,7 @@ class XstoreCameraInfoService_createCamera_args {
 		
 		if (!is_object($this->xstoreCameraInfoModel)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->xstoreCameraInfoModel->write($output);
@@ -482,7 +482,7 @@ class XstoreCameraInfoService_deleteCamera_args {
 		
 		if (!is_object($this->delParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->delParam->write($output);
@@ -606,7 +606,7 @@ class XstoreCameraInfoService_queryCameraList_args {
 		
 		if (!is_object($this->pageReqParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->pageReqParam->write($output);
@@ -684,7 +684,7 @@ class XstoreCameraInfoService_selectCameraStateLog_args {
 		
 		if (!is_object($this->pageReqParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->pageReqParam->write($output);
@@ -762,7 +762,7 @@ class XstoreCameraInfoService_updateCamera_args {
 		
 		if (!is_object($this->updateParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->updateParam->write($output);
@@ -840,7 +840,7 @@ class XstoreCameraInfoService_uploadCameraStateLog_args {
 		
 		if (!is_object($this->xstoreCameraStateLogParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->xstoreCameraStateLogParam->write($output);
@@ -1130,7 +1130,7 @@ class XstoreCameraInfoService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1212,7 +1212,7 @@ class XstoreCameraInfoService_queryCameraList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1294,7 +1294,7 @@ class XstoreCameraInfoService_selectCameraStateLog_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1446,7 +1446,7 @@ class XstoreCameraInfoService_uploadCameraStateLog_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

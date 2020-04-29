@@ -557,7 +557,7 @@ class WorkOrder {
 			
 			if (!is_object($this->state_appendix_info)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->state_appendix_info->write($output);
@@ -572,7 +572,7 @@ class WorkOrder {
 			
 			if (!is_array($this->logistics_nos)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -594,7 +594,7 @@ class WorkOrder {
 			
 			if (!is_array($this->recheck_results)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -603,7 +603,7 @@ class WorkOrder {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -622,7 +622,7 @@ class WorkOrder {
 			
 			if (!is_array($this->attachments)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -631,7 +631,7 @@ class WorkOrder {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -650,7 +650,7 @@ class WorkOrder {
 			
 			if (!is_array($this->work_order_tasks)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -659,7 +659,7 @@ class WorkOrder {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -678,7 +678,7 @@ class WorkOrder {
 			
 			if (!is_array($this->option_appendix_infos)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -687,7 +687,7 @@ class WorkOrder {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

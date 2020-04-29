@@ -175,7 +175,7 @@ class InfErpOrderInfoVO {
 			
 			if (!is_object($this->infErpMRetail)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->infErpMRetail->write($output);
@@ -190,7 +190,7 @@ class InfErpOrderInfoVO {
 			
 			if (!is_array($this->infErpMRetailItemList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -199,7 +199,7 @@ class InfErpOrderInfoVO {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -218,7 +218,7 @@ class InfErpOrderInfoVO {
 			
 			if (!is_array($this->infErpMRetailPayItemList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -227,7 +227,7 @@ class InfErpOrderInfoVO {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

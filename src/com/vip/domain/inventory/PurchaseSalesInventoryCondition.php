@@ -141,7 +141,7 @@ class PurchaseSalesInventoryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\PurchaseSalesInventoryQueryType::$__names;
+				$names = \Voop\com\vip\domain\inventory\PurchaseSalesInventoryQueryType::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -164,7 +164,7 @@ class PurchaseSalesInventoryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\DistributionModel::$__names;
+				$names = \Voop\com\vip\domain\inventory\DistributionModel::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -187,7 +187,7 @@ class PurchaseSalesInventoryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\WarehouseCode::$__names;
+				$names = \Voop\com\vip\domain\inventory\WarehouseCode::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

@@ -191,7 +191,7 @@ class Create3PLMultiPoDeliveryRequest {
 				
 				$needSkip = false;
 				
-				$names = \vipapis\common\Warehouse::$__names;
+				$names = \Voop\vipapis\common\Warehouse::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

@@ -91,7 +91,7 @@ class CommandUserLogRequestModel {
 		
 		if (!is_object($this->baseRequestModel)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->baseRequestModel->write($output);

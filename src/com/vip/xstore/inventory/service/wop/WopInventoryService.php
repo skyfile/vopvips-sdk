@@ -20,7 +20,7 @@ interface WopInventoryServiceIf{
 	
 }
 
-class _WopInventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\xstore\inventory\service\wop\WopInventoryServiceIf{
+class _WopInventoryServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\inventory\service\wop\WopInventoryServiceIf{
 	
 	public function __construct(){
 		
@@ -241,7 +241,7 @@ class WopInventoryService_inventoryAdjust_args {
 		
 		if (!is_array($this->wopInvChgLogReqs)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -250,7 +250,7 @@ class WopInventoryService_inventoryAdjust_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -351,7 +351,7 @@ class WopInventoryService_receiving_args {
 		
 		if (!is_array($this->items)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -360,7 +360,7 @@ class WopInventoryService_receiving_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -444,7 +444,7 @@ class WopInventoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -547,7 +547,7 @@ class WopInventoryService_inventoryAdjust_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -558,7 +558,7 @@ class WopInventoryService_inventoryAdjust_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);
@@ -665,7 +665,7 @@ class WopInventoryService_receiving_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -676,7 +676,7 @@ class WopInventoryService_receiving_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

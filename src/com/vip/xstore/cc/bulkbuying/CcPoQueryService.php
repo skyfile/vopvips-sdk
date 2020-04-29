@@ -26,7 +26,7 @@ interface CcPoQueryServiceIf{
 	
 }
 
-class _CcPoQueryServiceClient extends \Osp\Base\OspStub implements \com\vip\xstore\cc\bulkbuying\CcPoQueryServiceIf{
+class _CcPoQueryServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\cc\bulkbuying\CcPoQueryServiceIf{
 	
 	public function __construct(){
 		
@@ -382,7 +382,7 @@ class CcPoQueryService_queryCcPoItem_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -477,7 +477,7 @@ class CcPoQueryService_queryCcPos_args {
 		
 		if (!is_array($this->purchaseNos)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeSetBegin();
@@ -562,7 +562,7 @@ class CcPoQueryService_queryPoListByBizBatchNo_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -640,7 +640,7 @@ class CcPoQueryService_queryPurchaseNoByBarcode_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -720,7 +720,7 @@ class CcPoQueryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -802,7 +802,7 @@ class CcPoQueryService_queryCcPo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -884,7 +884,7 @@ class CcPoQueryService_queryCcPoItem_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -985,7 +985,7 @@ class CcPoQueryService_queryCcPos_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -994,7 +994,7 @@ class CcPoQueryService_queryCcPos_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1099,7 +1099,7 @@ class CcPoQueryService_queryPoListByBizBatchNo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1108,7 +1108,7 @@ class CcPoQueryService_queryPoListByBizBatchNo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1232,7 +1232,7 @@ class CcPoQueryService_queryPurchaseNoByBarcode_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -1243,7 +1243,7 @@ class CcPoQueryService_queryPurchaseNoByBarcode_result {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();

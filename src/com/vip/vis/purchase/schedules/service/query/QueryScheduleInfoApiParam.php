@@ -249,7 +249,7 @@ class QueryScheduleInfoApiParam {
 			
 			if (!is_array($this->brandIdList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -289,7 +289,7 @@ class QueryScheduleInfoApiParam {
 			
 			if (!is_array($this->sellingModeList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

@@ -161,7 +161,7 @@ class InboundCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\InboundQueryType::$__names;
+				$names = \Voop\com\vip\domain\inventory\InboundQueryType::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -184,7 +184,7 @@ class InboundCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\DistributionModel::$__names;
+				$names = \Voop\com\vip\domain\inventory\DistributionModel::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -207,7 +207,7 @@ class InboundCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\WarehouseCode::$__names;
+				$names = \Voop\com\vip\domain\inventory\WarehouseCode::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -300,7 +300,7 @@ class InboundCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\InboundStatus::$__names;
+				$names = \Voop\com\vip\domain\inventory\InboundStatus::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

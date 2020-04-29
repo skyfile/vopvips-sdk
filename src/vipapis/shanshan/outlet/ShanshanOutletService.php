@@ -30,7 +30,7 @@ interface ShanshanOutletServiceIf{
 	
 }
 
-class _ShanshanOutletServiceClient extends \Osp\Base\OspStub implements \vipapis\shanshan\outlet\ShanshanOutletServiceIf{
+class _ShanshanOutletServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\shanshan\outlet\ShanshanOutletServiceIf{
 	
 	public function __construct(){
 		
@@ -326,7 +326,7 @@ class ShanshanOutletService_getMallStores_args {
 		
 		if (!is_object($this->storeQueryReq)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->storeQueryReq->write($output);
@@ -404,7 +404,7 @@ class ShanshanOutletService_getOnlineOrders_args {
 		
 		if (!is_object($this->orderQueryReq)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->orderQueryReq->write($output);
@@ -482,7 +482,7 @@ class ShanshanOutletService_getStoreCoupons_args {
 		
 		if (!is_object($this->couponQueryReq)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->couponQueryReq->write($output);
@@ -606,7 +606,7 @@ class ShanshanOutletService_reportOfflineOrders_args {
 		
 		if (!is_object($this->reportOfflineOrderReq)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->reportOfflineOrderReq->write($output);
@@ -684,7 +684,7 @@ class ShanshanOutletService_uploadProduct_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -762,7 +762,7 @@ class ShanshanOutletService_uploadRendOrder_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -840,7 +840,7 @@ class ShanshanOutletService_verifyElectronicCoupon_args {
 		
 		if (!is_object($this->verifyECouponReq)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->verifyECouponReq->write($output);
@@ -920,7 +920,7 @@ class ShanshanOutletService_getMallStores_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1002,7 +1002,7 @@ class ShanshanOutletService_getOnlineOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1103,7 +1103,7 @@ class ShanshanOutletService_getStoreCoupons_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1112,7 +1112,7 @@ class ShanshanOutletService_getStoreCoupons_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1198,7 +1198,7 @@ class ShanshanOutletService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1280,7 +1280,7 @@ class ShanshanOutletService_reportOfflineOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1362,7 +1362,7 @@ class ShanshanOutletService_uploadProduct_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1444,7 +1444,7 @@ class ShanshanOutletService_uploadRendOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1526,7 +1526,7 @@ class ShanshanOutletService_verifyElectronicCoupon_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

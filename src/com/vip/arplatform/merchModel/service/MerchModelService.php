@@ -14,7 +14,7 @@ interface MerchModelServiceIf{
 	
 	public function batchBind( $materialId, $bindingModels);
 	
-	public function bind( $materialId,\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel);
+	public function bind( $materialId,\Voop\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel);
 	
 	public function createBatchMaterial( $mdList);
 	
@@ -44,11 +44,11 @@ interface MerchModelServiceIf{
 	
 	public function syncFromJD( $syncDatum);
 	
-	public function unbind( $materialId,\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel);
+	public function unbind( $materialId,\Voop\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel);
 	
 }
 
-class _MerchModelServiceClient extends \Osp\Base\OspStub implements \com\vip\arplatform\merchModel\service\MerchModelServiceIf{
+class _MerchModelServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\arplatform\merchModel\service\MerchModelServiceIf{
 	
 	public function __construct(){
 		
@@ -82,13 +82,13 @@ class _MerchModelServiceClient extends \Osp\Base\OspStub implements \com\vip\arp
 	}
 	
 	
-	public function bind( $materialId,\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel){
+	public function bind( $materialId,\Voop\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel){
 		
 		$this->send_bind( $materialId, $bindInfoModel);
 		return $this->recv_bind();
 	}
 	
-	public function send_bind( $materialId,\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel){
+	public function send_bind( $materialId,\Voop\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel){
 		
 		$this->initInvocation("bind");
 		$args = new \Voop\com\vip\arplatform\merchModel\service\MerchModelService_bind_args();
@@ -530,13 +530,13 @@ class _MerchModelServiceClient extends \Osp\Base\OspStub implements \com\vip\arp
 	}
 	
 	
-	public function unbind( $materialId,\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel){
+	public function unbind( $materialId,\Voop\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel){
 		
 		$this->send_unbind( $materialId, $bindInfoModel);
 		return $this->recv_unbind();
 	}
 	
-	public function send_unbind( $materialId,\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel){
+	public function send_unbind( $materialId,\Voop\com\vip\arplatform\merchModel\service\BindingModel $bindInfoModel){
 		
 		$this->initInvocation("unbind");
 		$args = new \Voop\com\vip\arplatform\merchModel\service\MerchModelService_unbind_args();
@@ -669,7 +669,7 @@ class MerchModelService_batchBind_args {
 		
 		if (!is_array($this->bindingModels)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -678,7 +678,7 @@ class MerchModelService_batchBind_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -784,7 +784,7 @@ class MerchModelService_bind_args {
 		
 		if (!is_object($this->bindInfoModel)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->bindInfoModel->write($output);
@@ -881,7 +881,7 @@ class MerchModelService_createBatchMaterial_args {
 		
 		if (!is_array($this->mdList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -890,7 +890,7 @@ class MerchModelService_createBatchMaterial_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -972,7 +972,7 @@ class MerchModelService_createMaterial_args {
 		
 		if (!is_object($this->md)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->md->write($output);
@@ -1373,7 +1373,7 @@ class MerchModelService_getBindRelationship_args {
 		
 		if (!is_array($this->materialIds)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1772,7 +1772,7 @@ class MerchModelService_searchBinding_args {
 		
 		if (!is_object($this->parameters)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->parameters->write($output);
@@ -1950,7 +1950,7 @@ class MerchModelService_searchMaterial_args {
 		
 		if (!is_object($this->parameters)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->parameters->write($output);
@@ -2261,7 +2261,7 @@ class MerchModelService_syncFromJD_args {
 			
 			if (!is_array($this->syncDatum)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2270,7 +2270,7 @@ class MerchModelService_syncFromJD_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2378,7 +2378,7 @@ class MerchModelService_unbind_args {
 		
 		if (!is_object($this->bindInfoModel)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->bindInfoModel->write($output);
@@ -2598,7 +2598,7 @@ class MerchModelService_createBatchMaterial_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2876,7 +2876,7 @@ class MerchModelService_getBindInfoBySku_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2996,7 +2996,7 @@ class MerchModelService_getBindRelationship_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -3007,7 +3007,7 @@ class MerchModelService_getBindRelationship_result {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();
@@ -3100,7 +3100,7 @@ class MerchModelService_getJd3dModel_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3182,7 +3182,7 @@ class MerchModelService_getMaterialModelById_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3264,7 +3264,7 @@ class MerchModelService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3346,7 +3346,7 @@ class MerchModelService_searchBinding_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3428,7 +3428,7 @@ class MerchModelService_searchMaterial_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3658,7 +3658,7 @@ class MerchModelService_syncFromJD_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

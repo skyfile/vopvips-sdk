@@ -6,7 +6,7 @@ namespace Voop\Osp\Base;
 //use Thrift\Type\TMessageType;
 //use Thrift\Transport\TSocket;
 //use Thrift\Transport\TBufferedTransport;
-use Osp\Context\InvocationContextFactory;
+use Voop\Osp\Context\InvocationContextFactory;
 
 class OspStub {
 	private $serviceName; // 服务名
@@ -94,7 +94,7 @@ class OspStub {
 	
 	/**
 	 * 从环境变量提取URL信息
-	 * @throws \Osp\Exception\OspException
+	 * @throws \Voop\Osp\Exception\OspException
 	 * @return multitype:number string
 	 */
 	public function getCallURLInfo($restAddr){

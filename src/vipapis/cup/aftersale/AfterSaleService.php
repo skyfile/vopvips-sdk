@@ -24,7 +24,7 @@ interface AfterSaleServiceIf{
 	
 }
 
-class _AfterSaleServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\aftersale\AfterSaleServiceIf{
+class _AfterSaleServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\cup\aftersale\AfterSaleServiceIf{
 	
 	public function __construct(){
 		
@@ -261,7 +261,7 @@ class AfterSaleService_createReturnApply_args {
 		
 		if (!is_array($this->req_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -270,7 +270,7 @@ class AfterSaleService_createReturnApply_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -567,7 +567,7 @@ class AfterSaleService_updateReturnApplyStatus_args {
 		
 		if (!is_array($this->req_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -576,7 +576,7 @@ class AfterSaleService_updateReturnApplyStatus_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -677,7 +677,7 @@ class AfterSaleService_updateReturnRefundResult_args {
 		
 		if (!is_array($this->req_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -686,7 +686,7 @@ class AfterSaleService_updateReturnRefundResult_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -770,7 +770,7 @@ class AfterSaleService_createReturnApply_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -852,7 +852,7 @@ class AfterSaleService_getReturnApplyStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -934,7 +934,7 @@ class AfterSaleService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1016,7 +1016,7 @@ class AfterSaleService_updateReturnApplyStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1098,7 +1098,7 @@ class AfterSaleService_updateReturnRefundResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

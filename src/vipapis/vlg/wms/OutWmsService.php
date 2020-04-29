@@ -24,7 +24,7 @@ interface OutWmsServiceIf{
 	
 	public function deliverSaleOrder( $sysKey, $warehouse, $sale_orders);
 	
-	public function getGlobalDeliverBatch( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutWmsGlobalDeliverBatchParam $globalDeliverBatchInfo);
+	public function getGlobalDeliverBatch( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutWmsGlobalDeliverBatchParam $globalDeliverBatchInfo);
 	
 	public function getOrders( $sysKey, $warehouse, $orderSnList, $num);
 	
@@ -38,19 +38,19 @@ interface OutWmsServiceIf{
 	
 	public function getReturnOrders( $sysKey, $warehouse, $num);
 	
-	public function getTransferLadingBillS( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutWmsLadingBillIDLParam $requestParam);
+	public function getTransferLadingBillS( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutWmsLadingBillIDLParam $requestParam);
 	
 	public function healthCheck();
 	
 	public function pushOrderStatusList( $sysKey, $warehouse, $order_status_detail_list);
 	
-	public function pushOutInbShipment( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutInbShipmentInfo $outInbShipmentInfo);
+	public function pushOutInbShipment( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutInbShipmentInfo $outInbShipmentInfo);
 	
 	public function pushOutWmsOrderBatch( $sysKey, $warehouse, $warehouseCode, $orderBatchInfos);
 	
-	public function pushOutZcode( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutWmsZcodeInfo $outWmsZcodeInfo);
+	public function pushOutZcode( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutWmsZcodeInfo $outWmsZcodeInfo);
 	
-	public function updateCarrierStatus( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\CarrierInfoRequest $carrierInfoRequest);
+	public function updateCarrierStatus( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\CarrierInfoRequest $carrierInfoRequest);
 	
 	public function updatePoBatchStatus( $sysKey, $warehouse, $batch_nos);
 	
@@ -62,7 +62,7 @@ interface OutWmsServiceIf{
 	
 }
 
-class _OutWmsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms\OutWmsServiceIf{
+class _OutWmsServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\vlg\wms\OutWmsServiceIf{
 	
 	public function __construct(){
 		
@@ -262,13 +262,13 @@ class _OutWmsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	}
 	
 	
-	public function getGlobalDeliverBatch( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutWmsGlobalDeliverBatchParam $globalDeliverBatchInfo){
+	public function getGlobalDeliverBatch( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutWmsGlobalDeliverBatchParam $globalDeliverBatchInfo){
 		
 		$this->send_getGlobalDeliverBatch( $sysKey, $warehouse, $globalDeliverBatchInfo);
 		return $this->recv_getGlobalDeliverBatch();
 	}
 	
-	public function send_getGlobalDeliverBatch( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutWmsGlobalDeliverBatchParam $globalDeliverBatchInfo){
+	public function send_getGlobalDeliverBatch( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutWmsGlobalDeliverBatchParam $globalDeliverBatchInfo){
 		
 		$this->initInvocation("getGlobalDeliverBatch");
 		$args = new \Voop\vipapis\vlg\wms\OutWmsService_getGlobalDeliverBatch_args();
@@ -502,13 +502,13 @@ class _OutWmsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	}
 	
 	
-	public function getTransferLadingBillS( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutWmsLadingBillIDLParam $requestParam){
+	public function getTransferLadingBillS( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutWmsLadingBillIDLParam $requestParam){
 		
 		$this->send_getTransferLadingBillS( $sysKey, $warehouse, $requestParam);
 		return $this->recv_getTransferLadingBillS();
 	}
 	
-	public function send_getTransferLadingBillS( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutWmsLadingBillIDLParam $requestParam){
+	public function send_getTransferLadingBillS( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutWmsLadingBillIDLParam $requestParam){
 		
 		$this->initInvocation("getTransferLadingBillS");
 		$args = new \Voop\vipapis\vlg\wms\OutWmsService_getTransferLadingBillS_args();
@@ -592,13 +592,13 @@ class _OutWmsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	}
 	
 	
-	public function pushOutInbShipment( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutInbShipmentInfo $outInbShipmentInfo){
+	public function pushOutInbShipment( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutInbShipmentInfo $outInbShipmentInfo){
 		
 		$this->send_pushOutInbShipment( $sysKey, $warehouse, $outInbShipmentInfo);
 		return $this->recv_pushOutInbShipment();
 	}
 	
-	public function send_pushOutInbShipment( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutInbShipmentInfo $outInbShipmentInfo){
+	public function send_pushOutInbShipment( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutInbShipmentInfo $outInbShipmentInfo){
 		
 		$this->initInvocation("pushOutInbShipment");
 		$args = new \Voop\vipapis\vlg\wms\OutWmsService_pushOutInbShipment_args();
@@ -658,13 +658,13 @@ class _OutWmsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	}
 	
 	
-	public function pushOutZcode( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutWmsZcodeInfo $outWmsZcodeInfo){
+	public function pushOutZcode( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutWmsZcodeInfo $outWmsZcodeInfo){
 		
 		$this->send_pushOutZcode( $sysKey, $warehouse, $outWmsZcodeInfo);
 		return $this->recv_pushOutZcode();
 	}
 	
-	public function send_pushOutZcode( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\OutWmsZcodeInfo $outWmsZcodeInfo){
+	public function send_pushOutZcode( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\OutWmsZcodeInfo $outWmsZcodeInfo){
 		
 		$this->initInvocation("pushOutZcode");
 		$args = new \Voop\vipapis\vlg\wms\OutWmsService_pushOutZcode_args();
@@ -690,13 +690,13 @@ class _OutWmsServiceClient extends \Osp\Base\OspStub implements \vipapis\vlg\wms
 	}
 	
 	
-	public function updateCarrierStatus( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\CarrierInfoRequest $carrierInfoRequest){
+	public function updateCarrierStatus( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\CarrierInfoRequest $carrierInfoRequest){
 		
 		$this->send_updateCarrierStatus( $sysKey, $warehouse, $carrierInfoRequest);
 		return $this->recv_updateCarrierStatus();
 	}
 	
-	public function send_updateCarrierStatus( $sysKey, $warehouse,\com\vip\sce\vlg\osp\wms\service\CarrierInfoRequest $carrierInfoRequest){
+	public function send_updateCarrierStatus( $sysKey, $warehouse,\Voop\com\vip\sce\vlg\osp\wms\service\CarrierInfoRequest $carrierInfoRequest){
 		
 		$this->initInvocation("updateCarrierStatus");
 		$args = new \Voop\vipapis\vlg\wms\OutWmsService_updateCarrierStatus_args();
@@ -981,7 +981,7 @@ class OutWmsService_callbackOrders_args {
 		
 		if (!is_array($this->orderSnList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1131,7 +1131,7 @@ class OutWmsService_callbackOutOubShipment_args {
 		
 		if (!is_array($this->orderSns)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1281,7 +1281,7 @@ class OutWmsService_callbackOutZcodeApplys_args {
 		
 		if (!is_array($this->appNums)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1431,7 +1431,7 @@ class OutWmsService_callbackReturnOrders_args {
 		
 		if (!is_array($this->ids)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1583,7 +1583,7 @@ class OutWmsService_deliverOrderContainer_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1592,7 +1592,7 @@ class OutWmsService_deliverOrderContainer_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1741,7 +1741,7 @@ class OutWmsService_deliverSaleOrder_args {
 		
 		if (!is_array($this->sale_orders)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1750,7 +1750,7 @@ class OutWmsService_deliverSaleOrder_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1880,7 +1880,7 @@ class OutWmsService_getGlobalDeliverBatch_args {
 		
 		if (!is_object($this->globalDeliverBatchInfo)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->globalDeliverBatchInfo->write($output);
@@ -2044,7 +2044,7 @@ class OutWmsService_getOrders_args {
 			
 			if (!is_array($this->orderSnList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2373,7 +2373,7 @@ class OutWmsService_getOutWmsPackageTransferOrders_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2382,7 +2382,7 @@ class OutWmsService_getOutWmsPackageTransferOrders_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2763,7 +2763,7 @@ class OutWmsService_getPoBatchList_args {
 			
 			if (!is_array($this->batch_no_list)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3034,7 +3034,7 @@ class OutWmsService_getTransferLadingBillS_args {
 		
 		if (!is_object($this->requestParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->requestParam->write($output);
@@ -3225,7 +3225,7 @@ class OutWmsService_pushOrderStatusList_args {
 		
 		if (!is_array($this->order_status_detail_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3234,7 +3234,7 @@ class OutWmsService_pushOrderStatusList_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3364,7 +3364,7 @@ class OutWmsService_pushOutInbShipment_args {
 		
 		if (!is_object($this->outInbShipmentInfo)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->outInbShipmentInfo->write($output);
@@ -3537,7 +3537,7 @@ class OutWmsService_pushOutWmsOrderBatch_args {
 		
 		if (!is_array($this->orderBatchInfos)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3546,7 +3546,7 @@ class OutWmsService_pushOutWmsOrderBatch_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3676,7 +3676,7 @@ class OutWmsService_pushOutZcode_args {
 		
 		if (!is_object($this->outWmsZcodeInfo)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->outWmsZcodeInfo->write($output);
@@ -3802,7 +3802,7 @@ class OutWmsService_updateCarrierStatus_args {
 		
 		if (!is_object($this->carrierInfoRequest)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->carrierInfoRequest->write($output);
@@ -3945,7 +3945,7 @@ class OutWmsService_updatePoBatchStatus_args {
 		
 		if (!is_array($this->batch_nos)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4097,7 +4097,7 @@ class OutWmsService_uploadInvAdjustment_args {
 		
 		if (!is_array($this->invAdjustments)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4106,7 +4106,7 @@ class OutWmsService_uploadInvAdjustment_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4255,7 +4255,7 @@ class OutWmsService_uploadReturnOrderStatus_args {
 		
 		if (!is_array($this->details)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4264,7 +4264,7 @@ class OutWmsService_uploadReturnOrderStatus_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4413,7 +4413,7 @@ class OutWmsService_uploadReturnOutDetail_args {
 		
 		if (!is_array($this->details)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4422,7 +4422,7 @@ class OutWmsService_uploadReturnOutDetail_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4506,7 +4506,7 @@ class OutWmsService_callbackOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4588,7 +4588,7 @@ class OutWmsService_callbackOutOubShipment_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4670,7 +4670,7 @@ class OutWmsService_callbackOutZcodeApplys_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4752,7 +4752,7 @@ class OutWmsService_callbackReturnOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4834,7 +4834,7 @@ class OutWmsService_deliverOrderContainer_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4916,7 +4916,7 @@ class OutWmsService_deliverSaleOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4998,7 +4998,7 @@ class OutWmsService_getGlobalDeliverBatch_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5080,7 +5080,7 @@ class OutWmsService_getOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5162,7 +5162,7 @@ class OutWmsService_getOutOubShipments_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5244,7 +5244,7 @@ class OutWmsService_getOutWmsPackageTransferOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5326,7 +5326,7 @@ class OutWmsService_getOutZcodeApplys_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5408,7 +5408,7 @@ class OutWmsService_getPoBatchList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5490,7 +5490,7 @@ class OutWmsService_getReturnOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5572,7 +5572,7 @@ class OutWmsService_getTransferLadingBillS_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5654,7 +5654,7 @@ class OutWmsService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5736,7 +5736,7 @@ class OutWmsService_pushOrderStatusList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5818,7 +5818,7 @@ class OutWmsService_pushOutInbShipment_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5900,7 +5900,7 @@ class OutWmsService_pushOutWmsOrderBatch_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5982,7 +5982,7 @@ class OutWmsService_pushOutZcode_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6064,7 +6064,7 @@ class OutWmsService_updateCarrierStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6146,7 +6146,7 @@ class OutWmsService_updatePoBatchStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6228,7 +6228,7 @@ class OutWmsService_uploadInvAdjustment_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6310,7 +6310,7 @@ class OutWmsService_uploadReturnOrderStatus_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6392,7 +6392,7 @@ class OutWmsService_uploadReturnOutDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -20,7 +20,7 @@ interface ProcessTemplateServiceIf{
 	
 }
 
-class _ProcessTemplateServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\common\process\template\ProcessTemplateServiceIf{
+class _ProcessTemplateServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\common\process\template\ProcessTemplateServiceIf{
 	
 	public function __construct(){
 		
@@ -178,7 +178,7 @@ class ProcessTemplateService_createProcessTemplate_args {
 			
 			if (!is_object($this->createProcessTemplateReq)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->createProcessTemplateReq->write($output);
@@ -306,7 +306,7 @@ class ProcessTemplateService_updateProcessTemplate_args {
 			
 			if (!is_object($this->updateProcessTemplateReq)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->updateProcessTemplateReq->write($output);
@@ -388,7 +388,7 @@ class ProcessTemplateService_createProcessTemplate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -470,7 +470,7 @@ class ProcessTemplateService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -552,7 +552,7 @@ class ProcessTemplateService_updateProcessTemplate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

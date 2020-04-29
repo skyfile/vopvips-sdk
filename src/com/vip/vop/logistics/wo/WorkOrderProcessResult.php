@@ -116,7 +116,7 @@ class WorkOrderProcessResult {
 		
 		if (!is_object($this->rely_content)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->rely_content->write($output);

@@ -22,7 +22,7 @@ interface ProductSchemaServiceIf{
 	
 }
 
-class _ProductSchemaServiceClient extends \Osp\Base\OspStub implements \vipapis\product\ProductSchemaServiceIf{
+class _ProductSchemaServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\product\ProductSchemaServiceIf{
 	
 	public function __construct(){
 		
@@ -206,7 +206,7 @@ class ProductSchemaService_createProductBySchema_args {
 		
 		if (!is_object($this->createProductSchemaRequest)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->createProductSchemaRequest->write($output);
@@ -284,7 +284,7 @@ class ProductSchemaService_getProductSchema_args {
 		
 		if (!is_object($this->getProductSchemaRequest)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->getProductSchemaRequest->write($output);
@@ -408,7 +408,7 @@ class ProductSchemaService_updateProductBySchema_args {
 		
 		if (!is_object($this->updateProductSchemaRequest)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->updateProductSchemaRequest->write($output);
@@ -507,7 +507,7 @@ class ProductSchemaService_createProductBySchema_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -516,7 +516,7 @@ class ProductSchemaService_createProductBySchema_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -676,7 +676,7 @@ class ProductSchemaService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -758,7 +758,7 @@ class ProductSchemaService_updateProductBySchema_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

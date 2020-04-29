@@ -190,7 +190,7 @@ class MpInvoiceIssueResultRequestModel {
 			
 			if (!is_object($this->mpInvoiceIssueResultModel)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->mpInvoiceIssueResultModel->write($output);
@@ -205,7 +205,7 @@ class MpInvoiceIssueResultRequestModel {
 			
 			if (!is_object($this->invoiceIssueResultMessage)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->invoiceIssueResultMessage->write($output);

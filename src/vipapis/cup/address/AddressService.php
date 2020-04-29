@@ -18,7 +18,7 @@ interface AddressServiceIf{
 	
 }
 
-class _AddressServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\address\AddressServiceIf{
+class _AddressServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\cup\address\AddressServiceIf{
 	
 	public function __construct(){
 		
@@ -346,7 +346,7 @@ class AddressService_getVipAddress_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -428,7 +428,7 @@ class AddressService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

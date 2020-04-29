@@ -191,7 +191,7 @@ class ItemImage {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\vop\cup\api\product\OperationMode::$__names;
+				$names = \Voop\com\vip\vop\cup\api\product\OperationMode::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

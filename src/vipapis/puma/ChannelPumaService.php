@@ -18,7 +18,7 @@ interface ChannelPumaServiceIf{
 	
 }
 
-class _ChannelPumaServiceClient extends \Osp\Base\OspStub implements \vipapis\puma\ChannelPumaServiceIf{
+class _ChannelPumaServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\puma\ChannelPumaServiceIf{
 	
 	public function __construct(){
 		
@@ -146,7 +146,7 @@ class ChannelPumaService_getPumaProducts_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -272,7 +272,7 @@ class ChannelPumaService_getPumaProducts_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -354,7 +354,7 @@ class ChannelPumaService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

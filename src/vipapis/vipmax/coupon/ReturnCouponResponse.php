@@ -110,7 +110,7 @@ class ReturnCouponResponse {
 			
 			if (!is_array($this->returnCoupons)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();

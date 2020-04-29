@@ -22,7 +22,7 @@ interface FendiOrderServiceIf{
 	
 }
 
-class _FendiOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcloud\order\FendiOrderServiceIf{
+class _FendiOrderServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\order\FendiOrderServiceIf{
 	
 	public function __construct(){
 		
@@ -554,7 +554,7 @@ class FendiOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

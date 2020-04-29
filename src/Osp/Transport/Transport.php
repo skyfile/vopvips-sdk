@@ -22,7 +22,7 @@
 
 namespace Voop\Osp\Transport;
 
-use Osp\StringFunc\StringFuncFactory;
+use Voop\Osp\StringFunc\StringFuncFactory;
 
 /**
  * Base interface for a transport agent.

@@ -211,7 +211,7 @@ class OrderCommentRecord {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\comment\api\admin\service\StarScore::$__names;
+				$names = \Voop\com\vip\comment\api\admin\service\StarScore::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -234,7 +234,7 @@ class OrderCommentRecord {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\comment\api\admin\service\StarScore::$__names;
+				$names = \Voop\com\vip\comment\api\admin\service\StarScore::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -257,7 +257,7 @@ class OrderCommentRecord {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\comment\api\admin\service\StarScore::$__names;
+				$names = \Voop\com\vip\comment\api\admin\service\StarScore::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -280,7 +280,7 @@ class OrderCommentRecord {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\comment\api\admin\service\Satisfaction::$__names;
+				$names = \Voop\com\vip\comment\api\admin\service\Satisfaction::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

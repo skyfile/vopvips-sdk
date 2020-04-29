@@ -18,7 +18,7 @@ interface ProductCommonServiceIf{
 	
 }
 
-class _ProductCommonServiceClient extends \Osp\Base\OspStub implements \vipapis\common\ProductCommonServiceIf{
+class _ProductCommonServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\common\ProductCommonServiceIf{
 	
 	public function __construct(){
 		
@@ -194,7 +194,7 @@ class ProductCommonService_zoomImage_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -276,7 +276,7 @@ class ProductCommonService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

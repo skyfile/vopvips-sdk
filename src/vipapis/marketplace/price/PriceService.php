@@ -20,7 +20,7 @@ interface PriceServiceIf{
 	
 }
 
-class _PriceServiceClient extends \Osp\Base\OspStub implements \vipapis\marketplace\price\PriceServiceIf{
+class _PriceServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\marketplace\price\PriceServiceIf{
 	
 	public function __construct(){
 		
@@ -416,7 +416,7 @@ class PriceService_getSkuPrice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -498,7 +498,7 @@ class PriceService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -580,7 +580,7 @@ class PriceService_updateSkuPrice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

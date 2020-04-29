@@ -46,7 +46,7 @@ interface Jit3PLDeliveryServiceIf{
 	
 }
 
-class _Jit3PLDeliveryServiceClient extends \Osp\Base\OspStub implements \vipapis\delivery\Jit3PLDeliveryServiceIf{
+class _Jit3PLDeliveryServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\delivery\Jit3PLDeliveryServiceIf{
 	
 	public function __construct(){
 		
@@ -942,7 +942,7 @@ class Jit3PLDeliveryService_createDelivery_args {
 		if(true) {
 			
 			
-			$names = \vipapis\common\Warehouse::$__names;
+			$names = \Voop\vipapis\common\Warehouse::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -1159,7 +1159,7 @@ class Jit3PLDeliveryService_createMultiPoDelivery_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1663,7 +1663,7 @@ class Jit3PLDeliveryService_editDelivery_args {
 		if(true) {
 			
 			
-			$names = \vipapis\common\Warehouse::$__names;
+			$names = \Voop\vipapis\common\Warehouse::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -1946,7 +1946,7 @@ class Jit3PLDeliveryService_editMultiPoDelivery_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -2320,7 +2320,7 @@ class Jit3PLDeliveryService_getDeliveryList_args {
 		if(true) {
 			
 			
-			$names = \vipapis\common\Warehouse::$__names;
+			$names = \Voop\vipapis\common\Warehouse::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -2651,7 +2651,7 @@ class Jit3PLDeliveryService_getMultiPoPickDetail_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -3039,7 +3039,7 @@ class Jit3PLDeliveryService_getPickList_args {
 		if(true) {
 			
 			
-			$names = \vipapis\common\Warehouse::$__names;
+			$names = \Voop\vipapis\common\Warehouse::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -3811,7 +3811,7 @@ class Jit3PLDeliveryService_importDeliveryDetail_args {
 		
 		if (!is_array($this->delivery_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3820,7 +3820,7 @@ class Jit3PLDeliveryService_importDeliveryDetail_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4021,7 +4021,7 @@ class Jit3PLDeliveryService_importMultiPoDeliveryDetail_args {
 		
 		if (!is_array($this->delivery_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4030,7 +4030,7 @@ class Jit3PLDeliveryService_importMultiPoDeliveryDetail_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4188,7 +4188,7 @@ class Jit3PLDeliveryService_createDelivery_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4363,7 +4363,7 @@ class Jit3PLDeliveryService_createPick_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4372,7 +4372,7 @@ class Jit3PLDeliveryService_createPick_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4477,7 +4477,7 @@ class Jit3PLDeliveryService_deleteDeliveryDetail_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4486,7 +4486,7 @@ class Jit3PLDeliveryService_deleteDeliveryDetail_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4716,7 +4716,7 @@ class Jit3PLDeliveryService_getDeliveryGoods_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4798,7 +4798,7 @@ class Jit3PLDeliveryService_getDeliveryList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4880,7 +4880,7 @@ class Jit3PLDeliveryService_getMultiPoPickDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4962,7 +4962,7 @@ class Jit3PLDeliveryService_getPickDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5044,7 +5044,7 @@ class Jit3PLDeliveryService_getPickList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5126,7 +5126,7 @@ class Jit3PLDeliveryService_getPoList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5208,7 +5208,7 @@ class Jit3PLDeliveryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

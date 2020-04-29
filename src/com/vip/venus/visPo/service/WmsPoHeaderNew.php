@@ -801,7 +801,7 @@ class WmsPoHeaderNew {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\venus\po\service\Owner::$__names;
+				$names = \Voop\com\vip\venus\po\service\Owner::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

@@ -231,7 +231,7 @@ class CreatePoRequest {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\ChannelInventoryChannel::$__names;
+				$names = \Voop\com\vip\domain\inventory\ChannelInventoryChannel::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

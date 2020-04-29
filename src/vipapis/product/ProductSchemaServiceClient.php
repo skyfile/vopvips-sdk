@@ -20,7 +20,7 @@ class ProductSchemaServiceClient{
 	
 	private static function regis(){
 		
-		$path = \Osp\Util\PathUtil::getRootPath ();
+		$path = \Voop\Osp\Util\PathUtil::getRootPath ();
 		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
@@ -38,7 +38,7 @@ class ProductSchemaServiceClient{
 		}
 		
 		
-		$ctx = \Osp\Context\InvocationContextFactory::getInstance ();
+		$ctx = \Voop\Osp\Context\InvocationContextFactory::getInstance ();
 		$ip = ProductSchemaServiceClient::$DEFAULT_PROXY_IP;
 		$port = ProductSchemaServiceClient::$DEFAULT_PROXY_PORT;	
 		try{

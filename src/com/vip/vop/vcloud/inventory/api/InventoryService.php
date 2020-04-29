@@ -52,15 +52,15 @@ interface InventoryServiceIf{
 	
 	public function incrUpdateWarehouseSkuInventory( $transId, $warehouseId, $skuId, $quantity, $source);
 	
-	public function listByWarehouseInventoryLogQueryCriteria(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\com\vip\vop\vcloud\common\api\Pagination $pagination);
+	public function listByWarehouseInventoryLogQueryCriteria(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination);
 	
 	public function listChannelSkuInventory( $skuList);
 	
-	public function listChannelSkuInventoryByChannelId( $channelId,\com\vip\vop\vcloud\common\api\Pagination $pagination);
+	public function listChannelSkuInventoryByChannelId( $channelId,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination);
 	
 	public function listWarehouseSkuInventory( $skuList);
 	
-	public function listWarehouseSkuInventoryByWarehouseId( $warehouseId,\com\vip\vop\vcloud\common\api\Pagination $pagination);
+	public function listWarehouseSkuInventoryByWarehouseId( $warehouseId,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination);
 	
 	public function releaseChannelHold(\Voop\com\vip\vop\vcloud\inventory\api\ChannelInventoryRelease $releaseReq);
 	
@@ -72,7 +72,7 @@ interface InventoryServiceIf{
 	
 }
 
-class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcloud\inventory\api\InventoryServiceIf{
+class _InventoryServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\inventory\api\InventoryServiceIf{
 	
 	public function __construct(){
 		
@@ -658,13 +658,13 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function listByWarehouseInventoryLogQueryCriteria(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\com\vip\vop\vcloud\common\api\Pagination $pagination){
+	public function listByWarehouseInventoryLogQueryCriteria(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination){
 		
 		$this->send_listByWarehouseInventoryLogQueryCriteria( $criteria, $pagination);
 		return $this->recv_listByWarehouseInventoryLogQueryCriteria();
 	}
 	
-	public function send_listByWarehouseInventoryLogQueryCriteria(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\com\vip\vop\vcloud\common\api\Pagination $pagination){
+	public function send_listByWarehouseInventoryLogQueryCriteria(\Voop\com\vip\vop\vcloud\inventory\api\WarehouseInventoryLogQueryCriteria $criteria,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination){
 		
 		$this->initInvocation("listByWarehouseInventoryLogQueryCriteria");
 		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listByWarehouseInventoryLogQueryCriteria_args();
@@ -716,13 +716,13 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function listChannelSkuInventoryByChannelId( $channelId,\com\vip\vop\vcloud\common\api\Pagination $pagination){
+	public function listChannelSkuInventoryByChannelId( $channelId,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination){
 		
 		$this->send_listChannelSkuInventoryByChannelId( $channelId, $pagination);
 		return $this->recv_listChannelSkuInventoryByChannelId();
 	}
 	
-	public function send_listChannelSkuInventoryByChannelId( $channelId,\com\vip\vop\vcloud\common\api\Pagination $pagination){
+	public function send_listChannelSkuInventoryByChannelId( $channelId,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination){
 		
 		$this->initInvocation("listChannelSkuInventoryByChannelId");
 		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listChannelSkuInventoryByChannelId_args();
@@ -774,13 +774,13 @@ class _InventoryServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\
 	}
 	
 	
-	public function listWarehouseSkuInventoryByWarehouseId( $warehouseId,\com\vip\vop\vcloud\common\api\Pagination $pagination){
+	public function listWarehouseSkuInventoryByWarehouseId( $warehouseId,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination){
 		
 		$this->send_listWarehouseSkuInventoryByWarehouseId( $warehouseId, $pagination);
 		return $this->recv_listWarehouseSkuInventoryByWarehouseId();
 	}
 	
-	public function send_listWarehouseSkuInventoryByWarehouseId( $warehouseId,\com\vip\vop\vcloud\common\api\Pagination $pagination){
+	public function send_listWarehouseSkuInventoryByWarehouseId( $warehouseId,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination){
 		
 		$this->initInvocation("listWarehouseSkuInventoryByWarehouseId");
 		$args = new \Voop\com\vip\vop\vcloud\inventory\api\InventoryService_listWarehouseSkuInventoryByWarehouseId_args();
@@ -1009,7 +1009,7 @@ class InventoryService_batchForceHoldChannelInventory_args {
 		
 		if (!is_array($this->reqList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1018,7 +1018,7 @@ class InventoryService_batchForceHoldChannelInventory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1100,7 +1100,7 @@ class InventoryService_batchForceHoldOneWarehouseInventory_args {
 		
 		if (!is_object($this->holdReq)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->holdReq->write($output);
@@ -1199,7 +1199,7 @@ class InventoryService_batchFullUpdateChannelSkuInventory_args {
 			
 			if (!is_array($this->reqList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1208,7 +1208,7 @@ class InventoryService_batchFullUpdateChannelSkuInventory_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1332,7 +1332,7 @@ class InventoryService_batchFullUpdateWarehouseSkuInventory_args {
 			
 			if (!is_array($this->reqList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1341,7 +1341,7 @@ class InventoryService_batchFullUpdateWarehouseSkuInventory_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1453,7 +1453,7 @@ class InventoryService_batchHoldChannelInventory_args {
 		
 		if (!is_array($this->reqList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1462,7 +1462,7 @@ class InventoryService_batchHoldChannelInventory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1544,7 +1544,7 @@ class InventoryService_batchHoldOneWarehouseInventory_args {
 		
 		if (!is_object($this->holdReq)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->holdReq->write($output);
@@ -1643,7 +1643,7 @@ class InventoryService_batchIncrUpdateChannelSkuInventory_args {
 			
 			if (!is_array($this->reqList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1652,7 +1652,7 @@ class InventoryService_batchIncrUpdateChannelSkuInventory_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1776,7 +1776,7 @@ class InventoryService_batchIncrUpdateWarehouseSkuInventory_args {
 			
 			if (!is_array($this->reqList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1785,7 +1785,7 @@ class InventoryService_batchIncrUpdateWarehouseSkuInventory_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1897,7 +1897,7 @@ class InventoryService_batchReleaseChannelHold_args {
 		
 		if (!is_array($this->reqList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1906,7 +1906,7 @@ class InventoryService_batchReleaseChannelHold_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2732,7 +2732,7 @@ class InventoryService_holdChannelInventory_args {
 			
 			if (!is_object($this->holdReq)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->holdReq->write($output);
@@ -2814,7 +2814,7 @@ class InventoryService_holdForceChannelInventory_args {
 			
 			if (!is_object($this->holdReq)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->holdReq->write($output);
@@ -3261,7 +3261,7 @@ class InventoryService_listByWarehouseInventoryLogQueryCriteria_args {
 			
 			if (!is_object($this->criteria)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->criteria->write($output);
@@ -3276,7 +3276,7 @@ class InventoryService_listByWarehouseInventoryLogQueryCriteria_args {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -3377,7 +3377,7 @@ class InventoryService_listChannelSkuInventory_args {
 			
 			if (!is_array($this->skuList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3386,7 +3386,7 @@ class InventoryService_listChannelSkuInventory_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3500,7 +3500,7 @@ class InventoryService_listChannelSkuInventoryByChannelId_args {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -3599,7 +3599,7 @@ class InventoryService_listWarehouseSkuInventory_args {
 		
 		if (!is_array($this->skuList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3608,7 +3608,7 @@ class InventoryService_listWarehouseSkuInventory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3720,7 +3720,7 @@ class InventoryService_listWarehouseSkuInventoryByWarehouseId_args {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -3802,7 +3802,7 @@ class InventoryService_releaseChannelHold_args {
 			
 			if (!is_object($this->releaseReq)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->releaseReq->write($output);
@@ -4142,7 +4142,7 @@ class InventoryService_updateInventory_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -4262,7 +4262,7 @@ class InventoryService_batchForceHoldChannelInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -4273,7 +4273,7 @@ class InventoryService_batchForceHoldChannelInventory_result {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();
@@ -4282,7 +4282,7 @@ class InventoryService_batchForceHoldChannelInventory_result {
 					
 					if (!is_object($iter1)) {
 						
-						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 					}
 					
 					$xfer += $iter1->write($output);
@@ -4461,7 +4461,7 @@ class InventoryService_batchFullUpdateChannelSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4470,7 +4470,7 @@ class InventoryService_batchFullUpdateChannelSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4575,7 +4575,7 @@ class InventoryService_batchFullUpdateWarehouseSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4584,7 +4584,7 @@ class InventoryService_batchFullUpdateWarehouseSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4710,7 +4710,7 @@ class InventoryService_batchHoldChannelInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -4721,7 +4721,7 @@ class InventoryService_batchHoldChannelInventory_result {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();
@@ -4730,7 +4730,7 @@ class InventoryService_batchHoldChannelInventory_result {
 					
 					if (!is_object($iter1)) {
 						
-						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 					}
 					
 					$xfer += $iter1->write($output);
@@ -4820,7 +4820,7 @@ class InventoryService_batchHoldOneWarehouseInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4921,7 +4921,7 @@ class InventoryService_batchIncrUpdateChannelSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4930,7 +4930,7 @@ class InventoryService_batchIncrUpdateChannelSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5035,7 +5035,7 @@ class InventoryService_batchIncrUpdateWarehouseSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5044,7 +5044,7 @@ class InventoryService_batchIncrUpdateWarehouseSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5170,7 +5170,7 @@ class InventoryService_batchReleaseChannelHold_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -5181,7 +5181,7 @@ class InventoryService_batchReleaseChannelHold_result {
 				
 				if (!is_array($viter0)){
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$output->writeListBegin();
@@ -5190,7 +5190,7 @@ class InventoryService_batchReleaseChannelHold_result {
 					
 					if (!is_object($iter1)) {
 						
-						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+						throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 					}
 					
 					$xfer += $iter1->write($output);
@@ -5378,7 +5378,7 @@ class InventoryService_getChannelSkuInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5600,7 +5600,7 @@ class InventoryService_getWarehouseSkuInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5682,7 +5682,7 @@ class InventoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5783,7 +5783,7 @@ class InventoryService_holdChannelInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5792,7 +5792,7 @@ class InventoryService_holdChannelInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5897,7 +5897,7 @@ class InventoryService_holdForceChannelInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5906,7 +5906,7 @@ class InventoryService_holdForceChannelInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6090,7 +6090,7 @@ class InventoryService_listByWarehouseInventoryLogQueryCriteria_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6191,7 +6191,7 @@ class InventoryService_listChannelSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6200,7 +6200,7 @@ class InventoryService_listChannelSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6286,7 +6286,7 @@ class InventoryService_listChannelSkuInventoryByChannelId_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6387,7 +6387,7 @@ class InventoryService_listWarehouseSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6396,7 +6396,7 @@ class InventoryService_listWarehouseSkuInventory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6482,7 +6482,7 @@ class InventoryService_listWarehouseSkuInventoryByWarehouseId_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6583,7 +6583,7 @@ class InventoryService_releaseChannelHold_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6592,7 +6592,7 @@ class InventoryService_releaseChannelHold_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

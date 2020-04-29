@@ -18,7 +18,7 @@ interface RedirectServiceIf{
 	
 }
 
-class _RedirectServiceClient extends \Osp\Base\OspStub implements \vipapis\informal\RedirectServiceIf{
+class _RedirectServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\informal\RedirectServiceIf{
 	
 	public function __construct(){
 		
@@ -235,7 +235,7 @@ class RedirectService_doRedirect_args {
 			
 			if (!is_array($this->getValues)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -259,7 +259,7 @@ class RedirectService_doRedirect_args {
 			
 			if (!is_array($this->postValues)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -470,7 +470,7 @@ class RedirectService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

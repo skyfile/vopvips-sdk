@@ -91,7 +91,7 @@ class VipLinkCheckVO {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\adp\api\open\service\VipLinkTypeEnum::$__names;
+				$names = \Voop\com\vip\adp\api\open\service\VipLinkTypeEnum::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

@@ -20,7 +20,7 @@ class SvipOspServiceV2Client{
 	
 	private static function regis(){
 		
-		$path = \Osp\Util\PathUtil::getRootPath ();
+		$path = \Voop\Osp\Util\PathUtil::getRootPath ();
 		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
@@ -38,7 +38,7 @@ class SvipOspServiceV2Client{
 		}
 		
 		
-		$ctx = \Osp\Context\InvocationContextFactory::getInstance ();
+		$ctx = \Voop\Osp\Context\InvocationContextFactory::getInstance ();
 		$ip = SvipOspServiceV2Client::$DEFAULT_PROXY_IP;
 		$port = SvipOspServiceV2Client::$DEFAULT_PROXY_PORT;	
 		try{

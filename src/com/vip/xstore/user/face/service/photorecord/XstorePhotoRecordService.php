@@ -18,7 +18,7 @@ interface XstorePhotoRecordServiceIf{
 	
 }
 
-class _XstorePhotoRecordServiceClient extends \Osp\Base\OspStub implements \com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordServiceIf{
+class _XstorePhotoRecordServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordServiceIf{
 	
 	public function __construct(){
 		
@@ -192,7 +192,7 @@ class XstorePhotoRecordService_uploadPhotos_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -272,7 +272,7 @@ class XstorePhotoRecordService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -354,7 +354,7 @@ class XstorePhotoRecordService_uploadPhotos_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

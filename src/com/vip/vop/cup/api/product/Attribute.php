@@ -151,7 +151,7 @@ class Attribute {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\vop\cup\api\product\AttributeType::$__names;
+				$names = \Voop\com\vip\vop\cup\api\product\AttributeType::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -174,7 +174,7 @@ class Attribute {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\vop\cup\api\product\DataType::$__names;
+				$names = \Voop\com\vip\vop\cup\api\product\DataType::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -316,7 +316,7 @@ class Attribute {
 			
 			if (!is_array($this->values)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -325,7 +325,7 @@ class Attribute {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

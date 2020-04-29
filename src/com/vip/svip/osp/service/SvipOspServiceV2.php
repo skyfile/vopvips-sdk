@@ -40,7 +40,7 @@ interface SvipOspServiceV2If{
 	
 	public function getBrandGiftIdList(\Voop\com\vip\svip\osp\service\BrandGiftRequest $request);
 	
-	public function getBuyLimitResult(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param);
+	public function getBuyLimitResult(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\Voop\com\vip\svip\osp\service\BuyLimitRequestParam $param);
 	
 	public function getGoodsIdByPickNo(\Voop\com\vip\svip\osp\service\GetGoodsIdByPickNoReq $request);
 	
@@ -84,7 +84,7 @@ interface SvipOspServiceV2If{
 	
 	public function isSvipBanArea( $areaId);
 	
-	public function isSvipBuyLimit(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param);
+	public function isSvipBuyLimit(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\Voop\com\vip\svip\osp\service\BuyLimitRequestParam $param);
 	
 	public function isSvipLimitUser(\Voop\com\vip\svip\osp\service\BuyLimitStateRequest $request);
 	
@@ -94,7 +94,7 @@ interface SvipOspServiceV2If{
 	
 	public function joinTencentVideoMemberAtVipSide(\Voop\com\vip\svip\osp\service\DoubleSvipRequest $request);
 	
-	public function offlineChannelTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header,\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo);
+	public function offlineChannelTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header,\Voop\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo);
 	
 	public function openLimitCheck(\Voop\com\vip\svip\osp\service\OpenLimitRequest $request);
 	
@@ -120,7 +120,7 @@ interface SvipOspServiceV2If{
 	
 	public function svipCompensateForCommon(\Voop\com\vip\svip\osp\service\SvipCompensateParam $param);
 	
-	public function svipUserOperate(\Voop\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck);
+	public function svipUserOperate(\Voop\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\Voop\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck);
 	
 	public function syncCancelResult();
 	
@@ -136,7 +136,7 @@ interface SvipOspServiceV2If{
 	
 }
 
-class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip\osp\service\SvipOspServiceV2If{
+class _SvipOspServiceV2Client extends \Voop\Osp\Base\OspStub implements \com\vip\svip\osp\service\SvipOspServiceV2If{
 	
 	public function __construct(){
 		
@@ -536,13 +536,13 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function getBuyLimitResult(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
+	public function getBuyLimitResult(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\Voop\com\vip\svip\osp\service\BuyLimitRequestParam $param){
 		
 		$this->send_getBuyLimitResult( $header, $param);
 		return $this->recv_getBuyLimitResult();
 	}
 	
-	public function send_getBuyLimitResult(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
+	public function send_getBuyLimitResult(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\Voop\com\vip\svip\osp\service\BuyLimitRequestParam $param){
 		
 		$this->initInvocation("getBuyLimitResult");
 		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_getBuyLimitResult_args();
@@ -1150,13 +1150,13 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function isSvipBuyLimit(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
+	public function isSvipBuyLimit(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\Voop\com\vip\svip\osp\service\BuyLimitRequestParam $param){
 		
 		$this->send_isSvipBuyLimit( $header, $param);
 		return $this->recv_isSvipBuyLimit();
 	}
 	
-	public function send_isSvipBuyLimit(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\com\vip\svip\osp\service\BuyLimitRequestParam $param){
+	public function send_isSvipBuyLimit(\Voop\com\vip\svip\osp\service\BuyLimitRequestHeader $header,\Voop\com\vip\svip\osp\service\BuyLimitRequestParam $param){
 		
 		$this->initInvocation("isSvipBuyLimit");
 		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_isSvipBuyLimit_args();
@@ -1292,13 +1292,13 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function offlineChannelTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header,\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo){
+	public function offlineChannelTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header,\Voop\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo){
 		
 		$this->send_offlineChannelTrySvip( $header, $channelInfo);
 		return $this->recv_offlineChannelTrySvip();
 	}
 	
-	public function send_offlineChannelTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header,\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo){
+	public function send_offlineChannelTrySvip(\Voop\com\vip\svip\osp\service\SimpleRequestHeader $header,\Voop\com\vip\svip\osp\service\OfflineChannelInfo $channelInfo){
 		
 		$this->initInvocation("offlineChannelTrySvip");
 		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_offlineChannelTrySvip_args();
@@ -1636,13 +1636,13 @@ class _SvipOspServiceV2Client extends \Osp\Base\OspStub implements \com\vip\svip
 	}
 	
 	
-	public function svipUserOperate(\Voop\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck){
+	public function svipUserOperate(\Voop\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\Voop\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck){
 		
 		$this->send_svipUserOperate( $info, $signCheck);
 		return $this->recv_svipUserOperate();
 	}
 	
-	public function send_svipUserOperate(\Voop\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck){
+	public function send_svipUserOperate(\Voop\com\vip\svip\osp\service\SvipUserOperateInfoParam $info,\Voop\com\vip\svip\osp\service\SvipUserOperateSignCheck $signCheck){
 		
 		$this->initInvocation("svipUserOperate");
 		$args = new \Voop\com\vip\svip\osp\service\SvipOspServiceV2_svipUserOperate_args();
@@ -1896,7 +1896,7 @@ class SvipOspServiceV2_SearchSvipHistory_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -1978,7 +1978,7 @@ class SvipOspServiceV2_SvipCompensate_args {
 			
 			if (!is_object($this->param)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->param->write($output);
@@ -2060,7 +2060,7 @@ class SvipOspServiceV2_SvipCompensateByHand_args {
 			
 			if (!is_object($this->param)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->param->write($output);
@@ -2142,7 +2142,7 @@ class SvipOspServiceV2_batchCancel_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2224,7 +2224,7 @@ class SvipOspServiceV2_batchCancelV2_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2306,7 +2306,7 @@ class SvipOspServiceV2_bindTxUserAccount_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2388,7 +2388,7 @@ class SvipOspServiceV2_brandGiftDetailList_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2470,7 +2470,7 @@ class SvipOspServiceV2_checkTxAccLimit_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2552,7 +2552,7 @@ class SvipOspServiceV2_createThirdSvipToken_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2634,7 +2634,7 @@ class SvipOspServiceV2_doCancelJob_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2716,7 +2716,7 @@ class SvipOspServiceV2_doCancelSvipUser_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2798,7 +2798,7 @@ class SvipOspServiceV2_draw_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2880,7 +2880,7 @@ class SvipOspServiceV2_getBindAccountInfo_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -2962,7 +2962,7 @@ class SvipOspServiceV2_getBrandGiftIdList_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3063,7 +3063,7 @@ class SvipOspServiceV2_getBuyLimitResult_args {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -3074,7 +3074,7 @@ class SvipOspServiceV2_getBuyLimitResult_args {
 		
 		if (!is_object($this->param)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->param->write($output);
@@ -3154,7 +3154,7 @@ class SvipOspServiceV2_getGoodsIdByPickNo_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3236,7 +3236,7 @@ class SvipOspServiceV2_getGroupValuesConf_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3318,7 +3318,7 @@ class SvipOspServiceV2_getOpGoodsDetailList_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3400,7 +3400,7 @@ class SvipOspServiceV2_getOpGoodsIds_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3482,7 +3482,7 @@ class SvipOspServiceV2_getPmsPriceByProductId_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3564,7 +3564,7 @@ class SvipOspServiceV2_getSumCount_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3764,7 +3764,7 @@ class SvipOspServiceV2_getSvipEquityInfo_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -3844,7 +3844,7 @@ class SvipOspServiceV2_getSvipGoodsByMid_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -3926,7 +3926,7 @@ class SvipOspServiceV2_getSvipGoodsDetail_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4008,7 +4008,7 @@ class SvipOspServiceV2_getSvipInfo4AppClub_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4088,7 +4088,7 @@ class SvipOspServiceV2_getSvipMainInfo_args {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -4168,7 +4168,7 @@ class SvipOspServiceV2_getSvipUserHealth_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -4250,7 +4250,7 @@ class SvipOspServiceV2_getSvipUserInfo_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -4406,7 +4406,7 @@ class SvipOspServiceV2_getTheTimeSvipPrice_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4488,7 +4488,7 @@ class SvipOspServiceV2_getUnionSvipGoodsInfo_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4570,7 +4570,7 @@ class SvipOspServiceV2_getUserAttendInfo_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4791,7 +4791,7 @@ class SvipOspServiceV2_isSvipBuyLimit_args {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -4802,7 +4802,7 @@ class SvipOspServiceV2_isSvipBuyLimit_args {
 		
 		if (!is_object($this->param)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->param->write($output);
@@ -4882,7 +4882,7 @@ class SvipOspServiceV2_isSvipLimitUser_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -4964,7 +4964,7 @@ class SvipOspServiceV2_isSvipLimitUserByPhone_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5046,7 +5046,7 @@ class SvipOspServiceV2_joinSvipForTencentVideoSide_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5128,7 +5128,7 @@ class SvipOspServiceV2_joinTencentVideoMemberAtVipSide_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5229,7 +5229,7 @@ class SvipOspServiceV2_offlineChannelTrySvip_args {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -5240,7 +5240,7 @@ class SvipOspServiceV2_offlineChannelTrySvip_args {
 		
 		if (!is_object($this->channelInfo)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->channelInfo->write($output);
@@ -5320,7 +5320,7 @@ class SvipOspServiceV2_openLimitCheck_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5402,7 +5402,7 @@ class SvipOspServiceV2_prepareDoubleSvipAccess_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5484,7 +5484,7 @@ class SvipOspServiceV2_receivePrize_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5844,7 +5844,7 @@ class SvipOspServiceV2_scrapeAction_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -5926,7 +5926,7 @@ class SvipOspServiceV2_searchSvipTXHistory_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -6006,7 +6006,7 @@ class SvipOspServiceV2_specialMemberTrySvip_args {
 		
 		if (!is_object($this->header)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->header->write($output);
@@ -6086,7 +6086,7 @@ class SvipOspServiceV2_svipCompensateForCommon_args {
 			
 			if (!is_object($this->param)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->param->write($output);
@@ -6187,7 +6187,7 @@ class SvipOspServiceV2_svipUserOperate_args {
 		
 		if (!is_object($this->info)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->info->write($output);
@@ -6198,7 +6198,7 @@ class SvipOspServiceV2_svipUserOperate_args {
 		
 		if (!is_object($this->signCheck)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->signCheck->write($output);
@@ -6324,7 +6324,7 @@ class SvipOspServiceV2_thirdOpenLimitCheck_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -6406,7 +6406,7 @@ class SvipOspServiceV2_thirdOpenSvip_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -6488,7 +6488,7 @@ class SvipOspServiceV2_txGetSvipToken_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -6570,7 +6570,7 @@ class SvipOspServiceV2_txOpenSvip_args {
 			
 			if (!is_object($this->request)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->request->write($output);
@@ -6745,7 +6745,7 @@ class SvipOspServiceV2_SearchSvipHistory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6754,7 +6754,7 @@ class SvipOspServiceV2_SearchSvipHistory_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6840,7 +6840,7 @@ class SvipOspServiceV2_SvipCompensate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6922,7 +6922,7 @@ class SvipOspServiceV2_SvipCompensateByHand_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7004,7 +7004,7 @@ class SvipOspServiceV2_batchCancel_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7086,7 +7086,7 @@ class SvipOspServiceV2_batchCancelV2_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7168,7 +7168,7 @@ class SvipOspServiceV2_bindTxUserAccount_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7269,7 +7269,7 @@ class SvipOspServiceV2_brandGiftDetailList_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -7278,7 +7278,7 @@ class SvipOspServiceV2_brandGiftDetailList_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -7364,7 +7364,7 @@ class SvipOspServiceV2_checkTxAccLimit_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7446,7 +7446,7 @@ class SvipOspServiceV2_createThirdSvipToken_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7528,7 +7528,7 @@ class SvipOspServiceV2_doCancelJob_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7610,7 +7610,7 @@ class SvipOspServiceV2_doCancelSvipUser_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7766,7 +7766,7 @@ class SvipOspServiceV2_getBindAccountInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7848,7 +7848,7 @@ class SvipOspServiceV2_getBrandGiftIdList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -7930,7 +7930,7 @@ class SvipOspServiceV2_getBuyLimitResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8012,7 +8012,7 @@ class SvipOspServiceV2_getGoodsIdByPickNo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8113,7 +8113,7 @@ class SvipOspServiceV2_getGroupValuesConf_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -8122,7 +8122,7 @@ class SvipOspServiceV2_getGroupValuesConf_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -8208,7 +8208,7 @@ class SvipOspServiceV2_getOpGoodsDetailList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8290,7 +8290,7 @@ class SvipOspServiceV2_getOpGoodsIds_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8372,7 +8372,7 @@ class SvipOspServiceV2_getPmsPriceByProductId_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8621,7 +8621,7 @@ class SvipOspServiceV2_getSvipBindInfoByUserId_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -8630,7 +8630,7 @@ class SvipOspServiceV2_getSvipBindInfoByUserId_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -8716,7 +8716,7 @@ class SvipOspServiceV2_getSvipEquityInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8798,7 +8798,7 @@ class SvipOspServiceV2_getSvipGoodsByMid_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8880,7 +8880,7 @@ class SvipOspServiceV2_getSvipGoodsDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -8962,7 +8962,7 @@ class SvipOspServiceV2_getSvipInfo4AppClub_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9044,7 +9044,7 @@ class SvipOspServiceV2_getSvipMainInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9126,7 +9126,7 @@ class SvipOspServiceV2_getSvipUserHealth_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9208,7 +9208,7 @@ class SvipOspServiceV2_getSvipUserInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9290,7 +9290,7 @@ class SvipOspServiceV2_getTencentVipSvipCardInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9372,7 +9372,7 @@ class SvipOspServiceV2_getTheTimeSvipPrice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9602,7 +9602,7 @@ class SvipOspServiceV2_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9758,7 +9758,7 @@ class SvipOspServiceV2_isSvipBuyLimit_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9840,7 +9840,7 @@ class SvipOspServiceV2_isSvipLimitUser_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -9922,7 +9922,7 @@ class SvipOspServiceV2_isSvipLimitUserByPhone_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10004,7 +10004,7 @@ class SvipOspServiceV2_joinSvipForTencentVideoSide_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10086,7 +10086,7 @@ class SvipOspServiceV2_joinTencentVideoMemberAtVipSide_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10168,7 +10168,7 @@ class SvipOspServiceV2_offlineChannelTrySvip_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10250,7 +10250,7 @@ class SvipOspServiceV2_openLimitCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10332,7 +10332,7 @@ class SvipOspServiceV2_prepareDoubleSvipAccess_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10488,7 +10488,7 @@ class SvipOspServiceV2_rejoinTencentMember_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10840,7 +10840,7 @@ class SvipOspServiceV2_searchSvipTXHistory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -10922,7 +10922,7 @@ class SvipOspServiceV2_specialMemberTrySvip_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11004,7 +11004,7 @@ class SvipOspServiceV2_svipCompensateForCommon_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11086,7 +11086,7 @@ class SvipOspServiceV2_svipUserOperate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11217,7 +11217,7 @@ class SvipOspServiceV2_thirdOpenLimitCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11299,7 +11299,7 @@ class SvipOspServiceV2_thirdOpenSvip_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11381,7 +11381,7 @@ class SvipOspServiceV2_txGetSvipToken_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11463,7 +11463,7 @@ class SvipOspServiceV2_txOpenSvip_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -11545,7 +11545,7 @@ class SvipOspServiceV2_vOrderCallSvip_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

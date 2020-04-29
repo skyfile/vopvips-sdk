@@ -110,7 +110,7 @@ class DecryptRequest {
 						
 						$key2 = 0;
 						
-						$names = \vipapis\marketplace\delivery\DecryptExtendKey::$__names;
+						$names = \Voop\vipapis\marketplace\delivery\DecryptExtendKey::$__names;
 						$name = null;
 						$input->readString($name);
 						foreach ($names as $k => $v){
@@ -164,7 +164,7 @@ class DecryptRequest {
 		
 		if (!is_array($this->encrypt_datas)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -173,7 +173,7 @@ class DecryptRequest {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -190,7 +190,7 @@ class DecryptRequest {
 			
 			if (!is_array($this->extend_infos)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();

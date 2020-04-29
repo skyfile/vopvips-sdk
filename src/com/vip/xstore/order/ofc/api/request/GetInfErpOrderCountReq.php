@@ -210,7 +210,7 @@ class GetInfErpOrderCountReq {
 			
 			if (!is_array($this->docNos)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -232,7 +232,7 @@ class GetInfErpOrderCountReq {
 			
 			if (!is_object($this->createTimeRange)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->createTimeRange->write($output);
@@ -247,7 +247,7 @@ class GetInfErpOrderCountReq {
 			
 			if (!is_array($this->procStatusSet)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -269,7 +269,7 @@ class GetInfErpOrderCountReq {
 			
 			if (!is_array($this->companyCodes)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();

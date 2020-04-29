@@ -22,7 +22,7 @@ interface InternalInventoryServiceIf{
 	
 }
 
-class _InternalInventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\marketplace\inventory\InternalInventoryServiceIf{
+class _InternalInventoryServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\marketplace\inventory\InternalInventoryServiceIf{
 	
 	public function __construct(){
 		
@@ -255,7 +255,7 @@ class InternalInventoryService_batchTotalUpdateSkuInventory_args {
 		
 		if (!is_array($this->skuStocks)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -264,7 +264,7 @@ class InternalInventoryService_batchTotalUpdateSkuInventory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -392,7 +392,7 @@ class InternalInventoryService_increaseUpdateSkuInventory_args {
 		
 		if (!is_object($this->stock)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->stock->write($output);
@@ -470,7 +470,7 @@ class InternalInventoryService_totalUpdateSkuInventory_args {
 		
 		if (!is_object($this->stock)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->stock->write($output);
@@ -571,7 +571,7 @@ class InternalInventoryService_batchTotalUpdateSkuInventory_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -582,7 +582,7 @@ class InternalInventoryService_batchTotalUpdateSkuInventory_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);
@@ -668,7 +668,7 @@ class InternalInventoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -750,7 +750,7 @@ class InternalInventoryService_increaseUpdateSkuInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -832,7 +832,7 @@ class InternalInventoryService_totalUpdateSkuInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

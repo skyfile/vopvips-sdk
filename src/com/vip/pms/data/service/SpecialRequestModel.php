@@ -113,7 +113,7 @@ class SpecialRequestModel {
 		
 		if (!is_object($this->specialCoreModel)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->specialCoreModel->write($output);
@@ -126,7 +126,7 @@ class SpecialRequestModel {
 			
 			if (!is_object($this->speConditionModel)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->speConditionModel->write($output);

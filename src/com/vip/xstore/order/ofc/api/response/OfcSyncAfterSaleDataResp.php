@@ -155,7 +155,7 @@ class OfcSyncAfterSaleDataResp {
 			
 			if (!is_object($this->result)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->result->write($output);
@@ -188,7 +188,7 @@ class OfcSyncAfterSaleDataResp {
 			
 			if (!is_object($this->newAfterSaleSyncData)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->newAfterSaleSyncData->write($output);

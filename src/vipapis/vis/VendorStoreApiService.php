@@ -30,7 +30,7 @@ interface VendorStoreApiServiceIf{
 	
 }
 
-class _VendorStoreApiServiceClient extends \Osp\Base\OspStub implements \vipapis\vis\VendorStoreApiServiceIf{
+class _VendorStoreApiServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\vis\VendorStoreApiServiceIf{
 	
 	public function __construct(){
 		
@@ -380,7 +380,7 @@ class VendorStoreApiService_addWarehouseInfo_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -391,7 +391,7 @@ class VendorStoreApiService_addWarehouseInfo_args {
 		
 		if (!is_array($this->storeAddParamList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -400,7 +400,7 @@ class VendorStoreApiService_addWarehouseInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -522,7 +522,7 @@ class VendorStoreApiService_delWarehouseInfo_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -533,7 +533,7 @@ class VendorStoreApiService_delWarehouseInfo_args {
 		
 		if (!is_array($this->storeDeleteParamList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -542,7 +542,7 @@ class VendorStoreApiService_delWarehouseInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -643,7 +643,7 @@ class VendorStoreApiService_getStoreByStoreCode_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -812,7 +812,7 @@ class VendorStoreApiService_getWarehouseInfo_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -823,7 +823,7 @@ class VendorStoreApiService_getWarehouseInfo_args {
 		
 		if (!is_array($this->storeQueryParamList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -832,7 +832,7 @@ class VendorStoreApiService_getWarehouseInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -933,7 +933,7 @@ class VendorStoreApiService_queryStoresByVendorCode_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -1056,7 +1056,7 @@ class VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -1069,7 +1069,7 @@ class VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_args {
 			
 			if (!is_array($this->storeWarehouseRelUpdateParamList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -1078,7 +1078,7 @@ class VendorStoreApiService_updateVendorWarehouseAndVIPWarehouseMap_args {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -1202,7 +1202,7 @@ class VendorStoreApiService_updateWarehouseInfo_args {
 		
 		if (!is_object($this->commonParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->commonParam->write($output);
@@ -1213,7 +1213,7 @@ class VendorStoreApiService_updateWarehouseInfo_args {
 		
 		if (!is_array($this->storeUpdateParamList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1222,7 +1222,7 @@ class VendorStoreApiService_updateWarehouseInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1528,7 +1528,7 @@ class VendorStoreApiService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -20,7 +20,7 @@ interface AddressServiceIf{
 	
 }
 
-class _AddressServiceClient extends \Osp\Base\OspStub implements \vipapis\address\AddressServiceIf{
+class _AddressServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\address\AddressServiceIf{
 	
 	public function __construct(){
 		
@@ -188,7 +188,7 @@ class AddressService_getFullAddress_args {
 		if(true) {
 			
 			
-			$names = \vipapis\address\Is_Show_GAT::$__names;
+			$names = \Voop\vipapis\address\Is_Show_GAT::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -300,7 +300,7 @@ class AddressService_getProvinceWarehouse_args {
 		if(true) {
 			
 			
-			$names = \vipapis\address\Is_Show_GAT::$__names;
+			$names = \Voop\vipapis\address\Is_Show_GAT::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -458,7 +458,7 @@ class AddressService_getFullAddress_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -559,7 +559,7 @@ class AddressService_getProvinceWarehouse_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -568,7 +568,7 @@ class AddressService_getProvinceWarehouse_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -654,7 +654,7 @@ class AddressService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

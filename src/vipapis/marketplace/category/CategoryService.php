@@ -18,7 +18,7 @@ interface CategoryServiceIf{
 	
 }
 
-class _CategoryServiceClient extends \Osp\Base\OspStub implements \vipapis\marketplace\category\CategoryServiceIf{
+class _CategoryServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\marketplace\category\CategoryServiceIf{
 	
 	public function __construct(){
 		
@@ -238,7 +238,7 @@ class CategoryService_getStoreCategories_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -320,7 +320,7 @@ class CategoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

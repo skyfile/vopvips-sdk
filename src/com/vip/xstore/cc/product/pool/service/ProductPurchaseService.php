@@ -20,7 +20,7 @@ interface ProductPurchaseServiceIf{
 	
 }
 
-class _ProductPurchaseServiceClient extends \Osp\Base\OspStub implements \com\vip\xstore\cc\product\pool\service\ProductPurchaseServiceIf{
+class _ProductPurchaseServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\cc\product\pool\service\ProductPurchaseServiceIf{
 	
 	public function __construct(){
 		
@@ -222,7 +222,7 @@ class ProductPurchaseService_prodQuery_args {
 		
 		if (!is_object($this->prodQueryReqDTO)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->prodQueryReqDTO->write($output);
@@ -300,7 +300,7 @@ class ProductPurchaseService_prodValidate_args {
 		
 		if (!is_object($this->prodValidateReqDTO)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->prodValidateReqDTO->write($output);
@@ -380,7 +380,7 @@ class ProductPurchaseService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -462,7 +462,7 @@ class ProductPurchaseService_prodQuery_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -544,7 +544,7 @@ class ProductPurchaseService_prodValidate_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

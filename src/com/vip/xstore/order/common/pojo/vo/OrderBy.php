@@ -81,7 +81,7 @@ class OrderBy {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\xstore\order\common\pojo\vo\OrderByDirection::$__names;
+				$names = \Voop\com\vip\xstore\order\common\pojo\vo\OrderByDirection::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

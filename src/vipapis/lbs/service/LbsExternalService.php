@@ -18,7 +18,7 @@ interface LbsExternalServiceIf{
 	
 }
 
-class _LbsExternalServiceClient extends \Osp\Base\OspStub implements \vipapis\lbs\service\LbsExternalServiceIf{
+class _LbsExternalServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\lbs\service\LbsExternalServiceIf{
 	
 	public function __construct(){
 		
@@ -148,7 +148,7 @@ class LbsExternalService_getExplainedBarcodes_args {
 			
 			if (!is_object($this->getExplainedBarcodesRequest)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->getExplainedBarcodesRequest->write($output);
@@ -276,7 +276,7 @@ class LbsExternalService_getExplainedBarcodes_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -358,7 +358,7 @@ class LbsExternalService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -22,7 +22,7 @@ interface TrusteeshipInfoServiceIf{
 	
 }
 
-class _TrusteeshipInfoServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\TrusteeshipInfoServiceIf{
+class _TrusteeshipInfoServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\fcs\TrusteeshipInfoServiceIf{
 	
 	public function __construct(){
 		
@@ -208,7 +208,7 @@ class TrusteeshipInfoService_createTrusteeshipInfo_args {
 			
 			if (!is_object($this->createTrusteeshipInfoRequestModel)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->createTrusteeshipInfoRequestModel->write($output);
@@ -290,7 +290,7 @@ class TrusteeshipInfoService_getTrusteeshipInfo_args {
 			
 			if (!is_object($this->getTrusteeshipInfoRequestModel)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->getTrusteeshipInfoRequestModel->write($output);
@@ -418,7 +418,7 @@ class TrusteeshipInfoService_updateTrusteeshipInfo_args {
 			
 			if (!is_object($this->updateTrusteeshipInfoRequestModel)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->updateTrusteeshipInfoRequestModel->write($output);
@@ -500,7 +500,7 @@ class TrusteeshipInfoService_createTrusteeshipInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -582,7 +582,7 @@ class TrusteeshipInfoService_getTrusteeshipInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -664,7 +664,7 @@ class TrusteeshipInfoService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -746,7 +746,7 @@ class TrusteeshipInfoService_updateTrusteeshipInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

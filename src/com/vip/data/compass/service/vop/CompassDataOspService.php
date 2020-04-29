@@ -18,7 +18,7 @@ interface CompassDataOspServiceIf{
 	
 }
 
-class _CompassDataOspServiceClient extends \Osp\Base\OspStub implements \com\vip\data\compass\service\vop\CompassDataOspServiceIf{
+class _CompassDataOspServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\data\compass\service\vop\CompassDataOspServiceIf{
 	
 	public function __construct(){
 		
@@ -209,7 +209,7 @@ class CompassDataOspService_data_args {
 			
 			if (!is_array($this->api_params)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -356,7 +356,7 @@ class CompassDataOspService_data_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -438,7 +438,7 @@ class CompassDataOspService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

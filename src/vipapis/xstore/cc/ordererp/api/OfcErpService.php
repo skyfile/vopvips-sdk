@@ -18,7 +18,7 @@ interface OfcErpServiceIf{
 	
 }
 
-class _OfcErpServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc\ordererp\api\OfcErpServiceIf{
+class _OfcErpServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\xstore\cc\ordererp\api\OfcErpServiceIf{
 	
 	public function __construct(){
 		
@@ -148,7 +148,7 @@ class OfcErpService_addInfErpOrderInfo_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -276,7 +276,7 @@ class OfcErpService_addInfErpOrderInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -358,7 +358,7 @@ class OfcErpService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

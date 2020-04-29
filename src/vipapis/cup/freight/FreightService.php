@@ -18,7 +18,7 @@ interface FreightServiceIf{
 	
 }
 
-class _FreightServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\freight\FreightServiceIf{
+class _FreightServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\cup\freight\FreightServiceIf{
 	
 	public function __construct(){
 		
@@ -165,7 +165,7 @@ class FreightService_getOrderFreight_args {
 		
 		if (!is_array($this->get_order_freight_req_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -174,7 +174,7 @@ class FreightService_getOrderFreight_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -304,7 +304,7 @@ class FreightService_getOrderFreight_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -386,7 +386,7 @@ class FreightService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

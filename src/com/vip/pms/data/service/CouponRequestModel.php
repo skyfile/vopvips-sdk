@@ -115,7 +115,7 @@ class CouponRequestModel {
 			
 			if (!is_object($this->couponCoreModel)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->couponCoreModel->write($output);
@@ -130,7 +130,7 @@ class CouponRequestModel {
 			
 			if (!is_object($this->couponGroupCoreModel)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->couponGroupCoreModel->write($output);

@@ -20,7 +20,7 @@ class DvdAreaSalesServiceClient{
 	
 	private static function regis(){
 		
-		$path = \Osp\Util\PathUtil::getRootPath ();
+		$path = \Voop\Osp\Util\PathUtil::getRootPath ();
 		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
@@ -38,7 +38,7 @@ class DvdAreaSalesServiceClient{
 		}
 		
 		
-		$ctx = \Osp\Context\InvocationContextFactory::getInstance ();
+		$ctx = \Voop\Osp\Context\InvocationContextFactory::getInstance ();
 		$ip = DvdAreaSalesServiceClient::$DEFAULT_PROXY_IP;
 		$port = DvdAreaSalesServiceClient::$DEFAULT_PROXY_PORT;	
 		try{

@@ -20,7 +20,7 @@ interface VdgHistoryDataServiceIf{
 	
 }
 
-class _VdgHistoryDataServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcloud\history\VdgHistoryDataServiceIf{
+class _VdgHistoryDataServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\history\VdgHistoryDataServiceIf{
 	
 	public function __construct(){
 		
@@ -494,7 +494,7 @@ class VdgHistoryDataService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

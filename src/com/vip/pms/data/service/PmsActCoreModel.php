@@ -411,7 +411,7 @@ class PmsActCoreModel {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\pms\data\enums\GroupBuyingFlag::$__names;
+				$names = \Voop\com\vip\pms\data\enums\GroupBuyingFlag::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -434,7 +434,7 @@ class PmsActCoreModel {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\pms\data\enums\PrepayFavType::$__names;
+				$names = \Voop\com\vip\pms\data\enums\PrepayFavType::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -486,7 +486,7 @@ class PmsActCoreModel {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\pms\data\enums\SupportPrepayFlag::$__names;
+				$names = \Voop\com\vip\pms\data\enums\SupportPrepayFlag::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -772,7 +772,7 @@ class PmsActCoreModel {
 			
 			if (!is_array($this->saleModes)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();
@@ -810,7 +810,7 @@ class PmsActCoreModel {
 			
 			if (!is_array($this->categoryList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -819,7 +819,7 @@ class PmsActCoreModel {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -892,7 +892,7 @@ class PmsActCoreModel {
 			
 			if (!is_array($this->channelList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

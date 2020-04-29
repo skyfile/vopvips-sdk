@@ -482,7 +482,7 @@ class EditVendorProductItem {
 				
 				$needSkip = false;
 				
-				$names = \vipapis\product\Unit::$__names;
+				$names = \Voop\vipapis\product\Unit::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -685,7 +685,7 @@ class EditVendorProductItem {
 				
 				$needSkip = false;
 				
-				$names = \vipapis\common\Currency::$__names;
+				$names = \Voop\vipapis\common\Currency::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -718,7 +718,7 @@ class EditVendorProductItem {
 				
 				$needSkip = false;
 				
-				$names = \vipapis\product\ProductType::$__names;
+				$names = \Voop\vipapis\product\ProductType::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -814,7 +814,7 @@ class EditVendorProductItem {
 			
 			if (!is_array($this->product_props)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -1069,7 +1069,7 @@ class EditVendorProductItem {
 			
 			if (!is_object($this->size_table_prop)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->size_table_prop->write($output);

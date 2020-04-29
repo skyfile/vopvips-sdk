@@ -141,7 +141,7 @@ class Ht3plPoListRequest {
 				
 				$needSkip = false;
 				
-				$names = \vipapis\common\SaleArea::$__names;
+				$names = \Voop\vipapis\common\SaleArea::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

@@ -16,7 +16,7 @@ interface OmniOrderServiceIf{
 	
 	public function confirmDelivery( $vendor_id, $store_sn, $package_no, $is_preformed, $orders, $estimate_delivery_time);
 	
-	public function confirmInvoice( $vendor_id,\vipapis\order\OrderInvoiceReq $order_invoice);
+	public function confirmInvoice( $vendor_id,\Voop\vipapis\order\OrderInvoiceReq $order_invoice);
 	
 	public function confirmOrderInvoice( $vendor_id, $order_invoices);
 	
@@ -48,7 +48,7 @@ interface OmniOrderServiceIf{
 	
 	public function healthCheck();
 	
-	public function printInvoice( $vendor_id, $store_sn, $batch_no, $orders,\vipapis\order\ExtInfo $ext_info, $print_type);
+	public function printInvoice( $vendor_id, $store_sn, $batch_no, $orders,\Voop\vipapis\order\ExtInfo $ext_info, $print_type);
 	
 	public function pushOrderEInvoice();
 	
@@ -66,7 +66,7 @@ interface OmniOrderServiceIf{
 	
 }
 
-class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order\OmniOrderServiceIf{
+class _OmniOrderServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\order\OmniOrderServiceIf{
 	
 	public function __construct(){
 		
@@ -136,13 +136,13 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	}
 	
 	
-	public function confirmInvoice( $vendor_id,\vipapis\order\OrderInvoiceReq $order_invoice){
+	public function confirmInvoice( $vendor_id,\Voop\vipapis\order\OrderInvoiceReq $order_invoice){
 		
 		$this->send_confirmInvoice( $vendor_id, $order_invoice);
 		return $this->recv_confirmInvoice();
 	}
 	
-	public function send_confirmInvoice( $vendor_id,\vipapis\order\OrderInvoiceReq $order_invoice){
+	public function send_confirmInvoice( $vendor_id,\Voop\vipapis\order\OrderInvoiceReq $order_invoice){
 		
 		$this->initInvocation("confirmInvoice");
 		$args = new \Voop\vipapis\order\OmniOrderService_confirmInvoice_args();
@@ -632,13 +632,13 @@ class _OmniOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\orde
 	}
 	
 	
-	public function printInvoice( $vendor_id, $store_sn, $batch_no, $orders,\vipapis\order\ExtInfo $ext_info, $print_type){
+	public function printInvoice( $vendor_id, $store_sn, $batch_no, $orders,\Voop\vipapis\order\ExtInfo $ext_info, $print_type){
 		
 		$this->send_printInvoice( $vendor_id, $store_sn, $batch_no, $orders, $ext_info, $print_type);
 		return $this->recv_printInvoice();
 	}
 	
-	public function send_printInvoice( $vendor_id, $store_sn, $batch_no, $orders,\vipapis\order\ExtInfo $ext_info, $print_type){
+	public function send_printInvoice( $vendor_id, $store_sn, $batch_no, $orders,\Voop\vipapis\order\ExtInfo $ext_info, $print_type){
 		
 		$this->initInvocation("printInvoice");
 		$args = new \Voop\vipapis\order\OmniOrderService_printInvoice_args();
@@ -936,7 +936,7 @@ class OmniOrderService_batchConfirmDelivery_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1150,7 +1150,7 @@ class OmniOrderService_confirmDelivery_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1268,7 +1268,7 @@ class OmniOrderService_confirmInvoice_args {
 		
 		if (!is_object($this->order_invoice)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->order_invoice->write($output);
@@ -1389,7 +1389,7 @@ class OmniOrderService_confirmOrderInvoice_args {
 		
 		if (!is_array($this->order_invoices)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1398,7 +1398,7 @@ class OmniOrderService_confirmOrderInvoice_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2087,7 +2087,7 @@ class OmniOrderService_getDeliveryInfo_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2174,7 +2174,7 @@ class OmniOrderService_getInventoryCancelledOrders_args {
 			
 			if (!is_object($this->inventoryCancelledOrdersRequest)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->inventoryCancelledOrdersRequest->write($output);
@@ -2256,7 +2256,7 @@ class OmniOrderService_getInventoryDeductOrders_args {
 			
 			if (!is_object($this->inventoryDeductOrdersRequest)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->inventoryDeductOrdersRequest->write($output);
@@ -2338,7 +2338,7 @@ class OmniOrderService_getInventoryOccupiedOrders_args {
 			
 			if (!is_object($this->inventoryOccupiedOrdersRequest)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->inventoryOccupiedOrdersRequest->write($output);
@@ -2919,7 +2919,7 @@ class OmniOrderService_getOrderEInvoiceInfo_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3045,7 +3045,7 @@ class OmniOrderService_getOrderInvoice_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3132,7 +3132,7 @@ class OmniOrderService_getOxoOrders_args {
 			
 			if (!is_object($this->ordersRequest)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->ordersRequest->write($output);
@@ -3212,7 +3212,7 @@ class OmniOrderService_getOxoReturnOrders_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -3467,7 +3467,7 @@ class OmniOrderService_printInvoice_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3476,7 +3476,7 @@ class OmniOrderService_printInvoice_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3493,7 +3493,7 @@ class OmniOrderService_printInvoice_args {
 			
 			if (!is_object($this->ext_info)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->ext_info->write($output);
@@ -3695,7 +3695,7 @@ class OmniOrderService_pushOrderPackageWeight_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3704,7 +3704,7 @@ class OmniOrderService_pushOrderPackageWeight_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3853,7 +3853,7 @@ class OmniOrderService_pushQCResult_args {
 		
 		if (!is_array($this->orders)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3862,7 +3862,7 @@ class OmniOrderService_pushQCResult_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3987,7 +3987,7 @@ class OmniOrderService_replyStoreSn_args {
 		
 		if (!is_array($this->order_store_mapping)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3996,7 +3996,7 @@ class OmniOrderService_replyStoreSn_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4333,7 +4333,7 @@ class OmniOrderService_updateStoreSn_args {
 		
 		if (!is_array($this->order_store_mapping)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -4342,7 +4342,7 @@ class OmniOrderService_updateStoreSn_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -4426,7 +4426,7 @@ class OmniOrderService_batchConfirmDelivery_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4606,7 +4606,7 @@ class OmniOrderService_confirmOrderInvoice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4688,7 +4688,7 @@ class OmniOrderService_confirmOxoDelivery_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4887,7 +4887,7 @@ class OmniOrderService_getDeliveryInfo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4896,7 +4896,7 @@ class OmniOrderService_getDeliveryInfo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4982,7 +4982,7 @@ class OmniOrderService_getInventoryCancelledOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5064,7 +5064,7 @@ class OmniOrderService_getInventoryDeductOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5146,7 +5146,7 @@ class OmniOrderService_getInventoryOccupiedOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5228,7 +5228,7 @@ class OmniOrderService_getOmniCancelledOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5310,7 +5310,7 @@ class OmniOrderService_getOmniOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5411,7 +5411,7 @@ class OmniOrderService_getOrderEInvoiceInfo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5420,7 +5420,7 @@ class OmniOrderService_getOrderEInvoiceInfo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5506,7 +5506,7 @@ class OmniOrderService_getOrderInvoice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5588,7 +5588,7 @@ class OmniOrderService_getOxoOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5670,7 +5670,7 @@ class OmniOrderService_getOxoReturnOrders_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5752,7 +5752,7 @@ class OmniOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5834,7 +5834,7 @@ class OmniOrderService_printInvoice_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5965,7 +5965,7 @@ class OmniOrderService_pushOrderPackageWeight_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6047,7 +6047,7 @@ class OmniOrderService_pushQCResult_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6129,7 +6129,7 @@ class OmniOrderService_replyStoreSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6309,7 +6309,7 @@ class OmniOrderService_updateStoreSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

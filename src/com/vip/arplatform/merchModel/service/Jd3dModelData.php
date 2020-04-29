@@ -315,7 +315,7 @@ class Jd3dModelData {
 		
 		if (!is_object($this->jd3dModelInfo)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->jd3dModelInfo->write($output);

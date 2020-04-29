@@ -20,7 +20,7 @@ class TransferringOrderApiServiceClient{
 	
 	private static function regis(){
 		
-		$path = \Osp\Util\PathUtil::getRootPath ();
+		$path = \Voop\Osp\Util\PathUtil::getRootPath ();
 		$nsLoader = new \Voop\Osp\ClassLoader\ClassLoader ();
 		$nsLoader->registerNamespace ( 'Thrift', $path );
 		$nsLoader->registerNamespace ( 'Osp', $path );
@@ -38,7 +38,7 @@ class TransferringOrderApiServiceClient{
 		}
 		
 		
-		$ctx = \Osp\Context\InvocationContextFactory::getInstance ();
+		$ctx = \Voop\Osp\Context\InvocationContextFactory::getInstance ();
 		$ip = TransferringOrderApiServiceClient::$DEFAULT_PROXY_IP;
 		$port = TransferringOrderApiServiceClient::$DEFAULT_PROXY_PORT;	
 		try{

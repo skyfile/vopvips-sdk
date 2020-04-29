@@ -848,9 +848,9 @@ class JSONProtocol extends Protocol
     public function getType() {
     	$result = ProtocolUtil::$UNKNOW;
     	$buff = $this->trans_->getBuffer();
-    	$b = \Osp\StringFunc\StringFuncFactory::create()->substr($buff, 0, 1);
+    	$b = \Voop\Osp\StringFunc\StringFuncFactory::create()->substr($buff, 0, 1);
     	if ($b == self::COLON || $b == self::COMMA) {
-    		$b = \Osp\StringFunc\StringFuncFactory::create()->substr($buff, 1, 1);
+    		$b = \Voop\Osp\StringFunc\StringFuncFactory::create()->substr($buff, 1, 1);
     	}
     	if ($this->isNumber($b)) {
     		$result = ProtocolUtil::$NUMBER;

@@ -20,7 +20,7 @@ interface SalesProductServiceIf{
 	
 }
 
-class _SalesProductServiceClient extends \Osp\Base\OspStub implements \vipapis\normal\SalesProductServiceIf{
+class _SalesProductServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\normal\SalesProductServiceIf{
 	
 	public function __construct(){
 		
@@ -528,7 +528,7 @@ class SalesProductService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

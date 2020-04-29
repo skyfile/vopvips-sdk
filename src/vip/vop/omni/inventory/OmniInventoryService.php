@@ -20,7 +20,7 @@ interface OmniInventoryServiceIf{
 	
 }
 
-class _OmniInventoryServiceClient extends \Osp\Base\OspStub implements \vip\vop\omni\inventory\OmniInventoryServiceIf{
+class _OmniInventoryServiceClient extends \Voop\Osp\Base\OspStub implements \vip\vop\omni\inventory\OmniInventoryServiceIf{
 	
 	public function __construct(){
 		
@@ -214,7 +214,7 @@ class OmniInventoryService_updateStoreInventory_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -292,7 +292,7 @@ class OmniInventoryService_updateStoreInventory4Inner_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -372,7 +372,7 @@ class OmniInventoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

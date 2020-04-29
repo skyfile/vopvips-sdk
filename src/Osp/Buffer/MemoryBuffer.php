@@ -22,8 +22,8 @@
 
 namespace Voop\Osp\Buffer;
 
-use Osp\Transport\Transport;
-use Osp\StringFunc\StringFuncFactory;
+use Voop\Osp\Transport\Transport;
+use Voop\Osp\StringFunc\StringFuncFactory;
 
 /**
  * A memory buffer is a tranpsort that simply reads from and writes to an

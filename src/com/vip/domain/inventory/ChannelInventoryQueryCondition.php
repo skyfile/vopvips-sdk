@@ -151,7 +151,7 @@ class ChannelInventoryQueryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\WarehouseCode::$__names;
+				$names = \Voop\com\vip\domain\inventory\WarehouseCode::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -174,7 +174,7 @@ class ChannelInventoryQueryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\ChannelInventoryChannel::$__names;
+				$names = \Voop\com\vip\domain\inventory\ChannelInventoryChannel::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -206,7 +206,7 @@ class ChannelInventoryQueryCondition {
 						
 						$elem1 = null;
 						
-						$names = \com\vip\domain\inventory\ChannelInventoryGrade::$__names;
+						$names = \Voop\com\vip\domain\inventory\ChannelInventoryGrade::$__names;
 						$name = null;
 						$input->readString($name);
 						foreach ($names as $k => $v){
@@ -239,7 +239,7 @@ class ChannelInventoryQueryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\ChannelInventoryStatus::$__names;
+				$names = \Voop\com\vip\domain\inventory\ChannelInventoryStatus::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -282,7 +282,7 @@ class ChannelInventoryQueryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\ChannelInventoryInVipSalesPlan::$__names;
+				$names = \Voop\com\vip\domain\inventory\ChannelInventoryInVipSalesPlan::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -367,7 +367,7 @@ class ChannelInventoryQueryCondition {
 		
 		if (!is_array($this->grade)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();

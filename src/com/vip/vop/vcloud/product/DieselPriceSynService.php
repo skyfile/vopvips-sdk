@@ -20,7 +20,7 @@ interface DieselPriceSynServiceIf{
 	
 }
 
-class _DieselPriceSynServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcloud\product\DieselPriceSynServiceIf{
+class _DieselPriceSynServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\product\DieselPriceSynServiceIf{
 	
 	public function __construct(){
 		
@@ -304,7 +304,7 @@ class DieselPriceSynService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

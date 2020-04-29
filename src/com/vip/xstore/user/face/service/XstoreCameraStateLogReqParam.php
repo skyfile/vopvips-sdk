@@ -151,7 +151,7 @@ class XstoreCameraStateLogReqParam {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\xstore\user\face\service\CameraState::$__names;
+				$names = \Voop\com\vip\xstore\user\face\service\CameraState::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -251,7 +251,7 @@ class XstoreCameraStateLogReqParam {
 		
 		if (!is_object($this->pageInfo)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->pageInfo->write($output);

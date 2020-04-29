@@ -181,7 +181,7 @@ class DiscountInfoModel {
 			
 			if (!is_object($this->fullCutInfo)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->fullCutInfo->write($output);
@@ -196,7 +196,7 @@ class DiscountInfoModel {
 			
 			if (!is_object($this->mobileInfo)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->mobileInfo->write($output);
@@ -211,7 +211,7 @@ class DiscountInfoModel {
 			
 			if (!is_object($this->couponInfo)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->couponInfo->write($output);
@@ -226,7 +226,7 @@ class DiscountInfoModel {
 			
 			if (!is_object($this->prepayInfo)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->prepayInfo->write($output);
@@ -241,7 +241,7 @@ class DiscountInfoModel {
 			
 			if (!is_object($this->exclusivePrice)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->exclusivePrice->write($output);

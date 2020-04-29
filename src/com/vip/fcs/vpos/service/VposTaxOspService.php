@@ -20,7 +20,7 @@ interface VposTaxOspServiceIf{
 	
 }
 
-class _VposTaxOspServiceClient extends \Osp\Base\OspStub implements \com\vip\fcs\vpos\service\VposTaxOspServiceIf{
+class _VposTaxOspServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\fcs\vpos\service\VposTaxOspServiceIf{
 	
 	public function __construct(){
 		
@@ -298,7 +298,7 @@ class VposTaxOspService_syncTaxInfo_args {
 			
 			if (!is_object($this->taxInfo)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->taxInfo->write($output);
@@ -380,7 +380,7 @@ class VposTaxOspService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -462,7 +462,7 @@ class VposTaxOspService_queryOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -544,7 +544,7 @@ class VposTaxOspService_syncTaxInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

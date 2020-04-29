@@ -18,7 +18,7 @@ interface PoRefundApiServiceIf{
 	
 }
 
-class _PoRefundApiServiceClient extends \Osp\Base\OspStub implements \vipapis\xstore\cc\bulkbuying\api\PoRefundApiServiceIf{
+class _PoRefundApiServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\xstore\cc\bulkbuying\api\PoRefundApiServiceIf{
 	
 	public function __construct(){
 		
@@ -192,7 +192,7 @@ class PoRefundApiService_updatePoRefundRealQty_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -272,7 +272,7 @@ class PoRefundApiService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -375,7 +375,7 @@ class PoRefundApiService_updatePoRefundRealQty_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();
@@ -386,7 +386,7 @@ class PoRefundApiService_updatePoRefundRealQty_result {
 				
 				if (!is_object($viter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $viter0->write($output);

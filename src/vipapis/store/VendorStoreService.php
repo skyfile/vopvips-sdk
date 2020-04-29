@@ -20,7 +20,7 @@ interface VendorStoreServiceIf{
 	
 }
 
-class _VendorStoreServiceClient extends \Osp\Base\OspStub implements \vipapis\store\VendorStoreServiceIf{
+class _VendorStoreServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\store\VendorStoreServiceIf{
 	
 	public function __construct(){
 		
@@ -222,7 +222,7 @@ class VendorStoreService_queryAreaWarehouseStores_args {
 		
 		if (!is_object($this->warehouseStoreRequest)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->warehouseStoreRequest->write($output);
@@ -300,7 +300,7 @@ class VendorStoreService_queryStores_args {
 		
 		if (!is_object($this->storeQueryRequest)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->storeQueryRequest->write($output);
@@ -380,7 +380,7 @@ class VendorStoreService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -462,7 +462,7 @@ class VendorStoreService_queryAreaWarehouseStores_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -544,7 +544,7 @@ class VendorStoreService_queryStores_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -71,7 +71,7 @@ class RequestResult {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\order\ResponseCodeStatus::$__names;
+				$names = \Voop\com\vip\domain\order\ResponseCodeStatus::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

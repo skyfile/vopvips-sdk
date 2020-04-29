@@ -24,7 +24,7 @@ interface FendiProductSynServiceIf{
 	
 }
 
-class _FendiProductSynServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcloud\product\FendiProductSynServiceIf{
+class _FendiProductSynServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\product\FendiProductSynServiceIf{
 	
 	public function __construct(){
 		
@@ -493,7 +493,7 @@ class FendiProductSynService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -24,7 +24,7 @@ interface QueryApplySellingServiceIf{
 	
 }
 
-class _QueryApplySellingServiceClient extends \Osp\Base\OspStub implements \com\vip\vis\purchase\schedules\service\query\QueryApplySellingServiceIf{
+class _QueryApplySellingServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vis\purchase\schedules\service\query\QueryApplySellingServiceIf{
 	
 	public function __construct(){
 		
@@ -282,7 +282,7 @@ class QueryApplySellingService_queryApplySellingData_args {
 		
 		if (!is_object($this->queryApplySellingParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryApplySellingParam->write($output);
@@ -360,7 +360,7 @@ class QueryApplySellingService_queryApplySellingSimpleData_args {
 		
 		if (!is_object($this->queryApplySellingSimpleParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryApplySellingSimpleParam->write($output);
@@ -438,7 +438,7 @@ class QueryApplySellingService_queryScheduleInfoData_args {
 		
 		if (!is_object($this->queryScheduleInfoApiParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryScheduleInfoApiParam->write($output);
@@ -516,7 +516,7 @@ class QueryApplySellingService_querySchedulesByShopCode_args {
 		
 		if (!is_object($this->queryScheduleByShopCodeParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryScheduleByShopCodeParam->write($output);
@@ -596,7 +596,7 @@ class QueryApplySellingService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -678,7 +678,7 @@ class QueryApplySellingService_queryApplySellingData_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -779,7 +779,7 @@ class QueryApplySellingService_queryApplySellingSimpleData_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -788,7 +788,7 @@ class QueryApplySellingService_queryApplySellingSimpleData_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -874,7 +874,7 @@ class QueryApplySellingService_queryScheduleInfoData_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -956,7 +956,7 @@ class QueryApplySellingService_querySchedulesByShopCode_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

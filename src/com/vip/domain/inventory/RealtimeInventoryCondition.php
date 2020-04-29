@@ -131,7 +131,7 @@ class RealtimeInventoryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\RealtimeInventoryQueryType::$__names;
+				$names = \Voop\com\vip\domain\inventory\RealtimeInventoryQueryType::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -154,7 +154,7 @@ class RealtimeInventoryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\DistributionModel::$__names;
+				$names = \Voop\com\vip\domain\inventory\DistributionModel::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -177,7 +177,7 @@ class RealtimeInventoryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\WarehouseCode::$__names;
+				$names = \Voop\com\vip\domain\inventory\WarehouseCode::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -220,7 +220,7 @@ class RealtimeInventoryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\RealtimeInventoryLocationParameter::$__names;
+				$names = \Voop\com\vip\domain\inventory\RealtimeInventoryLocationParameter::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -243,7 +243,7 @@ class RealtimeInventoryCondition {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\domain\inventory\RealtimeInventoryCommodityParameter::$__names;
+				$names = \Voop\com\vip\domain\inventory\RealtimeInventoryCommodityParameter::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

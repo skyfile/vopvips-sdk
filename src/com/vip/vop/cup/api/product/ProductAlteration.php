@@ -111,7 +111,7 @@ class ProductAlteration {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\vop\cup\api\product\EventType::$__names;
+				$names = \Voop\com\vip\vop\cup\api\product\EventType::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -134,7 +134,7 @@ class ProductAlteration {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\vop\cup\api\product\ProductType::$__names;
+				$names = \Voop\com\vip\vop\cup\api\product\ProductType::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

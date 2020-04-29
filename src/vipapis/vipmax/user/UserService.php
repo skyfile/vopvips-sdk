@@ -18,7 +18,7 @@ interface UserServiceIf{
 	
 }
 
-class _UserServiceClient extends \Osp\Base\OspStub implements \vipapis\vipmax\user\UserServiceIf{
+class _UserServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\vipmax\user\UserServiceIf{
 	
 	public function __construct(){
 		
@@ -146,7 +146,7 @@ class UserService_getUserInfo_args {
 		
 		if (!is_object($this->getUserInfoRequest)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->getUserInfoRequest->write($output);
@@ -272,7 +272,7 @@ class UserService_getUserInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -354,7 +354,7 @@ class UserService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

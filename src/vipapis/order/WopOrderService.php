@@ -20,29 +20,29 @@ interface WopOrderServiceIf{
 	
 	public function createOrder( $vendor_id, $orderList);
 	
-	public function geCustomerBackOrderStatus( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition);
+	public function geCustomerBackOrderStatus( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition);
 	
-	public function getCancelOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition);
+	public function getCancelOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition);
 	
-	public function getCreateCancelCustomerBackOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition);
+	public function getCreateCancelCustomerBackOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition);
 	
-	public function getCreateCustomerBackOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition);
+	public function getCreateCustomerBackOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition);
 	
-	public function getCreateOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition);
+	public function getCreateOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition);
 	
-	public function getCustomerBackOrderDetailInfo( $vendor_id,\com\vip\domain\order\CustomerBackOrderInfoQueryCondition $condition);
+	public function getCustomerBackOrderDetailInfo( $vendor_id,\Voop\com\vip\domain\order\CustomerBackOrderInfoQueryCondition $condition);
 	
-	public function getCustomerBackOrderTrack( $vendor_id,\com\vip\domain\order\CustomerBackOrderTrackQueryCondition $condition);
+	public function getCustomerBackOrderTrack( $vendor_id,\Voop\com\vip\domain\order\CustomerBackOrderTrackQueryCondition $condition);
 	
-	public function getOrderStatus( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition);
+	public function getOrderStatus( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition);
 	
-	public function getOrderTrack( $vendor_id,\com\vip\domain\order\OrderTrackQueryCondition $condition);
+	public function getOrderTrack( $vendor_id,\Voop\com\vip\domain\order\OrderTrackQueryCondition $condition);
 	
 	public function healthCheck();
 	
 }
 
-class _WopOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order\WopOrderServiceIf{
+class _WopOrderServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\order\WopOrderServiceIf{
 	
 	public function __construct(){
 		
@@ -170,13 +170,13 @@ class _WopOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order
 	}
 	
 	
-	public function geCustomerBackOrderStatus( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function geCustomerBackOrderStatus( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->send_geCustomerBackOrderStatus( $vendor_id, $condition);
 		return $this->recv_geCustomerBackOrderStatus();
 	}
 	
-	public function send_geCustomerBackOrderStatus( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function send_geCustomerBackOrderStatus( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->initInvocation("geCustomerBackOrderStatus");
 		$args = new \Voop\vipapis\order\WopOrderService_geCustomerBackOrderStatus_args();
@@ -200,13 +200,13 @@ class _WopOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order
 	}
 	
 	
-	public function getCancelOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function getCancelOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->send_getCancelOrderResult( $vendor_id, $condition);
 		return $this->recv_getCancelOrderResult();
 	}
 	
-	public function send_getCancelOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function send_getCancelOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->initInvocation("getCancelOrderResult");
 		$args = new \Voop\vipapis\order\WopOrderService_getCancelOrderResult_args();
@@ -230,13 +230,13 @@ class _WopOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order
 	}
 	
 	
-	public function getCreateCancelCustomerBackOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function getCreateCancelCustomerBackOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->send_getCreateCancelCustomerBackOrderResult( $vendor_id, $condition);
 		return $this->recv_getCreateCancelCustomerBackOrderResult();
 	}
 	
-	public function send_getCreateCancelCustomerBackOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function send_getCreateCancelCustomerBackOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->initInvocation("getCreateCancelCustomerBackOrderResult");
 		$args = new \Voop\vipapis\order\WopOrderService_getCreateCancelCustomerBackOrderResult_args();
@@ -260,13 +260,13 @@ class _WopOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order
 	}
 	
 	
-	public function getCreateCustomerBackOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function getCreateCustomerBackOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->send_getCreateCustomerBackOrderResult( $vendor_id, $condition);
 		return $this->recv_getCreateCustomerBackOrderResult();
 	}
 	
-	public function send_getCreateCustomerBackOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function send_getCreateCustomerBackOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->initInvocation("getCreateCustomerBackOrderResult");
 		$args = new \Voop\vipapis\order\WopOrderService_getCreateCustomerBackOrderResult_args();
@@ -290,13 +290,13 @@ class _WopOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order
 	}
 	
 	
-	public function getCreateOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function getCreateOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->send_getCreateOrderResult( $vendor_id, $condition);
 		return $this->recv_getCreateOrderResult();
 	}
 	
-	public function send_getCreateOrderResult( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function send_getCreateOrderResult( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->initInvocation("getCreateOrderResult");
 		$args = new \Voop\vipapis\order\WopOrderService_getCreateOrderResult_args();
@@ -320,13 +320,13 @@ class _WopOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order
 	}
 	
 	
-	public function getCustomerBackOrderDetailInfo( $vendor_id,\com\vip\domain\order\CustomerBackOrderInfoQueryCondition $condition){
+	public function getCustomerBackOrderDetailInfo( $vendor_id,\Voop\com\vip\domain\order\CustomerBackOrderInfoQueryCondition $condition){
 		
 		$this->send_getCustomerBackOrderDetailInfo( $vendor_id, $condition);
 		return $this->recv_getCustomerBackOrderDetailInfo();
 	}
 	
-	public function send_getCustomerBackOrderDetailInfo( $vendor_id,\com\vip\domain\order\CustomerBackOrderInfoQueryCondition $condition){
+	public function send_getCustomerBackOrderDetailInfo( $vendor_id,\Voop\com\vip\domain\order\CustomerBackOrderInfoQueryCondition $condition){
 		
 		$this->initInvocation("getCustomerBackOrderDetailInfo");
 		$args = new \Voop\vipapis\order\WopOrderService_getCustomerBackOrderDetailInfo_args();
@@ -350,13 +350,13 @@ class _WopOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order
 	}
 	
 	
-	public function getCustomerBackOrderTrack( $vendor_id,\com\vip\domain\order\CustomerBackOrderTrackQueryCondition $condition){
+	public function getCustomerBackOrderTrack( $vendor_id,\Voop\com\vip\domain\order\CustomerBackOrderTrackQueryCondition $condition){
 		
 		$this->send_getCustomerBackOrderTrack( $vendor_id, $condition);
 		return $this->recv_getCustomerBackOrderTrack();
 	}
 	
-	public function send_getCustomerBackOrderTrack( $vendor_id,\com\vip\domain\order\CustomerBackOrderTrackQueryCondition $condition){
+	public function send_getCustomerBackOrderTrack( $vendor_id,\Voop\com\vip\domain\order\CustomerBackOrderTrackQueryCondition $condition){
 		
 		$this->initInvocation("getCustomerBackOrderTrack");
 		$args = new \Voop\vipapis\order\WopOrderService_getCustomerBackOrderTrack_args();
@@ -380,13 +380,13 @@ class _WopOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order
 	}
 	
 	
-	public function getOrderStatus( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function getOrderStatus( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->send_getOrderStatus( $vendor_id, $condition);
 		return $this->recv_getOrderStatus();
 	}
 	
-	public function send_getOrderStatus( $vendor_id,\com\vip\domain\order\ResultQueryCondition $condition){
+	public function send_getOrderStatus( $vendor_id,\Voop\com\vip\domain\order\ResultQueryCondition $condition){
 		
 		$this->initInvocation("getOrderStatus");
 		$args = new \Voop\vipapis\order\WopOrderService_getOrderStatus_args();
@@ -410,13 +410,13 @@ class _WopOrderServiceClient extends \Osp\Base\OspStub implements \vipapis\order
 	}
 	
 	
-	public function getOrderTrack( $vendor_id,\com\vip\domain\order\OrderTrackQueryCondition $condition){
+	public function getOrderTrack( $vendor_id,\Voop\com\vip\domain\order\OrderTrackQueryCondition $condition){
 		
 		$this->send_getOrderTrack( $vendor_id, $condition);
 		return $this->recv_getOrderTrack();
 	}
 	
-	public function send_getOrderTrack( $vendor_id,\com\vip\domain\order\OrderTrackQueryCondition $condition){
+	public function send_getOrderTrack( $vendor_id,\Voop\com\vip\domain\order\OrderTrackQueryCondition $condition){
 		
 		$this->initInvocation("getOrderTrack");
 		$args = new \Voop\vipapis\order\WopOrderService_getOrderTrack_args();
@@ -575,7 +575,7 @@ class WopOrderService_createCancelCustomerBackOrder_args {
 		
 		if (!is_array($this->orderList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -584,7 +584,7 @@ class WopOrderService_createCancelCustomerBackOrder_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -709,7 +709,7 @@ class WopOrderService_createCancelOrder_args {
 		
 		if (!is_array($this->cancelOrderList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -718,7 +718,7 @@ class WopOrderService_createCancelOrder_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -843,7 +843,7 @@ class WopOrderService_createCustomerBackOrder_args {
 		
 		if (!is_array($this->orderList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -852,7 +852,7 @@ class WopOrderService_createCustomerBackOrder_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -977,7 +977,7 @@ class WopOrderService_createOrder_args {
 		
 		if (!is_array($this->orderList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -986,7 +986,7 @@ class WopOrderService_createOrder_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1092,7 +1092,7 @@ class WopOrderService_geCustomerBackOrderStatus_args {
 		
 		if (!is_object($this->condition)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->condition->write($output);
@@ -1194,7 +1194,7 @@ class WopOrderService_getCancelOrderResult_args {
 		
 		if (!is_object($this->condition)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->condition->write($output);
@@ -1296,7 +1296,7 @@ class WopOrderService_getCreateCancelCustomerBackOrderResult_args {
 		
 		if (!is_object($this->condition)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->condition->write($output);
@@ -1398,7 +1398,7 @@ class WopOrderService_getCreateCustomerBackOrderResult_args {
 		
 		if (!is_object($this->condition)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->condition->write($output);
@@ -1500,7 +1500,7 @@ class WopOrderService_getCreateOrderResult_args {
 		
 		if (!is_object($this->condition)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->condition->write($output);
@@ -1602,7 +1602,7 @@ class WopOrderService_getCustomerBackOrderDetailInfo_args {
 		
 		if (!is_object($this->condition)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->condition->write($output);
@@ -1704,7 +1704,7 @@ class WopOrderService_getCustomerBackOrderTrack_args {
 		
 		if (!is_object($this->condition)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->condition->write($output);
@@ -1806,7 +1806,7 @@ class WopOrderService_getOrderStatus_args {
 		
 		if (!is_object($this->condition)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->condition->write($output);
@@ -1908,7 +1908,7 @@ class WopOrderService_getOrderTrack_args {
 		
 		if (!is_object($this->condition)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->condition->write($output);
@@ -2034,7 +2034,7 @@ class WopOrderService_createCancelCustomerBackOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2116,7 +2116,7 @@ class WopOrderService_createCancelOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2198,7 +2198,7 @@ class WopOrderService_createCustomerBackOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2280,7 +2280,7 @@ class WopOrderService_createOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2381,7 +2381,7 @@ class WopOrderService_geCustomerBackOrderStatus_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2390,7 +2390,7 @@ class WopOrderService_geCustomerBackOrderStatus_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2495,7 +2495,7 @@ class WopOrderService_getCancelOrderResult_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2504,7 +2504,7 @@ class WopOrderService_getCancelOrderResult_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2609,7 +2609,7 @@ class WopOrderService_getCreateCancelCustomerBackOrderResult_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2618,7 +2618,7 @@ class WopOrderService_getCreateCancelCustomerBackOrderResult_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2723,7 +2723,7 @@ class WopOrderService_getCreateCustomerBackOrderResult_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2732,7 +2732,7 @@ class WopOrderService_getCreateCustomerBackOrderResult_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2837,7 +2837,7 @@ class WopOrderService_getCreateOrderResult_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2846,7 +2846,7 @@ class WopOrderService_getCreateOrderResult_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2932,7 +2932,7 @@ class WopOrderService_getCustomerBackOrderDetailInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3033,7 +3033,7 @@ class WopOrderService_getCustomerBackOrderTrack_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3042,7 +3042,7 @@ class WopOrderService_getCustomerBackOrderTrack_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3147,7 +3147,7 @@ class WopOrderService_getOrderStatus_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3156,7 +3156,7 @@ class WopOrderService_getOrderStatus_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3261,7 +3261,7 @@ class WopOrderService_getOrderTrack_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3270,7 +3270,7 @@ class WopOrderService_getOrderTrack_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3356,7 +3356,7 @@ class WopOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

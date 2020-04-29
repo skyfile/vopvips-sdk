@@ -18,7 +18,7 @@ interface VopReportServiceIf{
 	
 }
 
-class _VopReportServiceClient extends \Osp\Base\OspStub implements \vipapis\otd\otdapi\service\VopReportServiceIf{
+class _VopReportServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\otd\otdapi\service\VopReportServiceIf{
 	
 	public function __construct(){
 		
@@ -206,7 +206,7 @@ class VopReportService_getDailyReports_args {
 		if(true) {
 			
 			
-			$names = \com\vip\imp\otd\otdapi\service\VopDeliveryChannelType::$__names;
+			$names = \Voop\com\vip\imp\otd\otdapi\service\VopDeliveryChannelType::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -228,7 +228,7 @@ class VopReportService_getDailyReports_args {
 		if(true) {
 			
 			
-			$names = \com\vip\imp\otd\otdapi\service\VopReportLevel::$__names;
+			$names = \Voop\com\vip\imp\otd\otdapi\service\VopReportLevel::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -470,7 +470,7 @@ class VopReportService_getDailyReports_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -552,7 +552,7 @@ class VopReportService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

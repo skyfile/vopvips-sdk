@@ -18,7 +18,7 @@ interface ReceiptContainerServiceIf{
 	
 }
 
-class _ReceiptContainerServiceClient extends \Osp\Base\OspStub implements \com\vip\isv\vreceipt\ReceiptContainerServiceIf{
+class _ReceiptContainerServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\isv\vreceipt\ReceiptContainerServiceIf{
 	
 	public function __construct(){
 		
@@ -146,7 +146,7 @@ class ReceiptContainerService_addReceiptContainer_args {
 		
 		if (!is_object($this->revinfo)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->revinfo->write($output);
@@ -346,7 +346,7 @@ class ReceiptContainerService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

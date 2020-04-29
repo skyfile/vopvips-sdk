@@ -14,7 +14,7 @@ interface ProtContractApiServiceIf{
 	
 	public function addAttachment( $protContractAttachmentParams);
 	
-	public function addProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams);
+	public function addProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\Voop\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams);
 	
 	public function auditProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractAuditParams $protContractAuditParams);
 	
@@ -26,7 +26,7 @@ interface ProtContractApiServiceIf{
 	
 	public function deleteAttachment( $id, $userEmail);
 	
-	public function deleteProtContract( $id,\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams);
+	public function deleteProtContract( $id,\Voop\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams);
 	
 	public function exportCommodityList(\Voop\com\vip\api\promotion\vis\protcontract\service\QueryActDetailParam $queryActParam);
 	
@@ -42,9 +42,9 @@ interface ProtContractApiServiceIf{
 	
 	public function getCaptcha(\Voop\com\vip\api\promotion\vis\protcontract\service\GetCaptchaParam $getCaptchaParam);
 	
-	public function getContractPage(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryParam $protContractQueryParam,\com\vip\api\promotion\vis\common\Pager $pager);
+	public function getContractPage(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryParam $protContractQueryParam,\Voop\com\vip\api\promotion\vis\common\Pager $pager);
 	
-	public function getContractPageForAudit(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryForAuditParam $protContractQueryForAuditParam,\com\vip\api\promotion\vis\common\Pager $pager);
+	public function getContractPageForAudit(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryForAuditParam $protContractQueryForAuditParam,\Voop\com\vip\api\promotion\vis\common\Pager $pager);
 	
 	public function getProtContractDetail(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractDetailParam $protContractDetailParam);
 	
@@ -72,11 +72,11 @@ interface ProtContractApiServiceIf{
 	
 	public function submitProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractSubmitParam $protContractSubmitParam);
 	
-	public function updateProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams);
+	public function updateProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\Voop\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams);
 	
 }
 
-class _ProtContractApiServiceClient extends \Osp\Base\OspStub implements \com\vip\api\promotion\vis\protcontract\service\ProtContractApiServiceIf{
+class _ProtContractApiServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\api\promotion\vis\protcontract\service\ProtContractApiServiceIf{
 	
 	public function __construct(){
 		
@@ -112,13 +112,13 @@ class _ProtContractApiServiceClient extends \Osp\Base\OspStub implements \com\vi
 	}
 	
 	
-	public function addProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
+	public function addProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\Voop\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
 		
 		$this->send_addProtContract( $protContractMainInfoParams, $protContractDiscountInfoParams, $operatorParams);
 		return $this->recv_addProtContract();
 	}
 	
-	public function send_addProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
+	public function send_addProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\Voop\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
 		
 		$this->initInvocation("addProtContract");
 		$args = new \Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractApiService_addProtContract_args();
@@ -286,13 +286,13 @@ class _ProtContractApiServiceClient extends \Osp\Base\OspStub implements \com\vi
 	}
 	
 	
-	public function deleteProtContract( $id,\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
+	public function deleteProtContract( $id,\Voop\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
 		
 		$this->send_deleteProtContract( $id, $operatorParams);
 		return $this->recv_deleteProtContract();
 	}
 	
-	public function send_deleteProtContract( $id,\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
+	public function send_deleteProtContract( $id,\Voop\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
 		
 		$this->initInvocation("deleteProtContract");
 		$args = new \Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractApiService_deleteProtContract_args();
@@ -510,13 +510,13 @@ class _ProtContractApiServiceClient extends \Osp\Base\OspStub implements \com\vi
 	}
 	
 	
-	public function getContractPage(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryParam $protContractQueryParam,\com\vip\api\promotion\vis\common\Pager $pager){
+	public function getContractPage(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryParam $protContractQueryParam,\Voop\com\vip\api\promotion\vis\common\Pager $pager){
 		
 		$this->send_getContractPage( $protContractQueryParam, $pager);
 		return $this->recv_getContractPage();
 	}
 	
-	public function send_getContractPage(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryParam $protContractQueryParam,\com\vip\api\promotion\vis\common\Pager $pager){
+	public function send_getContractPage(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryParam $protContractQueryParam,\Voop\com\vip\api\promotion\vis\common\Pager $pager){
 		
 		$this->initInvocation("getContractPage");
 		$args = new \Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractApiService_getContractPage_args();
@@ -540,13 +540,13 @@ class _ProtContractApiServiceClient extends \Osp\Base\OspStub implements \com\vi
 	}
 	
 	
-	public function getContractPageForAudit(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryForAuditParam $protContractQueryForAuditParam,\com\vip\api\promotion\vis\common\Pager $pager){
+	public function getContractPageForAudit(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryForAuditParam $protContractQueryForAuditParam,\Voop\com\vip\api\promotion\vis\common\Pager $pager){
 		
 		$this->send_getContractPageForAudit( $protContractQueryForAuditParam, $pager);
 		return $this->recv_getContractPageForAudit();
 	}
 	
-	public function send_getContractPageForAudit(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryForAuditParam $protContractQueryForAuditParam,\com\vip\api\promotion\vis\common\Pager $pager){
+	public function send_getContractPageForAudit(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractQueryForAuditParam $protContractQueryForAuditParam,\Voop\com\vip\api\promotion\vis\common\Pager $pager){
 		
 		$this->initInvocation("getContractPageForAudit");
 		$args = new \Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractApiService_getContractPageForAudit_args();
@@ -934,13 +934,13 @@ class _ProtContractApiServiceClient extends \Osp\Base\OspStub implements \com\vi
 	}
 	
 	
-	public function updateProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
+	public function updateProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\Voop\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
 		
 		$this->send_updateProtContract( $protContractMainInfoParams, $protContractDiscountInfoParams, $operatorParams);
 		return $this->recv_updateProtContract();
 	}
 	
-	public function send_updateProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
+	public function send_updateProtContract(\Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractMainInfoParams $protContractMainInfoParams, $protContractDiscountInfoParams,\Voop\com\vip\api\promotion\vis\protcontract\service\OperatorParams $operatorParams){
 		
 		$this->initInvocation("updateProtContract");
 		$args = new \Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractApiService_updateProtContract_args();
@@ -1051,7 +1051,7 @@ class ProtContractApiService_addAttachment_args {
 		
 		if (!is_array($this->protContractAttachmentParams)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1060,7 +1060,7 @@ class ProtContractApiService_addAttachment_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1203,7 +1203,7 @@ class ProtContractApiService_addProtContract_args {
 		
 		if (!is_object($this->protContractMainInfoParams)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->protContractMainInfoParams->write($output);
@@ -1214,7 +1214,7 @@ class ProtContractApiService_addProtContract_args {
 		
 		if (!is_array($this->protContractDiscountInfoParams)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1223,7 +1223,7 @@ class ProtContractApiService_addProtContract_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1238,7 +1238,7 @@ class ProtContractApiService_addProtContract_args {
 		
 		if (!is_object($this->operatorParams)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->operatorParams->write($output);
@@ -1316,7 +1316,7 @@ class ProtContractApiService_auditProtContract_args {
 		
 		if (!is_object($this->protContractAuditParams)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->protContractAuditParams->write($output);
@@ -1394,7 +1394,7 @@ class ProtContractApiService_batchGetProtContractDetail_args {
 		
 		if (!is_object($this->batchProtContractDetailParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->batchProtContractDetailParam->write($output);
@@ -1730,7 +1730,7 @@ class ProtContractApiService_deleteProtContract_args {
 		
 		if (!is_object($this->operatorParams)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->operatorParams->write($output);
@@ -1808,7 +1808,7 @@ class ProtContractApiService_exportCommodityList_args {
 		
 		if (!is_object($this->queryActParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryActParam->write($output);
@@ -1886,7 +1886,7 @@ class ProtContractApiService_exportProtContract_args {
 		
 		if (!is_object($this->protContractQueryForAuditParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->protContractQueryForAuditParam->write($output);
@@ -2220,7 +2220,7 @@ class ProtContractApiService_getCaptcha_args {
 		
 		if (!is_object($this->getCaptchaParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->getCaptchaParam->write($output);
@@ -2319,7 +2319,7 @@ class ProtContractApiService_getContractPage_args {
 		
 		if (!is_object($this->protContractQueryParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->protContractQueryParam->write($output);
@@ -2330,7 +2330,7 @@ class ProtContractApiService_getContractPage_args {
 		
 		if (!is_object($this->pager)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->pager->write($output);
@@ -2429,7 +2429,7 @@ class ProtContractApiService_getContractPageForAudit_args {
 		
 		if (!is_object($this->protContractQueryForAuditParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->protContractQueryForAuditParam->write($output);
@@ -2440,7 +2440,7 @@ class ProtContractApiService_getContractPageForAudit_args {
 		
 		if (!is_object($this->pager)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->pager->write($output);
@@ -2518,7 +2518,7 @@ class ProtContractApiService_getProtContractDetail_args {
 		
 		if (!is_object($this->protContractDetailParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->protContractDetailParam->write($output);
@@ -2596,7 +2596,7 @@ class ProtContractApiService_getProtContractDetailPage_args {
 		
 		if (!is_object($this->protContractDetailQueryParams)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->protContractDetailQueryParams->write($output);
@@ -2761,7 +2761,7 @@ class ProtContractApiService_getVendorsByProtNos_args {
 		
 		if (!is_array($this->protNos)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2962,7 +2962,7 @@ class ProtContractApiService_queryActByActNo_args {
 		
 		if (!is_object($this->queryActParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryActParam->write($output);
@@ -3040,7 +3040,7 @@ class ProtContractApiService_queryActDetailByActNo_args {
 		
 		if (!is_object($this->queryActParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryActParam->write($output);
@@ -3118,7 +3118,7 @@ class ProtContractApiService_querySpecialName_args {
 		
 		if (!is_object($this->queryParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->queryParam->write($output);
@@ -3196,7 +3196,7 @@ class ProtContractApiService_saveProtContractView_args {
 		
 		if (!is_object($this->protContractViewSaveParams)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->protContractViewSaveParams->write($output);
@@ -3274,7 +3274,7 @@ class ProtContractApiService_searchSalesName_args {
 		
 		if (!is_object($this->protContractSalesNameParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->protContractSalesNameParam->write($output);
@@ -3393,7 +3393,7 @@ class ProtContractApiService_setApps_args {
 		
 		if (!is_array($this->appValue)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3478,7 +3478,7 @@ class ProtContractApiService_submitProtContract_args {
 		
 		if (!is_object($this->protContractSubmitParam)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->protContractSubmitParam->write($output);
@@ -3617,7 +3617,7 @@ class ProtContractApiService_updateProtContract_args {
 		
 		if (!is_object($this->protContractMainInfoParams)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->protContractMainInfoParams->write($output);
@@ -3628,7 +3628,7 @@ class ProtContractApiService_updateProtContract_args {
 		
 		if (!is_array($this->protContractDiscountInfoParams)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -3637,7 +3637,7 @@ class ProtContractApiService_updateProtContract_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -3652,7 +3652,7 @@ class ProtContractApiService_updateProtContract_args {
 		
 		if (!is_object($this->operatorParams)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->operatorParams->write($output);
@@ -3732,7 +3732,7 @@ class ProtContractApiService_addAttachment_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3888,7 +3888,7 @@ class ProtContractApiService_auditProtContract_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3989,7 +3989,7 @@ class ProtContractApiService_batchGetProtContractDetail_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3998,7 +3998,7 @@ class ProtContractApiService_batchGetProtContractDetail_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4158,7 +4158,7 @@ class ProtContractApiService_checkVendorCaptchaActive_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4240,7 +4240,7 @@ class ProtContractApiService_deleteAttachment_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4322,7 +4322,7 @@ class ProtContractApiService_deleteProtContract_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4404,7 +4404,7 @@ class ProtContractApiService_exportCommodityList_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4486,7 +4486,7 @@ class ProtContractApiService_exportProtContract_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4568,7 +4568,7 @@ class ProtContractApiService_fetchReminderJobSchedule_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -4743,7 +4743,7 @@ class ProtContractApiService_getAttachmentList_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4752,7 +4752,7 @@ class ProtContractApiService_getAttachmentList_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4857,7 +4857,7 @@ class ProtContractApiService_getBrandGoodsList_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4866,7 +4866,7 @@ class ProtContractApiService_getBrandGoodsList_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4952,7 +4952,7 @@ class ProtContractApiService_getCaptcha_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5034,7 +5034,7 @@ class ProtContractApiService_getContractPage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5116,7 +5116,7 @@ class ProtContractApiService_getContractPageForAudit_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5198,7 +5198,7 @@ class ProtContractApiService_getProtContractDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5280,7 +5280,7 @@ class ProtContractApiService_getProtContractDetailPage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5362,7 +5362,7 @@ class ProtContractApiService_getProtContractView_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5463,7 +5463,7 @@ class ProtContractApiService_getVendorsByProtNos_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5472,7 +5472,7 @@ class ProtContractApiService_getVendorsByProtNos_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5558,7 +5558,7 @@ class ProtContractApiService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5733,7 +5733,7 @@ class ProtContractApiService_queryActByActNo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5742,7 +5742,7 @@ class ProtContractApiService_queryActByActNo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5828,7 +5828,7 @@ class ProtContractApiService_queryActDetailByActNo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5910,7 +5910,7 @@ class ProtContractApiService_querySpecialName_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5992,7 +5992,7 @@ class ProtContractApiService_saveProtContractView_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6074,7 +6074,7 @@ class ProtContractApiService_searchSalesName_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6156,7 +6156,7 @@ class ProtContractApiService_setApps_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6238,7 +6238,7 @@ class ProtContractApiService_submitProtContract_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6320,7 +6320,7 @@ class ProtContractApiService_updateProtContract_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

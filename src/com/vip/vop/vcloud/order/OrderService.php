@@ -30,7 +30,7 @@ interface OrderServiceIf{
 	
 	public function confirmUserRefuse(\Voop\com\vip\vop\vcloud\order\OrderStoreReq $req);
 	
-	public function getChannelOrderAndDetail( $partnerId, $channelId, $orderType,\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses);
+	public function getChannelOrderAndDetail( $partnerId, $channelId, $orderType,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses);
 	
 	public function getChannelOrderByOrderSn( $partnerId, $orderSn, $subOrderSn, $channelId, $storeId);
 	
@@ -46,7 +46,7 @@ interface OrderServiceIf{
 	
 	public function getOrderOptLog( $partnerId, $orderSn, $channelId, $storeId, $subOrderSn);
 	
-	public function getWaybillDetails( $partnerId, $channelId, $startTime, $endTime,\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses, $orderType);
+	public function getWaybillDetails( $partnerId, $channelId, $startTime, $endTime,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses, $orderType);
 	
 	public function healthCheck();
 	
@@ -68,7 +68,7 @@ interface OrderServiceIf{
 	
 }
 
-class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcloud\order\OrderServiceIf{
+class _OrderServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\order\OrderServiceIf{
 	
 	public function __construct(){
 		
@@ -326,13 +326,13 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	}
 	
 	
-	public function getChannelOrderAndDetail( $partnerId, $channelId, $orderType,\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses){
+	public function getChannelOrderAndDetail( $partnerId, $channelId, $orderType,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses){
 		
 		$this->send_getChannelOrderAndDetail( $partnerId, $channelId, $orderType, $pagination, $warehouses);
 		return $this->recv_getChannelOrderAndDetail();
 	}
 	
-	public function send_getChannelOrderAndDetail( $partnerId, $channelId, $orderType,\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses){
+	public function send_getChannelOrderAndDetail( $partnerId, $channelId, $orderType,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses){
 		
 		$this->initInvocation("getChannelOrderAndDetail");
 		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_getChannelOrderAndDetail_args();
@@ -596,13 +596,13 @@ class _OrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vclo
 	}
 	
 	
-	public function getWaybillDetails( $partnerId, $channelId, $startTime, $endTime,\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses, $orderType){
+	public function getWaybillDetails( $partnerId, $channelId, $startTime, $endTime,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses, $orderType){
 		
 		$this->send_getWaybillDetails( $partnerId, $channelId, $startTime, $endTime, $pagination, $warehouses, $orderType);
 		return $this->recv_getWaybillDetails();
 	}
 	
-	public function send_getWaybillDetails( $partnerId, $channelId, $startTime, $endTime,\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses, $orderType){
+	public function send_getWaybillDetails( $partnerId, $channelId, $startTime, $endTime,\Voop\com\vip\vop\vcloud\common\api\Pagination $pagination, $warehouses, $orderType){
 		
 		$this->initInvocation("getWaybillDetails");
 		$args = new \Voop\com\vip\vop\vcloud\order\OrderService_getWaybillDetails_args();
@@ -978,7 +978,7 @@ class OrderService_acceptOrder_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1060,7 +1060,7 @@ class OrderService_appointOrderStore_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1478,7 +1478,7 @@ class OrderService_confirmDelivery_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1560,7 +1560,7 @@ class OrderService_confirmDeliveryPartly_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1642,7 +1642,7 @@ class OrderService_confirmNoStock_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1894,7 +1894,7 @@ class OrderService_confirmUserRefuse_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -2098,7 +2098,7 @@ class OrderService_getChannelOrderAndDetail_args {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -2113,7 +2113,7 @@ class OrderService_getChannelOrderAndDetail_args {
 			
 			if (!is_array($this->warehouses)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2388,7 +2388,7 @@ class OrderService_getChannelOrderItems_args {
 			
 			if (!is_object($this->orderQueryRequest)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->orderQueryRequest->write($output);
@@ -3425,7 +3425,7 @@ class OrderService_getWaybillDetails_args {
 			
 			if (!is_object($this->pagination)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->pagination->write($output);
@@ -3440,7 +3440,7 @@ class OrderService_getWaybillDetails_args {
 			
 			if (!is_array($this->warehouses)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -4050,7 +4050,7 @@ class OrderService_refuseOrder_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -5068,7 +5068,7 @@ class OrderService_confirmDelivery_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5077,7 +5077,7 @@ class OrderService_confirmDelivery_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5280,7 +5280,7 @@ class OrderService_confirmShipment_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5289,7 +5289,7 @@ class OrderService_confirmShipment_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -5424,7 +5424,7 @@ class OrderService_getChannelOrderAndDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5506,7 +5506,7 @@ class OrderService_getChannelOrderByOrderSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5588,7 +5588,7 @@ class OrderService_getChannelOrderItems_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5670,7 +5670,7 @@ class OrderService_getOfficialMemberByOrderSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5752,7 +5752,7 @@ class OrderService_getOrderByChannelIdAndOrderSn_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5834,7 +5834,7 @@ class OrderService_getOrderByExpressNo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -5935,7 +5935,7 @@ class OrderService_getOrderLogisticsByOrderSn_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -5944,7 +5944,7 @@ class OrderService_getOrderLogisticsByOrderSn_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6049,7 +6049,7 @@ class OrderService_getOrderOptLog_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6058,7 +6058,7 @@ class OrderService_getOrderOptLog_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6144,7 +6144,7 @@ class OrderService_getWaybillDetails_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6226,7 +6226,7 @@ class OrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -6327,7 +6327,7 @@ class OrderService_listSubOrder_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6336,7 +6336,7 @@ class OrderService_listSubOrder_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -6441,7 +6441,7 @@ class OrderService_listWarehouseByOrderSn_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -6450,7 +6450,7 @@ class OrderService_listWarehouseByOrderSn_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);

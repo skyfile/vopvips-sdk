@@ -40,15 +40,15 @@ interface ProductAdminServiceIf{
 	
 	public function testSftpConnectivity( $host, $port, $username, $password);
 	
-	public function updateProductSku( $skuId,\com\vip\vop\vcloud\product\Sku $sku);
+	public function updateProductSku( $skuId,\Voop\com\vip\vop\vcloud\product\Sku $sku);
 	
 	public function updateProductSkuAttr( $skuId, $attributes);
 	
 	public function updateProductSkuPrice( $skuPrices);
 	
-	public function updateProductSkuStatus(\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus);
+	public function updateProductSkuStatus(\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus);
 	
-	public function updateProductSpu( $spuId,\com\vip\vop\vcloud\product\Spu $spu);
+	public function updateProductSpu( $spuId,\Voop\com\vip\vop\vcloud\product\Spu $spu);
 	
 	public function updateProductSpuAttr( $spuId, $attributes);
 	
@@ -58,7 +58,7 @@ interface ProductAdminServiceIf{
 	
 }
 
-class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcloud\product\ProductAdminServiceIf{
+class _ProductAdminServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\product\ProductAdminServiceIf{
 	
 	public function __construct(){
 		
@@ -422,13 +422,13 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	}
 	
 	
-	public function updateProductSku( $skuId,\com\vip\vop\vcloud\product\Sku $sku){
+	public function updateProductSku( $skuId,\Voop\com\vip\vop\vcloud\product\Sku $sku){
 		
 		$this->send_updateProductSku( $skuId, $sku);
 		return $this->recv_updateProductSku();
 	}
 	
-	public function send_updateProductSku( $skuId,\com\vip\vop\vcloud\product\Sku $sku){
+	public function send_updateProductSku( $skuId,\Voop\com\vip\vop\vcloud\product\Sku $sku){
 		
 		$this->initInvocation("updateProductSku");
 		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSku_args();
@@ -498,13 +498,13 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	}
 	
 	
-	public function updateProductSkuStatus(\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus){
+	public function updateProductSkuStatus(\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus){
 		
 		$this->send_updateProductSkuStatus( $criteria, $skuStatus);
 		return $this->recv_updateProductSkuStatus();
 	}
 	
-	public function send_updateProductSkuStatus(\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus){
+	public function send_updateProductSkuStatus(\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $criteria,\Voop\com\vip\vop\vcloud\product\ProductSkuStatus $skuStatus){
 		
 		$this->initInvocation("updateProductSkuStatus");
 		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSkuStatus_args();
@@ -524,13 +524,13 @@ class _ProductAdminServiceClient extends \Osp\Base\OspStub implements \com\vip\v
 	}
 	
 	
-	public function updateProductSpu( $spuId,\com\vip\vop\vcloud\product\Spu $spu){
+	public function updateProductSpu( $spuId,\Voop\com\vip\vop\vcloud\product\Spu $spu){
 		
 		$this->send_updateProductSpu( $spuId, $spu);
 		return $this->recv_updateProductSpu();
 	}
 	
-	public function send_updateProductSpu( $spuId,\com\vip\vop\vcloud\product\Spu $spu){
+	public function send_updateProductSpu( $spuId,\Voop\com\vip\vop\vcloud\product\Spu $spu){
 		
 		$this->initInvocation("updateProductSpu");
 		$args = new \Voop\com\vip\vop\vcloud\product\ProductAdminService_updateProductSpu_args();
@@ -1183,7 +1183,7 @@ class ProductAdminService_pushPriceToVdgByIdList_args {
 		
 		if (!is_array($this->idList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1285,7 +1285,7 @@ class ProductAdminService_pushProductToVdgBySkuIdList_args {
 		
 		if (!is_array($this->skuIdList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1387,7 +1387,7 @@ class ProductAdminService_pushProductToVdgBySpuIdList_args {
 		
 		if (!is_array($this->spuIdList)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1472,7 +1472,7 @@ class ProductAdminService_saveEmailConfig_args {
 		
 		if (!is_object($this->config)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->config->write($output);
@@ -1550,7 +1550,7 @@ class ProductAdminService_saveFileLogSetting_args {
 		
 		if (!is_object($this->fileLogSetting)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->fileLogSetting->write($output);
@@ -1628,7 +1628,7 @@ class ProductAdminService_saveHost_args {
 		
 		if (!is_object($this->host)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->host->write($output);
@@ -1876,7 +1876,7 @@ class ProductAdminService_updateProductSku_args {
 		
 		if (!is_object($this->sku)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->sku->write($output);
@@ -2001,7 +2001,7 @@ class ProductAdminService_updateProductSkuAttr_args {
 		
 		if (!is_array($this->attributes)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2010,7 +2010,7 @@ class ProductAdminService_updateProductSkuAttr_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2111,7 +2111,7 @@ class ProductAdminService_updateProductSkuPrice_args {
 		
 		if (!is_array($this->skuPrices)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2120,7 +2120,7 @@ class ProductAdminService_updateProductSkuPrice_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2223,7 +2223,7 @@ class ProductAdminService_updateProductSkuStatus_args {
 		
 		if (!is_object($this->criteria)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->criteria->write($output);
@@ -2234,7 +2234,7 @@ class ProductAdminService_updateProductSkuStatus_args {
 		
 		if (!is_object($this->skuStatus)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->skuStatus->write($output);
@@ -2340,7 +2340,7 @@ class ProductAdminService_updateProductSpu_args {
 		
 		if (!is_object($this->spu)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->spu->write($output);
@@ -2465,7 +2465,7 @@ class ProductAdminService_updateProductSpuAttr_args {
 		
 		if (!is_array($this->attributes)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2474,7 +2474,7 @@ class ProductAdminService_updateProductSpuAttr_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2613,7 +2613,7 @@ class ProductAdminService_updateSftpFileLog_args {
 			
 			if (!is_array($this->logIdList)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3062,7 +3062,7 @@ class ProductAdminService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3163,7 +3163,7 @@ class ProductAdminService_listAllFileLogSettings_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3172,7 +3172,7 @@ class ProductAdminService_listAllFileLogSettings_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3277,7 +3277,7 @@ class ProductAdminService_listHosts_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3286,7 +3286,7 @@ class ProductAdminService_listHosts_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3683,7 +3683,7 @@ class ProductAdminService_testSftpConnectivity_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();

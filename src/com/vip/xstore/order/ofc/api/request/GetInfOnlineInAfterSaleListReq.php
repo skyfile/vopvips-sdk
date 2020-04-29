@@ -182,7 +182,7 @@ class GetInfOnlineInAfterSaleListReq {
 			
 			if (!is_object($this->errorCountRange)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->errorCountRange->write($output);

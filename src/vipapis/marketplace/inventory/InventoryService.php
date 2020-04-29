@@ -22,7 +22,7 @@ interface InventoryServiceIf{
 	
 }
 
-class _InventoryServiceClient extends \Osp\Base\OspStub implements \vipapis\marketplace\inventory\InventoryServiceIf{
+class _InventoryServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\marketplace\inventory\InventoryServiceIf{
 	
 	public function __construct(){
 		
@@ -208,7 +208,7 @@ class InventoryService_getSkuStock_args {
 			
 			if (!is_object($this->getSkuStockRequest)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->getSkuStockRequest->write($output);
@@ -334,7 +334,7 @@ class InventoryService_increaseSkuStock_args {
 		
 		if (!is_object($this->increaseSkuStockRequest)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->increaseSkuStockRequest->write($output);
@@ -414,7 +414,7 @@ class InventoryService_updateSkuStock_args {
 			
 			if (!is_object($this->updateSkuStockRequest)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->updateSkuStockRequest->write($output);
@@ -496,7 +496,7 @@ class InventoryService_getSkuStock_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -578,7 +578,7 @@ class InventoryService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -660,7 +660,7 @@ class InventoryService_increaseSkuStock_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -742,7 +742,7 @@ class InventoryService_updateSkuStock_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

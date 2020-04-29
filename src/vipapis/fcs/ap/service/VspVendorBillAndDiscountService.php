@@ -28,7 +28,7 @@ interface VspVendorBillAndDiscountServiceIf{
 	
 }
 
-class _VspVendorBillAndDiscountServiceClient extends \Osp\Base\OspStub implements \vipapis\fcs\ap\service\VspVendorBillAndDiscountServiceIf{
+class _VspVendorBillAndDiscountServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\fcs\ap\service\VspVendorBillAndDiscountServiceIf{
 	
 	public function __construct(){
 		
@@ -329,7 +329,7 @@ class VspVendorBillAndDiscountService_getBillDiscountDetailPage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -435,7 +435,7 @@ class VspVendorBillAndDiscountService_getBillDiscountSourcePage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -541,7 +541,7 @@ class VspVendorBillAndDiscountService_getBillGoodsDetailPage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -647,7 +647,7 @@ class VspVendorBillAndDiscountService_getBillGoodsSourcePage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -753,7 +753,7 @@ class VspVendorBillAndDiscountService_getInvTransDetailPage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -859,7 +859,7 @@ class VspVendorBillAndDiscountService_getItemSourcePage_args {
 			
 			if (!is_object($this->reqItem)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->reqItem->write($output);
@@ -992,7 +992,7 @@ class VspVendorBillAndDiscountService_getBillDiscountDetailPage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1074,7 +1074,7 @@ class VspVendorBillAndDiscountService_getBillDiscountSourcePage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1156,7 +1156,7 @@ class VspVendorBillAndDiscountService_getBillGoodsDetailPage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1238,7 +1238,7 @@ class VspVendorBillAndDiscountService_getBillGoodsSourcePage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1320,7 +1320,7 @@ class VspVendorBillAndDiscountService_getInvTransDetailPage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1402,7 +1402,7 @@ class VspVendorBillAndDiscountService_getItemSourcePage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1484,7 +1484,7 @@ class VspVendorBillAndDiscountService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

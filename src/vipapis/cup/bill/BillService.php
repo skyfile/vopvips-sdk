@@ -18,7 +18,7 @@ interface BillServiceIf{
 	
 }
 
-class _BillServiceClient extends \Osp\Base\OspStub implements \vipapis\cup\bill\BillServiceIf{
+class _BillServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\cup\bill\BillServiceIf{
 	
 	public function __construct(){
 		
@@ -192,7 +192,7 @@ class BillService_updateBillInfo_args {
 		
 		if (!is_object($this->bill_header_info)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->bill_header_info->write($output);
@@ -272,7 +272,7 @@ class BillService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -354,7 +354,7 @@ class BillService_updateBillInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

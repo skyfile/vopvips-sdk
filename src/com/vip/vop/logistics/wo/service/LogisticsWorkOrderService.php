@@ -24,7 +24,7 @@ interface LogisticsWorkOrderServiceIf{
 	
 }
 
-class _LogisticsWorkOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\logistics\wo\service\LogisticsWorkOrderServiceIf{
+class _LogisticsWorkOrderServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\logistics\wo\service\LogisticsWorkOrderServiceIf{
 	
 	public function __construct(){
 		
@@ -228,7 +228,7 @@ class LogisticsWorkOrderService_createWorkOrder_args {
 		
 		if (!is_object($this->createWorkOrderReq)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->createWorkOrderReq->write($output);
@@ -306,7 +306,7 @@ class LogisticsWorkOrderService_getWorkOrders_args {
 		
 		if (!is_object($this->workOrderQueryReq)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->workOrderQueryReq->write($output);
@@ -430,7 +430,7 @@ class LogisticsWorkOrderService_replyProcessResult_args {
 		
 		if (!is_object($this->processResult)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->processResult->write($output);
@@ -508,7 +508,7 @@ class LogisticsWorkOrderService_replyRecheckResult_args {
 		
 		if (!is_object($this->rechekResult)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->rechekResult->write($output);
@@ -588,7 +588,7 @@ class LogisticsWorkOrderService_createWorkOrder_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -689,7 +689,7 @@ class LogisticsWorkOrderService_getWorkOrders_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -698,7 +698,7 @@ class LogisticsWorkOrderService_getWorkOrders_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -784,7 +784,7 @@ class LogisticsWorkOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

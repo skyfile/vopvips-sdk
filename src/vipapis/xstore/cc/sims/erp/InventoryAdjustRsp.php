@@ -101,7 +101,7 @@ class InventoryAdjustRsp {
 				
 				$needSkip = false;
 				
-				$names = \vipapis\xstore\cc\sims\erp\RspCodeEnum::$__names;
+				$names = \Voop\vipapis\xstore\cc\sims\erp\RspCodeEnum::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -206,7 +206,7 @@ class InventoryAdjustRsp {
 			
 			if (!is_array($this->poMap)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeMapBegin();

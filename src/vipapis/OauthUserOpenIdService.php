@@ -20,7 +20,7 @@ interface OauthUserOpenIdServiceIf{
 	
 }
 
-class _OauthUserOpenIdServiceClient extends \Osp\Base\OspStub implements \vipapis\OauthUserOpenIdServiceIf{
+class _OauthUserOpenIdServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\OauthUserOpenIdServiceIf{
 	
 	public function __construct(){
 		
@@ -512,7 +512,7 @@ class OauthUserOpenIdService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

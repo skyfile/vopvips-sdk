@@ -161,7 +161,7 @@ class DvdOrderStatus {
 				
 				$needSkip = false;
 				
-				$names = \vipapis\common\OrderStatus::$__names;
+				$names = \Voop\vipapis\common\OrderStatus::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

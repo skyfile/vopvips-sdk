@@ -28,7 +28,7 @@ interface RefundServiceIf{
 	
 }
 
-class _RefundServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\vcloud\invoice\api\RefundServiceIf{
+class _RefundServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\invoice\api\RefundServiceIf{
 	
 	public function __construct(){
 		
@@ -282,7 +282,7 @@ class RefundService_dealRefund_args {
 			
 			if (!is_object($this->refund)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->refund->write($output);
@@ -410,7 +410,7 @@ class RefundService_matchReturnApplication_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -566,7 +566,7 @@ class RefundService_queryRefunds_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -648,7 +648,7 @@ class RefundService_receiveRefund_args {
 			
 			if (!is_object($this->refund)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->refund->write($output);
@@ -849,7 +849,7 @@ class RefundService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1054,7 +1054,7 @@ class RefundService_queryRefunds_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

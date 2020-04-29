@@ -22,7 +22,7 @@ interface VendorReturnServiceIf{
 	
 }
 
-class _VendorReturnServiceClient extends \Osp\Base\OspStub implements \vipapis\vreturn\VendorReturnServiceIf{
+class _VendorReturnServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\vreturn\VendorReturnServiceIf{
 	
 	public function __construct(){
 		
@@ -278,7 +278,7 @@ class VendorReturnService_getReturnDetail_args {
 		if(true) {
 			
 			
-			$names = \vipapis\common\Warehouse::$__names;
+			$names = \Voop\vipapis\common\Warehouse::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -527,7 +527,7 @@ class VendorReturnService_getReturnInfo_args {
 		if(true) {
 			
 			
-			$names = \vipapis\common\Warehouse::$__names;
+			$names = \Voop\vipapis\common\Warehouse::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -728,7 +728,7 @@ class VendorReturnService_getReturnItem_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -854,7 +854,7 @@ class VendorReturnService_getReturnDetail_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -936,7 +936,7 @@ class VendorReturnService_getReturnInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1018,7 +1018,7 @@ class VendorReturnService_getReturnItem_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1100,7 +1100,7 @@ class VendorReturnService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

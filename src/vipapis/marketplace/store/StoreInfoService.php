@@ -20,7 +20,7 @@ interface StoreInfoServiceIf{
 	
 }
 
-class _StoreInfoServiceClient extends \Osp\Base\OspStub implements \vipapis\marketplace\store\StoreInfoServiceIf{
+class _StoreInfoServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\marketplace\store\StoreInfoServiceIf{
 	
 	public function __construct(){
 		
@@ -312,7 +312,7 @@ class StoreInfoService_getStoreInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -394,7 +394,7 @@ class StoreInfoService_getWarehouse_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -476,7 +476,7 @@ class StoreInfoService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

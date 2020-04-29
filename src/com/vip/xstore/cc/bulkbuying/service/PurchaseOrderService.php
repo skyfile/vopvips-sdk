@@ -24,7 +24,7 @@ interface PurchaseOrderServiceIf{
 	
 	public function exportAsync( $purchaseNo, $exportType);
 	
-	public function exportPoHead( $purchaseNo,\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel);
+	public function exportPoHead( $purchaseNo,\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel);
 	
 	public function healthCheck();
 	
@@ -44,7 +44,7 @@ interface PurchaseOrderServiceIf{
 	
 }
 
-class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderServiceIf{
+class _PurchaseOrderServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderServiceIf{
 	
 	public function __construct(){
 		
@@ -214,13 +214,13 @@ class _PurchaseOrderServiceClient extends \Osp\Base\OspStub implements \com\vip\
 	}
 	
 	
-	public function exportPoHead( $purchaseNo,\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel){
+	public function exportPoHead( $purchaseNo,\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel){
 		
 		$this->send_exportPoHead( $purchaseNo, $purchaseOrderQueryModel);
 		return $this->recv_exportPoHead();
 	}
 	
-	public function send_exportPoHead( $purchaseNo,\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel){
+	public function send_exportPoHead( $purchaseNo,\Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderQueryModel $purchaseOrderQueryModel){
 		
 		$this->initInvocation("exportPoHead");
 		$args = new \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderService_exportPoHead_args();
@@ -665,7 +665,7 @@ class PurchaseOrderService_delete_args {
 			
 			if (!is_array($this->purchaseNo)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -752,7 +752,7 @@ class PurchaseOrderService_doImport_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1048,7 +1048,7 @@ class PurchaseOrderService_exportPoHead_args {
 			
 			if (!is_object($this->purchaseOrderQueryModel)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->purchaseOrderQueryModel->write($output);
@@ -1176,7 +1176,7 @@ class PurchaseOrderService_queryMyApprovedPo_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -1332,7 +1332,7 @@ class PurchaseOrderService_selectAll_args {
 			
 			if (!is_object($this->selectAllReq)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->selectAllReq->write($output);
@@ -1414,7 +1414,7 @@ class PurchaseOrderService_selectPage_args {
 			
 			if (!is_object($this->purchaseOrderQueryModel)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->purchaseOrderQueryModel->write($output);
@@ -1494,7 +1494,7 @@ class PurchaseOrderService_statPoByGroup_args {
 		
 		if (!is_object($this->req)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->req->write($output);
@@ -1572,7 +1572,7 @@ class PurchaseOrderService_update_args {
 		
 		if (!is_object($this->request)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->request->write($output);
@@ -1914,7 +1914,7 @@ class PurchaseOrderService_doImport_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1996,7 +1996,7 @@ class PurchaseOrderService_export_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2148,7 +2148,7 @@ class PurchaseOrderService_exportPoHead_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2230,7 +2230,7 @@ class PurchaseOrderService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2312,7 +2312,7 @@ class PurchaseOrderService_queryMyApprovedPo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2413,7 +2413,7 @@ class PurchaseOrderService_select_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2422,7 +2422,7 @@ class PurchaseOrderService_select_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2527,7 +2527,7 @@ class PurchaseOrderService_selectAll_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2536,7 +2536,7 @@ class PurchaseOrderService_selectAll_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2622,7 +2622,7 @@ class PurchaseOrderService_selectPage_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -2704,7 +2704,7 @@ class PurchaseOrderService_statPoByGroup_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

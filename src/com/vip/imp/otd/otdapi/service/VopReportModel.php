@@ -491,7 +491,7 @@ class VopReportModel {
 				
 				$needSkip = false;
 				
-				$names = \com\vip\imp\otd\otdapi\service\VopDeliveryChannelType::$__names;
+				$names = \Voop\com\vip\imp\otd\otdapi\service\VopDeliveryChannelType::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){

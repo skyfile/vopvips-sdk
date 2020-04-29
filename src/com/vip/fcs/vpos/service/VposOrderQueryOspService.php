@@ -18,7 +18,7 @@ interface VposOrderQueryOspServiceIf{
 	
 }
 
-class _VposOrderQueryOspServiceClient extends \Osp\Base\OspStub implements \com\vip\fcs\vpos\service\VposOrderQueryOspServiceIf{
+class _VposOrderQueryOspServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\fcs\vpos\service\VposOrderQueryOspServiceIf{
 	
 	public function __construct(){
 		
@@ -194,7 +194,7 @@ class VposOrderQueryOspService_queryOrderSummaryByStoreCode_args {
 			
 			if (!is_object($this->queryRequest)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->queryRequest->write($output);
@@ -276,7 +276,7 @@ class VposOrderQueryOspService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -358,7 +358,7 @@ class VposOrderQueryOspService_queryOrderSummaryByStoreCode_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

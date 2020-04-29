@@ -20,7 +20,7 @@ interface PurchaseBatchApplyInnerServiceIf{
 	
 }
 
-class _PurchaseBatchApplyInnerServiceClient extends \Osp\Base\OspStub implements \com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerServiceIf{
+class _PurchaseBatchApplyInnerServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerServiceIf{
 	
 	public function __construct(){
 		
@@ -178,7 +178,7 @@ class PurchaseBatchApplyInnerService_createPurchaseOrdersByApply_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -306,7 +306,7 @@ class PurchaseBatchApplyInnerService_queryPurchaseBatchesToHandle_args {
 			
 			if (!is_object($this->req)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->req->write($output);
@@ -388,7 +388,7 @@ class PurchaseBatchApplyInnerService_createPurchaseOrdersByApply_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -470,7 +470,7 @@ class PurchaseBatchApplyInnerService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -552,7 +552,7 @@ class PurchaseBatchApplyInnerService_queryPurchaseBatchesToHandle_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

@@ -22,8 +22,8 @@
 
 namespace Voop\Osp\Protocol\JSON;
 
-use Osp\Protocol\JSON\BaseContext;
-use Osp\Protocol\JSONProtocol;
+use Voop\Osp\Protocol\JSON\BaseContext;
+use Voop\Osp\Protocol\JSONProtocol;
 
 class ListContext extends BaseContext
 {

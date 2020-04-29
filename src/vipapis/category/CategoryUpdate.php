@@ -71,7 +71,7 @@ class CategoryUpdate {
 				
 				$needSkip = false;
 				
-				$names = \vipapis\category\UpdateType::$__names;
+				$names = \Voop\vipapis\category\UpdateType::$__names;
 				$name = null;
 				$input->readString($name);
 				foreach ($names as $k => $v){
@@ -131,7 +131,7 @@ class CategoryUpdate {
 		
 		if (!is_object($this->category)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->category->write($output);

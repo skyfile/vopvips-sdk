@@ -28,7 +28,7 @@ interface AppSwitcherServiceIf{
 	
 }
 
-class _AppSwitcherServiceClient extends \Osp\Base\OspStub implements \com\vip\vop\common\switcher\AppSwitcherServiceIf{
+class _AppSwitcherServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\common\switcher\AppSwitcherServiceIf{
 	
 	public function __construct(){
 		
@@ -570,7 +570,7 @@ class AppSwitcherService_insertOrUpdate_args {
 		
 		if (!is_object($this->switcherVo)) {
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$xfer += $this->switcherVo->write($output);
@@ -1144,7 +1144,7 @@ class AppSwitcherService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -1349,7 +1349,7 @@ class AppSwitcherService_listSwitcher_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);

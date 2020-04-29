@@ -23,7 +23,7 @@ class Logger {
 	private static $LOG_LEVEL_ERROR = 3;
 	
 	private static function init(){
-		Logger::$LOG_PATH = \Osp\Util\PathUtil::getRootPath()."/osp-log/";
+		Logger::$LOG_PATH = \Voop\Osp\Util\PathUtil::getRootPath()."/osp-log/";
 		
 		if(!file_exists(Logger::$LOG_PATH)){
 			mkdir(Logger::$LOG_PATH);
@@ -81,7 +81,7 @@ class Logger {
 		$msg = "[ERROR]".$msg;
 		
 		if(Logger::$LOG_LEVEL <= Logger::$LOG_LEVEL_ERROR){
-			if ($e instanceof \Osp\Exception\OspException){
+			if ($e instanceof \Voop\Osp\Exception\OspException){
 				Logger::log($msg.$e->getReturnCode());
 				Logger::log($msg.$e->getReturnMessage());
 				Logger::log($msg.serialize($e));

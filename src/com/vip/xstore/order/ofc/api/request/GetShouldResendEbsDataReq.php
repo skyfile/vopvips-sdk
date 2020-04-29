@@ -210,7 +210,7 @@ class GetShouldResendEbsDataReq {
 			
 			if (!is_object($this->lastSyncTimeRange)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->lastSyncTimeRange->write($output);
@@ -234,7 +234,7 @@ class GetShouldResendEbsDataReq {
 			
 			if (!is_array($this->scenarioCodes)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeSetBegin();

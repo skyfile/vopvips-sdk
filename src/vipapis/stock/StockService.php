@@ -30,7 +30,7 @@ interface StockServiceIf{
 	
 	public function getPoNoFrozenTransIdRelationship( $vendor_id, $frozen_trans_id, $po_no);
 	
-	public function getVendorScheduleFreezeStock( $vendor_id,\vipapis\stock\GetVendorScheduleFreezeStock $get_vendor_schedule_freeze_stock);
+	public function getVendorScheduleFreezeStock( $vendor_id,\Voop\vipapis\stock\GetVendorScheduleFreezeStock $get_vendor_schedule_freeze_stock);
 	
 	public function getWarehouseInfo( $vendor_id, $vendor_warehouse_id, $vip_warehouse_code);
 	
@@ -44,7 +44,7 @@ interface StockServiceIf{
 	
 }
 
-class _StockServiceClient extends \Osp\Base\OspStub implements \vipapis\stock\StockServiceIf{
+class _StockServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\vipapis\stock\StockServiceIf{
 	
 	public function __construct(){
 		
@@ -352,13 +352,13 @@ class _StockServiceClient extends \Osp\Base\OspStub implements \vipapis\stock\St
 	}
 	
 	
-	public function getVendorScheduleFreezeStock( $vendor_id,\vipapis\stock\GetVendorScheduleFreezeStock $get_vendor_schedule_freeze_stock){
+	public function getVendorScheduleFreezeStock( $vendor_id,\Voop\vipapis\stock\GetVendorScheduleFreezeStock $get_vendor_schedule_freeze_stock){
 		
 		$this->send_getVendorScheduleFreezeStock( $vendor_id, $get_vendor_schedule_freeze_stock);
 		return $this->recv_getVendorScheduleFreezeStock();
 	}
 	
-	public function send_getVendorScheduleFreezeStock( $vendor_id,\vipapis\stock\GetVendorScheduleFreezeStock $get_vendor_schedule_freeze_stock){
+	public function send_getVendorScheduleFreezeStock( $vendor_id,\Voop\vipapis\stock\GetVendorScheduleFreezeStock $get_vendor_schedule_freeze_stock){
 		
 		$this->initInvocation("getVendorScheduleFreezeStock");
 		$args = new \Voop\vipapis\stock\StockService_getVendorScheduleFreezeStock_args();
@@ -639,7 +639,7 @@ class StockService_addWarehouseInfo_args {
 		
 		if (!is_array($this->add_warehouse_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -648,7 +648,7 @@ class StockService_addWarehouseInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -821,7 +821,7 @@ class StockService_confirmFrozenInventory_args {
 		
 		if (!is_array($this->confirm_frozen_inventory_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -830,7 +830,7 @@ class StockService_confirmFrozenInventory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -953,7 +953,7 @@ class StockService_confirmUnfrozenInventory_args {
 		
 		if (!is_array($this->frozen_trans_ids)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1081,7 +1081,7 @@ class StockService_delWarehouseInfo_args {
 		
 		if (!is_array($this->vendor_warehouse_id_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -1090,7 +1090,7 @@ class StockService_delWarehouseInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -1464,7 +1464,7 @@ class StockService_getOxoShopOrderForJit_args {
 		if(true) {
 			
 			
-			$names = \vipapis\common\Warehouse::$__names;
+			$names = \Voop\vipapis\common\Warehouse::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -1709,7 +1709,7 @@ class StockService_getOxoShopOrderForPop_args {
 		if(true) {
 			
 			
-			$names = \vipapis\common\Warehouse::$__names;
+			$names = \Voop\vipapis\common\Warehouse::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -2058,7 +2058,7 @@ class StockService_getVendorScheduleFreezeStock_args {
 			
 			if (!is_object($this->get_vendor_schedule_freeze_stock)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->get_vendor_schedule_freeze_stock->write($output);
@@ -2155,7 +2155,7 @@ class StockService_getWarehouseInfo_args {
 		if(true) {
 			
 			
-			$names = \vipapis\common\Warehouse::$__names;
+			$names = \Voop\vipapis\common\Warehouse::$__names;
 			$name = null;
 			$input->readString($name);
 			foreach ($names as $k => $v){
@@ -2368,7 +2368,7 @@ class StockService_updateVendorWarehouseAndVIPWarehouseMap_args {
 		
 		if (!is_array($this->update_warehousemap_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2377,7 +2377,7 @@ class StockService_updateVendorWarehouseAndVIPWarehouseMap_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2502,7 +2502,7 @@ class StockService_updateWarehouseInfo_args {
 		
 		if (!is_array($this->update_warehouse_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2511,7 +2511,7 @@ class StockService_updateWarehouseInfo_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2636,7 +2636,7 @@ class StockService_updateWarehouseInventory_args {
 		
 		if (!is_array($this->update_warehouse_inventory_list)){
 			
-			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+			throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 		}
 		
 		$output->writeListBegin();
@@ -2645,7 +2645,7 @@ class StockService_updateWarehouseInventory_args {
 			
 			if (!is_object($iter0)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $iter0->write($output);
@@ -2748,7 +2748,7 @@ class StockService_addWarehouseInfo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -2757,7 +2757,7 @@ class StockService_addWarehouseInfo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -2843,7 +2843,7 @@ class StockService_confirmFrozenInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3014,7 +3014,7 @@ class StockService_delWarehouseInfo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3023,7 +3023,7 @@ class StockService_delWarehouseInfo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3128,7 +3128,7 @@ class StockService_getFreezeStockTransId_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3137,7 +3137,7 @@ class StockService_getFreezeStockTransId_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3223,7 +3223,7 @@ class StockService_getFreezingStockDetails_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3305,7 +3305,7 @@ class StockService_getOxoShopOrderForJit_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3387,7 +3387,7 @@ class StockService_getOxoShopOrderForPop_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3469,7 +3469,7 @@ class StockService_getPoNoFrozenTransIdRelationship_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3570,7 +3570,7 @@ class StockService_getVendorScheduleFreezeStock_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3579,7 +3579,7 @@ class StockService_getVendorScheduleFreezeStock_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -3665,7 +3665,7 @@ class StockService_getWarehouseInfo_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3747,7 +3747,7 @@ class StockService_healthCheck_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
@@ -3922,7 +3922,7 @@ class StockService_updateWarehouseInfo_result {
 			
 			if (!is_array($this->success)){
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$output->writeListBegin();
@@ -3931,7 +3931,7 @@ class StockService_updateWarehouseInfo_result {
 				
 				if (!is_object($iter0)) {
 					
-					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+					throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 				}
 				
 				$xfer += $iter0->write($output);
@@ -4017,7 +4017,7 @@ class StockService_updateWarehouseInventory_result {
 			
 			if (!is_object($this->success)) {
 				
-				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Osp\Exception\OspException::INVALID_DATA);
+				throw new \Voop\Osp\Exception\OspException('Bad type in structure.', \Voop\Osp\Exception\OspException::INVALID_DATA);
 			}
 			
 			$xfer += $this->success->write($output);
