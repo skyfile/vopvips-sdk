@@ -12,7 +12,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Vop\\Sdk\\": "src/"
+            "VopVips\\Sdk\\": "src/"
         }
     }
 }
