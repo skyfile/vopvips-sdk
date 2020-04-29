@@ -1,0 +1,18 @@
+{
+    "name": "skyfile/vop-vips-sdk",
+    "description": "唯品会SDK",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "skyfile",
+            "email": "fengfilesky@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Vop\\Sdk\\": "src/"
+        }
+    }
+}
