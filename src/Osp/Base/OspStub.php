@@ -65,7 +65,7 @@ class OspStub {
 		$sign .= "version" . $version;
 		$sign .= $request;
 		
-		return \Osp\Util\HmacUtil::hmac($sign, $appSecret);
+		return \Voop\Osp\Util\HmacUtil::hmac($sign, $appSecret);
 	}
 	
 	/**
