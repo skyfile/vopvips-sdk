@@ -26,7 +26,7 @@ interface OmniLogisticsServiceIf{
 	
 }
 
-class _OmniLogisticsServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\omni\logistics\OmniLogisticsServiceIf{
+class _OmniLogisticsServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\omni\logistics\OmniLogisticsServiceIf{
 	
 	public function __construct(){
 		

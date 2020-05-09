@@ -136,7 +136,7 @@ interface SvipOspServiceV2If{
 	
 }
 
-class _SvipOspServiceV2Client extends \Voop\Osp\Base\OspStub implements \com\vip\svip\osp\service\SvipOspServiceV2If{
+class _SvipOspServiceV2Client extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\svip\osp\service\SvipOspServiceV2If{
 	
 	public function __construct(){
 		

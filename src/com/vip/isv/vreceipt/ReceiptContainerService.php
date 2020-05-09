@@ -18,7 +18,7 @@ interface ReceiptContainerServiceIf{
 	
 }
 
-class _ReceiptContainerServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\isv\vreceipt\ReceiptContainerServiceIf{
+class _ReceiptContainerServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\isv\vreceipt\ReceiptContainerServiceIf{
 	
 	public function __construct(){
 		

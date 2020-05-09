@@ -24,7 +24,7 @@ interface FendiProductSynServiceIf{
 	
 }
 
-class _FendiProductSynServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\product\FendiProductSynServiceIf{
+class _FendiProductSynServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\vcloud\product\FendiProductSynServiceIf{
 	
 	public function __construct(){
 		

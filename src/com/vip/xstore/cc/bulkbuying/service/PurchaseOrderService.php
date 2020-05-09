@@ -44,7 +44,7 @@ interface PurchaseOrderServiceIf{
 	
 }
 
-class _PurchaseOrderServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\cc\bulkbuying\service\PurchaseOrderServiceIf{
+class _PurchaseOrderServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\xstore\cc\bulkbuying\service\PurchaseOrderServiceIf{
 	
 	public function __construct(){
 		

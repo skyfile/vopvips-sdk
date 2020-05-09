@@ -72,7 +72,7 @@ interface InventoryServiceIf{
 	
 }
 
-class _InventoryServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\inventory\api\InventoryServiceIf{
+class _InventoryServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\vcloud\inventory\api\InventoryServiceIf{
 	
 	public function __construct(){
 		

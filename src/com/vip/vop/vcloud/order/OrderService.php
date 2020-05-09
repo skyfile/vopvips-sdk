@@ -68,7 +68,7 @@ interface OrderServiceIf{
 	
 }
 
-class _OrderServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\order\OrderServiceIf{
+class _OrderServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\vcloud\order\OrderServiceIf{
 	
 	public function __construct(){
 		

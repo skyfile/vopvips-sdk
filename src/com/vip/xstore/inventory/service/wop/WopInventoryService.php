@@ -20,7 +20,7 @@ interface WopInventoryServiceIf{
 	
 }
 
-class _WopInventoryServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\inventory\service\wop\WopInventoryServiceIf{
+class _WopInventoryServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\xstore\inventory\service\wop\WopInventoryServiceIf{
 	
 	public function __construct(){
 		

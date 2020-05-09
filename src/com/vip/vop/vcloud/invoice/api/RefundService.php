@@ -28,7 +28,7 @@ interface RefundServiceIf{
 	
 }
 
-class _RefundServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\invoice\api\RefundServiceIf{
+class _RefundServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\vcloud\invoice\api\RefundServiceIf{
 	
 	public function __construct(){
 		

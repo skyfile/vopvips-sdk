@@ -26,7 +26,7 @@ interface CcPoQueryServiceIf{
 	
 }
 
-class _CcPoQueryServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\cc\bulkbuying\CcPoQueryServiceIf{
+class _CcPoQueryServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\xstore\cc\bulkbuying\CcPoQueryServiceIf{
 	
 	public function __construct(){
 		

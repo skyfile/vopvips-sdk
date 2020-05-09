@@ -18,7 +18,7 @@ interface VposOrderQueryOspServiceIf{
 	
 }
 
-class _VposOrderQueryOspServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\fcs\vpos\service\VposOrderQueryOspServiceIf{
+class _VposOrderQueryOspServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\fcs\vpos\service\VposOrderQueryOspServiceIf{
 	
 	public function __construct(){
 		

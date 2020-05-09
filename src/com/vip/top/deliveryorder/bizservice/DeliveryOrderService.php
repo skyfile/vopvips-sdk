@@ -52,7 +52,7 @@ interface DeliveryOrderServiceIf{
 	
 }
 
-class _DeliveryOrderServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\top\deliveryorder\bizservice\DeliveryOrderServiceIf{
+class _DeliveryOrderServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\top\deliveryorder\bizservice\DeliveryOrderServiceIf{
 	
 	public function __construct(){
 		

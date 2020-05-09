@@ -20,7 +20,7 @@ interface BankFileFacadeIf{
 	
 }
 
-class _BankFileFacadeClient extends \Voop\Osp\Base\OspStub implements \com\vip\api\ubc\facade\bankcard\BankFileFacadeIf{
+class _BankFileFacadeClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\api\ubc\facade\bankcard\BankFileFacadeIf{
 	
 	public function __construct(){
 		

@@ -32,7 +32,7 @@ interface DieselProductSynServiceIf{
 	
 }
 
-class _DieselProductSynServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\product\DieselProductSynServiceIf{
+class _DieselProductSynServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\vcloud\product\DieselProductSynServiceIf{
 	
 	public function __construct(){
 		

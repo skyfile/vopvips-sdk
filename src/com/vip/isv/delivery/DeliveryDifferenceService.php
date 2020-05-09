@@ -28,7 +28,7 @@ interface DeliveryDifferenceServiceIf{
 	
 }
 
-class _DeliveryDifferenceServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\isv\delivery\DeliveryDifferenceServiceIf{
+class _DeliveryDifferenceServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\isv\delivery\DeliveryDifferenceServiceIf{
 	
 	public function __construct(){
 		

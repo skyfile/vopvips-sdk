@@ -22,7 +22,7 @@ interface ExpressCabinetServiceIf{
 	
 }
 
-class _ExpressCabinetServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\logistics\cabinet\service\ExpressCabinetServiceIf{
+class _ExpressCabinetServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\logistics\cabinet\service\ExpressCabinetServiceIf{
 	
 	public function __construct(){
 		

@@ -18,7 +18,7 @@ interface DieselCategorySynServiceIf{
 	
 }
 
-class _DieselCategorySynServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\product\DieselCategorySynServiceIf{
+class _DieselCategorySynServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\vcloud\product\DieselCategorySynServiceIf{
 	
 	public function __construct(){
 		

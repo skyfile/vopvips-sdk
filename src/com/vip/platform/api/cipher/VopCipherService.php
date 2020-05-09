@@ -24,7 +24,7 @@ interface VopCipherServiceIf{
 	
 }
 
-class _VopCipherServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\platform\api\cipher\VopCipherServiceIf{
+class _VopCipherServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\platform\api\cipher\VopCipherServiceIf{
 	
 	public function __construct(){
 		

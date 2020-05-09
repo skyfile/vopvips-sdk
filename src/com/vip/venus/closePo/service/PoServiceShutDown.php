@@ -26,7 +26,7 @@ interface PoServiceShutDownIf{
 	
 }
 
-class _PoServiceShutDownClient extends \Voop\Osp\Base\OspStub implements \com\vip\venus\closePo\service\PoServiceShutDownIf{
+class _PoServiceShutDownClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\venus\closePo\service\PoServiceShutDownIf{
 	
 	public function __construct(){
 		

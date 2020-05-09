@@ -28,7 +28,7 @@ interface UnionUrlServiceIf{
 	
 }
 
-class _UnionUrlServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\adp\api\open\service\UnionUrlServiceIf{
+class _UnionUrlServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\adp\api\open\service\UnionUrlServiceIf{
 	
 	public function __construct(){
 		

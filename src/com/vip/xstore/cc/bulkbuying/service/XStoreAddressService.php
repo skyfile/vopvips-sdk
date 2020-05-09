@@ -32,7 +32,7 @@ interface XStoreAddressServiceIf{
 	
 }
 
-class _XStoreAddressServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\cc\bulkbuying\service\XStoreAddressServiceIf{
+class _XStoreAddressServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\xstore\cc\bulkbuying\service\XStoreAddressServiceIf{
 	
 	public function __construct(){
 		

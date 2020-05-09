@@ -20,7 +20,7 @@ interface ProcessTemplateServiceIf{
 	
 }
 
-class _ProcessTemplateServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\common\process\template\ProcessTemplateServiceIf{
+class _ProcessTemplateServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\common\process\template\ProcessTemplateServiceIf{
 	
 	public function __construct(){
 		

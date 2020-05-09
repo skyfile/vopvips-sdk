@@ -44,7 +44,7 @@ interface FaceServiceIf{
 	
 }
 
-class _FaceServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\arplatform\face\service\FaceServiceIf{
+class _FaceServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\arplatform\face\service\FaceServiceIf{
 	
 	public function __construct(){
 		

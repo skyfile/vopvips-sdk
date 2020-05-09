@@ -20,7 +20,7 @@ interface VposTaxOspServiceIf{
 	
 }
 
-class _VposTaxOspServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\fcs\vpos\service\VposTaxOspServiceIf{
+class _VposTaxOspServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\fcs\vpos\service\VposTaxOspServiceIf{
 	
 	public function __construct(){
 		

@@ -36,7 +36,7 @@ interface UnionGoodsServiceIf{
 	
 }
 
-class _UnionGoodsServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\adp\api\open\service\UnionGoodsServiceIf{
+class _UnionGoodsServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\adp\api\open\service\UnionGoodsServiceIf{
 	
 	public function __construct(){
 		

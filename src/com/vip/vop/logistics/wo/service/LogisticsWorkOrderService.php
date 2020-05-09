@@ -24,7 +24,7 @@ interface LogisticsWorkOrderServiceIf{
 	
 }
 
-class _LogisticsWorkOrderServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\logistics\wo\service\LogisticsWorkOrderServiceIf{
+class _LogisticsWorkOrderServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\logistics\wo\service\LogisticsWorkOrderServiceIf{
 	
 	public function __construct(){
 		

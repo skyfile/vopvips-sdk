@@ -18,7 +18,7 @@ interface CompassDataOspServiceIf{
 	
 }
 
-class _CompassDataOspServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\data\compass\service\vop\CompassDataOspServiceIf{
+class _CompassDataOspServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\data\compass\service\vop\CompassDataOspServiceIf{
 	
 	public function __construct(){
 		

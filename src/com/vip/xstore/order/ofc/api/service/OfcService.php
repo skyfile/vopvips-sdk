@@ -88,7 +88,7 @@ interface OfcServiceIf{
 	
 }
 
-class _OfcServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\order\ofc\api\service\OfcServiceIf{
+class _OfcServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\xstore\order\ofc\api\service\OfcServiceIf{
 	
 	public function __construct(){
 		

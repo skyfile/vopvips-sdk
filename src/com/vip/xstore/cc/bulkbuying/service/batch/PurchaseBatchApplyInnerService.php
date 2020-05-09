@@ -20,7 +20,7 @@ interface PurchaseBatchApplyInnerServiceIf{
 	
 }
 
-class _PurchaseBatchApplyInnerServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerServiceIf{
+class _PurchaseBatchApplyInnerServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\xstore\cc\bulkbuying\service\batch\PurchaseBatchApplyInnerServiceIf{
 	
 	public function __construct(){
 		

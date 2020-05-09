@@ -20,7 +20,7 @@ interface VdgHistoryDataServiceIf{
 	
 }
 
-class _VdgHistoryDataServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\history\VdgHistoryDataServiceIf{
+class _VdgHistoryDataServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\vcloud\history\VdgHistoryDataServiceIf{
 	
 	public function __construct(){
 		

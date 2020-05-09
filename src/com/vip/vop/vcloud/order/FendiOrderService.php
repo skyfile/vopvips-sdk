@@ -22,7 +22,7 @@ interface FendiOrderServiceIf{
 	
 }
 
-class _FendiOrderServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\order\FendiOrderServiceIf{
+class _FendiOrderServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\vcloud\order\FendiOrderServiceIf{
 	
 	public function __construct(){
 		

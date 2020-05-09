@@ -26,7 +26,7 @@ interface OtoProductServiceIf{
 	
 }
 
-class _OtoProductServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\cup\api\oto\OtoProductServiceIf{
+class _OtoProductServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\cup\api\oto\OtoProductServiceIf{
 	
 	public function __construct(){
 		

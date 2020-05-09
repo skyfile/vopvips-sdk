@@ -20,7 +20,7 @@ interface ProductPurchaseServiceIf{
 	
 }
 
-class _ProductPurchaseServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\cc\product\pool\service\ProductPurchaseServiceIf{
+class _ProductPurchaseServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\xstore\cc\product\pool\service\ProductPurchaseServiceIf{
 	
 	public function __construct(){
 		

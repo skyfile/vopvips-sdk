@@ -48,7 +48,7 @@ interface MerchModelServiceIf{
 	
 }
 
-class _MerchModelServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\arplatform\merchModel\service\MerchModelServiceIf{
+class _MerchModelServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\arplatform\merchModel\service\MerchModelServiceIf{
 	
 	public function __construct(){
 		

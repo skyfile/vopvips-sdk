@@ -84,7 +84,7 @@ interface CarrierServiceIf{
 	
 }
 
-class _CarrierServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\top\carrier\bizservice\CarrierServiceIf{
+class _CarrierServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\top\carrier\bizservice\CarrierServiceIf{
 	
 	public function __construct(){
 		

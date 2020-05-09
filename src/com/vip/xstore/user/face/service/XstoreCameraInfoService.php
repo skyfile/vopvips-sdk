@@ -30,7 +30,7 @@ interface XstoreCameraInfoServiceIf{
 	
 }
 
-class _XstoreCameraInfoServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\user\face\service\XstoreCameraInfoServiceIf{
+class _XstoreCameraInfoServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\xstore\user\face\service\XstoreCameraInfoServiceIf{
 	
 	public function __construct(){
 		

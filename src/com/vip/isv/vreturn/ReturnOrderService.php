@@ -24,7 +24,7 @@ interface ReturnOrderServiceIf{
 	
 }
 
-class _ReturnOrderServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\isv\vreturn\ReturnOrderServiceIf{
+class _ReturnOrderServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\isv\vreturn\ReturnOrderServiceIf{
 	
 	public function __construct(){
 		

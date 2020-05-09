@@ -30,7 +30,7 @@ interface VisPoServiceDistributeIf{
 	
 }
 
-class _VisPoServiceDistributeClient extends \Voop\Osp\Base\OspStub implements \com\vip\venus\visPo\service\VisPoServiceDistributeIf{
+class _VisPoServiceDistributeClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\venus\visPo\service\VisPoServiceDistributeIf{
 	
 	public function __construct(){
 		

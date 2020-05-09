@@ -28,7 +28,7 @@ interface WorkOrderServiceIf{
 	
 }
 
-class _WorkOrderServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\omni\wo\WorkOrderServiceIf{
+class _WorkOrderServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\omni\wo\WorkOrderServiceIf{
 	
 	public function __construct(){
 		

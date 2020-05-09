@@ -50,7 +50,7 @@ interface ReceivingServiceIf{
 	
 }
 
-class _ReceivingServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\pda\order\receiving\ReceivingServiceIf{
+class _ReceivingServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\xstore\pda\order\receiving\ReceivingServiceIf{
 	
 	public function __construct(){
 		

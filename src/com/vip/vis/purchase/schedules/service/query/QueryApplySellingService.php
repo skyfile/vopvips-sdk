@@ -24,7 +24,7 @@ interface QueryApplySellingServiceIf{
 	
 }
 
-class _QueryApplySellingServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vis\purchase\schedules\service\query\QueryApplySellingServiceIf{
+class _QueryApplySellingServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vis\purchase\schedules\service\query\QueryApplySellingServiceIf{
 	
 	public function __construct(){
 		

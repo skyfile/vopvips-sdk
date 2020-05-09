@@ -34,7 +34,7 @@ interface CarrierLogisticsServiceIf{
 	
 }
 
-class _CarrierLogisticsServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\logistics\carrier\service\CarrierLogisticsServiceIf{
+class _CarrierLogisticsServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\logistics\carrier\service\CarrierLogisticsServiceIf{
 	
 	public function __construct(){
 		

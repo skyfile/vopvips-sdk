@@ -20,7 +20,7 @@ interface DieselPriceSynServiceIf{
 	
 }
 
-class _DieselPriceSynServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\vcloud\product\DieselPriceSynServiceIf{
+class _DieselPriceSynServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\vcloud\product\DieselPriceSynServiceIf{
 	
 	public function __construct(){
 		

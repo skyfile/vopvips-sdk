@@ -24,7 +24,7 @@ interface UnionPidServiceIf{
 	
 }
 
-class _UnionPidServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\adp\api\open\service\UnionPidServiceIf{
+class _UnionPidServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\adp\api\open\service\UnionPidServiceIf{
 	
 	public function __construct(){
 		

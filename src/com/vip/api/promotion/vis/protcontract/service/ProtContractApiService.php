@@ -76,7 +76,7 @@ interface ProtContractApiServiceIf{
 	
 }
 
-class _ProtContractApiServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\api\promotion\vis\protcontract\service\ProtContractApiServiceIf{
+class _ProtContractApiServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\api\promotion\vis\protcontract\service\ProtContractApiServiceIf{
 	
 	public function __construct(){
 		

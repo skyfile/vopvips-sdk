@@ -28,7 +28,7 @@ interface AppSwitcherServiceIf{
 	
 }
 
-class _AppSwitcherServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\vop\common\switcher\AppSwitcherServiceIf{
+class _AppSwitcherServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\vop\common\switcher\AppSwitcherServiceIf{
 	
 	public function __construct(){
 		

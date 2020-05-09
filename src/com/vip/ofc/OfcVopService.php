@@ -18,7 +18,7 @@ interface OfcVopServiceIf{
 	
 }
 
-class _OfcVopServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\ofc\OfcVopServiceIf{
+class _OfcVopServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\ofc\OfcVopServiceIf{
 	
 	public function __construct(){
 		

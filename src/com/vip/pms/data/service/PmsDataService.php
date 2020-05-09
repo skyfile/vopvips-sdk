@@ -186,7 +186,7 @@ interface PmsDataServiceIf{
 	
 }
 
-class _PmsDataServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\pms\data\service\PmsDataServiceIf{
+class _PmsDataServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\pms\data\service\PmsDataServiceIf{
 	
 	public function __construct(){
 		

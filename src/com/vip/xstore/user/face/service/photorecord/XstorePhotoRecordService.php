@@ -18,7 +18,7 @@ interface XstorePhotoRecordServiceIf{
 	
 }
 
-class _XstorePhotoRecordServiceClient extends \Voop\Osp\Base\OspStub implements \com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordServiceIf{
+class _XstorePhotoRecordServiceClient extends \Voop\Osp\Base\OspStub implements \Voop\com\vip\xstore\user\face\service\photorecord\XstorePhotoRecordServiceIf{
 	
 	public function __construct(){
 		
